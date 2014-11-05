@@ -1,0 +1,23 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Assets.at(path="/public", file="/index.html")
+
+# CRUD País
+POST    /paises                     controllers.PaisController.inserir()
+PUT     /paises/:id                 controllers.PaisController.atualizar(id:Integer)
+GET     /paises                     controllers.PaisController.buscaTodos()
+GET     /paises/:id                 controllers.PaisController.buscaPorId(id:Integer)
+DELETE  /paises/:id                 controllers.PaisController.remover(id:Integer)
+
+# CRUD Estado
+POST    /estados                    controllers.EstadoController.inserir()
+PUT     /estados/:id                controllers.EstadoController.atualizar(id:Integer)
+GET     /estados                    controllers.EstadoController.buscaTodos()
+GET     /estados/:id                controllers.EstadoController.buscaPorId(id:Integer)
+DELETE  /estados/:id                controllers.EstadoController.remover(id:Integer)
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)

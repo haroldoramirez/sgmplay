@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Lista de Estados</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <h2>
+            Lista de Estados <a class="btn btn-success pull-right" href="#/estados/novo"><i
+                class="icon-plus-sign icon-white"></i> Novo Estado</a>
+        </h2>
+
+        <table  ng-init="init()" class="table table-striped table-bordered">
+            <tr>
+                <th width="700px">Estado</th>
+                <th width="65px">Sigla</th>
+                <th width="100px">País</th>
+            </tr>
+            <tr ng-repeat="estado in estados">
+                <td><a href="#/estados/detalhe/{{estado.id}}">{{estado.nome}}</a></td>
+                <td>{{estado.sigla}}</td>
+                <td>{{estado.pais.nome}}</td>
+                <!--<td>-->
+                <!--<a href="" class="glyphicon glyphicon-trash" ng-click="delete(estado.id)"></a>-->
+                <!--</td>-->
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Cadastrar País</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 well">
+            <fieldset>
+                <div id="legend">
+                    <legend><h2>Cadastrar País</h2></legend>
+                </div>
+                <form class="form-horizontal" ng-submit="save()">
+                    <div class="col-lg-8">
+                        <div class="form-group">
+                            <label class="control-label" for="nome">Nome *</label>
+                            <input maxlength="35" class="form-control" type="text" ng-model="pais.nome" id="nome" required/>
+                        </div>
+                    </div>
+                    <div class="col-lg-4">
+                        <label class="control-label" for="ddi">DDI</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
+                            <input maxlength="4" class="form-control" type="text" ng-model="pais.ddi" id="ddi"/>
+                        </div>
+                        <br>
+                        <br>
+                    </div>
+                    <div class="control-group">
+                        <button id="save" class="btn btn-success" type="submit" ng-disabled="!pais.nome">
+                            <span class="glyphicon glyphicon-ok"></span> Salvar
+                        </button>
+                        <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">
+                            <span class="glyphicon glyphicon-arrow-left"></span> Voltar
+                        </button>
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</div>
+</body>
+</html>
