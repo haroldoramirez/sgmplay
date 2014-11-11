@@ -1,5 +1,5 @@
 angular.module('mercado')
-  .controller('EstadoCreateController', function ($scope, $location, Estado, Pais, toastr) {
+  .controller('EstadoCreateController', function ($scope, $location, Estado, Pais, toastr){
         $scope.estado = {};
         $scope.save = function(){
             console.log($scope.estado);

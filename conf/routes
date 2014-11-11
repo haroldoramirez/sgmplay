@@ -19,5 +19,26 @@ GET     /estados                    controllers.EstadoController.buscaTodos()
 GET     /estados/:id                controllers.EstadoController.buscaPorId(id:Integer)
 DELETE  /estados/:id                controllers.EstadoController.remover(id:Integer)
 
+# CRUD Cidade
+POST    /cidades                    controllers.CidadeController.inserir()
+PUT     /cidades/:id                controllers.CidadeController.atualizar(id:Integer)
+GET     /cidades                    controllers.CidadeController.buscaTodos()
+GET     /cidades/:id                controllers.CidadeController.buscaPorId(id:Integer)
+DELETE  /cidades/:id                controllers.CidadeController.remover(id:Integer)
+
+# CRUD Bairro
+POST    /bairros                    controllers.BairroController.inserir()
+PUT     /bairros/:id                controllers.BairroController.atualizar(id:Integer)
+GET     /bairros                    controllers.BairroController.buscaTodos()
+GET     /bairros/:id                controllers.BairroController.buscaPorId(id:Integer)
+DELETE  /bairros/:id                controllers.BairroController.remover(id:Integer)
+
+# CRUD Cliente
+POST    /clientes                    controllers.ClienteController.inserir()
+PUT     /clientes/:id                controllers.ClienteController.atualizar(id:Integer)
+GET     /clientes                    controllers.ClienteController.buscaTodos()
+GET     /clientes/:id                controllers.ClienteController.buscaPorId(id:Integer)
+DELETE  /clientes/:id                controllers.ClienteController.remover(id:Integer)
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

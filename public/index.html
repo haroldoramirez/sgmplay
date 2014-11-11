@@ -2,35 +2,41 @@
 <html ng-app="mercado">
 <head>
     <script src="assets/bower_components/jquery/dist/jquery.js"></script>
+
     <script src="assets/bower_components/angular/angular.js"></script>
     <script src="assets/bower_components/angular-resource/angular-resource.js"></script>
     <script src="assets/bower_components/angular-route/angular-route.js"></script>
+    <script src="assets/bower_components/angular-animate/angular-animate.js"></script>
 
+    <script src="assets/bower_components/angular-strap/dist/angular-strap.js"></script>
+    <script src="assets/bower_components/angular-strap/dist/angular-strap.tpl.js"></script>
 
-    <script src="assets/app/app.js"></script>
-
-    <script src="assets/app/services/EnderecoService.js"></script>
-    <script src="assets/app/services/baseUrl.js"></script>
-
-
-    <script src="assets/app/controllers/PaisController.js"></script>
-    <script src="assets/app/controllers/EstadoController.js"></script>
-
+    <link rel="stylesheet" href="assets/bower_components/angular-motion/dist/angular-motion.css"/>
 
     <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.css"/>
     <script src="assets/bower_components/bootstrap/dist/js/bootstrap.js"></script>
 
     <link rel="stylesheet" href="assets/bower_components/angular-toastr/dist/angular-toastr.css"/>
     <script src="assets/bower_components/angular-toastr/dist/angular-toastr.js"></script>
-    <!--<script src="assets/js/angular-toastr.js"></script>-->
-    <!--<link rel="stylesheet" href="assets/css/angular-toastr.css"/>-->
-    <!--<script src="assets/js/ui-bootstrap-tpls-0.11.2.js"></script>-->
+
+    <!--app-->
+    <script src="assets/app/app.js"></script>
+
+    <!--Servicos-->
+    <script src="assets/app/services/EnderecoService.js"></script>
+    <script src="assets/app/services/baseUrl.js"></script>
+
+    <!--Controllers AngularJS-->
+    <script src="assets/app/controllers/PaisController.js"></script>
+    <script src="assets/app/controllers/EstadoController.js"></script>
+    <script src="assets/app/controllers/CidadeController.js"></script>
+    <script src="assets/app/controllers/BairroController.js"></script>
 
     <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
     <title>Mercado</title>
 </head>
 <body>
-<nav class="navbar navbar-default" role="navigation">
+<nav class="navbar navbar-default" role="navigation" bs-navbar>
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -53,7 +59,8 @@
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="/#/paises">País</a></li>
                         <li><a href="/#/estados">Estado</a></li>
-                        <li><a href="#">Cidade</a></li>
+                        <li><a href="/#/cidades">Cidade</a></li>
+                        <li><a href="/#/bairros">Bairro</a></li>
                         <li class="divider"></li>
                         <li><a href="#">Separated link</a></li>
                         <li class="divider"></li>

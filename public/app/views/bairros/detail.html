@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Detalhe do Bairro</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2 well">
+            <fieldset>
+                <div id="legend">
+                    <legend><h2>Atualizar Bairro</h2></legend>
+                </div>
+                <form ng-init="init()" class="form-horizontal" ng-submit="update()">
+                    <div class="col-lg-8">
+                        <label class="control-label" for="nome">Nome *</label>
+                        <input maxlength="100" class="form-control" type="text" ng-model="bairro.nome" id="nome" required/>
+                    </div>
+                    <div class="col-lg-4">
+                        <label class="control-label" for="bairro.cidade">Estado *</label>
+                        <select ng-model="bairro.cidade" class="form-control" ng-options="cidade.nome for cidade in cidades" id="bairro.cidade">
+                            <option disabled ng-show="!bairro.cidade.id" value="">{{bairro.cidade.nome}}</option>
+                        </select>
+                        <br>
+                    </div>
+                    <strong>Campos obrigatórios săo marcados (*)</strong>
+                    <div class="control-group">
+                        <br>
+                        <button type="submit" id="save" class="btn btn-success" ng-disabled="!bairro.nome || !bairro.cidade.id">
+                            <span class="glyphicon glyphicon-refresh"></span> Atualizar
+                        </button>
+                        <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">
+                            <span class="glyphicon glyphicon-arrow-left"></span> Voltar
+                        </button>
+                        <button ng-confirm-click="Confirmar Exclusão?" type="button" id="delete" class="btn btn-danger" ng-click="delete()">
+                            <span class="glyphicon glyphicon-trash"></span> Remover
+                        </button>
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -1,6 +1,6 @@
 {
   "name": "angular-toastr",
-  "version": "0.4.0",
+  "version": "0.5.1",
   "main": [
     "./dist/angular-toastr.js",
     "./dist/angular-toastr.css"
@@ -22,13 +22,13 @@
     "angular": "latest"
   },
   "homepage": "https://github.com/Foxandxss/angular-toastr",
-  "_release": "0.4.0",
+  "_release": "0.5.1",
   "_resolution": {
     "type": "version",
-    "tag": "0.4.0",
-    "commit": "afd37a068a6bdccddd19d7a87c279a06fb145061"
+    "tag": "0.5.1",
+    "commit": "5bd711548fd27216e772ee26215a4710f4611064"
   },
   "_source": "git://github.com/Foxandxss/angular-toastr.git",
-  "_target": "~0.4.0",
+  "_target": "0.5.1",
   "_originalSource": "angular-toastr"
 }

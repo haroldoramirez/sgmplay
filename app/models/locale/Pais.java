@@ -1,6 +1,5 @@
-package models;
+package models.locale;
 
-import play.data.validation.Constraints;
 import play.db.ebean.Model;
 import play.libs.Json;
 
@@ -8,18 +7,15 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "pais")
-public class Pais extends Model{
+public class Pais extends Model {
 
     @Id
-    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Constraints.Required(message = "Você precisa inserir o nome do País")
-    @Column(name = "nome", nullable = false, unique = true)
+    @Column(nullable = false, unique = true)
     private String nome;
 
-    @Column(name = "ddi")
     private String ddi;
 
     public Integer getId() {

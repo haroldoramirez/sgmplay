@@ -1,8 +1,8 @@
 package controllers;
 
 import com.avaje.ebean.Ebean;
-import models.Estado;
-import models.Pais;
+import models.locale.Estado;
+import models.locale.Pais;
 import play.Logger;
 import play.libs.Json;
 import play.mvc.Controller;

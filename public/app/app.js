@@ -7,11 +7,17 @@ angular.module('mercado', ['ngRoute', 'ngResource', 'toastr'])
             .when('/paises', {templateUrl: '/assets/app/views/paises/list.html', controller: 'PaisListController'})
             .when('/estados/novo', {templateUrl: '/assets/app/views/estados/create.html', controller: 'EstadoCreateController'})
             .when('/estados/detalhe/:id', {templateUrl: '/assets/app/views/estados/detail.html', controller: 'EstadoDetailController'})
-            .when('/estados', {templateUrl: '/assets/app/views/estados/list.html', controller: 'EstadoListController'});
+            .when('/estados', {templateUrl: '/assets/app/views/estados/list.html', controller: 'EstadoListController'})
+            .when('/cidades/novo', {templateUrl: '/assets/app/views/cidades/create.html', controller: 'CidadeCreateController'})
+            .when('/cidades/detalhe/:id', {templateUrl: '/assets/app/views/cidades/detail.html', controller: 'CidadeDetailController'})
+            .when('/cidades', {templateUrl: '/assets/app/views/cidades/list.html', controller: 'CidadeListController'})
+            .when('/bairros/novo', {templateUrl: '/assets/app/views/bairros/create.html', controller: 'BairroCreateController'})
+            .when('/bairros/detalhe/:id', {templateUrl: '/assets/app/views/bairros/detail.html', controller: 'BairroDetailController'})
+            .when('/bairros', {templateUrl: '/assets/app/views/bairros/list.html', controller: 'BairroListController'});
    }).config(function(toastrConfig) {
         angular.extend(toastrConfig, {
           allowHtml: true,
-          closeButton: false,
+          closeButton: true,
           closeHtml: '<button>&times;</button>',
           containerId: 'toast-container',
           extendedTimeOut: 2000,

@@ -1,24 +1,23 @@
-package models;
+package models.locale;
 
-import play.data.validation.Constraints;
 import play.db.ebean.Model;
 import play.libs.Json;
 
 import javax.persistence.*;
 
 @Entity
-@Table(name = "cidade")
+@Table(uniqueConstraints = {
+        @UniqueConstraint(columnNames = {"nome" , "estado_id"})
+})
 public class Cidade extends Model {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @Constraints.Required( message = "Você precisa inserir o nome da Cidade")
-    @Column(name = "nome", nullable = false)
+    @Column(nullable = false)
     private String nome;
 
-    @Column(name = "ddd")
     private String ddd;
 
     @ManyToOne(cascade = CascadeType.MERGE, optional = false)
