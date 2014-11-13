@@ -2,24 +2,36 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <title>Cadastrar Bairro</title>
+    <title>Cadastrar Cliente</title>
 </head>
 <body>
 <div class="container">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2 well">
+        <div class="well">
             <fieldset>
                 <div id="legend">
-                    <legend><h2>Cadastrar Bairro</h2></legend>
+                    <legend><h2>Cadastrar Cliente</h2></legend>
                 </div>
                 <form ng-init="init()" class="form-horizontal" ng-submit="save()">
                     <div class="col-lg-8">
                         <label class="control-label" for="nome">Nome *</label>
-                        <input maxlength="100" class="form-control" type="text" ng-model="bairro.nome" id="nome" required/>
+                        <input maxlength="100" class="form-control" type="text" ng-model="cliente.nome" id="nome" required/>
+                    </div>
+                    <div class="col-lg-8">
+                        <label class="control-label" for="telefone">Telefone *</label>
+                        <input maxlength="100" class="form-control" type="text" ng-model="cliente.telefone" id="telefone" required/>
+                    </div>
+                    <div class="col-lg-8">
+                        <label class="control-label" for="rg">Nome *</label>
+                        <input maxlength="100" class="form-control" type="text" ng-model="cliente.rg" id="rg" required/>
+                    </div>
+                    <div class="col-lg-8">
+                        <label class="control-label" for="cpf">Nome *</label>
+                        <input maxlength="100" class="form-control" type="text" ng-model="cliente.cpf" id="cpf" required/>
                     </div>
                     <div class="col-lg-4">
-                        <label class="control-label" for="bairro.cidade">Cidade *</label>
-                        <select ng-model="bairro.cidade" class="form-control" ng-options="cidade.nome for cidade in cidades" id="bairro.cidade">
+                        <label class="control-label" for="cliente.bairro">Bairro *</label>
+                        <select ng-model="cliente.bairro" class="form-control" ng-options="bairro.nome for bairro in bairros" id="cliente.bairro">
                             <option value="">Selecione</option>
                         </select>
                         <br>

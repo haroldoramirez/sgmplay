@@ -13,7 +13,10 @@ angular.module('mercado', ['ngRoute', 'ngResource', 'toastr'])
             .when('/cidades', {templateUrl: '/assets/app/views/cidades/list.html', controller: 'CidadeListController'})
             .when('/bairros/novo', {templateUrl: '/assets/app/views/bairros/create.html', controller: 'BairroCreateController'})
             .when('/bairros/detalhe/:id', {templateUrl: '/assets/app/views/bairros/detail.html', controller: 'BairroDetailController'})
-            .when('/bairros', {templateUrl: '/assets/app/views/bairros/list.html', controller: 'BairroListController'});
+            .when('/bairros', {templateUrl: '/assets/app/views/bairros/list.html', controller: 'BairroListController'})
+            .when('/clientes/novo', {templateUrl: '/assets/app/views/clientes/create.html', controller: 'ClienteCreateController'})
+            .when('/clientes/detalhe/:id', {templateUrl: '/assets/app/views/clientes/detail.html', controller: 'ClienteDetailController'})
+            .when('/clientes', {templateUrl: '/assets/app/views/clientes/list.html', controller: 'ClienteListController'});
    }).config(function(toastrConfig) {
         angular.extend(toastrConfig, {
           allowHtml: true,

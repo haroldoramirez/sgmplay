@@ -18,7 +18,7 @@
                         <input maxlength="100" class="form-control" type="text" ng-model="bairro.nome" id="nome" required/>
                     </div>
                     <div class="col-lg-4">
-                        <label class="control-label" for="bairro.cidade">Estado *</label>
+                        <label class="control-label" for="bairro.cidade">Cidade *</label>
                         <select ng-model="bairro.cidade" class="form-control" ng-options="cidade.nome for cidade in cidades" id="bairro.cidade">
                             <option disabled ng-show="!bairro.cidade.id" value="">{{bairro.cidade.nome}}</option>
                         </select>

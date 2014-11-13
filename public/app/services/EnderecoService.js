@@ -23,4 +23,10 @@ angular.module('mercado')
          getAll: {method: 'GET', url: BaseUrl + '/bairros', isArray: true},
          update: {method: 'PUT', url: BaseUrl + '/bairros/:id', isArray: false}
        });
+  }]).service('Cliente',['$resource', 'BaseUrl',
+     function($resource, BaseUrl){
+        return $resource(BaseUrl + '/clientes/:id', {}, {
+          getAll: {method: 'GET', url: BaseUrl + '/clientes', isArray: true},
+          update: {method: 'PUT', url: BaseUrl + '/clientes/:id', isArray: false}
+        });
   }]);
