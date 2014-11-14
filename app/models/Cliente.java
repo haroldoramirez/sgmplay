@@ -27,9 +27,10 @@ public class Cliente extends Model {
     @Column(unique = true)
     private String cpf;
 
-    private String celular;
-
+    @Column(unique = true)
     private String email;
+
+    private String celular;
 
     private String rua;
 

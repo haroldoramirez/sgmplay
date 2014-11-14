@@ -26,8 +26,8 @@ create table cliente (
   telefone                  varchar(255) not null,
   rg                        varchar(255),
   cpf                       varchar(255),
-  celular                   varchar(255),
   email                     varchar(255),
+  celular                   varchar(255),
   rua                       varchar(255),
   numero                    varchar(255),
   cep                       varchar(255),
@@ -38,6 +38,7 @@ create table cliente (
   constraint ck_cliente_genero check (genero in ('MASCULINO','FEMININO')),
   constraint uq_cliente_rg unique (rg),
   constraint uq_cliente_cpf unique (cpf),
+  constraint uq_cliente_email unique (email),
   constraint pk_cliente primary key (id))
 ;
 

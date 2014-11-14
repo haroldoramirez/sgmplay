@@ -16,11 +16,19 @@
             <tr>
                 <th>Nome</th>
                 <th>Telefone</th>
+                <th>Celular</th>
+                <th>Email</th>
+                <th>RG</th>
+                <th>CPF</th>
                 <th>Bairro</th>
             </tr>
             <tr ng-repeat="cliente in clientes">
                 <td><a href="#/clientes/detalhe/{{cliente.id}}">{{cliente.nome}}</a></td>
                 <td>{{cliente.telefone}}</td>
+                <td>{{cliente.celular}}</td>
+                <td>{{cliente.email}}</td>
+                <td>{{cliente.rg}}</td>
+                <td>{{cliente.cpf}}</td>
                 <td>{{cliente.bairro.nome}}</td>
                 <!--<td>-->
                 <!--<a href="" class="glyphicon glyphicon-trash" ng-click="delete(estado.id)"></a>-->

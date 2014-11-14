@@ -37,7 +37,7 @@
     <title>Mercado</title>
 </head>
 <body>
-<nav class="navbar navbar-default" role="navigation" bs-navbar>
+<nav class="navbar navbar-default" role="navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -55,37 +55,50 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
+                <li><a href="/#/clientes"> <span class="glyphicon glyphicon-user"></span> Cliente</a></li>
+                <li><a href="/#/fornecedores"> <span class="glyphicon glyphicon-th-large"></span> Fornecedor</a></li>
+                <li><a href="/#/produtos"> <span class="glyphicon glyphicon-barcode"></span> Produtos</a></li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="/#/compra"> <span class="glyphicon glyphicon-usd"></span> Compra</a></li>
+                <li class="active"><a href="/#/venda"> <span class="glyphicon glyphicon-credit-card"></span> Venda</a></li>
+                <li><a href="/#/usuarios"> <span class="glyphicon glyphicon-thumbs-up"></span> Usuários</a></li>
                 <li class="dropdown">
-                    <a href="" class="dropdown-toggle" data-toggle="dropdown">Endereços <span class="caret"></span></a>
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <span class="glyphicon glyphicon-map-marker"></span> Endereços <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li><a href="/#/paises">País</a></li>
                         <li><a href="/#/estados">Estado</a></li>
                         <li><a href="/#/cidades">Cidade</a></li>
                         <li><a href="/#/bairros">Bairro</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
                     </ul>
                 </li>
-            </ul>
-            <ul class="nav navbar-nav">
                 <li class="dropdown">
-                    <a href="" class="dropdown-toggle" data-toggle="dropdown">Pessoas <span class="caret"></span></a>
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <span class="glyphicon glyphicon-transfer"></span> Financeiro <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="/#/clientes">Cliente</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
+                        <li><a href="/#/contasapagar">Contas a Pagar</a></li>
+                        <li><a href="/#/contasareceber">Contas a Receber</a></li>
                     </ul>
                 </li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
-                    <a href="" class="dropdown-toggle" data-toggle="dropdown">Dropdown <span class="caret"></span></a>
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <span class="glyphicon glyphicon-list-alt"></span> Relatórios <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
+                        <li><a href="">Vendas</a></li>
+                        <li><a href="">Compra</a></li>
+                        <li><a href="">Clientes</a></li>
+                        <li><a href="">Produtos</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <span class="glyphicon glyphicon-cog"></span> Opções <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="">Configurações</a></li>
                         <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
+                        <li><a href="#">Sair</a></li>
                     </ul>
                 </li>
             </ul>
