@@ -27,6 +27,5 @@
   },
   "_source": "git://github.com/stulzer/jquery-maskedinput-with-hint.git",
   "_target": "*",
-  "_originalSource": "jquery-maskedinput-with-hint",
-  "_direct": true
+  "_originalSource": "jquery-maskedinput-with-hint"
 }
