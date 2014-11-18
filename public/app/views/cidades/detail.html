@@ -5,44 +5,57 @@
     <title>Detalhe da Cidade</title>
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2 well">
+        <div class="col-md-8 col-md-offset-2">
             <fieldset>
                 <div id="legend">
                     <legend><h2>Atualizar a Cidade</h2></legend>
                 </div>
                 <form ng-init="init()" class="form-horizontal" ng-submit="update()">
-                    <div class="col-lg-6">
-                        <label class="control-label" for="nome">Nome *</label>
-                        <input maxlength="100" class="form-control" type="text" ng-model="cidade.nome" id="nome" required/>
-                    </div>
-                    <div class="col-lg-2">
-                        <label class="control-label" for="ddd">DDD</label>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
-                            <input maxlength="3" class="form-control" type="text" ng-model="cidade.ddd" id="ddd"/>
+                    <div class="form-group">
+                        <!--Input do Nome-->
+                        <div class="col-lg-6">
+                            <label class="control-label" for="nome">Nome</label>
+                            <div ng-class="{'has-error': !cidade.nome}">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                                    <input maxlength="100" class="form-control" type="text" ng-model="cidade.nome" id="nome" required/>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <label class="control-label" for="cidade.estado">Estado *</label>
-                        <select ng-model="cidade.estado" class="form-control" ng-options="estado.nome for estado in estados" id="cidade.estado">
-                            <option disabled ng-show="!cidade.estado.id" value="">{{cidade.estado.nome}}</option>
-                        </select>
-                        <br>
-                    </div>
-                    <strong>Campos obrigatórios săo marcados (*)</strong>
-                    <div class="control-group">
-                        <br>
-                        <button type="submit" id="save" class="btn btn-success" ng-disabled="!cidade.nome || !cidade.estado.id">
-                            <span class="glyphicon glyphicon-refresh"></span> Atualizar
-                        </button>
-                        <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">
-                            <span class="glyphicon glyphicon-arrow-left"></span> Voltar
-                        </button>
-                        <button ng-confirm-click="Confirmar Exclusão?" type="button" id="delete" class="btn btn-danger" ng-click="delete()">
-                            <span class="glyphicon glyphicon-trash"></span> Remover
-                        </button>
+                        <!--Input do DDD-->
+                        <div class="col-lg-2">
+                            <label class="control-label" for="ddd">DDD</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
+                                <input maxlength="3" class="form-control" type="text" ng-model="cidade.ddd" id="ddd"/>
+                            </div>
+                        </div>
+                        <!--Input do Cidade-->
+                        <div class="col-lg-4">
+                            <label class="control-label" for="cidade.estado">Estado</label>
+                            <div ng-class="{'has-error': !cidade.estado}">
+                                <select ng-model="cidade.estado" class="form-control" ng-options="estado.nome for estado in estados" id="cidade.estado">
+                                    <option disabled ng-show="!cidade.estado.id" value="">{{cidade.estado.nome}}</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--Input do Botões-->
+                        <div class="col-lg-8">
+                            <div class="control-group">
+                                <br>
+                                <button type="submit" id="save" class="btn btn-success" ng-disabled="!cidade.nome || !cidade.estado.id">
+                                    <span class="glyphicon glyphicon-refresh"></span> Atualizar
+                                </button>
+                                <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">
+                                    <span class="glyphicon glyphicon-arrow-left"></span> Voltar
+                                </button>
+                                <button ng-confirm-click="Confirmar Exclusão?" type="button" id="delete" class="btn btn-danger" ng-click="delete()">
+                                    <span class="glyphicon glyphicon-trash"></span> Remover
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </fieldset>
