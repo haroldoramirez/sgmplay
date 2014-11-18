@@ -1,0 +1,51 @@
+2014-11-18 14:32:39,903 - [INFO] - from play in pool-6-thread-2 
+Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2014-11-18 14:33:08,964 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:postgresql://localhost:5432/sgmplaydb
+
+2014-11-18 14:33:10,278 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2014-11-18 14:33:45,853 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
+busca Todos os Paises
+
+2014-11-18 14:33:58,483 - [INFO] - from application in play-akka.actor.default-dispatcher-8 
+Salvando Pais
+
+2014-11-18 14:33:58,797 - [INFO] - from application in play-akka.actor.default-dispatcher-8 
+busca Todos os Paises
+
+2014-11-18 14:34:02,018 - [INFO] - from application in play-akka.actor.default-dispatcher-8 
+busca Todos os Estados
+
+2014-11-18 14:34:03,231 - [INFO] - from application in play-akka.actor.default-dispatcher-8 
+busca Todos os Paises
+
+2014-11-18 14:34:12,062 - [INFO] - from application in play-akka.actor.default-dispatcher-7 
+Salvando Estado
+
+2014-11-18 14:34:12,560 - [INFO] - from application in play-akka.actor.default-dispatcher-3 
+busca Todos os Estados
+
+2014-11-18 14:34:15,234 - [INFO] - from application in play-akka.actor.default-dispatcher-3 
+busca Todos os Paises
+
+2014-11-18 14:34:15,249 - [INFO] - from application in play-akka.actor.default-dispatcher-7 
+buscaPorId Estado
+
+2014-11-18 14:34:18,779 - [INFO] - from application in play-akka.actor.default-dispatcher-7 
+busca Todos os Estados
+
+2014-11-18 14:34:21,111 - [INFO] - from application in play-akka.actor.default-dispatcher-3 
+busca Todos os Paises
+
+2014-11-18 14:34:22,057 - [INFO] - from application in play-akka.actor.default-dispatcher-3 
+busca Todos os Estados
+
+2014-11-18 14:34:24,043 - [INFO] - from application in play-akka.actor.default-dispatcher-3 
+busca Todas as Cidades
+
+2014-11-18 14:34:25,350 - [INFO] - from application in play-akka.actor.default-dispatcher-7 
+busca Todos os Estados
+
