@@ -5,37 +5,45 @@
     <title>Cadastrar País</title>
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-md-6 col-md-offset-3 well">
+        <div class="col-md-6 col-md-offset-3">
             <fieldset>
                 <div id="legend">
                     <legend><h2>Cadastrar País</h2></legend>
                 </div>
                 <form class="form-horizontal" ng-submit="save()">
-                    <div class="col-lg-8">
-                        <div class="form-group">
-                            <label class="control-label" for="nome">Nome *</label>
-                            <input maxlength="35" class="form-control" type="text" ng-model="pais.nome" id="nome" required/>
+                    <div class="form-group">
+                        <!--Input do Nome-->
+                        <div class="col-lg-8">
+                            <label class="control-label" for="nome">Nome</label>
+                            <div ng-class="{'has-error': !pais.nome}">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                                    <input placeholder="Insira o nome do País" maxlength="100" class="form-control" type="text" ng-model="pais.nome" id="nome" required/>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <label class="control-label" for="ddi">DDI</label>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
-                            <input maxlength="4" class="form-control" type="text" ng-model="pais.ddi" id="ddi"/>
+                        <!--Input do DDI-->
+                        <div class="col-lg-4">
+                            <label class="control-label" for="ddi">Discagem Internacional</label>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
+                                    <input placeholder="Insira o DDI" maxlength="4" class="form-control" type="text" ng-model="pais.ddi" id="ddi"/>
+                                </div>
                         </div>
-                        <br>
-                    </div>
-                    <strong>Campos obrigatórios săo marcados (*)</strong>
-                    <div class="control-group">
-                        <br>
-                        <button id="save" class="btn btn-success" type="submit" ng-disabled="!pais.nome">
-                            <span class="glyphicon glyphicon-ok"></span> Salvar
-                        </button>
-                        <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">
-                            <span class="glyphicon glyphicon-arrow-left"></span> Voltar
-                        </button>
+                        <!--Botões-->
+                        <div class="col-lg-8">
+                            <div class="control-group">
+                                <br>
+                                <button id="save" class="btn btn-success" type="submit" ng-disabled="!pais.nome">
+                                    <span class="glyphicon glyphicon-ok"></span> Salvar
+                                </button>
+                                <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">
+                                    <span class="glyphicon glyphicon-arrow-left"></span> Voltar
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </fieldset>

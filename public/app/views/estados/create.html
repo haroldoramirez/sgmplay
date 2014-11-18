@@ -5,41 +5,54 @@
     <title>Cadastrar Estado</title>
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-md-8 col-md-offset-2 well">
+        <div class="col-md-8 col-md-offset-2">
             <fieldset>
                 <div id="legend">
                     <legend><h2>Cadastrar Estado</h2></legend>
                 </div>
                 <form ng-init="init()" class="form-horizontal" ng-submit="save()">
-                    <div class="col-lg-6">
-                        <label class="control-label" for="nome">Nome *</label>
-                        <input maxlength="35" class="form-control" type="text" ng-model="estado.nome" id="nome" required/>
-                    </div>
-                    <div class="col-lg-2">
-                        <label class="control-label" for="sigla">Sigla</label>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i><b>UF</b></i></span>
-                            <input maxlength="2" class="form-control" type="text" ng-model="estado.sigla" id="sigla"/>
+                    <div class="form-group">
+                        <!--Input do Nome-->
+                        <div class="col-lg-6">
+                            <label class="control-label" for="nome">Nome</label>
+                            <div ng-class="{'has-error': !estado.nome}">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                                    <input maxlength="35" class="form-control" type="text" ng-model="estado.nome" id="nome" required/>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-lg-4">
-                        <label class="control-label" for="estado.pais">País *</label>
-                        <select ng-model="estado.pais" class="form-control" ng-options="pais.nome for pais in paises" id="estado.pais">
-                            <option value="">Selecione</option>
-                        </select>
-                        <br>
-                    </div>
-                    <strong>Campos obrigatórios săo marcados (*)</strong>
-                    <div class="control-group">
-                        <br>
-                        <button id="save" class="btn btn-success" type="submit" ng-disabled="!estado.nome || !estado.pais.id">
-                            <span class="glyphicon glyphicon-ok"></span> Salvar
-                        </button>
-                        <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">
-                            <span class="glyphicon glyphicon-arrow-left"></span> Voltar
-                        </button>
+                        <!--Input do Sigla-->
+                        <div class="col-lg-2">
+                            <label class="control-label" for="sigla">Sigla</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i><b>UF</b></i></span>
+                                <input maxlength="2" class="form-control" type="text" ng-model="estado.sigla" id="sigla"/>
+                            </div>
+                        </div>
+                        <!--Input do País-->
+                        <div class="col-lg-4">
+                            <label class="control-label" for="estado.pais">País</label>
+                            <div ng-class="{'has-error': !estado.pais}">
+                                <select ng-model="estado.pais" class="form-control" ng-options="pais.nome for pais in paises" id="estado.pais">
+                                    <option value="">Selecione</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!--Input do Botões-->
+                        <div class="col-lg-8">
+                            <div class="control-group">
+                                <br>
+                                <button id="save" class="btn btn-success" type="submit" ng-disabled="!estado.nome || !estado.pais.id">
+                                    <span class="glyphicon glyphicon-ok"></span> Salvar
+                                </button>
+                                <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">
+                                    <span class="glyphicon glyphicon-arrow-left"></span> Voltar
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </fieldset>

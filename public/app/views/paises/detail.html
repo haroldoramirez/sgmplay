@@ -5,38 +5,48 @@
     <title>Detalhe do País</title>
 </head>
 <body>
-<div class="container">
+<div class="container-fluid">
     <div class="row">
-        <div class="col-md-6 col-md-offset-3 well">
+        <div class="col-md-6 col-md-offset-3">
             <fieldset>
                 <div id="legend">
                     <legend><h2>Atualizar de País</h2></legend>
                 </div>
                 <form ng-init="init()" class="form-horizontal" ng-submit="update()">
-                    <div class="col-lg-8">
-                        <label class="control-label" for="nome">Nome *</label>
-                        <input maxlength="25" class="form-control" type="text" ng-model="pais.nome" id="nome" required/>
-                    </div>
-                    <div class="col-lg-4">
-                        <label class="control-label" for="ddi">DDI</label>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
-                            <input maxlength="4" class="form-control" type="text" ng-model="pais.ddi" id="ddi"/>
+                    <div class="form-group">
+                        <!--Input do Nome-->
+                        <div class="col-lg-8">
+                            <label class="control-label" for="nome">Nome</label>
+                            <div ng-class="{'has-error': !pais.nome}">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                                    <input placeholder="Insira o nome do País" maxlength="100" class="form-control" type="text" ng-model="pais.nome" id="nome" required/>
+                                </div>
+                            </div>
                         </div>
-                        <br>
-                    </div>
-                    <strong>Campos obrigatórios săo marcados (*)</strong>
-                    <div class="control-group">
-                        <br>
-                        <button type="submit" id="save" class="btn btn-success" ng-disabled="!pais.nome">
-                            <span class="glyphicon glyphicon-refresh"></span> Atualizar
-                        </button>
-                        <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">
-                            <span class="glyphicon glyphicon-arrow-left"></span> Voltar
-                        </button>
-                        <button ng-confirm-click="Confirmar a exclusão?" type="button" id="delete" class="btn btn-danger" ng-click="delete()">
-                            <span class="glyphicon glyphicon-trash"></span> Remover
-                        </button>
+                        <!--Input do DDI-->
+                        <div class="col-lg-4">
+                            <label class="control-label" for="ddi">Discagem Internacional</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
+                                <input placeholder="Insira o DDI" maxlength="4" class="form-control" type="text" ng-model="pais.ddi" id="ddi"/>
+                            </div>
+                        </div>
+                        <!--Botões-->
+                        <div class="col-lg-8">
+                            <div class="control-group">
+                                <br>
+                                <button type="submit" id="save" class="btn btn-success" ng-disabled="!pais.nome">
+                                    <span class="glyphicon glyphicon-refresh"></span> Atualizar
+                                </button>
+                                <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">
+                                    <span class="glyphicon glyphicon-arrow-left"></span> Voltar
+                                </button>
+                                <button ng-confirm-click="Confirmar a exclusão?" type="button" id="delete" class="btn btn-danger" ng-click="delete()">
+                                    <span class="glyphicon glyphicon-trash"></span> Remover
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </form>
             </fieldset>

@@ -33,7 +33,7 @@ angular.module('mercado', ['ngRoute', 'ngResource', 'toastr'])
           messageClass: 'toast-message',
           positionClass: 'toast-top-right',
           tapToDismiss: true,
-          timeOut: 5000,
+          timeOut: 2000,
           titleClass: 'toast-title',
           toastClass: 'toast'
         });
