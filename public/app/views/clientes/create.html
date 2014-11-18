@@ -29,7 +29,7 @@
                         <div ng-class="{'has-error': !cliente.telefone}">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
-                                <input placeholder="(__) ____-____" maxlength="14" class="form-control" type="text" ng-model="cliente.telefone" id="telefone" required/>
+                                <input maxlength="14" class="form-control telefone" type="text" ng-model="cliente.telefone" id="telefone" required/>
                             </div>
                         </div>
                     </div>
@@ -46,7 +46,7 @@
                         <label class="control-label" for="email">Email</label>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                            <input placeholder="@" maxlength="100" class="form-control" type="text" ng-model="cliente.email" id="email"/>
+                            <input placeholder="email@exemplo.com" ng-minlength="3" maxlength="100" class="form-control" type="text" ng-model="cliente.email" id="email"/>
                         </div>
                     </div>
                     <!--Input do Rg-->

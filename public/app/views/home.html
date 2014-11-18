@@ -3,12 +3,42 @@
 <head lang="en">
     <meta charset="UTF-8">
     <title></title>
+    <script type="text/ng-template" id="myModalContent.html">
+        <div class="modal-header">
+            <h3 class="modal-title">Informações</h3>
+        </div>
+        <div class="modal-body">
+            <ul>
+                <li ng-repeat="item in items">
+                    <a ng-click="selected.item = item">{{ item }}</a>
+                </li>
+            </ul>
+            <h2>Sistema de Mercados</h2>
+        </div>
+        <div class="modal-footer">
+            <button class="btn btn-primary" ng-click="ok()">OK</button>
+        </div>
+    </script>
 </head>
 <body>
 <div class="jumbotron">
     <h1>Home</h1>
     <p>AngularJS com Play Framework</p>
-    <p><a class="btn btn-primary btn-lg" role="button">Mais Informações</a></p>
+    <p><a class="btn btn-primary btn-lg" role="button" ng-click="openModal()">Mais Informações</a></p>
 </div>
+
+
+
+<footer class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7">
+
+            </div>
+        </div>
+        <p>&copy; 2014 <a href="">SGM</a>. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
 </body>
 </html>

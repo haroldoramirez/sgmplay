@@ -1,7 +1,7 @@
-angular.module('mercado', ['ngRoute', 'ngResource', 'toastr'])
+angular.module('mercado', ['ngRoute', 'ngResource', 'toastr', 'ui.bootstrap'])
     .config(function ($routeProvider) {
         $routeProvider
-            .when('/', {templateUrl: '/assets/app/views/home.html', controller: ''})
+            .when('/', {templateUrl: '/assets/app/views/home.html', controller: 'HomeController'})
             .when('/paises/novo', {templateUrl: '/assets/app/views/paises/create.html', controller: 'PaisCreateController'})
             .when('/paises/detalhe/:id', {templateUrl: '/assets/app/views/paises/detail.html', controller: 'PaisDetailController'})
             .when('/paises', {templateUrl: '/assets/app/views/paises/list.html', controller: 'PaisListController'})
