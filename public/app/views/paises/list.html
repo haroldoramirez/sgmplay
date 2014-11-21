@@ -8,19 +8,19 @@
 <div class="container">
     <div class="row">
         <h2>
-            Lista de Paises <a class="btn btn-success pull-right" href="#/paises/novo"><i
-                class="icon-plus-sign icon-white"></i> Novo País</a>
+            Lista de Paises <a class="btn btn-success pull-right" href="#/paises/novo">
+            <span class="glyphicon glyphicon-plus"></span> <b>Novo País</b></a>
         </h2>
 
-        <table ng-init="init()" class="table table-striped table-bordered">
+        <table ng-init="init()" class="table-striped table table-hover table-bordered">
             <tr>
                 <th width="800px">País</th>
                 <th width="65px">DDI</th>
                 <!--<th width="50px"></th>-->
             </tr>
             <tr ng-repeat="pais in paises">
-                <td><a href="#/paises/detalhe/{{pais.id}}">{{pais.nome}}</a></td>
-                <td>{{pais.ddi}}</td>
+                <td><b><a href="#/paises/detalhe/{{pais.id}}">{{pais.nome}}</a></b></td>
+                <td><b>{{pais.ddi}}</b></td>
                 <!--<td>-->
                 <!--<a href="" confirmation-needed="Confirmar a exclusão do País?" class="glyphicon glyphicon-trash" ng-click="delete(pais.id)"></a>-->
                 <!--</td>-->

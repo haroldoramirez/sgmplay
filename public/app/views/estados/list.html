@@ -8,20 +8,20 @@
 <div class="container">
     <div class="row">
         <h2>
-            Lista de Estados <a class="btn btn-success pull-right" href="#/estados/novo"><i
-                class="icon-plus-sign icon-white"></i> Novo Estado</a>
+            Lista de Estados <a class="btn btn-success pull-right" href="#/estados/novo">
+            <span class="glyphicon glyphicon-plus"></span> <b>Novo Estado</b></a>
         </h2>
 
-        <table  ng-init="init()" class="table table-striped table-bordered">
+        <table  ng-init="init()" class="table table-striped table-hover table-bordered">
             <tr>
                 <th width="700px">Estado</th>
                 <th width="65px">Sigla</th>
                 <th width="100px">País</th>
             </tr>
             <tr ng-repeat="estado in estados">
-                <td><a href="#/estados/detalhe/{{estado.id}}">{{estado.nome}}</a></td>
-                <td>{{estado.sigla}}</td>
-                <td>{{estado.pais.nome}}</td>
+                <td><b><a href="#/estados/detalhe/{{estado.id}}">{{estado.nome}}</a></b></td>
+                <td><b>{{estado.sigla}}</b></td>
+                <td><b>{{estado.pais.nome}}</b></td>
                 <!--<td>-->
                 <!--<a href="" class="glyphicon glyphicon-trash" ng-click="delete(estado.id)"></a>-->
                 <!--</td>-->

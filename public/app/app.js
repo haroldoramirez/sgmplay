@@ -1,4 +1,4 @@
-angular.module('mercado', ['ngRoute', 'ngResource', 'toastr', 'ui.bootstrap'])
+angular.module('mercado', ['ngRoute', 'ngResource', 'toastr', 'mgcrea.ngStrap'])
     .config(function ($routeProvider) {
         $routeProvider
             .when('/', {templateUrl: '/assets/app/views/home.html', controller: 'HomeController'})

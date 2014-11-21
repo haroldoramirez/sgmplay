@@ -40,19 +40,20 @@
                                     <option disabled ng-show="!estado.pais.id" value="">{{estado.pais.nome}}</option>
                                 </select>
                             </div>
+                            <br>
                         </div>
                         <!--Input do Botões-->
                         <div class="col-lg-8">
                             <div class="control-group">
                                 <br>
                                 <button type="submit" id="save" class="btn btn-success" ng-disabled="!estado.nome || !estado.pais.id">
-                                    <span class="glyphicon glyphicon-refresh"></span> Atualizar
+                                    <span class="glyphicon glyphicon-refresh"></span> <b>Atualizar</b>
                                 </button>
                                 <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">
-                                    <span class="glyphicon glyphicon-arrow-left"></span> Voltar
+                                    <span class="glyphicon glyphicon-arrow-left"></span> <b>Voltar</b>
                                 </button>
                                 <button ng-confirm-click="Confirmar a exclusão?" type="button" id="delete" class="btn btn-danger" ng-click="delete()">
-                                    <span class="glyphicon glyphicon-trash"></span> Remover
+                                    <span class="glyphicon glyphicon-trash"></span> <b>Remover</b>
                                 </button>
                             </div>
                         </div>

@@ -1,264 +1,1274 @@
-2014-11-18 15:35:03,987 - [INFO] - from play in pool-6-thread-1 
+2014-11-21 14:03:51,319 - [INFO] - from play in pool-6-thread-1 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2014-11-18 15:35:41,622 - [INFO] - from play in play-internal-execution-context-1 
+2014-11-21 14:03:56,447 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:postgresql://localhost:5432/sgmplaydb
 
-2014-11-18 15:35:43,079 - [INFO] - from play in play-internal-execution-context-1 
+2014-11-21 14:03:57,866 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2014-11-18 15:35:47,984 - [INFO] - from application in play-akka.actor.default-dispatcher-5 
-busca Todos os Estados
-
-2014-11-18 15:35:49,963 - [INFO] - from application in play-akka.actor.default-dispatcher-5 
-busca Todas as Cidades
-
-2014-11-18 15:35:52,190 - [INFO] - from application in play-akka.actor.default-dispatcher-9 
-busca Todos os Bairros
-
-2014-11-18 15:35:54,030 - [INFO] - from application in play-akka.actor.default-dispatcher-9 
-busca Todas as Cidades
-
-2014-11-18 15:35:55,029 - [INFO] - from application in play-akka.actor.default-dispatcher-9 
-busca Todos os Estados
-
-2014-11-18 15:35:56,246 - [INFO] - from application in play-akka.actor.default-dispatcher-5 
-busca Todas as Cidades
-
-2014-11-18 15:35:57,427 - [INFO] - from application in play-akka.actor.default-dispatcher-9 
-busca Todos os Estados
-
-2014-11-18 15:35:57,448 - [INFO] - from application in play-akka.actor.default-dispatcher-9 
-buscaPorId Cidade
-
-2014-11-18 15:35:59,256 - [INFO] - from application in play-akka.actor.default-dispatcher-9 
-busca Todas as Cidades
-
-2014-11-18 15:36:23,145 - [INFO] - from application in play-akka.actor.default-dispatcher-8 
-busca Todos os Bairros
-
-2014-11-18 15:36:24,393 - [INFO] - from application in play-akka.actor.default-dispatcher-8 
-busca Todas as Cidades
-
-2014-11-18 15:39:22,201 - [INFO] - from application in play-akka.actor.default-dispatcher-7 
-busca Todas as Cidades
-
-2014-11-18 15:40:07,133 - [INFO] - from application in play-akka.actor.default-dispatcher-23 
-busca Todas as Cidades
-
-2014-11-18 15:40:19,380 - [INFO] - from application in play-akka.actor.default-dispatcher-19 
-busca Todas as Cidades
-
-2014-11-18 15:40:30,785 - [INFO] - from application in play-akka.actor.default-dispatcher-29 
-busca Todas as Cidades
-
-2014-11-18 15:40:46,146 - [INFO] - from application in play-akka.actor.default-dispatcher-22 
-busca Todas as Cidades
-
-2014-11-18 15:40:48,880 - [INFO] - from application in play-akka.actor.default-dispatcher-22 
-busca Todas as Cidades
-
-2014-11-18 15:40:51,501 - [INFO] - from application in play-akka.actor.default-dispatcher-22 
-busca Todos os Bairros
-
-2014-11-18 15:40:52,509 - [INFO] - from application in play-akka.actor.default-dispatcher-22 
-busca Todas as Cidades
-
-2014-11-18 15:41:27,335 - [INFO] - from application in play-akka.actor.default-dispatcher-14 
-busca Todas as Cidades
-
-2014-11-18 15:42:48,421 - [INFO] - from application in play-akka.actor.default-dispatcher-38 
-busca Todas as Cidades
-
-2014-11-18 15:43:00,429 - [INFO] - from application in play-akka.actor.default-dispatcher-43 
-Salvando Bairro
-
-2014-11-18 15:43:00,680 - [INFO] - from application in play-akka.actor.default-dispatcher-43 
-busca Todos os Bairros
-
-2014-11-18 15:43:02,350 - [INFO] - from application in play-akka.actor.default-dispatcher-41 
-buscaPorId Bairro
-
-2014-11-18 15:43:02,351 - [INFO] - from application in play-akka.actor.default-dispatcher-43 
-busca Todas as Cidades
-
-2014-11-18 15:43:03,734 - [INFO] - from application in play-akka.actor.default-dispatcher-41 
-busca Todos os Bairros
-
-2014-11-18 15:43:04,676 - [INFO] - from application in play-akka.actor.default-dispatcher-43 
-busca Todas as Cidades
-
-2014-11-18 15:43:45,578 - [INFO] - from application in play-akka.actor.default-dispatcher-46 
-busca Todas as Cidades
-
-2014-11-18 15:43:50,360 - [INFO] - from application in play-akka.actor.default-dispatcher-44 
-busca Todos os Bairros
-
-2014-11-18 15:43:52,869 - [INFO] - from application in play-akka.actor.default-dispatcher-37 
-buscaPorId Bairro
-
-2014-11-18 15:43:52,871 - [INFO] - from application in play-akka.actor.default-dispatcher-47 
-busca Todas as Cidades
-
-2014-11-18 15:43:57,727 - [INFO] - from application in play-akka.actor.default-dispatcher-47 
-remover Bairro
-
-2014-11-18 15:43:57,821 - [INFO] - from application in play-akka.actor.default-dispatcher-47 
-busca Todos os Bairros
-
-2014-11-18 15:43:59,124 - [INFO] - from application in play-akka.actor.default-dispatcher-44 
-busca Todas as Cidades
-
-2014-11-18 15:47:19,827 - [INFO] - from application in play-akka.actor.default-dispatcher-52 
-busca Todas as Cidades
-
-2014-11-18 15:47:20,820 - [INFO] - from application in play-akka.actor.default-dispatcher-52 
-busca Todos os Bairros
-
-2014-11-18 15:47:21,966 - [INFO] - from application in play-akka.actor.default-dispatcher-56 
-busca Todas as Cidades
-
-2014-11-18 15:47:31,704 - [INFO] - from application in play-akka.actor.default-dispatcher-50 
-Salvando Bairro
-
-2014-11-18 15:47:31,770 - [INFO] - from application in play-akka.actor.default-dispatcher-53 
-busca Todos os Bairros
-
-2014-11-18 15:47:33,721 - [INFO] - from application in play-akka.actor.default-dispatcher-50 
-buscaPorId Bairro
-
-2014-11-18 15:47:33,724 - [INFO] - from application in play-akka.actor.default-dispatcher-53 
-busca Todas as Cidades
-
-2014-11-18 15:48:10,308 - [INFO] - from application in play-akka.actor.default-dispatcher-60 
-buscaPorId Bairro
-
-2014-11-18 15:48:10,311 - [INFO] - from application in play-akka.actor.default-dispatcher-61 
-busca Todas as Cidades
-
-2014-11-18 15:48:12,435 - [INFO] - from application in play-akka.actor.default-dispatcher-61 
-busca Todos os Bairros
-
-2014-11-18 15:48:13,350 - [INFO] - from application in play-akka.actor.default-dispatcher-61 
-buscaPorId Bairro
-
-2014-11-18 15:48:13,354 - [INFO] - from application in play-akka.actor.default-dispatcher-54 
-busca Todas as Cidades
-
-2014-11-18 15:48:25,635 - [INFO] - from application in play-akka.actor.default-dispatcher-64 
-buscaPorId Bairro
-
-2014-11-18 15:48:25,640 - [INFO] - from application in play-akka.actor.default-dispatcher-63 
-busca Todas as Cidades
-
-2014-11-18 15:48:33,479 - [INFO] - from application in play-akka.actor.default-dispatcher-55 
-busca Todos os Bairros
-
-2014-11-18 15:48:35,830 - [INFO] - from application in play-akka.actor.default-dispatcher-55 
-buscaPorId Bairro
-
-2014-11-18 15:48:35,840 - [INFO] - from application in play-akka.actor.default-dispatcher-62 
-busca Todas as Cidades
-
-2014-11-18 15:48:37,302 - [INFO] - from application in play-akka.actor.default-dispatcher-62 
-busca Todos os Bairros
-
-2014-11-18 15:48:43,682 - [INFO] - from application in play-akka.actor.default-dispatcher-55 
-buscaPorId Bairro
-
-2014-11-18 15:48:43,697 - [INFO] - from application in play-akka.actor.default-dispatcher-55 
-busca Todas as Cidades
-
-2014-11-18 15:48:45,701 - [INFO] - from application in play-akka.actor.default-dispatcher-55 
-busca Todas as Cidades
-
-2014-11-18 15:48:47,182 - [INFO] - from application in play-akka.actor.default-dispatcher-59 
-buscaPorId Cidade
-
-2014-11-18 15:48:47,194 - [INFO] - from application in play-akka.actor.default-dispatcher-55 
-busca Todos os Estados
-
-2014-11-18 15:48:50,022 - [INFO] - from application in play-akka.actor.default-dispatcher-59 
-busca Todos os Estados
-
-2014-11-18 15:48:51,217 - [INFO] - from application in play-akka.actor.default-dispatcher-59 
-buscaPorId Estado
-
-2014-11-18 15:48:51,229 - [INFO] - from application in play-akka.actor.default-dispatcher-59 
-busca Todos os Paises
-
-2014-11-18 15:48:53,637 - [INFO] - from application in play-akka.actor.default-dispatcher-55 
-busca Todos os Paises
-
-2014-11-18 15:48:54,958 - [INFO] - from application in play-akka.actor.default-dispatcher-59 
-buscaPorId País
-
-2014-11-18 15:48:56,600 - [INFO] - from application in play-akka.actor.default-dispatcher-59 
-busca Todos os Paises
-
-2014-11-18 15:48:59,208 - [INFO] - from application in play-akka.actor.default-dispatcher-57 
-busca Todos os Paises
-
-2014-11-18 15:49:00,723 - [INFO] - from application in play-akka.actor.default-dispatcher-57 
-busca Todos os Estados
-
-2014-11-18 15:49:01,544 - [INFO] - from application in play-akka.actor.default-dispatcher-59 
-busca Todos os Paises
-
-2014-11-18 15:49:03,540 - [INFO] - from application in play-akka.actor.default-dispatcher-59 
-busca Todas as Cidades
-
-2014-11-18 15:49:04,235 - [INFO] - from application in play-akka.actor.default-dispatcher-55 
-busca Todos os Estados
-
-2014-11-18 15:49:05,921 - [INFO] - from application in play-akka.actor.default-dispatcher-55 
-busca Todos os Bairros
-
-2014-11-18 15:49:06,550 - [INFO] - from application in play-akka.actor.default-dispatcher-55 
-busca Todas as Cidades
-
-2014-11-18 15:50:10,903 - [INFO] - from application in play-akka.actor.default-dispatcher-58 
+2014-11-21 14:04:01,181 - [INFO] - from application in play-akka.actor.default-dispatcher-2 
 busca Todos os Clientes
 
-2014-11-18 15:50:12,314 - [INFO] - from application in play-akka.actor.default-dispatcher-66 
+2014-11-21 14:06:14,960 - [INFO] - from application in play-akka.actor.default-dispatcher-15 
+buscaPorId Cliente
+
+2014-11-21 14:06:14,982 - [INFO] - from application in play-akka.actor.default-dispatcher-11 
 busca Todos os Bairros
 
-2014-11-18 15:51:25,445 - [INFO] - from application in play-akka.actor.default-dispatcher-65 
+2014-11-21 14:06:43,597 - [INFO] - from application in play-akka.actor.default-dispatcher-20 
+buscaPorId Cliente
+
+2014-11-21 14:06:43,599 - [INFO] - from application in play-akka.actor.default-dispatcher-16 
+busca Todos os Bairros
+
+2014-11-21 14:07:42,915 - [INFO] - from application in play-akka.actor.default-dispatcher-27 
+buscaPorId Cliente
+
+2014-11-21 14:07:42,925 - [INFO] - from application in play-akka.actor.default-dispatcher-26 
+busca Todos os Bairros
+
+2014-11-21 14:08:46,128 - [INFO] - from application in play-akka.actor.default-dispatcher-24 
+buscaPorId Cliente
+
+2014-11-21 14:08:46,136 - [INFO] - from application in play-akka.actor.default-dispatcher-28 
+busca Todos os Bairros
+
+2014-11-21 14:08:48,811 - [INFO] - from application in play-akka.actor.default-dispatcher-32 
+busca Todos os Clientes
+
+2014-11-21 14:08:50,445 - [INFO] - from application in play-akka.actor.default-dispatcher-32 
+buscaPorId Cliente
+
+2014-11-21 14:08:50,451 - [INFO] - from application in play-akka.actor.default-dispatcher-28 
+busca Todos os Bairros
+
+2014-11-21 14:08:54,796 - [INFO] - from application in play-akka.actor.default-dispatcher-28 
+busca Todos os Clientes
+
+2014-11-21 14:08:56,067 - [INFO] - from application in play-akka.actor.default-dispatcher-33 
+busca Todos os Bairros
+
+2014-11-21 14:09:06,218 - [INFO] - from application in play-akka.actor.default-dispatcher-28 
 Salvando Cliente
 
-2014-11-18 15:51:25,588 - [INFO] - from application in play-akka.actor.default-dispatcher-65 
+2014-11-21 14:09:06,447 - [INFO] - from application in play-akka.actor.default-dispatcher-31 
 busca Todos os Clientes
 
-2014-11-18 15:55:00,914 - [INFO] - from application in play-akka.actor.default-dispatcher-67 
+2014-11-21 14:09:08,142 - [INFO] - from application in play-akka.actor.default-dispatcher-31 
+buscaPorId Cliente
+
+2014-11-21 14:09:08,146 - [INFO] - from application in play-akka.actor.default-dispatcher-28 
+busca Todos os Bairros
+
+2014-11-21 14:09:11,871 - [INFO] - from application in play-akka.actor.default-dispatcher-28 
+Atualizando Cliente
+
+2014-11-21 14:09:11,936 - [INFO] - from application in play-akka.actor.default-dispatcher-31 
 busca Todos os Clientes
 
-2014-11-18 15:55:01,965 - [INFO] - from application in play-akka.actor.default-dispatcher-67 
+2014-11-21 14:09:14,518 - [INFO] - from application in play-akka.actor.default-dispatcher-31 
+buscaPorId Cliente
+
+2014-11-21 14:09:14,522 - [INFO] - from application in play-akka.actor.default-dispatcher-28 
 busca Todos os Bairros
 
-2014-11-18 15:55:09,284 - [INFO] - from application in play-akka.actor.default-dispatcher-72 
-busca Todos os Bairros
+2014-11-21 14:09:18,907 - [INFO] - from application in play-akka.actor.default-dispatcher-31 
+Atualizando Cliente
 
-2014-11-18 15:55:28,113 - [INFO] - from application in play-akka.actor.default-dispatcher-71 
-busca Todos os Bairros
-
-2014-11-18 15:55:40,812 - [INFO] - from application in play-akka.actor.default-dispatcher-79 
-busca Todos os Bairros
-
-2014-11-18 16:08:32,839 - [INFO] - from application in play-akka.actor.default-dispatcher-92 
+2014-11-21 14:09:18,945 - [INFO] - from application in play-akka.actor.default-dispatcher-31 
 busca Todos os Clientes
 
-2014-11-18 16:08:34,015 - [INFO] - from application in play-akka.actor.default-dispatcher-92 
+2014-11-21 14:09:22,497 - [INFO] - from application in play-akka.actor.default-dispatcher-31 
+buscaPorId Cliente
+
+2014-11-21 14:09:22,501 - [INFO] - from application in play-akka.actor.default-dispatcher-28 
 busca Todos os Bairros
 
-2014-11-18 16:09:02,525 - [INFO] - from application in play-akka.actor.default-dispatcher-102 
-busca Todos os Bairros
+2014-11-21 14:09:34,596 - [INFO] - from application in play-akka.actor.default-dispatcher-28 
+Atualizando Cliente
 
-2014-11-18 16:10:02,716 - [INFO] - from application in play-akka.actor.default-dispatcher-101 
-busca Todos os Bairros
-
-2014-11-18 16:10:09,598 - [INFO] - from application in play-akka.actor.default-dispatcher-115 
+2014-11-21 14:09:34,634 - [INFO] - from application in play-akka.actor.default-dispatcher-28 
 busca Todos os Clientes
 
-2014-11-18 16:33:47,946 - [INFO] - from application in play-akka.actor.default-dispatcher-192 
+2014-11-21 14:09:37,782 - [INFO] - from application in play-akka.actor.default-dispatcher-30 
+buscaPorId Cliente
+
+2014-11-21 14:09:37,790 - [INFO] - from application in play-akka.actor.default-dispatcher-28 
+busca Todos os Bairros
+
+2014-11-21 14:09:41,764 - [INFO] - from application in play-akka.actor.default-dispatcher-30 
+remover Cliente
+
+2014-11-21 14:09:41,837 - [INFO] - from application in play-akka.actor.default-dispatcher-30 
+busca Todos os Clientes
+
+2014-11-21 14:09:53,310 - [INFO] - from application in play-akka.actor.default-dispatcher-28 
+buscaPorId Cliente
+
+2014-11-21 14:09:53,312 - [INFO] - from application in play-akka.actor.default-dispatcher-34 
+busca Todos os Bairros
+
+2014-11-21 14:10:02,252 - [INFO] - from application in play-akka.actor.default-dispatcher-28 
+busca Todos os Clientes
+
+2014-11-21 14:10:47,058 - [INFO] - from application in play-akka.actor.default-dispatcher-36 
+busca Todos os Clientes
+
+2014-11-21 14:10:49,217 - [INFO] - from application in play-akka.actor.default-dispatcher-34 
+busca Todos os Bairros
+
+2014-11-21 14:11:28,062 - [INFO] - from application in play-akka.actor.default-dispatcher-47 
+busca Todos os Clientes
+
+2014-11-21 14:11:43,710 - [INFO] - from application in play-akka.actor.default-dispatcher-42 
+buscaPorId Cliente
+
+2014-11-21 14:11:43,715 - [INFO] - from application in play-akka.actor.default-dispatcher-46 
+busca Todos os Bairros
+
+2014-11-21 14:11:48,943 - [INFO] - from application in play-akka.actor.default-dispatcher-46 
+Atualizando Cliente
+
+2014-11-21 14:11:49,005 - [INFO] - from application in play-akka.actor.default-dispatcher-46 
+busca Todos os Clientes
+
+2014-11-21 14:12:02,203 - [INFO] - from application in play-akka.actor.default-dispatcher-42 
+busca Todos os Bairros
+
+2014-11-21 14:12:02,203 - [INFO] - from application in play-akka.actor.default-dispatcher-45 
+buscaPorId Cliente
+
+2014-11-21 14:12:12,762 - [INFO] - from application in play-akka.actor.default-dispatcher-45 
+busca Todos os Clientes
+
+2014-11-21 14:26:19,105 - [INFO] - from application in play-akka.actor.default-dispatcher-40 
+busca Todos os Clientes
+
+2014-11-21 14:26:56,496 - [INFO] - from application in play-akka.actor.default-dispatcher-48 
 busca Todos os Paises
+
+2014-11-21 14:28:14,117 - [INFO] - from application in play-akka.actor.default-dispatcher-49 
+busca Todos os Paises
+
+2014-11-21 14:28:26,818 - [INFO] - from application in play-akka.actor.default-dispatcher-57 
+busca Todos os Paises
+
+2014-11-21 14:28:46,404 - [INFO] - from application in play-akka.actor.default-dispatcher-55 
+busca Todos os Paises
+
+2014-11-21 14:28:58,103 - [INFO] - from application in play-akka.actor.default-dispatcher-63 
+busca Todos os Paises
+
+2014-11-21 14:29:11,822 - [INFO] - from application in play-akka.actor.default-dispatcher-66 
+busca Todos os Paises
+
+2014-11-21 14:29:13,976 - [INFO] - from application in play-akka.actor.default-dispatcher-53 
+busca Todos os Paises
+
+2014-11-21 14:29:56,966 - [INFO] - from application in play-akka.actor.default-dispatcher-72 
+busca Todos os Paises
+
+2014-11-21 14:30:52,355 - [INFO] - from application in play-akka.actor.default-dispatcher-75 
+busca Todos os Paises
+
+2014-11-21 14:31:01,321 - [INFO] - from application in play-akka.actor.default-dispatcher-73 
+busca Todos os Paises
+
+2014-11-21 14:31:24,064 - [INFO] - from application in play-akka.actor.default-dispatcher-74 
+busca Todos os Estados
+
+2014-11-21 14:31:27,517 - [INFO] - from application in play-akka.actor.default-dispatcher-74 
+busca Todos os Paises
+
+2014-11-21 14:31:30,047 - [INFO] - from application in play-akka.actor.default-dispatcher-78 
+busca Todos os Estados
+
+2014-11-21 14:31:45,593 - [INFO] - from application in play-akka.actor.default-dispatcher-81 
+busca Todos os Estados
+
+2014-11-21 14:32:10,276 - [INFO] - from application in play-akka.actor.default-dispatcher-74 
+busca Todos os Clientes
+
+2014-11-21 14:32:12,263 - [INFO] - from application in play-akka.actor.default-dispatcher-86 
+busca Todos os Clientes
+
+2014-11-21 14:32:14,179 - [INFO] - from application in play-akka.actor.default-dispatcher-87 
+busca Todos os Bairros
+
+2014-11-21 14:32:15,603 - [INFO] - from application in play-akka.actor.default-dispatcher-87 
+busca Todos os Clientes
+
+2014-11-21 14:32:54,587 - [INFO] - from application in play-akka.actor.default-dispatcher-74 
+busca Todas as Cidades
+
+2014-11-21 14:32:56,494 - [INFO] - from application in play-akka.actor.default-dispatcher-74 
+busca Todos os Estados
+
+2014-11-21 14:32:56,502 - [INFO] - from application in play-akka.actor.default-dispatcher-79 
+buscaPorId Cidade
+
+2014-11-21 14:33:00,983 - [INFO] - from application in play-akka.actor.default-dispatcher-74 
+busca Todas as Cidades
+
+2014-11-21 14:33:16,399 - [INFO] - from application in play-akka.actor.default-dispatcher-79 
+busca Todos os Bairros
+
+2014-11-21 14:37:11,894 - [INFO] - from application in play-akka.actor.default-dispatcher-90 
+busca Todos os Paises
+
+2014-11-21 14:37:13,277 - [INFO] - from application in play-akka.actor.default-dispatcher-90 
+busca Todos os Estados
+
+2014-11-21 14:37:14,875 - [INFO] - from application in play-akka.actor.default-dispatcher-90 
+busca Todas as Cidades
+
+2014-11-21 14:37:16,473 - [INFO] - from application in play-akka.actor.default-dispatcher-90 
+busca Todos os Bairros
+
+2014-11-21 14:37:20,278 - [INFO] - from application in play-akka.actor.default-dispatcher-90 
+busca Todos os Paises
+
+2014-11-21 14:37:49,751 - [INFO] - from application in play-akka.actor.default-dispatcher-91 
+busca Todos os Paises
+
+2014-11-21 14:38:34,855 - [INFO] - from application in play-akka.actor.default-dispatcher-102 
+busca Todos os Paises
+
+2014-11-21 14:38:44,602 - [INFO] - from application in play-akka.actor.default-dispatcher-98 
+busca Todos os Paises
+
+2014-11-21 14:40:07,858 - [INFO] - from application in play-akka.actor.default-dispatcher-110 
+busca Todos os Paises
+
+2014-11-21 14:40:19,794 - [INFO] - from application in play-akka.actor.default-dispatcher-114 
+busca Todos os Paises
+
+2014-11-21 14:41:35,134 - [INFO] - from application in play-akka.actor.default-dispatcher-120 
+busca Todos os Paises
+
+2014-11-21 14:41:45,949 - [INFO] - from application in play-akka.actor.default-dispatcher-118 
+busca Todos os Paises
+
+2014-11-21 14:42:32,714 - [INFO] - from application in play-akka.actor.default-dispatcher-123 
+busca Todos os Paises
+
+2014-11-21 14:43:07,620 - [INFO] - from application in play-akka.actor.default-dispatcher-131 
+busca Todos os Paises
+
+2014-11-21 14:43:21,278 - [INFO] - from application in play-akka.actor.default-dispatcher-126 
+busca Todos os Paises
+
+2014-11-21 14:43:38,958 - [INFO] - from application in play-akka.actor.default-dispatcher-135 
+busca Todos os Paises
+
+2014-11-21 14:43:43,784 - [INFO] - from application in play-akka.actor.default-dispatcher-132 
+busca Todos os Clientes
+
+2014-11-21 14:43:47,320 - [INFO] - from application in play-akka.actor.default-dispatcher-132 
+busca Todos os Paises
+
+2014-11-21 14:44:01,833 - [INFO] - from application in play-akka.actor.default-dispatcher-135 
+busca Todos os Paises
+
+2014-11-21 14:45:00,410 - [INFO] - from application in play-akka.actor.default-dispatcher-139 
+busca Todos os Paises
+
+2014-11-21 14:45:30,614 - [INFO] - from application in play-akka.actor.default-dispatcher-136 
+busca Todos os Paises
+
+2014-11-21 14:45:41,845 - [INFO] - from application in play-akka.actor.default-dispatcher-136 
+Salvando Pais
+
+2014-11-21 14:45:42,097 - [INFO] - from application in play-akka.actor.default-dispatcher-136 
+busca Todos os Paises
+
+2014-11-21 14:45:53,589 - [INFO] - from application in play-akka.actor.default-dispatcher-136 
+Salvando Pais
+
+2014-11-21 14:45:53,621 - [INFO] - from application in play-akka.actor.default-dispatcher-136 
+busca Todos os Paises
+
+2014-11-21 14:46:29,797 - [INFO] - from application in play-akka.actor.default-dispatcher-149 
+busca Todos os Paises
+
+2014-11-21 14:46:44,821 - [INFO] - from application in play-akka.actor.default-dispatcher-150 
+busca Todos os Paises
+
+2014-11-21 14:46:57,263 - [INFO] - from application in play-akka.actor.default-dispatcher-151 
+busca Todos os Paises
+
+2014-11-21 14:47:18,077 - [INFO] - from application in play-akka.actor.default-dispatcher-156 
+busca Todos os Paises
+
+2014-11-21 14:47:51,457 - [INFO] - from application in play-akka.actor.default-dispatcher-159 
+busca Todos os Paises
+
+2014-11-21 14:47:59,332 - [INFO] - from application in play-akka.actor.default-dispatcher-159 
+busca Todos os Paises
+
+2014-11-21 14:48:14,033 - [INFO] - from application in play-akka.actor.default-dispatcher-146 
+busca Todos os Estados
+
+2014-11-21 14:48:37,691 - [INFO] - from application in play-akka.actor.default-dispatcher-163 
+busca Todos os Estados
+
+2014-11-21 14:49:32,912 - [INFO] - from application in play-akka.actor.default-dispatcher-171 
+busca Todos os Estados
+
+2014-11-21 14:50:01,267 - [INFO] - from application in play-akka.actor.default-dispatcher-175 
+busca Todos os Estados
+
+2014-11-21 14:50:31,153 - [INFO] - from application in play-akka.actor.default-dispatcher-168 
+busca Todos os Estados
+
+2014-11-21 14:50:52,178 - [INFO] - from application in play-akka.actor.default-dispatcher-178 
+busca Todos os Paises
+
+2014-11-21 14:51:03,050 - [INFO] - from application in play-akka.actor.default-dispatcher-182 
+busca Todos os Paises
+
+2014-11-21 14:51:31,375 - [INFO] - from application in play-akka.actor.default-dispatcher-180 
+busca Todos os Estados
+
+2014-11-21 14:51:53,608 - [INFO] - from application in play-akka.actor.default-dispatcher-185 
+busca Todos os Paises
+
+2014-11-21 14:52:04,375 - [INFO] - from application in play-akka.actor.default-dispatcher-185 
+Salvando Estado
+
+2014-11-21 14:52:04,487 - [INFO] - from application in play-akka.actor.default-dispatcher-185 
+busca Todos os Estados
+
+2014-11-21 14:52:21,029 - [INFO] - from application in play-akka.actor.default-dispatcher-176 
+busca Todos os Paises
+
+2014-11-21 14:52:23,132 - [INFO] - from application in play-akka.actor.default-dispatcher-176 
+buscaPorId País
+
+2014-11-21 14:52:59,949 - [INFO] - from application in play-akka.actor.default-dispatcher-188 
+buscaPorId País
+
+2014-11-21 14:55:02,131 - [INFO] - from application in play-akka.actor.default-dispatcher-197 
+buscaPorId País
+
+2014-11-21 14:55:07,728 - [INFO] - from application in play-akka.actor.default-dispatcher-200 
+busca Todos os Paises
+
+2014-11-21 14:55:51,692 - [INFO] - from application in play-akka.actor.default-dispatcher-203 
+busca Todos os Paises
+
+2014-11-21 14:55:52,786 - [INFO] - from application in play-akka.actor.default-dispatcher-207 
+buscaPorId País
+
+2014-11-21 14:56:05,637 - [INFO] - from application in play-akka.actor.default-dispatcher-211 
+buscaPorId País
+
+2014-11-21 14:56:24,210 - [INFO] - from application in play-akka.actor.default-dispatcher-200 
+buscaPorId País
+
+2014-11-21 14:56:27,560 - [INFO] - from application in play-akka.actor.default-dispatcher-205 
+busca Todos os Paises
+
+2014-11-21 14:56:35,952 - [INFO] - from application in play-akka.actor.default-dispatcher-205 
+busca Todos os Paises
+
+2014-11-21 14:56:38,675 - [INFO] - from application in play-akka.actor.default-dispatcher-205 
+buscaPorId País
+
+2014-11-21 14:56:51,480 - [INFO] - from application in play-akka.actor.default-dispatcher-212 
+buscaPorId País
+
+2014-11-21 14:56:55,689 - [INFO] - from application in play-akka.actor.default-dispatcher-215 
+busca Todos os Paises
+
+2014-11-21 14:57:00,299 - [INFO] - from application in play-akka.actor.default-dispatcher-215 
+buscaPorId País
+
+2014-11-21 14:57:07,107 - [INFO] - from application in play-akka.actor.default-dispatcher-214 
+busca Todos os Paises
+
+2014-11-21 14:57:12,149 - [INFO] - from application in play-akka.actor.default-dispatcher-200 
+busca Todos os Paises
+
+2014-11-21 14:57:14,622 - [INFO] - from application in play-akka.actor.default-dispatcher-194 
+busca Todos os Estados
+
+2014-11-21 14:57:17,764 - [INFO] - from application in play-akka.actor.default-dispatcher-200 
+busca Todos os Paises
+
+2014-11-21 14:58:07,400 - [INFO] - from application in play-akka.actor.default-dispatcher-219 
+busca Todos os Paises
+
+2014-11-21 14:58:08,212 - [INFO] - from application in play-akka.actor.default-dispatcher-218 
+busca Todos os Clientes
+
+2014-11-21 14:58:12,110 - [INFO] - from application in play-akka.actor.default-dispatcher-219 
+busca Todos os Estados
+
+2014-11-21 14:58:15,510 - [INFO] - from application in play-akka.actor.default-dispatcher-217 
+busca Todas as Cidades
+
+2014-11-21 14:58:17,795 - [INFO] - from application in play-akka.actor.default-dispatcher-217 
+busca Todos os Bairros
+
+2014-11-21 14:58:20,446 - [INFO] - from application in play-akka.actor.default-dispatcher-217 
+busca Todos os Estados
+
+2014-11-21 14:58:22,975 - [INFO] - from application in play-akka.actor.default-dispatcher-217 
+busca Todas as Cidades
+
+2014-11-21 14:58:24,856 - [INFO] - from application in play-akka.actor.default-dispatcher-217 
+busca Todos os Estados
+
+2014-11-21 14:58:26,108 - [INFO] - from application in play-akka.actor.default-dispatcher-219 
+busca Todos os Paises
+
+2014-11-21 14:58:26,123 - [INFO] - from application in play-akka.actor.default-dispatcher-219 
+buscaPorId Estado
+
+2014-11-21 14:58:27,858 - [INFO] - from application in play-akka.actor.default-dispatcher-219 
+busca Todos os Estados
+
+2014-11-21 14:58:41,157 - [INFO] - from application in play-akka.actor.default-dispatcher-221 
+busca Todos os Paises
+
+2014-11-21 14:59:40,835 - [INFO] - from application in play-akka.actor.default-dispatcher-228 
+busca Todos os Paises
+
+2014-11-21 14:59:53,838 - [INFO] - from application in play-akka.actor.default-dispatcher-227 
+busca Todos os Estados
+
+2014-11-21 14:59:56,840 - [INFO] - from application in play-akka.actor.default-dispatcher-216 
+busca Todos os Paises
+
+2014-11-21 14:59:56,840 - [INFO] - from application in play-akka.actor.default-dispatcher-225 
+buscaPorId Estado
+
+2014-11-21 15:01:52,620 - [INFO] - from application in play-akka.actor.default-dispatcher-236 
+buscaPorId Estado
+
+2014-11-21 15:01:52,625 - [INFO] - from application in play-akka.actor.default-dispatcher-236 
+busca Todos os Paises
+
+2014-11-21 15:02:01,107 - [INFO] - from application in play-akka.actor.default-dispatcher-233 
+buscaPorId Estado
+
+2014-11-21 15:02:01,108 - [INFO] - from application in play-akka.actor.default-dispatcher-238 
+busca Todos os Paises
+
+2014-11-21 15:02:10,727 - [INFO] - from application in play-akka.actor.default-dispatcher-237 
+busca Todos os Estados
+
+2014-11-21 15:02:11,732 - [INFO] - from application in play-akka.actor.default-dispatcher-237 
+buscaPorId Estado
+
+2014-11-21 15:02:11,736 - [INFO] - from application in play-akka.actor.default-dispatcher-231 
+busca Todos os Paises
+
+2014-11-21 15:02:18,464 - [INFO] - from application in play-akka.actor.default-dispatcher-231 
+busca Todos os Estados
+
+2014-11-21 15:02:21,531 - [INFO] - from application in play-akka.actor.default-dispatcher-231 
+busca Todas as Cidades
+
+2014-11-21 15:02:56,450 - [INFO] - from application in play-akka.actor.default-dispatcher-224 
+busca Todos os Clientes
+
+2014-11-21 15:02:57,519 - [INFO] - from application in play-akka.actor.default-dispatcher-224 
+busca Todos os Bairros
+
+2014-11-21 15:02:59,161 - [INFO] - from application in play-akka.actor.default-dispatcher-224 
+busca Todos os Clientes
+
+2014-11-21 15:03:00,097 - [INFO] - from application in play-akka.actor.default-dispatcher-239 
+busca Todos os Bairros
+
+2014-11-21 15:03:00,110 - [INFO] - from application in play-akka.actor.default-dispatcher-239 
+buscaPorId Cliente
+
+2014-11-21 15:03:10,949 - [INFO] - from application in play-akka.actor.default-dispatcher-239 
+buscaPorId Cliente
+
+2014-11-21 15:03:10,951 - [INFO] - from application in play-akka.actor.default-dispatcher-244 
+busca Todos os Bairros
+
+2014-11-21 15:03:28,750 - [INFO] - from application in play-akka.actor.default-dispatcher-243 
+busca Todos os Clientes
+
+2014-11-21 15:03:30,364 - [INFO] - from application in play-akka.actor.default-dispatcher-243 
+busca Todos os Bairros
+
+2014-11-21 15:04:04,945 - [INFO] - from application in play-akka.actor.default-dispatcher-246 
+busca Todos os Bairros
+
+2014-11-21 15:04:12,378 - [INFO] - from application in play-akka.actor.default-dispatcher-247 
+busca Todos os Clientes
+
+2014-11-21 15:06:20,272 - [INFO] - from application in play-akka.actor.default-dispatcher-257 
+busca Todos os Clientes
+
+2014-11-21 15:06:25,460 - [INFO] - from application in play-akka.actor.default-dispatcher-252 
+buscaPorId Cliente
+
+2014-11-21 15:06:25,463 - [INFO] - from application in play-akka.actor.default-dispatcher-256 
+busca Todos os Bairros
+
+2014-11-21 15:06:27,243 - [INFO] - from application in play-akka.actor.default-dispatcher-252 
+busca Todos os Clientes
+
+2014-11-21 15:07:04,996 - [INFO] - from application in play-akka.actor.default-dispatcher-261 
+busca Todos os Clientes
+
+2014-11-21 15:07:38,784 - [INFO] - from application in play-akka.actor.default-dispatcher-263 
+busca Todos os Clientes
+
+2014-11-21 15:07:50,008 - [INFO] - from application in play-akka.actor.default-dispatcher-258 
+busca Todos os Paises
+
+2014-11-21 15:07:51,252 - [INFO] - from application in play-akka.actor.default-dispatcher-260 
+busca Todos os Estados
+
+2014-11-21 15:07:52,628 - [INFO] - from application in play-akka.actor.default-dispatcher-266 
+busca Todas as Cidades
+
+2014-11-21 15:07:54,340 - [INFO] - from application in play-akka.actor.default-dispatcher-266 
+busca Todos os Clientes
+
+2014-11-21 15:07:57,366 - [INFO] - from application in play-akka.actor.default-dispatcher-258 
+busca Todos os Bairros
+
+2014-11-21 15:07:58,616 - [INFO] - from application in play-akka.actor.default-dispatcher-258 
+busca Todos os Clientes
+
+2014-11-21 15:08:35,170 - [INFO] - from application in play-akka.actor.default-dispatcher-251 
+busca Todos os Paises
+
+2014-11-21 15:08:41,594 - [INFO] - from application in play-akka.actor.default-dispatcher-271 
+busca Todos os Paises
+
+2014-11-21 15:09:52,317 - [INFO] - from application in play-akka.actor.default-dispatcher-282 
+busca Todos os Paises
+
+2014-11-21 15:10:09,697 - [INFO] - from application in play-akka.actor.default-dispatcher-282 
+busca Todos os Clientes
+
+2014-11-21 15:10:11,115 - [INFO] - from application in play-akka.actor.default-dispatcher-274 
+busca Todos os Bairros
+
+2014-11-21 15:10:17,685 - [INFO] - from application in play-akka.actor.default-dispatcher-274 
+busca Todos os Clientes
+
+2014-11-21 15:10:19,751 - [INFO] - from application in play-akka.actor.default-dispatcher-274 
+busca Todos os Bairros
+
+2014-11-21 15:10:26,794 - [INFO] - from application in play-akka.actor.default-dispatcher-274 
+busca Todos os Estados
+
+2014-11-21 15:10:31,050 - [INFO] - from application in play-akka.actor.default-dispatcher-276 
+busca Todos os Paises
+
+2014-11-21 15:10:36,072 - [INFO] - from application in play-akka.actor.default-dispatcher-276 
+busca Todos os Estados
+
+2014-11-21 15:10:38,909 - [INFO] - from application in play-akka.actor.default-dispatcher-276 
+busca Todas as Cidades
+
+2014-11-21 15:11:14,430 - [INFO] - from application in play-akka.actor.default-dispatcher-287 
+busca Todas as Cidades
+
+2014-11-21 15:11:58,276 - [INFO] - from application in play-akka.actor.default-dispatcher-290 
+busca Todas as Cidades
+
+2014-11-21 15:12:04,924 - [INFO] - from application in play-akka.actor.default-dispatcher-294 
+busca Todos os Estados
+
+2014-11-21 15:12:08,910 - [INFO] - from application in play-akka.actor.default-dispatcher-294 
+busca Todas as Cidades
+
+2014-11-21 15:12:14,893 - [INFO] - from application in play-akka.actor.default-dispatcher-294 
+busca Todos os Estados
+
+2014-11-21 15:12:27,157 - [INFO] - from application in play-akka.actor.default-dispatcher-295 
+busca Todas as Cidades
+
+2014-11-21 15:12:28,048 - [INFO] - from application in play-akka.actor.default-dispatcher-286 
+buscaPorId Cidade
+
+2014-11-21 15:12:28,051 - [INFO] - from application in play-akka.actor.default-dispatcher-292 
+busca Todos os Estados
+
+2014-11-21 15:13:16,530 - [INFO] - from application in play-akka.actor.default-dispatcher-297 
+buscaPorId Cidade
+
+2014-11-21 15:13:16,533 - [INFO] - from application in play-akka.actor.default-dispatcher-301 
+busca Todos os Estados
+
+2014-11-21 15:13:43,763 - [INFO] - from application in play-akka.actor.default-dispatcher-296 
+busca Todas as Cidades
+
+2014-11-21 15:13:44,982 - [INFO] - from application in play-akka.actor.default-dispatcher-296 
+busca Todos os Estados
+
+2014-11-21 15:13:53,177 - [INFO] - from application in play-akka.actor.default-dispatcher-291 
+busca Todos os Estados
+
+2014-11-21 15:13:55,357 - [INFO] - from application in play-akka.actor.default-dispatcher-300 
+busca Todas as Cidades
+
+2014-11-21 15:14:08,962 - [INFO] - from application in play-akka.actor.default-dispatcher-291 
+busca Todos os Estados
+
+2014-11-21 15:14:10,402 - [INFO] - from application in play-akka.actor.default-dispatcher-291 
+busca Todas as Cidades
+
+2014-11-21 15:14:24,112 - [INFO] - from application in play-akka.actor.default-dispatcher-298 
+busca Todos os Estados
+
+2014-11-21 15:14:26,998 - [INFO] - from application in play-akka.actor.default-dispatcher-298 
+busca Todas as Cidades
+
+2014-11-21 15:14:39,745 - [INFO] - from application in play-akka.actor.default-dispatcher-298 
+busca Todos os Estados
+
+2014-11-21 15:14:40,683 - [INFO] - from application in play-akka.actor.default-dispatcher-298 
+busca Todas as Cidades
+
+2014-11-21 15:14:47,924 - [INFO] - from application in play-akka.actor.default-dispatcher-303 
+busca Todos os Bairros
+
+2014-11-21 15:15:15,819 - [INFO] - from application in play-akka.actor.default-dispatcher-309 
+busca Todos os Bairros
+
+2014-11-21 15:15:47,057 - [INFO] - from application in play-akka.actor.default-dispatcher-304 
+busca Todos os Bairros
+
+2014-11-21 15:15:50,461 - [INFO] - from application in play-akka.actor.default-dispatcher-313 
+busca Todas as Cidades
+
+2014-11-21 15:15:53,500 - [INFO] - from application in play-akka.actor.default-dispatcher-313 
+busca Todos os Bairros
+
+2014-11-21 15:15:56,966 - [INFO] - from application in play-akka.actor.default-dispatcher-313 
+busca Todas as Cidades
+
+2014-11-21 15:16:05,056 - [INFO] - from application in play-akka.actor.default-dispatcher-311 
+Salvando Bairro
+
+2014-11-21 15:16:05,171 - [INFO] - from application in play-akka.actor.default-dispatcher-311 
+busca Todos os Bairros
+
+2014-11-21 15:17:04,977 - [INFO] - from application in play-akka.actor.default-dispatcher-306 
+busca Todas as Cidades
+
+2014-11-21 15:17:04,991 - [INFO] - from application in play-akka.actor.default-dispatcher-306 
+buscaPorId Bairro
+
+2014-11-21 15:17:07,485 - [INFO] - from application in play-akka.actor.default-dispatcher-318 
+buscaPorId Bairro
+
+2014-11-21 15:17:07,485 - [INFO] - from application in play-akka.actor.default-dispatcher-320 
+busca Todas as Cidades
+
+2014-11-21 15:17:11,554 - [INFO] - from application in play-akka.actor.default-dispatcher-319 
+busca Todos os Bairros
+
+2014-11-21 15:17:13,147 - [INFO] - from application in play-akka.actor.default-dispatcher-320 
+busca Todas as Cidades
+
+2014-11-21 15:17:39,832 - [INFO] - from application in play-akka.actor.default-dispatcher-325 
+busca Todas as Cidades
+
+2014-11-21 15:17:43,268 - [INFO] - from application in play-akka.actor.default-dispatcher-326 
+busca Todos os Bairros
+
+2014-11-21 15:17:44,796 - [INFO] - from application in play-akka.actor.default-dispatcher-326 
+busca Todas as Cidades
+
+2014-11-21 15:17:50,008 - [INFO] - from application in play-akka.actor.default-dispatcher-324 
+Salvando Bairro
+
+2014-11-21 15:17:50,067 - [INFO] - from application in play-akka.actor.default-dispatcher-324 
+busca Todos os Bairros
+
+2014-11-21 15:17:53,630 - [INFO] - from application in play-akka.actor.default-dispatcher-316 
+busca Todas as Cidades
+
+2014-11-21 15:17:55,223 - [INFO] - from application in play-akka.actor.default-dispatcher-324 
+busca Todos os Estados
+
+2014-11-21 15:18:04,119 - [INFO] - from application in play-akka.actor.default-dispatcher-316 
+busca Todas as Cidades
+
+2014-11-21 15:18:07,194 - [INFO] - from application in play-akka.actor.default-dispatcher-322 
+busca Todos os Estados
+
+2014-11-21 15:18:08,418 - [INFO] - from application in play-akka.actor.default-dispatcher-316 
+busca Todos os Paises
+
+2014-11-21 15:18:17,275 - [INFO] - from application in play-akka.actor.default-dispatcher-322 
+Salvando Estado
+
+2014-11-21 15:18:17,342 - [INFO] - from application in play-akka.actor.default-dispatcher-322 
+busca Todos os Estados
+
+2014-11-21 15:18:23,543 - [INFO] - from application in play-akka.actor.default-dispatcher-322 
+busca Todas as Cidades
+
+2014-11-21 15:18:24,727 - [INFO] - from application in play-akka.actor.default-dispatcher-322 
+busca Todos os Estados
+
+2014-11-21 15:18:35,555 - [INFO] - from application in play-akka.actor.default-dispatcher-323 
+Salvando Cidade
+
+2014-11-21 15:18:35,642 - [INFO] - from application in play-akka.actor.default-dispatcher-323 
+busca Todas as Cidades
+
+2014-11-21 15:18:39,434 - [INFO] - from application in play-akka.actor.default-dispatcher-323 
+busca Todos os Bairros
+
+2014-11-21 15:18:41,490 - [INFO] - from application in play-akka.actor.default-dispatcher-323 
+busca Todas as Cidades
+
+2014-11-21 15:18:50,922 - [INFO] - from application in play-akka.actor.default-dispatcher-323 
+Salvando Bairro
+
+2014-11-21 15:18:50,969 - [INFO] - from application in play-akka.actor.default-dispatcher-323 
+busca Todos os Bairros
+
+2014-11-21 15:19:27,271 - [INFO] - from application in play-akka.actor.default-dispatcher-317 
+busca Todas as Cidades
+
+2014-11-21 15:19:29,304 - [INFO] - from application in play-akka.actor.default-dispatcher-317 
+busca Todos os Bairros
+
+2014-11-21 15:19:31,153 - [INFO] - from application in play-akka.actor.default-dispatcher-328 
+busca Todas as Cidades
+
+2014-11-21 15:19:31,153 - [INFO] - from application in play-akka.actor.default-dispatcher-317 
+buscaPorId Bairro
+
+2014-11-21 15:19:35,424 - [INFO] - from application in play-akka.actor.default-dispatcher-328 
+busca Todos os Bairros
+
+2014-11-21 15:20:19,604 - [INFO] - from application in play-akka.actor.default-dispatcher-329 
+busca Todos os Clientes
+
+2014-11-21 15:20:34,251 - [INFO] - from application in play-akka.actor.default-dispatcher-332 
+busca Todos os Clientes
+
+2014-11-21 15:20:35,557 - [INFO] - from application in play-akka.actor.default-dispatcher-332 
+busca Todos os Bairros
+
+2014-11-21 15:20:52,410 - [INFO] - from application in play-akka.actor.default-dispatcher-335 
+busca Todos os Bairros
+
+2014-11-21 15:20:53,623 - [INFO] - from application in play-akka.actor.default-dispatcher-327 
+busca Todas as Cidades
+
+2014-11-21 15:22:01,519 - [INFO] - from application in play-akka.actor.default-dispatcher-334 
+busca Todos os Clientes
+
+2014-11-21 15:22:02,822 - [INFO] - from application in play-akka.actor.default-dispatcher-334 
+busca Todos os Bairros
+
+2014-11-21 15:29:37,933 - [INFO] - from application in play-akka.actor.default-dispatcher-341 
+busca Todos os Bairros
+
+2014-11-21 15:30:58,074 - [INFO] - from application in play-akka.actor.default-dispatcher-344 
+busca Todos os Bairros
+
+2014-11-21 15:34:41,170 - [INFO] - from application in play-akka.actor.default-dispatcher-356 
+busca Todos os Bairros
+
+2014-11-21 15:36:01,945 - [INFO] - from application in play-akka.actor.default-dispatcher-352 
+busca Todos os Bairros
+
+2014-11-21 15:36:48,690 - [INFO] - from application in play-akka.actor.default-dispatcher-366 
+busca Todos os Bairros
+
+2014-11-21 15:40:19,345 - [INFO] - from application in play-akka.actor.default-dispatcher-367 
+busca Todos os Bairros
+
+2014-11-21 15:41:44,546 - [INFO] - from application in play-akka.actor.default-dispatcher-384 
+busca Todos os Bairros
+
+2014-11-21 15:42:04,363 - [INFO] - from application in play-akka.actor.default-dispatcher-379 
+busca Todos os Bairros
+
+2014-11-21 15:42:56,173 - [INFO] - from application in play-akka.actor.default-dispatcher-393 
+busca Todos os Bairros
+
+2014-11-21 15:43:27,166 - [INFO] - from application in play-akka.actor.default-dispatcher-389 
+busca Todos os Bairros
+
+2014-11-21 15:44:20,096 - [INFO] - from application in play-akka.actor.default-dispatcher-399 
+busca Todos os Bairros
+
+2014-11-21 15:44:45,007 - [INFO] - from application in play-akka.actor.default-dispatcher-401 
+busca Todos os Bairros
+
+2014-11-21 15:45:07,847 - [INFO] - from application in play-akka.actor.default-dispatcher-412 
+busca Todos os Bairros
+
+2014-11-21 15:46:56,561 - [INFO] - from application in play-akka.actor.default-dispatcher-414 
+busca Todos os Bairros
+
+2014-11-21 15:48:46,894 - [INFO] - from application in play-akka.actor.default-dispatcher-405 
+busca Todos os Bairros
+
+2014-11-21 15:49:38,980 - [INFO] - from application in play-akka.actor.default-dispatcher-427 
+busca Todos os Bairros
+
+2014-11-21 15:49:43,688 - [INFO] - from application in play-akka.actor.default-dispatcher-415 
+busca Todos os Clientes
+
+2014-11-21 15:49:46,000 - [INFO] - from application in play-akka.actor.default-dispatcher-423 
+buscaPorId Cliente
+
+2014-11-21 15:49:46,001 - [INFO] - from application in play-akka.actor.default-dispatcher-426 
+busca Todos os Bairros
+
+2014-11-21 15:49:48,511 - [INFO] - from application in play-akka.actor.default-dispatcher-423 
+busca Todos os Clientes
+
+2014-11-21 15:49:52,955 - [INFO] - from application in play-akka.actor.default-dispatcher-426 
+busca Todos os Bairros
+
+2014-11-21 15:57:55,362 - [INFO] - from application in play-akka.actor.default-dispatcher-428 
+busca Todos os Bairros
+
+2014-11-21 15:58:26,300 - [INFO] - from application in play-akka.actor.default-dispatcher-425 
+Salvando Cliente
+
+2014-11-21 15:58:27,002 - [INFO] - from application in play-akka.actor.default-dispatcher-433 
+busca Todos os Clientes
+
+2014-11-21 15:58:29,544 - [INFO] - from application in play-akka.actor.default-dispatcher-433 
+buscaPorId Cliente
+
+2014-11-21 15:58:29,547 - [INFO] - from application in play-akka.actor.default-dispatcher-425 
+busca Todos os Bairros
+
+2014-11-21 15:58:33,247 - [INFO] - from application in play-akka.actor.default-dispatcher-425 
+busca Todos os Clientes
+
+2014-11-21 15:58:34,948 - [INFO] - from application in play-akka.actor.default-dispatcher-425 
+buscaPorId Cliente
+
+2014-11-21 15:58:34,950 - [INFO] - from application in play-akka.actor.default-dispatcher-433 
+busca Todos os Bairros
+
+2014-11-21 15:58:37,242 - [INFO] - from application in play-akka.actor.default-dispatcher-425 
+busca Todos os Clientes
+
+2014-11-21 15:58:39,040 - [INFO] - from application in play-akka.actor.default-dispatcher-425 
+buscaPorId Cliente
+
+2014-11-21 15:58:39,040 - [INFO] - from application in play-akka.actor.default-dispatcher-433 
+busca Todos os Bairros
+
+2014-11-21 15:58:43,676 - [INFO] - from application in play-akka.actor.default-dispatcher-425 
+remover Cliente
+
+2014-11-21 15:58:43,813 - [INFO] - from application in play-akka.actor.default-dispatcher-425 
+busca Todos os Clientes
+
+2014-11-21 15:58:44,894 - [INFO] - from application in play-akka.actor.default-dispatcher-425 
+busca Todos os Bairros
+
+2014-11-21 15:59:21,630 - [INFO] - from application in play-akka.actor.default-dispatcher-435 
+busca Todos os Bairros
+
+2014-11-21 16:00:53,685 - [INFO] - from application in play-akka.actor.default-dispatcher-437 
+busca Todos os Bairros
+
+2014-11-21 16:01:56,610 - [INFO] - from application in play-akka.actor.default-dispatcher-443 
+Salvando Cliente
+
+2014-11-21 16:01:57,035 - [INFO] - from application in play-akka.actor.default-dispatcher-448 
+busca Todos os Clientes
+
+2014-11-21 16:02:21,446 - [INFO] - from application in play-akka.actor.default-dispatcher-447 
+busca Todos os Bairros
+
+2014-11-21 16:02:21,448 - [INFO] - from application in play-akka.actor.default-dispatcher-443 
+buscaPorId Cliente
+
+2014-11-21 16:02:23,487 - [INFO] - from application in play-akka.actor.default-dispatcher-449 
+busca Todos os Clientes
+
+2014-11-21 16:02:25,077 - [INFO] - from application in play-akka.actor.default-dispatcher-449 
+busca Todos os Bairros
+
+2014-11-21 16:02:37,537 - [INFO] - from application in play-akka.actor.default-dispatcher-443 
+Salvando Cliente
+
+2014-11-21 16:02:37,709 - [INFO] - from application in play-akka.actor.default-dispatcher-443 
+busca Todos os Clientes
+
+2014-11-21 16:08:50,801 - [INFO] - from application in play-akka.actor.default-dispatcher-457 
+busca Todos os Clientes
+
+2014-11-21 16:12:25,647 - [INFO] - from application in play-akka.actor.default-dispatcher-462 
+busca Todos os Clientes
+
+2014-11-21 16:12:27,011 - [INFO] - from application in play-akka.actor.default-dispatcher-464 
+busca Todos os Bairros
+
+2014-11-21 16:12:54,078 - [INFO] - from application in play-akka.actor.default-dispatcher-468 
+busca Todos os Bairros
+
+2014-11-21 16:13:18,414 - [INFO] - from application in play-akka.actor.default-dispatcher-467 
+busca Todos os Bairros
+
+2014-11-21 16:13:53,317 - [INFO] - from application in play-akka.actor.default-dispatcher-458 
+busca Todos os Bairros
+
+2014-11-21 16:14:32,362 - [INFO] - from application in play-akka.actor.default-dispatcher-482 
+busca Todos os Bairros
+
+2014-11-21 16:15:30,645 - [INFO] - from application in play-akka.actor.default-dispatcher-483 
+busca Todos os Bairros
+
+2014-11-21 16:15:47,312 - [INFO] - from application in play-akka.actor.default-dispatcher-490 
+busca Todos os Bairros
+
+2014-11-21 16:16:19,381 - [INFO] - from application in play-akka.actor.default-dispatcher-486 
+busca Todos os Bairros
+
+2014-11-21 16:18:21,519 - [INFO] - from application in play-akka.actor.default-dispatcher-496 
+busca Todos os Bairros
+
+2014-11-21 16:22:33,259 - [INFO] - from application in play-akka.actor.default-dispatcher-506 
+busca Todos os Bairros
+
+2014-11-21 16:28:01,727 - [INFO] - from application in play-akka.actor.default-dispatcher-528 
+busca Todos os Bairros
+
+2014-11-21 16:28:15,302 - [INFO] - from application in play-akka.actor.default-dispatcher-524 
+busca Todos os Bairros
+
+2014-11-21 16:28:50,762 - [INFO] - from application in play-akka.actor.default-dispatcher-535 
+busca Todos os Bairros
+
+2014-11-21 16:29:07,464 - [INFO] - from application in play-akka.actor.default-dispatcher-539 
+busca Todos os Bairros
+
+2014-11-21 16:29:19,413 - [INFO] - from application in play-akka.actor.default-dispatcher-538 
+busca Todos os Bairros
+
+2014-11-21 16:29:46,239 - [INFO] - from application in play-akka.actor.default-dispatcher-526 
+busca Todos os Bairros
+
+2014-11-21 16:29:49,579 - [INFO] - from application in play-akka.actor.default-dispatcher-541 
+busca Todos os Clientes
+
+2014-11-21 16:29:58,255 - [INFO] - from application in play-akka.actor.default-dispatcher-544 
+busca Todos os Clientes
+
+2014-11-21 16:29:59,221 - [INFO] - from application in play-akka.actor.default-dispatcher-544 
+busca Todos os Bairros
+
+2014-11-21 16:30:09,588 - [INFO] - from application in play-akka.actor.default-dispatcher-533 
+busca Todos os Bairros
+
+2014-11-21 16:30:19,430 - [INFO] - from application in play-akka.actor.default-dispatcher-547 
+busca Todos os Bairros
+
+2014-11-21 16:31:01,975 - [INFO] - from application in play-akka.actor.default-dispatcher-545 
+busca Todos os Bairros
+
+2014-11-21 16:32:25,987 - [INFO] - from application in play-akka.actor.default-dispatcher-559 
+busca Todos os Bairros
+
+2014-11-21 16:32:58,982 - [INFO] - from application in play-akka.actor.default-dispatcher-556 
+busca Todos os Estados
+
+2014-11-21 16:33:00,933 - [INFO] - from application in play-akka.actor.default-dispatcher-556 
+busca Todos os Clientes
+
+2014-11-21 16:33:04,743 - [INFO] - from application in play-akka.actor.default-dispatcher-556 
+busca Todos os Bairros
+
+2014-11-21 17:16:03,704 - [INFO] - from application in play-akka.actor.default-dispatcher-555 
+Salvando Cliente
+
+2014-11-21 17:16:04,058 - [INFO] - from application in play-akka.actor.default-dispatcher-555 
+busca Todos os Clientes
+
+2014-11-21 17:17:15,544 - [INFO] - from application in play-akka.actor.default-dispatcher-567 
+busca Todos os Clientes
+
+2014-11-21 17:17:17,170 - [INFO] - from application in play-akka.actor.default-dispatcher-564 
+busca Todos os Bairros
+
+2014-11-21 17:17:32,549 - [INFO] - from application in play-akka.actor.default-dispatcher-561 
+Salvando Cliente
+
+2014-11-21 17:17:32,787 - [ERROR] - from play in play-akka.actor.default-dispatcher-561 
+Cannot invoke the action, eventually got an error: java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "datanascimento" (class models.Cliente), not marked as ignorable (14 known properties: "bairro", "complemento", "telefone", "cep", "celular", "genero", "rg", "dataNascimento", "nome", "cpf", "id", "email", "numero", "rua"])
+ at [Source: N/A; line: -1, column: -1] (through reference chain: models.Cliente["datanascimento"])
+
+2014-11-21 17:17:35,020 - [ERROR] - from application in play-akka.actor.default-dispatcher-561 
+
+
+! @6k9iaagpe - Internal server error, for (POST) [/clientes] ->
+
+play.api.Application$$anon$1: Execution exception[[RuntimeException: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "datanascimento" (class models.Cliente), not marked as ignorable (14 known properties: "bairro", "complemento", "telefone", "cep", "celular", "genero", "rg", "dataNascimento", "nome", "cpf", "id", "email", "numero", "rua"])
+ at [Source: N/A; line: -1, column: -1] (through reference chain: models.Cliente["datanascimento"])]]
+	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.6.jar:2.3.6]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.1.jar:na]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.1.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.1.jar:na]
+Caused by: java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "datanascimento" (class models.Cliente), not marked as ignorable (14 known properties: "bairro", "complemento", "telefone", "cep", "celular", "genero", "rg", "dataNascimento", "nome", "cpf", "id", "email", "numero", "rua"])
+ at [Source: N/A; line: -1, column: -1] (through reference chain: models.Cliente["datanascimento"])
+	at play.libs.Json.fromJson(Json.java:49) ~[play-json_2.11-2.3.6.jar:2.3.6]
+	at controllers.ClienteController.inserir(ClienteController.java:16) ~[classes/:2.3.6]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$22$$anonfun$apply$22.apply(routes_routing.scala:402) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$22$$anonfun$apply$22.apply(routes_routing.scala:402) ~[classes/:na]
+	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.6.jar:2.3.6]
+	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.1.jar:na]
+	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
+	... 6 common frames omitted
+Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "datanascimento" (class models.Cliente), not marked as ignorable (14 known properties: "bairro", "complemento", "telefone", "cep", "celular", "genero", "rg", "dataNascimento", "nome", "cpf", "id", "email", "numero", "rua"])
+ at [Source: N/A; line: -1, column: -1] (through reference chain: models.Cliente["datanascimento"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:51) ~[jackson-databind-2.3.2.jar:2.3.2]
+	at com.fasterxml.jackson.databind.DeserializationContext.reportUnknownProperty(DeserializationContext.java:671) ~[jackson-databind-2.3.2.jar:2.3.2]
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:771) ~[jackson-databind-2.3.2.jar:2.3.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1297) ~[jackson-databind-2.3.2.jar:2.3.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1275) ~[jackson-databind-2.3.2.jar:2.3.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:247) ~[jackson-databind-2.3.2.jar:2.3.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:118) ~[jackson-databind-2.3.2.jar:2.3.2]
+	at com.fasterxml.jackson.databind.ObjectMapper._readValue(ObjectMapper.java:2965) ~[jackson-databind-2.3.2.jar:2.3.2]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:1587) ~[jackson-databind-2.3.2.jar:2.3.2]
+	at com.fasterxml.jackson.databind.ObjectMapper.treeToValue(ObjectMapper.java:1931) ~[jackson-databind-2.3.2.jar:2.3.2]
+	at play.libs.Json.fromJson(Json.java:47) ~[play-json_2.11-2.3.6.jar:2.3.6]
+	... 39 common frames omitted
+
+2014-11-21 17:18:40,687 - [INFO] - from application in play-akka.actor.default-dispatcher-563 
+busca Todos os Clientes
+
+2014-11-21 17:18:43,169 - [INFO] - from application in play-akka.actor.default-dispatcher-569 
+busca Todos os Bairros
+
+2014-11-21 17:19:36,301 - [INFO] - from application in play-akka.actor.default-dispatcher-563 
+Salvando Cliente
+
+2014-11-21 17:19:36,302 - [ERROR] - from play in play-akka.actor.default-dispatcher-563 
+Cannot invoke the action, eventually got an error: java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "datanascimento" (class models.Cliente), not marked as ignorable (14 known properties: "bairro", "complemento", "telefone", "cep", "celular", "genero", "rg", "dataNascimento", "nome", "cpf", "id", "email", "numero", "rua"])
+ at [Source: N/A; line: -1, column: -1] (through reference chain: models.Cliente["datanascimento"])
+
+2014-11-21 17:19:36,304 - [ERROR] - from application in play-akka.actor.default-dispatcher-563 
+
+
+! @6k9iahele - Internal server error, for (POST) [/clientes] ->
+
+play.api.Application$$anon$1: Execution exception[[RuntimeException: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "datanascimento" (class models.Cliente), not marked as ignorable (14 known properties: "bairro", "complemento", "telefone", "cep", "celular", "genero", "rg", "dataNascimento", "nome", "cpf", "id", "email", "numero", "rua"])
+ at [Source: N/A; line: -1, column: -1] (through reference chain: models.Cliente["datanascimento"])]]
+	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.6.jar:2.3.6]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.1.jar:na]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.1.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.1.jar:na]
+Caused by: java.lang.RuntimeException: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "datanascimento" (class models.Cliente), not marked as ignorable (14 known properties: "bairro", "complemento", "telefone", "cep", "celular", "genero", "rg", "dataNascimento", "nome", "cpf", "id", "email", "numero", "rua"])
+ at [Source: N/A; line: -1, column: -1] (through reference chain: models.Cliente["datanascimento"])
+	at play.libs.Json.fromJson(Json.java:49) ~[play-json_2.11-2.3.6.jar:2.3.6]
+	at controllers.ClienteController.inserir(ClienteController.java:16) ~[classes/:2.3.6]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$22$$anonfun$apply$22.apply(routes_routing.scala:402) ~[classes/:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$22$$anonfun$apply$22.apply(routes_routing.scala:402) ~[classes/:na]
+	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
+	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.6.jar:2.3.6]
+	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.1.jar:na]
+	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
+	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
+	... 6 common frames omitted
+Caused by: com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException: Unrecognized field "datanascimento" (class models.Cliente), not marked as ignorable (14 known properties: "bairro", "complemento", "telefone", "cep", "celular", "genero", "rg", "dataNascimento", "nome", "cpf", "id", "email", "numero", "rua"])
+ at [Source: N/A; line: -1, column: -1] (through reference chain: models.Cliente["datanascimento"])
+	at com.fasterxml.jackson.databind.exc.UnrecognizedPropertyException.from(UnrecognizedPropertyException.java:51) ~[jackson-databind-2.3.2.jar:2.3.2]
+	at com.fasterxml.jackson.databind.DeserializationContext.reportUnknownProperty(DeserializationContext.java:671) ~[jackson-databind-2.3.2.jar:2.3.2]
+	at com.fasterxml.jackson.databind.deser.std.StdDeserializer.handleUnknownProperty(StdDeserializer.java:771) ~[jackson-databind-2.3.2.jar:2.3.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownProperty(BeanDeserializerBase.java:1297) ~[jackson-databind-2.3.2.jar:2.3.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializerBase.handleUnknownVanilla(BeanDeserializerBase.java:1275) ~[jackson-databind-2.3.2.jar:2.3.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.vanillaDeserialize(BeanDeserializer.java:247) ~[jackson-databind-2.3.2.jar:2.3.2]
+	at com.fasterxml.jackson.databind.deser.BeanDeserializer.deserialize(BeanDeserializer.java:118) ~[jackson-databind-2.3.2.jar:2.3.2]
+	at com.fasterxml.jackson.databind.ObjectMapper._readValue(ObjectMapper.java:2965) ~[jackson-databind-2.3.2.jar:2.3.2]
+	at com.fasterxml.jackson.databind.ObjectMapper.readValue(ObjectMapper.java:1587) ~[jackson-databind-2.3.2.jar:2.3.2]
+	at com.fasterxml.jackson.databind.ObjectMapper.treeToValue(ObjectMapper.java:1931) ~[jackson-databind-2.3.2.jar:2.3.2]
+	at play.libs.Json.fromJson(Json.java:47) ~[play-json_2.11-2.3.6.jar:2.3.6]
+	... 39 common frames omitted
+
+2014-11-21 17:20:33,781 - [INFO] - from application in play-akka.actor.default-dispatcher-571 
+busca Todos os Bairros
+
+2014-11-21 17:20:49,710 - [INFO] - from application in play-akka.actor.default-dispatcher-576 
+Salvando Cliente
+
+2014-11-21 17:20:50,412 - [INFO] - from application in play-akka.actor.default-dispatcher-576 
+busca Todos os Clientes
+
+2014-11-21 17:24:52,201 - [INFO] - from application in play-akka.actor.default-dispatcher-582 
+busca Todos os Clientes
+
+2014-11-21 17:25:09,221 - [INFO] - from application in play-akka.actor.default-dispatcher-585 
+busca Todos os Clientes
+
+2014-11-21 17:28:16,927 - [INFO] - from application in play-akka.actor.default-dispatcher-594 
+busca Todos os Clientes
+
+2014-11-21 17:28:21,903 - [INFO] - from application in play-akka.actor.default-dispatcher-583 
+busca Todos os Clientes
+
+2014-11-21 17:28:25,555 - [INFO] - from application in play-akka.actor.default-dispatcher-591 
+busca Todos os Estados
+
+2014-11-21 17:28:26,782 - [INFO] - from application in play-akka.actor.default-dispatcher-590 
+busca Todos os Paises
+
+2014-11-21 17:29:05,556 - [INFO] - from application in play-akka.actor.default-dispatcher-593 
+busca Todos os Paises
+
+2014-11-21 17:29:34,760 - [INFO] - from application in play-akka.actor.default-dispatcher-601 
+busca Todos os Paises
+
+2014-11-21 17:29:43,458 - [INFO] - from application in play-akka.actor.default-dispatcher-605 
+busca Todos os Paises
+
+2014-11-21 17:33:27,426 - [INFO] - from application in play-akka.actor.default-dispatcher-610 
+busca Todos os Paises
+
+2014-11-21 17:33:42,562 - [INFO] - from application in play-akka.actor.default-dispatcher-607 
+busca Todos os Paises
+
+2014-11-21 17:33:49,588 - [INFO] - from application in play-akka.actor.default-dispatcher-606 
+busca Todos os Paises
+
+2014-11-21 17:34:02,543 - [INFO] - from application in play-akka.actor.default-dispatcher-607 
+busca Todos os Paises
+
+2014-11-21 17:34:10,683 - [INFO] - from application in play-akka.actor.default-dispatcher-615 
+busca Todos os Paises
+
+2014-11-21 17:34:13,810 - [INFO] - from application in play-akka.actor.default-dispatcher-616 
+busca Todos os Paises
+
+2014-11-21 17:34:15,697 - [INFO] - from application in play-akka.actor.default-dispatcher-613 
+busca Todos os Bairros
+
+2014-11-21 17:42:52,941 - [INFO] - from application in play-akka.actor.default-dispatcher-643 
+busca Todos os Clientes
+
+2014-11-21 17:42:54,239 - [INFO] - from application in play-akka.actor.default-dispatcher-645 
+busca Todos os Bairros
+
+2014-11-21 17:43:55,719 - [INFO] - from application in play-akka.actor.default-dispatcher-653 
+busca Todos os Bairros
+
+2014-11-21 17:44:03,796 - [INFO] - from application in play-akka.actor.default-dispatcher-651 
+busca Todos os Bairros
+
+2014-11-21 17:44:17,323 - [INFO] - from application in play-akka.actor.default-dispatcher-656 
+busca Todos os Bairros
+
+2014-11-21 17:44:44,197 - [INFO] - from application in play-akka.actor.default-dispatcher-659 
+busca Todos os Bairros
+
+2014-11-21 17:47:53,596 - [INFO] - from application in play-akka.actor.default-dispatcher-667 
+busca Todos os Bairros
+
+2014-11-21 17:48:37,832 - [INFO] - from application in play-akka.actor.default-dispatcher-666 
+busca Todos os Paises
+
+2014-11-21 17:49:59,422 - [INFO] - from application in play-akka.actor.default-dispatcher-679 
+busca Todos os Clientes
+
+2014-11-21 17:50:13,329 - [INFO] - from application in play-akka.actor.default-dispatcher-683 
+busca Todos os Clientes
 
