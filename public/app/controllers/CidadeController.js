@@ -1,26 +1,26 @@
 angular.module('mercado')
   .controller('CidadeCreateController', function ($scope, $location, Cidade, Estado, toastr){
-          $scope.cidade = {};
-          $scope.save = function(){
-              console.log($scope.cidade);
-              Cidade.save($scope.cidade, function(data){
-                  toastr.success('Cidade salva com sucesso');
-                  $location.path('/cidades');
-              }, function(data){
-                  console.log(data);
-                  toastr.error(data.data, 'Não foi possível Salvar a Cidade');
-              });
-          };
-
-          $scope.cancel = function(){
+      $scope.cidade = {};
+      $scope.save = function(){
+          console.log($scope.cidade);
+          Cidade.save($scope.cidade, function(data){
+              toastr.success('Cidade salva com sucesso');
               $location.path('/cidades');
-          };
+          }, function(data){
+              console.log(data);
+              toastr.error(data.data, 'Não foi possível Salvar a Cidade');
+          });
+      };
 
-          $scope.init = function(){
-              Estado.getAll(function(data){
-                  $scope.estados = data;
-              });
-          };
+      $scope.cancel = function(){
+          $location.path('/cidades');
+      };
+
+      $scope.init = function(){
+          Estado.getAll(function(data){
+              $scope.estados = data;
+          });
+      };
 
     }).controller('CidadeListController', function ($scope, Cidade, toastr){
         $scope.cidades = [];
@@ -40,49 +40,47 @@ angular.module('mercado')
         };
   }).controller('CidadeDetailController', function ($scope, $routeParams, $location, Cidade, Estado, toastr){
 
-            $scope.init = function(){
-                  $scope.cidade = Cidade.get({id:$routeParams.id});
-                  $scope.estado = Estado.getAll();
-            };
+        $scope.init = function(){
+              $scope.cidade = Cidade.get({id:$routeParams.id});
+              $scope.estado = Estado.getAll();
+        };
 
-            $scope.update = function(){
-                Cidade.update({id:$routeParams.id},$scope.cidade, function(){
-                    toastr.success('Cidade atualizada com sucesso');
-                    $location.path('/cidades');
-                },function(){
-                   toastr.error('Não foi possível Salvar a Cidade');
-                });
-
-              };
-
-            $scope.cancel = function(){
+        $scope.update = function(){
+            Cidade.update({id:$routeParams.id},$scope.cidade, function(){
+                toastr.success('Cidade atualizada com sucesso');
                 $location.path('/cidades');
-            };
+            },function(){
+               toastr.error('Não foi possível Salvar a Cidade');
+            });
+          };
 
-            $scope.delete = function(){
-                Cidade.delete({id:$routeParams.id}, function(){
-                    toastr.success('Cidade removido com sucesso');
-                    $location.path('/cidades');
-                }, function(data){
-                    toastr.error('Não foi possível remover a Cidade');
-                });
+        $scope.cancel = function(){
+            $location.path('/cidades');
+        };
 
-            };
+        $scope.delete = function(){
+            Cidade.delete({id:$routeParams.id}, function(){
+                toastr.success('Cidade removido com sucesso');
+                $location.path('/cidades');
+            }, function(data){
+                toastr.error('Não foi possível remover a Cidade');
+            });
+        };
 
   }).directive('ngConfirmClick', [
-           function(){
-             return {
-               priority: -1,
-               restrict: 'A',
-               link: function(scope, element, attrs){
-                 element.bind('click', function(e){
-                   var message = attrs.ngConfirmClick;
-                   if(message && !confirm(message)){
-                     e.stopImmediatePropagation();
-                     e.preventDefault();
-                   }
-                 });
+       function(){
+         return {
+           priority: -1,
+           restrict: 'A',
+           link: function(scope, element, attrs){
+             element.bind('click', function(e){
+               var message = attrs.ngConfirmClick;
+               if(message && !confirm(message)){
+                 e.stopImmediatePropagation();
+                 e.preventDefault();
                }
-             }
+             });
            }
+         }
+       }
   ]);

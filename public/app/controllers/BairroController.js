@@ -40,49 +40,48 @@ angular.module('mercado')
            };
  }).controller('BairroDetailController', function ($scope, $routeParams, $location, Bairro, Cidade, toastr){
 
-               $scope.init = function(){
-                     $scope.bairro = Bairro.get({id:$routeParams.id});
-                     $scope.cidade = Cidade.getAll();
-               };
+           $scope.init = function(){
+                 $scope.bairro = Bairro.get({id:$routeParams.id});
+                 $scope.cidade = Cidade.getAll();
+           };
 
-               $scope.update = function(){
-                   Bairro.update({id:$routeParams.id},$scope.bairro, function(){
-                       toastr.success('Bairro atualizado com sucesso');
-                       $location.path('/bairros');
-                   },function(){
-                      toastr.error('Não foi possível Salvar o Bairro');
-                   });
-
-                 };
-
-               $scope.cancel = function(){
+           $scope.update = function(){
+               Bairro.update({id:$routeParams.id},$scope.bairro, function(){
+                   toastr.success('Bairro atualizado com sucesso');
                    $location.path('/bairros');
-               };
+               },function(){
+                  toastr.error('Não foi possível Salvar o Bairro');
+               });
 
-               $scope.delete = function(){
-                   Bairro.delete({id:$routeParams.id}, function(){
-                       toastr.success('Bairro removido com sucesso');
-                       $location.path('/bairros');
-                   }, function(data){
-                       toastr.error('Não foi possível remover o Bairro');
-                   });
+           };
 
-               };
+           $scope.cancel = function(){
+               $location.path('/bairros');
+           };
+
+           $scope.delete = function(){
+               Bairro.delete({id:$routeParams.id}, function(){
+                   toastr.success('Bairro removido com sucesso');
+                   $location.path('/bairros');
+               }, function(data){
+                   toastr.error('Não foi possível remover o Bairro');
+               });
+           };
 
  }).directive('ngConfirmClick', [
-              function(){
-                return {
-                  priority: -1,
-                  restrict: 'A',
-                  link: function(scope, element, attrs){
-                    element.bind('click', function(e){
-                      var message = attrs.ngConfirmClick;
-                      if(message && !confirm(message)){
-                        e.stopImmediatePropagation();
-                        e.preventDefault();
-                      }
-                    });
+      function(){
+            return {
+              priority: -1,
+              restrict: 'A',
+              link: function(scope, element, attrs){
+                element.bind('click', function(e){
+                  var message = attrs.ngConfirmClick;
+                  if(message && !confirm(message)){
+                    e.stopImmediatePropagation();
+                    e.preventDefault();
                   }
-                }
+                });
               }
+            }
+          }
  ]);

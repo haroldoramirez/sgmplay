@@ -22,6 +22,11 @@ angular.module('mercado')
               });
           };
 
+          $scope.modal = {
+               "title": "Informações",
+              "content": "Create Cliente"
+          };
+
 }).controller('ClienteListController', function ($scope, Cliente, toastr){
           $scope.clientes = [];
           $scope.init = function(){
@@ -70,7 +75,7 @@ angular.module('mercado')
           };
 
 }).directive('ngConfirmClick', [
-          function(){
+      function(){
                return {
                  priority: -1,
                  restrict: 'A',
@@ -84,5 +89,5 @@ angular.module('mercado')
                    });
                  }
                }
-             }
+      }
 ]);

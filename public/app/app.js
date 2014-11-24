@@ -92,4 +92,4 @@ angular.module('mercado', ['ngRoute', 'ngResource', 'toastr', 'mgcrea.ngStrap'])
           dateFormat: 'dd/MM/yyyy',
           startWeek: 1
         });
-      });
+  });
