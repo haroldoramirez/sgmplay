@@ -1,192 +1,225 @@
-2014-11-24 16:27:39,502 - [INFO] - from play in pool-6-thread-1 
+2014-11-24 17:10:34,446 - [INFO] - from play in pool-6-thread-2 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2014-11-24 16:27:56,926 - [INFO] - from play in play-internal-execution-context-1 
+2014-11-24 17:11:05,908 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:postgresql://localhost:5432/sgmplaydb
 
-2014-11-24 16:27:58,223 - [INFO] - from play in play-internal-execution-context-1 
+2014-11-24 17:11:07,468 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2014-11-24 16:28:05,006 - [INFO] - from application in play-akka.actor.default-dispatcher-8 
+2014-11-24 17:11:09,475 - [INFO] - from application in play-akka.actor.default-dispatcher-7 
+busca Todos os Bairros
+
+2014-11-24 17:11:50,893 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+busca Todos os Bairros
+
+2014-11-24 17:12:49,098 - [INFO] - from application in play-akka.actor.default-dispatcher-17 
+busca Todos os Bairros
+
+2014-11-24 17:13:45,534 - [INFO] - from application in play-akka.actor.default-dispatcher-27 
+busca Todos os Bairros
+
+2014-11-24 17:13:50,984 - [INFO] - from application in play-akka.actor.default-dispatcher-18 
+busca Todos os Bairros
+
+2014-11-24 17:14:00,202 - [INFO] - from application in play-akka.actor.default-dispatcher-16 
+busca Todos os Bairros
+
+2014-11-24 17:14:32,762 - [INFO] - from application in play-akka.actor.default-dispatcher-33 
+busca Todos os Bairros
+
+2014-11-24 17:15:04,993 - [INFO] - from application in play-akka.actor.default-dispatcher-36 
+busca Todos os Bairros
+
+2014-11-24 17:21:39,488 - [INFO] - from application in play-akka.actor.default-dispatcher-44 
+busca Todos os Bairros
+
+2014-11-24 17:22:24,087 - [INFO] - from application in play-akka.actor.default-dispatcher-49 
+busca Todos os Bairros
+
+2014-11-24 17:24:30,615 - [INFO] - from application in play-akka.actor.default-dispatcher-63 
+busca Todos os Bairros
+
+2014-11-24 17:24:52,736 - [INFO] - from application in play-akka.actor.default-dispatcher-65 
+busca Todos os Bairros
+
+2014-11-24 17:25:42,918 - [INFO] - from application in play-akka.actor.default-dispatcher-67 
+busca Todos os Bairros
+
+2014-11-24 17:26:17,847 - [INFO] - from application in play-akka.actor.default-dispatcher-58 
+busca Todos os Bairros
+
+2014-11-24 17:27:43,229 - [INFO] - from application in play-akka.actor.default-dispatcher-84 
+busca Todos os Bairros
+
+2014-11-24 17:28:50,100 - [INFO] - from application in play-akka.actor.default-dispatcher-89 
+busca Todos os Bairros
+
+2014-11-24 17:28:56,723 - [INFO] - from application in play-akka.actor.default-dispatcher-86 
+busca Todos os Bairros
+
+2014-11-24 17:29:03,551 - [INFO] - from application in play-akka.actor.default-dispatcher-83 
+busca Todos os Bairros
+
+2014-11-24 17:29:04,295 - [INFO] - from application in play-akka.actor.default-dispatcher-90 
+busca Todos os Bairros
+
+2014-11-24 17:29:09,798 - [INFO] - from application in play-akka.actor.default-dispatcher-88 
+busca Todos os Bairros
+
+2014-11-24 17:29:11,121 - [INFO] - from application in play-akka.actor.default-dispatcher-88 
+busca Todos os Bairros
+
+2014-11-24 17:29:30,910 - [INFO] - from application in play-akka.actor.default-dispatcher-97 
+busca Todos os Bairros
+
+2014-11-24 17:29:59,560 - [INFO] - from application in play-akka.actor.default-dispatcher-83 
+busca Todos os Bairros
+
+2014-11-24 17:30:58,069 - [INFO] - from application in play-akka.actor.default-dispatcher-91 
+busca Todos os Bairros
+
+2014-11-24 17:31:12,232 - [INFO] - from application in play-akka.actor.default-dispatcher-108 
+busca Todos os Bairros
+
+2014-11-24 17:31:34,710 - [INFO] - from application in play-akka.actor.default-dispatcher-104 
+busca Todos os Bairros
+
+2014-11-24 17:31:47,989 - [INFO] - from application in play-akka.actor.default-dispatcher-105 
+busca Todos os Bairros
+
+2014-11-24 17:31:52,750 - [INFO] - from application in play-akka.actor.default-dispatcher-106 
+busca Todos os Bairros
+
+2014-11-24 17:32:02,490 - [INFO] - from application in play-akka.actor.default-dispatcher-118 
+busca Todos os Bairros
+
+2014-11-24 17:33:53,741 - [INFO] - from application in play-akka.actor.default-dispatcher-122 
+busca Todos os Bairros
+
+2014-11-24 17:33:55,246 - [INFO] - from application in play-akka.actor.default-dispatcher-122 
 busca Todos os Clientes
 
-2014-11-24 16:28:10,552 - [INFO] - from application in play-akka.actor.default-dispatcher-7 
+2014-11-24 17:34:01,167 - [INFO] - from application in play-akka.actor.default-dispatcher-123 
 busca Todos os Clientes
 
-2014-11-24 16:28:39,110 - [INFO] - from application in play-akka.actor.default-dispatcher-4 
-busca Todos os Clientes
-
-2014-11-24 16:28:44,267 - [INFO] - from application in play-akka.actor.default-dispatcher-4 
+2014-11-24 17:34:02,669 - [INFO] - from application in play-akka.actor.default-dispatcher-123 
 busca Todos os Bairros
 
-2014-11-24 16:29:01,072 - [INFO] - from application in play-akka.actor.default-dispatcher-3 
-busca Todos os Clientes
-
-2014-11-24 16:29:05,554 - [INFO] - from application in play-akka.actor.default-dispatcher-3 
-busca Todos os Clientes
-
-2014-11-24 16:29:07,145 - [INFO] - from application in play-akka.actor.default-dispatcher-3 
+2014-11-24 17:34:46,108 - [INFO] - from application in play-akka.actor.default-dispatcher-131 
 busca Todos os Bairros
 
-2014-11-24 16:29:08,549 - [INFO] - from application in play-akka.actor.default-dispatcher-3 
-busca Todos os Clientes
-
-2014-11-24 16:29:37,957 - [INFO] - from application in play-akka.actor.default-dispatcher-6 
-busca Todos os Clientes
-
-2014-11-24 16:29:39,101 - [INFO] - from application in play-akka.actor.default-dispatcher-6 
+2014-11-24 17:35:22,695 - [INFO] - from application in play-akka.actor.default-dispatcher-113 
 busca Todos os Bairros
 
-2014-11-24 16:30:21,552 - [INFO] - from application in play-akka.actor.default-dispatcher-10 
-Salvando Cliente
-
-2014-11-24 16:30:21,839 - [INFO] - from application in play-akka.actor.default-dispatcher-10 
-busca Todos os Clientes
-
-2014-11-24 16:30:25,131 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
+2014-11-24 17:36:48,223 - [INFO] - from application in play-akka.actor.default-dispatcher-132 
 busca Todos os Bairros
 
-2014-11-24 16:30:25,153 - [INFO] - from application in play-akka.actor.default-dispatcher-10 
-buscaPorId Cliente
-
-2014-11-24 16:30:37,660 - [INFO] - from application in play-akka.actor.default-dispatcher-11 
-Atualizando Cliente
-
-2014-11-24 16:30:37,717 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
-busca Todos os Clientes
-
-2014-11-24 16:30:38,956 - [INFO] - from application in play-akka.actor.default-dispatcher-11 
-buscaPorId Cliente
-
-2014-11-24 16:30:38,976 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
+2014-11-24 17:37:24,960 - [INFO] - from application in play-akka.actor.default-dispatcher-139 
 busca Todos os Bairros
 
-2014-11-24 16:30:44,944 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
-remover Cliente
-
-2014-11-24 16:30:45,007 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
-busca Todos os Clientes
-
-2014-11-24 16:35:09,449 - [INFO] - from application in play-akka.actor.default-dispatcher-24 
-busca Todos os Clientes
-
-2014-11-24 16:36:03,580 - [INFO] - from application in play-akka.actor.default-dispatcher-21 
-busca Todos os Clientes
-
-2014-11-24 16:36:04,840 - [INFO] - from application in play-akka.actor.default-dispatcher-21 
+2014-11-24 17:38:04,230 - [INFO] - from application in play-akka.actor.default-dispatcher-148 
 busca Todos os Bairros
 
-2014-11-24 16:37:26,680 - [INFO] - from application in play-akka.actor.default-dispatcher-25 
+2014-11-24 17:38:27,100 - [INFO] - from application in play-akka.actor.default-dispatcher-152 
 busca Todos os Bairros
 
-2014-11-24 16:38:06,644 - [INFO] - from application in play-akka.actor.default-dispatcher-34 
+2014-11-24 17:38:58,281 - [INFO] - from application in play-akka.actor.default-dispatcher-154 
 busca Todos os Bairros
 
-2014-11-24 16:38:45,228 - [INFO] - from application in play-akka.actor.default-dispatcher-32 
+2014-11-24 17:39:59,531 - [INFO] - from application in play-akka.actor.default-dispatcher-159 
 busca Todos os Bairros
 
-2014-11-24 16:39:04,909 - [INFO] - from application in play-akka.actor.default-dispatcher-45 
+2014-11-24 17:40:21,339 - [INFO] - from application in play-akka.actor.default-dispatcher-161 
 busca Todos os Bairros
 
-2014-11-24 16:39:28,280 - [INFO] - from application in play-akka.actor.default-dispatcher-29 
+2014-11-24 17:42:07,860 - [INFO] - from application in play-akka.actor.default-dispatcher-170 
 busca Todos os Bairros
 
-2014-11-24 16:39:32,863 - [INFO] - from application in play-akka.actor.default-dispatcher-41 
+2014-11-24 17:43:04,128 - [INFO] - from application in play-akka.actor.default-dispatcher-177 
 busca Todos os Bairros
 
-2014-11-24 16:39:45,341 - [INFO] - from application in play-akka.actor.default-dispatcher-51 
+2014-11-24 17:43:13,797 - [INFO] - from application in play-akka.actor.default-dispatcher-178 
 busca Todos os Bairros
 
-2014-11-24 16:40:12,116 - [INFO] - from application in play-akka.actor.default-dispatcher-52 
+2014-11-24 17:43:32,412 - [INFO] - from application in play-akka.actor.default-dispatcher-182 
 busca Todos os Bairros
 
-2014-11-24 16:42:47,540 - [INFO] - from application in play-akka.actor.default-dispatcher-60 
+2014-11-24 17:43:44,116 - [INFO] - from application in play-akka.actor.default-dispatcher-183 
 busca Todos os Bairros
 
-2014-11-24 16:44:57,217 - [INFO] - from application in play-akka.actor.default-dispatcher-66 
+2014-11-24 17:45:17,576 - [INFO] - from application in play-akka.actor.default-dispatcher-185 
 busca Todos os Bairros
 
-2014-11-24 16:45:20,556 - [INFO] - from application in play-akka.actor.default-dispatcher-71 
+2014-11-24 17:46:16,773 - [INFO] - from application in play-akka.actor.default-dispatcher-192 
 busca Todos os Bairros
 
-2014-11-24 16:45:37,376 - [INFO] - from application in play-akka.actor.default-dispatcher-74 
+2014-11-24 17:46:20,681 - [INFO] - from application in play-akka.actor.default-dispatcher-189 
 busca Todos os Bairros
 
-2014-11-24 16:45:51,896 - [INFO] - from application in play-akka.actor.default-dispatcher-73 
+2014-11-24 17:46:39,019 - [INFO] - from application in play-akka.actor.default-dispatcher-184 
 busca Todos os Bairros
 
-2014-11-24 16:46:05,347 - [INFO] - from application in play-akka.actor.default-dispatcher-69 
+2014-11-24 17:47:06,694 - [INFO] - from application in play-akka.actor.default-dispatcher-186 
 busca Todos os Bairros
 
-2014-11-24 16:47:49,699 - [INFO] - from application in play-akka.actor.default-dispatcher-79 
+2014-11-24 17:47:41,895 - [INFO] - from application in play-akka.actor.default-dispatcher-186 
 busca Todos os Bairros
 
-2014-11-24 16:47:51,773 - [INFO] - from application in play-akka.actor.default-dispatcher-80 
+2014-11-24 17:48:03,798 - [INFO] - from application in play-akka.actor.default-dispatcher-204 
 busca Todos os Bairros
 
-2014-11-24 16:48:20,831 - [INFO] - from application in play-akka.actor.default-dispatcher-82 
+2014-11-24 17:48:36,314 - [INFO] - from application in play-akka.actor.default-dispatcher-209 
 busca Todos os Bairros
 
-2014-11-24 16:50:41,656 - [INFO] - from application in play-akka.actor.default-dispatcher-92 
+2014-11-24 17:49:12,874 - [INFO] - from application in play-akka.actor.default-dispatcher-213 
 busca Todos os Bairros
 
-2014-11-24 16:51:59,917 - [INFO] - from application in play-akka.actor.default-dispatcher-99 
+2014-11-24 17:49:27,463 - [INFO] - from application in play-akka.actor.default-dispatcher-207 
 busca Todos os Bairros
 
-2014-11-24 16:52:21,593 - [INFO] - from application in play-akka.actor.default-dispatcher-100 
+2014-11-24 17:50:05,346 - [INFO] - from application in play-akka.actor.default-dispatcher-222 
 busca Todos os Bairros
 
-2014-11-24 16:54:52,434 - [INFO] - from application in play-akka.actor.default-dispatcher-104 
+2014-11-24 17:50:21,582 - [INFO] - from application in play-akka.actor.default-dispatcher-214 
 busca Todos os Bairros
 
-2014-11-24 16:54:55,388 - [INFO] - from application in play-akka.actor.default-dispatcher-105 
+2014-11-24 17:51:22,818 - [INFO] - from application in play-akka.actor.default-dispatcher-229 
 busca Todos os Bairros
 
-2014-11-24 16:56:01,659 - [INFO] - from application in play-akka.actor.default-dispatcher-113 
+2014-11-24 17:51:37,117 - [INFO] - from application in play-akka.actor.default-dispatcher-231 
 busca Todos os Bairros
 
-2014-11-24 16:56:04,512 - [INFO] - from application in play-akka.actor.default-dispatcher-115 
+2014-11-24 17:51:56,618 - [INFO] - from application in play-akka.actor.default-dispatcher-235 
 busca Todos os Bairros
 
-2014-11-24 16:58:53,358 - [INFO] - from application in play-akka.actor.default-dispatcher-116 
+2014-11-24 17:52:17,981 - [INFO] - from application in play-akka.actor.default-dispatcher-228 
 busca Todos os Bairros
 
-2014-11-24 16:59:57,714 - [INFO] - from application in play-akka.actor.default-dispatcher-129 
+2014-11-24 17:52:34,704 - [INFO] - from application in play-akka.actor.default-dispatcher-239 
 busca Todos os Bairros
 
-2014-11-24 17:00:57,253 - [INFO] - from application in play-akka.actor.default-dispatcher-131 
+2014-11-24 17:52:49,310 - [INFO] - from application in play-akka.actor.default-dispatcher-242 
 busca Todos os Bairros
 
-2014-11-24 17:01:33,591 - [INFO] - from application in play-akka.actor.default-dispatcher-139 
+2014-11-24 17:53:09,841 - [INFO] - from application in play-akka.actor.default-dispatcher-236 
 busca Todos os Bairros
 
-2014-11-24 17:01:46,970 - [INFO] - from application in play-akka.actor.default-dispatcher-140 
+2014-11-24 17:55:05,968 - [INFO] - from application in play-akka.actor.default-dispatcher-253 
 busca Todos os Bairros
 
-2014-11-24 17:02:06,698 - [INFO] - from application in play-akka.actor.default-dispatcher-146 
+2014-11-24 17:55:39,788 - [INFO] - from application in play-akka.actor.default-dispatcher-249 
 busca Todos os Bairros
 
-2014-11-24 17:02:16,203 - [INFO] - from application in play-akka.actor.default-dispatcher-144 
+2014-11-24 17:55:59,318 - [INFO] - from application in play-akka.actor.default-dispatcher-259 
 busca Todos os Bairros
 
-2014-11-24 17:03:12,473 - [INFO] - from application in play-akka.actor.default-dispatcher-153 
+2014-11-24 17:56:26,501 - [INFO] - from application in play-akka.actor.default-dispatcher-262 
 busca Todos os Bairros
 
-2014-11-24 17:03:56,528 - [INFO] - from application in play-akka.actor.default-dispatcher-159 
+2014-11-24 17:57:38,878 - [INFO] - from application in play-akka.actor.default-dispatcher-266 
 busca Todos os Bairros
 
-2014-11-24 17:03:57,003 - [INFO] - from application in play-akka.actor.default-dispatcher-160 
-busca Todos os Clientes
-
-2014-11-24 17:06:13,462 - [INFO] - from application in play-akka.actor.default-dispatcher-156 
-busca Todos os Clientes
-
-2014-11-24 17:06:15,039 - [INFO] - from application in play-akka.actor.default-dispatcher-172 
-busca Todos os Bairros
-
-2014-11-24 17:08:05,943 - [INFO] - from application in play-akka.actor.default-dispatcher-177 
-busca Todos os Bairros
-
-2014-11-24 17:08:09,947 - [INFO] - from application in play-akka.actor.default-dispatcher-178 
+2014-11-24 17:57:54,029 - [INFO] - from application in play-akka.actor.default-dispatcher-270 
 busca Todos os Bairros
 

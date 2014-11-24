@@ -22,10 +22,10 @@ angular.module('mercado')
               });
           };
 
-          $scope.modal = {
-               "title": "Informações",
-              "content": "Create Cliente"
-          };
+         $scope.modal = {
+           "title": "Ajuda",
+           "content": "Campos Obrigatórios"
+         };
 
 }).controller('ClienteListController', function ($scope, Cliente, toastr){
           $scope.clientes = [];
