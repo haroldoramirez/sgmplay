@@ -32,6 +32,7 @@ create table cliente (
   numero                    varchar(255),
   cep                       varchar(255),
   complemento               varchar(255),
+  observacoes               varchar(255),
   datanascimento            timestamp,
   genero                    varchar(9),
   bairro_id                 integer,

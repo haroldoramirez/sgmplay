@@ -41,37 +41,36 @@ angular.module('mercado')
 
 }).controller('ClienteDetailController', function ($scope, $routeParams, $location, Cliente, Bairro, toastr){
 
-              $scope.init = function(){
-                    $scope.cliente = Cliente.get({id:$routeParams.id});
-                    $scope.bairro = Bairro.getAll();
-              };
+          $scope.init = function(){
+             $scope.cliente = Cliente.get({id:$routeParams.id});
+             $scope.bairro = Bairro.getAll();
+          };
 
-              $scope.update = function(){
-                  Cliente.update({id:$routeParams.id},$scope.cliente, function(){
-                      toastr.success('Cliente atualizado com sucesso');
-                      $location.path('/clientes');
-                  },function(){
-                     toastr.error('Não foi possível Salvar o Cliente');
-                  });
-
-                };
-
-              $scope.cancel = function(){
+          $scope.update = function(){
+              Cliente.update({id:$routeParams.id},$scope.cliente, function(){
+                  toastr.success('Cliente atualizado com sucesso');
                   $location.path('/clientes');
-              };
+              },function(){
+                 toastr.error('Não foi possível Salvar o Cliente');
+              });
+          };
 
-              $scope.delete = function(){
-                  Cliente.delete({id:$routeParams.id}, function(){
-                      toastr.success('Cliente removido com sucesso');
-                      $location.path('/clientes');
-                  }, function(data){
-                      toastr.error('Não foi possível remover o Cliente');
-                  });
+          $scope.cancel = function(){
+              $location.path('/clientes');
+          };
 
-              };
+          $scope.delete = function(){
+              Cliente.delete({id:$routeParams.id}, function(){
+                  toastr.success('Cliente removido com sucesso');
+                  $location.path('/clientes');
+              }, function(data){
+                  toastr.error('Não foi possível remover o Cliente');
+              });
+
+          };
 
 }).directive('ngConfirmClick', [
-             function(){
+          function(){
                return {
                  priority: -1,
                  restrict: 'A',

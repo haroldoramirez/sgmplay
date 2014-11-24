@@ -40,6 +40,8 @@ public class Cliente extends Model {
 
     private String complemento;
 
+    private String observacoes;
+
     @Temporal(TemporalType.TIMESTAMP)
     @Column(name = "datanascimento")
     private Calendar dataNascimento;
@@ -161,6 +163,14 @@ public class Cliente extends Model {
 
     public void setBairro(Bairro bairro) {
         this.bairro = bairro;
+    }
+
+    public String getObservacoes() {
+        return observacoes;
+    }
+
+    public void setObservacoes(String observacoes) {
+        this.observacoes = observacoes;
     }
 
     @Override

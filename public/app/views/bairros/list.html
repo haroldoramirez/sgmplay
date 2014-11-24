@@ -7,10 +7,15 @@
 <body>
 <div class="container">
     <div class="row">
-        <h2>
-            Lista de Bairros <a class="btn btn-success pull-right" href="#/bairros/novo">
-            <span class="glyphicon glyphicon-plus"></span> <b>Novo Bairro</b></a>
-        </h2>
+        <fieldset>
+            <div id="legend">
+                <legend>
+                    <h2>
+                        Lista de Bairros <a class="btn btn-success pull-right" href="#/bairros/novo">
+                        <span class="glyphicon glyphicon-plus"></span> <b>Novo Bairro</b></a>
+                    </h2>
+                </legend>
+            </div>
 
         <table  ng-init="init()" class="table table-striped table-hover table-bordered">
             <tr>
@@ -25,6 +30,7 @@
                 <!--</td>-->
             </tr>
         </table>
+        </fieldset>
     </div>
 </div>
 </body>
