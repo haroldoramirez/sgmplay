@@ -11,7 +11,7 @@
             <div id="legend">
                 <legend>
                     <h2>
-                        Atualizar Cliente <a class="btn btn-link pull-right" href="">
+                        Atualizar Cliente <a class="btn btn-link pull-right" data-template="assets/modal/ajuda/clienteModal.html" bs-modal="modalAjuda">
                         <span class="glyphicon glyphicon-info-sign"></span><b> Ajuda</b></a>
                     </h2>
                 </legend>
@@ -155,7 +155,7 @@
                             <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">
                                 <span class="glyphicon glyphicon-arrow-left"></span> <b>Voltar</b>
                             </button>
-                            <button ng-confirm-click="Confirmar Exclusão?" type="button" id="delete" class="btn btn-danger" ng-click="delete()">
+                            <button type="button" class="btn btn-danger" data-template="assets/modal/confirmacao/clienteModal.html" bs-modal="modalConfirmacao">
                                 <span class="glyphicon glyphicon-trash"></span> <b>Remover</b>
                             </button>
                         </div>

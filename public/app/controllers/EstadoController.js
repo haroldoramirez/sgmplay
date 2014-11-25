@@ -22,6 +22,11 @@ angular.module('mercado')
             });
         };
 
+        $scope.modalAjuda = {
+            "title": "Ajuda",
+            "content": "Campos Obrigatórios em Vermelho"
+        };
+
   }).controller('EstadoListController', function ($scope, Estado, toastr){
         $scope.estados = [];
         $scope.init = function(){
@@ -69,20 +74,33 @@ angular.module('mercado')
             });
 
         };
-  }).directive('ngConfirmClick', [
-       function(){
-         return {
-           priority: -1,
-           restrict: 'A',
-           link: function(scope, element, attrs){
-             element.bind('click', function(e){
-               var message = attrs.ngConfirmClick;
-               if(message && !confirm(message)){
-                 e.stopImmediatePropagation();
-                 e.preventDefault();
-               }
-             });
-           }
-         }
-       }
-  ]);
+
+        $scope.modalAjuda = {
+            "title": "Ajuda",
+            "content": "Campos Obrigatórios em Vermelho"
+        };
+
+        $scope.modalConfirmacao = {
+            "title": "Confirmação",
+            "content": "Deseja excluir o Estado?"
+        };
+
+  });
+
+//  .directive('ngConfirmClick', [
+//       function(){
+//         return {
+//           priority: -1,
+//           restrict: 'A',
+//           link: function(scope, element, attrs){
+//             element.bind('click', function(e){
+//               var message = attrs.ngConfirmClick;
+//               if(message && !confirm(message)){
+//                 e.stopImmediatePropagation();
+//                 e.preventDefault();
+//               }
+//             });
+//           }
+//         }
+//       }
+//  ]);

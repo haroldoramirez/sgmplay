@@ -1,5 +1,5 @@
 angular.module('mercado')
-  .controller('PaisCreateController', function ($scope, $location, Pais, toastr) {
+  .controller('PaisCreateController', function ($scope, $modal, $location, Pais, toastr) {
         $scope.pais = {};
         $scope.save = function(){
             console.log($scope.pais);
@@ -20,6 +20,11 @@ angular.module('mercado')
             Pais.getAll(function(data){
                 $scope.paises = data;
             });
+        };
+
+        $scope.modalAjuda = {
+            "title": "Ajuda",
+            "content": "Campos Obrigatórios em Vermelho"
         };
 
   }).controller('PaisListController', function ($scope, Pais, toastr){
@@ -55,9 +60,9 @@ angular.module('mercado')
 
         };
 
-        $scope.cancel = function(){
+         $scope.cancel = function(){
             $location.path('/paises');
-        };
+         };
 
         $scope.delete = function(){
             Pais.delete({id:$routeParams.id}, function(){
@@ -68,20 +73,33 @@ angular.module('mercado')
             });
 
         };
-  }).directive('ngConfirmClick', [
-       function(){
-         return {
-           priority: -1,
-           restrict: 'A',
-           link: function(scope, element, attrs){
-             element.bind('click', function(e){
-               var message = attrs.ngConfirmClick;
-               if(message && !confirm(message)){
-                 e.stopImmediatePropagation();
-                 e.preventDefault();
-               }
-             });
-           }
-         }
-       }
-  ]);
+
+        $scope.modalAjuda = {
+             "title": "Ajuda",
+             "content": "Campos Obrigatórios em Vermelho"
+        };
+
+        $scope.modalConfirmacao = {
+             "title": "Confirmação",
+             "content": "Deseja excluir o País?"
+        };
+
+  });
+
+//  .directive('ngConfirmClick', [
+//       function(){
+//         return {
+//           priority: -1,
+//           restrict: 'A',
+//           link: function(scope, element, attrs){
+//             element.bind('click', function(e){
+//               var message = attrs.ngConfirmClick;
+//               if(message && !confirm(message)){
+//                 e.stopImmediatePropagation();
+//                 e.preventDefault();
+//               }
+//             });
+//           }
+//         }
+//       }
+//  ]);

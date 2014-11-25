@@ -1,0 +1,19 @@
+<div class="modal" tabindex="-1" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header" ng-show="title">
+                <!--<button type="button" class="close" ng-click="$hide()">&times;</button>-->
+                <h3 class="modal-title" ng-bind="title"> Título</h3>
+            </div>
+            <div class="modal-body" ng-bind="content">Conteúdo</div>
+            <div class="modal-footer">
+                <button type="button" id="delete" class="btn btn-danger" ng-click="delete()">
+                    <span class="glyphicon glyphicon-trash"></span> <b>Remover</b>
+                </button>
+                <button type="reset" id="cancel" class="btn btn-default" ng-click="$hide()">
+                    <span class="glyphicon glyphicon-arrow-left"></span> <b>Cancelar</b>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,8 +1,13 @@
 angular.module('mercado')
     .controller('HomeController', function ($scope, $location, $modal, $log) {
 
-        $scope.modal = {
+        $scope.modalInformacoes = {
             "title": "Informações",
-            "content": "AngularJS 1.2+ native directives for Bootstrap 3."
+            "content": ""
+         };
+
+         $scope.popoverInformacoes = {
+           "title": "Informações",
+           "content": "Sistema de Mercados Luana - Melhor Preços é Aqui!"
          };
     });

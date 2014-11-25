@@ -22,6 +22,11 @@ angular.module('mercado')
           });
       };
 
+      $scope.modalAjuda = {
+          "title": "Ajuda",
+          "content": "Campos Obrigatórios em Vermelho"
+      };
+
     }).controller('CidadeListController', function ($scope, Cidade, toastr){
         $scope.cidades = [];
         $scope.init = function(){
@@ -67,20 +72,32 @@ angular.module('mercado')
             });
         };
 
-  }).directive('ngConfirmClick', [
-       function(){
-         return {
-           priority: -1,
-           restrict: 'A',
-           link: function(scope, element, attrs){
-             element.bind('click', function(e){
-               var message = attrs.ngConfirmClick;
-               if(message && !confirm(message)){
-                 e.stopImmediatePropagation();
-                 e.preventDefault();
-               }
-             });
-           }
-         }
-       }
-  ]);
+         $scope.modalAjuda = {
+              "title": "Ajuda",
+              "content": "Campos Obrigatórios em Vermelho"
+         };
+
+         $scope.modalConfirmacao = {
+               "title": "Confirmação",
+               "content": "Deseja excluir a Cidade?"
+         };
+
+  });
+
+//  .directive('ngConfirmClick', [
+//       function(){
+//         return {
+//           priority: -1,
+//           restrict: 'A',
+//           link: function(scope, element, attrs){
+//             element.bind('click', function(e){
+//               var message = attrs.ngConfirmClick;
+//               if(message && !confirm(message)){
+//                 e.stopImmediatePropagation();
+//                 e.preventDefault();
+//               }
+//             });
+//           }
+//         }
+//       }
+//  ]);

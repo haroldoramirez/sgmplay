@@ -1,4 +1,4 @@
-angular.module('mercado', ['ngRoute', 'ngResource', 'toastr', 'mgcrea.ngStrap'])
+angular.module('mercado', ['ngRoute', 'ngResource', 'toastr', 'mgcrea.ngStrap', 'ngAnimate'])
     .config(function ($routeProvider) {
         $routeProvider
             .when('/', {

@@ -22,10 +22,10 @@ angular.module('mercado')
               });
           };
 
-         $scope.modal = {
-           "title": "Ajuda",
-           "content": "Campos Obrigatórios"
-         };
+        $scope.modalAjuda = {
+             "title": "Ajuda",
+             "content": "Campos Obrigatórios em Vermelho"
+        };
 
 }).controller('ClienteListController', function ($scope, Cliente, toastr){
           $scope.clientes = [];
@@ -74,20 +74,32 @@ angular.module('mercado')
 
           };
 
-}).directive('ngConfirmClick', [
-      function(){
-               return {
-                 priority: -1,
-                 restrict: 'A',
-                 link: function(scope, element, attrs){
-                   element.bind('click', function(e){
-                     var message = attrs.ngConfirmClick;
-                     if(message && !confirm(message)){
-                       e.stopImmediatePropagation();
-                       e.preventDefault();
-                     }
-                   });
-                 }
-               }
-      }
-]);
+            $scope.modalAjuda = {
+                  "title": "Ajuda",
+                  "content": "Campos Obrigatórios em Vermelho"
+             };
+
+             $scope.modalConfirmacao = {
+                   "title": "Confirmação",
+                   "content": "Deseja excluir o Cliente?"
+             };
+
+});
+
+//.directive('ngConfirmClick', [
+//      function(){
+//               return {
+//                 priority: -1,
+//                 restrict: 'A',
+//                 link: function(scope, element, attrs){
+//                   element.bind('click', function(e){
+//                     var message = attrs.ngConfirmClick;
+//                     if(message && !confirm(message)){
+//                       e.stopImmediatePropagation();
+//                       e.preventDefault();
+//                     }
+//                   });
+//                 }
+//               }
+//      }
+//]);

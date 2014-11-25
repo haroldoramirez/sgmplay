@@ -1,5 +1,5 @@
 angular.module('mercado')
- .controller('BairroCreateController', function ($scope, $location, Bairro, Cidade, toastr){
+ .controller('BairroCreateController', function ($scope, $location, $modal, Bairro, Cidade, toastr){
           $scope.bairro = {};
           $scope.save = function(){
               console.log($scope.bairro);
@@ -22,6 +22,11 @@ angular.module('mercado')
               });
           };
 
+           $scope.modalAjuda = {
+                "title": "Ajuda",
+                "content": "Campos Obrigatórios em Vermelho"
+           };
+
  }).controller('BairroListController', function ($scope, Bairro, toastr){
            $scope.bairros = [];
            $scope.init = function(){
@@ -38,7 +43,7 @@ angular.module('mercado')
                   toastr.error('Não foi possível remover o Bairro');
               });
            };
- }).controller('BairroDetailController', function ($scope, $routeParams, $location, Bairro, Cidade, toastr){
+ }).controller('BairroDetailController', function ($scope, $modal, $routeParams, $location, Bairro, Cidade, toastr){
 
            $scope.init = function(){
                  $scope.bairro = Bairro.get({id:$routeParams.id});
@@ -68,20 +73,32 @@ angular.module('mercado')
                });
            };
 
- }).directive('ngConfirmClick', [
-      function(){
-            return {
-              priority: -1,
-              restrict: 'A',
-              link: function(scope, element, attrs){
-                element.bind('click', function(e){
-                  var message = attrs.ngConfirmClick;
-                  if(message && !confirm(message)){
-                    e.stopImmediatePropagation();
-                    e.preventDefault();
-                  }
-                });
-              }
-            }
-          }
- ]);
+         $scope.modalAjuda = {
+               "title": "Ajuda",
+               "content": "Campos Obrigatórios em Vermelho"
+          };
+
+          $scope.modalConfirmacao = {
+                "title": "Confirmação",
+                "content": "Deseja excluir o Bairro?"
+          };
+
+ });
+
+// .directive('ngConfirmClick', [
+//      function(){
+//            return {
+//              priority: -1,
+//              restrict: 'A',
+//              link: function(scope, element, attrs){
+//                element.bind('click', function(e){
+//                  var message = attrs.ngConfirmClick;
+//                  if(message && !confirm(message)){
+//                    e.stopImmediatePropagation();
+//                    e.preventDefault();
+//                  }
+//                });
+//              }
+//            }
+//          }
+// ]);
