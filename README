@@ -1,4 +1,7 @@
-This is your new Play application
+Sistema de Gestão de Mercados 
+
+Powered by Play 2 Framework(backend) e AngularJS(frontend)
+
 =================================
 
 This file will be packaged with your application, when using `activator dist`.
