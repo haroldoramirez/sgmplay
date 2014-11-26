@@ -1,1881 +1,514 @@
-2014-11-25 14:45:00,177 - [INFO] - from play in pool-6-thread-1 
+2014-11-26 10:15:34,663 - [INFO] - from play in pool-6-thread-6 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2014-11-25 14:45:29,968 - [INFO] - from play in play-internal-execution-context-1 
+2014-11-26 10:15:54,713 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:postgresql://localhost:5432/sgmplaydb
 
-2014-11-25 14:45:41,899 - [INFO] - from play in play-internal-execution-context-1 
+2014-11-26 10:15:55,188 - [ERROR] - from application in New I/O worker #1 
+
+
+! @6kb0ga4mi - Internal server error, for (GET) [/] ->
+
+play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1$$anonfun$apply$1.apply$mcV$sp(Evolutions.scala:510) ~[play-jdbc_2.11-2.3.6.jar:2.3.6]
+	at play.api.db.evolutions.EvolutionsPlugin.withLock(Evolutions.scala:531) ~[play-jdbc_2.11-2.3.6.jar:2.3.6]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:485) ~[play-jdbc_2.11-2.3.6.jar:2.3.6]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:483) ~[play-jdbc_2.11-2.3.6.jar:2.3.6]
+	at scala.collection.immutable.List.foreach(List.scala:383) ~[scala-library-2.11.1.jar:na]
+	at play.api.db.evolutions.EvolutionsPlugin.onStart(Evolutions.scala:483) ~[play-jdbc_2.11-2.3.6.jar:2.3.6]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.6.jar:2.3.6]
+	at scala.collection.immutable.List.foreach(List.scala:383) ~[scala-library-2.11.1.jar:na]
+	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:91) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.Play$.start(Play.scala:90) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:157) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
+	at scala.util.Success.flatMap(Try.scala:230) ~[scala-library-2.11.1.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.6.jar:2.3.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
+
+2014-11-26 10:16:00,294 - [WARN] - from play in play-internal-execution-context-1 
+Error stopping plugin
+java.lang.NullPointerException: null
+	at play.libs.ws.ning.NingWSPlugin.onStop(NingWSPlugin.java:31) ~[play-java-ws_2.11-2.3.6.jar:2.3.6]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:108) [play_2.11-2.3.6.jar:2.3.6]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:107) [play_2.11-2.3.6.jar:2.3.6]
+	at scala.collection.immutable.List.foreach(List.scala:383) [scala-library-2.11.1.jar:na]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply$mcV$sp(Play.scala:107) [play_2.11-2.3.6.jar:2.3.6]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.6.jar:2.3.6]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.6.jar:2.3.6]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) [play_2.11-2.3.6.jar:2.3.6]
+	at play.api.Play$$anonfun$stop$1.apply(Play.scala:106) [play_2.11-2.3.6.jar:2.3.6]
+	at play.api.Play$$anonfun$stop$1.apply(Play.scala:105) [play_2.11-2.3.6.jar:2.3.6]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.api.Play$.stop(Play.scala:105) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:142) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.6.jar:2.3.6]
+	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.6.jar:2.3.6]
+	at scala.util.Success.flatMap(Try.scala:230) [scala-library-2.11.1.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) [play_2.11-2.3.6.jar:2.3.6]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.1.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.1.jar:na]
+
+2014-11-26 10:16:00,482 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:postgresql://localhost:5432/sgmplaydb
+
+2014-11-26 10:16:00,657 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2014-11-25 14:48:45,260 - [INFO] - from application in play-akka.actor.default-dispatcher-10 
-busca Todos os Bairros
-
-2014-11-25 14:48:45,260 - [INFO] - from application in play-akka.actor.default-dispatcher-8 
+2014-11-26 10:16:22,390 - [INFO] - from application in play-akka.actor.default-dispatcher-4 
 busca Todos os Clientes
 
-2014-11-25 14:50:01,722 - [INFO] - from application in play-akka.actor.default-dispatcher-14 
-busca Todos os Bairros
-
-2014-11-25 14:52:01,903 - [INFO] - from application in play-akka.actor.default-dispatcher-25 
-busca Todos os Bairros
-
-2014-11-25 14:52:35,160 - [INFO] - from application in play-akka.actor.default-dispatcher-28 
-busca Todos os Bairros
-
-2014-11-25 14:53:52,595 - [INFO] - from application in play-akka.actor.default-dispatcher-36 
-busca Todos os Bairros
-
-2014-11-25 14:53:54,749 - [INFO] - from application in play-akka.actor.default-dispatcher-35 
+2014-11-26 10:16:25,376 - [INFO] - from application in play-akka.actor.default-dispatcher-7 
 busca Todos os Paises
 
-2014-11-25 14:53:56,371 - [INFO] - from application in play-akka.actor.default-dispatcher-35 
-busca Todos os Estados
-
-2014-11-25 14:53:58,084 - [INFO] - from application in play-akka.actor.default-dispatcher-36 
-busca Todas as Cidades
-
-2014-11-25 14:54:00,016 - [INFO] - from application in play-akka.actor.default-dispatcher-32 
-busca Todos os Bairros
-
-2014-11-25 14:54:01,429 - [INFO] - from application in play-akka.actor.default-dispatcher-36 
-busca Todos os Clientes
-
-2014-11-25 14:54:02,629 - [INFO] - from application in play-akka.actor.default-dispatcher-36 
-busca Todos os Bairros
-
-2014-11-25 14:54:03,138 - [INFO] - from application in play-akka.actor.default-dispatcher-32 
-buscaPorId Cliente
-
-2014-11-25 14:54:04,322 - [INFO] - from application in play-akka.actor.default-dispatcher-36 
-busca Todos os Clientes
-
-2014-11-25 14:54:05,840 - [INFO] - from application in play-akka.actor.default-dispatcher-36 
-buscaPorId Cliente
-
-2014-11-25 14:54:05,842 - [INFO] - from application in play-akka.actor.default-dispatcher-32 
-busca Todos os Bairros
-
-2014-11-25 14:55:14,633 - [INFO] - from application in play-akka.actor.default-dispatcher-41 
-buscaPorId Cliente
-
-2014-11-25 14:55:14,633 - [INFO] - from application in play-akka.actor.default-dispatcher-44 
-busca Todos os Bairros
-
-2014-11-25 14:55:20,795 - [INFO] - from application in play-akka.actor.default-dispatcher-42 
-busca Todos os Clientes
-
-2014-11-25 14:55:22,963 - [INFO] - from application in play-akka.actor.default-dispatcher-38 
-busca Todos os Clientes
-
-2014-11-25 14:55:25,920 - [INFO] - from application in play-akka.actor.default-dispatcher-45 
-buscaPorId Cliente
-
-2014-11-25 14:55:25,929 - [INFO] - from application in play-akka.actor.default-dispatcher-43 
-busca Todos os Bairros
-
-2014-11-25 14:56:10,688 - [INFO] - from application in play-akka.actor.default-dispatcher-47 
-buscaPorId Cliente
-
-2014-11-25 14:56:10,699 - [INFO] - from application in play-akka.actor.default-dispatcher-52 
-busca Todos os Bairros
-
-2014-11-25 14:57:35,701 - [INFO] - from application in play-akka.actor.default-dispatcher-53 
-buscaPorId Cliente
-
-2014-11-25 14:57:35,702 - [INFO] - from application in play-akka.actor.default-dispatcher-55 
-busca Todos os Bairros
-
-2014-11-25 14:57:38,828 - [INFO] - from application in play-akka.actor.default-dispatcher-48 
-busca Todos os Clientes
-
-2014-11-25 14:57:39,931 - [INFO] - from application in play-akka.actor.default-dispatcher-48 
-busca Todos os Bairros
-
-2014-11-25 14:57:54,034 - [INFO] - from application in play-akka.actor.default-dispatcher-60 
-busca Todos os Bairros
-
-2014-11-25 14:57:54,817 - [INFO] - from application in play-akka.actor.default-dispatcher-57 
-busca Todos os Clientes
-
-2014-11-25 14:57:55,781 - [INFO] - from application in play-akka.actor.default-dispatcher-57 
-busca Todos os Bairros
-
-2014-11-25 14:58:33,976 - [INFO] - from application in play-akka.actor.default-dispatcher-67 
-busca Todos os Bairros
-
-2014-11-25 14:58:56,030 - [INFO] - from application in play-akka.actor.default-dispatcher-62 
-busca Todos os Clientes
-
-2014-11-25 14:58:57,743 - [INFO] - from application in play-akka.actor.default-dispatcher-54 
-busca Todos os Bairros
-
-2014-11-25 14:58:57,743 - [INFO] - from application in play-akka.actor.default-dispatcher-62 
-buscaPorId Cliente
-
-2014-11-25 14:59:02,717 - [INFO] - from application in play-akka.actor.default-dispatcher-62 
-busca Todos os Clientes
-
-2014-11-25 14:59:04,126 - [INFO] - from application in play-akka.actor.default-dispatcher-70 
-busca Todos os Clientes
-
-2014-11-25 14:59:25,097 - [INFO] - from application in play-akka.actor.default-dispatcher-58 
-buscaPorId Cliente
-
-2014-11-25 14:59:25,102 - [INFO] - from application in play-akka.actor.default-dispatcher-71 
-busca Todos os Bairros
-
-2014-11-25 15:00:03,007 - [INFO] - from application in play-akka.actor.default-dispatcher-69 
-busca Todos os Clientes
-
-2014-11-25 15:00:04,077 - [INFO] - from application in play-akka.actor.default-dispatcher-69 
-busca Todos os Bairros
-
-2014-11-25 15:00:10,635 - [INFO] - from application in play-akka.actor.default-dispatcher-69 
-busca Todos os Clientes
-
-2014-11-25 15:00:11,977 - [INFO] - from application in play-akka.actor.default-dispatcher-69 
-buscaPorId Cliente
-
-2014-11-25 15:00:11,979 - [INFO] - from application in play-akka.actor.default-dispatcher-72 
-busca Todos os Bairros
-
-2014-11-25 15:00:34,724 - [INFO] - from application in play-akka.actor.default-dispatcher-74 
-busca Todos os Paises
-
-2014-11-25 15:04:01,412 - [INFO] - from application in play-akka.actor.default-dispatcher-77 
-busca Todos os Paises
-
-2014-11-25 15:04:02,523 - [INFO] - from application in play-akka.actor.default-dispatcher-79 
-buscaPorId País
-
-2014-11-25 15:04:06,061 - [INFO] - from application in play-akka.actor.default-dispatcher-79 
-busca Todos os Paises
-
-2014-11-25 15:06:52,565 - [INFO] - from application in play-akka.actor.default-dispatcher-85 
-busca Todos os Paises
-
-2014-11-25 15:06:54,439 - [INFO] - from application in play-akka.actor.default-dispatcher-84 
-busca Todos os Estados
-
-2014-11-25 15:06:56,182 - [INFO] - from application in play-akka.actor.default-dispatcher-84 
-busca Todos os Paises
-
-2014-11-25 15:06:56,307 - [INFO] - from application in play-akka.actor.default-dispatcher-84 
-buscaPorId Estado
-
-2014-11-25 15:06:59,389 - [INFO] - from application in play-akka.actor.default-dispatcher-86 
-busca Todos os Estados
-
-2014-11-25 15:07:01,248 - [INFO] - from application in play-akka.actor.default-dispatcher-88 
-busca Todos os Paises
-
-2014-11-25 15:07:04,707 - [INFO] - from application in play-akka.actor.default-dispatcher-88 
-busca Todos os Estados
-
-2014-11-25 15:07:56,535 - [INFO] - from application in play-akka.actor.default-dispatcher-90 
-busca Todos os Estados
-
-2014-11-25 15:07:56,959 - [INFO] - from application in play-akka.actor.default-dispatcher-93 
-busca Todos os Clientes
-
-2014-11-25 15:07:58,690 - [INFO] - from application in play-akka.actor.default-dispatcher-78 
-buscaPorId Cliente
-
-2014-11-25 15:07:58,696 - [INFO] - from application in play-akka.actor.default-dispatcher-93 
-busca Todos os Bairros
-
-2014-11-25 15:08:05,625 - [INFO] - from application in play-akka.actor.default-dispatcher-94 
-busca Todos os Clientes
-
-2014-11-25 15:08:06,686 - [INFO] - from application in play-akka.actor.default-dispatcher-94 
-buscaPorId Cliente
-
-2014-11-25 15:08:06,692 - [INFO] - from application in play-akka.actor.default-dispatcher-78 
-busca Todos os Bairros
-
-2014-11-25 15:08:10,193 - [INFO] - from application in play-akka.actor.default-dispatcher-78 
-busca Todos os Paises
-
-2014-11-25 15:08:11,762 - [INFO] - from application in play-akka.actor.default-dispatcher-78 
-buscaPorId País
-
-2014-11-25 15:08:14,446 - [INFO] - from application in play-akka.actor.default-dispatcher-78 
-busca Todos os Paises
-
-2014-11-25 15:08:19,238 - [INFO] - from application in play-akka.actor.default-dispatcher-92 
-busca Todos os Paises
-
-2014-11-25 15:08:21,883 - [INFO] - from application in play-akka.actor.default-dispatcher-92 
-busca Todas as Cidades
-
-2014-11-25 15:08:24,615 - [INFO] - from application in play-akka.actor.default-dispatcher-92 
-busca Todos os Estados
-
-2014-11-25 15:08:24,632 - [INFO] - from application in play-akka.actor.default-dispatcher-92 
-buscaPorId Cidade
-
-2014-11-25 15:11:05,782 - [INFO] - from application in play-akka.actor.default-dispatcher-97 
-buscaPorId Cidade
-
-2014-11-25 15:11:05,782 - [INFO] - from application in play-akka.actor.default-dispatcher-98 
-busca Todos os Estados
-
-2014-11-25 15:11:09,135 - [INFO] - from application in play-akka.actor.default-dispatcher-98 
-busca Todas as Cidades
-
-2014-11-25 15:11:10,360 - [INFO] - from application in play-akka.actor.default-dispatcher-100 
-busca Todos os Estados
-
-2014-11-25 15:11:14,396 - [INFO] - from application in play-akka.actor.default-dispatcher-98 
-busca Todas as Cidades
-
-2014-11-25 15:13:35,737 - [INFO] - from application in play-akka.actor.default-dispatcher-104 
-busca Todos os Bairros
-
-2014-11-25 15:13:38,670 - [INFO] - from application in play-akka.actor.default-dispatcher-102 
-busca Todas as Cidades
-
-2014-11-25 15:13:38,742 - [INFO] - from application in play-akka.actor.default-dispatcher-102 
-buscaPorId Bairro
-
-2014-11-25 15:13:44,656 - [INFO] - from application in play-akka.actor.default-dispatcher-106 
-busca Todos os Bairros
-
-2014-11-25 15:13:48,012 - [INFO] - from application in play-akka.actor.default-dispatcher-106 
-busca Todas as Cidades
-
-2014-11-25 15:14:00,423 - [INFO] - from application in play-akka.actor.default-dispatcher-99 
-busca Todos os Bairros
-
-2014-11-25 15:14:24,572 - [INFO] - from application in play-akka.actor.default-dispatcher-105 
-busca Todos os Clientes
-
-2014-11-25 15:14:26,292 - [INFO] - from application in play-akka.actor.default-dispatcher-105 
-buscaPorId Cliente
-
-2014-11-25 15:14:26,297 - [INFO] - from application in play-akka.actor.default-dispatcher-107 
-busca Todos os Bairros
-
-2014-11-25 15:14:35,479 - [INFO] - from application in play-akka.actor.default-dispatcher-107 
-remover Cliente
-
-2014-11-25 15:14:37,091 - [INFO] - from application in play-akka.actor.default-dispatcher-107 
-busca Todos os Clientes
-
-2014-11-25 15:14:41,556 - [INFO] - from application in play-akka.actor.default-dispatcher-105 
-busca Todos os Bairros
-
-2014-11-25 15:14:43,011 - [INFO] - from application in play-akka.actor.default-dispatcher-107 
-buscaPorId Bairro
-
-2014-11-25 15:14:43,012 - [INFO] - from application in play-akka.actor.default-dispatcher-105 
-busca Todas as Cidades
-
-2014-11-25 15:14:47,107 - [INFO] - from application in play-akka.actor.default-dispatcher-105 
-remover Bairro
-
-2014-11-25 15:14:47,445 - [INFO] - from application in play-akka.actor.default-dispatcher-107 
-busca Todos os Bairros
-
-2014-11-25 15:14:49,825 - [INFO] - from application in play-akka.actor.default-dispatcher-107 
-busca Todas as Cidades
-
-2014-11-25 15:14:51,221 - [INFO] - from application in play-akka.actor.default-dispatcher-107 
-buscaPorId Cidade
-
-2014-11-25 15:14:51,234 - [INFO] - from application in play-akka.actor.default-dispatcher-107 
-busca Todos os Estados
-
-2014-11-25 15:14:54,305 - [INFO] - from application in play-akka.actor.default-dispatcher-107 
-remover cidade
-
-2014-11-25 15:14:54,464 - [INFO] - from application in play-akka.actor.default-dispatcher-111 
-busca Todas as Cidades
-
-2014-11-25 15:14:56,550 - [INFO] - from application in play-akka.actor.default-dispatcher-111 
-busca Todos os Estados
-
-2014-11-25 15:14:57,523 - [INFO] - from application in play-akka.actor.default-dispatcher-105 
-buscaPorId Estado
-
-2014-11-25 15:14:57,532 - [INFO] - from application in play-akka.actor.default-dispatcher-105 
-busca Todos os Paises
-
-2014-11-25 15:15:00,836 - [INFO] - from application in play-akka.actor.default-dispatcher-105 
-remover estado
-
-2014-11-25 15:15:00,923 - [INFO] - from application in play-akka.actor.default-dispatcher-105 
-busca Todos os Estados
-
-2014-11-25 15:15:02,674 - [INFO] - from application in play-akka.actor.default-dispatcher-107 
-busca Todos os Paises
-
-2014-11-25 15:15:03,732 - [INFO] - from application in play-akka.actor.default-dispatcher-105 
-buscaPorId País
-
-2014-11-25 15:15:07,267 - [INFO] - from application in play-akka.actor.default-dispatcher-105 
-remover pais
-
-2014-11-25 15:15:07,344 - [INFO] - from application in play-akka.actor.default-dispatcher-107 
-busca Todos os Paises
-
-2014-11-25 15:21:59,172 - [INFO] - from application in play-akka.actor.default-dispatcher-117 
-busca Todos os Paises
-
-2014-11-25 15:22:13,225 - [INFO] - from application in play-akka.actor.default-dispatcher-113 
+2014-11-26 10:16:38,675 - [INFO] - from application in play-akka.actor.default-dispatcher-2 
 Salvando Pais
 
-2014-11-25 15:22:14,016 - [INFO] - from application in play-akka.actor.default-dispatcher-117 
+2014-11-26 10:16:38,796 - [INFO] - from application in play-akka.actor.default-dispatcher-7 
 busca Todos os Paises
 
-2014-11-25 15:22:20,014 - [INFO] - from application in play-akka.actor.default-dispatcher-113 
+2014-11-26 10:16:41,135 - [INFO] - from application in play-akka.actor.default-dispatcher-7 
 buscaPorId País
 
-2014-11-25 15:22:25,809 - [INFO] - from application in play-akka.actor.default-dispatcher-113 
+2014-11-26 10:16:46,397 - [INFO] - from application in play-akka.actor.default-dispatcher-7 
 busca Todos os Paises
 
-2014-11-25 15:22:29,573 - [INFO] - from application in play-akka.actor.default-dispatcher-117 
+2014-11-26 10:16:47,563 - [INFO] - from application in play-akka.actor.default-dispatcher-2 
+buscaPorId País
+
+2014-11-26 10:16:56,824 - [INFO] - from application in play-akka.actor.default-dispatcher-7 
+busca Todos os Paises
+
+2014-11-26 10:16:58,147 - [INFO] - from application in play-akka.actor.default-dispatcher-2 
+buscaPorId País
+
+2014-11-26 10:17:03,754 - [INFO] - from application in play-akka.actor.default-dispatcher-7 
+busca Todos os Paises
+
+2014-11-26 10:17:11,303 - [INFO] - from application in play-akka.actor.default-dispatcher-7 
 busca Todos os Estados
 
-2014-11-25 15:22:31,100 - [INFO] - from application in play-akka.actor.default-dispatcher-113 
+2014-11-26 10:17:12,255 - [INFO] - from application in play-akka.actor.default-dispatcher-10 
 busca Todos os Paises
 
-2014-11-25 15:22:48,828 - [INFO] - from application in play-akka.actor.default-dispatcher-108 
+2014-11-26 10:17:46,431 - [INFO] - from application in play-akka.actor.default-dispatcher-9 
 Salvando Estado
 
-2014-11-25 15:22:48,958 - [INFO] - from application in play-akka.actor.default-dispatcher-108 
+2014-11-26 10:17:46,482 - [INFO] - from application in play-akka.actor.default-dispatcher-2 
 busca Todos os Estados
 
-2014-11-25 15:22:52,088 - [INFO] - from application in play-akka.actor.default-dispatcher-116 
+2014-11-26 10:17:49,992 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
 busca Todos os Paises
 
-2014-11-25 15:22:52,088 - [INFO] - from application in play-akka.actor.default-dispatcher-108 
+2014-11-26 10:17:49,995 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
 buscaPorId Estado
 
-2014-11-25 15:22:55,087 - [INFO] - from application in play-akka.actor.default-dispatcher-116 
-busca Todas as Cidades
-
-2014-11-25 15:22:56,051 - [INFO] - from application in play-akka.actor.default-dispatcher-108 
+2014-11-26 10:17:56,276 - [INFO] - from application in play-akka.actor.default-dispatcher-2 
 busca Todos os Estados
 
-2014-11-25 15:23:08,567 - [INFO] - from application in play-akka.actor.default-dispatcher-112 
+2014-11-26 10:17:57,346 - [INFO] - from application in play-akka.actor.default-dispatcher-2 
+buscaPorId Estado
+
+2014-11-26 10:17:57,347 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
+busca Todos os Paises
+
+2014-11-26 10:17:59,258 - [INFO] - from application in play-akka.actor.default-dispatcher-2 
+busca Todos os Estados
+
+2014-11-26 10:18:01,959 - [INFO] - from application in play-akka.actor.default-dispatcher-2 
+busca Todas as Cidades
+
+2014-11-26 10:18:03,032 - [INFO] - from application in play-akka.actor.default-dispatcher-9 
+busca Todos os Estados
+
+2014-11-26 10:18:12,409 - [INFO] - from application in play-akka.actor.default-dispatcher-11 
 Salvando Cidade
 
-2014-11-25 15:23:08,886 - [INFO] - from application in play-akka.actor.default-dispatcher-112 
+2014-11-26 10:18:12,455 - [INFO] - from application in play-akka.actor.default-dispatcher-9 
 busca Todas as Cidades
 
-2014-11-25 15:23:09,753 - [INFO] - from application in play-akka.actor.default-dispatcher-114 
-buscaPorId Cidade
-
-2014-11-25 15:23:09,756 - [INFO] - from application in play-akka.actor.default-dispatcher-116 
-busca Todos os Estados
-
-2014-11-25 15:23:12,062 - [INFO] - from application in play-akka.actor.default-dispatcher-116 
-busca Todas as Cidades
-
-2014-11-25 15:23:14,112 - [INFO] - from application in play-akka.actor.default-dispatcher-116 
+2014-11-26 10:18:15,520 - [INFO] - from application in play-akka.actor.default-dispatcher-11 
 busca Todos os Bairros
 
-2014-11-25 15:23:14,878 - [INFO] - from application in play-akka.actor.default-dispatcher-112 
+2014-11-26 10:18:16,540 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
 busca Todas as Cidades
 
-2014-11-25 15:23:25,976 - [INFO] - from application in play-akka.actor.default-dispatcher-116 
+2014-11-26 10:18:24,627 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
 Salvando Bairro
 
-2014-11-25 15:23:26,096 - [INFO] - from application in play-akka.actor.default-dispatcher-116 
+2014-11-26 10:18:24,679 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
 busca Todos os Bairros
 
-2014-11-25 15:23:27,536 - [INFO] - from application in play-akka.actor.default-dispatcher-116 
+2014-11-26 10:18:26,765 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
 busca Todos os Clientes
 
-2014-11-25 15:23:30,042 - [INFO] - from application in play-akka.actor.default-dispatcher-116 
+2014-11-26 10:18:28,395 - [INFO] - from application in play-akka.actor.default-dispatcher-9 
 busca Todos os Bairros
 
-2014-11-25 15:23:31,630 - [INFO] - from application in play-akka.actor.default-dispatcher-116 
-buscaPorId Bairro
-
-2014-11-25 15:23:31,633 - [INFO] - from application in play-akka.actor.default-dispatcher-119 
-busca Todas as Cidades
-
-2014-11-25 15:23:34,291 - [INFO] - from application in play-akka.actor.default-dispatcher-116 
-busca Todos os Clientes
-
-2014-11-25 15:23:35,466 - [INFO] - from application in play-akka.actor.default-dispatcher-116 
-busca Todos os Bairros
-
-2014-11-25 15:24:03,565 - [INFO] - from application in play-akka.actor.default-dispatcher-119 
+2014-11-26 10:19:03,178 - [INFO] - from application in play-akka.actor.default-dispatcher-11 
 Salvando Cliente
 
-2014-11-25 15:24:04,055 - [INFO] - from application in play-akka.actor.default-dispatcher-119 
+2014-11-26 10:19:03,255 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
 busca Todos os Clientes
 
-2014-11-25 15:24:05,377 - [INFO] - from application in play-akka.actor.default-dispatcher-119 
+2014-11-26 10:19:06,662 - [INFO] - from application in play-akka.actor.default-dispatcher-14 
 busca Todos os Bairros
 
-2014-11-25 15:24:05,383 - [INFO] - from application in play-akka.actor.default-dispatcher-119 
+2014-11-26 10:19:06,671 - [INFO] - from application in play-akka.actor.default-dispatcher-11 
 buscaPorId Cliente
 
-2014-11-25 15:24:10,257 - [INFO] - from application in play-akka.actor.default-dispatcher-119 
+2014-11-26 10:19:12,206 - [INFO] - from application in play-akka.actor.default-dispatcher-14 
 busca Todos os Clientes
 
-2014-11-25 15:25:23,328 - [INFO] - from application in play-akka.actor.default-dispatcher-121 
+2014-11-26 10:19:50,225 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
+busca Todos os Paises
+
+2014-11-26 10:19:51,703 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
+buscaPorId País
+
+2014-11-26 10:21:53,770 - [INFO] - from application in play-akka.actor.default-dispatcher-18 
+buscaPorId País
+
+2014-11-26 10:21:58,177 - [INFO] - from application in play-akka.actor.default-dispatcher-18 
+busca Todos os Paises
+
+2014-11-26 10:21:59,339 - [INFO] - from application in play-akka.actor.default-dispatcher-20 
+buscaPorId País
+
+2014-11-26 10:22:05,799 - [INFO] - from application in play-akka.actor.default-dispatcher-18 
+busca Todos os Paises
+
+2014-11-26 10:22:07,511 - [INFO] - from application in play-akka.actor.default-dispatcher-17 
+buscaPorId País
+
+2014-11-26 10:22:14,825 - [INFO] - from application in play-akka.actor.default-dispatcher-18 
+busca Todos os Paises
+
+2014-11-26 10:22:42,708 - [INFO] - from application in play-akka.actor.default-dispatcher-22 
 busca Todos os Clientes
 
-2014-11-25 15:25:24,776 - [INFO] - from application in play-akka.actor.default-dispatcher-123 
-buscaPorId Cliente
+2014-11-26 10:22:45,355 - [INFO] - from application in play-akka.actor.default-dispatcher-23 
+busca Todos os Clientes
 
-2014-11-25 15:25:24,780 - [INFO] - from application in play-akka.actor.default-dispatcher-121 
+2014-11-26 10:22:50,538 - [INFO] - from application in play-akka.actor.default-dispatcher-21 
 busca Todos os Bairros
 
-2014-11-25 15:25:29,305 - [INFO] - from application in play-akka.actor.default-dispatcher-123 
-remover Cliente
-
-2014-11-25 15:25:29,373 - [INFO] - from application in play-akka.actor.default-dispatcher-123 
-busca Todos os Clientes
-
-2014-11-25 15:25:31,380 - [INFO] - from application in play-akka.actor.default-dispatcher-123 
-busca Todos os Bairros
-
-2014-11-25 15:25:32,509 - [INFO] - from application in play-akka.actor.default-dispatcher-123 
+2014-11-26 10:22:52,775 - [INFO] - from application in play-akka.actor.default-dispatcher-21 
 busca Todas as Cidades
 
-2014-11-25 15:25:32,512 - [INFO] - from application in play-akka.actor.default-dispatcher-121 
+2014-11-26 10:22:54,313 - [INFO] - from application in play-akka.actor.default-dispatcher-23 
+busca Todos os Estados
+
+2014-11-26 10:22:55,622 - [INFO] - from application in play-akka.actor.default-dispatcher-23 
+busca Todos os Paises
+
+2014-11-26 10:23:04,753 - [INFO] - from application in play-akka.actor.default-dispatcher-21 
+busca Todos os Bairros
+
+2014-11-26 10:23:06,008 - [INFO] - from application in play-akka.actor.default-dispatcher-23 
 buscaPorId Bairro
 
-2014-11-25 15:25:36,287 - [INFO] - from application in play-akka.actor.default-dispatcher-121 
-remover Bairro
+2014-11-26 10:23:06,011 - [INFO] - from application in play-akka.actor.default-dispatcher-25 
+busca Todas as Cidades
 
-2014-11-25 15:25:36,410 - [INFO] - from application in play-akka.actor.default-dispatcher-121 
+2014-11-26 10:23:15,469 - [INFO] - from application in play-akka.actor.default-dispatcher-23 
 busca Todos os Bairros
 
-2014-11-25 15:25:38,229 - [INFO] - from application in play-akka.actor.default-dispatcher-121 
-busca Todas as Cidades
-
-2014-11-25 15:25:39,122 - [INFO] - from application in play-akka.actor.default-dispatcher-121 
-buscaPorId Cidade
-
-2014-11-25 15:25:39,123 - [INFO] - from application in play-akka.actor.default-dispatcher-124 
-busca Todos os Estados
-
-2014-11-25 15:25:42,747 - [INFO] - from application in play-akka.actor.default-dispatcher-121 
-remover cidade
-
-2014-11-25 15:25:42,830 - [INFO] - from application in play-akka.actor.default-dispatcher-124 
-busca Todas as Cidades
-
-2014-11-25 15:25:44,709 - [INFO] - from application in play-akka.actor.default-dispatcher-121 
-busca Todos os Estados
-
-2014-11-25 15:25:45,979 - [INFO] - from application in play-akka.actor.default-dispatcher-121 
-busca Todos os Paises
-
-2014-11-25 15:25:45,980 - [INFO] - from application in play-akka.actor.default-dispatcher-124 
-buscaPorId Estado
-
-2014-11-25 15:25:49,279 - [INFO] - from application in play-akka.actor.default-dispatcher-124 
-remover estado
-
-2014-11-25 15:25:49,564 - [INFO] - from application in play-akka.actor.default-dispatcher-124 
-busca Todos os Estados
-
-2014-11-25 15:25:51,937 - [INFO] - from application in play-akka.actor.default-dispatcher-124 
-busca Todos os Paises
-
-2014-11-25 15:25:52,952 - [INFO] - from application in play-akka.actor.default-dispatcher-124 
-buscaPorId País
-
-2014-11-25 15:25:54,289 - [INFO] - from application in play-akka.actor.default-dispatcher-124 
-busca Todos os Paises
-
-2014-11-25 15:28:38,100 - [INFO] - from application in play-akka.actor.default-dispatcher-127 
-busca Todos os Paises
-
-2014-11-25 15:28:40,107 - [INFO] - from application in play-akka.actor.default-dispatcher-126 
-buscaPorId País
-
-2014-11-25 15:28:43,761 - [INFO] - from application in play-akka.actor.default-dispatcher-127 
-remover pais
-
-2014-11-25 15:28:44,187 - [INFO] - from application in play-akka.actor.default-dispatcher-127 
-busca Todos os Paises
-
-2014-11-25 15:29:29,817 - [INFO] - from application in play-akka.actor.default-dispatcher-131 
-Salvando Pais
-
-2014-11-25 15:29:29,908 - [INFO] - from application in play-akka.actor.default-dispatcher-131 
-busca Todos os Paises
-
-2014-11-25 15:29:31,110 - [INFO] - from application in play-akka.actor.default-dispatcher-131 
-buscaPorId País
-
-2014-11-25 15:29:38,386 - [INFO] - from application in play-akka.actor.default-dispatcher-131 
-remover pais
-
-2014-11-25 15:29:38,440 - [INFO] - from application in play-akka.actor.default-dispatcher-131 
-busca Todos os Paises
-
-2014-11-25 15:31:19,785 - [INFO] - from application in play-akka.actor.default-dispatcher-138 
-busca Todos os Paises
-
-2014-11-25 15:31:25,064 - [INFO] - from application in play-akka.actor.default-dispatcher-135 
-Salvando Pais
-
-2014-11-25 15:31:25,131 - [INFO] - from application in play-akka.actor.default-dispatcher-137 
-busca Todos os Paises
-
-2014-11-25 15:31:27,065 - [INFO] - from application in play-akka.actor.default-dispatcher-137 
-buscaPorId País
-
-2014-11-25 15:31:30,676 - [INFO] - from application in play-akka.actor.default-dispatcher-136 
-busca Todos os Paises
-
-2014-11-25 15:31:40,710 - [INFO] - from application in play-akka.actor.default-dispatcher-140 
-busca Todos os Paises
-
-2014-11-25 15:31:41,741 - [INFO] - from application in play-akka.actor.default-dispatcher-134 
-buscaPorId País
-
-2014-11-25 15:31:49,271 - [INFO] - from application in play-akka.actor.default-dispatcher-134 
-busca Todos os Paises
-
-2014-11-25 15:32:26,282 - [INFO] - from application in play-akka.actor.default-dispatcher-142 
-busca Todos os Paises
-
-2014-11-25 15:33:37,156 - [INFO] - from application in play-akka.actor.default-dispatcher-139 
-busca Todos os Paises
-
-2014-11-25 15:33:38,518 - [INFO] - from application in play-akka.actor.default-dispatcher-152 
-buscaPorId País
-
-2014-11-25 15:33:43,156 - [INFO] - from application in play-akka.actor.default-dispatcher-139 
-busca Todos os Paises
-
-2014-11-25 15:33:45,670 - [INFO] - from application in play-akka.actor.default-dispatcher-139 
-buscaPorId País
-
-2014-11-25 15:33:49,989 - [INFO] - from application in play-akka.actor.default-dispatcher-154 
-remover pais
-
-2014-11-25 15:33:50,075 - [INFO] - from application in play-akka.actor.default-dispatcher-154 
-busca Todos os Paises
-
-2014-11-25 15:34:32,856 - [INFO] - from application in play-akka.actor.default-dispatcher-149 
+2014-11-26 10:23:17,249 - [INFO] - from application in play-akka.actor.default-dispatcher-21 
 busca Todos os Clientes
 
-2014-11-25 15:34:33,773 - [INFO] - from application in play-akka.actor.default-dispatcher-149 
+2014-11-26 10:23:18,121 - [INFO] - from application in play-akka.actor.default-dispatcher-24 
+buscaPorId Cliente
+
+2014-11-26 10:23:18,121 - [INFO] - from application in play-akka.actor.default-dispatcher-28 
 busca Todos os Bairros
 
-2014-11-25 15:34:43,545 - [INFO] - from application in play-akka.actor.default-dispatcher-155 
-busca Todos os Paises
+2014-11-26 10:23:21,851 - [INFO] - from application in play-akka.actor.default-dispatcher-21 
+remover Cliente
 
-2014-11-25 15:34:47,228 - [INFO] - from application in play-akka.actor.default-dispatcher-149 
-Salvando Pais
-
-2014-11-25 15:34:47,297 - [INFO] - from application in play-akka.actor.default-dispatcher-149 
-busca Todos os Paises
-
-2014-11-25 15:34:49,016 - [INFO] - from application in play-akka.actor.default-dispatcher-149 
-buscaPorId País
-
-2014-11-25 15:35:05,626 - [INFO] - from application in play-akka.actor.default-dispatcher-155 
-busca Todos os Paises
-
-2014-11-25 15:38:41,890 - [INFO] - from application in play-akka.actor.default-dispatcher-156 
-busca Todos os Paises
-
-2014-11-25 15:39:11,046 - [INFO] - from application in play-akka.actor.default-dispatcher-158 
-busca Todos os Paises
-
-2014-11-25 15:39:17,617 - [INFO] - from application in play-akka.actor.default-dispatcher-158 
-busca Todos os Paises
-
-2014-11-25 15:39:18,407 - [INFO] - from application in play-akka.actor.default-dispatcher-162 
-buscaPorId País
-
-2014-11-25 15:39:22,321 - [INFO] - from application in play-akka.actor.default-dispatcher-163 
-remover pais
-
-2014-11-25 15:39:22,395 - [INFO] - from application in play-akka.actor.default-dispatcher-162 
-busca Todos os Paises
-
-2014-11-25 15:39:57,309 - [INFO] - from application in play-akka.actor.default-dispatcher-167 
-busca Todos os Paises
-
-2014-11-25 15:40:04,077 - [INFO] - from application in play-akka.actor.default-dispatcher-168 
-Salvando Pais
-
-2014-11-25 15:40:04,176 - [INFO] - from application in play-akka.actor.default-dispatcher-168 
-busca Todos os Paises
-
-2014-11-25 15:40:05,330 - [INFO] - from application in play-akka.actor.default-dispatcher-166 
-buscaPorId País
-
-2014-11-25 15:40:13,000 - [INFO] - from application in play-akka.actor.default-dispatcher-164 
-busca Todos os Paises
-
-2014-11-25 15:40:15,543 - [INFO] - from application in play-akka.actor.default-dispatcher-164 
-buscaPorId País
-
-2014-11-25 15:40:18,095 - [INFO] - from application in play-akka.actor.default-dispatcher-164 
-busca Todos os Paises
-
-2014-11-25 15:40:19,364 - [INFO] - from application in play-akka.actor.default-dispatcher-164 
-buscaPorId País
-
-2014-11-25 15:40:41,934 - [INFO] - from application in play-akka.actor.default-dispatcher-169 
-remover pais
-
-2014-11-25 15:40:42,004 - [INFO] - from application in play-akka.actor.default-dispatcher-169 
-busca Todos os Paises
-
-2014-11-25 15:42:28,114 - [INFO] - from application in play-akka.actor.default-dispatcher-176 
-busca Todos os Paises
-
-2014-11-25 15:42:34,401 - [INFO] - from application in play-akka.actor.default-dispatcher-170 
-Salvando Pais
-
-2014-11-25 15:42:34,470 - [INFO] - from application in play-akka.actor.default-dispatcher-170 
-busca Todos os Paises
-
-2014-11-25 15:42:35,833 - [INFO] - from application in play-akka.actor.default-dispatcher-172 
-buscaPorId País
-
-2014-11-25 15:42:42,842 - [INFO] - from application in play-akka.actor.default-dispatcher-176 
-busca Todos os Paises
-
-2014-11-25 15:43:19,456 - [INFO] - from application in play-akka.actor.default-dispatcher-179 
-busca Todos os Paises
-
-2014-11-25 15:43:20,143 - [INFO] - from application in play-akka.actor.default-dispatcher-181 
-buscaPorId País
-
-2014-11-25 15:43:41,001 - [INFO] - from application in play-akka.actor.default-dispatcher-171 
-busca Todos os Paises
-
-2014-11-25 15:43:42,036 - [INFO] - from application in play-akka.actor.default-dispatcher-171 
-buscaPorId País
-
-2014-11-25 15:43:44,052 - [INFO] - from application in play-akka.actor.default-dispatcher-171 
-remover pais
-
-2014-11-25 15:43:44,126 - [INFO] - from application in play-akka.actor.default-dispatcher-171 
-busca Todos os Paises
-
-2014-11-25 15:44:24,617 - [INFO] - from application in play-akka.actor.default-dispatcher-180 
-busca Todos os Paises
-
-2014-11-25 15:44:34,970 - [INFO] - from application in play-akka.actor.default-dispatcher-180 
-busca Todos os Paises
-
-2014-11-25 15:45:36,683 - [INFO] - from application in play-akka.actor.default-dispatcher-187 
+2014-11-26 10:23:21,910 - [INFO] - from application in play-akka.actor.default-dispatcher-28 
 busca Todos os Clientes
 
-2014-11-25 15:45:37,896 - [INFO] - from application in play-akka.actor.default-dispatcher-185 
+2014-11-26 10:23:27,636 - [INFO] - from application in play-akka.actor.default-dispatcher-21 
 busca Todos os Bairros
 
-2014-11-25 15:50:02,715 - [INFO] - from application in play-akka.actor.default-dispatcher-182 
-busca Todos os Clientes
-
-2014-11-25 15:50:04,857 - [INFO] - from application in play-akka.actor.default-dispatcher-193 
-busca Todos os Clientes
-
-2014-11-25 15:50:06,310 - [INFO] - from application in play-akka.actor.default-dispatcher-194 
-busca Todos os Paises
-
-2014-11-25 15:50:16,782 - [INFO] - from application in play-akka.actor.default-dispatcher-194 
-Salvando Pais
-
-2014-11-25 15:50:16,852 - [INFO] - from application in play-akka.actor.default-dispatcher-191 
-busca Todos os Paises
-
-2014-11-25 15:50:21,641 - [INFO] - from application in play-akka.actor.default-dispatcher-198 
-busca Todos os Paises
-
-2014-11-25 15:50:39,247 - [INFO] - from application in play-akka.actor.default-dispatcher-196 
-busca Todos os Paises
-
-2014-11-25 15:50:40,207 - [INFO] - from application in play-akka.actor.default-dispatcher-201 
-buscaPorId País
-
-2014-11-25 15:50:45,798 - [INFO] - from application in play-akka.actor.default-dispatcher-201 
-busca Todos os Paises
-
-2014-11-25 15:50:48,322 - [INFO] - from application in play-akka.actor.default-dispatcher-201 
-buscaPorId País
-
-2014-11-25 15:50:50,666 - [INFO] - from application in play-akka.actor.default-dispatcher-201 
-busca Todos os Paises
-
-2014-11-25 15:50:53,395 - [INFO] - from application in play-akka.actor.default-dispatcher-201 
-busca Todos os Estados
-
-2014-11-25 15:50:54,418 - [INFO] - from application in play-akka.actor.default-dispatcher-191 
-busca Todos os Paises
-
-2014-11-25 15:51:10,057 - [INFO] - from application in play-akka.actor.default-dispatcher-182 
-Salvando Estado
-
-2014-11-25 15:51:10,148 - [INFO] - from application in play-akka.actor.default-dispatcher-182 
-busca Todos os Estados
-
-2014-11-25 15:51:11,913 - [INFO] - from application in play-akka.actor.default-dispatcher-196 
-busca Todos os Paises
-
-2014-11-25 15:51:11,914 - [INFO] - from application in play-akka.actor.default-dispatcher-200 
-buscaPorId Estado
-
-2014-11-25 15:51:24,149 - [INFO] - from application in play-akka.actor.default-dispatcher-202 
-remover estado
-
-2014-11-25 15:51:24,216 - [INFO] - from application in play-akka.actor.default-dispatcher-202 
-busca Todos os Estados
-
-2014-11-25 15:56:31,941 - [INFO] - from application in play-akka.actor.default-dispatcher-209 
-busca Todos os Estados
-
-2014-11-25 15:56:33,208 - [INFO] - from application in play-akka.actor.default-dispatcher-209 
-busca Todos os Paises
-
-2014-11-25 15:56:40,574 - [INFO] - from application in play-akka.actor.default-dispatcher-206 
-Salvando Estado
-
-2014-11-25 15:56:40,660 - [INFO] - from application in play-akka.actor.default-dispatcher-206 
-busca Todos os Estados
-
-2014-11-25 15:56:43,138 - [INFO] - from application in play-akka.actor.default-dispatcher-206 
-busca Todas as Cidades
-
-2014-11-25 15:56:45,459 - [INFO] - from application in play-akka.actor.default-dispatcher-205 
-busca Todos os Estados
-
-2014-11-25 15:58:14,801 - [INFO] - from application in play-akka.actor.default-dispatcher-207 
-busca Todos os Estados
-
-2014-11-25 15:58:29,144 - [INFO] - from application in play-akka.actor.default-dispatcher-216 
-Salvando Cidade
-
-2014-11-25 15:58:29,255 - [INFO] - from application in play-akka.actor.default-dispatcher-211 
-busca Todas as Cidades
-
-2014-11-25 15:58:31,139 - [INFO] - from application in play-akka.actor.default-dispatcher-212 
-busca Todos os Estados
-
-2014-11-25 15:58:31,139 - [INFO] - from application in play-akka.actor.default-dispatcher-214 
-buscaPorId Cidade
-
-2014-11-25 15:58:38,893 - [INFO] - from application in play-akka.actor.default-dispatcher-218 
-remover cidade
-
-2014-11-25 15:58:38,983 - [INFO] - from application in play-akka.actor.default-dispatcher-217 
-busca Todas as Cidades
-
-2014-11-25 15:58:40,235 - [INFO] - from application in play-akka.actor.default-dispatcher-217 
-busca Todos os Estados
-
-2014-11-25 16:02:16,499 - [INFO] - from application in play-akka.actor.default-dispatcher-221 
-busca Todos os Estados
-
-2014-11-25 16:02:43,540 - [INFO] - from application in play-akka.actor.default-dispatcher-220 
-Salvando Cidade
-
-2014-11-25 16:02:43,628 - [INFO] - from application in play-akka.actor.default-dispatcher-220 
-busca Todas as Cidades
-
-2014-11-25 16:02:47,372 - [INFO] - from application in play-akka.actor.default-dispatcher-220 
-busca Todos os Bairros
-
-2014-11-25 16:02:48,372 - [INFO] - from application in play-akka.actor.default-dispatcher-220 
-busca Todas as Cidades
-
-2014-11-25 16:03:01,881 - [INFO] - from application in play-akka.actor.default-dispatcher-222 
-Salvando Bairro
-
-2014-11-25 16:03:01,959 - [INFO] - from application in play-akka.actor.default-dispatcher-211 
-busca Todos os Bairros
-
-2014-11-25 16:03:03,128 - [INFO] - from application in play-akka.actor.default-dispatcher-222 
-busca Todos os Clientes
-
-2014-11-25 16:03:04,799 - [INFO] - from application in play-akka.actor.default-dispatcher-211 
-busca Todos os Bairros
-
-2014-11-25 16:03:16,362 - [INFO] - from application in play-akka.actor.default-dispatcher-227 
+2014-11-26 10:24:04,059 - [INFO] - from application in play-akka.actor.default-dispatcher-27 
 Salvando Cliente
 
-2014-11-25 16:03:16,526 - [INFO] - from application in play-akka.actor.default-dispatcher-227 
+2014-11-26 10:24:04,103 - [INFO] - from application in play-akka.actor.default-dispatcher-26 
 busca Todos os Clientes
 
-2014-11-25 16:03:18,656 - [INFO] - from application in play-akka.actor.default-dispatcher-223 
+2014-11-26 10:24:06,167 - [INFO] - from application in play-akka.actor.default-dispatcher-29 
+busca Todos os Bairros
+
+2014-11-26 10:24:06,167 - [INFO] - from application in play-akka.actor.default-dispatcher-26 
 buscaPorId Cliente
 
-2014-11-25 16:03:18,659 - [INFO] - from application in play-akka.actor.default-dispatcher-227 
+2014-11-26 10:25:10,601 - [INFO] - from application in play-akka.actor.default-dispatcher-37 
+buscaPorId Cliente
+
+2014-11-26 10:25:10,602 - [INFO] - from application in play-akka.actor.default-dispatcher-27 
 busca Todos os Bairros
 
-2014-11-25 16:03:30,158 - [INFO] - from application in play-akka.actor.default-dispatcher-229 
-remover Cliente
+2014-11-26 10:25:12,235 - [INFO] - from application in play-akka.actor.default-dispatcher-32 
+busca Todos os Paises
 
-2014-11-25 16:03:30,221 - [INFO] - from application in play-akka.actor.default-dispatcher-229 
+2014-11-26 10:25:15,148 - [INFO] - from application in play-akka.actor.default-dispatcher-34 
+buscaPorId País
+
+2014-11-26 10:25:22,474 - [INFO] - from application in play-akka.actor.default-dispatcher-31 
+busca Todos os Paises
+
+2014-11-26 10:25:35,867 - [INFO] - from application in play-akka.actor.default-dispatcher-34 
+busca Todos os Paises
+
+2014-11-26 10:25:37,672 - [INFO] - from application in play-akka.actor.default-dispatcher-36 
+buscaPorId País
+
+2014-11-26 10:25:41,198 - [INFO] - from application in play-akka.actor.default-dispatcher-36 
+busca Todos os Paises
+
+2014-11-26 10:26:10,158 - [INFO] - from application in play-akka.actor.default-dispatcher-45 
+busca Todos os Paises
+
+2014-11-26 10:26:11,332 - [INFO] - from application in play-akka.actor.default-dispatcher-42 
+buscaPorId País
+
+2014-11-26 10:26:17,862 - [INFO] - from application in play-akka.actor.default-dispatcher-43 
+busca Todos os Paises
+
+2014-11-26 10:26:41,554 - [INFO] - from application in play-akka.actor.default-dispatcher-35 
+buscaPorId País
+
+2014-11-26 10:26:45,143 - [INFO] - from application in play-akka.actor.default-dispatcher-45 
+busca Todos os Paises
+
+2014-11-26 10:27:14,995 - [INFO] - from application in play-akka.actor.default-dispatcher-27 
+busca Todos os Paises
+
+2014-11-26 10:27:18,023 - [INFO] - from application in play-akka.actor.default-dispatcher-49 
+buscaPorId País
+
+2014-11-26 10:27:29,968 - [INFO] - from application in play-akka.actor.default-dispatcher-50 
+busca Todos os Paises
+
+2014-11-26 10:27:36,842 - [INFO] - from application in play-akka.actor.default-dispatcher-48 
+busca Todos os Paises
+
+2014-11-26 10:27:37,338 - [INFO] - from application in play-akka.actor.default-dispatcher-52 
+buscaPorId País
+
+2014-11-26 10:30:23,254 - [INFO] - from application in play-akka.actor.default-dispatcher-55 
 busca Todos os Clientes
 
-2014-11-25 16:03:32,138 - [INFO] - from application in play-akka.actor.default-dispatcher-229 
-busca Todos os Bairros
-
-2014-11-25 16:03:33,888 - [INFO] - from application in play-akka.actor.default-dispatcher-229 
-busca Todos os Clientes
-
-2014-11-25 16:06:34,133 - [INFO] - from application in play-akka.actor.default-dispatcher-228 
-busca Todos os Clientes
-
-2014-11-25 16:06:36,132 - [INFO] - from application in play-akka.actor.default-dispatcher-235 
-busca Todos os Bairros
-
-2014-11-25 16:06:38,024 - [INFO] - from application in play-akka.actor.default-dispatcher-232 
-buscaPorId Bairro
-
-2014-11-25 16:06:38,025 - [INFO] - from application in play-akka.actor.default-dispatcher-228 
-busca Todas as Cidades
-
-2014-11-25 16:06:49,588 - [INFO] - from application in play-akka.actor.default-dispatcher-235 
-remover Bairro
-
-2014-11-25 16:06:49,653 - [INFO] - from application in play-akka.actor.default-dispatcher-236 
-busca Todos os Bairros
-
-2014-11-25 16:10:51,670 - [INFO] - from application in play-akka.actor.default-dispatcher-250 
-busca Todos os Paises
-
-2014-11-25 16:10:54,824 - [INFO] - from application in play-akka.actor.default-dispatcher-250 
-busca Todos os Paises
-
-2014-11-25 16:10:55,843 - [INFO] - from application in play-akka.actor.default-dispatcher-248 
-buscaPorId País
-
-2014-11-25 16:10:58,473 - [INFO] - from application in play-akka.actor.default-dispatcher-248 
-busca Todos os Paises
-
-2014-11-25 16:11:32,093 - [INFO] - from application in play-akka.actor.default-dispatcher-246 
-busca Todos os Bairros
-
-2014-11-25 16:11:34,362 - [INFO] - from application in play-akka.actor.default-dispatcher-237 
-busca Todas as Cidades
-
-2014-11-25 16:11:41,192 - [INFO] - from application in play-akka.actor.default-dispatcher-237 
-Salvando Bairro
-
-2014-11-25 16:11:41,294 - [INFO] - from application in play-akka.actor.default-dispatcher-251 
-busca Todos os Bairros
-
-2014-11-25 16:12:05,280 - [INFO] - from application in play-akka.actor.default-dispatcher-246 
-busca Todas as Cidades
-
-2014-11-25 16:12:07,290 - [INFO] - from application in play-akka.actor.default-dispatcher-246 
-busca Todos os Bairros
-
-2014-11-25 16:12:07,960 - [INFO] - from application in play-akka.actor.default-dispatcher-246 
-busca Todas as Cidades
-
-2014-11-25 16:12:07,960 - [INFO] - from application in play-akka.actor.default-dispatcher-254 
-buscaPorId Bairro
-
-2014-11-25 16:12:11,187 - [INFO] - from application in play-akka.actor.default-dispatcher-254 
-remover Bairro
-
-2014-11-25 16:12:11,243 - [INFO] - from application in play-akka.actor.default-dispatcher-246 
-busca Todos os Bairros
-
-2014-11-25 16:12:34,628 - [INFO] - from application in play-akka.actor.default-dispatcher-257 
-busca Todos os Bairros
-
-2014-11-25 16:12:35,822 - [INFO] - from application in play-akka.actor.default-dispatcher-257 
-busca Todos os Paises
-
-2014-11-25 16:12:37,150 - [INFO] - from application in play-akka.actor.default-dispatcher-259 
-buscaPorId País
-
-2014-11-25 16:12:38,656 - [INFO] - from application in play-akka.actor.default-dispatcher-259 
-remover pais
-
-2014-11-25 16:12:39,200 - [ERROR] - from play in play-akka.actor.default-dispatcher-259 
-Cannot invoke the action, eventually got an error: javax.persistence.PersistenceException: ERROR executing DML bindLog[] error[ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"\n   Detalhe: Key (id)=(27) is still referenced from table "estado".]
-
-2014-11-25 16:12:40,265 - [INFO] - from application in play-akka.actor.default-dispatcher-249 
-remover pais
-
-2014-11-25 16:12:40,272 - [ERROR] - from play in play-akka.actor.default-dispatcher-249 
-Cannot invoke the action, eventually got an error: javax.persistence.PersistenceException: ERROR executing DML bindLog[] error[ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"\n   Detalhe: Key (id)=(27) is still referenced from table "estado".]
-
-2014-11-25 16:12:40,739 - [ERROR] - from application in play-akka.actor.default-dispatcher-249 
-
-
-! @6kal446pi - Internal server error, for (DELETE) [/paises/27] ->
-
-play.api.Application$$anon$1: Execution exception[[PersistenceException: ERROR executing DML bindLog[] error[ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"\n   Detalhe: Key (id)=(27) is still referenced from table "estado".]]]
-	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.1.jar:na]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.1.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.1.jar:na]
-Caused by: javax.persistence.PersistenceException: ERROR executing DML bindLog[] error[ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"\n   Detalhe: Key (id)=(27) is still referenced from table "estado".]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:97) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.delete(DmlBeanPersister.java:48) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersistExecute.executeDeleteBean(DefaultPersistExecute.java:99) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeNow(PersistRequestBean.java:456) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeOrQueue(PersistRequestBean.java:478) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersister.delete(DefaultPersister.java:592) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersister.delete(DefaultPersister.java:396) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServer.delete(DefaultServer.java:1867) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServer.delete(DefaultServer.java:1857) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebean.Ebean.delete(Ebean.java:596) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at controllers.PaisController.remover(PaisController.java:58) ~[classes/:2.3.6]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$6$$anonfun$apply$6.apply(routes_routing.scala:274) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$6$$anonfun$apply$6.apply(routes_routing.scala:274) ~[classes/:na]
-	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.1.jar:na]
-	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
-	... 6 common frames omitted
-Caused by: org.postgresql.util.PSQLException: ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"
-  Detalhe: Key (id)=(27) is still referenced from table "estado".
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2198) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1927) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:561) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:419) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeUpdate(AbstractJdbc2Statement.java:365) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at com.jolbox.bonecp.PreparedStatementHandle.executeUpdate(PreparedStatementHandle.java:205) ~[bonecp-0.8.0.RELEASE.jar:na]
-	at com.avaje.ebeaninternal.server.type.DataBind.executeUpdate(DataBind.java:55) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DeleteHandler.execute(DeleteHandler.java:53) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:86) ~[avaje-ebeanorm-3.3.4.jar:na]
-	... 48 common frames omitted
-
-2014-11-25 16:12:40,739 - [ERROR] - from application in play-akka.actor.default-dispatcher-259 
-
-
-! @6kal446pj - Internal server error, for (DELETE) [/paises/27] ->
-
-play.api.Application$$anon$1: Execution exception[[PersistenceException: ERROR executing DML bindLog[] error[ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"\n   Detalhe: Key (id)=(27) is still referenced from table "estado".]]]
-	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.1.jar:na]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.1.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.1.jar:na]
-Caused by: javax.persistence.PersistenceException: ERROR executing DML bindLog[] error[ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"\n   Detalhe: Key (id)=(27) is still referenced from table "estado".]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:97) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.delete(DmlBeanPersister.java:48) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersistExecute.executeDeleteBean(DefaultPersistExecute.java:99) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeNow(PersistRequestBean.java:456) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeOrQueue(PersistRequestBean.java:478) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersister.delete(DefaultPersister.java:592) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersister.delete(DefaultPersister.java:396) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServer.delete(DefaultServer.java:1867) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServer.delete(DefaultServer.java:1857) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebean.Ebean.delete(Ebean.java:596) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at controllers.PaisController.remover(PaisController.java:58) ~[classes/:2.3.6]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$6$$anonfun$apply$6.apply(routes_routing.scala:274) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$6$$anonfun$apply$6.apply(routes_routing.scala:274) ~[classes/:na]
-	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.1.jar:na]
-	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
-	... 6 common frames omitted
-Caused by: org.postgresql.util.PSQLException: ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"
-  Detalhe: Key (id)=(27) is still referenced from table "estado".
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2198) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1927) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:561) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:419) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeUpdate(AbstractJdbc2Statement.java:365) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at com.jolbox.bonecp.PreparedStatementHandle.executeUpdate(PreparedStatementHandle.java:205) ~[bonecp-0.8.0.RELEASE.jar:na]
-	at com.avaje.ebeaninternal.server.type.DataBind.executeUpdate(DataBind.java:55) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DeleteHandler.execute(DeleteHandler.java:53) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:86) ~[avaje-ebeanorm-3.3.4.jar:na]
-	... 48 common frames omitted
-
-2014-11-25 16:12:41,144 - [INFO] - from application in play-akka.actor.default-dispatcher-252 
-remover pais
-
-2014-11-25 16:12:41,147 - [ERROR] - from play in play-akka.actor.default-dispatcher-252 
-Cannot invoke the action, eventually got an error: javax.persistence.PersistenceException: ERROR executing DML bindLog[] error[ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"\n   Detalhe: Key (id)=(27) is still referenced from table "estado".]
-
-2014-11-25 16:12:41,244 - [ERROR] - from application in play-akka.actor.default-dispatcher-252 
-
-
-! @6kal447m5 - Internal server error, for (DELETE) [/paises/27] ->
-
-play.api.Application$$anon$1: Execution exception[[PersistenceException: ERROR executing DML bindLog[] error[ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"\n   Detalhe: Key (id)=(27) is still referenced from table "estado".]]]
-	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.1.jar:na]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.1.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.1.jar:na]
-Caused by: javax.persistence.PersistenceException: ERROR executing DML bindLog[] error[ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"\n   Detalhe: Key (id)=(27) is still referenced from table "estado".]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:97) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.delete(DmlBeanPersister.java:48) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersistExecute.executeDeleteBean(DefaultPersistExecute.java:99) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeNow(PersistRequestBean.java:456) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeOrQueue(PersistRequestBean.java:478) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersister.delete(DefaultPersister.java:592) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersister.delete(DefaultPersister.java:396) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServer.delete(DefaultServer.java:1867) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServer.delete(DefaultServer.java:1857) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebean.Ebean.delete(Ebean.java:596) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at controllers.PaisController.remover(PaisController.java:58) ~[classes/:2.3.6]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$6$$anonfun$apply$6.apply(routes_routing.scala:274) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$6$$anonfun$apply$6.apply(routes_routing.scala:274) ~[classes/:na]
-	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.1.jar:na]
-	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
-	... 6 common frames omitted
-Caused by: org.postgresql.util.PSQLException: ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"
-  Detalhe: Key (id)=(27) is still referenced from table "estado".
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2198) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1927) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:561) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:419) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeUpdate(AbstractJdbc2Statement.java:365) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at com.jolbox.bonecp.PreparedStatementHandle.executeUpdate(PreparedStatementHandle.java:205) ~[bonecp-0.8.0.RELEASE.jar:na]
-	at com.avaje.ebeaninternal.server.type.DataBind.executeUpdate(DataBind.java:55) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DeleteHandler.execute(DeleteHandler.java:53) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:86) ~[avaje-ebeanorm-3.3.4.jar:na]
-	... 48 common frames omitted
-
-2014-11-25 16:12:41,353 - [INFO] - from application in play-akka.actor.default-dispatcher-249 
-remover pais
-
-2014-11-25 16:12:41,355 - [ERROR] - from play in play-akka.actor.default-dispatcher-249 
-Cannot invoke the action, eventually got an error: javax.persistence.PersistenceException: ERROR executing DML bindLog[] error[ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"\n   Detalhe: Key (id)=(27) is still referenced from table "estado".]
-
-2014-11-25 16:12:41,357 - [ERROR] - from application in play-akka.actor.default-dispatcher-249 
-
-
-! @6kal44845 - Internal server error, for (DELETE) [/paises/27] ->
-
-play.api.Application$$anon$1: Execution exception[[PersistenceException: ERROR executing DML bindLog[] error[ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"\n   Detalhe: Key (id)=(27) is still referenced from table "estado".]]]
-	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.1.jar:na]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.1.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.1.jar:na]
-Caused by: javax.persistence.PersistenceException: ERROR executing DML bindLog[] error[ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"\n   Detalhe: Key (id)=(27) is still referenced from table "estado".]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:97) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.delete(DmlBeanPersister.java:48) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersistExecute.executeDeleteBean(DefaultPersistExecute.java:99) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeNow(PersistRequestBean.java:456) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeOrQueue(PersistRequestBean.java:478) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersister.delete(DefaultPersister.java:592) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersister.delete(DefaultPersister.java:396) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServer.delete(DefaultServer.java:1867) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServer.delete(DefaultServer.java:1857) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebean.Ebean.delete(Ebean.java:596) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at controllers.PaisController.remover(PaisController.java:58) ~[classes/:2.3.6]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$6$$anonfun$apply$6.apply(routes_routing.scala:274) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$6$$anonfun$apply$6.apply(routes_routing.scala:274) ~[classes/:na]
-	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.1.jar:na]
-	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
-	... 6 common frames omitted
-Caused by: org.postgresql.util.PSQLException: ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"
-  Detalhe: Key (id)=(27) is still referenced from table "estado".
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2198) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1927) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:561) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:419) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeUpdate(AbstractJdbc2Statement.java:365) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at com.jolbox.bonecp.PreparedStatementHandle.executeUpdate(PreparedStatementHandle.java:205) ~[bonecp-0.8.0.RELEASE.jar:na]
-	at com.avaje.ebeaninternal.server.type.DataBind.executeUpdate(DataBind.java:55) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DeleteHandler.execute(DeleteHandler.java:53) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:86) ~[avaje-ebeanorm-3.3.4.jar:na]
-	... 48 common frames omitted
-
-2014-11-25 16:12:41,514 - [INFO] - from application in play-akka.actor.default-dispatcher-249 
-remover pais
-
-2014-11-25 16:12:41,518 - [ERROR] - from play in play-akka.actor.default-dispatcher-249 
-Cannot invoke the action, eventually got an error: javax.persistence.PersistenceException: ERROR executing DML bindLog[] error[ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"\n   Detalhe: Key (id)=(27) is still referenced from table "estado".]
-
-2014-11-25 16:12:41,521 - [ERROR] - from application in play-akka.actor.default-dispatcher-249 
-
-
-! @6kal448ac - Internal server error, for (DELETE) [/paises/27] ->
-
-play.api.Application$$anon$1: Execution exception[[PersistenceException: ERROR executing DML bindLog[] error[ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"\n   Detalhe: Key (id)=(27) is still referenced from table "estado".]]]
-	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.1.jar:na]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.1.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.1.jar:na]
-Caused by: javax.persistence.PersistenceException: ERROR executing DML bindLog[] error[ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"\n   Detalhe: Key (id)=(27) is still referenced from table "estado".]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:97) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.delete(DmlBeanPersister.java:48) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersistExecute.executeDeleteBean(DefaultPersistExecute.java:99) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeNow(PersistRequestBean.java:456) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeOrQueue(PersistRequestBean.java:478) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersister.delete(DefaultPersister.java:592) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersister.delete(DefaultPersister.java:396) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServer.delete(DefaultServer.java:1867) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServer.delete(DefaultServer.java:1857) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebean.Ebean.delete(Ebean.java:596) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at controllers.PaisController.remover(PaisController.java:58) ~[classes/:2.3.6]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$6$$anonfun$apply$6.apply(routes_routing.scala:274) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$6$$anonfun$apply$6.apply(routes_routing.scala:274) ~[classes/:na]
-	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.1.jar:na]
-	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
-	... 6 common frames omitted
-Caused by: org.postgresql.util.PSQLException: ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"
-  Detalhe: Key (id)=(27) is still referenced from table "estado".
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2198) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1927) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:561) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:419) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeUpdate(AbstractJdbc2Statement.java:365) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at com.jolbox.bonecp.PreparedStatementHandle.executeUpdate(PreparedStatementHandle.java:205) ~[bonecp-0.8.0.RELEASE.jar:na]
-	at com.avaje.ebeaninternal.server.type.DataBind.executeUpdate(DataBind.java:55) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DeleteHandler.execute(DeleteHandler.java:53) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:86) ~[avaje-ebeanorm-3.3.4.jar:na]
-	... 48 common frames omitted
-
-2014-11-25 16:12:45,657 - [INFO] - from application in play-akka.actor.default-dispatcher-252 
-busca Todos os Paises
-
-2014-11-25 16:12:46,623 - [INFO] - from application in play-akka.actor.default-dispatcher-252 
-buscaPorId País
-
-2014-11-25 16:12:48,600 - [INFO] - from application in play-akka.actor.default-dispatcher-252 
-remover pais
-
-2014-11-25 16:12:48,603 - [ERROR] - from play in play-akka.actor.default-dispatcher-252 
-Cannot invoke the action, eventually got an error: javax.persistence.PersistenceException: ERROR executing DML bindLog[] error[ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"\n   Detalhe: Key (id)=(27) is still referenced from table "estado".]
-
-2014-11-25 16:12:48,606 - [ERROR] - from application in play-akka.actor.default-dispatcher-252 
-
-
-! @6kal44imp - Internal server error, for (DELETE) [/paises/27] ->
-
-play.api.Application$$anon$1: Execution exception[[PersistenceException: ERROR executing DML bindLog[] error[ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"\n   Detalhe: Key (id)=(27) is still referenced from table "estado".]]]
-	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.1.jar:na]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.1.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.1.jar:na]
-Caused by: javax.persistence.PersistenceException: ERROR executing DML bindLog[] error[ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"\n   Detalhe: Key (id)=(27) is still referenced from table "estado".]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:97) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.delete(DmlBeanPersister.java:48) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersistExecute.executeDeleteBean(DefaultPersistExecute.java:99) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeNow(PersistRequestBean.java:456) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeOrQueue(PersistRequestBean.java:478) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersister.delete(DefaultPersister.java:592) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersister.delete(DefaultPersister.java:396) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServer.delete(DefaultServer.java:1867) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServer.delete(DefaultServer.java:1857) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebean.Ebean.delete(Ebean.java:596) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at controllers.PaisController.remover(PaisController.java:58) ~[classes/:2.3.6]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$6$$anonfun$apply$6.apply(routes_routing.scala:274) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$6$$anonfun$apply$6.apply(routes_routing.scala:274) ~[classes/:na]
-	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.1.jar:na]
-	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
-	... 6 common frames omitted
-Caused by: org.postgresql.util.PSQLException: ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"
-  Detalhe: Key (id)=(27) is still referenced from table "estado".
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2198) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1927) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:561) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:419) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeUpdate(AbstractJdbc2Statement.java:365) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at com.jolbox.bonecp.PreparedStatementHandle.executeUpdate(PreparedStatementHandle.java:205) ~[bonecp-0.8.0.RELEASE.jar:na]
-	at com.avaje.ebeaninternal.server.type.DataBind.executeUpdate(DataBind.java:55) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DeleteHandler.execute(DeleteHandler.java:53) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:86) ~[avaje-ebeanorm-3.3.4.jar:na]
-	... 48 common frames omitted
-
-2014-11-25 16:12:53,014 - [INFO] - from application in play-akka.actor.default-dispatcher-259 
-busca Todos os Paises
-
-2014-11-25 16:12:55,836 - [INFO] - from application in play-akka.actor.default-dispatcher-259 
-busca Todos os Paises
-
-2014-11-25 16:12:56,800 - [INFO] - from application in play-akka.actor.default-dispatcher-259 
-buscaPorId País
-
-2014-11-25 16:12:58,362 - [INFO] - from application in play-akka.actor.default-dispatcher-259 
-remover pais
-
-2014-11-25 16:12:58,365 - [ERROR] - from play in play-akka.actor.default-dispatcher-259 
-Cannot invoke the action, eventually got an error: javax.persistence.PersistenceException: ERROR executing DML bindLog[] error[ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"\n   Detalhe: Key (id)=(27) is still referenced from table "estado".]
-
-2014-11-25 16:12:58,369 - [ERROR] - from application in play-akka.actor.default-dispatcher-259 
-
-
-! @6kal4578c - Internal server error, for (DELETE) [/paises/27] ->
-
-play.api.Application$$anon$1: Execution exception[[PersistenceException: ERROR executing DML bindLog[] error[ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"\n   Detalhe: Key (id)=(27) is still referenced from table "estado".]]]
-	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.1.jar:na]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.1.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.1.jar:na]
-Caused by: javax.persistence.PersistenceException: ERROR executing DML bindLog[] error[ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"\n   Detalhe: Key (id)=(27) is still referenced from table "estado".]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:97) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.delete(DmlBeanPersister.java:48) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersistExecute.executeDeleteBean(DefaultPersistExecute.java:99) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeNow(PersistRequestBean.java:456) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeOrQueue(PersistRequestBean.java:478) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersister.delete(DefaultPersister.java:592) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersister.delete(DefaultPersister.java:396) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServer.delete(DefaultServer.java:1867) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServer.delete(DefaultServer.java:1857) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebean.Ebean.delete(Ebean.java:596) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at controllers.PaisController.remover(PaisController.java:58) ~[classes/:2.3.6]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$6$$anonfun$apply$6.apply(routes_routing.scala:274) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$6$$anonfun$apply$6.apply(routes_routing.scala:274) ~[classes/:na]
-	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.1.jar:na]
-	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
-	... 6 common frames omitted
-Caused by: org.postgresql.util.PSQLException: ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"
-  Detalhe: Key (id)=(27) is still referenced from table "estado".
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2198) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1927) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:561) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:419) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeUpdate(AbstractJdbc2Statement.java:365) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at com.jolbox.bonecp.PreparedStatementHandle.executeUpdate(PreparedStatementHandle.java:205) ~[bonecp-0.8.0.RELEASE.jar:na]
-	at com.avaje.ebeaninternal.server.type.DataBind.executeUpdate(DataBind.java:55) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DeleteHandler.execute(DeleteHandler.java:53) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:86) ~[avaje-ebeanorm-3.3.4.jar:na]
-	... 48 common frames omitted
-
-2014-11-25 16:13:02,757 - [INFO] - from application in play-akka.actor.default-dispatcher-259 
-remover pais
-
-2014-11-25 16:13:02,760 - [ERROR] - from play in play-akka.actor.default-dispatcher-259 
-Cannot invoke the action, eventually got an error: javax.persistence.PersistenceException: ERROR executing DML bindLog[] error[ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"\n   Detalhe: Key (id)=(27) is still referenced from table "estado".]
-
-2014-11-25 16:13:02,763 - [ERROR] - from application in play-akka.actor.default-dispatcher-259 
-
-
-! @6kal45dlc - Internal server error, for (DELETE) [/paises/27] ->
-
-play.api.Application$$anon$1: Execution exception[[PersistenceException: ERROR executing DML bindLog[] error[ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"\n   Detalhe: Key (id)=(27) is still referenced from table "estado".]]]
-	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.1.jar:na]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.1.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.1.jar:na]
-Caused by: javax.persistence.PersistenceException: ERROR executing DML bindLog[] error[ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"\n   Detalhe: Key (id)=(27) is still referenced from table "estado".]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:97) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.delete(DmlBeanPersister.java:48) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersistExecute.executeDeleteBean(DefaultPersistExecute.java:99) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeNow(PersistRequestBean.java:456) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeOrQueue(PersistRequestBean.java:478) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersister.delete(DefaultPersister.java:592) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersister.delete(DefaultPersister.java:396) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServer.delete(DefaultServer.java:1867) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServer.delete(DefaultServer.java:1857) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebean.Ebean.delete(Ebean.java:596) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at controllers.PaisController.remover(PaisController.java:58) ~[classes/:2.3.6]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$6$$anonfun$apply$6.apply(routes_routing.scala:274) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$6$$anonfun$apply$6.apply(routes_routing.scala:274) ~[classes/:na]
-	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.1.jar:na]
-	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
-	... 6 common frames omitted
-Caused by: org.postgresql.util.PSQLException: ERROR: update or delete on table "pais" violates foreign key constraint "fk_estado_pais_4" on table "estado"
-  Detalhe: Key (id)=(27) is still referenced from table "estado".
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2198) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1927) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:561) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:419) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeUpdate(AbstractJdbc2Statement.java:365) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at com.jolbox.bonecp.PreparedStatementHandle.executeUpdate(PreparedStatementHandle.java:205) ~[bonecp-0.8.0.RELEASE.jar:na]
-	at com.avaje.ebeaninternal.server.type.DataBind.executeUpdate(DataBind.java:55) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DeleteHandler.execute(DeleteHandler.java:53) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:86) ~[avaje-ebeanorm-3.3.4.jar:na]
-	... 48 common frames omitted
-
-2014-11-25 16:13:04,160 - [INFO] - from application in play-akka.actor.default-dispatcher-259 
-busca Todos os Paises
-
-2014-11-25 16:13:06,139 - [INFO] - from application in play-akka.actor.default-dispatcher-257 
+2014-11-26 10:30:25,762 - [INFO] - from application in play-akka.actor.default-dispatcher-64 
 busca Todos os Estados
 
-2014-11-25 16:13:07,191 - [INFO] - from application in play-akka.actor.default-dispatcher-255 
+2014-11-26 10:30:26,935 - [INFO] - from application in play-akka.actor.default-dispatcher-64 
 busca Todos os Paises
 
-2014-11-25 16:13:07,193 - [INFO] - from application in play-akka.actor.default-dispatcher-255 
+2014-11-26 10:30:28,386 - [INFO] - from application in play-akka.actor.default-dispatcher-66 
+buscaPorId País
+
+2014-11-26 10:30:34,378 - [INFO] - from application in play-akka.actor.default-dispatcher-66 
+busca Todos os Paises
+
+2014-11-26 10:31:25,061 - [INFO] - from application in play-akka.actor.default-dispatcher-69 
+busca Todos os Paises
+
+2014-11-26 10:31:26,425 - [INFO] - from application in play-akka.actor.default-dispatcher-73 
+buscaPorId País
+
+2014-11-26 10:31:31,496 - [INFO] - from application in play-akka.actor.default-dispatcher-69 
+busca Todos os Paises
+
+2014-11-26 10:31:46,977 - [INFO] - from application in play-akka.actor.default-dispatcher-75 
+busca Todos os Paises
+
+2014-11-26 10:31:51,554 - [INFO] - from application in play-akka.actor.default-dispatcher-74 
+busca Todos os Paises
+
+2014-11-26 10:31:52,385 - [INFO] - from application in play-akka.actor.default-dispatcher-67 
+buscaPorId País
+
+2014-11-26 10:31:55,684 - [INFO] - from application in play-akka.actor.default-dispatcher-74 
+busca Todos os Paises
+
+2014-11-26 10:33:09,170 - [INFO] - from application in play-akka.actor.default-dispatcher-81 
+busca Todos os Paises
+
+2014-11-26 10:33:10,595 - [INFO] - from application in play-akka.actor.default-dispatcher-77 
+buscaPorId País
+
+2014-11-26 10:33:11,399 - [INFO] - from application in play-akka.actor.default-dispatcher-78 
+busca Todos os Paises
+
+2014-11-26 10:33:12,500 - [INFO] - from application in play-akka.actor.default-dispatcher-81 
+buscaPorId País
+
+2014-11-26 10:33:23,647 - [INFO] - from application in play-akka.actor.default-dispatcher-70 
+busca Todos os Paises
+
+2014-11-26 10:33:26,267 - [INFO] - from application in play-akka.actor.default-dispatcher-77 
+busca Todos os Estados
+
+2014-11-26 10:33:27,817 - [INFO] - from application in play-akka.actor.default-dispatcher-82 
 buscaPorId Estado
 
-2014-11-25 16:13:08,657 - [INFO] - from application in play-akka.actor.default-dispatcher-255 
-remover estado
+2014-11-26 10:33:27,820 - [INFO] - from application in play-akka.actor.default-dispatcher-79 
+busca Todos os Paises
 
-2014-11-25 16:13:08,660 - [ERROR] - from play in play-akka.actor.default-dispatcher-255 
-Cannot invoke the action, eventually got an error: javax.persistence.PersistenceException: ERROR executing DML bindLog[] error[ERROR: update or delete on table "estado" violates foreign key constraint "fk_cidade_estado_2" on table "cidade"\n   Detalhe: Key (id)=(23) is still referenced from table "cidade".]
-
-2014-11-25 16:13:08,663 - [ERROR] - from application in play-akka.actor.default-dispatcher-255 
-
-
-! @6kal45mea - Internal server error, for (DELETE) [/estados/23] ->
-
-play.api.Application$$anon$1: Execution exception[[PersistenceException: ERROR executing DML bindLog[] error[ERROR: update or delete on table "estado" violates foreign key constraint "fk_cidade_estado_2" on table "cidade"\n   Detalhe: Key (id)=(23) is still referenced from table "cidade".]]]
-	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.1.jar:na]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.1.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.1.jar:na]
-Caused by: javax.persistence.PersistenceException: ERROR executing DML bindLog[] error[ERROR: update or delete on table "estado" violates foreign key constraint "fk_cidade_estado_2" on table "cidade"\n   Detalhe: Key (id)=(23) is still referenced from table "cidade".]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:97) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.delete(DmlBeanPersister.java:48) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersistExecute.executeDeleteBean(DefaultPersistExecute.java:99) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeNow(PersistRequestBean.java:456) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeOrQueue(PersistRequestBean.java:478) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersister.delete(DefaultPersister.java:592) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersister.delete(DefaultPersister.java:396) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServer.delete(DefaultServer.java:1867) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServer.delete(DefaultServer.java:1857) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebean.Ebean.delete(Ebean.java:596) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at controllers.EstadoController.remover(EstadoController.java:68) ~[classes/:2.3.6]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$11$$anonfun$apply$11.apply(routes_routing.scala:314) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$11$$anonfun$apply$11.apply(routes_routing.scala:314) ~[classes/:na]
-	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.1.jar:na]
-	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
-	... 6 common frames omitted
-Caused by: org.postgresql.util.PSQLException: ERROR: update or delete on table "estado" violates foreign key constraint "fk_cidade_estado_2" on table "cidade"
-  Detalhe: Key (id)=(23) is still referenced from table "cidade".
-	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2198) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1927) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:255) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:561) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:419) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeUpdate(AbstractJdbc2Statement.java:365) ~[postgresql-9.3-1102-jdbc4.jar:na]
-	at com.jolbox.bonecp.PreparedStatementHandle.executeUpdate(PreparedStatementHandle.java:205) ~[bonecp-0.8.0.RELEASE.jar:na]
-	at com.avaje.ebeaninternal.server.type.DataBind.executeUpdate(DataBind.java:55) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DeleteHandler.execute(DeleteHandler.java:53) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:86) ~[avaje-ebeanorm-3.3.4.jar:na]
-	... 48 common frames omitted
-
-2014-11-25 16:13:11,137 - [INFO] - from application in play-akka.actor.default-dispatcher-255 
-busca Todas as Cidades
-
-2014-11-25 16:13:12,207 - [INFO] - from application in play-akka.actor.default-dispatcher-255 
+2014-11-26 10:33:37,683 - [INFO] - from application in play-akka.actor.default-dispatcher-79 
 busca Todos os Estados
 
-2014-11-25 16:13:12,207 - [INFO] - from application in play-akka.actor.default-dispatcher-253 
+2014-11-26 10:33:39,754 - [INFO] - from application in play-akka.actor.default-dispatcher-83 
+busca Todas as Cidades
+
+2014-11-26 10:33:41,552 - [INFO] - from application in play-akka.actor.default-dispatcher-70 
+busca Todos os Estados
+
+2014-11-26 10:33:41,556 - [INFO] - from application in play-akka.actor.default-dispatcher-83 
 buscaPorId Cidade
 
-2014-11-25 16:13:13,483 - [INFO] - from application in play-akka.actor.default-dispatcher-253 
-remover cidade
-
-2014-11-25 16:13:13,542 - [INFO] - from application in play-akka.actor.default-dispatcher-253 
+2014-11-26 10:33:50,011 - [INFO] - from application in play-akka.actor.default-dispatcher-86 
 busca Todas as Cidades
 
-2014-11-25 16:13:15,791 - [INFO] - from application in play-akka.actor.default-dispatcher-253 
-busca Todos os Estados
-
-2014-11-25 16:13:16,907 - [INFO] - from application in play-akka.actor.default-dispatcher-259 
-buscaPorId Estado
-
-2014-11-25 16:13:16,907 - [INFO] - from application in play-akka.actor.default-dispatcher-253 
-busca Todos os Paises
-
-2014-11-25 16:13:18,089 - [INFO] - from application in play-akka.actor.default-dispatcher-259 
-remover estado
-
-2014-11-25 16:13:18,146 - [INFO] - from application in play-akka.actor.default-dispatcher-259 
-busca Todos os Estados
-
-2014-11-25 16:13:19,967 - [INFO] - from application in play-akka.actor.default-dispatcher-259 
-busca Todos os Paises
-
-2014-11-25 16:13:20,939 - [INFO] - from application in play-akka.actor.default-dispatcher-259 
-buscaPorId País
-
-2014-11-25 16:13:22,221 - [INFO] - from application in play-akka.actor.default-dispatcher-259 
-remover pais
-
-2014-11-25 16:13:22,280 - [INFO] - from application in play-akka.actor.default-dispatcher-259 
-busca Todos os Paises
-
-2014-11-25 16:13:23,602 - [INFO] - from application in play-akka.actor.default-dispatcher-253 
-busca Todos os Clientes
-
-2014-11-25 16:13:56,757 - [INFO] - from application in play-akka.actor.default-dispatcher-256 
-busca Todos os Clientes
-
-2014-11-25 16:24:33,406 - [INFO] - from application in play-akka.actor.default-dispatcher-315 
-busca Todos os Paises
-
-2014-11-25 16:26:33,483 - [INFO] - from application in play-akka.actor.default-dispatcher-331 
+2014-11-26 10:33:52,395 - [INFO] - from application in play-akka.actor.default-dispatcher-84 
 busca Todos os Bairros
 
-2014-11-25 16:26:37,913 - [INFO] - from application in play-akka.actor.default-dispatcher-331 
-busca Todos os Clientes
+2014-11-26 10:33:54,341 - [INFO] - from application in play-akka.actor.default-dispatcher-85 
+buscaPorId Bairro
 
-2014-11-25 17:13:06,474 - [INFO] - from application in play-akka.actor.default-dispatcher-465 
-busca Todos os Clientes
+2014-11-26 10:33:54,344 - [INFO] - from application in play-akka.actor.default-dispatcher-80 
+busca Todas as Cidades
 
-2014-11-25 17:13:07,721 - [INFO] - from application in play-akka.actor.default-dispatcher-461 
+2014-11-26 10:34:00,123 - [INFO] - from application in play-akka.actor.default-dispatcher-86 
 busca Todos os Bairros
 
-2014-11-25 17:13:22,162 - [INFO] - from application in play-akka.actor.default-dispatcher-458 
-busca Todos os Paises
-
-2014-11-25 17:16:36,354 - [INFO] - from application in play-akka.actor.default-dispatcher-466 
+2014-11-26 10:34:02,771 - [INFO] - from application in play-akka.actor.default-dispatcher-80 
 busca Todos os Clientes
 
-2014-11-25 17:16:39,794 - [INFO] - from application in play-akka.actor.default-dispatcher-467 
+2014-11-26 10:34:04,307 - [INFO] - from application in play-akka.actor.default-dispatcher-84 
+buscaPorId Cliente
+
+2014-11-26 10:34:04,313 - [INFO] - from application in play-akka.actor.default-dispatcher-77 
 busca Todos os Bairros
 
-2014-11-25 17:16:58,930 - [INFO] - from application in play-akka.actor.default-dispatcher-470 
-busca Todos os Paises
+2014-11-26 10:34:12,872 - [INFO] - from application in play-akka.actor.default-dispatcher-80 
+busca Todos os Clientes
 
-2014-11-25 17:17:01,687 - [INFO] - from application in play-akka.actor.default-dispatcher-470 
-busca Todos os Paises
+2014-11-26 10:34:14,845 - [INFO] - from application in play-akka.actor.default-dispatcher-85 
+busca Todos os Clientes
 
-2014-11-25 17:17:07,483 - [INFO] - from application in play-akka.actor.default-dispatcher-470 
-busca Todos os Paises
+2014-11-26 10:44:33,198 - [INFO] - from application in play-akka.actor.default-dispatcher-99 
+busca Todos os Clientes
 
-2014-11-25 17:17:32,345 - [INFO] - from application in play-akka.actor.default-dispatcher-471 
-busca Todos os Paises
+2014-11-26 10:47:53,529 - [INFO] - from application in play-akka.actor.default-dispatcher-110 
+busca Todos os Clientes
 
-2014-11-25 17:17:38,931 - [INFO] - from application in play-akka.actor.default-dispatcher-471 
-Salvando Pais
+2014-11-26 10:47:54,958 - [INFO] - from application in play-akka.actor.default-dispatcher-114 
+busca Todos os Bairros
 
-2014-11-25 17:17:39,066 - [INFO] - from application in play-akka.actor.default-dispatcher-471 
-busca Todos os Paises
+2014-11-26 10:48:24,034 - [INFO] - from application in play-akka.actor.default-dispatcher-116 
+busca Todos os Bairros
 
-2014-11-25 17:17:43,110 - [INFO] - from application in play-akka.actor.default-dispatcher-471 
-buscaPorId País
+2014-11-26 10:48:47,124 - [INFO] - from application in play-akka.actor.default-dispatcher-118 
+busca Todos os Bairros
 
-2014-11-25 17:17:46,887 - [INFO] - from application in play-akka.actor.default-dispatcher-447 
-remover pais
+2014-11-26 10:49:44,770 - [INFO] - from application in play-akka.actor.default-dispatcher-125 
+busca Todos os Bairros
 
-2014-11-25 17:17:46,958 - [INFO] - from application in play-akka.actor.default-dispatcher-447 
-busca Todos os Paises
+2014-11-26 10:50:07,933 - [INFO] - from application in play-akka.actor.default-dispatcher-129 
+Salvando Cliente
 
-2014-11-25 17:20:08,506 - [INFO] - from application in play-akka.actor.default-dispatcher-475 
-busca Todos os Paises
+2014-11-26 10:50:08,036 - [INFO] - from application in play-akka.actor.default-dispatcher-124 
+busca Todos os Clientes
 
-2014-11-25 17:20:28,702 - [INFO] - from application in play-akka.actor.default-dispatcher-474 
-busca Todos os Paises
+2014-11-26 10:50:12,367 - [INFO] - from application in play-akka.actor.default-dispatcher-129 
+buscaPorId Cliente
 
-2014-11-25 17:20:43,659 - [INFO] - from application in play-akka.actor.default-dispatcher-479 
-Salvando Pais
+2014-11-26 10:50:12,376 - [INFO] - from application in play-akka.actor.default-dispatcher-124 
+busca Todos os Bairros
 
-2014-11-25 17:20:43,722 - [INFO] - from application in play-akka.actor.default-dispatcher-479 
-busca Todos os Paises
+2014-11-26 10:50:14,994 - [INFO] - from application in play-akka.actor.default-dispatcher-124 
+busca Todos os Clientes
 
-2014-11-25 17:20:46,370 - [INFO] - from application in play-akka.actor.default-dispatcher-482 
-buscaPorId País
+2014-11-26 10:50:16,794 - [INFO] - from application in play-akka.actor.default-dispatcher-124 
+buscaPorId Cliente
 
-2014-11-25 17:20:49,531 - [INFO] - from application in play-akka.actor.default-dispatcher-479 
-remover pais
+2014-11-26 10:50:16,795 - [INFO] - from application in play-akka.actor.default-dispatcher-128 
+busca Todos os Bairros
 
-2014-11-25 17:20:49,576 - [INFO] - from application in play-akka.actor.default-dispatcher-479 
-busca Todos os Paises
+2014-11-26 10:50:19,259 - [INFO] - from application in play-akka.actor.default-dispatcher-128 
+remover Cliente
 
-2014-11-25 17:23:27,979 - [INFO] - from application in play-akka.actor.default-dispatcher-501 
+2014-11-26 10:50:19,315 - [INFO] - from application in play-akka.actor.default-dispatcher-124 
+busca Todos os Clientes
+
+2014-11-26 10:50:20,761 - [INFO] - from application in play-akka.actor.default-dispatcher-124 
+buscaPorId Cliente
+
+2014-11-26 10:50:20,762 - [INFO] - from application in play-akka.actor.default-dispatcher-128 
+busca Todos os Bairros
+
+2014-11-26 10:50:23,460 - [INFO] - from application in play-akka.actor.default-dispatcher-124 
+remover Cliente
+
+2014-11-26 10:50:23,509 - [INFO] - from application in play-akka.actor.default-dispatcher-128 
+busca Todos os Clientes
+
+2014-11-26 10:51:15,800 - [INFO] - from application in play-akka.actor.default-dispatcher-130 
+busca Todos os Clientes
+
+2014-11-26 10:51:16,443 - [INFO] - from application in play-akka.actor.default-dispatcher-137 
+busca Todos os Bairros
+
+2014-11-26 10:52:54,931 - [INFO] - from application in play-akka.actor.default-dispatcher-144 
+busca Todos os Bairros
+
+2014-11-26 10:56:01,269 - [INFO] - from application in play-akka.actor.default-dispatcher-152 
+busca Todos os Bairros
+
+2014-11-26 10:59:05,463 - [INFO] - from application in play-akka.actor.default-dispatcher-157 
+busca Todos os Bairros
+
+2014-11-26 10:59:54,357 - [INFO] - from application in play-akka.actor.default-dispatcher-165 
+busca Todos os Bairros
+
+2014-11-26 11:00:37,625 - [INFO] - from application in play-akka.actor.default-dispatcher-156 
+busca Todos os Bairros
+
+2014-11-26 11:02:35,728 - [INFO] - from application in play-akka.actor.default-dispatcher-175 
+busca Todos os Bairros
+
+2014-11-26 11:02:41,756 - [INFO] - from application in play-akka.actor.default-dispatcher-179 
+busca Todos os Bairros
+
+2014-11-26 11:04:21,186 - [INFO] - from application in play-akka.actor.default-dispatcher-178 
+busca Todos os Bairros
+
+2014-11-26 11:04:49,947 - [INFO] - from application in play-akka.actor.default-dispatcher-183 
 busca Todos os Clientes
 

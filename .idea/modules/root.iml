@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module external.linked.project.path="$MODULE_DIR$/../.." external.root.project.path="$MODULE_DIR$/../.." external.system.id="SBT" type="JAVA_MODULE" version="4">
-  <component name="FacetManager" />
+  <component name="FacetManager">
+    <facet type="scala" name="Scala">
+      <configuration>
+        <option name="compilerLibraryLevel" value="Project" />
+        <option name="compilerLibraryName" value="SBT:: scala-compiler-bundle:2.11.1" />
+        <option name="compilerOptions" value="-encoding utf8" />
+        <option name="deprecationWarnings" value="true" />
+        <option name="uncheckedWarnings" value="true" />
+      </configuration>
+    </facet>
+  </component>
   <component name="NewModuleRootManager" inherit-compiler-output="false">
     <output url="file://$MODULE_DIR$/../../target/scala-2.11/classes" />
     <output-test url="file://$MODULE_DIR$/../../target/scala-2.11/test-classes" />
@@ -146,4 +156,3 @@
     <orderEntry type="library" name="SBT: org.scala-lang:scala-library:2.11.1" level="project" />
   </component>
 </module>
-
