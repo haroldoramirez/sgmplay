@@ -61,7 +61,7 @@
                         <div ng-class="{'has-error': !cliente.telefone}">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
-                                <input maxlength="14" class="form-control telefone" type="text" ng-model="cliente.telefone" id="telefone" required/>
+                                <input ui-br-phone-number placeholder="(__) ____-____" maxlength="14" class="form-control telefone" type="text" ng-model="cliente.telefone" id="telefone" required/>
                             </div>
                         </div>
                     </div>
@@ -70,7 +70,7 @@
                         <label class="control-label" for="celular">Celular</label>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
-                            <input placeholder="(__) ____-____" maxlength="14" class="form-control" type="text" ng-model="cliente.celular" id="celular"/>
+                            <input ui-br-phone-number placeholder="(__) ____-____" placeholder="(__) ____-____" maxlength="14" class="form-control" type="text" ng-model="cliente.celular" id="celular"/>
                         </div>
                     </div>
 
@@ -87,7 +87,7 @@
                         <label class="control-label" for="cpf">Pessoa Física</label>
                         <div class="input-group">
                             <span class="input-group-addon"><b>CPF</b></span>
-                            <input placeholder="___.___.___-__"  maxlength="16" class="form-control" type="text" ng-model="cliente.cpf" id="cpf"/>
+                            <input ui-br-cpf-mask placeholder="___.___.___-__" maxlength="16" class="form-control" type="text" ng-model="cliente.cpf" id="cpf"/>
                         </div>
                     </div>
                     <!--Input do Rua-->
@@ -111,7 +111,7 @@
                         <label class="control-label" for="cep">Código de Endereçamento Postal</label>
                         <div class="input-group">
                             <span class="input-group-addon"><b>CEP</b></span>
-                            <input placeholder="_____-___" maxlength="16" class="form-control" type="text" ng-model="cliente.cep" id="cep"/>
+                            <input ui-br-cep-mask placeholder="_____-___" maxlength="16" class="form-control" type="text" ng-model="cliente.cep" id="cep"/>
                         </div>
                     </div>
                     <!--Input do Complemento-->
@@ -155,7 +155,7 @@
                             <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">
                                 <span class="glyphicon glyphicon-arrow-left"></span> <b>Voltar</b>
                             </button>
-                            <button type="button" class="btn btn-danger" data-template="assets/modal/confirmacao/clienteModal.html" bs-modal="modalConfirmacao">
+                            <button type="button" class="btn btn-danger" data-template="assets/modal/confirmacaoModal.html" bs-modal="confirmacaoModal">
                                 <span class="glyphicon glyphicon-trash"></span> <b>Remover</b>
                             </button>
                         </div>

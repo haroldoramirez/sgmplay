@@ -52,6 +52,27 @@ create table estado (
   constraint pk_estado primary key (id))
 ;
 
+create table fornecedor (
+  id                        integer not null,
+  nome_fantasia             varchar(255) not null,
+  razao_social              varchar(255) not null,
+  telefone                  varchar(255) not null,
+  cnpj                      varchar(255),
+  inscricao_estadual        varchar(255),
+  celular                   varchar(255),
+  fax                       varchar(255),
+  site                      varchar(255),
+  rua                       varchar(255),
+  numero                    varchar(255),
+  cep                       varchar(255),
+  complemento               varchar(255),
+  observacoes               varchar(255),
+  bairro_id                 integer,
+  constraint uq_fornecedor_cnpj unique (cnpj),
+  constraint uq_fornecedor_inscricao_estadual unique (inscricao_estadual),
+  constraint pk_fornecedor primary key (id))
+;
+
 create table pais (
   id                        integer not null,
   nome                      varchar(255) not null,
@@ -68,6 +89,8 @@ create sequence cliente_seq;
 
 create sequence estado_seq;
 
+create sequence fornecedor_seq;
+
 create sequence pais_seq;
 
 alter table bairro add constraint fk_bairro_cidade_1 foreign key (cidade_id) references cidade (id);
@@ -78,6 +101,8 @@ alter table cliente add constraint fk_cliente_bairro_3 foreign key (bairro_id) r
 create index ix_cliente_bairro_3 on cliente (bairro_id);
 alter table estado add constraint fk_estado_pais_4 foreign key (pais_id) references pais (id);
 create index ix_estado_pais_4 on estado (pais_id);
+alter table fornecedor add constraint fk_fornecedor_bairro_5 foreign key (bairro_id) references bairro (id);
+create index ix_fornecedor_bairro_5 on fornecedor (bairro_id);
 
 
 
@@ -91,6 +116,8 @@ drop table if exists cliente cascade;
 
 drop table if exists estado cascade;
 
+drop table if exists fornecedor cascade;
+
 drop table if exists pais cascade;
 
 drop sequence if exists bairro_seq;
@@ -100,6 +127,8 @@ drop sequence if exists cidade_seq;
 drop sequence if exists cliente_seq;
 
 drop sequence if exists estado_seq;
+
+drop sequence if exists fornecedor_seq;
 
 drop sequence if exists pais_seq;
 

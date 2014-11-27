@@ -69,7 +69,8 @@ angular.module('mercado')
                 toastr.success('País removido com sucesso');
                 $location.path('/paises');
             }, function(data){
-                toastr.error('Não foi possível remover o País');
+            console.log(data);
+                toastr.error(data.statusText,'Não foi possível remover o País');
             });
 
         };
@@ -79,27 +80,13 @@ angular.module('mercado')
              "content": "Campos Obrigatórios em Vermelho"
         };
 
-        $scope.modalConfirmacao = {
+        $scope.confirmacaoModal = {
              "title": "Confirmação",
              "content": "Deseja excluir o País?"
         };
 
+        $scope.popoverConfirmacao = {
+              "title": "Confirmação",
+              "content": "Excluir?"
+        };
   });
-
-//  .directive('ngConfirmClick', [
-//       function(){
-//         return {
-//           priority: -1,
-//           restrict: 'A',
-//           link: function(scope, element, attrs){
-//             element.bind('click', function(e){
-//               var message = attrs.ngConfirmClick;
-//               if(message && !confirm(message)){
-//                 e.stopImmediatePropagation();
-//                 e.preventDefault();
-//               }
-//             });
-//           }
-//         }
-//       }
-//  ]);

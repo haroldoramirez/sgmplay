@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Cadastrar Fornecedor</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <fieldset>
+            <div id="legend">
+                <legend>
+                    <h2>
+                        Cadastrar Fornecedor <a class="btn btn-link pull-right" data-template="assets/modal/ajuda/fornecedorModal.html" bs-modal="modalAjuda">
+                        <span class="glyphicon glyphicon-info-sign"></span><b> Ajuda</b></a>
+                    </h2>
+                </legend>
+            </div>
+            <form ng-init="init()" class="form-horizontal" ng-submit="save()">
+                <div class="form-group">
+                    <!--Input do Razão Social-->
+                    <div class="col-lg-7">
+                        <label class="control-label" for="razaosocial">Razão Social</label>
+                        <div ng-class="{'has-error': !fornecedor.razaoSocial}">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input placeholder="Insira a Razão Social" maxlength="100" class="form-control" type="text" ng-model="fornecedor.razaoSocial" id="razaosocial" required/>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Input do NomeFantasia-->
+                    <div class="col-lg-5">
+                        <label class="control-label" for="nomefantasia">Nome Fantasia</label>
+                        <div ng-class="{'has-error': !fornecedor.nomeFantasia}">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-star"></i></span>
+                                <input placeholder="Insira o Nome Fantasia" maxlength="100" class="form-control" type="text" ng-model="fornecedor.nomeFantasia" id="nomefantasia" required/>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Input do Telefone-->
+                    <div class="col-lg-2">
+                        <label class="control-label" for="telefone">Telefone</label>
+                        <div ng-class="{'has-error': !fornecedor.telefone}">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
+                                <input ui-br-phone-number placeholder="(__) ____-_____" maxlength="15" class="form-control telefone" type="text" ng-model="fornecedor.telefone" id="telefone" required/>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Input do Cnpj-->
+                    <div class="col-lg-3">
+                        <label class="control-label" for="cnpj">Pessoa Jurídica</label>
+                        <div ng-class="{'has-error': !fornecedor.cnpj}">
+                            <div class="input-group">
+                                <span class="input-group-addon"><b>CNPJ</b></span>
+                                <input ui-br-cnpj-mask placeholder="__.___.___/____-__" maxlength="20" class="form-control" type="text" ng-model="fornecedor.cnpj" id="cnpj"/>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Input do Inscrição Estadual-->
+                    <div class="col-lg-3">
+                        <label class="control-label">Inscrição Estadual</label>
+                        <div ng-class="{'has-error': !fornecedor.inscricaoEstadual}">
+                            <div class="input-group">
+                                <span class="input-group-addon"><b>IE</b></span>
+                                <input maxlength="20" class="form-control" type="text" ng-model="fornecedor.inscricaoEstadual">
+                            </div>
+                        </div>
+                    </div>
+                    <!--Input do Rua-->
+                    <div class="col-lg-6">
+                        <label class="control-label" for="rua">Rua</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                            <input placeholder="Insira o logradouro" maxlength="100" class="form-control" type="text" ng-model="fornecedor.rua" id="rua"/>
+                        </div>
+                    </div>
+                    <!--Input do Celular-->
+                    <div class="col-lg-2">
+                        <label class="control-label" for="celular">Celular</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                            <input ui-br-phone-number placeholder="(__) ____-____" maxlength="15" class="form-control" type="text" ng-model="fornecedor.celular" id="celular"/>
+                        </div>
+                    </div>
+                    <!--Input do Numero-->
+                    <div class="col-lg-2">
+                        <label class="control-label" for="numero">Número</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><b>Nº</b></span>
+                            <input placeholder="000" maxlength="5" class="form-control" type="text" ng-model="fornecedor.numero" id="numero"/>
+                        </div>
+                    </div>
+                    <!--Input do CEP-->
+                    <div class="col-lg-3">
+                        <label class="control-label" for="cep">Código de Endereçamento Postal</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><b>CEP</b></span>
+                            <input ui-br-cep-mask placeholder="_____-___" maxlength="16" class="form-control" type="text" ng-model="fornecedor.cep" id="cep"/>
+                        </div>
+                    </div>
+                    <!--Input do Complemento-->
+                    <div class="col-lg-4">
+                        <label class="control-label" for="complemento">Complemento</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input placeholder="Casa/Apartamento/Conjunto" maxlength="100" class="form-control" type="text" ng-model="cliente.complemento" id="complemento"/>
+                        </div>
+                    </div>
+                    <!--Input do Site-->
+                    <div class="col-lg-4">
+                        <label class="control-label" for="site">Endereço Eletrônico</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input placeholder="www" maxlength="100" class="form-control" type="text" ng-model="fornecedor.site" id="site"/>
+                        </div>
+                    </div>
+                    <!--Input do Bairro-->
+                    <div class="col-lg-3">
+                        <label class="control-label" for="fornecedor.bairro">Bairro</label>
+                        <div ng-class="{'has-error': !fornecedor.bairro}">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                                <select ng-model="fornecedor.bairro" class="form-control" ng-options="bairro.nome for bairro in bairros" id="fornecedor.bairro">
+                                    <option value="">Selecione</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Input de Observações-->
+                    <div class="col-lg-12">
+                        <label class="control-label" for="observacoes">Observações</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-book"></i></span>
+                            <textarea placeholder="Informações Adicionais" style="overflow:auto;resize:none" class="form-control" ng-model="fornecedor.observacoes" id="observacoes">
+
+                            </textarea>
+                        </div>
+                        <br>
+                    </div>
+                    <!--Botões-->
+                    <div class="col-lg-8">
+                        <br>
+                        <div class="control-group">
+                            <button id="save" class="btn btn-success" type="submit" ng-disabled="!fornecedor.razaoSocial || !fornecedor.nomeFantasia || !fornecedor.telefone || !fornecedor.cnpj || !fornecedor.inscricaoEstadual || !fornecedor.bairro.id">
+                                <span class="glyphicon glyphicon-ok"></span> <b>Salvar</b>
+                            </button>
+                            <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">
+                                <span class="glyphicon glyphicon-arrow-left"></span> <b>Voltar</b>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </fieldset>
+    </div>
+</div>
+</body>
+</html>

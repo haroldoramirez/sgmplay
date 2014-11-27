@@ -69,7 +69,7 @@ angular.module('mercado')
                   toastr.success('Cliente removido com sucesso');
                   $location.path('/clientes');
               }, function(data){
-                  toastr.error('Não foi possível remover o Cliente');
+                  toastr.error(data.statusText,'Não foi possível remover o Cliente');
               });
 
           };
@@ -79,27 +79,9 @@ angular.module('mercado')
                   "content": "Campos Obrigatórios em Vermelho"
              };
 
-             $scope.modalConfirmacao = {
+             $scope.confirmacaoModal = {
                    "title": "Confirmação",
                    "content": "Deseja excluir o Cliente?"
              };
 
 });
-
-//.directive('ngConfirmClick', [
-//      function(){
-//               return {
-//                 priority: -1,
-//                 restrict: 'A',
-//                 link: function(scope, element, attrs){
-//                   element.bind('click', function(e){
-//                     var message = attrs.ngConfirmClick;
-//                     if(message && !confirm(message)){
-//                       e.stopImmediatePropagation();
-//                       e.preventDefault();
-//                     }
-//                   });
-//                 }
-//               }
-//      }
-//]);
