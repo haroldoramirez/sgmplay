@@ -59,7 +59,12 @@ public class PaisController extends Controller {
         try {
             Ebean.delete(pais);
         } catch (Exception e){
-            return badRequest(e.getCause().getLocalizedMessage().toString());
+            if (e.getCause().getLocalizedMessage().toString().equals("Cannot delete or update a parent row: a foreign key constraint fails (`sgmplaydb`.`estado`, CONSTRAINT `fk_estado_pais_4` FOREIGN KEY (`pais_id`) REFERENCES `pais` (`id`))")) {
+                return badRequest("Restrição de Chave Estrangeira");
+            } else {
+                return badRequest(e.getCause().getLocalizedMessage().toString());
+            }
+
         }
 
         return ok(Json.toJson(pais));

@@ -4,7 +4,7 @@
 # --- !Ups
 
 create table bairro (
-  id                        integer not null,
+  id                        integer auto_increment not null,
   nome                      varchar(255) not null,
   cidade_id                 integer not null,
   constraint uq_bairro_1 unique (nome,cidade_id),
@@ -12,7 +12,7 @@ create table bairro (
 ;
 
 create table cidade (
-  id                        integer not null,
+  id                        integer auto_increment not null,
   nome                      varchar(255) not null,
   ddd                       varchar(255),
   estado_id                 integer not null,
@@ -21,7 +21,7 @@ create table cidade (
 ;
 
 create table cliente (
-  id                        integer not null,
+  id                        integer auto_increment not null,
   nome                      varchar(255) not null,
   telefone                  varchar(255) not null,
   rg                        varchar(255),
@@ -33,7 +33,7 @@ create table cliente (
   cep                       varchar(255),
   complemento               varchar(255),
   observacoes               varchar(255),
-  datanascimento            timestamp,
+  datanascimento            datetime,
   genero                    varchar(9),
   bairro_id                 integer,
   constraint ck_cliente_genero check (genero in ('MASCULINO','FEMININO')),
@@ -44,7 +44,7 @@ create table cliente (
 ;
 
 create table estado (
-  id                        integer not null,
+  id                        integer auto_increment not null,
   nome                      varchar(255) not null,
   sigla                     varchar(255),
   pais_id                   integer not null,
@@ -53,7 +53,7 @@ create table estado (
 ;
 
 create table fornecedor (
-  id                        integer not null,
+  id                        integer auto_increment not null,
   nome_fantasia             varchar(255) not null,
   razao_social              varchar(255) not null,
   telefone                  varchar(255) not null,
@@ -74,61 +74,41 @@ create table fornecedor (
 ;
 
 create table pais (
-  id                        integer not null,
+  id                        integer auto_increment not null,
   nome                      varchar(255) not null,
   ddi                       varchar(255),
   constraint uq_pais_nome unique (nome),
   constraint pk_pais primary key (id))
 ;
 
-create sequence bairro_seq;
-
-create sequence cidade_seq;
-
-create sequence cliente_seq;
-
-create sequence estado_seq;
-
-create sequence fornecedor_seq;
-
-create sequence pais_seq;
-
-alter table bairro add constraint fk_bairro_cidade_1 foreign key (cidade_id) references cidade (id);
+alter table bairro add constraint fk_bairro_cidade_1 foreign key (cidade_id) references cidade (id) on delete restrict on update restrict;
 create index ix_bairro_cidade_1 on bairro (cidade_id);
-alter table cidade add constraint fk_cidade_estado_2 foreign key (estado_id) references estado (id);
+alter table cidade add constraint fk_cidade_estado_2 foreign key (estado_id) references estado (id) on delete restrict on update restrict;
 create index ix_cidade_estado_2 on cidade (estado_id);
-alter table cliente add constraint fk_cliente_bairro_3 foreign key (bairro_id) references bairro (id);
+alter table cliente add constraint fk_cliente_bairro_3 foreign key (bairro_id) references bairro (id) on delete restrict on update restrict;
 create index ix_cliente_bairro_3 on cliente (bairro_id);
-alter table estado add constraint fk_estado_pais_4 foreign key (pais_id) references pais (id);
+alter table estado add constraint fk_estado_pais_4 foreign key (pais_id) references pais (id) on delete restrict on update restrict;
 create index ix_estado_pais_4 on estado (pais_id);
-alter table fornecedor add constraint fk_fornecedor_bairro_5 foreign key (bairro_id) references bairro (id);
+alter table fornecedor add constraint fk_fornecedor_bairro_5 foreign key (bairro_id) references bairro (id) on delete restrict on update restrict;
 create index ix_fornecedor_bairro_5 on fornecedor (bairro_id);
 
 
 
 # --- !Downs
 
-drop table if exists bairro cascade;
+SET FOREIGN_KEY_CHECKS=0;
 
-drop table if exists cidade cascade;
+drop table bairro;
 
-drop table if exists cliente cascade;
+drop table cidade;
 
-drop table if exists estado cascade;
+drop table cliente;
 
-drop table if exists fornecedor cascade;
+drop table estado;
 
-drop table if exists pais cascade;
+drop table fornecedor;
 
-drop sequence if exists bairro_seq;
+drop table pais;
 
-drop sequence if exists cidade_seq;
-
-drop sequence if exists cliente_seq;
-
-drop sequence if exists estado_seq;
-
-drop sequence if exists fornecedor_seq;
-
-drop sequence if exists pais_seq;
+SET FOREIGN_KEY_CHECKS=1;
 
