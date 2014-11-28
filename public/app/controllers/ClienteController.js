@@ -8,7 +8,7 @@ angular.module('mercado')
                   $location.path('/clientes');
               }, function(data){
                   console.log(data);
-                  toastr.error(data.data, 'Não foi possível Salvar o Cliente');
+                  toastr.error(data.statusText,'Não foi possível Salvar o Cliente');
               });
           };
 
@@ -40,7 +40,7 @@ angular.module('mercado')
                  toastr.success('Cliente Removido com sucesso');
                  $scope.init();
              }, function(data){
-                 toastr.error('Não foi possível remover o Cliente');
+                 toastr.error(data.statusText,'Não foi possível remover o Cliente');
              });
           };
 
@@ -74,14 +74,19 @@ angular.module('mercado')
 
           };
 
-            $scope.modalAjuda = {
-                  "title": "Ajuda",
-                  "content": "Campos Obrigatórios em Vermelho"
-             };
+          $scope.modalAjuda = {
+                "title": "Ajuda",
+                "content": "Campos Obrigatórios em Vermelho"
+          };
 
-             $scope.confirmacaoModal = {
-                   "title": "Confirmação",
-                   "content": "Deseja excluir o Cliente?"
-             };
+          $scope.confirmacaoModal = {
+                "title": "Confirmação",
+                "content": "Deseja excluir o Cliente?"
+          };
+
+          $scope.popoverConfirmacao = {
+                "title": "Confirmação",
+                "content": "Excluir?"
+          };
 
 });

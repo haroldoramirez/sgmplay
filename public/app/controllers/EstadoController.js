@@ -85,4 +85,9 @@ angular.module('mercado')
             "content": "Deseja excluir o Estado?"
         };
 
+        $scope.popoverConfirmacao = {
+            "title": "Confirmação",
+            "content": "Excluir?"
+        };
+
   });

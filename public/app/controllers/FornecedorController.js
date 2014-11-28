@@ -8,7 +8,7 @@ angular.module('mercado')
                   $location.path('/fornecedores');
               }, function(data){
                   console.log(data);
-                  toastr.error(data.data, 'Não foi possível Salvar o Fornecedor');
+                  toastr.error(data.statusText,'Não foi possível Salvar o Fornecedor');
               });
           };
 
@@ -40,7 +40,7 @@ angular.module('mercado')
                  toastr.success('Fornecedor Removido com sucesso');
                  $scope.init();
              }, function(data){
-                 toastr.error('Não foi possível remover o Fornecedor');
+                 toastr.error(data.statusText,'Não foi possível remover o Fornecedor');
              });
           };
 
@@ -69,19 +69,24 @@ angular.module('mercado')
                   toastr.success('Fornecedor removido com sucesso');
                   $location.path('/fornecedores');
               }, function(data){
-                  toastr.error('Não foi possível remover o Fornecedor');
+                  toastr.error(data.statusText,'Não foi possível remover o Fornecedor');
               });
 
           };
 
-            $scope.modalAjuda = {
-                  "title": "Ajuda",
-                  "content": "Campos Obrigatórios em Vermelho"
-             };
+          $scope.modalAjuda = {
+                "title": "Ajuda",
+                "content": "Campos Obrigatórios em Vermelho"
+          };
 
-             $scope.confirmacaoModal = {
-                   "title": "Confirmação",
-                   "content": "Deseja excluir o Fornecedor?"
-             };
+          $scope.confirmacaoModal = {
+                "title": "Confirmação",
+                "content": "Deseja excluir o Fornecedor?"
+          };
+
+          $scope.popoverConfirmacao = {
+                "title": "Confirmação",
+                "content": "Excluir?"
+          };
 
 });

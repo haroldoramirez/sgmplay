@@ -8,7 +8,7 @@ angular.module('mercado')
                   $location.path('/bairros');
               }, function(data){
                   console.log(data);
-                  toastr.error(data.data, 'Não foi possível Salvar o Bairro');
+                  toastr.error(data.statusText,'Não foi possível Salvar o Bairro');
               });
           };
 
@@ -40,7 +40,7 @@ angular.module('mercado')
                   toastr.success('Bairro Removido com sucesso');
                   $scope.init();
               }, function(data){
-                  toastr.error('Não foi possível remover o Bairro');
+                  toastr.error(data.statusText,'Não foi possível remover o Bairro');
               });
            };
  }).controller('BairroDetailController', function ($scope, $modal, $routeParams, $location, Bairro, Cidade, toastr){
@@ -82,5 +82,10 @@ angular.module('mercado')
                 "title": "Confirmação",
                 "content": "Deseja excluir o Bairro?"
           };
+
+         $scope.popoverConfirmacao = {
+                "title": "Confirmação",
+                "content": "Excluir?"
+         };
 
  });

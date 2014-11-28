@@ -84,7 +84,7 @@ angular.module('mercado', ['ngRoute', 'ngResource', 'toastr', 'mgcrea.ngStrap', 
           closeButton: true,
           closeHtml: '<button>&times;</button>',
           containerId: 'toast-container',
-          extendedTimeOut: 3000,
+          extendedTimeOut: 5000,
           iconClasses: {
             error: 'toast-error',
             info: 'toast-info',
@@ -94,7 +94,7 @@ angular.module('mercado', ['ngRoute', 'ngResource', 'toastr', 'mgcrea.ngStrap', 
           messageClass: 'toast-message',
           positionClass: 'toast-top-right',
           tapToDismiss: true,
-          timeOut: 3000,
+          timeOut: 5000,
           titleClass: 'toast-title',
           toastClass: 'toast'
         })

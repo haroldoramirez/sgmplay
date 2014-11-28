@@ -3,6 +3,7 @@ package controllers;
 import com.avaje.ebean.Ebean;
 import models.locale.Pais;
 import play.Logger;
+import play.data.Form;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -52,10 +53,14 @@ public class PaisController extends Controller {
         Pais pais = Ebean.find(Pais.class, id);
 
         if (pais == null) {
-            return notFound("pais não encontrado");
+            return notFound("País não encontrado");
         }
 
-        Ebean.delete(pais);
+        try {
+            Ebean.delete(pais);
+        } catch (Exception e){
+            return badRequest(e.getCause().getLocalizedMessage().toString());
+        }
 
         return ok(Json.toJson(pais));
     }

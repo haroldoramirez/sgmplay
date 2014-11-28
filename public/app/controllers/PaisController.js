@@ -8,7 +8,7 @@ angular.module('mercado')
                 $location.path('/paises');
             }, function(data){
                 console.log(data);
-                toastr.error('Não foi possível Salvar o País');
+                toastr.error(data.statusText,'Não foi possível Salvar o País');
             });
         };
 
@@ -40,7 +40,7 @@ angular.module('mercado')
                toastr.success('País removido com sucesso');
                $scope.init();
            }, function(data){
-               toastr.error('Não foi possível remover o País');
+               toastr.error(data.statusText,'Não foi possível remover o País');
            });
         };
 
@@ -70,7 +70,7 @@ angular.module('mercado')
                 $location.path('/paises');
             }, function(data){
             console.log(data);
-                toastr.error(data.statusText,'Não foi possível remover o País');
+                toastr.error(data.data,'Não foi possível remover o País');
             });
 
         };
@@ -86,7 +86,7 @@ angular.module('mercado')
         };
 
         $scope.popoverConfirmacao = {
-              "title": "Confirmação",
-              "content": "Excluir?"
+             "title": "Confirmação",
+             "content": "Excluir?"
         };
   });
