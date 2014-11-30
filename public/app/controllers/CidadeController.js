@@ -68,7 +68,8 @@ angular.module('mercado')
                 toastr.success('Cidade removido com sucesso');
                 $location.path('/cidades');
             }, function(data){
-                toastr.error(data.statusText,'Não foi possível remover a Cidade');
+            console.log(data);
+                toastr.error(data.data,'Não foi possível remover a Cidade');
             });
         };
 

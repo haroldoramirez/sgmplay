@@ -65,7 +65,16 @@ public class EstadoController extends Controller {
             return notFound("Estado não encontrado");
         }
 
-        Ebean.delete(estado);
+        try {
+            Ebean.delete(estado);
+        } catch (Exception e) {
+            System.out.println(e.getCause().getLocalizedMessage().toString());
+            if (e.getCause().getLocalizedMessage().toString().equals("Cannot delete or update a parent row: a foreign key constraint fails (`sgmplaydb`.`cidade`, CONSTRAINT `fk_cidade_estado_2` FOREIGN KEY (`estado_id`) REFERENCES `estado` (`id`))")) {
+                return badRequest("Restrição de Chave Estrangeira");
+            } else {
+                return badRequest(e.getCause().getLocalizedMessage().toString());
+            }
+        }
 
         return ok(Json.toJson(estado));
     }

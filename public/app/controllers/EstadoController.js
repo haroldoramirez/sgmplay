@@ -70,7 +70,8 @@ angular.module('mercado')
                 toastr.success('Estado removido com sucesso');
                 $location.path('/estados');
             }, function(data){
-                toastr.error(data.statusText,'Não foi possível remover o Estado');
+            console.log(data);
+                toastr.error(data.data,'Não foi possível remover o Estado');
             });
 
         };

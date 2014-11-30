@@ -69,6 +69,7 @@ angular.module('mercado')
                    toastr.success('Bairro removido com sucesso');
                    $location.path('/bairros');
                }, function(data){
+               console.log(data);
                    toastr.error(data.statusText,'Não foi possível remover o Bairro');
                });
            };

@@ -64,7 +64,19 @@ public class BairroController extends Controller {
             return notFound("Bairro não encontrado");
         }
 
-        Ebean.delete(bairro);
+        try {
+            Ebean.delete(bairro);
+        } catch (Exception e) {
+            System.out.println(e.getCause().getLocalizedMessage().toString());
+            if (e.getCause().getLocalizedMessage().toString().equals("Cannot delete or update a parent row: a foreign key constraint fails (`sgmplaydb`.`cliente`, CONSTRAINT `fk_cliente_bairro_3` FOREIGN KEY (`bairro_id`) REFERENCES `bairro` (`id`))")) {
+                return badRequest("Restrição de Chave Estrangeira");
+            } else {
+                return badRequest(e.getCause().getLocalizedMessage().toString());
+            }
+        }
+
+
+
 
         return ok(Json.toJson(bairro));
     }
