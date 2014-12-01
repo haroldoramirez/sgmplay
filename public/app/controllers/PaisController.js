@@ -8,7 +8,7 @@ angular.module('mercado')
                 $location.path('/paises');
             }, function(data){
                 console.log(data);
-                toastr.error(data.statusText,'Não foi possível Salvar o País');
+                toastr.error(data.data,'Não foi possível Salvar o País');
             });
         };
 
@@ -72,7 +72,6 @@ angular.module('mercado')
             console.log(data);
                 toastr.error(data.data,'Não foi possível remover o País');
             });
-
         };
 
         $scope.modalAjuda = {

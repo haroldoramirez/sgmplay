@@ -1,36 +1,522 @@
-2014-11-30 09:31:59,086 - [INFO] - from play in pool-6-thread-4 
+2014-12-01 16:16:17,620 - [INFO] - from play in pool-6-thread-6 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2014-11-30 09:38:43,727 - [INFO] - from play in play-internal-execution-context-1 
+2014-12-01 16:16:27,716 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost/sgmplaydb
 
-2014-11-30 09:38:45,245 - [ERROR] - from application in New I/O worker #1 
+2014-12-01 16:16:28,700 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2014-12-01 16:16:34,584 - [INFO] - from application in play-akka.actor.default-dispatcher-6 
+Salvando Pais
+
+2014-12-01 16:16:45,887 - [INFO] - from application in play-akka.actor.default-dispatcher-3 
+Salvando Pais
+
+2014-12-01 16:17:39,150 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2014-12-01 16:17:39,271 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2014-12-01 16:17:43,189 - [INFO] - from application in play-akka.actor.default-dispatcher-15 
+busca Todos os Paises
+
+2014-12-01 16:17:45,150 - [INFO] - from application in play-akka.actor.default-dispatcher-16 
+buscaPorId País
+
+2014-12-01 16:17:46,889 - [INFO] - from application in play-akka.actor.default-dispatcher-16 
+remover pais
+
+2014-12-01 16:25:02,807 - [INFO] - from play in play-internal-execution-context-2 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2014-12-01 16:25:02,961 - [INFO] - from play in play-internal-execution-context-2 
+Application started (Dev)
+
+2014-12-01 16:25:02,988 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
+remover pais
+
+2014-12-01 16:25:03,093 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
+busca Todos os Paises
+
+2014-12-01 16:25:05,954 - [INFO] - from application in play-akka.actor.default-dispatcher-20 
+busca Todos os Paises
+
+2014-12-01 16:25:07,411 - [INFO] - from application in play-akka.actor.default-dispatcher-21 
+buscaPorId País
+
+2014-12-01 16:25:08,920 - [INFO] - from application in play-akka.actor.default-dispatcher-18 
+remover pais
+
+2014-12-01 16:25:09,040 - [INFO] - from application in play-akka.actor.default-dispatcher-21 
+busca Todos os Paises
+
+2014-12-01 16:25:23,251 - [INFO] - from play in play-internal-execution-context-3 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2014-12-01 16:25:23,342 - [INFO] - from play in play-internal-execution-context-3 
+Application started (Dev)
+
+2014-12-01 16:25:24,299 - [INFO] - from application in play-akka.actor.default-dispatcher-24 
+busca Todos os Paises
+
+2014-12-01 16:25:25,821 - [INFO] - from application in play-akka.actor.default-dispatcher-25 
+buscaPorId País
+
+2014-12-01 16:25:27,089 - [INFO] - from application in play-akka.actor.default-dispatcher-25 
+remover pais
+
+2014-12-01 16:26:16,551 - [INFO] - from play in play-internal-execution-context-4 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2014-12-01 16:26:16,635 - [INFO] - from play in play-internal-execution-context-4 
+Application started (Dev)
+
+2014-12-01 16:26:17,414 - [INFO] - from application in play-akka.actor.default-dispatcher-29 
+buscaPorId País
+
+2014-12-01 16:26:18,656 - [INFO] - from application in play-akka.actor.default-dispatcher-28 
+remover pais
+
+2014-12-01 16:26:18,809 - [INFO] - from application in play-akka.actor.default-dispatcher-28 
+busca Todos os Paises
+
+2014-12-01 16:26:43,511 - [INFO] - from play in play-internal-execution-context-4 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2014-12-01 16:26:43,615 - [INFO] - from play in play-internal-execution-context-4 
+Application started (Dev)
+
+2014-12-01 16:26:44,575 - [INFO] - from application in play-akka.actor.default-dispatcher-36 
+busca Todos os Paises
+
+2014-12-01 16:26:45,726 - [INFO] - from application in play-akka.actor.default-dispatcher-23 
+buscaPorId País
+
+2014-12-01 16:26:47,159 - [INFO] - from application in play-akka.actor.default-dispatcher-23 
+remover pais
+
+2014-12-01 16:26:47,264 - [INFO] - from application in play-akka.actor.default-dispatcher-36 
+busca Todos os Paises
+
+2014-12-01 16:27:35,343 - [INFO] - from play in play-internal-execution-context-4 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2014-12-01 16:27:35,453 - [INFO] - from play in play-internal-execution-context-4 
+Application started (Dev)
+
+2014-12-01 16:27:35,469 - [INFO] - from application in play-akka.actor.default-dispatcher-35 
+buscaPorId País
+
+2014-12-01 16:27:36,337 - [INFO] - from application in play-akka.actor.default-dispatcher-35 
+remover pais
+
+2014-12-01 16:27:36,433 - [INFO] - from application in play-akka.actor.default-dispatcher-30 
+busca Todos os Paises
+
+2014-12-01 16:28:29,160 - [INFO] - from play in play-internal-execution-context-4 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2014-12-01 16:28:29,278 - [INFO] - from play in play-internal-execution-context-4 
+Application started (Dev)
+
+2014-12-01 16:28:30,045 - [ERROR] - from application in New I/O worker #2 
 
 
-! @6kc3dkcib - Internal server error, for (GET) [/] ->
+! Internal server error, for (GET) [/paises] ->
 
-play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
-	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1$$anonfun$apply$1.apply$mcV$sp(Evolutions.scala:510) ~[play-jdbc_2.11-2.3.6.jar:2.3.6]
-	at play.api.db.evolutions.EvolutionsPlugin.withLock(Evolutions.scala:531) ~[play-jdbc_2.11-2.3.6.jar:2.3.6]
-	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:485) ~[play-jdbc_2.11-2.3.6.jar:2.3.6]
-	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:483) ~[play-jdbc_2.11-2.3.6.jar:2.3.6]
-	at scala.collection.immutable.List.foreach(List.scala:383) ~[scala-library-2.11.1.jar:na]
-	at play.api.db.evolutions.EvolutionsPlugin.onStart(Evolutions.scala:483) ~[play-jdbc_2.11-2.3.6.jar:2.3.6]
-	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.collection.immutable.List.foreach(List.scala:383) ~[scala-library-2.11.1.jar:na]
-	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:91) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.Play$.start(Play.scala:90) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:157) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
+java.lang.ClassNotFoundException: controllers.PaisController
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:372) ~[na:1.8.0_25]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361) ~[na:1.8.0_25]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_25]
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360) ~[na:1.8.0_25]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_25]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_25]
+	at play.core.Router$HandlerInvokerFactory$.play$core$Router$HandlerInvokerFactory$$loadJavaControllerClass(Router.scala:223) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15.<init>(Router.scala:247) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory.createInvoker(Router.scala:244) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.Router$Routes$class.createInvoker(Router.scala:496) ~[play_2.11-2.3.6.jar:2.3.6]
+	at Routes$.createInvoker(routes_routing.scala:17) ~[na:na]
+	at Routes$.Routes$$controllers_PaisController_buscaTodos3_invoker$lzycompute(routes_routing.scala:58) ~[na:na]
+	at Routes$.Routes$$controllers_PaisController_buscaTodos3_invoker(routes_routing.scala:58) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4.apply(routes_routing.scala:293) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4.apply(routes_routing.scala:293) ~[na:na]
+	at play.core.Router$Routes$class.call(Router.scala:326) ~[play_2.11-2.3.6.jar:2.3.6]
+	at Routes$.call(routes_routing.scala:17) ~[na:na]
+	at Routes$$anonfun$routes$1.applyOrElse(routes_routing.scala:292) ~[na:na]
+	at Routes$$anonfun$routes$1.applyOrElse(routes_routing.scala:264) ~[na:na]
+	at scala.PartialFunction$Lifted.apply(PartialFunction.scala:218) ~[scala-library-2.11.1.jar:na]
+	at scala.PartialFunction$Lifted.apply(PartialFunction.scala:214) ~[scala-library-2.11.1.jar:na]
+	at play.core.Router$Routes$class.handlerFor(Router.scala:454) ~[play_2.11-2.3.6.jar:2.3.6]
+	at Routes$.handlerFor(routes_routing.scala:17) ~[na:na]
+	at play.api.GlobalSettings$$anonfun$onRouteRequest$1$$anonfun$apply$1.apply(GlobalSettings.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.GlobalSettings$$anonfun$onRouteRequest$1$$anonfun$apply$1.apply(GlobalSettings.scala:127) ~[play_2.11-2.3.6.jar:2.3.6]
+	at scala.Option.flatMap(Option.scala:170) ~[scala-library-2.11.1.jar:na]
+	at play.api.GlobalSettings$$anonfun$onRouteRequest$1.apply(GlobalSettings.scala:126) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.GlobalSettings$$anonfun$onRouteRequest$1.apply(GlobalSettings.scala:126) ~[play_2.11-2.3.6.jar:2.3.6]
+	at scala.Option.flatMap(Option.scala:170) ~[scala-library-2.11.1.jar:na]
+	at play.api.GlobalSettings$class.onRouteRequest(GlobalSettings.scala:126) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.DefaultGlobal$.onRouteRequest(GlobalSettings.scala:206) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.GlobalSettings$class.onRequestReceived(GlobalSettings.scala:81) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.DefaultGlobal$.onRequestReceived(GlobalSettings.scala:206) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.Server$$anonfun$sendHandler$1$1.apply(Server.scala:40) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.Server$$anonfun$sendHandler$1$1.apply(Server.scala:39) ~[play_2.11-2.3.6.jar:2.3.6]
+	at scala.util.Success$$anonfun$map$1.apply(Try.scala:236) ~[scala-library-2.11.1.jar:na]
+	at scala.util.Try$.apply(Try.scala:191) ~[scala-library-2.11.1.jar:na]
+	at scala.util.Success.map(Try.scala:236) ~[scala-library-2.11.1.jar:na]
+	at play.core.server.Server$class.sendHandler$1(Server.scala:39) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.Server$$anonfun$getHandlerFor$4.apply(Server.scala:72) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.Server$$anonfun$getHandlerFor$4.apply(Server.scala:71) [play_2.11-2.3.6.jar:2.3.6]
+	at scala.util.Either$RightProjection.flatMap(Either.scala:522) [scala-library-2.11.1.jar:na]
+	at play.core.server.Server$class.getHandlerFor(Server.scala:71) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.NettyServer.getHandlerFor(NettyServer.scala:37) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$10.apply(PlayDefaultUpstreamHandler.scala:157) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$10.apply(PlayDefaultUpstreamHandler.scala:157) [play_2.11-2.3.6.jar:2.3.6]
+	at scala.util.Either.fold(Either.scala:99) [scala-library-2.11.1.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler.messageReceived(PlayDefaultUpstreamHandler.scala:142) [play_2.11-2.3.6.jar:2.3.6]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) [netty-3.9.3.Final.jar:na]
+	at com.typesafe.netty.http.pipelining.HttpPipeliningHandler.messageReceived(HttpPipeliningHandler.java:62) [netty-http-pipelining-1.1.2.jar:na]
+	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42) [netty-3.9.3.Final.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_25]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
+
+2014-12-01 16:28:35,091 - [ERROR] - from application in New I/O worker #4 
+
+
+! Internal server error, for (GET) [/paises] ->
+
+java.lang.ClassNotFoundException: controllers.PaisController
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:372) ~[na:1.8.0_25]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361) ~[na:1.8.0_25]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_25]
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360) ~[na:1.8.0_25]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_25]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_25]
+	at play.core.Router$HandlerInvokerFactory$.play$core$Router$HandlerInvokerFactory$$loadJavaControllerClass(Router.scala:223) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15.<init>(Router.scala:247) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory.createInvoker(Router.scala:244) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.Router$Routes$class.createInvoker(Router.scala:496) ~[play_2.11-2.3.6.jar:2.3.6]
+	at Routes$.createInvoker(routes_routing.scala:17) ~[na:na]
+	at Routes$.Routes$$controllers_PaisController_buscaTodos3_invoker$lzycompute(routes_routing.scala:58) ~[na:na]
+	at Routes$.Routes$$controllers_PaisController_buscaTodos3_invoker(routes_routing.scala:58) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4.apply(routes_routing.scala:293) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4.apply(routes_routing.scala:293) ~[na:na]
+	at play.core.Router$Routes$class.call(Router.scala:326) ~[play_2.11-2.3.6.jar:2.3.6]
+	at Routes$.call(routes_routing.scala:17) ~[na:na]
+	at Routes$$anonfun$routes$1.applyOrElse(routes_routing.scala:292) ~[na:na]
+	at Routes$$anonfun$routes$1.applyOrElse(routes_routing.scala:264) ~[na:na]
+	at scala.PartialFunction$Lifted.apply(PartialFunction.scala:218) ~[scala-library-2.11.1.jar:na]
+	at scala.PartialFunction$Lifted.apply(PartialFunction.scala:214) ~[scala-library-2.11.1.jar:na]
+	at play.core.Router$Routes$class.handlerFor(Router.scala:454) ~[play_2.11-2.3.6.jar:2.3.6]
+	at Routes$.handlerFor(routes_routing.scala:17) ~[na:na]
+	at play.api.GlobalSettings$$anonfun$onRouteRequest$1$$anonfun$apply$1.apply(GlobalSettings.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.GlobalSettings$$anonfun$onRouteRequest$1$$anonfun$apply$1.apply(GlobalSettings.scala:127) ~[play_2.11-2.3.6.jar:2.3.6]
+	at scala.Option.flatMap(Option.scala:170) ~[scala-library-2.11.1.jar:na]
+	at play.api.GlobalSettings$$anonfun$onRouteRequest$1.apply(GlobalSettings.scala:126) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.GlobalSettings$$anonfun$onRouteRequest$1.apply(GlobalSettings.scala:126) ~[play_2.11-2.3.6.jar:2.3.6]
+	at scala.Option.flatMap(Option.scala:170) ~[scala-library-2.11.1.jar:na]
+	at play.api.GlobalSettings$class.onRouteRequest(GlobalSettings.scala:126) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.DefaultGlobal$.onRouteRequest(GlobalSettings.scala:206) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.GlobalSettings$class.onRequestReceived(GlobalSettings.scala:81) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.DefaultGlobal$.onRequestReceived(GlobalSettings.scala:206) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.Server$$anonfun$sendHandler$1$1.apply(Server.scala:40) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.Server$$anonfun$sendHandler$1$1.apply(Server.scala:39) ~[play_2.11-2.3.6.jar:2.3.6]
+	at scala.util.Success$$anonfun$map$1.apply(Try.scala:236) ~[scala-library-2.11.1.jar:na]
+	at scala.util.Try$.apply(Try.scala:191) ~[scala-library-2.11.1.jar:na]
+	at scala.util.Success.map(Try.scala:236) ~[scala-library-2.11.1.jar:na]
+	at play.core.server.Server$class.sendHandler$1(Server.scala:39) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.Server$$anonfun$getHandlerFor$4.apply(Server.scala:72) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.Server$$anonfun$getHandlerFor$4.apply(Server.scala:71) [play_2.11-2.3.6.jar:2.3.6]
+	at scala.util.Either$RightProjection.flatMap(Either.scala:522) [scala-library-2.11.1.jar:na]
+	at play.core.server.Server$class.getHandlerFor(Server.scala:71) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.NettyServer.getHandlerFor(NettyServer.scala:37) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$10.apply(PlayDefaultUpstreamHandler.scala:157) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$10.apply(PlayDefaultUpstreamHandler.scala:157) [play_2.11-2.3.6.jar:2.3.6]
+	at scala.util.Either.fold(Either.scala:99) [scala-library-2.11.1.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler.messageReceived(PlayDefaultUpstreamHandler.scala:142) [play_2.11-2.3.6.jar:2.3.6]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) [netty-3.9.3.Final.jar:na]
+	at com.typesafe.netty.http.pipelining.HttpPipeliningHandler.messageReceived(HttpPipeliningHandler.java:62) [netty-http-pipelining-1.1.2.jar:na]
+	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42) [netty-3.9.3.Final.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_25]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
+
+2014-12-01 16:29:03,877 - [ERROR] - from application in New I/O worker #1 
+
+
+! Internal server error, for (GET) [/paises] ->
+
+java.lang.ClassNotFoundException: controllers.PaisController
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:372) ~[na:1.8.0_25]
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:361) ~[na:1.8.0_25]
+	at java.security.AccessController.doPrivileged(Native Method) ~[na:1.8.0_25]
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:360) ~[na:1.8.0_25]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424) ~[na:1.8.0_25]
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357) ~[na:1.8.0_25]
+	at play.core.Router$HandlerInvokerFactory$.play$core$Router$HandlerInvokerFactory$$loadJavaControllerClass(Router.scala:223) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15.<init>(Router.scala:247) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory.createInvoker(Router.scala:244) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.Router$Routes$class.createInvoker(Router.scala:496) ~[play_2.11-2.3.6.jar:2.3.6]
+	at Routes$.createInvoker(routes_routing.scala:17) ~[na:na]
+	at Routes$.Routes$$controllers_PaisController_buscaTodos3_invoker$lzycompute(routes_routing.scala:58) ~[na:na]
+	at Routes$.Routes$$controllers_PaisController_buscaTodos3_invoker(routes_routing.scala:58) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4.apply(routes_routing.scala:293) ~[na:na]
+	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$4.apply(routes_routing.scala:293) ~[na:na]
+	at play.core.Router$Routes$class.call(Router.scala:326) ~[play_2.11-2.3.6.jar:2.3.6]
+	at Routes$.call(routes_routing.scala:17) ~[na:na]
+	at Routes$$anonfun$routes$1.applyOrElse(routes_routing.scala:292) ~[na:na]
+	at Routes$$anonfun$routes$1.applyOrElse(routes_routing.scala:264) ~[na:na]
+	at scala.PartialFunction$Lifted.apply(PartialFunction.scala:218) ~[scala-library-2.11.1.jar:na]
+	at scala.PartialFunction$Lifted.apply(PartialFunction.scala:214) ~[scala-library-2.11.1.jar:na]
+	at play.core.Router$Routes$class.handlerFor(Router.scala:454) ~[play_2.11-2.3.6.jar:2.3.6]
+	at Routes$.handlerFor(routes_routing.scala:17) ~[na:na]
+	at play.api.GlobalSettings$$anonfun$onRouteRequest$1$$anonfun$apply$1.apply(GlobalSettings.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.GlobalSettings$$anonfun$onRouteRequest$1$$anonfun$apply$1.apply(GlobalSettings.scala:127) ~[play_2.11-2.3.6.jar:2.3.6]
+	at scala.Option.flatMap(Option.scala:170) ~[scala-library-2.11.1.jar:na]
+	at play.api.GlobalSettings$$anonfun$onRouteRequest$1.apply(GlobalSettings.scala:126) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.GlobalSettings$$anonfun$onRouteRequest$1.apply(GlobalSettings.scala:126) ~[play_2.11-2.3.6.jar:2.3.6]
+	at scala.Option.flatMap(Option.scala:170) ~[scala-library-2.11.1.jar:na]
+	at play.api.GlobalSettings$class.onRouteRequest(GlobalSettings.scala:126) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.DefaultGlobal$.onRouteRequest(GlobalSettings.scala:206) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.GlobalSettings$class.onRequestReceived(GlobalSettings.scala:81) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.api.DefaultGlobal$.onRequestReceived(GlobalSettings.scala:206) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.Server$$anonfun$sendHandler$1$1.apply(Server.scala:40) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.Server$$anonfun$sendHandler$1$1.apply(Server.scala:39) ~[play_2.11-2.3.6.jar:2.3.6]
+	at scala.util.Success$$anonfun$map$1.apply(Try.scala:236) ~[scala-library-2.11.1.jar:na]
+	at scala.util.Try$.apply(Try.scala:191) ~[scala-library-2.11.1.jar:na]
+	at scala.util.Success.map(Try.scala:236) ~[scala-library-2.11.1.jar:na]
+	at play.core.server.Server$class.sendHandler$1(Server.scala:39) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.Server$$anonfun$getHandlerFor$4.apply(Server.scala:72) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.Server$$anonfun$getHandlerFor$4.apply(Server.scala:71) [play_2.11-2.3.6.jar:2.3.6]
+	at scala.util.Either$RightProjection.flatMap(Either.scala:522) [scala-library-2.11.1.jar:na]
+	at play.core.server.Server$class.getHandlerFor(Server.scala:71) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.NettyServer.getHandlerFor(NettyServer.scala:37) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$10.apply(PlayDefaultUpstreamHandler.scala:157) [play_2.11-2.3.6.jar:2.3.6]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$10.apply(PlayDefaultUpstreamHandler.scala:157) [play_2.11-2.3.6.jar:2.3.6]
+	at scala.util.Either.fold(Either.scala:99) [scala-library-2.11.1.jar:na]
+	at play.core.server.netty.PlayDefaultUpstreamHandler.messageReceived(PlayDefaultUpstreamHandler.scala:142) [play_2.11-2.3.6.jar:2.3.6]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) [netty-3.9.3.Final.jar:na]
+	at com.typesafe.netty.http.pipelining.HttpPipeliningHandler.messageReceived(HttpPipeliningHandler.java:62) [netty-http-pipelining-1.1.2.jar:na]
+	at org.jboss.netty.channel.SimpleChannelHandler.handleUpstream(SimpleChannelHandler.java:88) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.handler.codec.http.HttpContentDecoder.messageReceived(HttpContentDecoder.java:108) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline$DefaultChannelHandlerContext.sendUpstream(DefaultChannelPipeline.java:791) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:296) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.handler.codec.frame.FrameDecoder.unfoldAndFireMessageReceived(FrameDecoder.java:459) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.callDecode(ReplayingDecoder.java:536) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.handler.codec.replay.ReplayingDecoder.messageReceived(ReplayingDecoder.java:435) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.SimpleChannelUpstreamHandler.handleUpstream(SimpleChannelUpstreamHandler.java:70) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:564) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.DefaultChannelPipeline.sendUpstream(DefaultChannelPipeline.java:559) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:268) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.Channels.fireMessageReceived(Channels.java:255) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.read(NioWorker.java:88) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.process(AbstractNioWorker.java:108) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioSelector.run(AbstractNioSelector.java:318) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.AbstractNioWorker.run(AbstractNioWorker.java:89) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.channel.socket.nio.NioWorker.run(NioWorker.java:178) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.util.ThreadRenamingRunnable.run(ThreadRenamingRunnable.java:108) [netty-3.9.3.Final.jar:na]
+	at org.jboss.netty.util.internal.DeadLockProofWorker$1.run(DeadLockProofWorker.java:42) [netty-3.9.3.Final.jar:na]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_25]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_25]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_25]
+
+2014-12-01 16:29:58,440 - [INFO] - from play in play-internal-execution-context-4 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2014-12-01 16:29:58,657 - [INFO] - from play in play-internal-execution-context-4 
+Application started (Dev)
+
+2014-12-01 16:29:59,523 - [INFO] - from application in play-akka.actor.default-dispatcher-49 
+busca Todos os Paises
+
+2014-12-01 16:30:01,079 - [INFO] - from application in play-akka.actor.default-dispatcher-49 
+buscaPorId País
+
+2014-12-01 16:30:02,772 - [INFO] - from application in play-akka.actor.default-dispatcher-49 
+remover pais
+
+2014-12-01 16:30:10,635 - [INFO] - from application in play-akka.actor.default-dispatcher-50 
+remover pais
+
+2014-12-01 16:31:12,733 - [INFO] - from play in play-internal-execution-context-6 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2014-12-01 16:31:12,791 - [INFO] - from play in play-internal-execution-context-6 
+Application started (Dev)
+
+2014-12-01 16:31:13,501 - [INFO] - from application in play-akka.actor.default-dispatcher-45 
+buscaPorId País
+
+2014-12-01 16:31:15,491 - [INFO] - from application in play-akka.actor.default-dispatcher-60 
+busca Todos os Paises
+
+2014-12-01 16:31:20,999 - [INFO] - from application in play-akka.actor.default-dispatcher-61 
+Salvando Pais
+
+2014-12-01 16:31:21,103 - [INFO] - from application in play-akka.actor.default-dispatcher-61 
+busca Todos os Paises
+
+2014-12-01 16:31:54,860 - [INFO] - from play in play-internal-execution-context-6 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2014-12-01 16:31:54,938 - [INFO] - from play in play-internal-execution-context-6 
+Application started (Dev)
+
+2014-12-01 16:31:55,744 - [INFO] - from application in play-akka.actor.default-dispatcher-63 
+busca Todos os Paises
+
+2014-12-01 16:32:04,364 - [INFO] - from application in play-akka.actor.default-dispatcher-66 
+Salvando Pais
+
+2014-12-01 16:32:56,978 - [INFO] - from play in play-internal-execution-context-6 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2014-12-01 16:32:57,035 - [INFO] - from play in play-internal-execution-context-6 
+Application started (Dev)
+
+2014-12-01 16:33:01,208 - [INFO] - from application in play-akka.actor.default-dispatcher-68 
+Salvando Pais
+
+2014-12-01 16:36:09,126 - [INFO] - from play in play-internal-execution-context-6 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2014-12-01 16:36:09,175 - [INFO] - from play in play-internal-execution-context-6 
+Application started (Dev)
+
+2014-12-01 16:36:11,429 - [INFO] - from application in play-akka.actor.default-dispatcher-76 
+busca Todos os Paises
+
+2014-12-01 16:36:12,948 - [INFO] - from application in play-akka.actor.default-dispatcher-76 
+buscaPorId País
+
+2014-12-01 16:36:14,770 - [INFO] - from application in play-akka.actor.default-dispatcher-76 
+remover pais
+
+2014-12-01 16:36:19,515 - [INFO] - from application in play-akka.actor.default-dispatcher-79 
+busca Todos os Paises
+
+2014-12-01 16:36:29,716 - [INFO] - from application in play-akka.actor.default-dispatcher-79 
+busca Todos os Estados
+
+2014-12-01 16:36:36,729 - [INFO] - from application in play-akka.actor.default-dispatcher-78 
+busca Todos os Paises
+
+2014-12-01 16:36:42,614 - [INFO] - from application in play-akka.actor.default-dispatcher-78 
+Salvando Pais
+
+2014-12-01 16:37:34,577 - [INFO] - from application in play-akka.actor.default-dispatcher-85 
+busca Todos os Paises
+
+2014-12-01 16:37:35,648 - [INFO] - from application in play-akka.actor.default-dispatcher-77 
+buscaPorId País
+
+2014-12-01 16:37:37,026 - [INFO] - from application in play-akka.actor.default-dispatcher-77 
+remover pais
+
+2014-12-01 16:37:59,844 - [INFO] - from application in play-akka.actor.default-dispatcher-85 
+buscaPorId País
+
+2014-12-01 16:38:01,492 - [INFO] - from application in play-akka.actor.default-dispatcher-85 
+remover pais
+
+2014-12-01 16:38:12,576 - [INFO] - from application in play-akka.actor.default-dispatcher-88 
+buscaPorId País
+
+2014-12-01 16:38:13,559 - [INFO] - from application in play-akka.actor.default-dispatcher-88 
+remover pais
+
+2014-12-01 16:38:19,704 - [INFO] - from application in play-akka.actor.default-dispatcher-82 
+buscaPorId País
+
+2014-12-01 16:38:20,819 - [INFO] - from application in play-akka.actor.default-dispatcher-92 
+remover pais
+
+2014-12-01 16:48:47,916 - [INFO] - from play in play-internal-execution-context-10 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2014-12-01 16:48:48,639 - [INFO] - from play in play-internal-execution-context-10 
+Application started (Dev)
+
+2014-12-01 16:48:50,401 - [INFO] - from application in play-akka.actor.default-dispatcher-98 
+buscaPorId País
+
+2014-12-01 16:48:51,595 - [INFO] - from application in play-akka.actor.default-dispatcher-98 
+remover pais
+
+2014-12-01 17:07:42,957 - [ERROR] - from application in New I/O worker #3 
+
+
+! @6kcd1ko0m - Internal server error, for (GET) [/] ->
+
+play.PlayExceptions$CompilationException: Compilation error[error: exception SQLException is never thrown in body of corresponding try statement]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
 	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.util.Success.flatMap(Try.scala:230) ~[scala-library-2.11.1.jar:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
+	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:235) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$play$PlayReloader$$anon$$taskFailureHandler$1.apply(PlayReloader.scala:230) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReloader$$anon$1.play$PlayReloader$$anon$$taskFailureHandler(PlayReloader.scala:230) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:90) ~[na:na]
+	at play.PlayReloader$$anon$1$$anonfun$reload$2.apply(PlayReloader.scala:90) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.1.jar:na]
+	at play.PlayReloader$$anon$1.reload(PlayReloader.scala:90) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.6.jar:2.3.6]
 	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.6.jar:2.3.6]
 	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.1.jar:na]
 	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.1.jar:na]
@@ -40,508 +526,108 @@ play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evoluti
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.1.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.1.jar:na]
 
-2014-11-30 09:38:50,785 - [WARN] - from play in play-internal-execution-context-1 
-Error stopping plugin
-java.lang.NullPointerException: null
-	at play.libs.ws.ning.NingWSPlugin.onStop(NingWSPlugin.java:31) ~[play-java-ws_2.11-2.3.6.jar:2.3.6]
-	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:108) [play_2.11-2.3.6.jar:2.3.6]
-	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:107) [play_2.11-2.3.6.jar:2.3.6]
-	at scala.collection.immutable.List.foreach(List.scala:383) [scala-library-2.11.1.jar:na]
-	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply$mcV$sp(Play.scala:107) [play_2.11-2.3.6.jar:2.3.6]
-	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.6.jar:2.3.6]
-	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.6.jar:2.3.6]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) [play_2.11-2.3.6.jar:2.3.6]
-	at play.api.Play$$anonfun$stop$1.apply(Play.scala:106) [play_2.11-2.3.6.jar:2.3.6]
-	at play.api.Play$$anonfun$stop$1.apply(Play.scala:105) [play_2.11-2.3.6.jar:2.3.6]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
-	at play.api.Play$.stop(Play.scala:105) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:142) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.6.jar:2.3.6]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.6.jar:2.3.6]
-	at scala.util.Success.flatMap(Try.scala:230) [scala-library-2.11.1.jar:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) [play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.1.jar:na]
-
-2014-11-30 09:38:51,071 - [INFO] - from play in play-internal-execution-context-1 
+2014-12-01 17:14:26,764 - [INFO] - from play in play-internal-execution-context-10 
 database [default] connected at jdbc:mysql://localhost/sgmplaydb
 
-2014-11-30 09:38:51,328 - [INFO] - from play in play-internal-execution-context-1 
+2014-12-01 17:14:27,839 - [INFO] - from play in play-internal-execution-context-10 
 Application started (Dev)
 
-2014-11-30 09:38:55,170 - [INFO] - from application in play-akka.actor.default-dispatcher-8 
-busca Todos os Clientes
+2014-12-01 17:14:29,944 - [INFO] - from application in play-akka.actor.default-dispatcher-97 
+buscaPorId País
 
-2014-11-30 09:38:59,572 - [INFO] - from application in play-akka.actor.default-dispatcher-3 
+2014-12-01 17:14:43,082 - [INFO] - from application in play-akka.actor.default-dispatcher-106 
+remover pais
+
+2014-12-01 17:14:50,938 - [INFO] - from application in play-akka.actor.default-dispatcher-106 
 busca Todos os Paises
 
-2014-11-30 09:39:28,675 - [INFO] - from application in play-akka.actor.default-dispatcher-2 
-Salvando Pais
+2014-12-01 17:14:52,635 - [INFO] - from application in play-akka.actor.default-dispatcher-106 
+buscaPorId País
 
-2014-11-30 09:39:28,823 - [INFO] - from application in play-akka.actor.default-dispatcher-7 
-busca Todos os Paises
+2014-12-01 17:14:54,010 - [INFO] - from application in play-akka.actor.default-dispatcher-106 
+remover pais
 
-2014-11-30 09:39:32,386 - [INFO] - from application in play-akka.actor.default-dispatcher-7 
+2014-12-01 17:14:59,921 - [INFO] - from application in play-akka.actor.default-dispatcher-104 
 busca Todos os Estados
 
-2014-11-30 09:39:33,066 - [INFO] - from application in play-akka.actor.default-dispatcher-7 
+2014-12-01 17:15:01,117 - [INFO] - from application in play-akka.actor.default-dispatcher-106 
 busca Todos os Paises
 
-2014-11-30 09:39:40,389 - [INFO] - from application in play-akka.actor.default-dispatcher-7 
+2014-12-01 17:15:01,148 - [INFO] - from application in play-akka.actor.default-dispatcher-102 
+buscaPorId Estado
+
+2014-12-01 17:15:02,287 - [INFO] - from application in play-akka.actor.default-dispatcher-102 
+remover estado
+
+2014-12-01 17:15:02,517 - [INFO] - from application in play-akka.actor.default-dispatcher-106 
+busca Todos os Estados
+
+2014-12-01 17:15:04,613 - [INFO] - from application in play-akka.actor.default-dispatcher-106 
+buscaPorId Estado
+
+2014-12-01 17:15:04,614 - [INFO] - from application in play-akka.actor.default-dispatcher-102 
+busca Todos os Paises
+
+2014-12-01 17:15:05,786 - [INFO] - from application in play-akka.actor.default-dispatcher-106 
+remover estado
+
+2014-12-01 17:15:05,887 - [INFO] - from application in play-akka.actor.default-dispatcher-102 
+busca Todos os Estados
+
+2014-12-01 17:15:08,887 - [INFO] - from application in play-akka.actor.default-dispatcher-102 
+busca Todas as Cidades
+
+2014-12-01 17:15:09,771 - [INFO] - from application in play-akka.actor.default-dispatcher-102 
+busca Todos os Paises
+
+2014-12-01 17:15:10,907 - [INFO] - from application in play-akka.actor.default-dispatcher-102 
+buscaPorId País
+
+2014-12-01 17:15:12,109 - [INFO] - from application in play-akka.actor.default-dispatcher-102 
+remover pais
+
+2014-12-01 17:15:12,175 - [INFO] - from application in play-akka.actor.default-dispatcher-106 
+busca Todos os Paises
+
+2014-12-01 17:15:13,729 - [INFO] - from application in play-akka.actor.default-dispatcher-102 
+busca Todos os Clientes
+
+2014-12-01 17:15:15,813 - [INFO] - from application in play-akka.actor.default-dispatcher-102 
+busca Todos os Paises
+
+2014-12-01 17:15:17,434 - [INFO] - from application in play-akka.actor.default-dispatcher-102 
+buscaPorId País
+
+2014-12-01 17:15:19,262 - [INFO] - from application in play-akka.actor.default-dispatcher-102 
+busca Todos os Estados
+
+2014-12-01 17:15:20,978 - [INFO] - from application in play-akka.actor.default-dispatcher-106 
+busca Todos os Paises
+
+2014-12-01 17:15:22,769 - [INFO] - from application in play-akka.actor.default-dispatcher-106 
+busca Todos os Estados
+
+2014-12-01 17:15:23,443 - [INFO] - from application in play-akka.actor.default-dispatcher-102 
+busca Todos os Paises
+
+2014-12-01 17:15:34,745 - [INFO] - from application in play-akka.actor.default-dispatcher-106 
 Salvando Estado
 
-2014-11-30 09:39:40,456 - [INFO] - from application in play-akka.actor.default-dispatcher-4 
+2014-12-01 17:15:34,881 - [INFO] - from application in play-akka.actor.default-dispatcher-106 
 busca Todos os Estados
 
-2014-11-30 09:39:42,193 - [INFO] - from application in play-akka.actor.default-dispatcher-7 
+2014-12-01 17:15:36,113 - [INFO] - from application in play-akka.actor.default-dispatcher-106 
 busca Todos os Paises
 
-2014-11-30 09:39:44,458 - [INFO] - from application in play-akka.actor.default-dispatcher-2 
-buscaPorId País
-
-2014-11-30 09:39:48,676 - [INFO] - from application in play-akka.actor.default-dispatcher-7 
-remover pais
-
-2014-11-30 09:39:55,414 - [INFO] - from application in play-akka.actor.default-dispatcher-2 
-busca Todos os Paises
-
-2014-11-30 09:41:16,586 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://localhost/sgmplaydb
-
-2014-11-30 09:41:16,686 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-11-30 09:41:16,755 - [INFO] - from application in play-akka.actor.default-dispatcher-10 
-busca Todas as Cidades
-
-2014-11-30 09:41:18,911 - [INFO] - from application in play-akka.actor.default-dispatcher-10 
-busca Todos os Estados
-
-2014-11-30 09:41:20,772 - [INFO] - from application in play-akka.actor.default-dispatcher-9 
-busca Todas as Cidades
-
-2014-11-30 09:41:21,415 - [INFO] - from application in play-akka.actor.default-dispatcher-9 
-busca Todos os Estados
-
-2014-11-30 09:41:35,478 - [INFO] - from application in play-akka.actor.default-dispatcher-10 
-Salvando Cidade
-
-2014-11-30 09:41:35,559 - [INFO] - from application in play-akka.actor.default-dispatcher-11 
-busca Todas as Cidades
-
-2014-11-30 09:41:38,383 - [INFO] - from application in play-akka.actor.default-dispatcher-10 
-busca Todos os Estados
-
-2014-11-30 09:41:39,606 - [INFO] - from application in play-akka.actor.default-dispatcher-11 
-busca Todos os Paises
-
-2014-11-30 09:41:39,607 - [INFO] - from application in play-akka.actor.default-dispatcher-10 
+2014-12-01 17:15:36,113 - [INFO] - from application in play-akka.actor.default-dispatcher-104 
 buscaPorId Estado
 
-2014-11-30 09:41:41,105 - [INFO] - from application in play-akka.actor.default-dispatcher-10 
-remover estado
+2014-12-01 17:15:38,614 - [INFO] - from application in play-akka.actor.default-dispatcher-104 
+busca Todos os Estados
 
-2014-11-30 09:41:41,149 - [ERROR] - from play in play-akka.actor.default-dispatcher-10 
-Cannot invoke the action, eventually got an error: javax.persistence.PersistenceException: ERROR executing DML bindLog[] error[Cannot delete or update a parent row: a foreign key constraint fails (`sgmplaydb`.`cidade`, CONSTRAINT `fk_cidade_estado_2` FOREIGN KEY (`estado_id`) REFERENCES `estado` (`id`))]
-
-2014-11-30 09:41:41,195 - [ERROR] - from application in play-akka.actor.default-dispatcher-10 
-
-
-! @6kc3e4d0k - Internal server error, for (DELETE) [/estados/1] ->
-
-play.api.Application$$anon$1: Execution exception[[PersistenceException: ERROR executing DML bindLog[] error[Cannot delete or update a parent row: a foreign key constraint fails (`sgmplaydb`.`cidade`, CONSTRAINT `fk_cidade_estado_2` FOREIGN KEY (`estado_id`) REFERENCES `estado` (`id`))]]]
-	at play.api.Application$class.handleError(Application.scala:296) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.DefaultApplication.handleError(Application.scala:402) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3$$anonfun$applyOrElse$4.apply(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:320) [play_2.11-2.3.6.jar:2.3.6]
-	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$3.applyOrElse(PlayDefaultUpstreamHandler.scala:316) [play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:344) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.Future$$anonfun$recoverWith$1.apply(Future.scala:343) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.1.jar:na]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:23) [scala-library-2.11.1.jar:na]
-	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:41) [akka-actor_2.11-2.3.4.jar:na]
-	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:393) [akka-actor_2.11-2.3.4.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.1.jar:na]
-Caused by: javax.persistence.PersistenceException: ERROR executing DML bindLog[] error[Cannot delete or update a parent row: a foreign key constraint fails (`sgmplaydb`.`cidade`, CONSTRAINT `fk_cidade_estado_2` FOREIGN KEY (`estado_id`) REFERENCES `estado` (`id`))]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:97) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.delete(DmlBeanPersister.java:48) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersistExecute.executeDeleteBean(DefaultPersistExecute.java:99) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeNow(PersistRequestBean.java:456) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.PersistRequestBean.executeOrQueue(PersistRequestBean.java:478) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersister.delete(DefaultPersister.java:592) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.DefaultPersister.delete(DefaultPersister.java:396) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServer.delete(DefaultServer.java:1867) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.core.DefaultServer.delete(DefaultServer.java:1857) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebean.Ebean.delete(Ebean.java:596) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at controllers.EstadoController.remover(EstadoController.java:68) ~[classes/:2.3.6]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$11$$anonfun$apply$11.apply(routes_routing.scala:349) ~[classes/:na]
-	at Routes$$anonfun$routes$1$$anonfun$applyOrElse$11$$anonfun$apply$11.apply(routes_routing.scala:349) ~[classes/:na]
-	at play.core.Router$HandlerInvokerFactory$$anon$4.resultCall(Router.scala:264) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.invocation(Router.scala:255) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anon$1.call(JavaAction.scala:55) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.JavaAction$$anonfun$11.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at play.core.j.HttpExecutionContext$$anon$2.run(HttpExecutionContext.scala:40) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:46) [play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.core.j.HttpExecutionContext.execute(HttpExecutionContext.scala:32) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$.apply(Future.scala:31) ~[scala-library-2.11.1.jar:na]
-	at scala.concurrent.Future$.apply(Future.scala:492) ~[scala-library-2.11.1.jar:na]
-	at play.core.j.JavaAction$class.apply(JavaAction.scala:82) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.core.Router$HandlerInvokerFactory$JavaActionInvokerFactory$$anon$15$$anon$1.apply(Router.scala:252) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4$$anonfun$apply$5.apply(Action.scala:130) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:129) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1$$anonfun$apply$4.apply(Action.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
-	at scala.Option.map(Option.scala:145) [scala-library-2.11.1.jar:na]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:128) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.mvc.Action$$anonfun$apply$1.apply(Action.scala:121) ~[play_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$mapM$1.apply(Iteratee.scala:483) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMapM$1.apply(Iteratee.scala:519) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at play.api.libs.iteratee.Iteratee$$anonfun$flatMap$1$$anonfun$apply$14.apply(Iteratee.scala:496) ~[play-iteratees_2.11-2.3.6.jar:2.3.6]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.1.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.1.jar:na]
-	... 6 common frames omitted
-Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLIntegrityConstraintViolationException: Cannot delete or update a parent row: a foreign key constraint fails (`sgmplaydb`.`cidade`, CONSTRAINT `fk_cidade_estado_2` FOREIGN KEY (`estado_id`) REFERENCES `estado` (`id`))
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[na:1.7.0_65]
-	at sun.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:57) ~[na:1.7.0_65]
-	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[na:1.7.0_65]
-	at java.lang.reflect.Constructor.newInstance(Constructor.java:526) ~[na:1.7.0_65]
-	at com.mysql.jdbc.Util.handleNewInstance(Util.java:377) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.Util.getInstance(Util.java:360) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:971) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3887) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3823) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:2435) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2582) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2530) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:1907) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2141) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2077) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.mysql.jdbc.PreparedStatement.executeUpdate(PreparedStatement.java:2062) ~[mysql-connector-java-5.1.34.jar:5.1.34]
-	at com.jolbox.bonecp.PreparedStatementHandle.executeUpdate(PreparedStatementHandle.java:205) ~[bonecp-0.8.0.RELEASE.jar:na]
-	at com.avaje.ebeaninternal.server.type.DataBind.executeUpdate(DataBind.java:55) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DeleteHandler.execute(DeleteHandler.java:53) ~[avaje-ebeanorm-3.3.4.jar:na]
-	at com.avaje.ebeaninternal.server.persist.dml.DmlBeanPersister.execute(DmlBeanPersister.java:86) ~[avaje-ebeanorm-3.3.4.jar:na]
-	... 48 common frames omitted
-
-2014-11-30 09:45:30,368 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://localhost/sgmplaydb
-
-2014-11-30 09:45:30,429 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-11-30 09:45:31,038 - [INFO] - from application in play-akka.actor.default-dispatcher-16 
+2014-12-01 17:15:48,269 - [INFO] - from application in play-akka.actor.default-dispatcher-104 
 busca Todos os Paises
 
-2014-11-30 09:45:31,050 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
-buscaPorId Estado
-
-2014-11-30 09:45:32,604 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
-remover estado
-
-2014-11-30 09:46:33,525 - [INFO] - from application in play-akka.actor.default-dispatcher-24 
-buscaPorId Estado
-
-2014-11-30 09:46:33,531 - [INFO] - from application in play-akka.actor.default-dispatcher-20 
-busca Todos os Paises
-
-2014-11-30 09:46:35,098 - [INFO] - from application in play-akka.actor.default-dispatcher-19 
-remover estado
-
-2014-11-30 09:48:07,572 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://localhost/sgmplaydb
-
-2014-11-30 09:48:07,641 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-11-30 09:48:08,046 - [INFO] - from application in play-akka.actor.default-dispatcher-26 
-busca Todos os Paises
-
-2014-11-30 09:48:08,055 - [INFO] - from application in play-akka.actor.default-dispatcher-31 
-buscaPorId Estado
-
-2014-11-30 09:48:10,439 - [INFO] - from application in play-akka.actor.default-dispatcher-32 
-busca Todas as Cidades
-
-2014-11-30 09:48:14,225 - [INFO] - from application in play-akka.actor.default-dispatcher-26 
-buscaPorId Cidade
-
-2014-11-30 09:48:14,230 - [INFO] - from application in play-akka.actor.default-dispatcher-29 
-busca Todos os Estados
-
-2014-11-30 09:48:15,659 - [INFO] - from application in play-akka.actor.default-dispatcher-26 
-remover cidade
-
-2014-11-30 09:48:16,196 - [INFO] - from application in play-akka.actor.default-dispatcher-29 
-busca Todas as Cidades
-
-2014-11-30 09:48:23,388 - [INFO] - from application in play-akka.actor.default-dispatcher-32 
-busca Todos os Estados
-
-2014-11-30 09:48:37,956 - [INFO] - from application in play-akka.actor.default-dispatcher-27 
-Salvando Cidade
-
-2014-11-30 09:48:38,031 - [INFO] - from application in play-akka.actor.default-dispatcher-25 
-busca Todas as Cidades
-
-2014-11-30 09:48:42,926 - [INFO] - from application in play-akka.actor.default-dispatcher-28 
-buscaPorId Cidade
-
-2014-11-30 09:48:42,926 - [INFO] - from application in play-akka.actor.default-dispatcher-27 
-busca Todos os Estados
-
-2014-11-30 09:48:44,278 - [INFO] - from application in play-akka.actor.default-dispatcher-28 
-remover cidade
-
-2014-11-30 09:48:44,333 - [INFO] - from application in play-akka.actor.default-dispatcher-27 
-busca Todas as Cidades
-
-2014-11-30 09:48:54,892 - [INFO] - from application in play-akka.actor.default-dispatcher-30 
-busca Todos os Estados
-
-2014-11-30 09:49:06,210 - [INFO] - from application in play-akka.actor.default-dispatcher-28 
-Salvando Cidade
-
-2014-11-30 09:49:06,282 - [INFO] - from application in play-akka.actor.default-dispatcher-30 
-busca Todas as Cidades
-
-2014-11-30 09:49:08,338 - [INFO] - from application in play-akka.actor.default-dispatcher-28 
-busca Todos os Bairros
-
-2014-11-30 09:49:08,849 - [INFO] - from application in play-akka.actor.default-dispatcher-33 
-busca Todas as Cidades
-
-2014-11-30 09:49:15,409 - [INFO] - from application in play-akka.actor.default-dispatcher-30 
-Salvando Bairro
-
-2014-11-30 09:49:15,474 - [INFO] - from application in play-akka.actor.default-dispatcher-33 
-busca Todos os Bairros
-
-2014-11-30 09:49:17,463 - [INFO] - from application in play-akka.actor.default-dispatcher-33 
-busca Todas as Cidades
-
-2014-11-30 09:49:18,568 - [INFO] - from application in play-akka.actor.default-dispatcher-33 
-buscaPorId Cidade
-
-2014-11-30 09:49:18,570 - [INFO] - from application in play-akka.actor.default-dispatcher-30 
-busca Todos os Estados
-
-2014-11-30 09:49:20,391 - [INFO] - from application in play-akka.actor.default-dispatcher-33 
-remover cidade
-
-2014-11-30 09:50:06,700 - [INFO] - from application in play-akka.actor.default-dispatcher-38 
-buscaPorId Cidade
-
-2014-11-30 09:50:06,701 - [INFO] - from application in play-akka.actor.default-dispatcher-37 
-busca Todos os Estados
-
-2014-11-30 09:50:08,481 - [INFO] - from application in play-akka.actor.default-dispatcher-37 
-remover cidade
-
-2014-11-30 09:50:20,736 - [INFO] - from application in play-akka.actor.default-dispatcher-43 
-buscaPorId Cidade
-
-2014-11-30 09:50:20,737 - [INFO] - from application in play-akka.actor.default-dispatcher-39 
-busca Todos os Estados
-
-2014-11-30 09:50:21,919 - [INFO] - from application in play-akka.actor.default-dispatcher-33 
-remover cidade
-
-2014-11-30 09:51:11,945 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://localhost/sgmplaydb
-
-2014-11-30 09:51:12,009 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-11-30 09:51:12,670 - [INFO] - from application in play-akka.actor.default-dispatcher-47 
-buscaPorId Cidade
-
-2014-11-30 09:51:12,675 - [INFO] - from application in play-akka.actor.default-dispatcher-49 
-busca Todos os Estados
-
-2014-11-30 09:51:15,000 - [INFO] - from application in play-akka.actor.default-dispatcher-49 
-remover cidade
-
-2014-11-30 09:51:18,504 - [INFO] - from application in play-akka.actor.default-dispatcher-48 
-busca Todos os Estados
-
-2014-11-30 09:51:20,133 - [INFO] - from application in play-akka.actor.default-dispatcher-40 
-buscaPorId Estado
-
-2014-11-30 09:51:20,134 - [INFO] - from application in play-akka.actor.default-dispatcher-46 
-busca Todos os Paises
-
-2014-11-30 09:51:21,437 - [INFO] - from application in play-akka.actor.default-dispatcher-40 
-remover estado
-
-2014-11-30 09:53:07,296 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://localhost/sgmplaydb
-
-2014-11-30 09:53:07,364 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-11-30 09:53:08,009 - [INFO] - from application in play-akka.actor.default-dispatcher-51 
-busca Todos os Paises
-
-2014-11-30 09:53:08,006 - [INFO] - from application in play-akka.actor.default-dispatcher-53 
-buscaPorId Estado
-
-2014-11-30 09:53:10,056 - [INFO] - from application in play-akka.actor.default-dispatcher-51 
-busca Todos os Paises
-
-2014-11-30 09:53:11,267 - [INFO] - from application in play-akka.actor.default-dispatcher-53 
-buscaPorId País
-
-2014-11-30 09:53:12,903 - [INFO] - from application in play-akka.actor.default-dispatcher-53 
-remover pais
-
-2014-11-30 09:53:37,527 - [INFO] - from application in play-akka.actor.default-dispatcher-52 
-busca Todos os Estados
-
-2014-11-30 09:53:38,972 - [INFO] - from application in play-akka.actor.default-dispatcher-52 
-buscaPorId Estado
-
-2014-11-30 09:53:38,972 - [INFO] - from application in play-akka.actor.default-dispatcher-50 
-busca Todos os Paises
-
-2014-11-30 09:53:40,411 - [INFO] - from application in play-akka.actor.default-dispatcher-52 
-remover estado
-
-2014-11-30 09:54:47,980 - [INFO] - from application in play-akka.actor.default-dispatcher-59 
-buscaPorId Estado
-
-2014-11-30 09:54:47,989 - [INFO] - from application in play-akka.actor.default-dispatcher-59 
-busca Todos os Paises
-
-2014-11-30 09:54:51,031 - [INFO] - from application in play-akka.actor.default-dispatcher-58 
-busca Todos os Paises
-
-2014-11-30 09:54:52,242 - [INFO] - from application in play-akka.actor.default-dispatcher-55 
-buscaPorId País
-
-2014-11-30 09:54:55,214 - [INFO] - from application in play-akka.actor.default-dispatcher-55 
-remover pais
-
-2014-11-30 09:54:58,229 - [INFO] - from application in play-akka.actor.default-dispatcher-63 
-busca Todos os Estados
-
-2014-11-30 09:54:59,405 - [INFO] - from application in play-akka.actor.default-dispatcher-63 
-buscaPorId Estado
-
-2014-11-30 09:54:59,405 - [INFO] - from application in play-akka.actor.default-dispatcher-58 
-busca Todos os Paises
-
-2014-11-30 09:55:00,690 - [INFO] - from application in play-akka.actor.default-dispatcher-63 
-remover estado
-
-2014-11-30 09:55:06,977 - [INFO] - from application in play-akka.actor.default-dispatcher-58 
-busca Todas as Cidades
-
-2014-11-30 09:55:08,125 - [INFO] - from application in play-akka.actor.default-dispatcher-58 
-busca Todos os Estados
-
-2014-11-30 09:55:08,126 - [INFO] - from application in play-akka.actor.default-dispatcher-55 
-buscaPorId Cidade
-
-2014-11-30 09:55:09,357 - [INFO] - from application in play-akka.actor.default-dispatcher-58 
-remover cidade
-
-2014-11-30 09:55:55,045 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://localhost/sgmplaydb
-
-2014-11-30 09:55:55,566 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-11-30 09:55:57,080 - [INFO] - from application in play-akka.actor.default-dispatcher-65 
-busca Todos os Estados
-
-2014-11-30 09:55:57,096 - [INFO] - from application in play-akka.actor.default-dispatcher-67 
-buscaPorId Cidade
-
-2014-11-30 09:55:58,609 - [INFO] - from application in play-akka.actor.default-dispatcher-67 
-remover cidade
-
-2014-11-30 09:56:38,645 - [INFO] - from application in play-akka.actor.default-dispatcher-62 
-busca Todos os Bairros
-
-2014-11-30 09:56:40,438 - [INFO] - from application in play-akka.actor.default-dispatcher-62 
-busca Todas as Cidades
-
-2014-11-30 09:56:40,440 - [INFO] - from application in play-akka.actor.default-dispatcher-61 
-buscaPorId Bairro
-
-2014-11-30 09:58:16,075 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://localhost/sgmplaydb
-
-2014-11-30 09:58:16,157 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2014-11-30 09:58:16,797 - [INFO] - from application in play-akka.actor.default-dispatcher-71 
-busca Todas as Cidades
-
-2014-11-30 09:58:16,802 - [INFO] - from application in play-akka.actor.default-dispatcher-64 
-buscaPorId Bairro
-
-2014-11-30 09:58:17,966 - [INFO] - from application in play-akka.actor.default-dispatcher-64 
-remover Bairro
-
-2014-11-30 09:58:18,107 - [INFO] - from application in play-akka.actor.default-dispatcher-71 
-busca Todos os Bairros
-
-2014-11-30 09:58:23,758 - [INFO] - from application in play-akka.actor.default-dispatcher-72 
-busca Todas as Cidades
-
-2014-11-30 09:58:30,744 - [INFO] - from application in play-akka.actor.default-dispatcher-75 
-Salvando Bairro
-
-2014-11-30 09:58:30,833 - [INFO] - from application in play-akka.actor.default-dispatcher-64 
-busca Todos os Bairros
-
-2014-11-30 09:58:31,732 - [INFO] - from application in play-akka.actor.default-dispatcher-64 
-busca Todos os Clientes
-
-2014-11-30 09:58:33,069 - [INFO] - from application in play-akka.actor.default-dispatcher-74 
-busca Todos os Bairros
-
-2014-11-30 09:59:01,382 - [INFO] - from application in play-akka.actor.default-dispatcher-75 
-Salvando Cliente
-
-2014-11-30 09:59:01,494 - [INFO] - from application in play-akka.actor.default-dispatcher-70 
-busca Todos os Clientes
-
-2014-11-30 09:59:08,324 - [INFO] - from application in play-akka.actor.default-dispatcher-70 
-busca Todos os Bairros
-
-2014-11-30 09:59:09,757 - [INFO] - from application in play-akka.actor.default-dispatcher-70 
-buscaPorId Bairro
-
-2014-11-30 09:59:09,758 - [INFO] - from application in play-akka.actor.default-dispatcher-75 
-busca Todas as Cidades
-
-2014-11-30 09:59:11,503 - [INFO] - from application in play-akka.actor.default-dispatcher-70 
-remover Bairro
+2014-12-01 17:15:53,781 - [INFO] - from application in play-akka.actor.default-dispatcher-104 
+Salvando Pais
 

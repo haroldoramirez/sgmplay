@@ -3,7 +3,6 @@ package controllers;
 import com.avaje.ebean.Ebean;
 import models.locale.Pais;
 import play.Logger;
-import play.data.Form;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -15,7 +14,16 @@ public class PaisController extends Controller {
 
         Pais pais = Json.fromJson(request().body().asJson(), Pais.class);
 
-        Ebean.save(pais);
+        try{
+            Ebean.save(pais);
+        }catch (Exception e) {
+            System.out.println(e.getCause().getLocalizedMessage().toString());
+            if (e.getCause().getLocalizedMessage().toString().equals("Duplicate entry 'Brasil' for key 'uq_pais_nome'")) {
+                return badRequest("País já Cadastrado");
+            } else {
+                return badRequest("Erro interno de sistema");
+            }
+        }
 
         return created(Json.toJson(pais));
     }
@@ -61,9 +69,9 @@ public class PaisController extends Controller {
         } catch (Exception e){
             System.out.println(e.getCause().getLocalizedMessage().toString());
             if (e.getCause().getLocalizedMessage().toString().equals("Cannot delete or update a parent row: a foreign key constraint fails (`sgmplaydb`.`estado`, CONSTRAINT `fk_estado_pais_4` FOREIGN KEY (`pais_id`) REFERENCES `pais` (`id`))")) {
-                return badRequest("Restrição de Chave Estrangeira");
+                return badRequest("Existem pessoas que residem neste país, remova-os primeiro.");
             } else {
-                return badRequest(e.getCause().getLocalizedMessage().toString());
+                return badRequest("Erro interno de sistema");
             }
         }
 
