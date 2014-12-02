@@ -7,6 +7,8 @@ import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 
+import javax.persistence.PersistenceException;
+
 public class PaisController extends Controller {
 
     public static Result inserir() {
@@ -16,13 +18,10 @@ public class PaisController extends Controller {
 
         try{
             Ebean.save(pais);
-        }catch (Exception e) {
-            System.out.println(e.getCause().getLocalizedMessage().toString());
-            if (e.getCause().getLocalizedMessage().toString().equals("Duplicate entry 'Brasil' for key 'uq_pais_nome'")) {
-                return badRequest("País já Cadastrado");
-            } else {
-                return badRequest("Erro interno de sistema");
-            }
+        }catch (PersistenceException e) {
+            return badRequest("País já Cadastrado");
+        } catch (Exception e) {
+            return badRequest("Erro interno de sistema");
         }
 
         return created(Json.toJson(pais));
@@ -39,12 +38,12 @@ public class PaisController extends Controller {
     }
 
     public static Result buscaPorId(Integer id) {
-        Logger.info("buscaPorId País");
+        Logger.info("buscaPorId Pais");
 
         Pais pais = Ebean.find(Pais.class, id);
 
         if (pais == null) {
-            return notFound(Json.toJson("pais nao encontrado"));
+            return notFound("País não encontrado");
         }
 
         return ok(Json.toJson(pais));
@@ -66,13 +65,11 @@ public class PaisController extends Controller {
 
         try {
             Ebean.delete(pais);
-        } catch (Exception e){
-            System.out.println(e.getCause().getLocalizedMessage().toString());
-            if (e.getCause().getLocalizedMessage().toString().equals("Cannot delete or update a parent row: a foreign key constraint fails (`sgmplaydb`.`estado`, CONSTRAINT `fk_estado_pais_4` FOREIGN KEY (`pais_id`) REFERENCES `pais` (`id`))")) {
-                return badRequest("Existem pessoas que residem neste país, remova-os primeiro.");
-            } else {
-                return badRequest("Erro interno de sistema");
-            }
+        } catch (PersistenceException e){
+            return badRequest("Existem estados que pertencem a este país, remova-os primeiro.");
+
+        } catch (Exception e) {
+            return badRequest("Erro interno de sistema");
         }
 
         return ok(Json.toJson(pais));

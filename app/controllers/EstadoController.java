@@ -8,6 +8,8 @@ import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 
+import javax.persistence.PersistenceException;
+
 public class EstadoController extends Controller {
 
 
@@ -20,7 +22,14 @@ public class EstadoController extends Controller {
 
         estado.setPais(pais);
 
-        Ebean.save(estado);
+        try{
+            Ebean.save(estado);
+        }catch (PersistenceException e) {
+            return badRequest("Estado já Cadastrado");
+        } catch (Exception e) {
+            return badRequest("Erro interno de sistema");
+        }
+
 
         return created(Json.toJson(estado));
     }
@@ -45,7 +54,7 @@ public class EstadoController extends Controller {
         Estado estado = Ebean.find(Estado.class, id);
 
         if (estado == null) {
-            return notFound(Json.toJson("Estado não encontrado"));
+            return notFound("Estado não encontrado");
         }
 
         return ok(Json.toJson(estado));
@@ -67,13 +76,10 @@ public class EstadoController extends Controller {
 
         try {
             Ebean.delete(estado);
+        } catch (PersistenceException e) {
+            return badRequest("Existem cidades que pertencem a este estado, remova-os primeiro.");
         } catch (Exception e) {
-            System.out.println(e.getCause().getLocalizedMessage().toString());
-            if (e.getCause().getLocalizedMessage().toString().equals("Cannot delete or update a parent row: a foreign key constraint fails (`sgmplaydb`.`cidade`, CONSTRAINT `fk_cidade_estado_2` FOREIGN KEY (`estado_id`) REFERENCES `estado` (`id`))")) {
-                return badRequest("Restrição de Chave Estrangeira");
-            } else {
-                return badRequest(e.getCause().getLocalizedMessage().toString());
-            }
+            return badRequest("Erro interno de sistema");
         }
 
         return ok(Json.toJson(estado));
