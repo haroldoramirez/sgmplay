@@ -65,7 +65,7 @@ public class PaisController extends Controller {
 
         try {
             Ebean.delete(pais);
-        } catch (PersistenceException e){
+        } catch (PersistenceException e) {
             return badRequest("Existem estados que pertencem a este país, remova-os primeiro.");
 
         } catch (Exception e) {

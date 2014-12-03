@@ -8,6 +8,8 @@ import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 
+import javax.persistence.PersistenceException;
+
 public class BairroController extends Controller {
 
     public static Result inserir() {
@@ -19,7 +21,13 @@ public class BairroController extends Controller {
 
         bairro.setCidade(cidade);
 
-        Ebean.save(bairro);
+        try {
+            Ebean.save(bairro);
+        } catch (PersistenceException e) {
+            return badRequest("Bairro já Cadastrado");
+        } catch (Exception e) {
+            return badRequest("Erro interno de sistema");
+        }
 
         return created(Json.toJson(bairro));
     }
@@ -66,17 +74,11 @@ public class BairroController extends Controller {
 
         try {
             Ebean.delete(bairro);
+        } catch (PersistenceException e) {
+            return badRequest("Existem clientes que residem neste bairro, remova-os primeiro.");
         } catch (Exception e) {
-            System.out.println(e.getCause().getLocalizedMessage().toString());
-            if (e.getCause().getLocalizedMessage().toString().equals("Cannot delete or update a parent row: a foreign key constraint fails (`sgmplaydb`.`cliente`, CONSTRAINT `fk_cliente_bairro_3` FOREIGN KEY (`bairro_id`) REFERENCES `bairro` (`id`))")) {
-                return badRequest("Restrição de Chave Estrangeira");
-            } else {
-                return badRequest(e.getCause().getLocalizedMessage().toString());
-            }
+            return badRequest("Erro interno de sistema");
         }
-
-
-
 
         return ok(Json.toJson(bairro));
     }

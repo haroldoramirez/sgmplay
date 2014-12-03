@@ -24,12 +24,11 @@ public class EstadoController extends Controller {
 
         try{
             Ebean.save(estado);
-        }catch (PersistenceException e) {
+        } catch (PersistenceException e) {
             return badRequest("Estado já Cadastrado");
         } catch (Exception e) {
             return badRequest("Erro interno de sistema");
         }
-
 
         return created(Json.toJson(estado));
     }
