@@ -91,9 +91,6 @@
     <property value="false" name="MemberChooser.sorted" />
     <property value="true" name="MemberChooser.showClasses" />
     <property value="false" name="MemberChooser.copyJavadoc" />
-    <property value="configurable.group.appearance" name="options.lastSelected" />
-    <property value="0.3" name="options.splitter.main.proportions" />
-    <property value="0.2" name="options.splitter.details.proportions" />
     <property value="5" name="recentsLimit" />
     <property value="Project" name="project.structure.last.edited" />
     <property value="0.0" name="project.structure.proportion" />

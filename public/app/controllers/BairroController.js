@@ -40,7 +40,7 @@ angular.module('mercado')
                   toastr.success('Bairro Removido com sucesso');
                   $scope.init();
               }, function(data){
-                  toastr.error(data.statusText,'Não foi possível remover o Bairro');
+                  toastr.error(data.data,'Não foi possível remover o Bairro');
               });
            };
  }).controller('BairroDetailController', function ($scope, $modal, $routeParams, $location, Bairro, Cidade, toastr){
@@ -70,7 +70,7 @@ angular.module('mercado')
                    $location.path('/bairros');
                }, function(data){
                console.log(data);
-                   toastr.error(data.statusText,'Não foi possível remover o Bairro');
+                   toastr.error(data.data,'Não foi possível remover o Bairro');
                });
            };
 

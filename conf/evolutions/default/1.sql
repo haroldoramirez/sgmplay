@@ -62,6 +62,7 @@ create table fornecedor (
   celular                   varchar(255),
   fax                       varchar(255),
   site                      varchar(255),
+  email                     varchar(255),
   rua                       varchar(255),
   numero                    varchar(255),
   cep                       varchar(255),

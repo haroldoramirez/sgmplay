@@ -35,6 +35,8 @@ public class Fornecedor extends Model {
 
     private String site;
 
+    private String email;
+
     private String rua;
 
     private String numero;
@@ -166,6 +168,14 @@ public class Fornecedor extends Model {
 
     public void setBairro(Bairro bairro) {
         this.bairro = bairro;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     @Override
