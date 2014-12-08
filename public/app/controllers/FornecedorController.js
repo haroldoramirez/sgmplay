@@ -8,7 +8,7 @@ angular.module('mercado')
                   $location.path('/fornecedores');
               }, function(data){
                   console.log(data);
-                  toastr.error(data.statusText,'Não foi possível Salvar o Fornecedor');
+                  toastr.error(data.data,'Não foi possível Salvar o Fornecedor');
               });
           };
 
@@ -40,7 +40,7 @@ angular.module('mercado')
                  toastr.success('Fornecedor Removido com sucesso');
                  $scope.init();
              }, function(data){
-                 toastr.error(data.statusText,'Não foi possível remover o Fornecedor');
+                 toastr.error(data.data,'Não foi possível remover o Fornecedor');
              });
           };
 
@@ -69,7 +69,7 @@ angular.module('mercado')
                   toastr.success('Fornecedor removido com sucesso');
                   $location.path('/fornecedores');
               }, function(data){
-                  toastr.error(data.statusText,'Não foi possível remover o Fornecedor');
+                  toastr.error(data.data,'Não foi possível remover o Fornecedor');
               });
 
           };

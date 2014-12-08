@@ -8,7 +8,7 @@ angular.module('mercado')
               $location.path('/cidades');
           }, function(data){
               console.log(data);
-              toastr.error(data.statusText,'Não foi possível Salvar a Cidade');
+              toastr.error(data.data,'Não foi possível Salvar a Cidade');
           });
       };
 
@@ -40,7 +40,7 @@ angular.module('mercado')
                toastr.success('Cidade Removida com sucesso');
                $scope.init();
            }, function(data){
-               toastr.error(data.statusText,'Não foi possível remover a Cidade');
+               toastr.error(data.data,'Não foi possível remover a Cidade');
            });
         };
   }).controller('CidadeDetailController', function ($scope, $routeParams, $location, Cidade, Estado, toastr){

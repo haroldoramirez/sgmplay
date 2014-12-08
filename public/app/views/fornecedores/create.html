@@ -24,7 +24,7 @@
                         <div ng-class="{'has-error': !fornecedor.razaoSocial}">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input placeholder="Insira a Razão Social" maxlength="100" class="form-control" type="text" ng-model="fornecedor.razaoSocial" id="razaosocial" required/>
+                                <input autofocus placeholder="Insira a Razão Social" maxlength="100" class="form-control" type="text" ng-model="fornecedor.razaoSocial" id="razaosocial" required/>
                             </div>
                         </div>
                     </div>
@@ -81,7 +81,7 @@
                         </div>
                     </div>
                     <!--Input do Rua-->
-                    <div class="col-lg-7">
+                    <div class="col-lg-6">
                         <label class="control-label" for="rua">Rua</label>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
@@ -94,6 +94,14 @@
                         <div class="input-group">
                             <span class="input-group-addon"><b>Nº</b></span>
                             <input placeholder="000" maxlength="5" class="form-control" type="text" ng-model="fornecedor.numero" id="numero"/>
+                        </div>
+                    </div>
+                    <!--Input do Complemento-->
+                    <div class="col-lg-4">
+                        <label class="control-label" for="complemento">Complemento</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <input placeholder="Casa/Apartamento/Conjunto" maxlength="100" class="form-control" type="text" ng-model="fornecedor.complemento" id="complemento"/>
                         </div>
                     </div>
                     <!--Input do CEP-->

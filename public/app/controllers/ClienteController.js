@@ -8,7 +8,7 @@ angular.module('mercado')
                   $location.path('/clientes');
               }, function(data){
                   console.log(data);
-                  toastr.error(data.statusText,'Não foi possível Salvar o Cliente');
+                  toastr.error(data.data,'Não foi possível Salvar o Cliente');
               });
           };
 
@@ -40,7 +40,7 @@ angular.module('mercado')
                  toastr.success('Cliente Removido com sucesso');
                  $scope.init();
              }, function(data){
-                 toastr.error(data.statusText,'Não foi possível remover o Cliente');
+                 toastr.error(data.data,'Não foi possível remover o Cliente');
              });
           };
 
@@ -69,7 +69,7 @@ angular.module('mercado')
                   toastr.success('Cliente removido com sucesso');
                   $location.path('/clientes');
               }, function(data){
-                  toastr.error(data.statusText,'Não foi possível remover o Cliente');
+                  toastr.error(data.data,'Não foi possível remover o Cliente');
               });
 
           };

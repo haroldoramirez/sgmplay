@@ -8,7 +8,7 @@ angular.module('mercado')
                   $location.path('/bairros');
               }, function(data){
                   console.log(data);
-                  toastr.error(data.statusText,'Não foi possível Salvar o Bairro');
+                  toastr.error(data.data,'Não foi possível Salvar o Bairro');
               });
           };
 

@@ -40,7 +40,7 @@ angular.module('mercado')
                toastr.success('País removido com sucesso');
                $scope.init();
            }, function(data){
-               toastr.error(data.statusText,'Não foi possível remover o País');
+               toastr.error(data.data,'Não foi possível remover o País');
            });
         };
 

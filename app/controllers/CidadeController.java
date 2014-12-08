@@ -77,7 +77,7 @@ public class CidadeController extends Controller {
         try {
             Ebean.delete(cidade);
         } catch (PersistenceException e) {
-            return badRequest("Existem bairros que pertencem desta cidade, remova-os primeiro.");
+            return badRequest("Existem bairros que pertencem a esta cidade, remova-os primeiro.");
         } catch (Exception e) {
             return badRequest("Erro interno de sistema");
         }
