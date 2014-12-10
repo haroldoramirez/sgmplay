@@ -14,6 +14,7 @@ create table bairro (
 create table categoria (
   id                        integer auto_increment not null,
   descricao                 varchar(255) not null,
+  constraint uq_categoria_descricao unique (descricao),
   constraint pk_categoria primary key (id))
 ;
 
@@ -56,6 +57,14 @@ create table estado (
   pais_id                   integer not null,
   constraint uq_estado_1 unique (nome,pais_id),
   constraint pk_estado primary key (id))
+;
+
+create table fabricante (
+  id                        integer auto_increment not null,
+  descricao                 varchar(255) not null,
+  observacoes               varchar(255),
+  constraint uq_fabricante_descricao unique (descricao),
+  constraint pk_fabricante primary key (id))
 ;
 
 create table fornecedor (
@@ -114,6 +123,8 @@ drop table cidade;
 drop table cliente;
 
 drop table estado;
+
+drop table fabricante;
 
 drop table fornecedor;
 

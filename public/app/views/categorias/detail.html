@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Detalhe da Categoria</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <fieldset>
+                <div id="legend">
+                    <legend>
+                        <h2>
+                            Atualizar Categoria <a class="btn btn-link pull-right" data-template="assets/modal/ajuda/categoriaModal.html" bs-modal="modalAjuda">
+                            <span class="glyphicon glyphicon-info-sign"></span><b> Ajuda</b></a>
+                        </h2>
+                    </legend>
+                </div>
+                <form ng-init="init()" class="form-horizontal" ng-submit="update()">
+                    <div class="form-group">
+                        <!--Input do Descrição-->
+                        <div class="col-lg-12">
+                            <label class="control-label" for="descricao">Descrição</label>
+                            <div ng-class="{'has-error': !pais.nome}">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-leaf"></i></span>
+                                    <input autofocus placeholder="Insira a categoria" maxlength="100" class="form-control" type="text" ng-model="categoria.descricao" id="descricao" required/>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Botões-->
+                        <div class="col-lg-8">
+                            <div class="control-group">
+                                <br>
+                                <button type="submit" id="save" class="btn btn-success" ng-disabled="!categoria.descricao">
+                                    <span class="glyphicon glyphicon-refresh"></span> <b>Atualizar</b>
+                                </button>
+                                <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">
+                                    <span class="glyphicon glyphicon-arrow-left"></span> <b>Voltar</b>
+                                </button>
+                                <button  data-animation="am-flip-x"  data-trigger="focus"  type="button" class="btn btn-danger" data-template="assets/popover/confirmacaoPopover.html" bs-popover="popoverConfirmacao">
+                                    <span class="glyphicon glyphicon-trash"></span> <b>Remover</b>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</div>
+</body>
+</html>

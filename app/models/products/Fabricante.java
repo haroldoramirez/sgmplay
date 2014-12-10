@@ -6,8 +6,8 @@ import play.libs.Json;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "categoria")
-public class Categoria extends Model {
+@Table(name = "fabricante")
+public class Fabricante extends Model {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -15,6 +15,8 @@ public class Categoria extends Model {
 
     @Column(nullable = false, unique = true)
     private String descricao;
+
+    private String observacoes;
 
     public Integer getId() {
         return id;
@@ -30,6 +32,14 @@ public class Categoria extends Model {
 
     public void setDescricao(String descricao) {
         this.descricao = descricao;
+    }
+
+    public String getObservacoes() {
+        return observacoes;
+    }
+
+    public void setObservacoes(String observacoes) {
+        this.observacoes = observacoes;
     }
 
     @Override

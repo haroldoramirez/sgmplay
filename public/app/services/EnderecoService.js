@@ -35,4 +35,10 @@ angular.module('mercado')
         getAll: {method: 'GET', url: BaseUrl + '/fornecedores', isArray: true},
         update: {method: 'PUT', url: BaseUrl + '/fornecedores/:id', isArray: false}
       });
-  }]);
+  }]).service('Categoria',['$resource', 'BaseUrl',
+    function($resource, BaseUrl){
+      return $resource(BaseUrl + '/categorias/:id', {}, {
+         getAll: {method: 'GET', url: BaseUrl + '/categorias', isArray: true},
+         update: {method: 'PUT', url: BaseUrl + '/categorias/:id', isArray: false}
+      });
+   }]);

@@ -54,5 +54,12 @@ GET     /categorias                  controllers.CategoriaController.buscaTodos(
 GET     /categorias/:id              controllers.CategoriaController.buscaPorId(id:Integer)
 DELETE  /categorias/:id              controllers.CategoriaController.remover(id:Integer)
 
+# CRUD Fabricante
+POST    /fabricantes                  controllers.FabricanteController.inserir()
+PUT     /fabricantes/:id              controllers.FabricanteController.atualizar(id:Integer)
+GET     /fabricantes                  controllers.FabricanteController.buscaTodos()
+GET     /fabricantes/:id              controllers.FabricanteController.buscaPorId(id:Integer)
+DELETE  /fabricantes/:id              controllers.FabricanteController.remover(id:Integer)
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)
