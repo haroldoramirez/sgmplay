@@ -11,6 +11,12 @@ create table bairro (
   constraint pk_bairro primary key (id))
 ;
 
+create table categoria (
+  id                        integer auto_increment not null,
+  descricao                 varchar(255) not null,
+  constraint pk_categoria primary key (id))
+;
+
 create table cidade (
   id                        integer auto_increment not null,
   nome                      varchar(255) not null,
@@ -100,6 +106,8 @@ create index ix_fornecedor_bairro_5 on fornecedor (bairro_id);
 SET FOREIGN_KEY_CHECKS=0;
 
 drop table bairro;
+
+drop table categoria;
 
 drop table cidade;
 

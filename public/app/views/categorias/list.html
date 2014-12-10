@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Lista de Categorias</title>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <fieldset>
+            <div id="legend">
+                <legend>
+                    <h2>
+                        Lista de Categoria <a class="btn btn-success pull-right" href="#/categorias/novo">
+                        <span class="glyphicon glyphicon-plus"></span><b> Nova Categoria</b></a>
+                    </h2>
+                </legend>
+            </div>
+
+            <table ng-init="init()" class="table-striped table table-hover table-bordered">
+                <tr>
+                    <th width="800px">Categoria</th>
+                    <!--<th width="50px"></th>-->
+                </tr>
+                <tr ng-repeat="categoria in categorias">
+                    <td><b><a href="#/categorias/detalhe/{{categoria.id}}">{{categoria.nome}}</a></b></td>
+                    <!--<td>-->
+                    <!--<a href="" confirmation-needed="Confirmar a exclusão do País?" class="glyphicon glyphicon-trash" ng-click="delete(pais.id)"></a>-->
+                    <!--</td>-->
+                </tr>
+            </table>
+        </fieldset>
+    </div>
+</div>
+</body>
+</html>
