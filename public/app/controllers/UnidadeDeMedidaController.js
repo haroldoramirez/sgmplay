@@ -22,11 +22,6 @@ angular.module('mercado')
             });
         };
 
-        $scope.modalAjuda = {
-            "title": "Ajuda",
-            "content": "Campos Obrigatórios em Vermelho"
-        };
-
   }).controller('UnidadeDeMedidaListController', function ($scope, UnidadeDeMedida, toastr){
         $scope.unidadesdemedidas = [];
         $scope.init = function(){
@@ -72,11 +67,6 @@ angular.module('mercado')
             console.log(data);
                 toastr.error(data.data,'Não foi possível remover a Unidade de Medida');
             });
-        };
-
-        $scope.modalAjuda = {
-             "title": "Ajuda",
-             "content": "Campos Obrigatórios em Vermelho"
         };
 
         $scope.confirmacaoModal = {

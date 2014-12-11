@@ -22,11 +22,6 @@ angular.module('mercado')
             });
         };
 
-        $scope.modalAjuda = {
-            "title": "Ajuda",
-            "content": "Campos Obrigatórios em Vermelho"
-        };
-
   }).controller('CategoriaListController', function ($scope, Categoria, toastr){
         $scope.categorias = [];
         $scope.init = function(){
@@ -72,11 +67,6 @@ angular.module('mercado')
             console.log(data);
                 toastr.error(data.data,'Não foi possível remover a Categoria');
             });
-        };
-
-        $scope.modalAjuda = {
-             "title": "Ajuda",
-             "content": "Campos Obrigatórios em Vermelho"
         };
 
         $scope.confirmacaoModal = {

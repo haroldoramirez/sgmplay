@@ -22,11 +22,6 @@ angular.module('mercado')
             });
         };
 
-        $scope.modalAjuda = {
-            "title": "Ajuda",
-            "content": "Campos Obrigatórios em Vermelho"
-        };
-
   }).controller('EstadoListController', function ($scope, Estado, toastr){
         $scope.estados = [];
         $scope.init = function(){
@@ -74,11 +69,6 @@ angular.module('mercado')
                 toastr.error(data.data,'Não foi possível remover o Estado');
             });
 
-        };
-
-        $scope.modalAjuda = {
-            "title": "Ajuda",
-            "content": "Campos Obrigatórios em Vermelho"
         };
 
         $scope.confirmacaoModal = {

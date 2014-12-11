@@ -22,11 +22,6 @@ angular.module('mercado')
               });
           };
 
-        $scope.modalAjuda = {
-             "title": "Ajuda",
-             "content": "Campos Obrigatórios em Vermelho"
-        };
-
 }).controller('ClienteListController', function ($scope, Cliente, toastr){
           $scope.clientes = [];
           $scope.init = function(){
@@ -72,11 +67,6 @@ angular.module('mercado')
                   toastr.error(data.data,'Não foi possível remover o Cliente');
               });
 
-          };
-
-          $scope.modalAjuda = {
-                "title": "Ajuda",
-                "content": "Campos Obrigatórios em Vermelho"
           };
 
           $scope.confirmacaoModal = {

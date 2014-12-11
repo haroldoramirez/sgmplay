@@ -22,11 +22,6 @@ angular.module('mercado')
             });
         };
 
-        $scope.modalAjuda = {
-            "title": "Ajuda",
-            "content": "Campos Obrigatórios em Vermelho"
-        };
-
   }).controller('PaisListController', function ($scope, Pais, toastr){
         $scope.paises = [];
         $scope.init = function(){
@@ -44,7 +39,7 @@ angular.module('mercado')
            });
         };
 
-  }).controller('PaisDetailController', function ($scope, $routeParams, $location, Pais, toastr){
+  }).controller('PaisDetailController', function ($scope, $modal, $routeParams, $location, Pais, toastr){
 
         $scope.init = function(){
             $scope.pais = Pais.get({id:$routeParams.id});
@@ -72,11 +67,6 @@ angular.module('mercado')
             console.log(data);
                 toastr.error(data.data,'Não foi possível remover o País');
             });
-        };
-
-        $scope.modalAjuda = {
-             "title": "Ajuda",
-             "content": "Campos Obrigatórios em Vermelho"
         };
 
         $scope.confirmacaoModal = {

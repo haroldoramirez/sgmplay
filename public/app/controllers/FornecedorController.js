@@ -22,11 +22,6 @@ angular.module('mercado')
               });
           };
 
-        $scope.modalAjuda = {
-             "title": "Ajuda",
-             "content": "Campos Obrigatórios em Vermelho"
-        };
-
 }).controller('FornecedorListController', function ($scope, Fornecedor, toastr){
           $scope.fornecedores = [];
           $scope.init = function(){
@@ -72,11 +67,6 @@ angular.module('mercado')
                   toastr.error(data.data,'Não foi possível remover o Fornecedor');
               });
 
-          };
-
-          $scope.modalAjuda = {
-                "title": "Ajuda",
-                "content": "Campos Obrigatórios em Vermelho"
           };
 
           $scope.confirmacaoModal = {

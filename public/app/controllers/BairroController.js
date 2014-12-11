@@ -22,11 +22,6 @@ angular.module('mercado')
               });
           };
 
-           $scope.modalAjuda = {
-                "title": "Ajuda",
-                "content": "Campos Obrigatórios em Vermelho"
-           };
-
  }).controller('BairroListController', function ($scope, Bairro, toastr){
            $scope.bairros = [];
            $scope.init = function(){
@@ -74,19 +69,14 @@ angular.module('mercado')
                });
            };
 
-         $scope.modalAjuda = {
-               "title": "Ajuda",
-               "content": "Campos Obrigatórios em Vermelho"
-          };
-
-          $scope.confirmacaoModal = {
+           $scope.confirmacaoModal = {
                 "title": "Confirmação",
                 "content": "Deseja excluir o Bairro?"
-          };
+           };
 
-         $scope.popoverConfirmacao = {
+          $scope.popoverConfirmacao = {
                 "title": "Confirmação",
                 "content": "Excluir?"
-         };
+          };
 
  });
