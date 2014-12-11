@@ -1,4 +1,4 @@
-package models.products;
+package models.stock;
 
 import play.db.ebean.Model;
 import play.libs.Json;
@@ -6,15 +6,17 @@ import play.libs.Json;
 import javax.persistence.*;
 
 @Entity
-@Table(name = "categoria")
-public class Categoria extends Model {
+@Table(name = "unidadedemedida")
+public class UnidadeDeMedida extends Model {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
     @Column(nullable = false, unique = true)
-    private String descricao;
+    private String nome;
+
+    private String observacoes;
 
     public Integer getId() {
         return id;
@@ -24,12 +26,20 @@ public class Categoria extends Model {
         this.id = id;
     }
 
-    public String getDescricao() {
-        return descricao;
+    public String getNome() {
+        return nome;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
+
+    public String getObservacoes() {
+        return observacoes;
+    }
+
+    public void setObservacoes(String observacoes) {
+        this.observacoes = observacoes;
     }
 
     @Override

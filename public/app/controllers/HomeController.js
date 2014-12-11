@@ -1,5 +1,5 @@
 angular.module('mercado')
-    .controller('HomeController', function ($scope, $location, $modal, $log) {
+    .controller('HomeController', function ($scope, $location, $popover, $modal, $log) {
 
         $scope.modalInformacoes = {
             "title": "Informações",
@@ -8,6 +8,6 @@ angular.module('mercado')
 
          $scope.popoverInformacoes = {
            "title": "Informações",
-           "content": "Sistema de Mercados Luana - Melhor Preços é Aqui!"
+           "content": "Sistema de Mercados Luana - Melhor Preços é Aqui"
          };
     });

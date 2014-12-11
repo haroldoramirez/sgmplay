@@ -88,6 +88,30 @@ angular.module('mercado', ['ngRoute', 'ngResource', 'toastr', 'mgcrea.ngStrap', 
             .when('/categorias/detalhe/:id', {
                  templateUrl: '/assets/app/views/categorias/detail.html',
                  controller: 'CategoriaDetailController'
+            })
+            .when('/fabricantes', {
+                 templateUrl: '/assets/app/views/fabricantes/list.html',
+                 controller: 'FabricanteListController'
+            })
+            .when('/fabricantes/novo', {
+                 templateUrl: '/assets/app/views/fabricantes/create.html',
+                 controller: 'FabricanteCreateController'
+            })
+            .when('/fabricantes/detalhe/:id', {
+                 templateUrl: '/assets/app/views/fabricantes/detail.html',
+                 controller: 'FabricanteDetailController'
+            })
+            .when('/unidadesdemedidas', {
+                 templateUrl: '/assets/app/views/unidadesdemedidas/list.html',
+                 controller: 'UnidadeDeMedidaListController'
+            })
+            .when('/unidadesdemedidas/novo', {
+                 templateUrl: '/assets/app/views/unidadesdemedidas/create.html',
+                 controller: 'UnidadeDeMedidaCreateController'
+            })
+            .when('/unidadesdemedidas/detalhe/:id', {
+                 templateUrl: '/assets/app/views/unidadesdemedidas/detail.html',
+                 controller: 'UnidadeDeMedidaDetailController'
             });
    //Configuração das notificações
    }).config(function(toastrConfig) {

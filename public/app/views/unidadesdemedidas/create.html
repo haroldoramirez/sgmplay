@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Cadastrar Unidade de Medida</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3">
+            <fieldset>
+                <div id="legend">
+                    <legend>
+                        <h2>
+                            Cadastrar Unidade de Medida <a class="btn btn-link pull-right" data-template="assets/modal/ajuda/unidadedemedidaModal.html" bs-modal="modalAjuda">
+                            <span class="glyphicon glyphicon-info-sign"></span><b> Ajuda</b></a>
+                        </h2>
+                    </legend>
+                </div>
+                <form class="form-horizontal" ng-submit="save()">
+                    <div class="form-group">
+                        <!--Input do Nome-->
+                        <div class="col-lg-12">
+                            <label class="control-label" for="nome">Nome</label>
+                            <div ng-class="{'has-error': !unidadedemedida.nome}">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-indent-right"></i></span>
+                                    <input autofocus placeholder="Insira o nome da Unidade de Medida" maxlength="100" class="form-control" type="text" ng-model="unidadedemedida.nome" id="nome" required/>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Input de Observações-->
+                        <div class="col-lg-12">
+                            <label class="control-label" for="observacoes">Observações</label>
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-book"></i></span>
+                                <textarea maxlength="200" placeholder="Informações Adicionais" style="overflow:auto;resize:none" class="form-control" ng-model="unidadedemedida.observacoes" id="observacoes">
+
+                                </textarea>
+                            </div>
+                            <br>
+                        </div>
+                        <!--Botões-->
+                        <div class="col-lg-8">
+                            <div class="control-group">
+                                <br>
+                                <button id="save" class="btn btn-success" type="submit" ng-disabled="!unidadedemedida.nome">
+                                    <span class="glyphicon glyphicon-ok"></span> <b>Salvar</b>
+                                </button>
+                                <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">
+                                    <span class="glyphicon glyphicon-arrow-left"></span> <b>Voltar</b>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</div>
+</body>
+</html>

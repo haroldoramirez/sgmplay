@@ -61,9 +61,9 @@ create table estado (
 
 create table fabricante (
   id                        integer auto_increment not null,
-  descricao                 varchar(255) not null,
+  nome                      varchar(255) not null,
   observacoes               varchar(255),
-  constraint uq_fabricante_descricao unique (descricao),
+  constraint uq_fabricante_nome unique (nome),
   constraint pk_fabricante primary key (id))
 ;
 
@@ -95,6 +95,14 @@ create table pais (
   ddi                       varchar(255),
   constraint uq_pais_nome unique (nome),
   constraint pk_pais primary key (id))
+;
+
+create table unidadedemedida (
+  id                        integer auto_increment not null,
+  nome                      varchar(255) not null,
+  observacoes               varchar(255),
+  constraint uq_unidadedemedida_nome unique (nome),
+  constraint pk_unidadedemedida primary key (id))
 ;
 
 alter table bairro add constraint fk_bairro_cidade_1 foreign key (cidade_id) references cidade (id) on delete restrict on update restrict;
@@ -129,6 +137,8 @@ drop table fabricante;
 drop table fornecedor;
 
 drop table pais;
+
+drop table unidadedemedida;
 
 SET FOREIGN_KEY_CHECKS=1;
 

@@ -1,7 +1,7 @@
 package controllers;
 
 import com.avaje.ebean.Ebean;
-import models.products.Fabricante;
+import models.stock.Fabricante;
 import play.Logger;
 import play.libs.Json;
 import play.mvc.Controller;

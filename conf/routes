@@ -5,6 +5,9 @@
 # Home page
 GET     /                           controllers.Assets.at(path="/public", file="/index.html")
 
+# Applications
+GET     /versaoplay                 controllers.Application.versaoplay()
+
 # CRUD País
 POST    /paises                     controllers.PaisController.inserir()
 PUT     /paises/:id                 controllers.PaisController.atualizar(id:Integer)
@@ -60,6 +63,13 @@ PUT     /fabricantes/:id              controllers.FabricanteController.atualizar
 GET     /fabricantes                  controllers.FabricanteController.buscaTodos()
 GET     /fabricantes/:id              controllers.FabricanteController.buscaPorId(id:Integer)
 DELETE  /fabricantes/:id              controllers.FabricanteController.remover(id:Integer)
+
+# CRUD Unidade de Medida
+POST    /unidadesdemedidas                  controllers.UnidadeDeMedidaController.inserir()
+PUT     /unidadesdemedidas/:id              controllers.UnidadeDeMedidaController.atualizar(id:Integer)
+GET     /unidadesdemedidas                  controllers.UnidadeDeMedidaController.buscaTodos()
+GET     /unidadesdemedidas/:id              controllers.UnidadeDeMedidaController.buscaPorId(id:Integer)
+DELETE  /unidadesdemedidas/:id              controllers.UnidadeDeMedidaController.remover(id:Integer)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

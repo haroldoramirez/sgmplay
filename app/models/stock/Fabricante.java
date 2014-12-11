@@ -1,4 +1,4 @@
-package models.products;
+package models.stock;
 
 import play.db.ebean.Model;
 import play.libs.Json;
@@ -14,7 +14,7 @@ public class Fabricante extends Model {
     private Integer id;
 
     @Column(nullable = false, unique = true)
-    private String descricao;
+    private String nome;
 
     private String observacoes;
 
@@ -26,12 +26,12 @@ public class Fabricante extends Model {
         this.id = id;
     }
 
-    public String getDescricao() {
-        return descricao;
+    public String getNome() {
+        return nome;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     public String getObservacoes() {
