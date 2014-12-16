@@ -50,7 +50,6 @@
                     <div class="col-lg-3">
                         <label class="control-label">Gênero</label>
                         <select ng-model="cliente.genero" class="form-control" id="cliente.genero">
-                            <option selected value="">Selecione</option>
                             <option value="MASCULINO">Masculino</option>
                             <option value="FEMININO">Feminino</option>
                         </select>
@@ -61,7 +60,7 @@
                         <div ng-class="{'has-error': !cliente.telefone}">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
-                                <input ui-br-phone-number placeholder="(__) ____-____" maxlength="14" class="form-control telefone" type="text" ng-model="cliente.telefone" id="telefone" required/>
+                                <input ui-br-phone-number placeholder="(__) ____-____" maxlength="15" class="form-control telefone" type="text" ng-model="cliente.telefone" id="telefone" required/>
                             </div>
                         </div>
                     </div>
@@ -70,7 +69,7 @@
                         <label class="control-label" for="celular">Celular</label>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
-                            <input ui-br-phone-number placeholder="(__) ____-____" placeholder="(__) ____-____" maxlength="14" class="form-control" type="text" ng-model="cliente.celular" id="celular"/>
+                            <input ui-br-phone-number placeholder="(__) ____-____" placeholder="(__) ____-____" maxlength="15" class="form-control" type="text" ng-model="cliente.celular" id="celular"/>
                         </div>
                     </div>
 

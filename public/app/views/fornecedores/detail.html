@@ -16,10 +16,9 @@
                     </h2>
                 </legend>
             </div>
-            <form ng-init="init()" class="form-horizontal" ng-submit="save()">
+            <form ng-init="init()" class="form-horizontal" ng-submit="update()">
                 <div class="form-group">
-                    <div class="form-group">
-                        <!--Input do Razão Social-->
+                    <!--Input do Razão Social-->
                         <div class="col-lg-7">
                             <label class="control-label" for="razaosocial">Razão Social</label>
                             <div ng-class="{'has-error': !fornecedor.razaoSocial}">

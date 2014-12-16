@@ -139,6 +139,10 @@ angular.module('mercado', ['ngRoute', 'ngResource', 'toastr', 'mgcrea.ngStrap', 
   //Configuração das datas
    }).config(function($datepickerProvider) {
         angular.extend($datepickerProvider.defaults, {
+          iconLeft: 'glyphicon glyphicon-step-backward',
+          iconRight: 'glyphicon glyphicon-step-forward',
+          placement: 'bottom',
+           language: 'pt-BR',
           dateFormat: 'dd/MM/yyyy',
           startWeek: 1
         });
