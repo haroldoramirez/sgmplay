@@ -97,6 +97,23 @@ create table pais (
   constraint pk_pais primary key (id))
 ;
 
+create table produto (
+  id                        integer auto_increment not null,
+  descricao                 varchar(255) not null,
+  quantidade_minima         integer not null,
+  quantidade_em_estoque     integer not null,
+  preco_de_custo            float not null,
+  preco_de_venda            float not null,
+  codigo_de_barras          varchar(255),
+  observacoes               varchar(255),
+  fornecedor_id             integer,
+  categoria_id              integer,
+  fabricante_id             integer,
+  unidade_de_medida_id      integer,
+  constraint uq_produto_descricao unique (descricao),
+  constraint pk_produto primary key (id))
+;
+
 create table unidadedemedida (
   id                        integer auto_increment not null,
   nome                      varchar(255) not null,
@@ -115,6 +132,14 @@ alter table estado add constraint fk_estado_pais_4 foreign key (pais_id) referen
 create index ix_estado_pais_4 on estado (pais_id);
 alter table fornecedor add constraint fk_fornecedor_bairro_5 foreign key (bairro_id) references bairro (id) on delete restrict on update restrict;
 create index ix_fornecedor_bairro_5 on fornecedor (bairro_id);
+alter table produto add constraint fk_produto_fornecedor_6 foreign key (fornecedor_id) references fornecedor (id) on delete restrict on update restrict;
+create index ix_produto_fornecedor_6 on produto (fornecedor_id);
+alter table produto add constraint fk_produto_categoria_7 foreign key (categoria_id) references categoria (id) on delete restrict on update restrict;
+create index ix_produto_categoria_7 on produto (categoria_id);
+alter table produto add constraint fk_produto_fabricante_8 foreign key (fabricante_id) references fabricante (id) on delete restrict on update restrict;
+create index ix_produto_fabricante_8 on produto (fabricante_id);
+alter table produto add constraint fk_produto_unidadeDeMedida_9 foreign key (unidade_de_medida_id) references unidadedemedida (id) on delete restrict on update restrict;
+create index ix_produto_unidadeDeMedida_9 on produto (unidade_de_medida_id);
 
 
 
@@ -137,6 +162,8 @@ drop table fabricante;
 drop table fornecedor;
 
 drop table pais;
+
+drop table produto;
 
 drop table unidadedemedida;
 
