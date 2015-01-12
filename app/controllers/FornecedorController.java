@@ -8,6 +8,8 @@ import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 
+import javax.persistence.PersistenceException;
+
 public class FornecedorController extends Controller {
 
     public static Result inserir() {
@@ -19,7 +21,13 @@ public class FornecedorController extends Controller {
 
         fornecedor.setBairro(bairro);
 
-        Ebean.save(fornecedor);
+        try {
+            Ebean.save(fornecedor);
+        } catch (PersistenceException e) {
+            return badRequest("Fornecedor já Cadastrado");
+        } catch (Exception e) {
+            return badRequest("Erro interno de sistema");
+        }
 
         return created(Json.toJson(fornecedor));
     }
@@ -64,7 +72,13 @@ public class FornecedorController extends Controller {
             return notFound("Fornecedor não encontrado");
         }
 
-        Ebean.delete(fornecedor);
+        try {
+            Ebean.delete(fornecedor);
+        } catch (PersistenceException e) {
+            return badRequest("Existem Produtos que dependem deste Fornecedor");
+        } catch (Exception e) {
+            return badRequest("Erro interno de sistema");
+        }
 
         return ok(Json.toJson(fornecedor));
     }

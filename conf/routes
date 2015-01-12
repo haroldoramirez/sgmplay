@@ -3,59 +3,59 @@
 # ~~~~
 
 # Home page
-GET     /                           controllers.Assets.at(path="/public", file="/index.html")
+GET     /                             controllers.Assets.at(path="/public", file="/index.html")
 
 # Applications
-GET     /versaoplay                 controllers.Application.versaoplay()
+GET		/versaoplay					  controllers.Application.versaoplay()
 
 # CRUD País
-POST    /paises                     controllers.PaisController.inserir()
-PUT     /paises/:id                 controllers.PaisController.atualizar(id:Integer)
-GET     /paises                     controllers.PaisController.buscaTodos()
-GET     /paises/:id                 controllers.PaisController.buscaPorId(id:Integer)
-DELETE  /paises/:id                 controllers.PaisController.remover(id:Integer)
+POST    /paises                       controllers.PaisController.inserir()
+PUT     /paises/:id                   controllers.PaisController.atualizar(id:Integer)
+GET     /paises                       controllers.PaisController.buscaTodos()
+GET     /paises/:id                   controllers.PaisController.buscaPorId(id:Integer)
+DELETE  /paises/:id                   controllers.PaisController.remover(id:Integer)
 
 # CRUD Estado
-POST    /estados                    controllers.EstadoController.inserir()
-PUT     /estados/:id                controllers.EstadoController.atualizar(id:Integer)
-GET     /estados                    controllers.EstadoController.buscaTodos()
-GET     /estados/:id                controllers.EstadoController.buscaPorId(id:Integer)
-DELETE  /estados/:id                controllers.EstadoController.remover(id:Integer)
+POST    /estados                      controllers.EstadoController.inserir()
+PUT     /estados/:id                  controllers.EstadoController.atualizar(id:Integer)
+GET     /estados                      controllers.EstadoController.buscaTodos()
+GET     /estados/:id                  controllers.EstadoController.buscaPorId(id:Integer)
+DELETE  /estados/:id                  controllers.EstadoController.remover(id:Integer)
 
 # CRUD Cidade
-POST    /cidades                    controllers.CidadeController.inserir()
-PUT     /cidades/:id                controllers.CidadeController.atualizar(id:Integer)
-GET     /cidades                    controllers.CidadeController.buscaTodos()
-GET     /cidades/:id                controllers.CidadeController.buscaPorId(id:Integer)
-DELETE  /cidades/:id                controllers.CidadeController.remover(id:Integer)
+POST    /cidades                      controllers.CidadeController.inserir()
+PUT     /cidades/:id                  controllers.CidadeController.atualizar(id:Integer)
+GET     /cidades                      controllers.CidadeController.buscaTodos()
+GET     /cidades/:id                  controllers.CidadeController.buscaPorId(id:Integer)
+DELETE  /cidades/:id                  controllers.CidadeController.remover(id:Integer)
 
 # CRUD Bairro
-POST    /bairros                    controllers.BairroController.inserir()
-PUT     /bairros/:id                controllers.BairroController.atualizar(id:Integer)
-GET     /bairros                    controllers.BairroController.buscaTodos()
-GET     /bairros/:id                controllers.BairroController.buscaPorId(id:Integer)
-DELETE  /bairros/:id                controllers.BairroController.remover(id:Integer)
+POST    /bairros                      controllers.BairroController.inserir()
+PUT     /bairros/:id                  controllers.BairroController.atualizar(id:Integer)
+GET     /bairros                      controllers.BairroController.buscaTodos()
+GET     /bairros/:id                  controllers.BairroController.buscaPorId(id:Integer)
+DELETE  /bairros/:id                  controllers.BairroController.remover(id:Integer)
 
 # CRUD Cliente
-POST    /clientes                    controllers.ClienteController.inserir()
-PUT     /clientes/:id                controllers.ClienteController.atualizar(id:Integer)
-GET     /clientes                    controllers.ClienteController.buscaTodos()
-GET     /clientes/:id                controllers.ClienteController.buscaPorId(id:Integer)
-DELETE  /clientes/:id                controllers.ClienteController.remover(id:Integer)
+POST    /clientes                     controllers.ClienteController.inserir()
+PUT     /clientes/:id                 controllers.ClienteController.atualizar(id:Integer)
+GET     /clientes                     controllers.ClienteController.buscaTodos()
+GET     /clientes/:id                 controllers.ClienteController.buscaPorId(id:Integer)
+DELETE  /clientes/:id                 controllers.ClienteController.remover(id:Integer)
 
 # CRUD Fornecedor
-POST    /fornecedores                controllers.FornecedorController.inserir()
-PUT     /fornecedores/:id            controllers.FornecedorController.atualizar(id:Integer)
-GET     /fornecedores                controllers.FornecedorController.buscaTodos()
-GET     /fornecedores/:id            controllers.FornecedorController.buscaPorId(id:Integer)
-DELETE  /fornecedores/:id            controllers.FornecedorController.remover(id:Integer)
+POST    /fornecedores                 controllers.FornecedorController.inserir()
+PUT     /fornecedores/:id             controllers.FornecedorController.atualizar(id:Integer)
+GET     /fornecedores                 controllers.FornecedorController.buscaTodos()
+GET     /fornecedores/:id             controllers.FornecedorController.buscaPorId(id:Integer)
+DELETE  /fornecedores/:id             controllers.FornecedorController.remover(id:Integer)
 
 # CRUD Categoria
-POST    /categorias                  controllers.CategoriaController.inserir()
-PUT     /categorias/:id              controllers.CategoriaController.atualizar(id:Integer)
-GET     /categorias                  controllers.CategoriaController.buscaTodos()
-GET     /categorias/:id              controllers.CategoriaController.buscaPorId(id:Integer)
-DELETE  /categorias/:id              controllers.CategoriaController.remover(id:Integer)
+POST    /categorias                   controllers.CategoriaController.inserir()
+PUT     /categorias/:id               controllers.CategoriaController.atualizar(id:Integer)
+GET     /categorias                   controllers.CategoriaController.buscaTodos()
+GET     /categorias/:id               controllers.CategoriaController.buscaPorId(id:Integer)
+DELETE  /categorias/:id               controllers.CategoriaController.remover(id:Integer)
 
 # CRUD Fabricante
 POST    /fabricantes                  controllers.FabricanteController.inserir()
@@ -65,11 +65,18 @@ GET     /fabricantes/:id              controllers.FabricanteController.buscaPorI
 DELETE  /fabricantes/:id              controllers.FabricanteController.remover(id:Integer)
 
 # CRUD Unidade de Medida
-POST    /unidadesdemedidas                  controllers.UnidadeDeMedidaController.inserir()
-PUT     /unidadesdemedidas/:id              controllers.UnidadeDeMedidaController.atualizar(id:Integer)
-GET     /unidadesdemedidas                  controllers.UnidadeDeMedidaController.buscaTodos()
-GET     /unidadesdemedidas/:id              controllers.UnidadeDeMedidaController.buscaPorId(id:Integer)
-DELETE  /unidadesdemedidas/:id              controllers.UnidadeDeMedidaController.remover(id:Integer)
+POST    /unidadesdemedidas            controllers.UnidadeDeMedidaController.inserir()
+PUT     /unidadesdemedidas/:id        controllers.UnidadeDeMedidaController.atualizar(id:Integer)
+GET     /unidadesdemedidas            controllers.UnidadeDeMedidaController.buscaTodos()
+GET     /unidadesdemedidas/:id        controllers.UnidadeDeMedidaController.buscaPorId(id:Integer)
+DELETE  /unidadesdemedidas/:id        controllers.UnidadeDeMedidaController.remover(id:Integer)
+
+# CRUD Produto
+POST    /produtos                     controllers.ProdutoController.inserir()
+PUT     /produtos/:id                 controllers.ProdutoController.atualizar(id:Integer)
+GET     /produtos                     controllers.ProdutoController.buscaTodos()
+GET     /produtos/:id                 controllers.ProdutoController.buscaPorId(id:Integer)
+DELETE  /produtos/:id                 controllers.ProdutoController.remover(id:Integer)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

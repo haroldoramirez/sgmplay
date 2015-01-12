@@ -53,4 +53,10 @@ angular.module('mercado')
          getAll: {method: 'GET', url: BaseUrl + '/unidadesdemedidas', isArray: true},
          update: {method: 'PUT', url: BaseUrl + '/unidadesdemedidas/:id', isArray: false}
       });
+    }]).service('Produto',['$resource', 'BaseUrl',
+    function($resource, BaseUrl){
+      return $resource(BaseUrl + '/produtos/:id', {}, {
+         getAll: {method: 'GET', url: BaseUrl + '/produtos', isArray: true},
+         update: {method: 'PUT', url: BaseUrl + '/produtos/:id', isArray: false}
+      });
     }]);

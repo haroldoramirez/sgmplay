@@ -43,7 +43,7 @@ public class Produto extends Model {
     private Fabricante fabricante;
 
     @ManyToOne(optional = true)
-    private UnidadeDeMedida unidadeDeMedida;
+    private UnidadeDeMedida unidadedemedida;
 
     public Integer getId() {
         return id;
@@ -133,12 +133,12 @@ public class Produto extends Model {
         this.fabricante = fabricante;
     }
 
-    public UnidadeDeMedida getUnidadeDeMedida() {
-        return unidadeDeMedida;
+    public UnidadeDeMedida getUnidadedemedida() {
+        return unidadedemedida;
     }
 
-    public void setUnidadeDeMedida(UnidadeDeMedida unidadeDeMedida) {
-        this.unidadeDeMedida = unidadeDeMedida;
+    public void setUnidadedemedida(UnidadeDeMedida unidadedemedida) {
+        this.unidadedemedida = unidadedemedida;
     }
 
     @Override

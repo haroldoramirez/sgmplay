@@ -112,6 +112,18 @@ angular.module('mercado', ['ngRoute', 'ngResource', 'toastr', 'mgcrea.ngStrap', 
             .when('/unidadesdemedidas/detalhe/:id', {
                  templateUrl: '/assets/app/views/unidadesdemedidas/detail.html',
                  controller: 'UnidadeDeMedidaDetailController'
+            })
+               .when('/produtos', {
+                 templateUrl: '/assets/app/views/produtos/list.html',
+                 controller: 'ProdutoListController'
+            })
+               .when('/produtos/novo', {
+                 templateUrl: '/assets/app/views/produtos/create.html',
+                 controller: 'ProdutoCreateController'
+            })
+               .when('/produtos/detalhe/:id', {
+                 templateUrl: '/assets/app/views/produtos/detail.html',
+                 controller: 'ProdutoDetailController'
             });
    //Configuração das notificações
    }).config(function(toastrConfig) {

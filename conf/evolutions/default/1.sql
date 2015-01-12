@@ -109,7 +109,7 @@ create table produto (
   fornecedor_id             integer,
   categoria_id              integer,
   fabricante_id             integer,
-  unidade_de_medida_id      integer,
+  unidadedemedida_id        integer,
   constraint uq_produto_descricao unique (descricao),
   constraint pk_produto primary key (id))
 ;
@@ -138,8 +138,8 @@ alter table produto add constraint fk_produto_categoria_7 foreign key (categoria
 create index ix_produto_categoria_7 on produto (categoria_id);
 alter table produto add constraint fk_produto_fabricante_8 foreign key (fabricante_id) references fabricante (id) on delete restrict on update restrict;
 create index ix_produto_fabricante_8 on produto (fabricante_id);
-alter table produto add constraint fk_produto_unidadeDeMedida_9 foreign key (unidade_de_medida_id) references unidadedemedida (id) on delete restrict on update restrict;
-create index ix_produto_unidadeDeMedida_9 on produto (unidade_de_medida_id);
+alter table produto add constraint fk_produto_unidadedemedida_9 foreign key (unidadedemedida_id) references unidadedemedida (id) on delete restrict on update restrict;
+create index ix_produto_unidadedemedida_9 on produto (unidadedemedida_id);
 
 
 
