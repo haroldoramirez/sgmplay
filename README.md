@@ -1,9 +1,7 @@
 # Play Framework with AngularJS
 
 #### Version information
-PlayFramework 2.3.6
-
-PlayFramework with Java8 64Bits
+PlayFramework 2.3.6 with Java8 64Bits.
 
 ## Quickstart
 Faça o clone do projeto com o github e prepare seu ambiente de trabalho com o MySQL para a base de dados e as depedências necessárias do Play FrameWork e AngularJS.
@@ -29,15 +27,15 @@ Faça o clone do projeto com o github e prepare seu ambiente de trabalho com o M
 	* Angular Input Masks
 	* Angular Mocks
 	* Angular Scenario
-	* Bootstrap
+	* Bootstrap.
 
 
 ### Idiomas
-* Portuguese
+* Portuguese.
 
 ## Versions
 * **0.1.0** [2014-01-13]
-  * Initial release
+  * Initial release.
 
 ## License
 
