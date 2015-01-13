@@ -41,8 +41,8 @@ Faça o clone do projeto com o github e prepare seu ambiente de trabalho com o M
 
 Copyright (c) 2014-2015 Haroldo ramirez
 
-[Play Framework](https://www.playframework.com/)
-[Angular JS](https://angularjs.org/)
+* [Play Framework](https://www.playframework.com/)
+* [Angular JS](https://angularjs.org/)
 [Angular Strap](http://mgcrea.github.io/angular-strap/)
 [Bootstrap](http://getbootstrap.com/)
 [Angular Input Mask](https://github.com/assisrafael/angular-input-masks)
