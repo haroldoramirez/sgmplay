@@ -31,15 +31,13 @@ Faça o clone do projeto com o github e prepare seu ambiente de trabalho com o M
 
 
 ### Idiomas
-* Portuguese.
+* Português.
 
-## Versions
+## Versões
 * **0.1.0** [2014-01-13]
   * Initial release.
-
-## License
-
-Copyright (c) 2014-2015 Haroldo ramirez
+  
+## Links
 
 * [Play Framework](https://www.playframework.com/)
 * [Angular JS](https://angularjs.org/)
@@ -53,5 +51,12 @@ Copyright (c) 2014-2015 Haroldo ramirez
 * [Java8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
 
+## Informações Adicionais
 * [Centro Universitário Dinâmica das Cataratas](http://www.udc.edu.br/v3/udc/) - Trabalho para a conclusão parcial do curso de Sistemas de Informação. Foz do Iguaçu - Paraná - Brasil.
 * [Instituto de Tecnologia Aplicada e Inovação](http://www.itai.org.br/) - Estagiário no setor de Automação.
+
+## License
+
+Copyright (c) 2014-2015 Haroldo Ramirez da Nobrega
+
+
