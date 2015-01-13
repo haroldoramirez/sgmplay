@@ -53,6 +53,7 @@ Copyright (c) 2014-2015 Haroldo ramirez
 * [Java8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
 
 
-UDC - Centro Universitário Dinâmica das Cataratas.
+[Centro Universitário Dinâmica das Cataratas](http://www.udc.edu.br/v3/udc/)
 Trabalho para a conclusão parcial do curso de Sistemas de Informação.
 Foz do Iguaçu - Paraná - Brasil.
+[Instituto de Tecnologia Aplicada e Inovação](http://www.itai.org.br/)
