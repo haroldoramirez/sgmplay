@@ -1,4 +1,4 @@
-# PlayFramework(BackEnd) with AngularJS(FrontEnd)
+# Play Framework with AngularJS
 
 #### Version information
 **PlayFramework 2.3.6
