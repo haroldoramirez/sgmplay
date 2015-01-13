@@ -1,7 +1,7 @@
 # Play Framework with AngularJS
 
 #### Version information
-**PlayFramework 2.3.6
+PlayFramework 2.3.6
 
 PlayFramework with Java8 64Bits
 
@@ -43,9 +43,15 @@ Faça o clone do projeto com o github e prepare seu ambiente de trabalho com o M
 
 Copyright (c) 2014-2015 Haroldo ramirez
 
-Licensed under the Apache License, Version 2.0 (the "License"); you may not use this work except in compliance with the License. You may obtain a copy of the License in the LICENSE file, or at:
-
-http://www.apache.org/licenses/LICENSE-2.0
+https://www.playframework.com/
+https://angularjs.org/
+http://mgcrea.github.io/angular-strap/
+http://getbootstrap.com/
+http://bower.io/
+https://github.com/assisrafael/angular-input-masks
+http://jquery.com/
+https://github.com/Foxandxss/angular-toastr
+http://www.mysql.com/
 
 UDC - Centro Universitário Dinâmica das Cataratas.
 Trabalho para a conclusão parcial do curso de Sistemas de Informação.
