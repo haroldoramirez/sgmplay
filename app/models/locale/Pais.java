@@ -1,5 +1,6 @@
 package models.locale;
 
+import org.h2.util.Task;
 import play.db.ebean.Model;
 import play.libs.Json;
 
@@ -41,6 +42,8 @@ public class Pais extends Model {
     public void setDdi(String ddi) {
         this.ddi = ddi;
     }
+
+    public static Model.Finder<Long,Pais> find = new Model.Finder<Long,Pais>(Long.class,Pais.class);
 
     @Override
     public String toString() {

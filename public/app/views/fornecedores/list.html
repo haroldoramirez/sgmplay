@@ -17,6 +17,18 @@
                 </legend>
             </div>
 
+            <div class="col-lg-5">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="digite o nome do fornecedor">
+                             <span class="input-group-btn">
+                                      <button class="btn btn-primary">
+                                          <span class="glyphicon glyphicon-search"></span> <b>Buscar</b>
+                                      </button>
+                            </span>
+                </div><!-- /input-group -->
+                <br>
+            </div>
+
             <table  ng-init="init()" class="table table-striped table-hover table-bordered">
                 <tr>
                     <th>Nome Fantasia</th>
@@ -43,6 +55,27 @@
                 </tr>
             </table>
         </fieldset>
+    </div>
+    <div align="center">
+        <nav>
+            <ul class="pagination">
+                <li>
+                    <a href="#" aria-label="Previous">
+                        <span aria-hidden="true">&laquo;</span>
+                    </a>
+                </li>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+                <li><a href="#">5</a></li>
+                <li>
+                    <a href="#" aria-label="Next">
+                        <span aria-hidden="true">&raquo;</span>
+                    </a>
+                </li>
+            </ul>
+        </nav>
     </div>
 </div>
 </body>

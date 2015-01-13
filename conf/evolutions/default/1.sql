@@ -122,6 +122,14 @@ create table unidadedemedida (
   constraint pk_unidadedemedida primary key (id))
 ;
 
+create table usuario (
+  id                        integer auto_increment not null,
+  login                     varchar(255) not null,
+  senha                     varchar(255) not null,
+  privilegio                integer not null,
+  constraint pk_usuario primary key (id))
+;
+
 alter table bairro add constraint fk_bairro_cidade_1 foreign key (cidade_id) references cidade (id) on delete restrict on update restrict;
 create index ix_bairro_cidade_1 on bairro (cidade_id);
 alter table cidade add constraint fk_cidade_estado_2 foreign key (estado_id) references estado (id) on delete restrict on update restrict;
@@ -166,6 +174,8 @@ drop table pais;
 drop table produto;
 
 drop table unidadedemedida;
+
+drop table usuario;
 
 SET FOREIGN_KEY_CHECKS=1;
 
