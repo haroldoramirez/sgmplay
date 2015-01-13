@@ -43,16 +43,16 @@ Faça o clone do projeto com o github e prepare seu ambiente de trabalho com o M
 
 Copyright (c) 2014-2015 Haroldo ramirez
 
-https://www.playframework.com/
-https://angularjs.org/
-http://mgcrea.github.io/angular-strap/
-http://getbootstrap.com/
-http://bower.io/
-https://github.com/assisrafael/angular-input-masks
-http://jquery.com/
-https://github.com/Foxandxss/angular-toastr
-http://www.mysql.com/
+[Play Framework]: https://www.playframework.com/
+[Angular JS]: https://angularjs.org/
+[Angular Strap]: http://mgcrea.github.io/angular-strap/
+[Bootstrap]: http://getbootstrap.com/
+[Angular Input Mask]: https://github.com/assisrafael/angular-input-masks
+[Angular Toastr]: https://github.com/Foxandxss/angular-toastr
+[Jquery]: http://jquery.com/
+[Bower]: http://bower.io/
+[MySQL]: http://www.mysql.com/
 
 UDC - Centro Universitário Dinâmica das Cataratas.
 Trabalho para a conclusão parcial do curso de Sistemas de Informação.
-Foz do Iguaçu - Paraná - Brasil
+Foz do Iguaçu - Paraná - Brasil.
