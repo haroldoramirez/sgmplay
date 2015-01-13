@@ -5,8 +5,8 @@
       <SbtProjectSettings>
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="jdk" value="1.8" />
+        <option name="sbtVersion" value="0.13.5" />
       </SbtProjectSettings>
     </option>
-    <option name="sbtVersion" value="0.13.5" />
   </component>
 </project>
