@@ -1,4 +1,4 @@
-# SgmPlay - PlayFramework(BackEnd) with AngularJS(FrontEnd)
+# PlayFramework(BackEnd) with AngularJS(FrontEnd)
 
 #### Version information
 **PlayFramework 2.3.6
