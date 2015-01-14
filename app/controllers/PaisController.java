@@ -1,6 +1,7 @@
 package controllers;
 
 import com.avaje.ebean.Ebean;
+import com.avaje.ebean.FetchConfig;
 import models.locale.Pais;
 import play.Logger;
 import play.libs.Json;
@@ -50,8 +51,14 @@ public class PaisController extends Controller {
     }
 
     public static Result buscaTodos() {
-        Logger.info("busca Todos os Paises");
-        return ok(Json.toJson(Ebean.find(Pais.class).findList()));
+        Logger.info("busca Todos os Paises ordenados");
+        return ok(Json.toJson(Ebean.find(Pais.class).order().asc("nome").findList()));
+    }
+
+    //Mostrar acima de 16 linhas
+    public static Result busca() {
+        Logger.info("busca os paises");
+        return ok(Json.toJson(Ebean.find(Pais.class).setMaxRows(16).findList()));
     }
 
     public static Result remover(Integer id) {
