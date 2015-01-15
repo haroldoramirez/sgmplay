@@ -73,7 +73,7 @@
                         <label class="control-label" for="codigoDeBarras">Código de Barras</label>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-barcode"></i></span>
-                            <input placeholder="Insira o Código de Barras" maxlength="100" class="form-control" type="text" ng-model="produto.codigoDeBarras" id="codigoDeBarras"/>
+                            <input placeholder="Insira o Código de Barras" maxlength="80" class="form-control" type="text" ng-model="produto.codigoDeBarras" id="codigoDeBarras"/>
                         </div>
                     </div>
                     <!--Input do Fornecedor-->
@@ -151,6 +151,22 @@
             </form>
         </fieldset>
     </div>
+    <br>
+</div>
+<div align="center">
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+
+                </div>
+            </div>
+            <p>&copy; 2014
+                <a data-template="assets/modal/informacoesModal.html" bs-modal="modalInformacoes">Powered by Play Framework e AngularJS
+                </a>.Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
 </div>
 </body>
 </html>
