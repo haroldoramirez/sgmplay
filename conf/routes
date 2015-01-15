@@ -78,5 +78,12 @@ GET     /produtos                     controllers.ProdutoController.buscaTodos()
 GET     /produtos/:id                 controllers.ProdutoController.buscaPorId(id:Integer)
 DELETE  /produtos/:id                 controllers.ProdutoController.remover(id:Integer)
 
+# CRUD Usuário
+POST    /usuarios                     controllers.UsuarioController.inserir()
+PUT     /usuarios/:id                 controllers.UsuarioController.atualizar(id:Integer)
+GET     /usuarios                     controllers.UsuarioController.buscaTodos()
+GET     /usuarios/:id                 controllers.UsuarioController.buscaPorId(id:Integer)
+DELETE  /usuarios/:id                 controllers.UsuarioController.remover(id:Integer)
+
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

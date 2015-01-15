@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title>Detalhe Usuário</title>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+            <fieldset>
+                <div id="legend">
+                    <legend>
+                        <h2>
+                            Atualizar Usuário <a class="btn btn-link pull-right" data-template="assets/modal/ajuda/usuarioModal.html" bs-modal="modalAjuda">
+                            <span class="glyphicon glyphicon-info-sign"></span><b> Ajuda</b></a>
+                        </h2>
+                    </legend>
+                </div>
+                <form ng-init="init()" class="form-horizontal" ng-submit="update()">
+                    <div class="form-group">
+                        <!--Input do Login-->
+                        <div class="col-lg-5">
+                            <label class="control-label" for="login">Login</label>
+                            <div ng-class="{'has-error': !usuario.login}">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                    <input autofocus placeholder="Insira o login" maxlength="100" class="form-control" type="text" ng-model="usuario.login" id="login" required/>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Input do Senha-->
+                        <div class="col-lg-4">
+                            <label class="control-label" for="senha">Senha</label>
+                            <div ng-class="{'has-error': !usuario.senha}">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-certificate"></i></span>
+                                    <input placeholder="insira a senha" maxlength="16" class="form-control" type="password" ng-model="usuario.senha" id="senha"/>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Input do Privilégio-->
+                        <div class="col-lg-3">
+                            <label class="control-label">Privilégio</label>
+                            <div ng-class="{'has-error': !usuario.privilegio}">
+                                <select ng-model="usuario.privilegio" class="form-control" id="privilegio">
+                                    <option value=1>Operador</option>
+                                    <option value=2>Supervisor</option>
+                                    <option value=3>Administrador</option>
+                                </select>
+                            </div>
+                            <br>
+                        </div>
+                        <!--Botões-->
+                        <div class="col-lg-8">
+                            <div class="control-group">
+                                <br>
+                                <button type="submit" id="save" class="btn btn-success" ng-disabled="!usuario.login || !usuario.senha || !usuario.privilegio">
+                                    <span class="glyphicon glyphicon-refresh"></span> <b>Atualizar</b>
+                                </button>
+                                <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">
+                                    <span class="glyphicon glyphicon-arrow-left"></span> <b>Voltar</b>
+                                </button>
+                                <button  data-animation="am-flip-x"  data-trigger="focus"  type="button" class="btn btn-danger" data-template="assets/popover/confirmacaoPopover.html" bs-popover="popoverConfirmacao">
+                                    <span class="glyphicon glyphicon-trash"></span> <b>Remover</b>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </fieldset>
+        </div>
+    </div>
+</div>
+</body>
+</html>

@@ -124,6 +124,18 @@ angular.module('mercado', ['ngRoute', 'ngResource', 'toastr', 'mgcrea.ngStrap', 
                .when('/produtos/detalhe/:id', {
                  templateUrl: '/assets/app/views/produtos/detail.html',
                  controller: 'ProdutoDetailController'
+            })
+               .when('/usuarios', {
+                 templateUrl: '/assets/app/views/usuarios/list.html',
+                 controller: 'UsuarioListController'
+            })
+               .when('/usuarios/novo', {
+                 templateUrl: '/assets/app/views/usuarios/create.html',
+                 controller: 'UsuarioCreateController'
+            })
+               .when('/usuarios/detalhe/:id', {
+                 templateUrl: '/assets/app/views/usuarios/detail.html',
+                 controller: 'UsuarioDetailController'
             });
    //Configuração das notificações
    }).config(function(toastrConfig) {
