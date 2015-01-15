@@ -34,8 +34,12 @@ Faça o clone do projeto com o github e prepare seu ambiente de trabalho com o M
 * Português.
 
 ## Versões
-* **0.1.0** [2014-01-13]
+* **0.0.0** [2015-01-13]
   * Initial release.
+  
+## Funções
+* **Cadastros**
+  * Pais, Estado, Cidade, Bairro **Ok**
   
 ## Links
 
