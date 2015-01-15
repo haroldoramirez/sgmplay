@@ -12,6 +12,7 @@ GET		/versaoplay					  controllers.Application.versaoplay()
 POST    /paises                       controllers.PaisController.inserir()
 PUT     /paises/:id                   controllers.PaisController.atualizar(id:Integer)
 GET     /paises                       controllers.PaisController.buscaTodos()
+# GET     /paises/:paginas              controllers.PaisController.buscaPorPaginas(paginas:Integer)
 GET     /paises/:id                   controllers.PaisController.buscaPorId(id:Integer)
 DELETE  /paises/:id                   controllers.PaisController.remover(id:Integer)
 

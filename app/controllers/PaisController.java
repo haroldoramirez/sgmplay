@@ -55,10 +55,14 @@ public class PaisController extends Controller {
         return ok(Json.toJson(Ebean.find(Pais.class).order().asc("nome").findList()));
     }
 
+
+
     //Mostrar acima de 16 linhas
-    public static Result busca() {
-        Logger.info("busca os paises");
-        return ok(Json.toJson(Ebean.find(Pais.class).setMaxRows(16).findList()));
+    public static Result buscaPorPaginas(Integer paginas) {
+        Logger.info("busca por páginas");
+        //find.where().findPagingList(tamanhoDaPagina).setFetchAhead(true).getPage(numeroDaPagina)
+        //return ok(Json.toJson(Ebean.find(Pais.class).setMaxRows(16).findList()));
+       return ok(Json.toJson(Ebean.find(Pais.class).where().findPagingList(16).setFetchAhead(true).getPage(paginas)));
     }
 
     public static Result remover(Integer id) {

@@ -3,6 +3,7 @@ var keys = {
 	113: "#/fornecedores/novo",
 	114: "#/compra/novo",
 	115: "#/venda/novo",
+	118: "#/usuarios/novo",
 };
 document.onkeydown = function(event) {
 	var keyCode = event.keyCode;
