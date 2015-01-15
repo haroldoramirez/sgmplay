@@ -39,7 +39,9 @@ Faça o clone do projeto com o github e prepare seu ambiente de trabalho com o M
   
 ## Funções
 * **Cadastros**
-  * Pais, Estado, Cidade, Bairro **Ok**
+  * Pais, Estado, Cidade, Bairro - **Ok**
+  * Fabricante, Categoria, Unidade de Medida, Produto - **Ok**
+  * Cliente, Fornecedor, Usuário - **Ok**
   
 ## Links
 
