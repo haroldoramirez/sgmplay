@@ -7,6 +7,5 @@
         <option name="jdk" value="1.8" />
       </SbtProjectSettings>
     </option>
-    <option name="sbtVersion" value="0.13.5" />
   </component>
 </project>
