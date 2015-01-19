@@ -4,7 +4,7 @@
 PlayFramework 2.3.6 with Java8 64Bits.
 
 ## Quickstart
-Faça o clone do projeto com o github e prepare seu ambiente de trabalho com o MySQL para a base de dados e as dependências necessárias do Play FrameWork e AngularJS.
+Faça o clone do projeto com o github e prepare seu ambiente de trabalho com o MySQL para a base de dados e as dependências necessárias do Play Framework(BackEnd) e AngularJS(FrontEnd).
 
 ## Características
 
@@ -63,6 +63,6 @@ Faça o clone do projeto com o github e prepare seu ambiente de trabalho com o M
 
 ## License
 
-Copyright (c) 2014-2015 Haroldo Ramirez da Nobrega
+Copyright (c) 2014-2015 Haroldo Ramirez da Nóbrega
 
 
