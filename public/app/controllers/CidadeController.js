@@ -42,7 +42,7 @@ angular.module('mercado')
 
         $scope.init = function(){
               $scope.cidade = Cidade.get({id:$routeParams.id});
-              $scope.estado = Estado.getAll();
+              $scope.estados = Estado.getAll();
         };
 
         $scope.update = function(){

@@ -43,7 +43,7 @@ angular.module('mercado')
 
           $scope.init = function(){
              $scope.cliente = Cliente.get({id:$routeParams.id});
-             $scope.bairro = Bairro.getAll();
+             $scope.bairros = Bairro.getAll();
           };
 
           $scope.update = function(){

@@ -52,7 +52,7 @@
                     <div class="col-lg-2">
                         <label class="control-label" for="fax">Fax</label>
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
                             <input ui-br-phone-number placeholder="(__) ____-____" maxlength="15" class="form-control" type="text" ng-model="fornecedor.fax" id="fax"/>
                         </div>
                     </div>
@@ -68,7 +68,7 @@
                     <div class="col-lg-6">
                         <label class="control-label" for="site">Home Page</label>
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-globe"></i></span>
                             <input placeholder="www" maxlength="100" class="form-control" type="text" ng-model="fornecedor.site" id="site"/>
                         </div>
                     </div>
@@ -100,7 +100,7 @@
                     <div class="col-lg-4">
                         <label class="control-label" for="complemento">Complemento</label>
                         <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-tent"></i></span>
                             <input placeholder="Casa/Apartamento/Conjunto" maxlength="100" class="form-control" type="text" ng-model="fornecedor.complemento" id="complemento"/>
                         </div>
                     </div>
@@ -128,7 +128,7 @@
                         <div ng-class="{'has-error': !fornecedor.inscricaoEstadual}">
                             <div class="input-group">
                                 <span class="input-group-addon"><b>IE</b></span>
-                                <input maxlength="20" class="form-control" type="text" ng-model="fornecedor.inscricaoEstadual">
+                                <input placeholder="000" maxlength="20" class="form-control" type="text" ng-model="fornecedor.inscricaoEstadual">
                             </div>
                         </div>
                     </div>
@@ -137,7 +137,7 @@
                         <label class="control-label" for="fornecedor.bairro">Bairro</label>
                         <div ng-class="{'has-error': !fornecedor.bairro}">
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-pawn"></i></span>
                                 <select ng-model="fornecedor.bairro" class="form-control" ng-options="bairro.nome for bairro in bairros" id="fornecedor.bairro">
                                     <option value="">Selecione</option>
                                 </select>
@@ -173,6 +173,8 @@
     </div>
     <br>
 </div>
+
+<!--Rodapé-->
 <div align="center">
     <footer class="footer">
         <div class="container">
@@ -181,7 +183,7 @@
 
                 </div>
             </div>
-            <p>&copy; 2014
+            <p>&copy; 2015 Sistema SGM -
                 <a data-template="assets/modal/informacoesModal.html" bs-modal="modalInformacoes">Powered by Play Framework e AngularJS
                 </a>.Todos os direitos reservados.
             </p>

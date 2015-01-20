@@ -24,7 +24,7 @@
                             <label class="control-label" for="nome">Nome</label>
                             <div ng-class="{'has-error': !bairro.nome}">
                                 <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-pawn"></i></span>
                                     <input autofocus placeholder="Insira o nome do Bairro" maxlength="100" class="form-control" type="text" ng-model="bairro.nome" id="nome" required/>
                                 </div>
                             </div>
@@ -33,9 +33,12 @@
                         <div class="col-lg-4">
                             <label class="control-label" for="bairro.cidade">Cidade *</label>
                             <div ng-class="{'has-error': !bairro.cidade}">
-                                <select ng-model="bairro.cidade" class="form-control" ng-options="cidade.nome for cidade in cidades" id="bairro.cidade">
-                                    <option value="">Selecione</option>
-                                </select>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-bishop"></i></span>
+                                        <select ng-model="bairro.cidade" class="form-control" ng-options="cidade.nome for cidade in cidades" id="bairro.cidade">
+                                            <option value="">Selecione</option>
+                                        </select>
+                                </div>
                             </div>
                             <br>
                         </div>
@@ -58,6 +61,8 @@
     </div>
     <br>
 </div>
+
+<!--Rodapé-->
 <div align="center">
     <footer class="footer">
         <div class="container">
@@ -66,7 +71,7 @@
 
                 </div>
             </div>
-            <p>&copy; 2014
+            <p>&copy; 2015 Sistema SGM -
                 <a data-template="assets/modal/informacoesModal.html" bs-modal="modalInformacoes">Powered by Play Framework e AngularJS
                 </a>.Todos os direitos reservados.
             </p>

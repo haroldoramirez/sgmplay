@@ -23,7 +23,7 @@
                         <label class="control-label" for="descricao">Descrição</label>
                         <div ng-class="{'has-error': !produto.descricao}">
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-bookmark"></i></span>
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-apple"></i></span>
                                 <input autofocus placeholder="Insira a Descrição" maxlength="100" class="form-control" type="text" ng-model="produto.descricao" id="descricao" required/>
                             </div>
                         </div>
@@ -81,7 +81,7 @@
                         <label class="control-label" for="produto.fornecedor">Fornecedor</label>
                         <div ng-class="{'has-error': !produto.fornecedor}">
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-th-large"></i></span>
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-oil"></i></span>
                                 <select ng-model="produto.fornecedor" class="form-control" ng-options="fornecedor.nomeFantasia for fornecedor in fornecedores" id="produto.fornecedor">
                                     <option selected value="">Selecione</option>
                                 </select>
@@ -93,7 +93,7 @@
                         <label class="control-label" for="produto.fabricante">Fabricante</label>
                         <div ng-class="{'has-error': !produto.fabricante}">
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-compressed"></i></span>
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-ice-lolly"></i></span>
                                 <select ng-model="produto.fabricante" class="form-control" ng-options="fabricante.nome for fabricante in fabricantes" id="produto.fabricante">
                                     <option selected value="">Selecione</option>
                                 </select>
@@ -105,7 +105,7 @@
                         <label class="control-label" for="produto.categoria">Categoria</label>
                         <div ng-class="{'has-error': !produto.categoria}">
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-leaf"></i></span>
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-grain"></i></span>
                                 <select ng-model="produto.categoria" class="form-control" ng-options="categoria.descricao for categoria in categorias" id="produto.categoria">
                                     <option selected value="">Selecione</option>
                                 </select>
@@ -117,7 +117,7 @@
                         <label class="control-label" for="produto.unidadedemedida">Unidade de Medida</label>
                         <div ng-class="{'has-error': !produto.unidadedemedida}">
                             <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-indent-right"></i></span>
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-scale"></i></span>
                                 <select ng-model="produto.unidadedemedida" class="form-control" ng-options="unidadedemedida.nome for unidadedemedida in unidadesdemedidas" id="produto.unidadeDeMedida">
                                     <option selected value="">Selecione</option>
                                 </select>
@@ -153,6 +153,8 @@
     </div>
     <br>
 </div>
+
+<!--Rodapé-->
 <div align="center">
     <footer class="footer">
         <div class="container">
@@ -161,7 +163,7 @@
 
                 </div>
             </div>
-            <p>&copy; 2014
+            <p>&copy; 2015 Sistema SGM -
                 <a data-template="assets/modal/informacoesModal.html" bs-modal="modalInformacoes">Powered by Play Framework e AngularJS
                 </a>.Todos os direitos reservados.
             </p>

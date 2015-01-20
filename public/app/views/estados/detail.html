@@ -24,7 +24,7 @@
                             <label class="control-label" for="nome">Nome</label>
                             <div ng-class="{'has-error': !estado.nome}">
                                 <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-queen"></i></span>
                                     <input autofocus placeholder="Insira o nome do Estado" maxlength="35" class="form-control" type="text" ng-model="estado.nome" id="nome" required/>
                                 </div>
                             </div>
@@ -39,11 +39,14 @@
                         </div>
                         <!--Input do País-->
                         <div class="col-lg-4">
-                            <label class="control-label" for="estado.pais">País</label>
+                            <label class="control-label" for="pais">País</label>
                             <div ng-class="{'has-error': !estado.pais}">
-                                <select ng-model="estado.pais" class="form-control" ng-options="pais.nome for pais in paises" id="estado.pais">
-                                    <option disabled ng-show="!estado.pais.id" value="">{{estado.pais.nome}}</option>
-                                </select>
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-king"></i></span>
+                                        <select ng-model="estado.pais" class="form-control" ng-options="pais.nome for pais in paises" id="pais">
+                                            <option disabled ng-show="!estado.pais.id" value="">{{estado.pais.nome}}</option>
+                                        </select>
+                                </div>
                             </div>
                             <br>
                         </div>
@@ -69,6 +72,8 @@
     </div>
     <br>
 </div>
+
+<!--Rodapé-->
 <div align="center">
     <footer class="footer">
         <div class="container">
@@ -77,7 +82,7 @@
 
                 </div>
             </div>
-            <p>&copy; 2014
+            <p>&copy; 2015 Sistema SGM -
                 <a data-template="assets/modal/informacoesModal.html" bs-modal="modalInformacoes">Powered by Play Framework e AngularJS
                 </a>.Todos os direitos reservados.
             </p>
