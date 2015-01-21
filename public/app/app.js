@@ -15,6 +15,14 @@ angular
                 templateUrl: '/assets/app/views/home.html',
                 controller: 'HomeController'
             })
+            .when('/ajuda', {
+                templateUrl: '/assets/app/views/help.html',
+                controller: 'AjudaController'
+            })
+            .when('/login', {
+                templateUrl: '/assets/app/views/login.html',
+                controller: 'AutenticacaoController'
+            })
             .when('/paises/novo', {
                 templateUrl: '/assets/app/views/paises/create.html',
                 controller: 'PaisCreateController'

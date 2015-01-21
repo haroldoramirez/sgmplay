@@ -7,9 +7,11 @@
 <!--Javascripts Personalisados-->
     <script src="assets/javascripts/keymap.js"></script>
     <script src="assets/javascripts/login.js"></script>
+    <script src="assets/javascripts/tabs.js"></script>
 
 <!--CSS Personalisados-->
     <link rel="stylesheet" href="assets/stylesheets/login.css"/>
+    <link rel="stylesheet" href="assets/stylesheets/help.css"/>
     <link rel="stylesheet" href="assets/stylesheets/main.css"/>
     <!--<link rel="stylesheet" href="assets/stylesheets/menu.css"/>-->
 
@@ -40,6 +42,8 @@
 
 <!--Controllers AngularJS-->
     <script src="assets/app/controllers/HomeController.js"></script>
+    <script src="assets/app/controllers/AutenticacaoController.js"></script>
+    <script src="assets/app/controllers/AjudaController.js"></script>
     <script src="assets/app/controllers/PaisController.js"></script>
     <script src="assets/app/controllers/EstadoController.js"></script>
     <script src="assets/app/controllers/CidadeController.js"></script>
@@ -63,9 +67,9 @@
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                 <span class="sr-only">Toggle navigation</span>
             </button>
-            <a class="navbar-brand" href="#/">
-                <span class="glyphicon glyphicon-shopping-cart"></span> <b>Mercado</b>
-            </a>
+                <a class="navbar-brand" href="#/">
+                    <span class="glyphicon glyphicon-shopping-cart"></span> <b>Mercado</b>
+                </a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
@@ -83,6 +87,7 @@
                     <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         <span class="glyphicon glyphicon-map-marker"></span> Endereços <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Cadastro</li>
                         <li><a href="/#/paises">
                             <span class="glyphicon glyphicon-king"></span> País</a></li>
                         <li><a href="/#/estados">
@@ -97,6 +102,7 @@
                     <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         <span class="glyphicon glyphicon-transfer"></span> Financeiro <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Movimentações</li>
                         <li><a href="/#/contasapagar">
                             <span class="glyphicon glyphicon-circle-arrow-up"></span> Contas a Pagar</a></li>
                         <li><a href="/#/contasareceber">
@@ -107,6 +113,7 @@
                     <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         <span class="glyphicon glyphicon-stats"></span> Estoque <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Cadastro</li>
                         <li><a href="/#/produtos">
                             <span class="glyphicon glyphicon-barcode"></span> Produtos</a></li>
                         <li><a href="/#/fabricantes">
@@ -119,8 +126,9 @@
                 </li>
                 <li class="dropdown">
                     <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                        <span class="glyphicon glyphicon-list-alt"></span> Relatórios <span class="caret"></span></a>
+                        <span class="glyphicon glyphicon-tasks"></span> <b>Opções</b> <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
+                        <li class="dropdown-header">Relatórios</li>
                         <li><a href="">
                             <span class="glyphicon glyphicon-credit-card"></span> Vendas</a></li>
                         <li><a href="">
@@ -131,12 +139,8 @@
                             <span class="glyphicon glyphicon-oil"></span> Fornecedores</a></li>
                         <li><a href="">
                             <span class="glyphicon glyphicon-barcode"></span> Produtos</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                        <span class="glyphicon glyphicon-tasks"></span> <b>Opções</b> <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
+                        <li class="divider"></li>
+                        <li class="dropdown-header">Sistema</li>
                         <li><a href="/#/configuracoes">
                             <span class="glyphicon glyphicon-cog"></span> Configurações</a>
                         </li>
@@ -144,6 +148,10 @@
                             <span class="glyphicon glyphicon-question-sign"></span> Ajuda</a>
                         </li>
                         <li class="divider"></li>
+                        <li class="dropdown-header">Autenticação</li>
+                        <li><a href="/#/login">
+                            <span class="glyphicon glyphicon-ok-sign"></span> Entrar</a>
+                        </li>
                         <li><a href="">
                             <span class="glyphicon glyphicon-off"></span> Sair</a>
                         </li>
