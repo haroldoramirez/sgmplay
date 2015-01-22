@@ -3,6 +3,7 @@ angular.module('mercado')
     function($resource, BaseUrl){
       return $resource(BaseUrl + '/paises/:id', {}, {
          getAll: {method: 'GET', url: BaseUrl + '/paises', isArray: true},
+         getPagina: {method: 'GET', url: BaseUrl + '/paisesPagina/:pagina', isArray: true},
          update: {method: 'PUT', url: BaseUrl + '/paises/:id', isArray: false}
       });
   }]).service('Estado',['$resource', 'BaseUrl',

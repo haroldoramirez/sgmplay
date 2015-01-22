@@ -55,7 +55,14 @@ public class PaisController extends Controller {
 
     public static Result buscaTodos() {
         Logger.info("busca Todos os Paises ordenados");
-        return ok(Json.toJson(Ebean.find(Pais.class).order().asc("nome").findList()));
+        //return ok(Json.toJson(Ebean.find(Pais.class).order().asc("nome").findList()));
+        return ok(Json.toJson(Ebean.find(Pais.class)
+                .order()
+                .asc("nome")
+                .where()
+                .gt("nome", "2")
+                .setMaxRows(14)
+                .findList()));
     }
 
 
@@ -100,7 +107,7 @@ public class PaisController extends Controller {
                         .order()
                         .asc("nome")
                         .where().gt("nome", "2")
-                        .findPagingList(15).setFetchAhead(true);
+                        .findPagingList(14).setFetchAhead(true);
 
         pagingList.getFutureRowCount();
 
