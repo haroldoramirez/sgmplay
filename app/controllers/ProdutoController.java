@@ -30,8 +30,10 @@ public class ProdutoController extends Controller {
         try{
             Ebean.save(produto);
         } catch (PersistenceException e) {
+            System.out.print(e.toString());
             return badRequest("Produto já Cadastrado");
         } catch (Exception e) {
+            System.out.print(e.toString());
             return badRequest("Erro interno de sistema");
         }
 
@@ -88,6 +90,7 @@ public class ProdutoController extends Controller {
             System.out.print(e.toString());
             return badRequest("Existem vendas que dependem deste produto");
         } catch (Exception e) {
+            System.out.print(e.toString());
             return badRequest("Erro interno de sistema");
         }
 

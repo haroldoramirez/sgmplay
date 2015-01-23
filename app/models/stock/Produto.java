@@ -5,6 +5,7 @@ import play.db.ebean.Model;
 import play.libs.Json;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 
 @Entity
 @Table(name = "produto")
@@ -44,6 +45,10 @@ public class Produto extends Model {
 
     @ManyToOne(optional = true)
     private UnidadeDeMedida unidadedemedida;
+
+    @Version
+    @Column(columnDefinition = "timestamp default '2014-10-06 21:17:06'")
+    public Timestamp lastUpdate; // here
 
     public Integer getId() {
         return id;

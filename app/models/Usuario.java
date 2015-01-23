@@ -18,7 +18,6 @@ public class Usuario extends Model {
 
     @Column(nullable = false)
     private String senha;
-    private String senha2;
 
     @Column(nullable = false)
     private Integer privilegio;

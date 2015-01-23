@@ -110,6 +110,7 @@ create table produto (
   categoria_id              integer,
   fabricante_id             integer,
   unidadedemedida_id        integer,
+  last_update               timestamp default '2014-10-06 21:17:06' not null,
   constraint uq_produto_descricao unique (descricao),
   constraint pk_produto primary key (id))
 ;
@@ -126,7 +127,6 @@ create table usuario (
   id                        integer auto_increment not null,
   login                     varchar(255) not null,
   senha                     varchar(255) not null,
-  senha2                    varchar(255),
   privilegio                integer not null,
   constraint pk_usuario primary key (id))
 ;

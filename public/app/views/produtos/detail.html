@@ -34,7 +34,7 @@
                         <div ng-class="{'has-error': !produto.quantidadeMinima}">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-minus-sign"></i></span>
-                                <input placeholder="000" type="number" min="1" max="9999" class="form-control" ng-model="produto.quantidadeMinima" id="quantidadeMinima" required/>
+                                <input maxlength="4" placeholder="000" type="number" class="form-control" ng-model="produto.quantidadeMinima" id="quantidadeMinima" name="quantidadeMinima" required/>
                             </div>
                         </div>
                     </div>
@@ -44,7 +44,7 @@
                         <div ng-class="{'has-error': !produto.quantidadeEmEstoque}">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-plus-sign"></i></span>
-                                <input placeholder="000" type="number" min="1" max="9999" class="form-control" ng-model="produto.quantidadeEmEstoque" id="quantidadeEmEstoque" required/>
+                                <input maxlength="4" placeholder="000" type="number" class="form-control" ng-model="produto.quantidadeEmEstoque" id="quantidadeEmEstoque" name="quantidadeEmEstoque" required/>
                             </div>
                         </div>
                     </div>
@@ -54,7 +54,7 @@
                         <div ng-class="{'has-error': !produto.precoDeCusto}">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span>
-                                <input ui-money-mask placeholder="0,00" maxlength="10" class="form-control" type="text" ng-model="produto.precoDeCusto" id="precoDeCusto" required/>
+                                <input ui-number-mask placeholder="0,00" maxlength="10" class="form-control" type="text" ng-model="produto.precoDeCusto" id="precoDeCusto" required/>
                             </div>
                         </div>
                     </div>
@@ -64,7 +64,7 @@
                         <div ng-class="{'has-error': !produto.precoDeVenda}">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span>
-                                <input ui-money-mask placeholder="0,00" maxlength="10" class="form-control" type="text" ng-model="produto.precoDeVenda" id="precoDeVenda" required/>
+                                <input ui-number-mask placeholder="0,00" maxlength="10" class="form-control" type="text" ng-model="produto.precoDeVenda" id="precoDeVenda" required/>
                             </div>
                         </div>
                     </div>
