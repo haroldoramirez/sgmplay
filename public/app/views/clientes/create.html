@@ -33,7 +33,7 @@
                         <label class="control-label" for="email">Email</label>
                         <div class="input-group">
                             <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                            <input placeholder="email@exemplo.com" ng-minlength="3" maxlength="100" class="form-control" type="text" ng-model="cliente.email" id="email"/>
+                            <input placeholder="email@exemplo.com" ng-minlength="3" maxlength="100" class="form-control" type="email" ng-model="cliente.email" id="email"/>
                         </div>
                     </div>
                     <!--Input de Data de Nascimento-->
@@ -105,7 +105,7 @@
                         <label class="control-label" for="numero">Número</label>
                         <div class="input-group">
                             <span class="input-group-addon"><b>Nº</b></span>
-                            <input placeholder="000" maxlength="5" class="form-control" type="text" ng-model="cliente.numero" id="numero"/>
+                            <input placeholder="0.000" type="text" name="numero" ng-model="number" ui-number-mask="3" maxlength="6" class="form-control" ng-model="cliente.numero" id="numero"/>
                         </div>
                     </div>
                     <!--Input do CEP-->

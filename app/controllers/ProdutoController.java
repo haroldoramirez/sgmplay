@@ -85,6 +85,7 @@ public class ProdutoController extends Controller {
         try {
             Ebean.delete(produto);
         } catch (PersistenceException e) {
+            System.out.print(e.toString());
             return badRequest("Existem vendas que dependem deste produto");
         } catch (Exception e) {
             return badRequest("Erro interno de sistema");
