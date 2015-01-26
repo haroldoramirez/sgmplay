@@ -127,6 +127,7 @@ create table usuario (
   id                        integer auto_increment not null,
   login                     varchar(255) not null,
   senha                     varchar(255) not null,
+  senha2                    varchar(255),
   privilegio                integer not null,
   constraint pk_usuario primary key (id))
 ;

@@ -27,7 +27,15 @@ public class ProdutoController extends Controller {
         produto.setFabricante(fabricante);
         produto.setFornecedor(fornecedor);
 
-        try{
+        if (produto.getQuantidadeMinima() > produto.getQuantidadeEmEstoque()) {
+            return badRequest("Quantidade Mínima deve ser menor que Quantidade em Estoque");
+        }
+        
+        if (produto.getPrecoDeCusto() > produto.getPrecoDeVenda()) {
+            return badRequest("Preço de Custo deve ser menor que o Preço de Venda");
+        }
+
+        try {
             Ebean.save(produto);
         } catch (PersistenceException e) {
             System.out.print(e.toString());
@@ -53,8 +61,22 @@ public class ProdutoController extends Controller {
         produto.setFabricante(fabricante);
         produto.setFornecedor(fornecedor);
 
-        Ebean.update(produto);
+        if (produto.getQuantidadeMinima() > produto.getQuantidadeEmEstoque()) {
+            return badRequest("Quantidade Mínima deve ser menor que Quantidade em Estoque");
+        }
 
+        if (produto.getPrecoDeCusto() > produto.getPrecoDeVenda()) {
+            return badRequest("Preço de Custo deve ser menor que o Preço de Venda");
+        }
+        
+        
+        try {
+            Ebean.update(produto);
+        } catch (Exception e) {
+            System.out.print(e.toString());
+            return badRequest("Erro interno de sistema");
+        }
+        
         return created(Json.toJson(produto));
     }
 

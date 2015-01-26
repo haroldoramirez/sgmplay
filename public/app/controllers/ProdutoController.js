@@ -65,8 +65,9 @@ angular.module('mercado')
             Produto.update({id:$routeParams.id},$scope.produto, function(){
                 toastr.success('Produto atualizado com sucesso');
                 $location.path('/produtos');
-            },function(){
-               toastr.error('Não foi possível Atualizar o Produto');
+            },function(data){
+            console.log(data);
+               toastr.error(data.data, 'Não foi possível Atualizar o Produto');
             });
 
           };
