@@ -1,6 +1,7 @@
 angular.module('mercado')
   .controller('PaisCreateController', function ($scope, $modal, $location, Pais, toastr) {
         $scope.pais = {};
+        $scope.pagina = 0;
         $scope.save = function(){
             console.log($scope.pais);
             Pais.save($scope.pais, function(data){
@@ -36,27 +37,27 @@ angular.module('mercado')
             Pais.getPagina({pagina: $scope.pagina}, $scope.pais, function(data){
                 $scope.paises = data;
             });
-        }
-
-        //botão anterior da página
-        $scope.anterior = function(){
-        console.log('página anterior');
-            $scope.pagina = $scope.pagina - 1;
-            Pais.getPagina({pagina: $scope.pagina}, $scope.pais, function(data){
-                 $scope.paises = data;
-            });
         };
-
-         //botão proximo da página
+        
+        $scope.proximo = function(){
             $scope.pagina = $scope.pagina + 1;
             Pais.getPagina({pagina: $scope.pagina}, $scope.pais, function(data){
-              if (data.length===0) {
-                $scope.pagina = $scope.pagina - 1;
-              }else{
-                $scope.paises = data;
-              };
+                if (data.length===0) {
+                    $scope.pagina = $scope.pagina - 1;
+                }else{
+                    $scope.paises = data;
+                };
             });
+         }
 
+         $scope.anterior = function(){
+           $scope.pagina = $scope.pagina - 1;
+           Pais.getPagina({pagina: $scope.pagina}, $scope.pais, function(data){
+             $scope.paises = data;
+           });
+         }
+
+      
         //deletar opcional
         $scope.delete = function(id){
            Pais.delete({id:id}, function(){
