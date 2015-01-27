@@ -1,3 +1,7 @@
+function updateActivedPage(scope) {
+    window.scopePage = scope.pagina;
+}
+
 angular.module('mercado')
   .controller('EstadoCreateController', function ($scope, $location, Estado, Pais, toastr){
         $scope.estado = {};
@@ -28,8 +32,42 @@ angular.module('mercado')
           Estado.getAll(function(data){
             $scope.estados = data;
           });
+          $scope.pagina = 0;
+          updateActivedPage(this);
         };
+        
+        //botão de páginas
+        $scope._pagina = function(val){
+        $scope.pagina = val;
+            Estado.getPagina({pagina: $scope.pagina}, $scope.estado, function(data){
+                $scope.estados = data;
+            });
+            updateActivedPage(this);  
+        };
+                
+        //botão anterior próximo
+        $scope.proximo = function(val){
+        $scope.pagina = val + 1;
+            Estado.getPagina({pagina: $scope.pagina}, $scope.estado, function(data){
+                if (data.length===0) {
+                    $scope.pagina = $scope.pagina - 1;
+                }else{
+                    $scope.estados = data;
+                };
+            });
+            updateActivedPage(this);
+        }
+        
+        //botão anterior
+        $scope.anterior = function(val){
+        $scope.pagina = val - 1;
+            Estado.getPagina({pagina: $scope.pagina}, $scope.estado, function(data){
+                $scope.estados = data;
+            });
+            updateActivedPage(this);
+        }
 
+        //deletar opcional
         $scope.delete = function(id){
            Estado.delete({id:id}, function(){
                toastr.success('Estado Removido com sucesso');

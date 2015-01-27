@@ -20,6 +20,7 @@ DELETE  /paises/:id                   controllers.PaisController.remover(id:Inte
 POST    /estados                      controllers.EstadoController.inserir()
 PUT     /estados/:id                  controllers.EstadoController.atualizar(id:Integer)
 GET     /estados                      controllers.EstadoController.buscaTodos()
+GET     /estadosPagina/:pagina        controllers.EstadoController.buscaPorPaginas(pagina:Integer)
 GET     /estados/:id                  controllers.EstadoController.buscaPorId(id:Integer)
 DELETE  /estados/:id                  controllers.EstadoController.remover(id:Integer)
 

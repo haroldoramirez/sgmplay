@@ -10,6 +10,7 @@ angular.module('mercado')
     function($resource, BaseUrl){
       return $resource(BaseUrl + '/estados/:id', {}, {
          getAll: {method: 'GET', url: BaseUrl + '/estados', isArray: true},
+         getPagina: {method: 'GET', url: BaseUrl + '/estadosPagina/:pagina', isArray: true},
          update: {method: 'PUT', url: BaseUrl + '/estados/:id', isArray: false}
       });
   }]).service('Cidade',['$resource', 'BaseUrl',

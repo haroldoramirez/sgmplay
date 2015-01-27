@@ -1,7 +1,10 @@
+function updateActivedPage(scope) {
+    window.scopePage = scope.pagina;
+}
+
 angular.module('mercado')
   .controller('PaisCreateController', function ($scope, $modal, $location, Pais, toastr) {
         $scope.pais = {};
-        $scope.pagina = 0;
         $scope.save = function(){
             console.log($scope.pais);
             Pais.save($scope.pais, function(data){
@@ -29,18 +32,22 @@ angular.module('mercado')
           Pais.getAll(function(data){
             $scope.paises = data;
           });
+          $scope.pagina = 0;
+          updateActivedPage(this);
         };
 
-        //páginas
+        //botão de páginas
         $scope._pagina = function(val){
-            $scope.pagina = val;
+        $scope.pagina = val;
             Pais.getPagina({pagina: $scope.pagina}, $scope.pais, function(data){
                 $scope.paises = data;
             });
+            updateActivedPage(this);
         };
         
-        $scope.proximo = function(){
-            $scope.pagina = $scope.pagina + 1;
+        //botão anterior próximo
+        $scope.proximo = function(val){
+        $scope.pagina = val + 1;
             Pais.getPagina({pagina: $scope.pagina}, $scope.pais, function(data){
                 if (data.length===0) {
                     $scope.pagina = $scope.pagina - 1;
@@ -48,16 +55,18 @@ angular.module('mercado')
                     $scope.paises = data;
                 };
             });
+            updateActivedPage(this);
          }
 
-         $scope.anterior = function(){
-           $scope.pagina = $scope.pagina - 1;
-           Pais.getPagina({pagina: $scope.pagina}, $scope.pais, function(data){
-             $scope.paises = data;
-           });
+        //botão anterior
+        $scope.anterior = function(val){
+        $scope.pagina = val - 1;
+            Pais.getPagina({pagina: $scope.pagina}, $scope.pais, function(data){
+                $scope.paises = data;
+            });
+            updateActivedPage(this);
          }
 
-      
         //deletar opcional
         $scope.delete = function(id){
            Pais.delete({id:id}, function(){
