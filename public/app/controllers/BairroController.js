@@ -1,3 +1,7 @@
+function updateActivedPage(scope) {
+    window.scopePage = scope.pagina;
+}
+
 angular.module('mercado')
  .controller('BairroCreateController', function ($scope, $location, $modal, Bairro, Cidade, toastr){
           $scope.bairro = {};
@@ -26,10 +30,44 @@ angular.module('mercado')
            $scope.bairros = [];
            $scope.init = function(){
              Bairro.getAll(function(data){
-               $scope.bairros = data;
+                $scope.bairros = data;
              });
+             $scope.pagina = 0;
+             updateActivedPage(this);
+           };
+           
+           //botão de páginas
+           $scope._pagina = function(val){
+           $scope.pagina = val;
+               Bairro.getPagina({pagina: $scope.pagina}, $scope.bairro, function(data){
+                   $scope.bairros = data;
+               });
+               updateActivedPage(this);
            };
 
+           //botão anterior próximo
+           $scope.proximo = function(val){
+           $scope.pagina = val + 1;
+               Bairro.getPagina({pagina: $scope.pagina}, $scope.bairro, function(data){
+                   if (data.length===0) {
+                       $scope.pagina = $scope.pagina - 1;
+                   }else{
+                       $scope.bairros = data;
+                           };
+                       });
+               updateActivedPage(this);
+           }
+
+           //botão anterior
+           $scope.anterior = function(val){
+           $scope.pagina = val - 1;
+               Bairro.getPagina({pagina: $scope.pagina}, $scope.bairro, function(data){
+                   $scope.bairros = data;
+               });
+               updateActivedPage(this);
+           }
+
+           //deletar opcional
            $scope.delete = function(id){
               Bairro.delete({id:id}, function(){
                   toastr.success('Bairro Removido com sucesso');

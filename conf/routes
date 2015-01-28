@@ -28,6 +28,7 @@ DELETE  /estados/:id                  controllers.EstadoController.remover(id:In
 POST    /cidades                      controllers.CidadeController.inserir()
 PUT     /cidades/:id                  controllers.CidadeController.atualizar(id:Integer)
 GET     /cidades                      controllers.CidadeController.buscaTodos()
+GET     /cidadesPagina/:pagina        controllers.CidadeController.buscaPorPaginas(pagina:Integer)
 GET     /cidades/:id                  controllers.CidadeController.buscaPorId(id:Integer)
 DELETE  /cidades/:id                  controllers.CidadeController.remover(id:Integer)
 
@@ -35,6 +36,7 @@ DELETE  /cidades/:id                  controllers.CidadeController.remover(id:In
 POST    /bairros                      controllers.BairroController.inserir()
 PUT     /bairros/:id                  controllers.BairroController.atualizar(id:Integer)
 GET     /bairros                      controllers.BairroController.buscaTodos()
+GET     /bairrosPagina/:pagina        controllers.BairroController.buscaPorPaginas(pagina:Integer)
 GET     /bairros/:id                  controllers.BairroController.buscaPorId(id:Integer)
 DELETE  /bairros/:id                  controllers.BairroController.remover(id:Integer)
 
@@ -56,6 +58,7 @@ DELETE  /fornecedores/:id             controllers.FornecedorController.remover(i
 POST    /categorias                   controllers.CategoriaController.inserir()
 PUT     /categorias/:id               controllers.CategoriaController.atualizar(id:Integer)
 GET     /categorias                   controllers.CategoriaController.buscaTodos()
+GET     /categoriasPagina/:pagina     controllers.CategoriaController.buscaPorPaginas(pagina:Integer)
 GET     /categorias/:id               controllers.CategoriaController.buscaPorId(id:Integer)
 DELETE  /categorias/:id               controllers.CategoriaController.remover(id:Integer)
 
@@ -67,11 +70,12 @@ GET     /fabricantes/:id              controllers.FabricanteController.buscaPorI
 DELETE  /fabricantes/:id              controllers.FabricanteController.remover(id:Integer)
 
 # CRUD Unidade de Medida
-POST    /unidadesdemedidas            controllers.UnidadeDeMedidaController.inserir()
-PUT     /unidadesdemedidas/:id        controllers.UnidadeDeMedidaController.atualizar(id:Integer)
-GET     /unidadesdemedidas            controllers.UnidadeDeMedidaController.buscaTodos()
-GET     /unidadesdemedidas/:id        controllers.UnidadeDeMedidaController.buscaPorId(id:Integer)
-DELETE  /unidadesdemedidas/:id        controllers.UnidadeDeMedidaController.remover(id:Integer)
+POST    /unidadesdemedidas                  controllers.UnidadeDeMedidaController.inserir()
+PUT     /unidadesdemedidas/:id              controllers.UnidadeDeMedidaController.atualizar(id:Integer)
+GET     /unidadesdemedidas                  controllers.UnidadeDeMedidaController.buscaTodos()
+GET     /unidadesdemedidasPagina/:pagina    controllers.UnidadeDeMedidaController.buscaPorPaginas(pagina:Integer)
+GET     /unidadesdemedidas/:id              controllers.UnidadeDeMedidaController.buscaPorId(id:Integer)
+DELETE  /unidadesdemedidas/:id              controllers.UnidadeDeMedidaController.remover(id:Integer)
 
 # CRUD Produto
 POST    /produtos                     controllers.ProdutoController.inserir()
@@ -84,6 +88,7 @@ DELETE  /produtos/:id                 controllers.ProdutoController.remover(id:I
 POST    /usuarios                     controllers.UsuarioController.inserir()
 PUT     /usuarios/:id                 controllers.UsuarioController.atualizar(id:Integer)
 GET     /usuarios                     controllers.UsuarioController.buscaTodos()
+GET     /usuariosPagina/:pagina       controllers.UsuarioController.buscaPorPaginas(pagina:Integer)
 GET     /usuarios/:id                 controllers.UsuarioController.buscaPorId(id:Integer)
 DELETE  /usuarios/:id                 controllers.UsuarioController.remover(id:Integer)
 

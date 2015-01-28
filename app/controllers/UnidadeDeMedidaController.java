@@ -1,6 +1,9 @@
 package controllers;
 
 import com.avaje.ebean.Ebean;
+import com.avaje.ebean.Page;
+import com.avaje.ebean.PagingList;
+import models.Usuario;
 import models.stock.UnidadeDeMedida;
 import play.Logger;
 import play.libs.Json;
@@ -8,6 +11,7 @@ import play.mvc.Controller;
 import play.mvc.Result;
 
 import javax.persistence.PersistenceException;
+import java.util.List;
 
 public class UnidadeDeMedidaController extends Controller {
 
@@ -50,8 +54,34 @@ public class UnidadeDeMedidaController extends Controller {
     }
 
     public static Result buscaTodos() {
-        Logger.info("busca Todas as Unidades de Medida");
-        return ok(Json.toJson(Ebean.find(UnidadeDeMedida.class).findList()));
+        Logger.info("busca Todos as Unidades de Medidas ordenadas");
+        return ok(Json.toJson(Ebean.find(UnidadeDeMedida.class)
+                .order()
+                .asc("nome")
+                .where()
+                .gt("nome", "2")
+                .setMaxRows(14)
+                .findList()));
+    }
+
+    //Mostrar acima de 14 linhas
+    public static Result buscaPorPaginas(Integer pagina) {
+        Logger.info("busca por página");
+
+        PagingList<UnidadeDeMedida> pagingList =
+                Ebean.find(UnidadeDeMedida.class)
+                        .order()
+                        .asc("nome")
+                        .where().gt("nome", "2")
+                        .findPagingList(14).setFetchAhead(true);
+
+        pagingList.getFutureRowCount();
+
+        Page<UnidadeDeMedida> page = pagingList.getPage(pagina);
+
+        List<UnidadeDeMedida> list = page.getList();
+
+        return ok(Json.toJson(list));
     }
 
     public static Result remover(Integer id) {

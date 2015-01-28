@@ -17,12 +17,14 @@ angular.module('mercado')
     function($resource, BaseUrl){
       return $resource(BaseUrl + '/cidades/:id', {}, {
         getAll: {method: 'GET', url: BaseUrl + '/cidades', isArray: true},
+        getPagina: {method: 'GET', url: BaseUrl + '/cidadesPagina/:pagina', isArray: true},
         update: {method: 'PUT', url: BaseUrl + '/cidades/:id', isArray: false}
       });
   }]).service('Bairro',['$resource', 'BaseUrl',
     function($resource, BaseUrl){
       return $resource(BaseUrl + '/bairros/:id', {}, {
          getAll: {method: 'GET', url: BaseUrl + '/bairros', isArray: true},
+         getPagina: {method: 'GET', url: BaseUrl + '/bairrosPagina/:pagina', isArray: true},
          update: {method: 'PUT', url: BaseUrl + '/bairros/:id', isArray: false}
       });
   }]).service('Cliente',['$resource', 'BaseUrl',
@@ -41,6 +43,7 @@ angular.module('mercado')
     function($resource, BaseUrl){
       return $resource(BaseUrl + '/categorias/:id', {}, {
          getAll: {method: 'GET', url: BaseUrl + '/categorias', isArray: true},
+         getPagina: {method: 'GET', url: BaseUrl + '/categoriasPagina/:pagina', isArray: true},
          update: {method: 'PUT', url: BaseUrl + '/categorias/:id', isArray: false}
       });
    }]).service('Fabricante',['$resource', 'BaseUrl',
@@ -53,6 +56,7 @@ angular.module('mercado')
     function($resource, BaseUrl){
       return $resource(BaseUrl + '/unidadesdemedidas/:id', {}, {
          getAll: {method: 'GET', url: BaseUrl + '/unidadesdemedidas', isArray: true},
+         getPagina: {method: 'GET', url: BaseUrl + '/unidadesdemedidasPagina/:pagina', isArray: true},
          update: {method: 'PUT', url: BaseUrl + '/unidadesdemedidas/:id', isArray: false}
       });
     }]).service('Produto',['$resource', 'BaseUrl',
@@ -65,6 +69,7 @@ angular.module('mercado')
     function($resource, BaseUrl){
       return $resource(BaseUrl + '/usuarios/:id', {}, {
          getAll: {method: 'GET', url: BaseUrl + '/usuarios', isArray: true},
+         getPagina: {method: 'GET', url: BaseUrl + '/usuariosPagina/:pagina', isArray: true},
          update: {method: 'PUT', url: BaseUrl + '/usuarios/:id', isArray: false}
       });
     }]);

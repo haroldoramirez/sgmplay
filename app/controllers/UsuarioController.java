@@ -1,13 +1,17 @@
 package controllers;
 
 import com.avaje.ebean.Ebean;
+import com.avaje.ebean.Page;
+import com.avaje.ebean.PagingList;
 import models.Usuario;
+import models.locale.Pais;
 import play.Logger;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 
 import javax.persistence.PersistenceException;
+import java.util.List;
 
 public class UsuarioController extends Controller {
 
@@ -51,13 +55,39 @@ public class UsuarioController extends Controller {
 
     public static Result buscaTodos() {
         Logger.info("busca Todos os Usuários ordenados");
-        return ok(Json.toJson(Ebean.find(Usuario.class).order().asc("login").findList()));
+        return ok(Json.toJson(Ebean.find(Usuario.class)
+                .order()
+                .asc("login")
+                .where()
+                .gt("login", "2")
+                .setMaxRows(14)
+                .findList()));
     }
 
     //Mostrar acima de 16 linhas
     public static Result busca() {
         Logger.info("busca os usuários");
         return ok(Json.toJson(Ebean.find(Usuario.class).setMaxRows(16).findList()));
+    }
+
+    //Mostrar acima de 14 linhas
+    public static Result buscaPorPaginas(Integer pagina) {
+        Logger.info("busca por página");
+
+        PagingList<Usuario> pagingList =
+                Ebean.find(Usuario.class)
+                        .order()
+                        .asc("login")
+                        .where().gt("login", "2")
+                        .findPagingList(14).setFetchAhead(true);
+
+        pagingList.getFutureRowCount();
+
+        Page<Usuario> page = pagingList.getPage(pagina);
+
+        List<Usuario> list = page.getList();
+
+        return ok(Json.toJson(list));
     }
 
     public static Result remover(Integer id) {

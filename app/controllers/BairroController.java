@@ -1,6 +1,8 @@
 package controllers;
 
 import com.avaje.ebean.Ebean;
+import com.avaje.ebean.Page;
+import com.avaje.ebean.PagingList;
 import models.locale.Bairro;
 import models.locale.Cidade;
 import play.Logger;
@@ -9,6 +11,7 @@ import play.mvc.Controller;
 import play.mvc.Result;
 
 import javax.persistence.PersistenceException;
+import java.util.List;
 
 public class BairroController extends Controller {
 
@@ -59,8 +62,34 @@ public class BairroController extends Controller {
     }
 
     public static Result buscaTodos() {
-        Logger.info("busca Todos os Bairros");
-        return ok(Json.toJson(Ebean.find(Bairro.class).findList()));
+        Logger.info("busca Todos Bairros ordenados");
+        return ok(Json.toJson(Ebean.find(Bairro.class)
+                .order()
+                .asc("nome")
+                .where()
+                .gt("nome", "2")
+                .setMaxRows(14)
+                .findList()));
+    }
+
+    //Mostrar acima de 14 linhas
+    public static Result buscaPorPaginas(Integer pagina) {
+        Logger.info("busca por página");
+
+        PagingList<Bairro> pagingList =
+                Ebean.find(Bairro.class)
+                        .order()
+                        .asc("nome")
+                        .where().gt("nome", "2")
+                        .findPagingList(14).setFetchAhead(true);
+
+        pagingList.getFutureRowCount();
+
+        Page<Bairro> page = pagingList.getPage(pagina);
+
+        List<Bairro> list = page.getList();
+
+        return ok(Json.toJson(list));
     }
 
     public static Result remover(Integer id) {

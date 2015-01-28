@@ -1,3 +1,7 @@
+function updateActivedPage(scope) {
+    window.scopePage = scope.pagina;
+}
+
 angular.module('mercado')
   .controller('UnidadeDeMedidaCreateController', function ($scope, $modal, $location, UnidadeDeMedida, toastr) {
         $scope.unidadedemedida = {};
@@ -28,8 +32,42 @@ angular.module('mercado')
           UnidadeDeMedida.getAll(function(data){
             $scope.unidadesdemedidas = data;
           });
+          $scope.pagina = 0;
+          updateActivedPage(this);
+        };
+        
+        //botão de páginas
+        $scope._pagina = function(val){
+        $scope.pagina = val;
+            UnidadeDeMedida.getPagina({pagina: $scope.pagina}, $scope.unidadedemedida, function(data){
+                $scope.unidadesdemedidas = data;
+            });
+            updateActivedPage(this);
         };
 
+        //botão anterior próximo
+        $scope.proximo = function(val){
+        $scope.pagina = val + 1;
+            UnidadeDeMedida.getPagina({pagina: $scope.pagina}, $scope.unidadedemedida, function(data){
+                if (data.length===0) {
+                    $scope.pagina = $scope.pagina - 1;
+                }else{
+                    $scope.unidadesdemedidas = data;
+                };
+            });
+            updateActivedPage(this);
+         }
+
+        //botão anterior
+        $scope.anterior = function(val){
+        $scope.pagina = val - 1;
+            UnidadeDeMedida.getPagina({pagina: $scope.pagina}, $scope.unidadedemedida, function(data){
+                $scope.unidadesdemedidas = data;
+            });
+            updateActivedPage(this);
+         }
+
+        //deletar opcional
         $scope.delete = function(id){
            UnidadeDeMedida.delete({id:id}, function(){
                toastr.success('Unidade de Medida removida com sucesso');

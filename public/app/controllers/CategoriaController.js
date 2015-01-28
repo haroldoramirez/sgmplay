@@ -1,3 +1,7 @@
+function updateActivedPage(scope) {
+    window.scopePage = scope.pagina;
+}
+
 angular.module('mercado')
   .controller('CategoriaCreateController', function ($scope, $modal, $location, Categoria, toastr) {
         $scope.categoria = {};
@@ -28,8 +32,42 @@ angular.module('mercado')
           Categoria.getAll(function(data){
             $scope.categorias = data;
           });
+          $scope.pagina = 0;
+          updateActivedPage(this);
+        };
+        
+        //botão de páginas
+        $scope._pagina = function(val){
+        $scope.pagina = val;
+            Categoria.getPagina({pagina: $scope.pagina}, $scope.categoria, function(data){
+                $scope.categorias = data;
+            });
+            updateActivedPage(this);
         };
 
+        //botão anterior próximo
+        $scope.proximo = function(val){
+        $scope.pagina = val + 1;
+            Categoria.getPagina({pagina: $scope.pagina}, $scope.categoria, function(data){
+                if (data.length===0) {
+                    $scope.pagina = $scope.pagina - 1;
+                }else{
+                    $scope.categorias = data;
+                };
+            });
+            updateActivedPage(this);
+         }
+
+        //botão anterior
+        $scope.anterior = function(val){
+        $scope.pagina = val - 1;
+            Categoria.getPagina({pagina: $scope.pagina}, $scope.categoria, function(data){
+                $scope.categorias = data;
+            });
+            updateActivedPage(this);
+         }
+
+        //deletar opcional
         $scope.delete = function(id){
            Categoria.delete({id:id}, function(){
                toastr.success('Categoria removida com sucesso');

@@ -1,3 +1,7 @@
+function updateActivedPage(scope) {
+    window.scopePage = scope.pagina;
+}
+
 angular.module('mercado')
   .controller('UsuarioCreateController', function ($scope, $modal, $location, Usuario, toastr) {
         $scope.usuario = {};
@@ -28,8 +32,42 @@ angular.module('mercado')
           Usuario.getAll(function(data){
             $scope.usuarios = data;
           });
+          $scope.pagina = 0;
+          updateActivedPage(this);
         };
 
+        //botão de páginas
+        $scope._pagina = function(val){
+        $scope.pagina = val;
+            Usuario.getPagina({pagina: $scope.pagina}, $scope.usuario, function(data){
+                $scope.usuarios = data;
+            });
+            updateActivedPage(this);
+        };
+
+        //botão anterior próximo
+        $scope.proximo = function(val){
+        $scope.pagina = val + 1;
+            Usuario.getPagina({pagina: $scope.pagina}, $scope.usuario, function(data){
+                if (data.length===0) {
+                    $scope.pagina = $scope.pagina - 1;
+                }else{
+                    $scope.usuarios = data;
+                };
+            });
+            updateActivedPage(this);
+         }
+
+        //botão anterior
+        $scope.anterior = function(val){
+        $scope.pagina = val - 1;
+            Usuario.getPagina({pagina: $scope.pagina}, $scope.usuario, function(data){
+                $scope.usuarios = data;
+            });
+            updateActivedPage(this);
+         }
+
+        //deletar opcional
         $scope.delete = function(id){
            Usuario.delete({id:id}, function(){
                toastr.success('Usuário removido com sucesso');

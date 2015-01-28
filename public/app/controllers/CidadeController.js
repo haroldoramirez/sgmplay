@@ -1,3 +1,7 @@
+function updateActivedPage(scope) {
+    window.scopePage = scope.pagina;
+}
+
 angular.module('mercado')
   .controller('CidadeCreateController', function ($scope, $location, Cidade, Estado, toastr){
       $scope.cidade = {};
@@ -25,11 +29,45 @@ angular.module('mercado')
     }).controller('CidadeListController', function ($scope, Cidade, toastr){
         $scope.cidades = [];
         $scope.init = function(){
-          Cidade.getAll(function(data){
-            $scope.cidades = data;
-          });
+            Cidade.getAll(function(data){
+                $scope.cidades = data;
+            });
+            $scope.pagina = 0;
+            updateActivedPage(this);
+        };
+        
+        //botão de páginas
+        $scope._pagina = function(val){
+        $scope.pagina = val;
+            Cidade.getPagina({pagina: $scope.pagina}, $scope.cidade, function(data){
+                $scope.cidades = data;
+            });
+            updateActivedPage(this);
         };
 
+        //botão anterior próximo
+        $scope.proximo = function(val){
+        $scope.pagina = val + 1;
+            Cidade.getPagina({pagina: $scope.pagina}, $scope.cidade, function(data){
+                if (data.length===0) {
+                    $scope.pagina = $scope.pagina - 1;
+                }else{
+                    $scope.cidades = data;
+                };
+            });
+            updateActivedPage(this);
+        }
+
+        //botão anterior
+        $scope.anterior = function(val){
+        $scope.pagina = val - 1;
+            Cidade.getPagina({pagina: $scope.pagina}, $scope.cidade, function(data){
+                $scope.cidades = data;
+            });
+            updateActivedPage(this);
+        }
+
+        //deletar opcional
         $scope.delete = function(id){
            Cidade.delete({id:id}, function(){
                toastr.success('Cidade Removida com sucesso');
