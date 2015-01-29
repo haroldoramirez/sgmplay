@@ -1,5 +1,7 @@
 # Play Framework with AngularJS
 
+[![Build Status](https://travis-ci.org/haroldoramirez/sgmplay.svg)](https://travis-ci.org/haroldoramirez/sgmplay)
+
 #### Version information
 PlayFramework 2.3.6 with Java8 64Bits.
 
