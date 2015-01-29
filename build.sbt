@@ -1,3 +1,5 @@
+import play.PlayJava
+
 name := """sgmplay"""
 
 version := "1.0-SNAPSHOT"
@@ -11,5 +13,6 @@ libraryDependencies ++= Seq(
   javaEbean,
   cache,
   javaWs,
-  "mysql" % "mysql-connector-java" % "5.1.34"
+  "mysql" % "mysql-connector-java" % "5.1.34",
+  "com.wordnik" %% "swagger-play2" % "1.3.12"
 )
