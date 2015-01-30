@@ -6,7 +6,6 @@
 GET     /                             controllers.Assets.at(path="/public", file="/index.html")
 
 # Swagger
-GET     /api-docs.json                controllers.ApiHelpController.getResources
 
 # Applications
 GET		/versaoplay					  controllers.Application.versaoplay()

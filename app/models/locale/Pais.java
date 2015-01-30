@@ -1,16 +1,22 @@
 package models.locale;
 
-import org.h2.util.Task;
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import play.db.ebean.Model;
 import play.libs.Json;
-
-import javax.persistence.*;
 
 @Entity
 @Table(name = "pais")
 public class Pais extends Model {
 
-    @Id
+	private static final long serialVersionUID = 1L;
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 

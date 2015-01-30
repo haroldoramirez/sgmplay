@@ -1,15 +1,22 @@
 package models;
 
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
 import play.db.ebean.Model;
 import play.libs.Json;
-
-import javax.persistence.*;
 
 @Entity
 @Table(name = "usuario")
 public class Usuario extends Model {
 
-    @Id
+	private static final long serialVersionUID = 1L;
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
@@ -18,7 +25,6 @@ public class Usuario extends Model {
 
     @Column(nullable = false)
     private String senha;
-    private String senha2;
 
     @Column(nullable = false)
     private Integer privilegio;

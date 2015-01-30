@@ -10,7 +10,9 @@ import javax.persistence.*;
 @Table(name = "fornecedor")
 public class Fornecedor extends Model {
 
-    @Id
+	private static final long serialVersionUID = 1L;
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
