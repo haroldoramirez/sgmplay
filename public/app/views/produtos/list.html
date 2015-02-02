@@ -21,55 +21,59 @@
             <div class="col-lg-5">
                 <div class="input-group">
                     <input autofocus type="text" class="form-control" placeholder="digite o nome do produto">
-                             <span class="input-group-btn">
-                                      <button class="btn btn-primary">
-                                          <span class="glyphicon glyphicon-search"></span> <b>Buscar</b>
-                                      </button>
-                            </span>
+                         <span class="input-group-btn">
+                              <button class="btn btn-primary">
+                                    <span class="glyphicon glyphicon-search"></span> <b>Buscar</b>
+                              </button>
+                        </span>
                 </div>
                 <br>
             </div>
 
             <!--Tabela-->
-            <table  ng-init="init()" class="table table-striped table-hover table-bordered">
-                <tr>
-                    <th>Descrição</th>
-                    <th>Quantidade</th>
-                    <th>Preço de Custo $</th>
-                    <th>Preço de Venda $</th>
-                    <th>Fabricante</th>
-                    <th>Fornecedor</th>
-                    <th>Categoria</th>
-                    <th>Unidade de Medida</th>
-                </tr>
-                <tr ng-repeat="produto in produtos">
-                    <td><b><a href="#/produtos/detalhe/{{produto.id}}">{{produto.descricao}}</a></b></td>
-                    <td><b>{{produto.quantidadeEmEstoque}}</b></td>
-                    <td><b>{{produto.precoDeCusto}}</b></td>
-                    <td><b>{{produto.precoDeVenda}}</b></td>
-                    <td><b>{{produto.fabricante.nome}}</b></td>
-                    <td><b>{{produto.fornecedor.nomeFantasia}}</b></td>
-                    <td><b>{{produto.categoria.descricao}}</b></td>
-                    <td><b>{{produto.unidadedemedida.nome}}</b></td>
-                    <!--<td>-->
-                    <!--<a href="" class="glyphicon glyphicon-trash" ng-click="delete(estado.id)"></a>-->
-                    <!--</td>-->
-                </tr>
-            </table>
+            <div style="min-height:610px">
+                <table  ng-init="init()" class="table table-striped table-hover table-bordered">
+                    <tr>
+                        <th>Descrição</th>
+                        <th>Quantidade</th>
+                        <th>Preço de Custo $</th>
+                        <th>Preço de Venda $</th>
+                        <th>Fabricante</th>
+                        <th>Fornecedor</th>
+                        <th>Categoria</th>
+                        <th>Unidade de Medida</th>
+                    </tr>
+                    <tr ng-repeat="produto in produtos">
+                        <td><b><a href="#/produtos/detalhe/{{produto.id}}">{{produto.descricao}}</a></b></td>
+                        <td><b>{{produto.quantidadeEmEstoque}}</b></td>
+                        <td><b>{{produto.precoDeCusto}}</b></td>
+                        <td><b>{{produto.precoDeVenda}}</b></td>
+                        <td><b>{{produto.fabricante.nome}}</b></td>
+                        <td><b>{{produto.fornecedor.nomeFantasia}}</b></td>
+                        <td><b>{{produto.categoria.descricao}}</b></td>
+                        <td><b>{{produto.unidadedemedida.nome}}</b></td>
+                        <!--<td>-->
+                        <!--<a href="" class="glyphicon glyphicon-trash" ng-click="delete(estado.id)"></a>-->
+                        <!--</td>-->
+                    </tr>
+                </table>
+            </div>
         </fieldset>
     </div>
 
     <!--Paginação-->
-    <div class="clearfix"></div>
-    <ul class="pagination pull-right">
-        <li class="disabled"><a href="#"><span class="glyphicon glyphicon-menu-left"></span></a></li>
-        <li class="active"><a href=""><b>1</b> <span class="sr-only">(current)</span></a></li>
-        <li><a href=""><b>2</b></a></li>
-        <li><a href=""><b>3</b></a></li>
-        <li><a href=""><b>4</b></a></li>
-        <li><a href=""><b>5</b></a></li>
-        <li><a href="#"><span class="glyphicon glyphicon-menu-right"></span></a></li>
-    </ul>
+    <nav>
+        <div class="clearfix"></div>
+        <ul class="pagination pull-right">
+            <li><a ng-click="anterior(1)" href=""><span class="glyphicon glyphicon-menu-left"></span></a></li>
+            <li class="active"><a ng-click="_pagina(0)" href=""><b>1</b></a></li>
+            <li><a ng-click="_pagina(1)" href=""><b>2</b></a></li>
+            <li><a ng-click="_pagina(2)" href=""><b>3</b></a></li>
+            <li><a ng-click="_pagina(3)" href=""><b>4</b></a></li>
+            <li><a ng-click="_pagina(4)" href=""><b>5</b></a></li>
+            <li><a ng-click="proximo(0)" href=""><span class="glyphicon glyphicon-menu-right"></span></a></li>
+        </ul>
+    </nav>
 </div>
 <hr>
 <!--Rodapé-->

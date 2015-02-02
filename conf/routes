@@ -46,6 +46,7 @@ DELETE  /bairros/:id                  controllers.BairroController.remover(id:In
 POST    /clientes                     controllers.ClienteController.inserir()
 PUT     /clientes/:id                 controllers.ClienteController.atualizar(id:Integer)
 GET     /clientes                     controllers.ClienteController.buscaTodos()
+GET     /clientesPagina/:pagina       controllers.ClienteController.buscaPorPaginas(pagina:Integer)
 GET     /clientes/:id                 controllers.ClienteController.buscaPorId(id:Integer)
 DELETE  /clientes/:id                 controllers.ClienteController.remover(id:Integer)
 
@@ -53,6 +54,7 @@ DELETE  /clientes/:id                 controllers.ClienteController.remover(id:I
 POST    /fornecedores                 controllers.FornecedorController.inserir()
 PUT     /fornecedores/:id             controllers.FornecedorController.atualizar(id:Integer)
 GET     /fornecedores                 controllers.FornecedorController.buscaTodos()
+GET     /fornecedoresPagina/:pagina   controllers.FornecedorController.buscaPorPaginas(pagina:Integer)
 GET     /fornecedores/:id             controllers.FornecedorController.buscaPorId(id:Integer)
 DELETE  /fornecedores/:id             controllers.FornecedorController.remover(id:Integer)
 
@@ -68,6 +70,7 @@ DELETE  /categorias/:id               controllers.CategoriaController.remover(id
 POST    /fabricantes                  controllers.FabricanteController.inserir()
 PUT     /fabricantes/:id              controllers.FabricanteController.atualizar(id:Integer)
 GET     /fabricantes                  controllers.FabricanteController.buscaTodos()
+GET     /fabricantesPagina/:pagina    controllers.FabricanteController.buscaPorPaginas(pagina:Integer)
 GET     /fabricantes/:id              controllers.FabricanteController.buscaPorId(id:Integer)
 DELETE  /fabricantes/:id              controllers.FabricanteController.remover(id:Integer)
 
@@ -83,6 +86,7 @@ DELETE  /unidadesdemedidas/:id              controllers.UnidadeDeMedidaControlle
 POST    /produtos                     controllers.ProdutoController.inserir()
 PUT     /produtos/:id                 controllers.ProdutoController.atualizar(id:Integer)
 GET     /produtos                     controllers.ProdutoController.buscaTodos()
+GET     /produtosPagina/:pagina       controllers.ProdutoController.buscaPorPaginas(pagina:Integer)
 GET     /produtos/:id                 controllers.ProdutoController.buscaPorId(id:Integer)
 DELETE  /produtos/:id                 controllers.ProdutoController.remover(id:Integer)
 

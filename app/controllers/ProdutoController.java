@@ -1,6 +1,8 @@
 package controllers;
 
 import com.avaje.ebean.Ebean;
+import com.avaje.ebean.Page;
+import com.avaje.ebean.PagingList;
 import models.Fornecedor;
 import models.stock.Categoria;
 import models.stock.Fabricante;
@@ -11,6 +13,7 @@ import play.mvc.Controller;
 import play.mvc.Result;
 
 import javax.persistence.PersistenceException;
+import java.util.List;
 
 public class ProdutoController extends Controller {
 
@@ -93,8 +96,34 @@ public class ProdutoController extends Controller {
     }
 
     public static Result buscaTodos() {
-        Logger.info("busca Todos os Produtos");
-        return ok(Json.toJson(Ebean.find(Produto.class).findList()));
+        Logger.info("busca Todos os Produtos ordenados");
+        return ok(Json.toJson(Ebean.find(Produto.class)
+                .order()
+                .asc("descricao")
+                .where()
+                .gt("descricao", "2")
+                .setMaxRows(14)
+                .findList()));
+    }
+
+    //Mostrar acima de 14 linhas
+    public static Result buscaPorPaginas(Integer pagina) {
+        Logger.info("busca por página");
+
+        PagingList<Produto> pagingList =
+                Ebean.find(Produto.class)
+                        .order()
+                        .asc("descricao")
+                        .where().gt("descricao", "2")
+                        .findPagingList(14).setFetchAhead(true);
+
+        pagingList.getFutureRowCount();
+
+        Page<Produto> page = pagingList.getPage(pagina);
+
+        List<Produto> list = page.getList();
+
+        return ok(Json.toJson(list));
     }
 
     public static Result remover(Integer id) {

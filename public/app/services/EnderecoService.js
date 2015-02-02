@@ -31,12 +31,14 @@ angular.module('mercado')
     function($resource, BaseUrl){
       return $resource(BaseUrl + '/clientes/:id', {}, {
         getAll: {method: 'GET', url: BaseUrl + '/clientes', isArray: true},
+        getPagina: {method: 'GET', url: BaseUrl + '/clientesPagina/:pagina', isArray: true},
         update: {method: 'PUT', url: BaseUrl + '/clientes/:id', isArray: false}
       });
   }]).service('Fornecedor',['$resource', 'BaseUrl',
     function($resource, BaseUrl){
       return $resource(BaseUrl + '/fornecedores/:id', {}, {
         getAll: {method: 'GET', url: BaseUrl + '/fornecedores', isArray: true},
+        getPagina: {method: 'GET', url: BaseUrl + '/fornecedoresPagina/:pagina', isArray: true},
         update: {method: 'PUT', url: BaseUrl + '/fornecedores/:id', isArray: false}
       });
   }]).service('Categoria',['$resource', 'BaseUrl',
@@ -50,6 +52,7 @@ angular.module('mercado')
     function($resource, BaseUrl){
       return $resource(BaseUrl + '/fabricantes/:id', {}, {
          getAll: {method: 'GET', url: BaseUrl + '/fabricantes', isArray: true},
+         getPagina: {method: 'GET', url: BaseUrl + '/fabricantesPagina/:pagina', isArray: true},
          update: {method: 'PUT', url: BaseUrl + '/fabricantes/:id', isArray: false}
       });
     }]).service('UnidadeDeMedida',['$resource', 'BaseUrl',
@@ -63,6 +66,7 @@ angular.module('mercado')
     function($resource, BaseUrl){
       return $resource(BaseUrl + '/produtos/:id', {}, {
          getAll: {method: 'GET', url: BaseUrl + '/produtos', isArray: true},
+         getPagina: {method: 'GET', url: BaseUrl + '/produtosPagina/:pagina', isArray: true},
          update: {method: 'PUT', url: BaseUrl + '/produtos/:id', isArray: false}
       });
     }]).service('Usuario',['$resource', 'BaseUrl',

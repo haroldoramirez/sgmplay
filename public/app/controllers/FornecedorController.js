@@ -28,8 +28,42 @@ angular.module('mercado')
             Fornecedor.getAll(function(data){
               $scope.fornecedores = data;
             });
+            $scope.pagina = 0;
+            updateActivedPage(this);
+          };
+          
+          //botão de páginas
+          $scope._pagina = function(val){
+          $scope.pagina = val;
+              Fornecedor.getPagina({pagina: $scope.pagina}, $scope.fornecedor, function(data){
+                  $scope.fornecedores = data;
+              });
+              updateActivedPage(this);
           };
 
+          //botão próximo
+          $scope.proximo = function(val){
+          $scope.pagina = val + 1;
+              Fornecedor.getPagina({pagina: $scope.pagina}, $scope.fornecedor, function(data){
+                  if (data.length===0) {
+                      $scope.pagina = $scope.pagina - 1;
+                  }else{
+                      $scope.fornecedores = data;
+                  };
+              });
+              updateActivedPage(this);
+          }
+
+          //botão anterior
+          $scope.anterior = function(val){
+          $scope.pagina = val - 1;
+              Fornecedor.getPagina({pagina: $scope.pagina}, $scope.fornecedor, function(data){
+                  $scope.fornecedores = data;
+              });
+              updateActivedPage(this);
+          }
+
+        //deletar opcional
           $scope.delete = function(id){
              Fornecedor.delete({id:id}, function(){
                  toastr.success('Fornecedor Removido com sucesso');

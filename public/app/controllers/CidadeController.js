@@ -45,7 +45,7 @@ angular.module('mercado')
             updateActivedPage(this);
         };
 
-        //botão anterior próximo
+        //botão próximo
         $scope.proximo = function(val){
         $scope.pagina = val + 1;
             Cidade.getPagina({pagina: $scope.pagina}, $scope.cidade, function(data){

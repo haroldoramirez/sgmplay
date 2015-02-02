@@ -28,8 +28,42 @@ angular.module('mercado')
             Cliente.getAll(function(data){
               $scope.clientes = data;
             });
+            $scope.pagina = 0;
+            updateActivedPage(this);
+          };
+          
+          //botão de páginas
+          $scope._pagina = function(val){
+          $scope.pagina = val;
+              Cliente.getPagina({pagina: $scope.pagina}, $scope.cliente, function(data){
+                  $scope.clientes = data;
+              });
+              updateActivedPage(this);
           };
 
+          //botão próximo
+          $scope.proximo = function(val){
+          $scope.pagina = val + 1;
+              Cliente.getPagina({pagina: $scope.pagina}, $scope.cliente, function(data){
+                  if (data.length===0) {
+                      $scope.pagina = $scope.pagina - 1;
+                  }else{
+                      $scope.clientes = data;
+                  };
+              });
+              updateActivedPage(this);
+          }
+
+          //botão anterior
+          $scope.anterior = function(val){
+          $scope.pagina = val - 1;
+              Cliente.getPagina({pagina: $scope.pagina}, $scope.cliente, function(data){
+                  $scope.clientes = data;
+              });
+              updateActivedPage(this);
+          }
+
+          //deletar opcional
           $scope.delete = function(id){
              Cliente.delete({id:id}, function(){
                  toastr.success('Cliente Removido com sucesso');

@@ -1,12 +1,16 @@
 package controllers;
 
 import com.avaje.ebean.Ebean;
+import com.avaje.ebean.Page;
+import com.avaje.ebean.PagingList;
 import models.Cliente;
 import models.locale.Bairro;
 import play.Logger;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
+
+import java.util.List;
 
 public class ClienteController extends Controller {
 
@@ -51,8 +55,34 @@ public class ClienteController extends Controller {
     }
 
     public static Result buscaTodos() {
-        Logger.info("busca Todos os Clientes");
-        return ok(Json.toJson(Ebean.find(Cliente.class).findList()));
+        Logger.info("busca Todos os Clientes ordenados");
+        return ok(Json.toJson(Ebean.find(Cliente.class)
+                .order()
+                .asc("nome")
+                .where()
+                .gt("nome", "2")
+                .setMaxRows(14)
+                .findList()));
+    }
+
+    //Mostrar acima de 14 linhas
+    public static Result buscaPorPaginas(Integer pagina) {
+        Logger.info("busca por página");
+
+        PagingList<Cliente> pagingList =
+                Ebean.find(Cliente.class)
+                        .order()
+                        .asc("nome")
+                        .where().gt("nome", "2")
+                        .findPagingList(14).setFetchAhead(true);
+
+        pagingList.getFutureRowCount();
+
+        Page<Cliente> page = pagingList.getPage(pagina);
+
+        List<Cliente> list = page.getList();
+
+        return ok(Json.toJson(list));
     }
 
     public static Result remover(Integer id) {

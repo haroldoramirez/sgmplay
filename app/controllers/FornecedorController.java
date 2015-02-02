@@ -1,6 +1,8 @@
 package controllers;
 
 import com.avaje.ebean.Ebean;
+import com.avaje.ebean.Page;
+import com.avaje.ebean.PagingList;
 import models.Fornecedor;
 import models.locale.Bairro;
 import play.Logger;
@@ -9,6 +11,7 @@ import play.mvc.Controller;
 import play.mvc.Result;
 
 import javax.persistence.PersistenceException;
+import java.util.List;
 
 public class FornecedorController extends Controller {
 
@@ -59,8 +62,34 @@ public class FornecedorController extends Controller {
     }
 
     public static Result buscaTodos() {
-        Logger.info("busca Todos os Fornecedores");
-        return ok(Json.toJson(Ebean.find(Fornecedor.class).findList()));
+        Logger.info("busca Todos os Fornecedores ordenados");
+        return ok(Json.toJson(Ebean.find(Fornecedor.class)
+                .order()
+                .asc("nomeFantasia")
+                .where()
+                .gt("nomeFantasia", "2")
+                .setMaxRows(14)
+                .findList()));
+    }
+
+    //Mostrar acima de 14 linhas
+    public static Result buscaPorPaginas(Integer pagina) {
+        Logger.info("busca por página");
+
+        PagingList<Fornecedor> pagingList =
+                Ebean.find(Fornecedor.class)
+                        .order()
+                        .asc("nomeFantasia")
+                        .where().gt("nomeFantasia", "2")
+                        .findPagingList(14).setFetchAhead(true);
+
+        pagingList.getFutureRowCount();
+
+        Page<Fornecedor> page = pagingList.getPage(pagina);
+
+        List<Fornecedor> list = page.getList();
+
+        return ok(Json.toJson(list));
     }
 
     public static Result remover(Integer id) {

@@ -40,8 +40,42 @@ angular.module('mercado')
           Produto.getAll(function(data){
             $scope.produtos = data;
           });
+          $scope.pagina = 0;
+          updateActivedPage(this);
         };
 
+        //botão de páginas
+        $scope._pagina = function(val){
+        $scope.pagina = val;
+            Produto.getPagina({pagina: $scope.pagina}, $scope.produto, function(data){
+                $scope.produtos = data;
+            });
+            updateActivedPage(this);
+        };
+
+        //botão próximo
+        $scope.proximo = function(val){
+        $scope.pagina = val + 1;
+            Produto.getPagina({pagina: $scope.pagina}, $scope.produto, function(data){
+                if (data.length===0) {
+                    $scope.pagina = $scope.pagina - 1;
+                }else{
+                    $scope.produtos = data;
+                };
+            });
+            updateActivedPage(this);
+         }
+
+        //botão anterior
+        $scope.anterior = function(val){
+        $scope.pagina = val - 1;
+            Produto.getPagina({pagina: $scope.pagina}, $scope.produto, function(data){
+                $scope.produtos = data;
+            });
+            updateActivedPage(this);
+         }
+
+        //deletar opcional
         $scope.delete = function(id){
            Produto.delete({id:id}, function(){
                toastr.success('Produto Removido com sucesso');
