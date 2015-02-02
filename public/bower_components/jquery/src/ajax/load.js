@@ -16,7 +16,8 @@ var _load = jQuery.fn.load;
  * Load a url into a page
  */
 jQuery.fn.load = function( url, params, callback ) {
-	if ( typeof url !== "string" && _load ) {
+
+    if ( typeof url !== "string" && _load ) {
 		return _load.apply( this, arguments );
 	}
 
