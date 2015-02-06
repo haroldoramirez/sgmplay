@@ -30,6 +30,10 @@ public class ProdutoController extends Controller {
         produto.setFabricante(fabricante);
         produto.setFornecedor(fornecedor);
 
+        if ((produto.getQuantidadeMinima() <= 0 || produto.getQuantidadeEmEstoque() <=0)){
+            return badRequest("Quantidades Não Podem Ser Negativas");
+        }
+
         if (produto.getQuantidadeMinima() > produto.getQuantidadeEmEstoque()) {
             return badRequest("Quantidade Mínima deve ser menor que Quantidade em Estoque");
         }
@@ -64,6 +68,10 @@ public class ProdutoController extends Controller {
         produto.setFabricante(fabricante);
         produto.setFornecedor(fornecedor);
 
+        if ((produto.getQuantidadeMinima() <= 0 || produto.getQuantidadeEmEstoque() <=0)){
+            return badRequest("Quantidades Não Podem Ser Negativas");
+        }
+
         if (produto.getQuantidadeMinima() > produto.getQuantidadeEmEstoque()) {
             return badRequest("Quantidade Mínima deve ser menor que Quantidade em Estoque");
         }
@@ -71,8 +79,7 @@ public class ProdutoController extends Controller {
         if (produto.getPrecoDeCusto() > produto.getPrecoDeVenda()) {
             return badRequest("Preço de Custo deve ser menor que o Preço de Venda");
         }
-        
-        
+
         try {
             Ebean.update(produto);
         } catch (Exception e) {

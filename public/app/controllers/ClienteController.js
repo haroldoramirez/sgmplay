@@ -4,7 +4,7 @@ angular.module('mercado')
           $scope.save = function(){
               console.log($scope.cliente);
               Cliente.save($scope.cliente, function(data){
-                  toastr.success('Cliente salvo com sucesso');
+                  toastr.success(data.data, 'Cliente salvo com sucesso');
                   $location.path('/clientes');
               }, function(data){
                   console.log(data);
@@ -65,11 +65,11 @@ angular.module('mercado')
 
           //deletar opcional
           $scope.delete = function(id){
-             Cliente.delete({id:id}, function(){
-                 toastr.success('Cliente Removido com sucesso');
+             Cliente.delete({id:id}, function(data){
+                 toastr.success(data.data, 'Cliente Removido com sucesso');
                  $scope.init();
              }, function(data){
-                 toastr.error(data.data,'Não foi possível remover o Cliente');
+                 toastr.error(data.data, 'Não foi possível remover o Cliente');
              });
           };
 
@@ -81,11 +81,12 @@ angular.module('mercado')
           };
 
           $scope.update = function(){
-              Cliente.update({id:$routeParams.id},$scope.cliente, function(){
-                  toastr.success('Cliente atualizado com sucesso');
+              Cliente.update({id:$routeParams.id},$scope.cliente, function(data){
+                  toastr.success(data.data, 'Cliente atualizado com sucesso');
                   $location.path('/clientes');
-              },function(){
-                 toastr.error('Não foi possível Salvar o Cliente');
+              },function(data){
+                  console.log(data);
+                  toastr.error(data.data,'Não foi possível Salvar o Cliente');
               });
           };
 
@@ -94,8 +95,8 @@ angular.module('mercado')
           };
 
           $scope.delete = function(){
-              Cliente.delete({id:$routeParams.id}, function(){
-                  toastr.success('Cliente removido com sucesso');
+              Cliente.delete({id:$routeParams.id}, function(data){
+                  toastr.success(data.data, 'Cliente removido com sucesso');
                   $location.path('/clientes');
               }, function(data){
                   toastr.error(data.data,'Não foi possível remover o Cliente');

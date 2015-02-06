@@ -9,7 +9,9 @@ import play.Logger;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
+import validators.ValidaCPF;
 
+import javax.persistence.PersistenceException;
 import java.util.List;
 
 public class ClienteController extends Controller {
@@ -17,13 +19,25 @@ public class ClienteController extends Controller {
     public static Result inserir() {
         Logger.info("Salvando Cliente");
 
+        ValidaCPF validaCPF = new ValidaCPF();
+
         Cliente cliente = Json.fromJson(request().body().asJson(), Cliente.class);
 
         Bairro bairro = Ebean.find(Bairro.class, cliente.getBairro().getId());
 
         cliente.setBairro(bairro);
 
-        Ebean.save(cliente);
+        if (!validaCPF.isCPF(cliente.getCpf())) {
+            return badRequest("CPF Inválido");
+        }
+
+        try {
+            Ebean.save(cliente);
+        } catch (PersistenceException e) {
+            return badRequest("Cliente já Cadastrado");
+        } catch (Exception e) {
+            return badRequest("Erro interno de sistema");
+        }
 
         return created(Json.toJson(cliente));
     }
@@ -31,14 +45,25 @@ public class ClienteController extends Controller {
     public static Result atualizar(Integer id) {
         Logger.info("Atualizando Cliente");
 
+        ValidaCPF validaCPF = new ValidaCPF();
+
         Cliente cliente = Json.fromJson(request().body().asJson(), Cliente.class);
 
         Bairro bairro = Ebean.find(Bairro.class, cliente.getBairro().getId());
 
         cliente.setBairro(bairro);
 
-        Ebean.update(cliente);
+        if (!validaCPF.isCPF(cliente.getCpf())) {
+            return badRequest("CPF Inválido");
+        }
 
+        try {
+            Ebean.update(cliente);
+        } catch (PersistenceException e) {
+            return badRequest("Cliente já Cadastrado");
+        } catch (Exception e) {
+            return badRequest("Erro interno de sistema");
+        }
         return ok(Json.toJson(cliente));
     }
 
