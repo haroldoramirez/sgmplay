@@ -37,7 +37,13 @@ public class UsuarioController extends Controller {
 
         Usuario usuario = Json.fromJson(request().body().asJson(), Usuario.class);
 
-        Ebean.update(usuario);
+        try {
+            Ebean.update(usuario);
+        } catch (PersistenceException e) {
+            return badRequest("Usuário já Cadastrado");
+        } catch (Exception e) {
+            return badRequest("Erro interno de sistema");
+        }
 
         return ok(Json.toJson(usuario));
     }

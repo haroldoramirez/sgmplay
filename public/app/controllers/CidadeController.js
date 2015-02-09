@@ -8,7 +8,7 @@ angular.module('mercado')
       $scope.save = function(){
           console.log($scope.cidade);
           Cidade.save($scope.cidade, function(data){
-              toastr.success('Cidade salva com sucesso');
+              toastr.success(data.data,'Cidade Salva com Sucesso');
               $location.path('/cidades');
           }, function(data){
               console.log(data);
@@ -70,10 +70,10 @@ angular.module('mercado')
         //deletar opcional
         $scope.delete = function(id){
            Cidade.delete({id:id}, function(){
-               toastr.success('Cidade Removida com sucesso');
+               toastr.success('Cidade Removida com Sucesso');
                $scope.init();
            }, function(data){
-               toastr.error(data.data,'Não foi possível remover a Cidade');
+               toastr.error(data.data,'Não foi possível Remover a Cidade');
            });
         };
   }).controller('CidadeDetailController', function ($scope, $routeParams, $location, Cidade, Estado, toastr){
@@ -85,10 +85,10 @@ angular.module('mercado')
 
         $scope.update = function(){
             Cidade.update({id:$routeParams.id},$scope.cidade, function(){
-                toastr.success('Cidade atualizada com sucesso');
+                toastr.success('Cidade Atualizada com Sucesso');
                 $location.path('/cidades');
-            },function(){
-               toastr.error('Não foi possível Salvar a Cidade');
+            },function(data){
+               toastr.error(data.data,'Não foi possível Atualizar a Cidade');
             });
           };
 
@@ -98,11 +98,11 @@ angular.module('mercado')
 
         $scope.delete = function(){
             Cidade.delete({id:$routeParams.id}, function(){
-                toastr.success('Cidade removido com sucesso');
+                toastr.success('Cidade Removida com sucesso');
                 $location.path('/cidades');
             }, function(data){
             console.log(data);
-                toastr.error(data.data,'Não foi possível remover a Cidade');
+                toastr.error(data.data,'Não foi possível Remover a Cidade');
             });
         };
 

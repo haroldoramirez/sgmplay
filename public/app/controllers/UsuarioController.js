@@ -8,7 +8,7 @@ angular.module('mercado')
         $scope.save = function(){
             console.log($scope.usuario);
             Usuario.save($scope.usuario, function(data){
-                toastr.success('Usuário salvo com sucesso');
+                toastr.success(data.data,'Usuário Salvo com Sucesso');
                 $location.path('/usuarios');
             }, function(data){
                 console.log(data);
@@ -70,10 +70,10 @@ angular.module('mercado')
         //deletar opcional
         $scope.delete = function(id){
            Usuario.delete({id:id}, function(){
-               toastr.success('Usuário removido com sucesso');
+               toastr.success('Usuário Removido com Sucesso');
                $scope.init();
            }, function(data){
-               toastr.error(data.data,'Não foi possível remover o Usuário');
+               toastr.error(data.data,'Não foi possível Remover o Usuário');
            });
         };
 
@@ -85,10 +85,10 @@ angular.module('mercado')
 
         $scope.update = function(){
             Usuario.update({id:$routeParams.id},$scope.usuario, function(){
-                toastr.success('Usuário atualizado com sucesso');
+                toastr.success('Usuário Atualizado com Sucesso');
                 $location.path('/usuarios');
-            },function(){
-               toastr.error('Não foi possível Salvar o Usuário');
+            },function(data){
+               toastr.error(data.data,'Não foi possível Atualizar o Usuário');
             });
 
         };
@@ -99,11 +99,11 @@ angular.module('mercado')
 
         $scope.delete = function(){
             Usuario.delete({id:$routeParams.id}, function(){
-                toastr.success('Usuário removido com sucesso');
+                toastr.success('Usuário Removido com Sucesso');
                 $location.path('/usuarios');
             }, function(data){
             console.log(data);
-                toastr.error(data.data,'Não foi possível remover o Usuário');
+                toastr.error(data.data,'Não foi possível Remover o Usuário');
             });
         };
 

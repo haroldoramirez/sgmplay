@@ -4,7 +4,7 @@ angular.module('mercado')
         $scope.save = function(){
             console.log($scope.fabricante);
             Fabricante.save($scope.fabricante, function(data){
-                toastr.success('Fabricante salvo com sucesso');
+                toastr.success(data.data,'Fabricante Salvo com Sucesso');
                 $location.path('/fabricantes');
             }, function(data){
                 console.log(data);
@@ -66,10 +66,10 @@ angular.module('mercado')
         //deletar opcional
         $scope.delete = function(id){
            Fabricante.delete({id:id}, function(){
-               toastr.success('Fabricante removido com sucesso');
+               toastr.success('Fabricante Removido com Sucesso');
                $scope.init();
            }, function(data){
-               toastr.error(data.data,'Não foi possível remover o Fabricante');
+               toastr.error(data.data,'Não foi possível Remover o Fabricante');
            });
         };
 
@@ -81,10 +81,10 @@ angular.module('mercado')
 
         $scope.update = function(){
             Fabricante.update({id:$routeParams.id},$scope.fabricante, function(){
-                toastr.success('Fabricante atualizado com sucesso');
+                toastr.success('Fabricante Atualizado com Sucesso');
                 $location.path('/fabricantes');
-            },function(){
-               toastr.error('Não foi possível Salvar o Fabricante');
+            },function(data){
+               toastr.error(data.data,'Não foi possível Atualizar o Fabricante');
             });
 
         };
@@ -95,7 +95,7 @@ angular.module('mercado')
 
         $scope.delete = function(){
             Fabricante.delete({id:$routeParams.id}, function(){
-                toastr.success('Fabricante removido com sucesso');
+                toastr.success('Fabricante Removido com Sucesso');
                 $location.path('/fabricantes');
             }, function(data){
             console.log(data);

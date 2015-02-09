@@ -8,7 +8,7 @@ angular.module('mercado')
         $scope.save = function(){
             console.log($scope.categoria);
             Categoria.save($scope.categoria, function(data){
-                toastr.success('Categoria salva com sucesso');
+                toastr.success(data.data,'Categoria Salva com Sucesso');
                 $location.path('/categorias');
             }, function(data){
                 console.log(data);
@@ -70,10 +70,10 @@ angular.module('mercado')
         //deletar opcional
         $scope.delete = function(id){
            Categoria.delete({id:id}, function(){
-               toastr.success('Categoria removida com sucesso');
+               toastr.success('Categoria Removida com Sucesso');
                $scope.init();
            }, function(data){
-               toastr.error(data.data,'Não foi possível remover a Categoria');
+               toastr.error(data.data,'Não foi possível Remover a Categoria');
            });
         };
 
@@ -85,10 +85,10 @@ angular.module('mercado')
 
         $scope.update = function(){
             Categoria.update({id:$routeParams.id},$scope.categoria, function(){
-                toastr.success('Categoria atualizada com sucesso');
+                toastr.success('Categoria Atualizada com sucesso');
                 $location.path('/categorias');
-            },function(){
-               toastr.error('Não foi possível Salvar a Categoria');
+            },function(data){
+               toastr.error(data.data,'Não foi possível Atualizar a Categoria');
             });
 
         };
@@ -99,11 +99,11 @@ angular.module('mercado')
 
         $scope.delete = function(){
             Categoria.delete({id:$routeParams.id}, function(){
-                toastr.success('Categoria removida com sucesso');
+                toastr.success('Categoria Removida com Sucesso');
                 $location.path('/categorias');
             }, function(data){
             console.log(data);
-                toastr.error(data.data,'Não foi possível remover a Categoria');
+                toastr.error(data.data,'Não foi possível Remover a Categoria');
             });
         };
 

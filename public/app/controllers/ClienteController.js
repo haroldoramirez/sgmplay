@@ -4,7 +4,7 @@ angular.module('mercado')
           $scope.save = function(){
               console.log($scope.cliente);
               Cliente.save($scope.cliente, function(data){
-                  toastr.success(data.data, 'Cliente salvo com sucesso');
+                  toastr.success(data.data,'Cliente Salvo com Sucesso');
                   $location.path('/clientes');
               }, function(data){
                   console.log(data);
@@ -66,10 +66,10 @@ angular.module('mercado')
           //deletar opcional
           $scope.delete = function(id){
              Cliente.delete({id:id}, function(data){
-                 toastr.success(data.data, 'Cliente Removido com sucesso');
+                 toastr.success(data.data, 'Cliente Removido com Sucesso');
                  $scope.init();
              }, function(data){
-                 toastr.error(data.data, 'Não foi possível remover o Cliente');
+                 toastr.error(data.data, 'Não foi possível Remover o Cliente');
              });
           };
 
@@ -82,11 +82,11 @@ angular.module('mercado')
 
           $scope.update = function(){
               Cliente.update({id:$routeParams.id},$scope.cliente, function(data){
-                  toastr.success(data.data, 'Cliente atualizado com sucesso');
+                  toastr.success(data.data, 'Cliente Atualizado com Sucesso');
                   $location.path('/clientes');
               },function(data){
                   console.log(data);
-                  toastr.error(data.data,'Não foi possível Salvar o Cliente');
+                  toastr.error(data.data,'Não foi possível Atualizar o Cliente');
               });
           };
 
@@ -96,10 +96,10 @@ angular.module('mercado')
 
           $scope.delete = function(){
               Cliente.delete({id:$routeParams.id}, function(data){
-                  toastr.success(data.data, 'Cliente removido com sucesso');
+                  toastr.success(data.data, 'Cliente Removido com Sucesso');
                   $location.path('/clientes');
               }, function(data){
-                  toastr.error(data.data,'Não foi possível remover o Cliente');
+                  toastr.error(data.data,'Não foi possível Remover o Cliente');
               });
 
           };

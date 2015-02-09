@@ -8,7 +8,7 @@ angular.module('mercado')
         $scope.save = function(){
             console.log($scope.estado);
             Estado.save($scope.estado, function(data){
-                toastr.success('Estado salvo com sucesso');
+                toastr.success(data.data,'Estado Salvo com Sucesso');
                 $location.path('/estados');
             }, function(data){
                 console.log(data);
@@ -70,10 +70,10 @@ angular.module('mercado')
         //deletar opcional
         $scope.delete = function(id){
            Estado.delete({id:id}, function(){
-               toastr.success('Estado Removido com sucesso');
+               toastr.success('Estado Removido com Sucesso');
                $scope.init();
            }, function(data){
-               toastr.error('Não foi possível remover o Estado');
+               toastr.error(data.data,'Não foi possível Remover o Estado');
            });
         };
 
@@ -86,10 +86,10 @@ angular.module('mercado')
 
         $scope.update = function(){
             Estado.update({id:$routeParams.id},$scope.estado, function(){
-                toastr.success('Estado atualizado com sucesso');
+                toastr.success('Estado Atualizado com Sucesso');
                 $location.path('/estados');
-            },function(){
-               toastr.error('Não foi possível Salvar o Estado');
+            },function(data){
+               toastr.error(data.data,'Não foi possível Atualizar o Estado');
             });
 
           };
@@ -100,11 +100,11 @@ angular.module('mercado')
 
         $scope.delete = function(){
             Estado.delete({id:$routeParams.id}, function(){
-                toastr.success('Estado removido com sucesso');
+                toastr.success('Estado Removido com Sucesso');
                 $location.path('/estados');
             }, function(data){
             console.log(data);
-                toastr.error(data.data,'Não foi possível remover o Estado');
+                toastr.error(data.data,'Não foi possível Remover o Estado');
             });
 
         };

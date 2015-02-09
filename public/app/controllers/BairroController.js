@@ -8,7 +8,7 @@ angular.module('mercado')
           $scope.save = function(){
               console.log($scope.bairro);
               Bairro.save($scope.bairro, function(data){
-                  toastr.success('Bairro salvo com sucesso');
+                  toastr.success(data.data,'Bairro Salvo com Sucesso');
                   $location.path('/bairros');
               }, function(data){
                   console.log(data);
@@ -70,10 +70,10 @@ angular.module('mercado')
            //deletar opcional
            $scope.delete = function(id){
               Bairro.delete({id:id}, function(){
-                  toastr.success('Bairro Removido com sucesso');
+                  toastr.success('Bairro Removido com Sucesso');
                   $scope.init();
               }, function(data){
-                  toastr.error(data.data,'Não foi possível remover o Bairro');
+                  toastr.error(data.data,'Não foi possível Remover o Bairro');
               });
            };
  }).controller('BairroDetailController', function ($scope, $modal, $routeParams, $location, Bairro, Cidade, toastr){
@@ -85,10 +85,10 @@ angular.module('mercado')
 
            $scope.update = function(){
                Bairro.update({id:$routeParams.id},$scope.bairro, function(){
-                   toastr.success('Bairro atualizado com sucesso');
+                   toastr.success('Bairro Atualizado com Sucesso');
                    $location.path('/bairros');
-               },function(){
-                  toastr.error('Não foi possível Salvar o Bairro');
+               },function(data){
+                  toastr.error(data.data,'Não foi possível Atualizar o Bairro');
                });
 
            };
@@ -99,7 +99,7 @@ angular.module('mercado')
 
            $scope.delete = function(){
                Bairro.delete({id:$routeParams.id}, function(){
-                   toastr.success('Bairro removido com sucesso');
+                   toastr.success('Bairro Removido com Sucesso');
                    $location.path('/bairros');
                }, function(data){
                console.log(data);

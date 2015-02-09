@@ -8,7 +8,7 @@ angular.module('mercado')
         $scope.save = function(){
             console.log($scope.unidadedemedida);
             UnidadeDeMedida.save($scope.unidadedemedida, function(data){
-                toastr.success('Unidade de Medida salva com sucesso');
+                toastr.success(data.data,'Unidade de Medida Salva com Sucesso');
                 $location.path('/unidadesdemedidas');
             }, function(data){
                 console.log(data);
@@ -70,10 +70,10 @@ angular.module('mercado')
         //deletar opcional
         $scope.delete = function(id){
            UnidadeDeMedida.delete({id:id}, function(){
-               toastr.success('Unidade de Medida removida com sucesso');
+               toastr.success('Unidade de Medida Removida com Sucesso');
                $scope.init();
            }, function(data){
-               toastr.error(data.data,'Não foi possível remover a Unidade de Medida');
+               toastr.error(data.data,'Não foi possível Remover a Unidade de Medida');
            });
         };
 
@@ -85,10 +85,11 @@ angular.module('mercado')
 
         $scope.update = function(){
             UnidadeDeMedida.update({id:$routeParams.id},$scope.unidadedemedida, function(){
-                toastr.success('Unidade de Medida atualizada com sucesso');
-                $location.path('/unidadesdemedidas');
-            },function(){
-               toastr.error('Não foi possível Salvar a Unidade de Medida');
+               toastr.success('Unidade de Medida Atualizada com sucesso');
+               $location.path('/unidadesdemedidas');
+            },function(data){
+               console.log(data);
+               toastr.error(data.data,'Não foi possível Atualizar a Unidade de Medida');
             });
 
         };
@@ -103,7 +104,7 @@ angular.module('mercado')
                 $location.path('/unidadesdemedidas');
             }, function(data){
             console.log(data);
-                toastr.error(data.data,'Não foi possível remover a Unidade de Medida');
+                toastr.error(data.data,'Não foi possível Remover a Unidade de Medida');
             });
         };
 

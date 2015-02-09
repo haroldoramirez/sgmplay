@@ -6,9 +6,11 @@ import com.avaje.ebean.PagingList;
 import models.Fornecedor;
 import models.locale.Bairro;
 import play.Logger;
+import play.api.libs.concurrent.Execution;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
+import validators.ValidaCNPJ;
 
 import javax.persistence.PersistenceException;
 import java.util.List;
@@ -18,11 +20,17 @@ public class FornecedorController extends Controller {
     public static Result inserir() {
         Logger.info("Salvando Fornecedor");
 
+        ValidaCNPJ validaCNPJ = new ValidaCNPJ();
+
         Fornecedor fornecedor = Json.fromJson(request().body().asJson(), Fornecedor.class);
 
         Bairro bairro = Ebean.find(Bairro.class, fornecedor.getBairro().getId());
 
         fornecedor.setBairro(bairro);
+
+        if (!validaCNPJ.isCNPJ(fornecedor.getCnpj())) {
+            return badRequest("CNPJ Inválido");
+        }
 
         try {
             Ebean.save(fornecedor);
@@ -38,13 +46,25 @@ public class FornecedorController extends Controller {
     public static Result atualizar(Integer id) {
         Logger.info("Atualizando Fornecedor");
 
+        ValidaCNPJ validaCNPJ = new ValidaCNPJ();
+
         Fornecedor fornecedor = Json.fromJson(request().body().asJson(), Fornecedor.class);
 
         Bairro bairro = Ebean.find(Bairro.class, fornecedor.getBairro().getId());
 
         fornecedor.setBairro(bairro);
 
-        Ebean.update(fornecedor);
+        if (!validaCNPJ.isCNPJ(fornecedor.getCnpj())) {
+            return badRequest("CNPJ Inválido");
+        }
+
+        try {
+            Ebean.update(fornecedor);
+        } catch (PersistenceException e) {
+            return badRequest("Fornecedor já Cadastrado");
+        } catch (Exception e) {
+            return badRequest("Erro interno de sistema");
+        }
 
         return ok(Json.toJson(fornecedor));
     }

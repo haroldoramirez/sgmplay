@@ -128,6 +128,7 @@ create table usuario (
   login                     varchar(255) not null,
   senha                     varchar(255) not null,
   privilegio                integer not null,
+  constraint uq_usuario_login unique (login),
   constraint pk_usuario primary key (id))
 ;
 

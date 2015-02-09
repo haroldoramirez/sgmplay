@@ -4,7 +4,7 @@ angular.module('mercado')
           $scope.save = function(){
               console.log($scope.fornecedor);
               Fornecedor.save($scope.fornecedor, function(data){
-                  toastr.success('Fornecedor salvo com sucesso');
+                  toastr.success(data.data,'Fornecedor Salvo com Sucesso');
                   $location.path('/fornecedores');
               }, function(data){
                   console.log(data);
@@ -66,10 +66,11 @@ angular.module('mercado')
         //deletar opcional
           $scope.delete = function(id){
              Fornecedor.delete({id:id}, function(){
-                 toastr.success('Fornecedor Removido com sucesso');
+                 toastr.success('Fornecedor Removido com Sucesso');
                  $scope.init();
              }, function(data){
-                 toastr.error(data.data,'Não foi possível remover o Fornecedor');
+                 console.log(data);
+                 toastr.error(data.data,'Não foi possível Remover o Fornecedor');
              });
           };
 
@@ -82,10 +83,11 @@ angular.module('mercado')
 
           $scope.update = function(){
               Fornecedor.update({id:$routeParams.id},$scope.fornecedor, function(){
-                  toastr.success('Fornecedor atualizado com sucesso');
+                  toastr.success('Fornecedor Atualizado com Sucesso');
                   $location.path('/fornecedores');
-              },function(){
-                 toastr.error('Não foi possível Salvar o Fornecedor');
+              },function(data){
+                 console.log(data);
+                 toastr.error(data.data,'Não foi possível Atualizar o Fornecedor');
               });
           };
 
@@ -95,10 +97,11 @@ angular.module('mercado')
 
           $scope.delete = function(){
               Fornecedor.delete({id:$routeParams.id}, function(){
-                  toastr.success('Fornecedor removido com sucesso');
+                  toastr.success('Fornecedor Removido com Sucesso');
                   $location.path('/fornecedores');
               }, function(data){
-                  toastr.error(data.data,'Não foi possível remover o Fornecedor');
+                  console.log(data);
+                  toastr.error(data.data,'Não foi possível Remover o Fornecedor');
               });
 
           };

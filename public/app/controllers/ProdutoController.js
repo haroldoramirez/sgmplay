@@ -4,11 +4,11 @@ angular.module('mercado')
         $scope.save = function(){
             console.log($scope.produto);
             Produto.save($scope.produto, function(data){
-                toastr.success('Produto salvo com sucesso');
+                toastr.success(data.data,'Produto Salvo com Sucesso');
                 $location.path('/produtos');
             }, function(data){
                 console.log(data);
-                toastr.error(data.data, 'Não foi possível Salvar o Produto');
+                toastr.error(data.data,'Não foi possível Salvar o Produto');
             });
         };
 
@@ -78,10 +78,10 @@ angular.module('mercado')
         //deletar opcional
         $scope.delete = function(id){
            Produto.delete({id:id}, function(){
-               toastr.success('Produto Removido com sucesso');
+               toastr.success('Produto Removido com Sucesso');
                $scope.init();
            }, function(data){
-               toastr.error('Não foi possível remover o Produto');
+               toastr.error(data.data,'Não foi possível Remover o Produto');
            });
         };
 
@@ -97,11 +97,11 @@ angular.module('mercado')
 
         $scope.update = function(){
             Produto.update({id:$routeParams.id},$scope.produto, function(){
-                toastr.success('Produto atualizado com sucesso');
+                toastr.success('Produto Atualizado com Sucesso');
                 $location.path('/produtos');
             },function(data){
-            console.log(data);
-               toastr.error(data.data, 'Não foi possível Atualizar o Produto');
+               console.log(data);
+               toastr.error(data.data,'Não foi possível Atualizar o Produto');
             });
 
           };
@@ -112,11 +112,12 @@ angular.module('mercado')
 
         $scope.delete = function(){
             Produto.delete({id:$routeParams.id}, function(){
-                toastr.success('Produto removido com sucesso');
+                toastr.success('Produto Removido com Sucesso');
                 $location.path('/produtos');
             }, function(data){
             console.log(data);
-                toastr.error(data.data,'Não foi possível remover o Produto');
+                console.log(data);
+                toastr.error(data.data,'Não foi possível Remover o Produto');
             });
 
         };

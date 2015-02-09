@@ -8,7 +8,7 @@ angular.module('mercado')
         $scope.save = function(){
             console.log($scope.pais);
             Pais.save($scope.pais, function(data){
-                toastr.success('País salvo com sucesso');
+                toastr.success(data.data,'País Salvo com Sucesso');
                 $location.path('/paises');
             }, function(data){
                 console.log(data);
@@ -70,10 +70,10 @@ angular.module('mercado')
         //deletar opcional
         $scope.delete = function(id){
            Pais.delete({id:id}, function(){
-               toastr.success('País removido com sucesso');
+               toastr.success('País Removido com Sucesso');
                $scope.init();
            }, function(data){
-               toastr.error(data.data,'Não foi possível remover o País');
+               toastr.error(data.data,'Não foi possível Remover o País');
            });
         };
 
@@ -85,10 +85,11 @@ angular.module('mercado')
 
         $scope.update = function(){
             Pais.update({id:$routeParams.id},$scope.pais, function(){
-                toastr.success('País atualizado com sucesso');
+                toastr.success('País Atualizado com Sucesso');
                 $location.path('/paises');
-            },function(){
-               toastr.error('Não foi possível Salvar o País');
+            },function(data){
+               console.log(data);
+               toastr.error(data.data,'Não foi possível Atualizar o País');
             });
 
         };
@@ -99,11 +100,11 @@ angular.module('mercado')
 
         $scope.delete = function(){
             Pais.delete({id:$routeParams.id}, function(){
-                toastr.success('País removido com sucesso');
+                toastr.success('País Removido com Sucesso');
                 $location.path('/paises');
             }, function(data){
             console.log(data);
-                toastr.error(data.data,'Não foi possível remover o País');
+                toastr.error(data.data,'Não foi possível Remover o País');
             });
         };
 

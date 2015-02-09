@@ -3,6 +3,6 @@ angular.module('mercado')
 
          $scope.popoverInformacoes = {
            "title": "Informações",
-           "content": ""
+           "content": "Home"
          };
     });

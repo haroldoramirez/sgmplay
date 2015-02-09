@@ -64,6 +64,7 @@ public class ClienteController extends Controller {
         } catch (Exception e) {
             return badRequest("Erro interno de sistema");
         }
+
         return ok(Json.toJson(cliente));
     }
 
@@ -73,7 +74,7 @@ public class ClienteController extends Controller {
         Cliente cliente = Ebean.find(Cliente.class, id);
 
         if (cliente == null) {
-            return notFound("Cliente não Encontrada");
+            return notFound("Cliente não Encontrado");
         }
 
         return ok(Json.toJson(cliente));
@@ -119,7 +120,13 @@ public class ClienteController extends Controller {
             return notFound("Cliente não encontrado");
         }
 
-        Ebean.delete(cliente);
+        try {
+            Ebean.delete(cliente);
+        } catch (PersistenceException e) {
+            return badRequest("Existem Vendas que dependem deste Cliente");
+        } catch (Exception e) {
+            return badRequest("Erro interno de sistema");
+        }
 
         return ok(Json.toJson(cliente));
     }
