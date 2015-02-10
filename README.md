@@ -60,6 +60,8 @@ Faça o clone do projeto com o github e prepare seu ambiente de trabalho com o M
 * [Bower](http://bower.io/)
 * [MySQL](http://www.mysql.com/)
 * [Java8](http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
+* [Devmedia CPF](http://www.devmedia.com.br/validando-o-cpf-em-uma-aplicacao-java/22097)
+* [Devmedia CNPJ](http://www.devmedia.com.br/validando-o-cnpj-em-uma-aplicacao-java/22374)
 
 
 ## Informações Adicionais
