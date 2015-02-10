@@ -45,6 +45,9 @@ Faça o clone do projeto com o github e prepare seu ambiente de trabalho com o M
   * Fabricante, Categoria, Unidade de Medida, Produto - **Ok**
   * Cliente, Fornecedor, Usuário - **Ok**
   
+* **Validações**
+  * CNPJ e CPF - **OK**
+  
 ## Links
 
 * [Play Framework](https://www.playframework.com/)
