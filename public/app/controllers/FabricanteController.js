@@ -80,8 +80,8 @@ angular.module('mercado')
         };
 
         $scope.update = function(){
-            Fabricante.update({id:$routeParams.id},$scope.fabricante, function(){
-                toastr.success('Fabricante Atualizado com Sucesso');
+            Fabricante.update({id:$routeParams.id},$scope.fabricante, function(data){
+                toastr.success(data.data,'Fabricante Atualizado com Sucesso');
                 $location.path('/fabricantes');
             },function(data){
                toastr.error(data.data,'Não foi possível Atualizar o Fabricante');

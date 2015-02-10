@@ -84,8 +84,8 @@ angular.module('mercado')
         };
 
         $scope.update = function(){
-            Usuario.update({id:$routeParams.id},$scope.usuario, function(){
-                toastr.success('Usuário Atualizado com Sucesso');
+            Usuario.update({id:$routeParams.id},$scope.usuario, function(data){
+                toastr.success(data.data,'Usuário Atualizado com Sucesso');
                 $location.path('/usuarios');
             },function(data){
                toastr.error(data.data,'Não foi possível Atualizar o Usuário');

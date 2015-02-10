@@ -84,8 +84,8 @@ angular.module('mercado')
         };
 
         $scope.update = function(){
-            Pais.update({id:$routeParams.id},$scope.pais, function(){
-                toastr.success('País Atualizado com Sucesso');
+            Pais.update({id:$routeParams.id},$scope.pais, function(data){
+                toastr.success(data.data,'País Atualizado com Sucesso');
                 $location.path('/paises');
             },function(data){
                console.log(data);

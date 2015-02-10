@@ -82,8 +82,8 @@ angular.module('mercado')
           };
 
           $scope.update = function(){
-              Fornecedor.update({id:$routeParams.id},$scope.fornecedor, function(){
-                  toastr.success('Fornecedor Atualizado com Sucesso');
+              Fornecedor.update({id:$routeParams.id},$scope.fornecedor, function(data){
+                  toastr.success(data.data,'Fornecedor Atualizado com Sucesso');
                   $location.path('/fornecedores');
               },function(data){
                  console.log(data);

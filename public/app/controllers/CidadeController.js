@@ -84,8 +84,8 @@ angular.module('mercado')
         };
 
         $scope.update = function(){
-            Cidade.update({id:$routeParams.id},$scope.cidade, function(){
-                toastr.success('Cidade Atualizada com Sucesso');
+            Cidade.update({id:$routeParams.id},$scope.cidade, function(data){
+                toastr.success(data.data,'Cidade Atualizada com Sucesso');
                 $location.path('/cidades');
             },function(data){
                toastr.error(data.data,'Não foi possível Atualizar a Cidade');

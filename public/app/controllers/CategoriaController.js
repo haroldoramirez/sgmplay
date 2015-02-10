@@ -84,8 +84,8 @@ angular.module('mercado')
         };
 
         $scope.update = function(){
-            Categoria.update({id:$routeParams.id},$scope.categoria, function(){
-                toastr.success('Categoria Atualizada com sucesso');
+            Categoria.update({id:$routeParams.id},$scope.categoria, function(data){
+                toastr.success(data.data,'Categoria Atualizada com sucesso');
                 $location.path('/categorias');
             },function(data){
                toastr.error(data.data,'Não foi possível Atualizar a Categoria');

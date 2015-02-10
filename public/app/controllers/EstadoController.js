@@ -85,8 +85,8 @@ angular.module('mercado')
         };
 
         $scope.update = function(){
-            Estado.update({id:$routeParams.id},$scope.estado, function(){
-                toastr.success('Estado Atualizado com Sucesso');
+            Estado.update({id:$routeParams.id},$scope.estado, function(data){
+                toastr.success(data.data,'Estado Atualizado com Sucesso');
                 $location.path('/estados');
             },function(data){
                toastr.error(data.data,'Não foi possível Atualizar o Estado');
