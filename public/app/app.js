@@ -184,7 +184,7 @@ angular
           iconLeft: 'glyphicon glyphicon-step-backward',
           iconRight: 'glyphicon glyphicon-step-forward',
           placement: 'bottom',
-           language: 'pt-BR',
+          language: 'pt-br',
           dateFormat: 'dd/MM/yyyy',
           startWeek: 1
         });
