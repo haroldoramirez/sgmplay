@@ -57,6 +57,6 @@
     "commit": "12e1ef6d3f6e186af2d2aa2c5d978e37bc0c18f2"
   },
   "_source": "git://github.com/mgcrea/angular-strap.git",
-  "_target": "~2.1.3",
+  "_target": "~2.1.6",
   "_originalSource": "angular-strap"
 }

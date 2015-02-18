@@ -39,10 +39,10 @@
                     <!--Input de Data de Nascimento-->
                     <div class="col-lg-5">
                         <label class="control-label"><i class="fa fa-calendar"></i> Data de Nascimento</label>
-                        <div ng-class="{'has-error': datepickerForm.date2.$invalid}">
+                        <div ng-class="{'has-error': cliente.dataNascimento.$invalid}">
                             <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                                <input placeholder="dd/MM/aaaa" type="text" class="form-control" ng-model="cliente.dataNascimento" data-date-format="dd/MM/yyyy" data-date-type="number" data-min-date="02/10/50" data-max-date="02/10/96" data-autoclose="1" name="date2" bs-datepicker>
+                                <input placeholder="dd/mm/aaaa" type="text" class="form-control" ng-model="cliente.dataNascimento" data-date-format="dd/MM/yyyy" data-date-type="number" data-max-date="02/10/96" data-autoclose="1" name="dataNascimento" bs-datepicker>
                             </div>
                         </div>
                     </div>

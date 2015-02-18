@@ -178,14 +178,11 @@ angular
           titleClass: 'toast-title',
           toastClass: 'toast'
         })
-  //Configuração das datas
+  //Configuração do datepicker
    }).config(function($datepickerProvider) {
         angular.extend($datepickerProvider.defaults, {
-          iconLeft: 'glyphicon glyphicon-step-backward',
-          iconRight: 'glyphicon glyphicon-step-forward',
-          placement: 'bottom',
-          language: 'pt-br',
-          dateFormat: 'dd/MM/yyyy',
-          startWeek: 1
+          iconLeft: 'glyphicon glyphicon-triangle-left',
+          iconRight: 'glyphicon glyphicon-triangle-right',
+          placement: 'bottom'
         });
   });
