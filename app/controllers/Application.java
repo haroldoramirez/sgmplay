@@ -9,4 +9,8 @@ public class Application extends Controller {
         return ok(views.html.versaoplay.render("Versão do Play ", play.core.PlayVersion.current()));
     }
 
+    public static Result swagger() {
+        return ok(views.html.swagger.render());
+    }
+
 }

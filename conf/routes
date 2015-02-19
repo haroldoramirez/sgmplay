@@ -6,6 +6,10 @@
 GET     /                             controllers.Assets.at(path="/public", file="/index.html")
 
 # Swagger
+GET     /swagger                      controllers.Application.swagger()
+GET     /api-docs.json/paises         controllers.ApiHelpController.getResource(path = "/paises")
+GET     /api-docs.json                controllers.ApiHelpController.getResources
+#GET    /aplicacao/swagger/:status    controllers.Application.swagger(status: String)
 
 # Applications
 GET		/versaoplay					  controllers.Application.versaoplay()
