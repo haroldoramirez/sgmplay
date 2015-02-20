@@ -3,7 +3,7 @@
 [![Build Status](https://travis-ci.org/haroldoramirez/sgmplay.svg)](https://travis-ci.org/haroldoramirez/sgmplay)
 
 #### Version information
-PlayFramework 2.3.6 with Java8 64Bits.
+PlayFramework 2.3.8
 
 ## Quickstart
 Faça o clone do projeto com o github e prepare seu ambiente de trabalho com o MySQL para a base de dados e as dependências necessárias do Play Framework(BackEnd) e AngularJS(FrontEnd).
