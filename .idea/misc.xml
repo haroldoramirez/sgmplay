@@ -15,7 +15,7 @@
       <entry name="!?*.aj" />
     </wildcardResourcePatterns>
     <annotationProcessing>
-      <profile enabled="false" name="Default" default="true">
+      <profile default="true" name="Default" enabled="false">
         <processorPath useClasspath="true" />
       </profile>
     </annotationProcessing>
@@ -25,21 +25,21 @@
     <disable_hints />
   </component>
   <component name="DependencyValidationManager">
-    <option value="false" name="SKIP_IMPORT_STATEMENTS" />
+    <option name="SKIP_IMPORT_STATEMENTS" value="false" />
   </component>
-  <component name="Encoding" native2AsciiForPropertiesFiles="false" useUTFGuessing="true" />
+  <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
   <component name="EntryPointsManager">
     <entry_points version="2.0" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
-    <OptionsSetting id="Add" value="true" />
-    <OptionsSetting id="Remove" value="true" />
-    <OptionsSetting id="Checkout" value="true" />
-    <OptionsSetting id="Update" value="true" />
-    <OptionsSetting id="Status" value="true" />
-    <OptionsSetting id="Edit" value="true" />
-    <ConfirmationsSetting id="Add" value="0" />
-    <ConfirmationsSetting id="Remove" value="0" />
+    <OptionsSetting value="true" id="Add" />
+    <OptionsSetting value="true" id="Remove" />
+    <OptionsSetting value="true" id="Checkout" />
+    <OptionsSetting value="true" id="Update" />
+    <OptionsSetting value="true" id="Status" />
+    <OptionsSetting value="true" id="Edit" />
+    <ConfirmationsSetting value="0" id="Add" />
+    <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectModuleManager">
     <modules />
@@ -48,36 +48,36 @@
     <output url="file://$PROJECT_DIR$/out" />
   </component>
   <component name="PropertiesComponent">
-    <property value="false" name="GoToClass.includeLibraries" />
-    <property value="false" name="GoToClass.toSaveIncludeLibraries" />
-    <property value="false" name="GoToFile.includeJavaFiles" />
-    <property value="false" name="MemberChooser.sorted" />
-    <property value="true" name="MemberChooser.showClasses" />
-    <property value="false" name="MemberChooser.copyJavadoc" />
-    <property value="configurable.group.appearance" name="options.lastSelected" />
-    <property value="0.3" name="options.splitter.main.proportions" />
-    <property value="0.2" name="options.splitter.details.proportions" />
-    <property value="Project" name="project.structure.last.edited" />
-    <property value="0.0" name="project.structure.proportion" />
-    <property value="0.0" name="project.structure.side.proportion" />
-    <property value="5" name="recentsLimit" />
-    <property value="true" name="restartRequiresConfirmation" />
+    <property name="GoToClass.includeLibraries" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="GoToFile.includeJavaFiles" value="false" />
+    <property name="MemberChooser.sorted" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="options.lastSelected" value="configurable.group.appearance" />
+    <property name="options.splitter.main.proportions" value="0.3" />
+    <property name="options.splitter.details.proportions" value="0.2" />
+    <property name="project.structure.last.edited" value="Project" />
+    <property name="project.structure.proportion" value="0.0" />
+    <property name="project.structure.side.proportion" value="0.0" />
+    <property name="recentsLimit" value="5" />
+    <property name="restartRequiresConfirmation" value="true" />
   </component>
   <component name="RunManager">
-    <configuration factoryName="JUnit" type="JUnit" default="true">
-      <extension runner="idea" sample_coverage="true" merge="false" enabled="false" name="coverage" />
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
-      <option value="false" name="ALTERNATIVE_JRE_PATH_ENABLED" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="PACKAGE_NAME" />
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
-      <option value="class" name="TEST_OBJECT" />
-      <option value="-ea" name="VM_PARAMETERS" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option value="$MODULE_DIR$" name="WORKING_DIRECTORY" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <option name="ENV_VARIABLES" />
-      <option value="true" name="PASS_PARENT_ENVS" />
+      <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
@@ -85,200 +85,200 @@
       <patterns />
       <method />
     </configuration>
-    <configuration factoryName="Remote" type="Remote" default="true">
-      <option value="true" name="USE_SOCKET_TRANSPORT" />
-      <option value="false" name="SERVER_MODE" />
-      <option value="javadebug" name="SHMEM_ADDRESS" />
-      <option value="localhost" name="HOST" />
-      <option value="5005" name="PORT" />
+    <configuration default="true" type="Remote" factoryName="Remote">
+      <option name="USE_SOCKET_TRANSPORT" value="true" />
+      <option name="SERVER_MODE" value="false" />
+      <option name="SHMEM_ADDRESS" value="javadebug" />
+      <option name="HOST" value="localhost" />
+      <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration factoryName="Android Application" type="AndroidRunConfigurationType" default="true">
+    <configuration default="true" type="AndroidRunConfigurationType" factoryName="Android Application">
       <module name="" />
-      <option value="" name="ACTIVITY_CLASS" />
-      <option value="default_activity" name="MODE" />
-      <option value="true" name="DEPLOY" />
-      <option value="" name="ARTIFACT_NAME" />
-      <option value="EMULATOR" name="TARGET_SELECTION_MODE" />
-      <option value="false" name="USE_LAST_SELECTED_DEVICE" />
-      <option value="" name="PREFERRED_AVD" />
-      <option value="true" name="USE_COMMAND_LINE" />
-      <option value="" name="COMMAND_LINE" />
-      <option value="false" name="WIPE_USER_DATA" />
-      <option value="false" name="DISABLE_BOOT_ANIMATION" />
-      <option value="full" name="NETWORK_SPEED" />
-      <option value="none" name="NETWORK_LATENCY" />
-      <option value="false" name="CLEAR_LOGCAT" />
-      <option value="true" name="SHOW_LOGCAT_AUTOMATICALLY" />
-      <option value="true" name="FILTER_LOGCAT_AUTOMATICALLY" />
+      <option name="ACTIVITY_CLASS" value="" />
+      <option name="MODE" value="default_activity" />
+      <option name="DEPLOY" value="true" />
+      <option name="ARTIFACT_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <configuration factoryName="SBT Task" type="SbtRunConfiguration" default="true">
-      <setting value="" name="tasks" />
-      <setting value="-Xms512M -Xmx1024M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M" name="vmparams" />
+    <configuration default="true" type="SbtRunConfiguration" factoryName="SBT Task">
+      <setting name="tasks" value="" />
+      <setting name="vmparams" value="-Xms512M -Xmx1024M -Xss1M -XX:+CMSClassUnloadingEnabled -XX:MaxPermSize=256M" />
       <envs />
       <method />
     </configuration>
-    <configuration factoryName="XSLT" type="XSLT" default="true">
+    <configuration default="true" type="XSLT" factoryName="XSLT">
       <option name="myOutputFile" />
-      <option value="false" name="myOpenOutputFile" />
-      <option value="false" name="myOpenInBrowser" />
-      <option value="true" name="mySmartErrorHandling" />
-      <option value="34873" name="myRunnerPort" />
+      <option name="myOpenOutputFile" value="false" />
+      <option name="myOpenInBrowser" value="false" />
+      <option name="mySmartErrorHandling" value="true" />
+      <option name="myRunnerPort" value="34873" />
       <option name="myVmArguments" />
       <option name="myWorkingDirectory" />
       <option name="myModule" />
       <option name="myJdk" />
       <parameters />
-      <OutputType save-to-file="false" value="CONSOLE" />
+      <OutputType value="CONSOLE" save-to-file="false" />
       <FileType name="XML" />
       <JdkChoice value="FROM_MODULE" />
       <method />
     </configuration>
-    <configuration factoryName="Plugin" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" default="true">
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
       <module name="" />
-      <option value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" name="VM_PARAMETERS" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m -ea" />
       <option name="PROGRAM_PARAMETERS" />
       <method />
     </configuration>
-    <configuration factoryName="utest" type="uTestRunConfiguration" default="true">
-      <extension runner="idea" sample_coverage="true" merge="false" enabled="false" name="coverage" />
+    <configuration default="true" type="uTestRunConfiguration" factoryName="utest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <extension name="scalaCoverage" />
       <module name="" />
-      <setting value="" name="path" />
-      <setting value="" name="package" />
-      <setting value="" name="vmparams" />
-      <setting value="" name="params" />
-      <setting value="" name="workingDirectory" />
-      <setting value="Across module dependencies" name="searchForTest" />
-      <setting value="" name="testName" />
-      <setting value="Class" name="testKind" />
-      <setting value="true" name="showProgressMessages" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
       <envs />
       <method />
     </configuration>
-    <configuration factoryName="ScalaTest" type="ScalaTestRunConfiguration" default="true">
-      <extension runner="idea" sample_coverage="true" merge="false" enabled="false" name="coverage" />
+    <configuration default="true" type="ScalaTestRunConfiguration" factoryName="ScalaTest">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <extension name="scalaCoverage" />
       <module name="" />
-      <setting value="" name="path" />
-      <setting value="" name="package" />
-      <setting value="" name="vmparams" />
-      <setting value="" name="params" />
-      <setting value="" name="workingDirectory" />
-      <setting value="Across module dependencies" name="searchForTest" />
-      <setting value="" name="testName" />
-      <setting value="Class" name="testKind" />
-      <setting value="true" name="showProgressMessages" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
       <envs />
       <method />
     </configuration>
-    <configuration factoryName="Scala Console" type="ScalaScriptConsoleRunConfiguration" default="true">
+    <configuration default="true" type="ScalaScriptConsoleRunConfiguration" factoryName="Scala Console">
       <module name="" />
-      <setting value="-Djline.terminal=NONE" name="vmparams4" />
-      <setting value="" name="workingDirectory" />
-      <setting value="-usejavacp" name="consoleArgs" />
+      <setting name="vmparams4" value="-Djline.terminal=NONE" />
+      <setting name="workingDirectory" value="" />
+      <setting name="consoleArgs" value="-usejavacp" />
       <method />
     </configuration>
-    <configuration factoryName="Application" type="Application" default="true">
-      <extension runner="idea" sample_coverage="true" merge="false" enabled="false" name="coverage" />
+    <configuration default="true" type="Application" factoryName="Application">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
-      <option value="$PROJECT_DIR$" name="WORKING_DIRECTORY" />
-      <option value="false" name="ALTERNATIVE_JRE_PATH_ENABLED" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
-      <option value="false" name="ENABLE_SWING_INSPECTOR" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
       <option name="ENV_VARIABLES" />
-      <option value="true" name="PASS_PARENT_ENVS" />
+      <option name="PASS_PARENT_ENVS" value="true" />
       <module name="" />
       <envs />
       <method />
     </configuration>
-    <configuration factoryName="TestNG" type="TestNG" default="true">
-      <extension runner="idea" sample_coverage="true" merge="false" enabled="false" name="coverage" />
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <module name="" />
-      <option value="false" name="ALTERNATIVE_JRE_PATH_ENABLED" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" />
       <option name="MAIN_CLASS_NAME" />
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
-      <option value="CLASS" name="TEST_OBJECT" />
-      <option value="-ea" name="VM_PARAMETERS" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
       <option name="PARAMETERS" />
-      <option value="$PROJECT_DIR$" name="WORKING_DIRECTORY" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="OUTPUT_DIRECTORY" />
       <option name="ANNOTATION_TYPE" />
       <option name="ENV_VARIABLES" />
-      <option value="true" name="PASS_PARENT_ENVS" />
+      <option name="PASS_PARENT_ENVS" value="true" />
       <option name="TEST_SEARCH_SCOPE">
         <value defaultName="singleModule" />
       </option>
-      <option value="false" name="USE_DEFAULT_REPORTERS" />
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
       <option name="PROPERTIES_FILE" />
       <envs />
       <properties />
       <listeners />
       <method />
     </configuration>
-    <configuration factoryName="Android Tests" type="AndroidTestRunConfigurationType" default="true">
+    <configuration default="true" type="AndroidTestRunConfigurationType" factoryName="Android Tests">
       <module name="" />
-      <option value="0" name="TESTING_TYPE" />
-      <option value="" name="INSTRUMENTATION_RUNNER_CLASS" />
-      <option value="" name="METHOD_NAME" />
-      <option value="" name="CLASS_NAME" />
-      <option value="" name="PACKAGE_NAME" />
-      <option value="EMULATOR" name="TARGET_SELECTION_MODE" />
-      <option value="false" name="USE_LAST_SELECTED_DEVICE" />
-      <option value="" name="PREFERRED_AVD" />
-      <option value="true" name="USE_COMMAND_LINE" />
-      <option value="" name="COMMAND_LINE" />
-      <option value="false" name="WIPE_USER_DATA" />
-      <option value="false" name="DISABLE_BOOT_ANIMATION" />
-      <option value="full" name="NETWORK_SPEED" />
-      <option value="none" name="NETWORK_LATENCY" />
-      <option value="false" name="CLEAR_LOGCAT" />
-      <option value="true" name="SHOW_LOGCAT_AUTOMATICALLY" />
-      <option value="true" name="FILTER_LOGCAT_AUTOMATICALLY" />
+      <option name="TESTING_TYPE" value="0" />
+      <option name="INSTRUMENTATION_RUNNER_CLASS" value="" />
+      <option name="METHOD_NAME" value="" />
+      <option name="CLASS_NAME" value="" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="TARGET_SELECTION_MODE" value="EMULATOR" />
+      <option name="USE_LAST_SELECTED_DEVICE" value="false" />
+      <option name="PREFERRED_AVD" value="" />
+      <option name="USE_COMMAND_LINE" value="true" />
+      <option name="COMMAND_LINE" value="" />
+      <option name="WIPE_USER_DATA" value="false" />
+      <option name="DISABLE_BOOT_ANIMATION" value="false" />
+      <option name="NETWORK_SPEED" value="full" />
+      <option name="NETWORK_LATENCY" value="none" />
+      <option name="CLEAR_LOGCAT" value="false" />
+      <option name="SHOW_LOGCAT_AUTOMATICALLY" value="true" />
+      <option name="FILTER_LOGCAT_AUTOMATICALLY" value="true" />
       <method />
     </configuration>
-    <configuration factoryName="Scala Script" type="ScalaScriptRunConfiguration" default="true">
+    <configuration default="true" type="ScalaScriptRunConfiguration" factoryName="Scala Script">
       <module name="" />
-      <setting value="" name="path" />
-      <setting value="" name="vmparams" />
-      <setting value="" name="consoleargs" />
-      <setting value="" name="params" />
-      <setting value="" name="workingDirectory" />
+      <setting name="path" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="consoleargs" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
       <method />
     </configuration>
-    <configuration factoryName="Applet" type="Applet" default="true">
+    <configuration default="true" type="Applet" factoryName="Applet">
       <module name="" />
       <option name="MAIN_CLASS_NAME" />
       <option name="HTML_FILE_NAME" />
-      <option value="false" name="HTML_USED" />
-      <option value="400" name="WIDTH" />
-      <option value="300" name="HEIGHT" />
-      <option value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" name="POLICY_FILE" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <option name="VM_PARAMETERS" />
-      <option value="false" name="ALTERNATIVE_JRE_PATH_ENABLED" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
       <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
-    <configuration factoryName="Specs2" type="Specs2RunConfiguration" default="true">
-      <extension runner="idea" sample_coverage="true" merge="false" enabled="false" name="coverage" />
+    <configuration default="true" type="Specs2RunConfiguration" factoryName="Specs2">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <extension name="scalaCoverage" />
       <module name="" />
-      <setting value="" name="path" />
-      <setting value="" name="package" />
-      <setting value="" name="vmparams" />
-      <setting value="" name="params" />
-      <setting value="" name="workingDirectory" />
-      <setting value="Across module dependencies" name="searchForTest" />
-      <setting value="" name="testName" />
-      <setting value="Class" name="testKind" />
-      <setting value="true" name="showProgressMessages" />
+      <setting name="path" value="" />
+      <setting name="package" value="" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workingDirectory" value="" />
+      <setting name="searchForTest" value="Across module dependencies" />
+      <setting name="testName" value="" />
+      <setting name="testKind" value="Class" />
+      <setting name="showProgressMessages" value="true" />
       <envs />
       <method />
     </configuration>

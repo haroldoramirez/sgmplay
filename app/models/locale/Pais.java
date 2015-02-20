@@ -7,14 +7,14 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import com.wordnik.swagger.annotations.ApiModel;
-import com.wordnik.swagger.annotations.ApiModelProperty;
+//import com.wordnik.swagger.annotations.ApiModel;
+//import com.wordnik.swagger.annotations.ApiModelProperty;
 import play.db.ebean.Model;
 import play.libs.Json;
 
 @Entity
 @Table(name = "pais")
-@ApiModel(value = "Aluno", description = "Representação do País")
+//@ApiModel(value = "Aluno", description = "Representação do País")
 public class Pais extends Model {
 
 	private static final long serialVersionUID = 1L;
@@ -23,11 +23,11 @@ public class Pais extends Model {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
 
-    @ApiModelProperty( value = "Nome do País", required = true )
+//    @ApiModelProperty( value = "Nome do País", required = true )
     @Column(nullable = false, unique = true)
     private String nome;
 
-    @ApiModelProperty( value = "Discagem Internacional")
+//    @ApiModelProperty( value = "Discagem Internacional")
     private String ddi;
 
     public Integer getId() {
@@ -38,7 +38,7 @@ public class Pais extends Model {
         this.id = id;
     }
 
-    @ApiModelProperty(position = 1, required = true)
+//    @ApiModelProperty(position = 1, required = true)
     public String getNome() {
         return nome;
     }
@@ -47,7 +47,7 @@ public class Pais extends Model {
         this.nome = nome;
     }
 
-    @ApiModelProperty(position = 2, required = true)
+//    @ApiModelProperty(position = 2, required = true)
     public String getDdi() {
         return ddi;
     }
