@@ -23,7 +23,7 @@ public class PaisController extends Controller {
 
     @POST
     @Path("/paises")
-    @ApiOperation(value = "Insere um país", response = Boolean.class, httpMethod = "POST")
+    @ApiOperation(value = "Adiciona um país na base da dados", response = Boolean.class, httpMethod = "POST")
     @Produces({MediaType.APPLICATION_JSON})
     @ApiResponses(value = {
             @ApiResponse(code = 201, message = "Cadastrado com sucesso", response = Pais.class),
@@ -48,7 +48,7 @@ public class PaisController extends Controller {
 
     @PUT
     @Path("/paises")
-    @ApiOperation(value = "Atualiza os dados do país", response = Boolean.class, httpMethod = "PUT")
+    @ApiOperation(value = "Atualiza os dados de um país existente", response = Boolean.class, httpMethod = "PUT")
     @Produces({MediaType.APPLICATION_JSON})
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Atualizado com sucesso", response = Pais.class),
@@ -92,10 +92,10 @@ public class PaisController extends Controller {
 
     @GET
     @Path("/paises")
-    @ApiOperation(value = "Lista de 14 alunos", response = Boolean.class, httpMethod = "GET")
+    @ApiOperation(value = "Lista de 14 paises", response = Boolean.class, httpMethod = "GET")
     @Produces({MediaType.APPLICATION_JSON})
     @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Lista de 14 alunos")}
+            @ApiResponse(code = 200, message = "Lista de 14 paises")}
     )
     public static Result buscaTodos() {
         Logger.info("busca Todos os Paises ordenados");
@@ -111,10 +111,10 @@ public class PaisController extends Controller {
     //Mostrar acima de 14 linhas
     @GET
     @Path("/paises")
-    @ApiOperation(value = "Página de 14 alunos", response = Boolean.class, httpMethod = "GET")
+    @ApiOperation(value = "Página de 14 paises", response = Boolean.class, httpMethod = "GET")
     @Produces({MediaType.APPLICATION_JSON})
     @ApiResponses(value = {
-            @ApiResponse(code = 200, message = "Página de 14 alunos")}
+            @ApiResponse(code = 200, message = "Página de 14 paises")}
     )
     public static Result buscaPorPaginas(Integer pagina) {
         Logger.info("busca por página");
@@ -137,7 +137,7 @@ public class PaisController extends Controller {
 
     @DELETE
     @Path("/paises")
-    @ApiOperation(value = "Remove os dados do país", response = Boolean.class, httpMethod = "DELETE")
+    @ApiOperation(value = "Remove o país", response = Boolean.class, httpMethod = "DELETE")
     @Produces({MediaType.APPLICATION_JSON})
     @ApiResponses(value = {
             @ApiResponse(code = 200, message = "Removido com sucesso", response = Pais.class),
