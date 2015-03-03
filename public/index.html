@@ -77,7 +77,7 @@
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
+    <div class="container">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -87,7 +87,7 @@
                 <span class="icon-bar"></span>
             </button>
                 <a class="navbar-brand" href="#/">
-                    <span class="glyphicon glyphicon-shopping-cart"></span> <b>Mercado</b>
+                    <i class="glyphicon glyphicon-shopping-cart"></i> Mercado
                 </a>
         </div>
 
@@ -145,7 +145,7 @@
                 </li>
                 <li class="dropdown">
                     <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                        <span class="glyphicon glyphicon-tasks"></span> <b>Opções</b> <span class="caret"></span></a>
+                        <span class="glyphicon glyphicon-cog"></span> <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <li class="dropdown-header">Relatórios</li>
                         <li><a href="">
@@ -161,7 +161,7 @@
                         <li class="divider"></li>
                         <li class="dropdown-header">Sistema</li>
                         <li><a href="/#/configuracoes">
-                            <span class="glyphicon glyphicon-cog"></span> Configurações</a>
+                            <span class="glyphicon glyphicon-tasks"></span> Configurações</a>
                         </li>
                         <li><a href="/#/ajuda">
                             <span class="glyphicon glyphicon-question-sign"></span> Ajuda</a>
@@ -181,7 +181,8 @@
     </div><!-- /.container-fluid -->
 </nav>
 <div class="container">
-    <div ng-view="">
+    <div class="row">
+        <div ng-view=""></div>
     </div>
 </div>
 </body>

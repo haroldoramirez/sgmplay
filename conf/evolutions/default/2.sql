@@ -2,8 +2,6 @@
 
 # --- !Ups
 
-#Scripts do Banco de Dados, para ajudar na hora de testar o sistema.
-
 insert into pais (nome,ddi) values ('Brasil', '+55');
 insert into pais (nome,ddi) values ('Paraguai', '+21');
 insert into pais (nome,ddi) values ('Italia', '+39');
@@ -78,6 +76,8 @@ insert into bairro (nome,cidade_id) values ('Centro', 1);
 insert into bairro (nome,cidade_id) values ('Jardim Polo Centro', 1);
 insert into bairro (nome,cidade_id) values ('Festugato', 1);
 insert into bairro (nome,cidade_id) values ('Vila Paraguaia', 1);
+insert into bairro (nome,cidade_id) values ('Vila Portes', 1);
+insert into bairro (nome,cidade_id) values ('Jardim Jupira', 1);
 
 insert into categoria (descricao) values ('Cereais');
 insert into categoria (descricao) values ('Sucos');
