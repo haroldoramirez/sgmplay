@@ -1,3 +1,7 @@
+function updateActivedPage(scope) {
+    window.scopePage = scope.pagina;
+}
+
 angular.module('mercado')
   .controller('ProdutoCreateController', function ($scope, $location, Produto, Fornecedor, Fabricante, Categoria, UnidadeDeMedida, toastr){
         $scope.produto = {};

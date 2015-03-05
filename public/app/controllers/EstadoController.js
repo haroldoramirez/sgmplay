@@ -35,7 +35,7 @@ angular.module('mercado')
           $scope.pagina = 0;
           updateActivedPage(this);
         };
-        
+
         //botão de páginas
         $scope._pagina = function(val){
         $scope.pagina = val;

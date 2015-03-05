@@ -8,6 +8,7 @@
     <script src="assets/javascripts/loadingScreen.js"></script>
     
 <!--Javascripts Personalisados-->
+    <!--<script src="assets/javascripts/active.js"></script>-->
     <script src="assets/javascripts/keymap.js"></script>
     <script src="assets/javascripts/login.js"></script>
     <script src="assets/javascripts/tabs.js"></script>
@@ -77,7 +78,7 @@
 </head>
 <body>
 <nav class="navbar navbar-default navbar-fixed-top">
-    <div class="container">
+    <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -127,9 +128,6 @@
                             <span class="glyphicon glyphicon-scale"></span> Unidade de Medida</a></li>
                     </ul>
                 </li>
-            </ul>
-
-            <ul class="nav navbar-nav navbar-right">
                 <li><a href="/#/compra"> <span class="glyphicon glyphicon-usd"></span> Compra</a></li>
                 <li><a href="/#/venda"> <span class="glyphicon glyphicon-credit-card"></span> Venda</a></li>
                 <li class="dropdown">
@@ -143,6 +141,9 @@
                             <span class="glyphicon glyphicon-circle-arrow-down"></span> Contas a Receber</a></li>
                     </ul>
                 </li>
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
                 <li class="dropdown">
                     <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
                         <span class="glyphicon glyphicon-cog"></span> <span class="caret"></span></a>
@@ -184,6 +185,22 @@
     <div class="row">
         <div ng-view=""></div>
     </div>
+</div>
+<!--Rodapé-->
+<div align="center">
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+
+                </div>
+            </div>
+            <p>&copy; 2015 Sistema SGM -
+                <a data-template="assets/modal/informacoesModal.html" bs-modal="modalInformacoes">Powered by Play Framework e AngularJS
+                </a>.Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
 </div>
 </body>
 </html>

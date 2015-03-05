@@ -1,3 +1,7 @@
+function updateActivedPage(scope) {
+    window.scopePage = scope.pagina;
+}
+
 angular.module('mercado')
 .controller('FornecedorCreateController', function ($scope, $location, Fornecedor, Bairro, toastr){
           $scope.fornecedor = {};
