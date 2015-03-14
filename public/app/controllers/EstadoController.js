@@ -86,7 +86,7 @@ angular.module('mercado')
 
         $scope.update = function(){
             Estado.update({id:$routeParams.id},$scope.estado, function(data){
-                toastr.success(data.data,'Estado Atualizado com Sucesso');
+                toastr.info(data.data,'Estado Atualizado com Sucesso');
                 $location.path('/estados');
             },function(data){
                toastr.error(data.data,'Não foi possível Atualizar o Estado');
@@ -99,8 +99,8 @@ angular.module('mercado')
         };
 
         $scope.delete = function(){
-            Estado.delete({id:$routeParams.id}, function(){
-                toastr.success('Estado Removido com Sucesso');
+            Estado.delete({id:$routeParams.id}, function(data){
+                toastr.warning(data.data,'Estado Removido com Sucesso');
                 $location.path('/estados');
             }, function(data){
             console.log(data);

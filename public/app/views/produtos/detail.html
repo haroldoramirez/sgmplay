@@ -1,10 +1,3 @@
-<!DOCTYPE html>
-<html>
-<head lang="en">
-    <meta charset="UTF-8">
-    <title>Atualizar Produto</title>
-</head>
-<body>
 <div class="container">
     <div class="row">
         <fieldset>
@@ -139,13 +132,13 @@
                     <div class="col-lg-8">
                         <div class="control-group">
                             <br>
-                            <button id="save" class="btn btn-success" type="submit" ng-disabled="!produto.descricao || !produto.quantidadeMinima || !produto.quantidadeEmEstoque || !produto.precoDeCusto || !produto.precoDeVenda || !produto.fornecedor || !produto.fabricante || !produto.categoria || !produto.unidadedemedida">
+                            <button id="save" class="btn btn-primary" type="submit" ng-disabled="!produto.descricao || !produto.quantidadeMinima || !produto.quantidadeEmEstoque || !produto.precoDeCusto || !produto.precoDeVenda || !produto.fornecedor || !produto.fabricante || !produto.categoria || !produto.unidadedemedida">
                                 <span class="glyphicon glyphicon-refresh"></span> <b>Atualizar</b>
                             </button>
                             <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">
                                 <span class="glyphicon glyphicon-arrow-left"></span> <b>Voltar</b>
                             </button>
-                            <button  data-animation="am-flip-x"  data-trigger="focus"  type="button" class="btn btn-danger" data-template="assets/popover/confirmacaoPopover.html" bs-popover="popoverConfirmacao">
+                            <button  data-animation="am-flip-x"  data-trigger="focus"  type="button" class="btn btn-warning" data-template="assets/popover/confirmacaoPopover.html" bs-popover="popoverConfirmacao">
                                 <span class="glyphicon glyphicon-trash"></span> <b>Remover</b>
                             </button>
                         </div>
@@ -157,5 +150,3 @@
     </div>
     <br>
 </div>
-</body>
-</html>

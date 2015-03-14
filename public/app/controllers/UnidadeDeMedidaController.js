@@ -85,7 +85,7 @@ angular.module('mercado')
 
         $scope.update = function(){
             UnidadeDeMedida.update({id:$routeParams.id},$scope.unidadedemedida, function(data){
-               toastr.success(data.data,'Unidade de Medida Atualizada com sucesso');
+               toastr.info(data.data,'Unidade de Medida Atualizada com sucesso');
                $location.path('/unidadesdemedidas');
             },function(data){
                console.log(data);
@@ -99,8 +99,8 @@ angular.module('mercado')
          };
 
         $scope.delete = function(){
-            UnidadeDeMedida.delete({id:$routeParams.id}, function(){
-                toastr.success('Unidade de Medida removida com sucesso');
+            UnidadeDeMedida.delete({id:$routeParams.id}, function(data){
+                toastr.warning(data.data,'Unidade de Medida removida com sucesso');
                 $location.path('/unidadesdemedidas');
             }, function(data){
             console.log(data);

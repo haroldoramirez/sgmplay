@@ -85,7 +85,7 @@ angular.module('mercado')
 
            $scope.update = function(){
                Bairro.update({id:$routeParams.id},$scope.bairro, function(data){
-                   toastr.success(data.data,'Bairro Atualizado com Sucesso');
+                   toastr.info(data.data,'Bairro Atualizado com Sucesso');
                    $location.path('/bairros');
                },function(data){
                   toastr.error(data.data,'Não foi possível Atualizar o Bairro');
@@ -98,8 +98,8 @@ angular.module('mercado')
            };
 
            $scope.delete = function(){
-               Bairro.delete({id:$routeParams.id}, function(){
-                   toastr.success('Bairro Removido com Sucesso');
+               Bairro.delete({id:$routeParams.id}, function(data){
+                   toastr.warning(data.data,'Bairro Removido com Sucesso');
                    $location.path('/bairros');
                }, function(data){
                console.log(data);

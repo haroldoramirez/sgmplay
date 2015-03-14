@@ -85,7 +85,7 @@ angular.module('mercado')
 
         $scope.update = function(){
             Fabricante.update({id:$routeParams.id},$scope.fabricante, function(data){
-                toastr.success(data.data,'Fabricante Atualizado com Sucesso');
+                toastr.info(data.data,'Fabricante Atualizado com Sucesso');
                 $location.path('/fabricantes');
             },function(data){
                toastr.error(data.data,'Não foi possível Atualizar o Fabricante');
@@ -98,8 +98,8 @@ angular.module('mercado')
          };
 
         $scope.delete = function(){
-            Fabricante.delete({id:$routeParams.id}, function(){
-                toastr.success('Fabricante Removido com Sucesso');
+            Fabricante.delete({id:$routeParams.id}, function(data){
+                toastr.warning(data.data,'Fabricante Removido com Sucesso');
                 $location.path('/fabricantes');
             }, function(data){
             console.log(data);

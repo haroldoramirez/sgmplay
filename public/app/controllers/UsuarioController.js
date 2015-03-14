@@ -85,7 +85,7 @@ angular.module('mercado')
 
         $scope.update = function(){
             Usuario.update({id:$routeParams.id},$scope.usuario, function(data){
-                toastr.success(data.data,'Usuário Atualizado com Sucesso');
+                toastr.info(data.data,'Usuário Atualizado com Sucesso');
                 $location.path('/usuarios');
             },function(data){
                toastr.error(data.data,'Não foi possível Atualizar o Usuário');
@@ -98,8 +98,8 @@ angular.module('mercado')
          };
 
         $scope.delete = function(){
-            Usuario.delete({id:$routeParams.id}, function(){
-                toastr.success('Usuário Removido com Sucesso');
+            Usuario.delete({id:$routeParams.id}, function(data){
+                toastr.warning(data.data,'Usuário Removido com Sucesso');
                 $location.path('/usuarios');
             }, function(data){
             console.log(data);

@@ -70,7 +70,7 @@ angular.module('mercado')
         //deletar opcional
         $scope.delete = function(id){
            Pais.delete({id:id}, function(){
-               toastr.success('País Removido com Sucesso');
+               toastr.info('País Removido com Sucesso');
                $scope.init();
            }, function(data){
                toastr.error(data.data,'Não foi possível Remover o País');
@@ -85,7 +85,7 @@ angular.module('mercado')
 
         $scope.update = function(){
             Pais.update({id:$routeParams.id},$scope.pais, function(data){
-                toastr.success(data.data,'País Atualizado com Sucesso');
+                toastr.info(data.data,'País Atualizado com Sucesso');
                 $location.path('/paises');
             },function(data){
                console.log(data);
@@ -99,8 +99,8 @@ angular.module('mercado')
          };
 
         $scope.delete = function(){
-            Pais.delete({id:$routeParams.id}, function(){
-                toastr.success('País Removido com Sucesso');
+            Pais.delete({id:$routeParams.id}, function(data){
+                toastr.warning(data.data,'País Removido com Sucesso');
                 $location.path('/paises');
             }, function(data){
             console.log(data);

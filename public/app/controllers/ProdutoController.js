@@ -101,7 +101,7 @@ angular.module('mercado')
 
         $scope.update = function(){
             Produto.update({id:$routeParams.id},$scope.produto, function(data){
-                toastr.success(data.data,'Produto Atualizado com Sucesso');
+                toastr.info(data.data,'Produto Atualizado com Sucesso');
                 $location.path('/produtos');
             },function(data){
                console.log(data);
@@ -115,8 +115,8 @@ angular.module('mercado')
         };
 
         $scope.delete = function(){
-            Produto.delete({id:$routeParams.id}, function(){
-                toastr.success('Produto Removido com Sucesso');
+            Produto.delete({id:$routeParams.id}, function(data){
+                toastr.warning(data.data,'Produto Removido com Sucesso');
                 $location.path('/produtos');
             }, function(data){
             console.log(data);

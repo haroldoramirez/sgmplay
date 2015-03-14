@@ -85,7 +85,7 @@ angular.module('mercado')
 
         $scope.update = function(){
             Categoria.update({id:$routeParams.id},$scope.categoria, function(data){
-                toastr.success(data.data,'Categoria Atualizada com sucesso');
+                toastr.info(data.data,'Categoria Atualizada com sucesso');
                 $location.path('/categorias');
             },function(data){
                toastr.error(data.data,'Não foi possível Atualizar a Categoria');
@@ -98,8 +98,8 @@ angular.module('mercado')
          };
 
         $scope.delete = function(){
-            Categoria.delete({id:$routeParams.id}, function(){
-                toastr.success('Categoria Removida com Sucesso');
+            Categoria.delete({id:$routeParams.id}, function(data){
+                toastr.warning(data.data,'Categoria Removida com Sucesso');
                 $location.path('/categorias');
             }, function(data){
             console.log(data);

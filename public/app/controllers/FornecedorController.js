@@ -87,7 +87,7 @@ angular.module('mercado')
 
           $scope.update = function(){
               Fornecedor.update({id:$routeParams.id},$scope.fornecedor, function(data){
-                  toastr.success(data.data,'Fornecedor Atualizado com Sucesso');
+                  toastr.info(data.data,'Fornecedor Atualizado com Sucesso');
                   $location.path('/fornecedores');
               },function(data){
                  console.log(data);
@@ -100,8 +100,8 @@ angular.module('mercado')
           };
 
           $scope.delete = function(){
-              Fornecedor.delete({id:$routeParams.id}, function(){
-                  toastr.success('Fornecedor Removido com Sucesso');
+              Fornecedor.delete({id:$routeParams.id}, function(data){
+                  toastr.warning(data.data,'Fornecedor Removido com Sucesso');
                   $location.path('/fornecedores');
               }, function(data){
                   console.log(data);

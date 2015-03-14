@@ -86,7 +86,7 @@ angular.module('mercado')
 
           $scope.update = function(){
               Cliente.update({id:$routeParams.id},$scope.cliente, function(data){
-                  toastr.success(data.data, 'Cliente Atualizado com Sucesso');
+                  toastr.info(data.data, 'Cliente Atualizado com Sucesso');
                   $location.path('/clientes');
               },function(data){
                   console.log(data);
@@ -100,7 +100,7 @@ angular.module('mercado')
 
           $scope.delete = function(){
               Cliente.delete({id:$routeParams.id}, function(data){
-                  toastr.success(data.data, 'Cliente Removido com Sucesso');
+                  toastr.warning(data.data,'Cliente Removido com Sucesso');
                   $location.path('/clientes');
               }, function(data){
                   toastr.error(data.data,'Não foi possível Remover o Cliente');

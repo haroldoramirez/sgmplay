@@ -85,7 +85,7 @@ angular.module('mercado')
 
         $scope.update = function(){
             Cidade.update({id:$routeParams.id},$scope.cidade, function(data){
-                toastr.success(data.data,'Cidade Atualizada com Sucesso');
+                toastr.info(data.data,'Cidade Atualizada com Sucesso');
                 $location.path('/cidades');
             },function(data){
                toastr.error(data.data,'Não foi possível Atualizar a Cidade');
@@ -97,8 +97,8 @@ angular.module('mercado')
         };
 
         $scope.delete = function(){
-            Cidade.delete({id:$routeParams.id}, function(){
-                toastr.success('Cidade Removida com sucesso');
+            Cidade.delete({id:$routeParams.id}, function(data){
+                toastr.warning(data.data,'Cidade Removida com sucesso');
                 $location.path('/cidades');
             }, function(data){
             console.log(data);
