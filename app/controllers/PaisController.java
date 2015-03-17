@@ -16,6 +16,7 @@ import play.mvc.Result;
 import javax.persistence.PersistenceException;
 //import javax.ws.rs.*;
 //import javax.ws.rs.core.MediaType;
+import java.io.PrintWriter;
 import java.util.List;
 
 //@Api(value = "/paises", description = "País Controller")
@@ -35,10 +36,14 @@ public class PaisController extends Controller {
 
         Pais pais = Json.fromJson(request().body().asJson(), Pais.class);
 
+        Pais paisBusca = Ebean.find(Pais.class).where().eq("nome", pais.getNome()).findUnique();
+
+        if (paisBusca != null) {
+            return badRequest("País já Cadastrado");
+        }
+
         try {
             Ebean.save(pais);
-        }catch (PersistenceException e) {
-            return badRequest("País já Cadastrado");
         } catch (Exception e) {
             return internalServerError("Erro interno de sistema");
         }
@@ -62,11 +67,10 @@ public class PaisController extends Controller {
 
         try {
             Ebean.update(pais);
-        }catch (PersistenceException e) {
-            return badRequest("País já Cadastrado");
         } catch (Exception e) {
             return internalServerError("Erro interno de sistema");
         }
+
         return ok(Json.toJson(pais));
     }
 
