@@ -1,5 +1,6 @@
 package models;
 
+import models.base.EntidadePai;
 import models.locale.Bairro;
 import play.db.ebean.Model;
 import play.libs.Json;
@@ -8,7 +9,7 @@ import javax.persistence.*;
 
 @Entity
 @Table(name = "fornecedor")
-public class Fornecedor extends Model {
+public class Fornecedor extends EntidadePai {
 
 	private static final long serialVersionUID = 1L;
 

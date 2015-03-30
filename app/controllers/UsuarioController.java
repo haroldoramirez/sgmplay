@@ -1,5 +1,6 @@
 package controllers;
 
+import java.util.Calendar;
 import java.util.List;
 
 import javax.persistence.PersistenceException;
@@ -21,6 +22,8 @@ public class UsuarioController extends Controller {
 
         Usuario usuario = Json.fromJson(request().body().asJson(), Usuario.class);
 
+        usuario.setDataDeCadastro(Calendar.getInstance());
+
         try{
             Ebean.save(usuario);
         }catch (PersistenceException e) {
@@ -37,6 +40,7 @@ public class UsuarioController extends Controller {
 
         Usuario usuario = Json.fromJson(request().body().asJson(), Usuario.class);
 
+        usuario.setDataDeAlteracao(Calendar.getInstance());
         try {
             Ebean.update(usuario);
         } catch (PersistenceException e) {

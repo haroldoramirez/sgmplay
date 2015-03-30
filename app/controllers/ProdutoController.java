@@ -13,6 +13,7 @@ import play.mvc.Controller;
 import play.mvc.Result;
 
 import javax.persistence.PersistenceException;
+import java.util.Calendar;
 import java.util.List;
 
 public class ProdutoController extends Controller {
@@ -42,6 +43,8 @@ public class ProdutoController extends Controller {
             return badRequest("Preço de Custo deve ser menor que o Preço de Venda");
         }
 
+        produto.setDataDeCadastro(Calendar.getInstance());
+
         try {
             Ebean.save(produto);
         } catch (PersistenceException e) {
@@ -52,6 +55,7 @@ public class ProdutoController extends Controller {
             return badRequest("Erro interno de sistema");
         }
 
+        produto.setDataDeCadastro(Calendar.getInstance());
         return created(Json.toJson(produto));
     }
 
@@ -80,6 +84,7 @@ public class ProdutoController extends Controller {
             return badRequest("Preço de Custo deve ser menor que o Preço de Venda");
         }
 
+        produto.setDataDeAlteracao(Calendar.getInstance());
         try {
             Ebean.update(produto);
         } catch (Exception e) {

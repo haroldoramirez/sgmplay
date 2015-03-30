@@ -23,7 +23,8 @@ public class CidadeController extends Controller {
         Estado estado = Ebean.find(Estado.class, cidade.getEstado().getId());
 
         cidade.setEstado(estado);
-        
+
+
         try {
             Ebean.save(cidade);
         } catch (PersistenceException e) {

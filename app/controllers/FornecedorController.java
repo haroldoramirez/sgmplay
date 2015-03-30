@@ -13,6 +13,7 @@ import play.mvc.Result;
 import validators.ValidaCNPJ;
 
 import javax.persistence.PersistenceException;
+import java.util.Calendar;
 import java.util.List;
 
 public class FornecedorController extends Controller {
@@ -40,6 +41,7 @@ public class FornecedorController extends Controller {
             return badRequest("Erro interno de sistema");
         }
 
+        fornecedor.setDataDeCadastro(Calendar.getInstance());
         return created(Json.toJson(fornecedor));
     }
 

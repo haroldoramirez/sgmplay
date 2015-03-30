@@ -1,5 +1,6 @@
 package controllers;
 
+import java.util.Calendar;
 import java.util.List;
 
 import javax.persistence.PersistenceException;
@@ -21,6 +22,8 @@ public class CategoriaController extends Controller {
 
         Categoria categoria = Json.fromJson(request().body().asJson(), Categoria.class);
 
+        categoria.setDataDeCadastro(Calendar.getInstance());
+
         try {
            Ebean.save(categoria);
         } catch (PersistenceException e) {
@@ -28,6 +31,8 @@ public class CategoriaController extends Controller {
         } catch (Exception e) {
             return badRequest("Erro interno de sistema");
         }
+
+        categoria.setDataDeCadastro(Calendar.getInstance());
         return ok(Json.toJson(categoria));
     }
 
@@ -36,6 +41,7 @@ public class CategoriaController extends Controller {
 
         Categoria categoria = Json.fromJson(request().body().asJson(), Categoria.class);
 
+        categoria.setDataDeAlteracao(Calendar.getInstance());
         Ebean.update(categoria);
 
         return ok(Json.toJson(categoria));

@@ -1,16 +1,12 @@
 package models.locale;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import play.db.ebean.Model;
+import play.libs.Json;
+
+import javax.persistence.*;
 
 //import com.wordnik.swagger.annotations.ApiModel;
 //import com.wordnik.swagger.annotations.ApiModelProperty;
-import play.db.ebean.Model;
-import play.libs.Json;
 
 @Entity
 @Table(name = "pais")

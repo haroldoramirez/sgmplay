@@ -1,5 +1,6 @@
 package controllers;
 
+import java.util.Calendar;
 import java.util.List;
 
 import javax.persistence.PersistenceException;
@@ -21,6 +22,7 @@ public class UnidadeDeMedidaController extends Controller {
 
         UnidadeDeMedida unidadeDeMedida = Json.fromJson(request().body().asJson(), UnidadeDeMedida.class);
 
+        unidadeDeMedida.setDataDeCadastro(Calendar.getInstance());
         try{
             Ebean.save(unidadeDeMedida);
         }catch (PersistenceException e) {
@@ -29,6 +31,7 @@ public class UnidadeDeMedidaController extends Controller {
             return badRequest("Erro interno de sistema");
         }
 
+        unidadeDeMedida.setDataDeCadastro(Calendar.getInstance());
         return created(Json.toJson(unidadeDeMedida));
     }
 
@@ -37,6 +40,7 @@ public class UnidadeDeMedidaController extends Controller {
 
         UnidadeDeMedida unidadeDeMedida = Json.fromJson(request().body().asJson(), UnidadeDeMedida.class);
 
+        unidadeDeMedida.setDataDeAlteracao(Calendar.getInstance());
         Ebean.update(unidadeDeMedida);
 
         return ok(Json.toJson(unidadeDeMedida));

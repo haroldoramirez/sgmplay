@@ -1,7 +1,7 @@
 package models.stock;
 
 import models.Fornecedor;
-import play.db.ebean.Model;
+import models.base.EntidadePai;
 import play.libs.Json;
 
 import javax.persistence.*;
@@ -9,7 +9,7 @@ import java.sql.Timestamp;
 
 @Entity
 @Table(name = "produto")
-public class Produto extends Model {
+public class Produto extends EntidadePai {
 
 	private static final long serialVersionUID = 1L;
 

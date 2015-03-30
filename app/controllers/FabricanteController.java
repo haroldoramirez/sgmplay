@@ -10,6 +10,7 @@ import play.mvc.Controller;
 import play.mvc.Result;
 
 import javax.persistence.PersistenceException;
+import java.util.Calendar;
 import java.util.List;
 
 public class FabricanteController extends Controller {
@@ -19,6 +20,7 @@ public class FabricanteController extends Controller {
 
         Fabricante fabricante = Json.fromJson(request().body().asJson(), Fabricante.class);
 
+        fabricante.setDataDeCadastro(Calendar.getInstance());
         try {
             Ebean.save(fabricante);
         } catch (PersistenceException e) {
@@ -26,6 +28,8 @@ public class FabricanteController extends Controller {
         } catch (Exception e) {
             return badRequest("Erro interno de sistema");
         }
+
+        fabricante.setDataDeCadastro(Calendar.getInstance());
         return created(Json.toJson(fabricante));
     }
 
@@ -33,6 +37,8 @@ public class FabricanteController extends Controller {
         Logger.info("Atualizando Fabricante");
 
         Fabricante fabricante = Json.fromJson(request().body().asJson(), Fabricante.class);
+
+        fabricante.setDataDeAlteracao(Calendar.getInstance());
 
         Ebean.update(fabricante);
 

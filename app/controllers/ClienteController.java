@@ -12,6 +12,7 @@ import play.mvc.Result;
 import validators.ValidaCPF;
 
 import javax.persistence.PersistenceException;
+import java.util.Calendar;
 import java.util.List;
 
 public class ClienteController extends Controller {
@@ -31,6 +32,7 @@ public class ClienteController extends Controller {
             return badRequest("CPF Inválido");
         }
 
+        cliente.setDataDeCadastro(Calendar.getInstance());
         try {
             Ebean.save(cliente);
         } catch (PersistenceException e) {
@@ -39,6 +41,7 @@ public class ClienteController extends Controller {
             return badRequest("Erro interno de sistema");
         }
 
+        cliente.setDataDeCadastro(Calendar.getInstance());
         return created(Json.toJson(cliente));
     }
 
@@ -57,6 +60,7 @@ public class ClienteController extends Controller {
             return badRequest("CPF Inválido");
         }
 
+        cliente.setDataDeAlteracao(Calendar.getInstance());
         try {
             Ebean.update(cliente);
         } catch (PersistenceException e) {

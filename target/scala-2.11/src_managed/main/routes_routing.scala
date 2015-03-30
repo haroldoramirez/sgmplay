@@ -1,6 +1,6 @@
-// @SOURCE:/home/haroldo/projetos/academico/sgmplay/conf/routes
-// @HASH:7bd89177b5248d06a52bc947f48e5860d108475c
-// @DATE:Thu Mar 05 15:17:15 BRT 2015
+// @SOURCE:C:/projetos/sgmplay/conf/routes
+// @HASH:9327973e42e03e5d8beac6f03b24d3fac8d931f4
+// @DATE:Mon Mar 30 16:21:51 BRT 2015
 
 
 import play.core._

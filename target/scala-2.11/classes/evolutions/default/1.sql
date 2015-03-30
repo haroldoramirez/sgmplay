@@ -13,6 +13,8 @@ create table bairro (
 
 create table categoria (
   id                        integer auto_increment not null,
+  data_de_cadastro          datetime not null,
+  data_de_alteracao         datetime not null,
   descricao                 varchar(255) not null,
   constraint uq_categoria_descricao unique (descricao),
   constraint pk_categoria primary key (id))
@@ -29,6 +31,8 @@ create table cidade (
 
 create table cliente (
   id                        integer auto_increment not null,
+  data_de_cadastro          datetime not null,
+  data_de_alteracao         datetime not null,
   nome                      varchar(255) not null,
   telefone                  varchar(255) not null,
   rg                        varchar(255),
@@ -42,12 +46,19 @@ create table cliente (
   observacoes               varchar(255),
   datanascimento            datetime,
   genero                    varchar(9),
+  situacao                  varchar(7),
   bairro_id                 integer,
   constraint ck_cliente_genero check (genero in ('MASCULINO','FEMININO')),
+  constraint ck_cliente_situacao check (situacao in ('ATIVO','INATIVO')),
   constraint uq_cliente_rg unique (rg),
   constraint uq_cliente_cpf unique (cpf),
   constraint uq_cliente_email unique (email),
   constraint pk_cliente primary key (id))
+;
+
+create table entidade_pai (
+  data_de_cadastro          datetime not null,
+  data_de_alteracao         datetime not null)
 ;
 
 create table estado (
@@ -61,6 +72,8 @@ create table estado (
 
 create table fabricante (
   id                        integer auto_increment not null,
+  data_de_cadastro          datetime not null,
+  data_de_alteracao         datetime not null,
   nome                      varchar(255) not null,
   observacoes               varchar(255),
   constraint uq_fabricante_nome unique (nome),
@@ -69,6 +82,8 @@ create table fabricante (
 
 create table fornecedor (
   id                        integer auto_increment not null,
+  data_de_cadastro          datetime not null,
+  data_de_alteracao         datetime not null,
   nome_fantasia             varchar(255) not null,
   razao_social              varchar(255) not null,
   telefone                  varchar(255) not null,
@@ -99,6 +114,8 @@ create table pais (
 
 create table produto (
   id                        integer auto_increment not null,
+  data_de_cadastro          datetime not null,
+  data_de_alteracao         datetime not null,
   descricao                 varchar(255) not null,
   quantidade_minima         integer not null,
   quantidade_em_estoque     integer not null,
@@ -117,6 +134,8 @@ create table produto (
 
 create table unidadedemedida (
   id                        integer auto_increment not null,
+  data_de_cadastro          datetime not null,
+  data_de_alteracao         datetime not null,
   nome                      varchar(255) not null,
   observacoes               varchar(255),
   constraint uq_unidadedemedida_nome unique (nome),
@@ -125,6 +144,8 @@ create table unidadedemedida (
 
 create table usuario (
   id                        integer auto_increment not null,
+  data_de_cadastro          datetime not null,
+  data_de_alteracao         datetime not null,
   login                     varchar(255) not null,
   senha                     varchar(255) not null,
   privilegio                integer not null,
@@ -164,6 +185,8 @@ drop table categoria;
 drop table cidade;
 
 drop table cliente;
+
+drop table entidade_pai;
 
 drop table estado;
 

@@ -1,7 +1,7 @@
 package models;
 
+import models.base.EntidadePai;
 import models.locale.Bairro;
-import play.db.ebean.Model;
 import play.libs.Json;
 
 import javax.persistence.*;
@@ -9,7 +9,7 @@ import java.util.Calendar;
 
 @Entity
 @Table(name = "cliente")
-public class Cliente extends Model {
+public class Cliente extends EntidadePai {
 
 	private static final long serialVersionUID = 1L;
 
@@ -51,6 +51,18 @@ public class Cliente extends Model {
     @Enumerated(EnumType.STRING)
     @Column(name="genero")
     private Genero genero;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name="situacao")
+    private Situacao situacao;
+
+    public Situacao getSituacao() {
+        return situacao;
+    }
+
+    public void setSituacao(Situacao situacao) {
+        this.situacao = situacao;
+    }
 
     @ManyToOne(optional = true)
     private Bairro bairro;

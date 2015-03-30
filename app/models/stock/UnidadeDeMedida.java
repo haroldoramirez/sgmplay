@@ -1,13 +1,13 @@
 package models.stock;
 
-import play.db.ebean.Model;
+import models.base.EntidadePai;
 import play.libs.Json;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "unidadedemedida")
-public class UnidadeDeMedida extends Model {
+public class UnidadeDeMedida extends EntidadePai {
 
 	private static final long serialVersionUID = 1L;
 

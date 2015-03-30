@@ -1,23 +1,16 @@
 package models.locale;
 
-import javax.persistence.CascadeType;
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.ManyToOne;
-import javax.persistence.Table;
-import javax.persistence.UniqueConstraint;
-
+import models.base.EntidadePai;
 import play.db.ebean.Model;
 import play.libs.Json;
+
+import javax.persistence.*;
 
 @Entity
 @Table(uniqueConstraints = {
         @UniqueConstraint(columnNames = {"nome" , "pais_id"})
 })
-public class Estado extends Model{
+public class Estado extends Model {
 
 	private static final long serialVersionUID = 1L;
 
