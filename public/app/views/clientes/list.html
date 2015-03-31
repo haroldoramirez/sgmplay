@@ -34,6 +34,7 @@
                     <th>CPF</th>
                     <th>CEP</th>
                     <th>Bairro</th>
+                    <th>Situação</th>
                 </tr>
                 <tr ng-repeat="cliente in clientes">
                     <td><b><a href="#/clientes/detalhe/{{cliente.id}}">{{cliente.nome}}</a></b></td>
@@ -44,6 +45,7 @@
                     <td><b>{{cliente.cpf}}</b></td>
                     <td><b>{{cliente.cep}}</b></td>
                     <td><b>{{cliente.bairro.nome}}</b></td>
+                    <td><b>{{cliente.situacao}}</b></td>
                     <!--<td>-->
                     <!--<a href="" class="glyphicon glyphicon-trash" ng-click="delete(estado.id)"></a>-->
                     <!--</td>-->

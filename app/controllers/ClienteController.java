@@ -4,6 +4,7 @@ import com.avaje.ebean.Ebean;
 import com.avaje.ebean.Page;
 import com.avaje.ebean.PagingList;
 import models.Cliente;
+import models.Situacao;
 import models.locale.Bairro;
 import play.Logger;
 import play.libs.Json;
@@ -32,7 +33,9 @@ public class ClienteController extends Controller {
             return badRequest("CPF Inválido");
         }
 
+        cliente.setSituacao(Situacao.INATIVO);
         cliente.setDataDeCadastro(Calendar.getInstance());
+
         try {
             Ebean.save(cliente);
         } catch (PersistenceException e) {
@@ -41,7 +44,6 @@ public class ClienteController extends Controller {
             return badRequest("Erro interno de sistema");
         }
 
-        cliente.setDataDeCadastro(Calendar.getInstance());
         return created(Json.toJson(cliente));
     }
 
