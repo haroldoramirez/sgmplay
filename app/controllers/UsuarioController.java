@@ -37,10 +37,8 @@ public class UsuarioController extends Controller {
 
         usuario.setDataDeCadastro(Calendar.getInstance());
 
-        try{
+        try {
             Ebean.save(usuario);
-        }catch (PersistenceException e) {
-            return badRequest("Usuário já Cadastrado");
         } catch (Exception e) {
             return badRequest("Erro interno de sistema");
         }
@@ -127,14 +125,11 @@ public class UsuarioController extends Controller {
         }
 
         if (usuario.isPadraoDoSistema()) {
-            return badRequest("Padrão do sistema");
+            return badRequest("Usuário padrão do sistema");
         }
 
         try {
             Ebean.delete(usuario);
-        } catch (PersistenceException e) {
-            return badRequest("Existem funções que dependem deste usuário");
-
         } catch (Exception e) {
             return badRequest("Erro interno de sistema");
         }

@@ -73,7 +73,7 @@ angular.module('mercado')
                toastr.success('Usuário Removido com Sucesso');
                $scope.init();
            }, function(data){
-               toastr.error(data.data,'Não foi possível Remover o Usuário');
+               toastr.error(data.data,'Não foi possível Remover');
            });
         };
 
@@ -103,7 +103,7 @@ angular.module('mercado')
                 $location.path('/usuarios');
             }, function(data){
             console.log(data);
-                toastr.error(data.data,'Não foi possível Remover o Usuário');
+                toastr.error(data.data,'Não foi possível Remover');
             });
         };
 
