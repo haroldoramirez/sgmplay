@@ -13,4 +13,9 @@ public class Application extends Controller {
         return ok(views.html.swagger.render());
     }
 
+    public static Result index() {
+        String username = session().get("email");
+        return ok(views.html.index.render(username));
+    }
+
 }

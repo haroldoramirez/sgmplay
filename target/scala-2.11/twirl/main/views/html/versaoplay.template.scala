@@ -62,14 +62,9 @@ Seq[Any](format.raw/*1.43*/("""
     <div align="center">
         <footer class="footer">
             <div class="container">
-                <div class="row">
-                    <div class="col-md-7">
-
-                    </div>
-                </div>
-                <p>&copy; 2015 Sistema SGM -
-                    <a>Powered by Play Framework
-                    </a>.Todos os direitos reservados.
+                <p>&copy; 2015 SGM - Sistema de Gestão de Mercados -
+                    <b>Powered by Play Framework e AngularJS
+                    </b>.Todos os direitos reservados.
                 </p>
             </div>
         </footer>
@@ -89,10 +84,10 @@ Seq[Any](format.raw/*1.43*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Mon Mar 30 16:21:54 BRT 2015
-                  SOURCE: C:/projetos/sgmplay/app/views/versaoplay.scala.html
-                  HASH: bad30af75d6dc37bdcf36557ce82f7924502ff3e
-                  MATRIX: 735->1|864->42|892->44|974->100|1001->107|1572->651|1600->658|1771->802|1804->814
+                  DATE: Thu Apr 16 18:05:55 BRT 2015
+                  SOURCE: /home/haroldo/projetos/academico/sgmplay/app/views/versaoplay.scala.html
+                  HASH: b4dae8c2578f0e058e01bdc5876663c3382ec642
+                  MATRIX: 735->1|864->42|891->43|970->96|997->103|1552->631|1580->638|1747->778|1780->790
                   LINES: 26->1|29->1|30->2|33->5|33->5|49->21|49->21|53->25|53->25
                   -- GENERATED --
               */

@@ -43,7 +43,6 @@ public class PaisController extends Controller {
             return badRequest("País já Cadastrado");
         }
 
-
         try {
             Ebean.save(pais);
         } catch (Exception e) {

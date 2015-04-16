@@ -12,13 +12,13 @@
                 </div>
                 <form ng-init="init()" class="form-horizontal" ng-submit="update()">
                     <div class="form-group">
-                        <!--Input do Login-->
+                        <!--Input do Email-->
                         <div class="col-lg-5">
-                            <label class="control-label" for="usuario.login">Login</label>
-                            <div ng-class="{'has-error': !usuario.login}">
+                            <label class="control-label" for="usuario.email">Email</label>
+                            <div ng-class="{'has-error': !usuario.email}">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                    <input autofocus placeholder="Insira o login" maxlength="100" class="form-control" type="text" ng-model="usuario.login" id="usuario.login" required/>
+                                    <input autofocus placeholder="Insira o email" maxlength="100" class="form-control" type="text" ng-model="usuario.email" id="usuario.email" required/>
                                 </div>
                             </div>
                         </div>
@@ -51,7 +51,7 @@
                         <div class="col-lg-8">
                             <div class="control-group">
                                 <br>
-                                <button type="submit" id="save" class="btn btn-primary" ng-disabled="!usuario.login || !usuario.senha || !usuario.privilegio">
+                                <button type="submit" id="save" class="btn btn-primary" ng-disabled="!usuario.email || !usuario.senha || !usuario.privilegio">
                                     <span class="glyphicon glyphicon-refresh"></span> <b>Atualizar</b>
                                 </button>
                                 <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">

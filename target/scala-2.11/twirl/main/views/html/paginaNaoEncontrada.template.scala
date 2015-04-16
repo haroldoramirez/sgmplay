@@ -46,7 +46,7 @@ Seq[Any](format.raw/*1.15*/("""
 
 <div class="container-fluid">
     <div class="row">
-        <div style="min-height:905px" class="col-md-12">
+        <div class="col-md-12">
             <div class="error-template">
                 <h1>
                     Erro 404</h1>
@@ -67,14 +67,9 @@ Seq[Any](format.raw/*1.15*/("""
 <div align="center">
     <footer class="footer">
         <div class="container">
-            <div class="row">
-                <div class="col-md-7">
-
-                </div>
-            </div>
-            <p>&copy; 2015 Sistema SGM -
-                <a>Powered by Play Framework
-                </a>.Todos os direitos reservados.
+            <p>&copy; 2015 SGM - Sistema de Gestão de Mercados -
+                <b>Powered by Play Framework e AngularJS
+                </b>.Todos os direitos reservados.
             </p>
         </div>
     </footer>
@@ -92,10 +87,10 @@ Seq[Any](format.raw/*1.15*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Mon Mar 30 16:21:54 BRT 2015
-                  SOURCE: C:/projetos/sgmplay/app/views/paginaNaoEncontrada.scala.html
-                  HASH: b7ea8b76f6ef8012f40b19c0a6d09ea2df370997
-                  MATRIX: 737->1|838->14|866->16|1663->786|1687->789
+                  DATE: Thu Apr 16 18:05:55 BRT 2015
+                  SOURCE: /home/haroldo/projetos/academico/sgmplay/app/views/paginaNaoEncontrada.scala.html
+                  HASH: 8b8a38ad53cbdd081446cb33405345cccd902ed9
+                  MATRIX: 737->1|838->14|865->15|1613->736|1637->739
                   LINES: 26->1|29->1|30->2|54->26|54->26
                   -- GENERATED --
               */

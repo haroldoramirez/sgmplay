@@ -21,6 +21,16 @@ public class EntidadePai extends Model {
     @Column(nullable = false)
     protected Calendar dataDeAlteracao = Calendar.getInstance();
 
+    protected Boolean padraoDoSistema;
+
+    public Boolean isPadraoDoSistema() {
+        return padraoDoSistema;
+    }
+
+    public void setPadraoDoSistema(Boolean padraoDoSistema) {
+        this.padraoDoSistema = padraoDoSistema;
+    }
+
     public Calendar getDataDeCadastro() {
         return dataDeCadastro;
     }

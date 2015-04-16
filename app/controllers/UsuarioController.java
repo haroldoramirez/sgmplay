@@ -5,6 +5,7 @@ import java.util.List;
 
 import javax.persistence.PersistenceException;
 
+import akka.util.Crypt;
 import models.Usuario;
 import play.Logger;
 import play.libs.Json;
@@ -21,6 +22,18 @@ public class UsuarioController extends Controller {
         Logger.info("Salvando Usuário");
 
         Usuario usuario = Json.fromJson(request().body().asJson(), Usuario.class);
+
+        Usuario usuarioBusca = Ebean.find(Usuario.class).where().eq("email", usuario.getEmail()).findUnique();
+
+        if (usuarioBusca != null) {
+            return badRequest("Usuário já Cadastrado");
+        }
+
+        String senha = Crypt.sha1(usuario.getSenha());
+
+        usuario.setSenha(senha);
+
+        usuario.setPadraoDoSistema(false);
 
         usuario.setDataDeCadastro(Calendar.getInstance());
 
@@ -40,11 +53,14 @@ public class UsuarioController extends Controller {
 
         Usuario usuario = Json.fromJson(request().body().asJson(), Usuario.class);
 
+        String senha = Crypt.sha1(usuario.getSenha());
+
+        usuario.setSenha(senha);
+
         usuario.setDataDeAlteracao(Calendar.getInstance());
+
         try {
             Ebean.update(usuario);
-        } catch (PersistenceException e) {
-            return badRequest("Usuário já Cadastrado");
         } catch (Exception e) {
             return badRequest("Erro interno de sistema");
         }
@@ -68,9 +84,9 @@ public class UsuarioController extends Controller {
         Logger.info("busca Todos os Usuários ordenados");
         return ok(Json.toJson(Ebean.find(Usuario.class)
                 .order()
-                .asc("login")
+                .asc("email")
                 .where()
-                .gt("login", "2")
+                .gt("email", "2")
                 .setMaxRows(14)
                 .findList()));
     }
@@ -88,8 +104,8 @@ public class UsuarioController extends Controller {
         PagingList<Usuario> pagingList =
                 Ebean.find(Usuario.class)
                         .order()
-                        .asc("login")
-                        .where().gt("login", "2")
+                        .asc("email")
+                        .where().gt("email", "2")
                         .findPagingList(14).setFetchAhead(true);
 
         pagingList.getFutureRowCount();
@@ -108,6 +124,10 @@ public class UsuarioController extends Controller {
 
         if (usuario == null) {
             return notFound("Usuário não encontrado");
+        }
+
+        if (usuario.isPadraoDoSistema()) {
+            return badRequest("Padrão do sistema");
         }
 
         try {

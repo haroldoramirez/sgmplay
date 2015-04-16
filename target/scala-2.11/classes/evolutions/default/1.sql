@@ -15,6 +15,7 @@ create table categoria (
   id                        integer auto_increment not null,
   data_de_cadastro          datetime not null,
   data_de_alteracao         datetime not null,
+  padrao_do_sistema         tinyint(1) default 0,
   descricao                 varchar(255) not null,
   constraint uq_categoria_descricao unique (descricao),
   constraint pk_categoria primary key (id))
@@ -33,6 +34,7 @@ create table cliente (
   id                        integer auto_increment not null,
   data_de_cadastro          datetime not null,
   data_de_alteracao         datetime not null,
+  padrao_do_sistema         tinyint(1) default 0,
   nome                      varchar(255) not null,
   telefone                  varchar(255) not null,
   rg                        varchar(255),
@@ -58,7 +60,8 @@ create table cliente (
 
 create table entidade_pai (
   data_de_cadastro          datetime not null,
-  data_de_alteracao         datetime not null)
+  data_de_alteracao         datetime not null,
+  padrao_do_sistema         tinyint(1) default 0)
 ;
 
 create table estado (
@@ -74,6 +77,7 @@ create table fabricante (
   id                        integer auto_increment not null,
   data_de_cadastro          datetime not null,
   data_de_alteracao         datetime not null,
+  padrao_do_sistema         tinyint(1) default 0,
   nome                      varchar(255) not null,
   observacoes               varchar(255),
   constraint uq_fabricante_nome unique (nome),
@@ -84,6 +88,7 @@ create table fornecedor (
   id                        integer auto_increment not null,
   data_de_cadastro          datetime not null,
   data_de_alteracao         datetime not null,
+  padrao_do_sistema         tinyint(1) default 0,
   nome_fantasia             varchar(255) not null,
   razao_social              varchar(255) not null,
   telefone                  varchar(255) not null,
@@ -116,6 +121,7 @@ create table produto (
   id                        integer auto_increment not null,
   data_de_cadastro          datetime not null,
   data_de_alteracao         datetime not null,
+  padrao_do_sistema         tinyint(1) default 0,
   descricao                 varchar(255) not null,
   quantidade_minima         integer not null,
   quantidade_em_estoque     integer not null,
@@ -136,6 +142,7 @@ create table unidadedemedida (
   id                        integer auto_increment not null,
   data_de_cadastro          datetime not null,
   data_de_alteracao         datetime not null,
+  padrao_do_sistema         tinyint(1) default 0,
   nome                      varchar(255) not null,
   observacoes               varchar(255),
   constraint uq_unidadedemedida_nome unique (nome),
@@ -146,10 +153,11 @@ create table usuario (
   id                        integer auto_increment not null,
   data_de_cadastro          datetime not null,
   data_de_alteracao         datetime not null,
-  login                     varchar(255) not null,
+  padrao_do_sistema         tinyint(1) default 0,
+  email                     varchar(255) not null,
   senha                     varchar(255) not null,
   privilegio                integer not null,
-  constraint uq_usuario_login unique (login),
+  constraint uq_usuario_email unique (email),
   constraint pk_usuario primary key (id))
 ;
 
