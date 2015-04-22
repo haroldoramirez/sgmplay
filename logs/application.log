@@ -1,156 +1,10 @@
-2015-04-16 18:48:36,661 - [INFO] - from play in pool-8-thread-3 
+2015-04-22 16:11:07,528 - [INFO] - from play in pool-8-thread-3 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2015-04-16 18:48:46,644 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-22 16:11:13,393 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost/sgmplaydb
 
-2015-04-16 18:48:47,200 - [ERROR] - from application in New I/O worker #1 
-
-
-! @6loem8kl2 - Internal server error, for (GET) [/] ->
-
-play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
-	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1$$anonfun$apply$1.apply$mcV$sp(Evolutions.scala:510) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
-	at play.api.db.evolutions.EvolutionsPlugin.withLock(Evolutions.scala:531) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
-	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:485) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
-	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:483) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
-	at scala.collection.immutable.List.foreach(List.scala:381) ~[scala-library-2.11.5.jar:na]
-	at play.api.db.evolutions.EvolutionsPlugin.onStart(Evolutions.scala:483) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.collection.immutable.List.foreach(List.scala:381) ~[scala-library-2.11.5.jar:na]
-	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$.start(Play.scala:90) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:157) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.Option.map(Option.scala:146) ~[scala-library-2.11.5.jar:na]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.util.Success.flatMap(Try.scala:230) ~[scala-library-2.11.5.jar:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.5.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.5.jar:na]
-
-2015-04-16 18:48:48,027 - [INFO] - from application in play-internal-execution-context-1 
-Application shutdown...
-
-2015-04-16 18:48:48,029 - [WARN] - from play in play-internal-execution-context-1 
-Error stopping plugin
-java.lang.NullPointerException: null
-	at play.libs.ws.ning.NingWSPlugin.onStop(NingWSPlugin.java:31) ~[play-java-ws_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:108) [play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:107) [play_2.11-2.3.8.jar:2.3.8]
-	at scala.collection.immutable.List.foreach(List.scala:381) [scala-library-2.11.5.jar:na]
-	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply$mcV$sp(Play.scala:107) [play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.8.jar:2.3.8]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) [play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$stop$1.apply(Play.scala:106) [play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$stop$1.apply(Play.scala:105) [play_2.11-2.3.8.jar:2.3.8]
-	at scala.Option.map(Option.scala:146) [scala-library-2.11.5.jar:na]
-	at play.api.Play$.stop(Play.scala:105) [play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:142) [play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.8.jar:2.3.8]
-	at scala.Option.map(Option.scala:146) [scala-library-2.11.5.jar:na]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.8.jar:2.3.8]
-	at scala.util.Success.flatMap(Try.scala:230) [scala-library-2.11.5.jar:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) [play_2.11-2.3.8.jar:2.3.8]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.5.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.5.jar:na]
-
-2015-04-16 18:48:48,323 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://localhost/sgmplaydb
-
-2015-04-16 18:48:48,492 - [ERROR] - from application in New I/O worker #2 
-
-
-! @6loem8mj6 - Internal server error, for (GET) [/] ->
-
-play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
-	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1$$anonfun$apply$1.apply$mcV$sp(Evolutions.scala:510) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
-	at play.api.db.evolutions.EvolutionsPlugin.withLock(Evolutions.scala:531) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
-	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:485) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
-	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:483) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
-	at scala.collection.immutable.List.foreach(List.scala:381) ~[scala-library-2.11.5.jar:na]
-	at play.api.db.evolutions.EvolutionsPlugin.onStart(Evolutions.scala:483) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.collection.immutable.List.foreach(List.scala:381) ~[scala-library-2.11.5.jar:na]
-	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$.start(Play.scala:90) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:157) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.Option.map(Option.scala:146) ~[scala-library-2.11.5.jar:na]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.util.Success.flatMap(Try.scala:230) ~[scala-library-2.11.5.jar:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.5.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.5.jar:na]
-
-2015-04-16 18:48:51,588 - [INFO] - from application in play-internal-execution-context-1 
-Application shutdown...
-
-2015-04-16 18:48:51,589 - [WARN] - from play in play-internal-execution-context-1 
-Error stopping plugin
-java.lang.NullPointerException: null
-	at play.libs.ws.ning.NingWSPlugin.onStop(NingWSPlugin.java:31) ~[play-java-ws_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:108) [play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:107) [play_2.11-2.3.8.jar:2.3.8]
-	at scala.collection.immutable.List.foreach(List.scala:381) [scala-library-2.11.5.jar:na]
-	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply$mcV$sp(Play.scala:107) [play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.8.jar:2.3.8]
-	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) [play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$stop$1.apply(Play.scala:106) [play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$stop$1.apply(Play.scala:105) [play_2.11-2.3.8.jar:2.3.8]
-	at scala.Option.map(Option.scala:146) [scala-library-2.11.5.jar:na]
-	at play.api.Play$.stop(Play.scala:105) [play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:142) [play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.8.jar:2.3.8]
-	at scala.Option.map(Option.scala:146) [scala-library-2.11.5.jar:na]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.8.jar:2.3.8]
-	at scala.util.Success.flatMap(Try.scala:230) [scala-library-2.11.5.jar:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) [play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) [play_2.11-2.3.8.jar:2.3.8]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) [scala-library-2.11.5.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) [scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) [scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.5.jar:na]
-
-2015-04-16 18:48:51,678 - [INFO] - from play in play-internal-execution-context-1 
-database [default] connected at jdbc:mysql://localhost/sgmplaydb
-
-2015-04-16 18:48:51,881 - [ERROR] - from net.sf.ehcache.Cache in play-internal-execution-context-1 
+2015-04-22 16:11:13,976 - [ERROR] - from net.sf.ehcache.Cache in play-internal-execution-context-1 
 Unable to set localhost. This prevents creation of a GUID. Cause was: itai: itai: unknown error
 java.net.UnknownHostException: itai: itai: unknown error
 	at java.net.InetAddress.getLocalHost(InetAddress.java:1484) ~[na:1.8.0_45]
@@ -199,359 +53,354 @@ Caused by: java.net.UnknownHostException: itai: unknown error
 	at java.net.InetAddress.getLocalHost(InetAddress.java:1479) ~[na:1.8.0_45]
 	... 38 common frames omitted
 
-2015-04-16 18:48:51,956 - [INFO] - from application in play-internal-execution-context-1 
+2015-04-22 16:11:14,011 - [INFO] - from application in play-internal-execution-context-1 
 Application has started
 
-2015-04-16 18:48:51,960 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-22 16:11:14,015 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-16 18:49:47,044 - [INFO] - from application in play-akka.actor.default-dispatcher-5 
-busca Todos os Clientes ordenados
+2015-04-22 16:12:22,918 - [INFO] - from application in play-internal-execution-context-1 
+Application shutdown...
 
-2015-04-16 18:49:48,494 - [INFO] - from application in play-akka.actor.default-dispatcher-5 
-busca Todos os Fornecedores ordenados
+2015-04-22 16:12:23,073 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
 
-2015-04-16 18:49:50,842 - [INFO] - from application in play-akka.actor.default-dispatcher-15 
-busca Todos os Clientes ordenados
+2015-04-22 16:12:23,194 - [INFO] - from application in play-internal-execution-context-1 
+Application has started
 
-2015-04-16 18:49:52,287 - [INFO] - from application in play-akka.actor.default-dispatcher-5 
-busca Todos Bairros ordenados
+2015-04-22 16:12:23,194 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
 
-2015-04-16 18:49:56,026 - [INFO] - from application in play-akka.actor.default-dispatcher-5 
-busca Todos os Clientes ordenados
-
-2015-04-16 18:49:57,264 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
-busca Todos os Usuários ordenados
-
-2015-04-16 18:50:00,522 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
-busca Todos os Clientes ordenados
-
-2015-04-16 18:50:06,436 - [INFO] - from application in play-akka.actor.default-dispatcher-5 
-busca Todos os Fabricantes ordenados
-
-2015-04-16 18:50:08,284 - [INFO] - from application in play-akka.actor.default-dispatcher-5 
-busca Todas Categorias
-
-2015-04-16 18:50:09,612 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
-busca Todos as Unidades de Medidas ordenadas
-
-2015-04-16 18:50:10,929 - [INFO] - from application in play-akka.actor.default-dispatcher-15 
+2015-04-22 16:12:29,676 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
 busca Todos os Produtos ordenados
 
-2015-04-16 18:50:12,370 - [INFO] - from application in play-akka.actor.default-dispatcher-15 
-busca por página
-
-2015-04-16 18:50:12,828 - [INFO] - from application in play-akka.actor.default-dispatcher-15 
-busca por página
-
-2015-04-16 18:50:13,275 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
-busca por página
-
-2015-04-16 18:50:13,847 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
-busca por página
-
-2015-04-16 18:50:15,315 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
-busca por página
-
-2015-04-16 18:50:16,320 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
-busca Todos os Usuários ordenados
-
-2015-04-16 18:50:17,853 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
-buscaPorId Usuário
-
-2015-04-16 18:50:19,484 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
-remover usuário
-
-2015-04-16 18:50:19,584 - [INFO] - from application in play-akka.actor.default-dispatcher-15 
-busca Todos os Usuários ordenados
-
-2015-04-16 18:50:21,625 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
-buscaPorId Usuário
-
-2015-04-16 18:50:23,253 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
-remover usuário
-
-2015-04-16 18:50:23,340 - [INFO] - from application in play-akka.actor.default-dispatcher-15 
-busca Todos os Usuários ordenados
-
-2015-04-16 18:50:26,227 - [INFO] - from application in play-akka.actor.default-dispatcher-15 
-buscaPorId Usuário
-
-2015-04-16 18:50:29,076 - [INFO] - from application in play-akka.actor.default-dispatcher-15 
-remover usuário
-
-2015-04-16 18:51:24,226 - [INFO] - from application in play-internal-execution-context-3 
-Application shutdown...
-
-2015-04-16 18:51:24,369 - [INFO] - from play in play-internal-execution-context-3 
-database [default] connected at jdbc:mysql://localhost/sgmplaydb
-
-2015-04-16 18:51:24,455 - [INFO] - from application in play-internal-execution-context-3 
-Application has started
-
-2015-04-16 18:51:24,456 - [INFO] - from play in play-internal-execution-context-3 
-Application started (Dev)
-
-2015-04-16 18:51:25,292 - [INFO] - from application in play-akka.actor.default-dispatcher-16 
-buscaPorId Usuário
-
-2015-04-16 18:51:28,040 - [INFO] - from application in play-akka.actor.default-dispatcher-17 
-remover usuário
-
-2015-04-16 18:51:45,143 - [INFO] - from application in play-akka.actor.default-dispatcher-18 
-buscaPorId Usuário
-
-2015-04-16 18:51:49,434 - [INFO] - from application in play-akka.actor.default-dispatcher-24 
-remover usuário
-
-2015-04-16 18:51:57,337 - [INFO] - from application in play-akka.actor.default-dispatcher-25 
-busca Todos os Clientes ordenados
-
-2015-04-16 18:51:58,504 - [INFO] - from application in play-akka.actor.default-dispatcher-25 
-busca Todos Bairros ordenados
-
-2015-04-16 18:52:05,476 - [INFO] - from application in play-akka.actor.default-dispatcher-21 
-Salvando Cliente
-
-2015-04-16 18:52:14,301 - [INFO] - from application in play-akka.actor.default-dispatcher-23 
-busca Todos os Clientes ordenados
-
-2015-04-16 18:52:15,444 - [INFO] - from application in play-akka.actor.default-dispatcher-22 
+2015-04-22 16:12:32,463 - [INFO] - from application in play-akka.actor.default-dispatcher-11 
 busca Todos os Fornecedores ordenados
 
-2015-04-16 18:52:16,413 - [INFO] - from application in play-akka.actor.default-dispatcher-23 
-busca Todos Bairros ordenados
-
-2015-04-16 18:52:28,650 - [INFO] - from application in play-akka.actor.default-dispatcher-22 
-Salvando Fornecedor
-
-2015-04-16 18:52:41,887 - [INFO] - from application in play-akka.actor.default-dispatcher-19 
-Salvando Fornecedor
-
-2015-04-16 18:52:45,159 - [INFO] - from application in play-akka.actor.default-dispatcher-19 
-busca Todos os Fornecedores ordenados
-
-2015-04-16 18:54:31,985 - [ERROR] - from application in New I/O worker #3 
-
-
-! @6loen2amb - Internal server error, for (GET) [/] ->
-
-play.PlayExceptions$CompilationException: Compilation error[not found: value username]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.5.jar:na]
-	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49) ~[na:na]
-	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.5.jar:na]
-	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
-	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
-	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
-	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.5.jar:na]
-	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
-	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
-	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
-	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.5.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.5.jar:na]
-
-2015-04-16 18:54:33,686 - [ERROR] - from application in New I/O worker #3 
-
-
-! @6loen2d9o - Internal server error, for (GET) [/] ->
-
-play.PlayExceptions$CompilationException: Compilation error[not found: value username]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.5.jar:na]
-	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49) ~[na:na]
-	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
-	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.5.jar:na]
-	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
-	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
-	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
-	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
-	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.5.jar:na]
-	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
-	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
-	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
-	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.5.jar:na]
-	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.5.jar:na]
-	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.5.jar:na]
-
-2015-04-16 18:59:10,623 - [INFO] - from application in play-internal-execution-context-3 
-Application shutdown...
-
-2015-04-16 18:59:11,133 - [INFO] - from play in play-internal-execution-context-3 
-database [default] connected at jdbc:mysql://localhost/sgmplaydb
-
-2015-04-16 18:59:11,237 - [INFO] - from application in play-internal-execution-context-3 
-Application has started
-
-2015-04-16 18:59:11,238 - [INFO] - from play in play-internal-execution-context-3 
-Application started (Dev)
-
-2015-04-16 19:00:05,385 - [INFO] - from application in play-internal-execution-context-3 
-Application shutdown...
-
-2015-04-16 19:00:05,485 - [INFO] - from play in play-internal-execution-context-3 
-database [default] connected at jdbc:mysql://localhost/sgmplaydb
-
-2015-04-16 19:00:05,567 - [INFO] - from application in play-internal-execution-context-3 
-Application has started
-
-2015-04-16 19:00:05,568 - [INFO] - from play in play-internal-execution-context-3 
-Application started (Dev)
-
-2015-04-16 19:00:45,350 - [INFO] - from application in play-internal-execution-context-3 
-Application shutdown...
-
-2015-04-16 19:00:45,509 - [INFO] - from play in play-internal-execution-context-3 
-database [default] connected at jdbc:mysql://localhost/sgmplaydb
-
-2015-04-16 19:00:45,657 - [INFO] - from application in play-internal-execution-context-3 
-Application has started
-
-2015-04-16 19:00:45,657 - [INFO] - from play in play-internal-execution-context-3 
-Application started (Dev)
-
-2015-04-16 19:01:01,993 - [INFO] - from application in play-internal-execution-context-3 
-Application shutdown...
-
-2015-04-16 19:01:02,165 - [INFO] - from play in play-internal-execution-context-3 
-database [default] connected at jdbc:mysql://localhost/sgmplaydb
-
-2015-04-16 19:01:02,277 - [INFO] - from application in play-internal-execution-context-3 
-Application has started
-
-2015-04-16 19:01:02,278 - [INFO] - from play in play-internal-execution-context-3 
-Application started (Dev)
-
-2015-04-16 19:01:17,166 - [INFO] - from application in play-internal-execution-context-3 
-Application shutdown...
-
-2015-04-16 19:01:17,526 - [INFO] - from play in play-internal-execution-context-3 
-database [default] connected at jdbc:mysql://localhost/sgmplaydb
-
-2015-04-16 19:01:17,673 - [INFO] - from application in play-internal-execution-context-3 
-Application has started
-
-2015-04-16 19:01:17,673 - [INFO] - from play in play-internal-execution-context-3 
-Application started (Dev)
-
-2015-04-16 19:01:26,093 - [INFO] - from application in play-internal-execution-context-3 
-Application shutdown...
-
-2015-04-16 19:01:26,209 - [INFO] - from play in play-internal-execution-context-3 
-database [default] connected at jdbc:mysql://localhost/sgmplaydb
-
-2015-04-16 19:01:26,384 - [INFO] - from application in play-internal-execution-context-3 
-Application has started
-
-2015-04-16 19:01:26,384 - [INFO] - from play in play-internal-execution-context-3 
-Application started (Dev)
-
-2015-04-16 19:01:59,424 - [INFO] - from application in play-internal-execution-context-3 
-Application shutdown...
-
-2015-04-16 19:01:59,585 - [INFO] - from play in play-internal-execution-context-3 
-database [default] connected at jdbc:mysql://localhost/sgmplaydb
-
-2015-04-16 19:01:59,766 - [INFO] - from application in play-internal-execution-context-3 
-Application has started
-
-2015-04-16 19:01:59,766 - [INFO] - from play in play-internal-execution-context-3 
-Application started (Dev)
-
-2015-04-16 19:03:11,979 - [INFO] - from application in play-internal-execution-context-3 
-Application shutdown...
-
-2015-04-16 19:03:12,073 - [INFO] - from play in play-internal-execution-context-3 
-database [default] connected at jdbc:mysql://localhost/sgmplaydb
-
-2015-04-16 19:03:12,180 - [INFO] - from application in play-internal-execution-context-3 
-Application has started
-
-2015-04-16 19:03:12,181 - [INFO] - from play in play-internal-execution-context-3 
-Application started (Dev)
-
-2015-04-16 19:03:42,723 - [INFO] - from application in play-internal-execution-context-3 
-Application shutdown...
-
-2015-04-16 19:03:42,881 - [INFO] - from play in play-internal-execution-context-3 
-database [default] connected at jdbc:mysql://localhost/sgmplaydb
-
-2015-04-16 19:03:43,057 - [INFO] - from application in play-internal-execution-context-3 
-Application has started
-
-2015-04-16 19:03:43,057 - [INFO] - from play in play-internal-execution-context-3 
-Application started (Dev)
-
-2015-04-16 19:04:18,825 - [INFO] - from application in play-akka.actor.default-dispatcher-78 
+2015-04-22 16:12:33,533 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
 busca Todos os Usuários ordenados
 
-2015-04-16 19:04:28,027 - [INFO] - from application in play-akka.actor.default-dispatcher-67 
-Salvando Usuário
-
-2015-04-16 19:04:28,160 - [INFO] - from application in play-akka.actor.default-dispatcher-67 
-busca Todos os Usuários ordenados
-
-2015-04-16 19:04:30,591 - [INFO] - from application in play-akka.actor.default-dispatcher-68 
-buscaPorId Usuário
-
-2015-04-16 19:04:33,297 - [INFO] - from application in play-akka.actor.default-dispatcher-68 
-busca Todos os Usuários ordenados
-
-2015-04-16 19:04:54,148 - [INFO] - from application in play-akka.actor.default-dispatcher-75 
-busca Todos os Paises ordenados
-
-2015-04-16 19:04:57,608 - [INFO] - from application in play-akka.actor.default-dispatcher-71 
+2015-04-22 16:12:36,077 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
 busca Todas as Cidades ordenadas
 
-2015-04-16 19:04:59,789 - [INFO] - from application in play-akka.actor.default-dispatcher-75 
-busca Todos Bairros ordenados
+2015-04-22 16:12:38,154 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+busca Todos os Clientes ordenados
 
-2015-04-16 19:05:02,532 - [INFO] - from application in play-akka.actor.default-dispatcher-75 
-busca por página
+2015-04-22 16:12:41,033 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+busca Todos os Fornecedores ordenados
 
-2015-04-16 19:05:03,194 - [INFO] - from application in play-akka.actor.default-dispatcher-75 
-busca por página
+2015-04-22 16:12:41,785 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+busca Todos os Clientes ordenados
 
-2015-04-16 19:05:03,834 - [INFO] - from application in play-akka.actor.default-dispatcher-75 
-busca por página
+2015-04-22 16:12:43,193 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+busca Todos os Fornecedores ordenados
 
-2015-04-16 19:05:04,450 - [INFO] - from application in play-akka.actor.default-dispatcher-75 
-busca por página
+2015-04-22 16:12:43,648 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
+busca Todos os Usuários ordenados
 
-2015-04-16 19:05:06,650 - [INFO] - from application in play-akka.actor.default-dispatcher-71 
+2015-04-22 16:12:45,340 - [INFO] - from application in play-akka.actor.default-dispatcher-13 
 busca Todos os Estados ordenados
 
-2015-04-16 19:05:07,908 - [INFO] - from application in play-akka.actor.default-dispatcher-71 
-busca por página
+2015-04-22 16:12:46,930 - [INFO] - from application in play-akka.actor.default-dispatcher-11 
+busca Todas Categorias
 
-2015-04-16 19:05:08,417 - [INFO] - from application in play-akka.actor.default-dispatcher-71 
-busca por página
+2015-04-22 16:12:54,767 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
+busca Todos os Fornecedores ordenados
 
-2015-04-16 19:05:09,258 - [INFO] - from application in play-akka.actor.default-dispatcher-71 
-busca por página
+2015-04-22 16:12:55,578 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
+busca Todos os Clientes ordenados
 
-2015-04-16 19:05:09,676 - [INFO] - from application in play-akka.actor.default-dispatcher-68 
-busca por página
-
-2015-04-16 19:06:37,128 - [INFO] - from application in pool-8-thread-3 
+2015-04-22 16:13:12,768 - [INFO] - from application in play-internal-execution-context-1 
 Application shutdown...
+
+2015-04-22 16:13:12,888 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2015-04-22 16:13:13,007 - [INFO] - from application in play-internal-execution-context-1 
+Application has started
+
+2015-04-22 16:13:13,008 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-22 16:13:14,260 - [INFO] - from application in play-akka.actor.default-dispatcher-2 
+busca Todos os Clientes ordenados
+
+2015-04-22 16:13:18,339 - [INFO] - from application in play-akka.actor.default-dispatcher-20 
+busca Todos os Usuários ordenados
+
+2015-04-22 16:13:19,992 - [INFO] - from application in play-akka.actor.default-dispatcher-16 
+busca Todos os Paises ordenados
+
+2015-04-22 16:13:21,123 - [INFO] - from application in play-akka.actor.default-dispatcher-16 
+busca por página
+
+2015-04-22 16:13:21,962 - [INFO] - from application in play-akka.actor.default-dispatcher-16 
+busca por página
+
+2015-04-22 16:13:22,523 - [INFO] - from application in play-akka.actor.default-dispatcher-16 
+busca por página
+
+2015-04-22 16:13:22,992 - [INFO] - from application in play-akka.actor.default-dispatcher-16 
+busca por página
+
+2015-04-22 16:13:23,862 - [INFO] - from application in play-akka.actor.default-dispatcher-19 
+busca por página
+
+2015-04-22 16:13:24,625 - [INFO] - from application in play-akka.actor.default-dispatcher-16 
+busca por página
+
+2015-04-22 16:14:12,683 - [INFO] - from application in play-internal-execution-context-1 
+Application shutdown...
+
+2015-04-22 16:14:12,822 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2015-04-22 16:14:12,933 - [INFO] - from application in play-internal-execution-context-1 
+Application has started
+
+2015-04-22 16:14:12,933 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-22 16:14:29,861 - [INFO] - from application in play-internal-execution-context-1 
+Application shutdown...
+
+2015-04-22 16:14:29,980 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2015-04-22 16:14:30,100 - [INFO] - from application in play-internal-execution-context-1 
+Application has started
+
+2015-04-22 16:14:30,100 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-22 16:14:37,058 - [INFO] - from application in play-akka.actor.default-dispatcher-27 
+busca Todos os Usuários ordenados
+
+2015-04-22 16:14:37,507 - [INFO] - from application in play-akka.actor.default-dispatcher-16 
+busca Todos os Fornecedores ordenados
+
+2015-04-22 16:14:38,096 - [INFO] - from application in play-akka.actor.default-dispatcher-16 
+busca Todos os Clientes ordenados
+
+2015-04-22 16:16:34,333 - [INFO] - from application in play-internal-execution-context-1 
+Application shutdown...
+
+2015-04-22 16:16:34,468 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2015-04-22 16:16:34,577 - [INFO] - from application in play-internal-execution-context-1 
+Application has started
+
+2015-04-22 16:16:34,577 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-22 16:16:44,844 - [INFO] - from application in play-akka.actor.default-dispatcher-34 
+busca Todos os Paises ordenados
+
+2015-04-22 16:16:47,174 - [INFO] - from application in play-akka.actor.default-dispatcher-30 
+busca Todos Bairros ordenados
+
+2015-04-22 16:16:48,254 - [INFO] - from application in play-akka.actor.default-dispatcher-34 
+busca Todos os Clientes ordenados
+
+2015-04-22 16:16:49,998 - [INFO] - from application in play-akka.actor.default-dispatcher-34 
+busca Todos os Fornecedores ordenados
+
+2015-04-22 16:16:50,740 - [INFO] - from application in play-akka.actor.default-dispatcher-33 
+busca Todos os Usuários ordenados
+
+2015-04-22 16:16:52,390 - [INFO] - from application in play-akka.actor.default-dispatcher-33 
+busca Todos os Paises ordenados
+
+2015-04-22 16:16:56,068 - [INFO] - from application in play-akka.actor.default-dispatcher-33 
+busca Todos os Clientes ordenados
+
+2015-04-22 16:17:15,145 - [INFO] - from application in play-akka.actor.default-dispatcher-36 
+busca Todos Bairros ordenados
+
+2015-04-22 16:17:16,014 - [INFO] - from application in play-akka.actor.default-dispatcher-36 
+busca Todos Bairros ordenados
+
+2015-04-22 16:17:30,119 - [INFO] - from application in play-akka.actor.default-dispatcher-23 
+busca Todos Bairros ordenados
+
+2015-04-22 16:17:30,929 - [INFO] - from application in play-akka.actor.default-dispatcher-36 
+busca Todos Bairros ordenados
+
+2015-04-22 16:17:38,302 - [INFO] - from application in play-akka.actor.default-dispatcher-23 
+busca Todos os Fornecedores ordenados
+
+2015-04-22 16:17:39,405 - [INFO] - from application in play-akka.actor.default-dispatcher-23 
+busca Todos os Usuários ordenados
+
+2015-04-22 16:17:41,093 - [INFO] - from application in play-akka.actor.default-dispatcher-23 
+busca Todos os Paises ordenados
+
+2015-04-22 16:17:42,837 - [INFO] - from application in play-akka.actor.default-dispatcher-23 
+buscaPorId Pais
+
+2015-04-22 16:17:44,040 - [INFO] - from application in play-akka.actor.default-dispatcher-23 
+busca Todos os Paises ordenados
+
+2015-04-22 16:17:45,574 - [INFO] - from application in play-akka.actor.default-dispatcher-40 
+busca Todos os Estados ordenados
+
+2015-04-22 16:17:48,812 - [INFO] - from application in play-akka.actor.default-dispatcher-23 
+busca Todos os Fabricantes ordenados
+
+2015-04-22 16:18:26,939 - [INFO] - from application in play-akka.actor.default-dispatcher-32 
+busca Todos os Clientes ordenados
+
+2015-04-22 16:18:27,907 - [INFO] - from application in play-akka.actor.default-dispatcher-44 
+busca Todos os Fornecedores ordenados
+
+2015-04-22 16:18:29,030 - [INFO] - from application in play-akka.actor.default-dispatcher-39 
+busca Todos os Usuários ordenados
+
+2015-04-22 16:18:30,723 - [INFO] - from application in play-akka.actor.default-dispatcher-32 
+busca Todos os Paises ordenados
+
+2015-04-22 16:18:32,222 - [INFO] - from application in play-akka.actor.default-dispatcher-39 
+busca Todos os Estados ordenados
+
+2015-04-22 16:18:33,787 - [INFO] - from application in play-akka.actor.default-dispatcher-32 
+busca Todas as Cidades ordenadas
+
+2015-04-22 16:18:35,589 - [INFO] - from application in play-akka.actor.default-dispatcher-44 
+busca Todos Bairros ordenados
+
+2015-04-22 16:18:36,660 - [INFO] - from application in play-akka.actor.default-dispatcher-44 
+busca Todos os Clientes ordenados
+
+2015-04-22 16:18:38,943 - [INFO] - from application in play-akka.actor.default-dispatcher-32 
+busca Todos os Produtos ordenados
+
+2015-04-22 16:18:40,582 - [INFO] - from application in play-akka.actor.default-dispatcher-39 
+busca Todos os Fabricantes ordenados
+
+2015-04-22 16:18:42,255 - [INFO] - from application in play-akka.actor.default-dispatcher-32 
+busca Todas Categorias
+
+2015-04-22 16:18:44,050 - [INFO] - from application in play-akka.actor.default-dispatcher-44 
+busca Todos as Unidades de Medidas ordenadas
+
+2015-04-22 16:19:29,594 - [INFO] - from application in play-internal-execution-context-1 
+Application shutdown...
+
+2015-04-22 16:19:29,868 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2015-04-22 16:19:30,109 - [INFO] - from application in play-internal-execution-context-1 
+Application has started
+
+2015-04-22 16:19:30,109 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-22 16:19:32,480 - [INFO] - from application in play-akka.actor.default-dispatcher-46 
+busca Todos os Clientes ordenados
+
+2015-04-22 16:19:33,166 - [INFO] - from application in play-akka.actor.default-dispatcher-49 
+busca Todos os Fornecedores ordenados
+
+2015-04-22 16:19:33,727 - [INFO] - from application in play-akka.actor.default-dispatcher-46 
+busca Todos os Usuários ordenados
+
+2015-04-22 16:19:35,261 - [INFO] - from application in play-akka.actor.default-dispatcher-49 
+busca Todos os Paises ordenados
+
+2015-04-22 16:19:36,577 - [INFO] - from application in play-akka.actor.default-dispatcher-46 
+busca Todos os Estados ordenados
+
+2015-04-22 16:19:37,832 - [INFO] - from application in play-akka.actor.default-dispatcher-49 
+busca Todas as Cidades ordenadas
+
+2015-04-22 16:19:38,332 - [INFO] - from application in play-akka.actor.default-dispatcher-49 
+busca Todos os Usuários ordenados
+
+2015-04-22 16:19:39,032 - [INFO] - from application in play-akka.actor.default-dispatcher-49 
+busca Todos os Fornecedores ordenados
+
+2015-04-22 16:19:39,601 - [INFO] - from application in play-akka.actor.default-dispatcher-49 
+busca Todos os Clientes ordenados
+
+2015-04-22 16:19:49,479 - [INFO] - from application in play-internal-execution-context-1 
+Application shutdown...
+
+2015-04-22 16:19:49,647 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2015-04-22 16:19:49,801 - [INFO] - from application in play-internal-execution-context-1 
+Application has started
+
+2015-04-22 16:19:49,802 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-04-22 16:19:50,971 - [INFO] - from application in play-akka.actor.default-dispatcher-48 
+busca Todos os Clientes ordenados
+
+2015-04-22 16:19:53,243 - [INFO] - from application in play-akka.actor.default-dispatcher-52 
+busca Todos os Fornecedores ordenados
+
+2015-04-22 16:19:53,942 - [INFO] - from application in play-akka.actor.default-dispatcher-52 
+busca Todos os Clientes ordenados
+
+2015-04-22 16:19:54,506 - [INFO] - from application in play-akka.actor.default-dispatcher-52 
+busca Todos os Fornecedores ordenados
+
+2015-04-22 16:19:54,981 - [INFO] - from application in play-akka.actor.default-dispatcher-52 
+busca Todos os Usuários ordenados
+
+2015-04-22 16:19:56,422 - [INFO] - from application in play-akka.actor.default-dispatcher-46 
+busca Todos os Clientes ordenados
+
+2015-04-22 16:19:57,060 - [INFO] - from application in play-akka.actor.default-dispatcher-46 
+busca Todos os Fornecedores ordenados
+
+2015-04-22 16:19:57,658 - [INFO] - from application in play-akka.actor.default-dispatcher-46 
+busca Todos os Usuários ordenados
+
+2015-04-22 16:19:59,658 - [INFO] - from application in play-akka.actor.default-dispatcher-52 
+busca Todos os Paises ordenados
+
+2015-04-22 16:20:00,413 - [INFO] - from application in play-akka.actor.default-dispatcher-52 
+busca Todos os Usuários ordenados
+
+2015-04-22 16:20:01,115 - [INFO] - from application in play-akka.actor.default-dispatcher-52 
+busca Todos os Fornecedores ordenados
+
+2015-04-22 16:20:01,852 - [INFO] - from application in play-akka.actor.default-dispatcher-52 
+busca Todos os Clientes ordenados
+
+2015-04-22 16:20:17,081 - [INFO] - from application in play-akka.actor.default-dispatcher-43 
+busca Todos os Clientes ordenados
+
+2015-04-22 16:20:25,587 - [INFO] - from application in play-akka.actor.default-dispatcher-55 
+busca Todos os Clientes ordenados
+
+2015-04-22 16:20:27,873 - [INFO] - from application in play-akka.actor.default-dispatcher-58 
+busca Todos os Usuários ordenados
+
+2015-04-22 16:20:28,486 - [INFO] - from application in play-akka.actor.default-dispatcher-56 
+busca Todos os Fornecedores ordenados
+
+2015-04-22 16:20:29,080 - [INFO] - from application in play-akka.actor.default-dispatcher-56 
+busca Todos os Clientes ordenados
+
+2015-04-22 16:20:59,055 - [INFO] - from application in play-akka.actor.default-dispatcher-63 
+busca Todos os Clientes ordenados
+
+2015-04-22 16:21:07,691 - [INFO] - from application in play-akka.actor.default-dispatcher-53 
+busca Todos os Paises ordenados
+
+2015-04-22 16:21:08,487 - [INFO] - from application in play-akka.actor.default-dispatcher-60 
+busca Todos os Usuários ordenados
+
+2015-04-22 16:21:09,029 - [INFO] - from application in play-akka.actor.default-dispatcher-50 
+busca Todos os Fornecedores ordenados
+
+2015-04-22 16:21:09,749 - [INFO] - from application in play-akka.actor.default-dispatcher-50 
+busca Todos os Clientes ordenados
+
+2015-04-22 16:21:17,918 - [INFO] - from application in play-akka.actor.default-dispatcher-53 
+busca Todos os Clientes ordenados
 

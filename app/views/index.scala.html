@@ -2,21 +2,22 @@
 <!DOCTYPE html>
 <html ng-app="mercado">
 <head>
-    <!--Awesome-->
-    <link rel="stylesheet" href="assets/stylesheets/awesome/css/font-awesome.css"/>
-
-    <!--CSS Personalisados-->
-    <link rel="stylesheet" href="assets/stylesheets/help.css"/>
-    <link rel="stylesheet" href="assets/stylesheets/menu.css"/>
-    <link rel="stylesheet" href="assets/stylesheets/login.css"/>
-
-
-    <link rel="stylesheet" href="assets/bower_components/angular-toastr/dist/angular-toastr.css"/>
-    <link rel="stylesheet" href="assets/bower_components/angular-motion/dist/angular-motion.css"/>
-
     <!--Bootstrap-->
     <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.css"/>
 
+    <!--CSS Personalisados-->
+    <link rel="stylesheet" href="assets/stylesheets/help.css"/>
+    <link rel="stylesheet" href="assets/stylesheets/stylemenu.css"/>
+    <link rel="stylesheet" href="assets/stylesheets/menu.css"/>
+
+    <!--Awesome-->
+    <link rel="stylesheet" href="assets/stylesheets/awesome/css/font-awesome.css"/>
+
+    <!--Toastr-->
+    <link rel="stylesheet" href="assets/bower_components/angular-toastr/dist/angular-toastr.css"/>
+
+    <!--Motion-->
+    <link rel="stylesheet" href="assets/bower_components/angular-motion/dist/angular-motion.css"/>
 
     <!--Bootstrap Table-->
     <link rel="stylesheet" href="assets/bower_components/bootstrap-table/src/bootstrap-table.css"/>
@@ -26,7 +27,7 @@
     <title>Sistema de Mercados</title>
 </head>
 <body>
-<nav class="navbar navbar-default navbar-fixed-top">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
     <div class="container-fluid">
         <!-- Brand and toggle get grouped for better mobile display -->
         <div class="navbar-header">
@@ -125,9 +126,11 @@
                         </li>
                         <li class="divider"></li>
                         <li class="dropdown-header">Autenticação</li>
-                        <li><a href="/login">
-                            <span class="glyphicon glyphicon-ok-sign"></span> Entrar</a>
-                        </li>
+                        @if(!username){
+                            <li><a href="/login">
+                                <span class="glyphicon glyphicon-ok-sign"></span> Entrar</a>
+                            </li>
+                        }
                         @if(username){
                             <li><a href="/logout">
                                 <span class="glyphicon glyphicon-off"></span> Sair</a>
@@ -164,13 +167,8 @@
 <!--Jquery-->
 <script src="assets/bower_components/jquery/dist/jquery.js"></script>
 
-<!--Tela de Carregamento-->
-<!--<script src="assets/javascripts/loadingScreen.js"></script>-->
-
 <!--Javascripts Personalisados-->
-<!--<script src="assets/javascripts/active.js"></script>-->
 <script src="assets/javascripts/keymap.js"></script>
-<script src="assets/javascripts/login.js"></script>
 <script src="assets/javascripts/tabs.js"></script>
 <script src="assets/javascripts/pagination.js"></script>
 
