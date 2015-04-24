@@ -115,16 +115,16 @@
                             <span class="glyphicon glyphicon-barcode"></span> Produtos</a></li>
                         <li class="divider"></li>
                         }
-                        <li class="dropdown-header">Sistema</li>
                         @if(username){
+                        <li class="dropdown-header">Sistema</li>
                             <li><a href="/#/configuracoes">
                                 <span class="glyphicon glyphicon-tasks"></span> Configurações</a>
                             </li>
-                        }
-                        <li><a href="/#/ajuda">
-                            <span class="glyphicon glyphicon-question-sign"></span> Ajuda</a>
-                        </li>
+                            <li><a href="/#/ajuda">
+                                <span class="glyphicon glyphicon-question-sign"></span> Ajuda</a>
+                            </li>
                         <li class="divider"></li>
+                        }
                         <li class="dropdown-header">Autenticação</li>
                         @if(!username){
                             <li><a href="/login">
