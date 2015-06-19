@@ -6,6 +6,7 @@ angular
              'toastr',
              'mgcrea.ngStrap',
              'ngAnimate',
+             'angular-loading-bar',
              'ui.utils.masks'
             ]
         )
