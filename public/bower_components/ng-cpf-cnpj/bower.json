@@ -1,6 +1,6 @@
 {
   "name": "ng-cpf-cnpj",
-  "version": "0.0.1",
+  "version": "0.0.5",
   "authors": [
     "André Gil <hey@andregil.net>"
   ],
@@ -19,7 +19,7 @@
     "cpf_cnpj": "~0.0.3"
   },
   "devDependencies": {
-    "angular": "~1.2.0",
+    "angular": "1.3.0",
     "angular-ui-utils": "~0.0.4"
   }
 }

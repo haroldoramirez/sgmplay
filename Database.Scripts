@@ -4,8 +4,6 @@
 
 #Scripts do Banco de Dados, para ajudar na hora de testar o sistema.
 
-insert into usuario (data_de_cadastro,data_de_alteracao,padrao_do_sistema,email,senha,privilegio) values ('2015-04-16 17:29:43','2015-04-16 17:29:43',true,'administrador','d033e22ae348aeb5660fc2140aec35850c4da997','3');
-
 insert into pais (nome,ddi) values ('Brasil','+55');
 insert into pais (nome,ddi) values ('Paraguai', '+21');
 insert into pais (nome,ddi) values ('Argentina','+54');

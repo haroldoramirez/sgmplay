@@ -1,37 +1,64 @@
-2015-04-22 16:44:42,891 - [INFO] - from play in pool-8-thread-3 
+2015-04-24 17:51:52,142 - [INFO] - from play in pool-6-thread-6 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
 
-2015-04-22 16:44:49,567 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-24 17:52:06,294 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost/sgmplaydb
 
-2015-04-22 16:44:50,270 - [ERROR] - from net.sf.ehcache.Cache in play-internal-execution-context-1 
-Unable to set localhost. This prevents creation of a GUID. Cause was: itai: itai: unknown error
-java.net.UnknownHostException: itai: itai: unknown error
-	at java.net.InetAddress.getLocalHost(InetAddress.java:1484) ~[na:1.8.0_45]
-	at net.sf.ehcache.Cache.<clinit>(Cache.java:214) ~[ehcache-core-2.6.8.jar:na]
-	at net.sf.ehcache.config.ConfigurationHelper.createCache(ConfigurationHelper.java:296) [ehcache-core-2.6.8.jar:na]
-	at net.sf.ehcache.config.ConfigurationHelper.createDefaultCache(ConfigurationHelper.java:219) [ehcache-core-2.6.8.jar:na]
-	at net.sf.ehcache.CacheManager.configure(CacheManager.java:722) [ehcache-core-2.6.8.jar:na]
-	at net.sf.ehcache.CacheManager.doInit(CacheManager.java:439) [ehcache-core-2.6.8.jar:na]
-	at net.sf.ehcache.CacheManager.init(CacheManager.java:377) [ehcache-core-2.6.8.jar:na]
-	at net.sf.ehcache.CacheManager.<init>(CacheManager.java:259) [ehcache-core-2.6.8.jar:na]
-	at net.sf.ehcache.CacheManager.newInstance(CacheManager.java:1037) [ehcache-core-2.6.8.jar:na]
-	at net.sf.ehcache.CacheManager.newInstance(CacheManager.java:936) [ehcache-core-2.6.8.jar:na]
-	at net.sf.ehcache.CacheManager.create(CacheManager.java:904) [ehcache-core-2.6.8.jar:na]
-	at play.api.cache.EhCachePlugin.manager$lzycompute(Cache.scala:145) [play-cache_2.11-2.3.8.jar:2.3.8]
-	at play.api.cache.EhCachePlugin.manager(Cache.scala:143) [play-cache_2.11-2.3.8.jar:2.3.8]
-	at play.api.cache.EhCachePlugin.cache$lzycompute(Cache.scala:149) [play-cache_2.11-2.3.8.jar:2.3.8]
-	at play.api.cache.EhCachePlugin.cache(Cache.scala:148) [play-cache_2.11-2.3.8.jar:2.3.8]
-	at play.api.cache.EhCachePlugin.onStart(Cache.scala:165) [play-cache_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) [play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) [play_2.11-2.3.8.jar:2.3.8]
+2015-04-24 17:52:07,494 - [ERROR] - from application in New I/O worker #1 
+
+
+! @6m0kjbimg - Internal server error, for (GET) [/] ->
+
+play.api.db.evolutions.InvalidDatabaseRevision: Database 'default' needs evolution![An SQL script need to be run on your database.]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1$$anonfun$apply$1.apply$mcV$sp(Evolutions.scala:510) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	at play.api.db.evolutions.EvolutionsPlugin.withLock(Evolutions.scala:531) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:485) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	at play.api.db.evolutions.EvolutionsPlugin$$anonfun$onStart$1.apply(Evolutions.scala:483) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	at scala.collection.immutable.List.foreach(List.scala:381) ~[scala-library-2.11.5.jar:na]
+	at play.api.db.evolutions.EvolutionsPlugin.onStart(Evolutions.scala:483) ~[play-jdbc_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.collection.immutable.List.foreach(List.scala:381) ~[scala-library-2.11.5.jar:na]
+	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$.start(Play.scala:90) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:157) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:146) ~[scala-library-2.11.5.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.util.Success.flatMap(Try.scala:230) ~[scala-library-2.11.5.jar:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:128) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.5.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.5.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.5.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.5.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.5.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.5.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.5.jar:na]
+
+2015-04-24 17:52:32,606 - [INFO] - from application in play-internal-execution-context-1 
+Application shutdown...
+
+2015-04-24 17:52:32,609 - [WARN] - from play in play-internal-execution-context-1 
+Error stopping plugin
+java.lang.NullPointerException: null
+	at play.libs.ws.ning.NingWSPlugin.onStop(NingWSPlugin.java:31) ~[play-java-ws_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:108) [play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1$$anonfun$apply$mcV$sp$2.apply(Play.scala:107) [play_2.11-2.3.8.jar:2.3.8]
 	at scala.collection.immutable.List.foreach(List.scala:381) [scala-library-2.11.5.jar:na]
-	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:91) [play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) [play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$$anonfun$start$1.apply(Play.scala:91) [play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply$mcV$sp(Play.scala:107) [play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$stop$1$$anonfun$apply$1.apply(Play.scala:107) [play_2.11-2.3.8.jar:2.3.8]
 	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) [play_2.11-2.3.8.jar:2.3.8]
-	at play.api.Play$.start(Play.scala:90) [play_2.11-2.3.8.jar:2.3.8]
-	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:157) [play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$stop$1.apply(Play.scala:106) [play_2.11-2.3.8.jar:2.3.8]
+	at play.api.Play$$anonfun$stop$1.apply(Play.scala:105) [play_2.11-2.3.8.jar:2.3.8]
+	at scala.Option.map(Option.scala:146) [scala-library-2.11.5.jar:na]
+	at play.api.Play$.stop(Play.scala:105) [play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:142) [play_2.11-2.3.8.jar:2.3.8]
 	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.8.jar:2.3.8]
 	at scala.Option.map(Option.scala:146) [scala-library-2.11.5.jar:na]
 	at play.core.ReloadableApplication$$anonfun$get$1$$anonfun$apply$1.apply(ApplicationProvider.scala:130) [play_2.11-2.3.8.jar:2.3.8]
@@ -46,63 +73,372 @@ java.net.UnknownHostException: itai: itai: unknown error
 	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.5.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.5.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.5.jar:na]
-Caused by: java.net.UnknownHostException: itai: unknown error
-	at java.net.Inet6AddressImpl.lookupAllHostAddr(Native Method) ~[na:1.8.0_45]
-	at java.net.InetAddress$2.lookupAllHostAddr(InetAddress.java:907) ~[na:1.8.0_45]
-	at java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1302) ~[na:1.8.0_45]
-	at java.net.InetAddress.getLocalHost(InetAddress.java:1479) ~[na:1.8.0_45]
-	... 38 common frames omitted
 
-2015-04-22 16:44:50,325 - [INFO] - from application in play-internal-execution-context-1 
-Application has started
-
-2015-04-22 16:44:50,329 - [INFO] - from play in play-internal-execution-context-1 
-Application started (Dev)
-
-2015-04-22 16:48:04,576 - [INFO] - from application in play-internal-execution-context-1 
-Application shutdown...
-
-2015-04-22 16:48:04,731 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-24 17:52:32,856 - [INFO] - from play in play-internal-execution-context-1 
 database [default] connected at jdbc:mysql://localhost/sgmplaydb
 
-2015-04-22 16:48:04,924 - [INFO] - from application in play-internal-execution-context-1 
+2015-04-24 17:52:33,714 - [INFO] - from application in play-internal-execution-context-1 
 Application has started
 
-2015-04-22 16:48:04,925 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-24 17:52:33,719 - [INFO] - from play in play-internal-execution-context-1 
 Application started (Dev)
 
-2015-04-22 16:48:28,964 - [INFO] - from application in play-akka.actor.default-dispatcher-27 
+2015-04-24 17:53:55,218 - [INFO] - from application in play-akka.actor.default-dispatcher-9 
 busca Todos os Clientes ordenados
 
-2015-04-22 16:48:30,724 - [INFO] - from application in play-akka.actor.default-dispatcher-33 
-busca Todos os Fornecedores ordenados
+2015-04-24 17:53:57,166 - [INFO] - from application in play-akka.actor.default-dispatcher-16 
+busca Todos Bairros ordenados
 
-2015-04-22 16:48:31,387 - [INFO] - from application in play-akka.actor.default-dispatcher-27 
-busca Todos os UsuÃ¡rios ordenados
-
-2015-04-22 16:48:35,996 - [INFO] - from application in play-akka.actor.default-dispatcher-27 
+2015-04-24 17:53:59,038 - [INFO] - from application in play-akka.actor.default-dispatcher-16 
 busca Todos os Clientes ordenados
 
-2015-04-22 16:48:43,083 - [INFO] - from application in play-internal-execution-context-1 
+2015-04-24 17:54:08,221 - [INFO] - from application in play-akka.actor.default-dispatcher-9 
+busca Todos os Estados ordenados
+
+2015-04-24 17:54:10,078 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
+busca Todos os Paises ordenados
+
+2015-04-24 17:54:10,124 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
+buscaPorId Estado
+
+2015-04-24 17:54:12,789 - [INFO] - from application in play-akka.actor.default-dispatcher-12 
+busca Todos os Estados ordenados
+
+2015-04-24 17:57:23,234 - [INFO] - from application in play-akka.actor.default-dispatcher-9 
+busca Todos os Usuários ordenados
+
+2015-04-24 17:57:25,805 - [INFO] - from application in play-akka.actor.default-dispatcher-9 
+busca Todos os Clientes ordenados
+
+2015-04-24 17:57:27,126 - [INFO] - from application in play-akka.actor.default-dispatcher-9 
+busca Todos Bairros ordenados
+
+2015-04-24 17:57:28,603 - [INFO] - from application in play-akka.actor.default-dispatcher-21 
+busca Todos os Clientes ordenados
+
+2015-04-24 17:57:31,445 - [INFO] - from application in play-akka.actor.default-dispatcher-21 
+busca Todos Bairros ordenados
+
+2015-04-24 17:57:42,639 - [INFO] - from application in play-akka.actor.default-dispatcher-21 
+Salvando Cliente
+
+2015-04-24 17:57:42,888 - [INFO] - from application in play-akka.actor.default-dispatcher-21 
+busca Todos os Clientes ordenados
+
+2015-04-24 17:57:46,826 - [INFO] - from application in play-akka.actor.default-dispatcher-21 
+busca Todos Bairros ordenados
+
+2015-04-24 17:57:46,829 - [INFO] - from application in play-akka.actor.default-dispatcher-9 
+buscaPorId Cliente
+
+2015-04-24 17:58:31,669 - [INFO] - from application in play-akka.actor.default-dispatcher-22 
+busca Todos os Clientes ordenados
+
+2015-04-24 17:58:32,652 - [INFO] - from application in play-akka.actor.default-dispatcher-24 
+busca Todos os Clientes ordenados
+
+2015-04-24 17:58:36,696 - [INFO] - from application in play-akka.actor.default-dispatcher-28 
+busca Todos Bairros ordenados
+
+2015-04-24 17:58:36,697 - [INFO] - from application in play-akka.actor.default-dispatcher-23 
+buscaPorId Cliente
+
+2015-04-24 17:58:49,105 - [INFO] - from application in play-akka.actor.default-dispatcher-22 
+buscaPorId Cliente
+
+2015-04-24 17:58:49,105 - [INFO] - from application in play-akka.actor.default-dispatcher-26 
+busca Todos Bairros ordenados
+
+2015-04-24 17:58:50,296 - [INFO] - from application in play-akka.actor.default-dispatcher-26 
+busca Todos os Clientes ordenados
+
+2015-04-24 17:59:08,874 - [INFO] - from application in play-akka.actor.default-dispatcher-29 
+busca Todos os Clientes ordenados
+
+2015-04-24 18:03:01,655 - [ERROR] - from application in New I/O worker #5 
+
+
+! @6m0kkmoek - Internal server error, for (GET) [/login] ->
+
+play.PlayExceptions$UnexpectedException: Unexpected exception[IllegalArgumentException: requirement failed: Source file 'C:\projetos\sgmplay\target\scala-2.11\classes.bak\sbt5133091902096464397.class' does not exist.]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:51) ~[na:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.5.jar:na]
+	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
+	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.5.jar:na]
+	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
+	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.5.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.5.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.5.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.5.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.5.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.5.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.5.jar:na]
+Caused by: java.lang.IllegalArgumentException: requirement failed: Source file 'C:\projetos\sgmplay\target\scala-2.11\classes.bak\sbt5133091902096464397.class' does not exist.
+	at scala.Predef$.require(Predef.scala:233) ~[scala-library-2.11.5.jar:na]
+	at sbt.IO$.copyFile(IO.scala:580) ~[na:na]
+	at sbt.IO$.move(IO.scala:764) ~[na:na]
+	at sbt.inc.ClassfileManager$$anonfun$transactional$1$$anon$2$$anonfun$complete$5.apply(ClassfileManager.scala:68) ~[na:na]
+	at sbt.inc.ClassfileManager$$anonfun$transactional$1$$anon$2$$anonfun$complete$5.apply(ClassfileManager.scala:68) ~[na:na]
+	at scala.collection.TraversableLike$WithFilter$$anonfun$foreach$1.apply(TraversableLike.scala:772) ~[scala-library-2.11.5.jar:na]
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:98) ~[scala-library-2.11.5.jar:na]
+	at scala.collection.mutable.HashMap$$anonfun$foreach$1.apply(HashMap.scala:98) ~[scala-library-2.11.5.jar:na]
+	at scala.collection.mutable.HashTable$class.foreachEntry(HashTable.scala:226) ~[scala-library-2.11.5.jar:na]
+	at scala.collection.mutable.HashMap.foreachEntry(HashMap.scala:39) ~[scala-library-2.11.5.jar:na]
+	at scala.collection.mutable.HashMap.foreach(HashMap.scala:98) ~[scala-library-2.11.5.jar:na]
+	at scala.collection.TraversableLike$WithFilter.foreach(TraversableLike.scala:771) ~[scala-library-2.11.5.jar:na]
+	at sbt.inc.ClassfileManager$$anonfun$transactional$1$$anon$2.complete(ClassfileManager.scala:68) ~[na:na]
+	at sbt.inc.Incremental$.manageClassfiles(Incremental.scala:66) ~[na:na]
+	at sbt.inc.Incremental$.compile(Incremental.scala:37) ~[na:na]
+	at sbt.inc.IncrementalCompile$.apply(Compile.scala:27) ~[na:na]
+	at sbt.compiler.AggressiveCompile.compile2(AggressiveCompile.scala:157) ~[na:na]
+	at sbt.compiler.AggressiveCompile.compile1(AggressiveCompile.scala:71) ~[na:na]
+	at sbt.compiler.AggressiveCompile.apply(AggressiveCompile.scala:46) ~[na:na]
+	at sbt.Compiler$.apply(Compiler.scala:75) ~[na:na]
+	at sbt.Compiler$.apply(Compiler.scala:66) ~[na:na]
+	at sbt.Defaults$.sbt$Defaults$$compileTaskImpl(Defaults.scala:770) ~[na:na]
+	at sbt.Defaults$$anonfun$compileTask$1.apply(Defaults.scala:762) ~[na:na]
+	at sbt.Defaults$$anonfun$compileTask$1.apply(Defaults.scala:762) ~[na:na]
+	at scala.Function1$$anonfun$compose$1.apply(Function1.scala:47) ~[scala-library-2.11.5.jar:na]
+	at sbt.$tilde$greater$$anonfun$$u2219$1.apply(TypeFunctions.scala:42) ~[na:na]
+	at sbt.std.Transform$$anon$4.work(System.scala:64) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1$$anonfun$apply$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.ErrorHandling$.wideConvert(ErrorHandling.scala:18) ~[na:na]
+	at sbt.Execute.work(Execute.scala:244) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.Execute$$anonfun$submit$1.apply(Execute.scala:237) ~[na:na]
+	at sbt.ConcurrentRestrictions$$anon$4$$anonfun$1.apply(ConcurrentRestrictions.scala:160) ~[na:na]
+	at sbt.CompletionService$$anon$2.call(CompletionService.scala:30) ~[na:na]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_40]
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:511) ~[na:1.8.0_40]
+	at java.util.concurrent.FutureTask.run(FutureTask.java:266) ~[na:1.8.0_40]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142) [na:1.8.0_40]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617) [na:1.8.0_40]
+	at java.lang.Thread.run(Thread.java:745) [na:1.8.0_40]
+
+2015-04-24 18:03:10,875 - [ERROR] - from application in New I/O worker #5 
+
+
+! @6m0kknc5f - Internal server error, for (GET) [/login] ->
+
+play.PlayExceptions$CompilationException: Compilation error[not found: value username]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.5.jar:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49) ~[na:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.5.jar:na]
+	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
+	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.5.jar:na]
+	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
+	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.5.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.5.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.5.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.5.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.5.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.5.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.5.jar:na]
+
+2015-04-24 18:03:25,514 - [INFO] - from application in play-internal-execution-context-5 
 Application shutdown...
 
-2015-04-22 16:48:43,216 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-24 18:03:25,972 - [INFO] - from play in play-internal-execution-context-5 
 database [default] connected at jdbc:mysql://localhost/sgmplaydb
 
-2015-04-22 16:48:43,348 - [INFO] - from application in play-internal-execution-context-1 
+2015-04-24 18:03:26,674 - [INFO] - from application in play-internal-execution-context-5 
 Application has started
 
-2015-04-22 16:48:43,349 - [INFO] - from play in play-internal-execution-context-1 
+2015-04-24 18:03:26,678 - [INFO] - from play in play-internal-execution-context-5 
 Application started (Dev)
 
-2015-04-22 16:49:26,021 - [INFO] - from application in play-akka.actor.default-dispatcher-33 
-busca Todos os Clientes ordenados
+2015-04-24 18:04:59,019 - [INFO] - from application in play-internal-execution-context-5 
+Application shutdown...
 
-2015-04-22 16:49:26,659 - [INFO] - from application in play-akka.actor.default-dispatcher-32 
+2015-04-24 18:04:59,267 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2015-04-24 18:05:00,116 - [INFO] - from application in play-internal-execution-context-5 
+Application has started
+
+2015-04-24 18:05:00,118 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2015-04-24 18:05:44,607 - [ERROR] - from application in New I/O worker #1 
+
+
+! @6m0kl65g5 - Internal server error, for (GET) [/login] ->
+
+play.PlayExceptions$CompilationException: Compilation error[not found: value username]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at play.PlayExceptions$CompilationException$.apply(PlayExceptions.scala:27) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.5.jar:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:49) ~[na:na]
+	at play.PlayReload$$anonfun$taskFailureHandler$1.apply(PlayReload.scala:44) ~[na:na]
+	at scala.Option.map(Option.scala:145) ~[scala-library-2.11.5.jar:na]
+	at play.PlayReload$.taskFailureHandler(PlayReload.scala:44) ~[na:na]
+	at play.PlayReload$.compileFailure(PlayReload.scala:40) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at play.PlayReload$$anonfun$compile$1.apply(PlayReload.scala:17) ~[na:na]
+	at scala.util.Either$LeftProjection.map(Either.scala:377) ~[scala-library-2.11.5.jar:na]
+	at play.PlayReload$.compile(PlayReload.scala:17) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
+	at play.PlayRun$$anonfun$playRunTask$1$$anonfun$apply$2$$anonfun$apply$3$$anonfun$2.apply(PlayRun.scala:61) ~[na:na]
+	at play.runsupport.Reloader.reload(Reloader.scala:295) ~[na:na]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:122) ~[play_2.11-2.3.8.jar:2.3.8]
+	at play.core.ReloadableApplication$$anonfun$get$1.apply(ApplicationProvider.scala:120) ~[play_2.11-2.3.8.jar:2.3.8]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.5.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.5.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask$AdaptedRunnableAction.exec(ForkJoinTask.java:1361) ~[scala-library-2.11.5.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.5.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.5.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.5.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.5.jar:na]
+
+2015-04-24 18:06:01,543 - [INFO] - from application in play-internal-execution-context-5 
+Application shutdown...
+
+2015-04-24 18:06:01,762 - [INFO] - from play in play-internal-execution-context-5 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2015-04-24 18:06:02,390 - [INFO] - from application in play-internal-execution-context-5 
+Application has started
+
+2015-04-24 18:06:02,392 - [INFO] - from play in play-internal-execution-context-5 
+Application started (Dev)
+
+2015-04-24 18:06:51,948 - [INFO] - from application in play-internal-execution-context-14 
+Application shutdown...
+
+2015-04-24 18:06:52,170 - [INFO] - from play in play-internal-execution-context-14 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2015-04-24 18:06:52,838 - [INFO] - from application in play-internal-execution-context-14 
+Application has started
+
+2015-04-24 18:06:52,838 - [INFO] - from play in play-internal-execution-context-14 
+Application started (Dev)
+
+2015-04-24 18:07:54,249 - [INFO] - from application in play-internal-execution-context-14 
+Application shutdown...
+
+2015-04-24 18:07:54,501 - [INFO] - from play in play-internal-execution-context-14 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2015-04-24 18:07:55,383 - [INFO] - from application in play-internal-execution-context-14 
+Application has started
+
+2015-04-24 18:07:55,383 - [INFO] - from play in play-internal-execution-context-14 
+Application started (Dev)
+
+2015-04-24 18:09:06,254 - [INFO] - from application in play-internal-execution-context-14 
+Application shutdown...
+
+2015-04-24 18:09:06,415 - [INFO] - from play in play-internal-execution-context-14 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2015-04-24 18:09:07,032 - [INFO] - from application in play-internal-execution-context-14 
+Application has started
+
+2015-04-24 18:09:07,033 - [INFO] - from play in play-internal-execution-context-14 
+Application started (Dev)
+
+2015-04-24 18:13:44,432 - [INFO] - from application in play-internal-execution-context-18 
+Application shutdown...
+
+2015-04-24 18:13:44,655 - [INFO] - from play in play-internal-execution-context-18 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2015-04-24 18:13:45,602 - [INFO] - from application in play-internal-execution-context-18 
+Application has started
+
+2015-04-24 18:13:45,603 - [INFO] - from play in play-internal-execution-context-18 
+Application started (Dev)
+
+2015-04-24 18:14:55,489 - [INFO] - from application in play-internal-execution-context-18 
+Application shutdown...
+
+2015-04-24 18:14:55,637 - [INFO] - from play in play-internal-execution-context-18 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2015-04-24 18:14:56,269 - [INFO] - from application in play-internal-execution-context-18 
+Application has started
+
+2015-04-24 18:14:56,270 - [INFO] - from play in play-internal-execution-context-18 
+Application started (Dev)
+
+2015-04-24 18:15:23,206 - [INFO] - from application in play-akka.actor.default-dispatcher-117 
+busca Todos os Paises ordenados
+
+2015-04-24 18:15:24,250 - [INFO] - from application in play-akka.actor.default-dispatcher-117 
+busca Todos os Usuários ordenados
+
+2015-04-24 18:15:25,052 - [INFO] - from application in play-akka.actor.default-dispatcher-113 
 busca Todos os Fornecedores ordenados
 
-2015-04-22 16:49:27,253 - [INFO] - from application in play-akka.actor.default-dispatcher-32 
-busca Todos os Clientes ordenados
+2015-04-24 18:15:25,894 - [INFO] - from application in play-akka.actor.default-dispatcher-113 
+busca Todos os Usuários ordenados
+
+2015-04-24 18:15:26,947 - [INFO] - from application in play-akka.actor.default-dispatcher-117 
+buscaPorId Usuário
+
+2015-04-24 18:15:28,857 - [INFO] - from application in play-akka.actor.default-dispatcher-117 
+remover usuário
+
+2015-04-24 18:15:44,924 - [INFO] - from application in play-akka.actor.default-dispatcher-116 
+busca Todos os Usuários ordenados
+
+2015-04-24 18:17:43,923 - [INFO] - from application in play-internal-execution-context-32 
+Application shutdown...
+
+2015-04-24 18:17:44,127 - [INFO] - from play in play-internal-execution-context-32 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2015-04-24 18:17:44,818 - [INFO] - from application in play-internal-execution-context-32 
+Application has started
+
+2015-04-24 18:17:44,819 - [INFO] - from play in play-internal-execution-context-32 
+Application started (Dev)
+
+2015-04-24 18:18:07,226 - [INFO] - from application in play-internal-execution-context-32 
+Application shutdown...
+
+2015-04-24 18:18:07,428 - [INFO] - from play in play-internal-execution-context-32 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2015-04-24 18:18:08,127 - [INFO] - from application in play-internal-execution-context-32 
+Application has started
+
+2015-04-24 18:18:08,127 - [INFO] - from play in play-internal-execution-context-32 
+Application started (Dev)
+
+2015-04-24 18:18:34,320 - [INFO] - from application in play-internal-execution-context-32 
+Application shutdown...
+
+2015-04-24 18:18:34,475 - [INFO] - from play in play-internal-execution-context-32 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2015-04-24 18:18:35,163 - [INFO] - from application in play-internal-execution-context-32 
+Application has started
+
+2015-04-24 18:18:35,163 - [INFO] - from play in play-internal-execution-context-32 
+Application started (Dev)
 
 2015-04-22 16:50:01,349 - [INFO] - from application in pool-8-thread-3 
 Application shutdown...
