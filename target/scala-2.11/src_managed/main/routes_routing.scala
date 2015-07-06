@@ -1,8 +1,9 @@
 // @SOURCE:/home/haroldo/projetos/academico/sgmplay/conf/routes
 // @HASH:f0eb39d740aa95e8d1715febf62d73666d5f9606
-// @DATE:Fri Jun 19 16:31:45 BRT 2015
+// @DATE:Mon Jul 06 14:45:40 BRT 2015
 
 
+import scala.language.reflectiveCalls
 import play.core._
 import play.core.Router._
 import play.core.Router.HandlerInvokerFactory._

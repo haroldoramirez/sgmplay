@@ -17,7 +17,6 @@
       <sourceFolder url="file://$MODULE_DIR$/../../test/resources" type="java-test-resource" />
       <excludeFolder url="file://$MODULE_DIR$/../../target/resolution-cache" />
       <excludeFolder url="file://$MODULE_DIR$/../../target/streams" />
-      <excludeFolder url="file://$MODULE_DIR$/../../target/web" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
@@ -38,21 +37,21 @@
     <orderEntry type="library" name="SBT: com.typesafe.akka:akka-actor_2.11:2.3.4:jar" level="project" />
     <orderEntry type="library" name="SBT: com.typesafe.akka:akka-slf4j_2.11:2.3.4:jar" level="project" />
     <orderEntry type="library" name="SBT: com.typesafe.netty:netty-http-pipelining:1.1.2:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.typesafe.play:build-link:2.3.8:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.typesafe.play:play-cache_2.11:2.3.8:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.typesafe.play:play-datacommons_2.11:2.3.8:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.typesafe.play:play-exceptions:2.3.8:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.typesafe.play:play-functional_2.11:2.3.8:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.typesafe.play:play-iteratees_2.11:2.3.8:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.typesafe.play:play-java-ebean_2.11:2.3.8:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.typesafe.play:play-java-jdbc_2.11:2.3.8:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.typesafe.play:play-java-ws_2.11:2.3.8:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.typesafe.play:play-java_2.11:2.3.8:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.typesafe.play:play-jdbc_2.11:2.3.8:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.typesafe.play:play-json_2.11:2.3.8:jar" level="project" />
-    <orderEntry type="library" scope="TEST" name="SBT: com.typesafe.play:play-test_2.11:2.3.8:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.typesafe.play:play-ws_2.11:2.3.8:jar" level="project" />
-    <orderEntry type="library" name="SBT: com.typesafe.play:play_2.11:2.3.8:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe.play:build-link:2.3.9:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe.play:play-cache_2.11:2.3.9:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe.play:play-datacommons_2.11:2.3.9:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe.play:play-exceptions:2.3.9:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe.play:play-functional_2.11:2.3.9:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe.play:play-iteratees_2.11:2.3.9:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe.play:play-java-ebean_2.11:2.3.9:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe.play:play-java-jdbc_2.11:2.3.9:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe.play:play-java-ws_2.11:2.3.9:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe.play:play-java_2.11:2.3.9:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe.play:play-jdbc_2.11:2.3.9:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe.play:play-json_2.11:2.3.9:jar" level="project" />
+    <orderEntry type="library" scope="TEST" name="SBT: com.typesafe.play:play-test_2.11:2.3.9:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe.play:play-ws_2.11:2.3.9:jar" level="project" />
+    <orderEntry type="library" name="SBT: com.typesafe.play:play_2.11:2.3.9:jar" level="project" />
     <orderEntry type="library" name="SBT: com.typesafe.play:twirl-api_2.11:1.0.2:jar" level="project" />
     <orderEntry type="library" name="SBT: commons-codec:commons-codec:1.9:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="SBT: commons-collections:commons-collections:3.2.1:jar" level="project" />
@@ -60,7 +59,7 @@
     <orderEntry type="library" name="SBT: commons-logging:commons-logging:1.1.1:jar" level="project" />
     <orderEntry type="library" scope="TEST" name="SBT: commons-logging:commons-logging:1.1.3:jar" level="project" />
     <orderEntry type="library" name="SBT: dom4j:dom4j:1.6.1:jar" level="project" />
-    <orderEntry type="library" name="SBT: io.netty:netty:3.9.3.Final:jar" level="project" />
+    <orderEntry type="library" name="SBT: io.netty:netty:3.9.8.Final:jar" level="project" />
     <orderEntry type="library" name="SBT: javax.transaction:jta:1.1:jar" level="project" />
     <orderEntry type="library" name="SBT: javax.validation:validation-api:1.1.0.Final:jar" level="project" />
     <orderEntry type="library" name="SBT: joda-time:joda-time:2.3:jar" level="project" />
