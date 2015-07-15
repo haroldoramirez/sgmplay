@@ -5,13 +5,16 @@
     <!--Bootstrap-->
     <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.css"/>
 
+    <!--Menu-->
+    <link rel="stylesheet" href="assets/stylesheets/menu.css"/>
+    <link rel="stylesheet" href="assets/stylesheets/stylemenu.css"/>
+    <link rel="stylesheet" href="assets/stylesheets/main.css"/>
+
     <!--CSS Personalisados-->
     <link rel="stylesheet" href="assets/stylesheets/help.css"/>
-    <link rel="stylesheet" href="assets/stylesheets/stylemenu.css"/>
-    <link rel="stylesheet" href="assets/stylesheets/menu.css"/>
 
-    <!--Awesome-->
-    <link rel="stylesheet" href="assets/stylesheets/awesome/css/font-awesome.css"/>
+    <!--Awesome Icons-->
+    <link rel="stylesheet" href="assets/bower_components/font-awesome/css/font-awesome.css"/>
 
     <!--Toastr-->
     <link rel="stylesheet" href="assets/bower_components/angular-toastr/dist/angular-toastr.css"/>
@@ -39,105 +42,71 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#/">
-                <i class="glyphicon glyphicon-shopping-cart"></i> Mercado
+            <a data-match-route href="#/" class="navbar-brand">
+                <i class="fa fa-shopping-cart"></i> Início
             </a>
         </div>
 
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                @if(username){
-                    <li><a href="/#/clientes"> <span class="glyphicon glyphicon-user"></span> Cliente</a></li>
-                    <li><a href="/#/fornecedores"> <span class="glyphicon glyphicon-oil"></span> Fornecedor</a></li>
-                    <li><a href="/#/usuarios"> <span class="glyphicon glyphicon-thumbs-up"></span> Usuários</a></li>
-                <li class="dropdown" is-open="status.isopen">
-                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                        <span class="glyphicon glyphicon-map-marker"></span> Endereços <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li class="dropdown-header">Cadastro</li>
-                        <li><a href="/#/paises">
-                            <span class="glyphicon glyphicon-king"></span> País</a></li>
-                        <li><a href="/#/estados">
-                            <span class="glyphicon glyphicon-queen"></span> Estado</a></li>
-                        <li><a href="/#/cidades">
-                            <span class="glyphicon glyphicon-bishop"></span> Cidade</a></li>
-                        <li><a href="/#/bairros">
-                            <span class="glyphicon glyphicon-pawn"></span> Bairro</a></li>
-                    </ul>
-                </li>
-
                 <li class="dropdown">
                     <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                        <span class="glyphicon glyphicon-stats"></span> Estoque <span class="caret"></span></a>
+                        <span class="fa fa-globe"> Endereços</span> <span class="fa fa-caret-down"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li class="dropdown-header">Cadastro</li>
-                        <li><a href="/#/produtos">
-                            <span class="glyphicon glyphicon-barcode"></span> Produtos</a></li>
-                        <li><a href="/#/fabricantes">
-                            <span class="glyphicon glyphicon-ice-lolly"></span> Fabricante</a></li>
-                        <li><a href="/#/categorias">
-                            <span class="glyphicon glyphicon-grain"></span> Categoria</a></li>
-                        <li><a href="/#/unidadesdemedidas">
-                            <span class="glyphicon glyphicon-scale"></span> Unidade de Medida</a></li>
+                        <li><a href="/#/paises"><span class="fa fa-flag"></span> Países</a></li>
+                        <li><a href="/#/estados"><span class="fa fa-flag-o"></span> Estados</a></li>
+                        <li><a href="/#/cidades"><span class="fa fa-flag-checkered"></span> Cidades</a></li>
+                        <li><a href="/#/bairros"><span class="fa fa-map-marker"></span> Bairros</a></li>
                     </ul>
                 </li>
-                    <li><a href="/#/compra"> <span class="glyphicon glyphicon-usd"></span> Compra</a></li>
-                    <li><a href="/#/venda"> <span class="glyphicon glyphicon-credit-card"></span> Venda</a></li>
-                    <li class="dropdown">
-                        <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            <span class="glyphicon glyphicon-transfer"></span> Financeiro <span class="caret"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li class="dropdown-header">Movimentações</li>
-                            <li><a href="/#/contasapagar">
-                                <span class="glyphicon glyphicon-circle-arrow-up"></span> Contas a Pagar</a></li>
-                            <li><a href="/#/contasareceber">
-                                <span class="glyphicon glyphicon-circle-arrow-down"></span> Contas a Receber</a></li>
-                        </ul>
-                    </li>
-                }
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <span class="fa fa-th-large"> Estoque</span> <span class="fa fa-caret-down"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href=""><span class="glyphicon glyphicon-scale"></span> Unidade de Medida</a></li>
+                        <li><a href=""><span class="glyphicon glyphicon-ice-lolly"></span> Fabricante</a></li>
+                        <li><a href=""><span class="glyphicon glyphicon-grain"></span> Categoria</a></li>
+                        <li><a href=""><span class="fa fa-barcode"></span> Produtos</a></li>
+                    </ul>
+                </li>
+                <li><a href="/#/clientes"><span class="fa fa-male"></span> Clientes</a></li>
+                <li><a href="/#/fornecedores"><span class="fa fa-truck"></span> Fornecedores</a></li>
             </ul>
-
             <ul class="nav navbar-nav navbar-right">
+                <li><a href="/convite"> <span class="fa fa-user-plus"></span> Convite</a></li>
                 <li class="dropdown">
                     <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                        <span class="label label-success">@username</span>   <span class="glyphicon glyphicon-cog"></span> <span class="caret"></span></a>
+                        <span class="label label-success">Usuário</span>   <span class="fa fa-cog"></span> <span class="fa fa-caret-down"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        @if(username){
-                        <li class="dropdown-header">Relatórios</li>
-                        <li><a href="">
-                            <span class="glyphicon glyphicon-credit-card"></span> Vendas</a></li>
-                        <li><a href="">
-                            <span class="glyphicon glyphicon-usd"></span> Compras</a></li>
-                        <li><a href="">
-                            <span class="glyphicon glyphicon-user"></span> Clientes</a></li>
-                        <li><a href="">
-                            <span class="glyphicon glyphicon-oil"></span> Fornecedores</a></li>
-                        <li><a href="">
-                            <span class="glyphicon glyphicon-barcode"></span> Produtos</a></li>
+                        <li><a href="/#/compromissos">
+                            <span class="fa fa-clock-o"></span> Meus Compromissos</a>
+                        </li>
                         <li class="divider"></li>
-                        }
-                        @if(username){
                         <li class="dropdown-header">Sistema</li>
-                            <li><a href="/#/configuracoes">
-                                <span class="glyphicon glyphicon-tasks"></span> Configurações</a>
-                            </li>
-                            <li><a href="/#/ajuda">
-                                <span class="glyphicon glyphicon-question-sign"></span> Ajuda</a>
-                            </li>
+                        <li><a href="/#/logs">
+                            <span class="fa fa-file"></span> Logs</a>
+                        </li>
+                        <li><a href="/#/ajuda">
+                            <span class="fa fa-question"></span> Ajuda</a>
+                        </li>
+                        <li><a href="/manual">
+                            <span class="fa fa-book"></span> Manual</a>
+                        </li>
+                        <li><a href="/#/usuarios">
+                            <span class="fa fa-users"></span> Lista de Usuários</a>
+                        </li>
+                        <li><a href="/sobre">
+                            <span class="fa fa-chevron-right"></span> Sobre</a>
+                        </li>
                         <li class="divider"></li>
-                        }
                         <li class="dropdown-header">Autenticação</li>
-                        @if(!username){
-                            <li><a href="/login">
-                                <span class="glyphicon glyphicon-ok-sign"></span> Entrar</a>
-                            </li>
-                        }
-                        @if(username){
-                            <li><a href="/logout">
-                                <span class="glyphicon glyphicon-off"></span> Sair</a>
-                            </li>
-                        }
+                        <li><a href="/login">
+                            <span class="fa fa-sign-in"></span> Entrar</a>
+                        </li>
+                        <li><a href="/logout">
+                            <span class="fa fa-sign-out"></span> Sair</a>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -145,25 +114,22 @@
     </div><!-- /.container-fluid -->
 </nav>
 <div class="container">
-    <div class="row">
-        <div ng-view=""></div>
-    </div>
-</div>
-<!--Rodapé-->
-<div align="center">
-    <footer class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-7">
 
-                </div>
-            </div>
-            <p>&copy; 2015 Sistema SGM -
-                <a data-template="assets/modal/informacoesModal.html" bs-modal="modalInformacoes">Powered by Play Framework e AngularJS
-                </a>.Todos os direitos reservados.
+    <!-- View do Angular-->
+    <div ng-view="">
+
+    </div>
+
+    <!--Rodapé-->
+    <div class="row">
+        <hr>
+        <footer class="footer">
+            <p class="text-center">&copy; 2015 Sistema de Gestão de Mercados Luana -
+                <b>Powered by Play Framework and AngularJS.
+                </b> Todos os direitos reservados.
             </p>
-        </div>
-    </footer>
+        </footer>
+    </div>
 </div>
 
 <!--Jquery-->
@@ -180,9 +146,19 @@
 <script src="assets/bower_components/angular-resource/angular-resource.js"></script>
 <script src="assets/bower_components/angular-route/angular-route.js"></script>
 <script src="assets/bower_components/angular-animate/angular-animate.js"></script>
-<script src="assets/bower_components/angular-strap/dist/angular-strap.js"></script>
-<script src="assets/bower_components/angular-strap/dist/angular-strap.tpl.js"></script>
 <script src="assets/bower_components/angular-toastr/dist/angular-toastr.js"></script>
+
+<!--Angular UI-->
+<script src="assets/bower_components/angular-ui-utils/ui-utils.js"></script>
+
+<!--Bootstrap-->
+<script src="assets/bower_components/bootstrap/dist/js/bootstrap.js"></script>
+
+<!--Toastr-->
+<script src="assets/bower_components/angular-toastr/dist/angular-toastr.tpls.js"></script>
+
+<!--UI Boostrap-->
+<script src="assets/bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
 
 <!-- angular loading-bar-->
 <script src="assets/bower_components/angular-loading-bar/build/loading-bar.js"></script>
@@ -222,6 +198,5 @@
 <script src="assets/app/controllers/UnidadeDeMedidaController.js"></script>
 <script src="assets/app/controllers/ProdutoController.js"></script>
 <script src="assets/app/controllers/UsuarioController.js"></script>
-<script src="assets/bower_components/bootstrap/dist/js/bootstrap.js"></script>
 </body>
 </html>

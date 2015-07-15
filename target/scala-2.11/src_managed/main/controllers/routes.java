@@ -1,6 +1,6 @@
 // @SOURCE:/home/haroldo/projetos/academico/sgmplay/conf/routes
-// @HASH:f0eb39d740aa95e8d1715febf62d73666d5f9606
-// @DATE:Wed Jul 15 15:51:00 BRT 2015
+// @HASH:b761bef19c7af9a01a8bedb74774e1ce3504ba0c
+// @DATE:Wed Jul 15 17:07:49 BRT 2015
 
 package controllers;
 

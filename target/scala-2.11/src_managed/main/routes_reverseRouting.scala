@@ -1,6 +1,6 @@
 // @SOURCE:/home/haroldo/projetos/academico/sgmplay/conf/routes
-// @HASH:f0eb39d740aa95e8d1715febf62d73666d5f9606
-// @DATE:Wed Jul 15 15:51:00 BRT 2015
+// @HASH:b761bef19c7af9a01a8bedb74774e1ce3504ba0c
+// @DATE:Wed Jul 15 17:07:49 BRT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -384,6 +384,20 @@ def atualizar(id:Integer): Call = {
 class ReversePaisController {
 
 
+// @LINE:30
+def filtraPorNome(filtro:String): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "paises/nome/" + implicitly[PathBindable[String]].unbind("filtro", dynamicString(filtro)))
+}
+                        
+
+// @LINE:26
+def atualizar(id:Long): Call = {
+   import ReverseRouteContext.empty
+   Call("PUT", _prefix + { _defaultPrefix } + "paises/" + implicitly[PathBindable[Long]].unbind("id", id))
+}
+                        
+
 // @LINE:27
 def buscaTodos(): Call = {
    import ReverseRouteContext.empty
@@ -391,10 +405,10 @@ def buscaTodos(): Call = {
 }
                         
 
-// @LINE:30
-def remover(id:Integer): Call = {
+// @LINE:29
+def remover(id:Long): Call = {
    import ReverseRouteContext.empty
-   Call("DELETE", _prefix + { _defaultPrefix } + "paises/" + implicitly[PathBindable[Integer]].unbind("id", id))
+   Call("DELETE", _prefix + { _defaultPrefix } + "paises/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
@@ -406,23 +420,9 @@ def inserir(): Call = {
                         
 
 // @LINE:28
-def buscaPorPaginas(pagina:Integer): Call = {
+def buscaPorId(id:Long): Call = {
    import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "paisesPagina/" + implicitly[PathBindable[Integer]].unbind("pagina", pagina))
-}
-                        
-
-// @LINE:29
-def buscaPorId(id:Integer): Call = {
-   import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "paises/" + implicitly[PathBindable[Integer]].unbind("id", id))
-}
-                        
-
-// @LINE:26
-def atualizar(id:Integer): Call = {
-   import ReverseRouteContext.empty
-   Call("PUT", _prefix + { _defaultPrefix } + "paises/" + implicitly[PathBindable[Integer]].unbind("id", id))
+   Call("GET", _prefix + { _defaultPrefix } + "paises/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
@@ -1264,6 +1264,28 @@ def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
 class ReversePaisController {
 
 
+// @LINE:30
+def filtraPorNome : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.PaisController.filtraPorNome",
+   """
+      function(filtro) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "paises/nome/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("filtro", encodeURIComponent(filtro))})
+      }
+   """
+)
+                        
+
+// @LINE:26
+def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.PaisController.atualizar",
+   """
+      function(id) {
+      return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "paises/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
+      }
+   """
+)
+                        
+
 // @LINE:27
 def buscaTodos : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.PaisController.buscaTodos",
@@ -1275,12 +1297,12 @@ def buscaTodos : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:30
+// @LINE:29
 def remover : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.PaisController.remover",
    """
       function(id) {
-      return _wA({method:"DELETE", url:"""" + _prefix + { _defaultPrefix } + """" + "paises/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id)})
+      return _wA({method:"DELETE", url:"""" + _prefix + { _defaultPrefix } + """" + "paises/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
       }
    """
 )
@@ -1298,33 +1320,11 @@ def inserir : JavascriptReverseRoute = JavascriptReverseRoute(
                         
 
 // @LINE:28
-def buscaPorPaginas : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.PaisController.buscaPorPaginas",
-   """
-      function(pagina) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "paisesPagina/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("pagina", pagina)})
-      }
-   """
-)
-                        
-
-// @LINE:29
 def buscaPorId : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.PaisController.buscaPorId",
    """
       function(id) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "paises/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id)})
-      }
-   """
-)
-                        
-
-// @LINE:26
-def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.PaisController.atualizar",
-   """
-      function(id) {
-      return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "paises/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id)})
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "paises/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
       }
    """
 )
@@ -2161,15 +2161,27 @@ def atualizar(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.Handler
 class ReversePaisController {
 
 
+// @LINE:30
+def filtraPorNome(filtro:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.PaisController.filtraPorNome(filtro), HandlerDef(this.getClass.getClassLoader, "", "controllers.PaisController", "filtraPorNome", Seq(classOf[String]), "GET", """""", _prefix + """paises/nome/$filtro<[^/]+>""")
+)
+                      
+
+// @LINE:26
+def atualizar(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.PaisController.atualizar(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.PaisController", "atualizar", Seq(classOf[Long]), "PUT", """""", _prefix + """paises/$id<[^/]+>""")
+)
+                      
+
 // @LINE:27
 def buscaTodos(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.PaisController.buscaTodos(), HandlerDef(this.getClass.getClassLoader, "", "controllers.PaisController", "buscaTodos", Seq(), "GET", """""", _prefix + """paises""")
 )
                       
 
-// @LINE:30
-def remover(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.PaisController.remover(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.PaisController", "remover", Seq(classOf[Integer]), "DELETE", """""", _prefix + """paises/$id<[^/]+>""")
+// @LINE:29
+def remover(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.PaisController.remover(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.PaisController", "remover", Seq(classOf[Long]), "DELETE", """""", _prefix + """paises/$id<[^/]+>""")
 )
                       
 
@@ -2180,20 +2192,8 @@ def inserir(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
                       
 
 // @LINE:28
-def buscaPorPaginas(pagina:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.PaisController.buscaPorPaginas(pagina), HandlerDef(this.getClass.getClassLoader, "", "controllers.PaisController", "buscaPorPaginas", Seq(classOf[Integer]), "GET", """""", _prefix + """paisesPagina/$pagina<[^/]+>""")
-)
-                      
-
-// @LINE:29
-def buscaPorId(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.PaisController.buscaPorId(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.PaisController", "buscaPorId", Seq(classOf[Integer]), "GET", """""", _prefix + """paises/$id<[^/]+>""")
-)
-                      
-
-// @LINE:26
-def atualizar(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.PaisController.atualizar(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.PaisController", "atualizar", Seq(classOf[Integer]), "PUT", """""", _prefix + """paises/$id<[^/]+>""")
+def buscaPorId(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.PaisController.buscaPorId(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.PaisController", "buscaPorId", Seq(classOf[Long]), "GET", """""", _prefix + """paises/$id<[^/]+>""")
 )
                       
 

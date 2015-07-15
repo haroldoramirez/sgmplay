@@ -1,120 +1,99 @@
-function updateActivedPage(scope) {
-    window.scopePage = scope.pagina;
-}
-
 angular.module('mercado')
   .controller('PaisCreateController', function ($scope, $modal, $location, Pais, toastr) {
-        $scope.pais = {};
-        $scope.save = function(){
-            console.log($scope.pais);
-            Pais.save($scope.pais, function(data){
-                toastr.success(data.data,'País Salvo com Sucesso');
-                $location.path('/paises');
-            }, function(data){
-                console.log(data);
-                toastr.error(data.data,'Não foi possível Salvar o País');
-            });
-        };
 
-        $scope.cancel = function(){
-            $location.path('/paises');
-        };
+    $scope.pais = {};
 
-        $scope.init = function(){
-            Pais.getAll(function(data){
-                $scope.paises = data;
-            });
-        };
-
-  }).controller('PaisListController', function ($scope, Pais, toastr){
-        $scope.paises = [];
-        $scope.init = function(){
-          Pais.getAll(function(data){
+    $scope.init = function() {
+        Pais.getAll(function(data) {
             $scope.paises = data;
-          });
-          $scope.pagina = 0;
-          updateActivedPage(this);
-        };
+        });
+    };
 
-        //botão de páginas
-        $scope._pagina = function(val){
-        $scope.pagina = val;
-            Pais.getPagina({pagina: $scope.pagina}, $scope.pais, function(data){
-                $scope.paises = data;
-            });
-            updateActivedPage(this);
-        };
-        
-        //botão próximo
-        $scope.proximo = function(val){
-        $scope.pagina = val + 1;
-            Pais.getPagina({pagina: $scope.pagina}, $scope.pais, function(data){
-                if (data.length===0) {
-                    $scope.pagina = $scope.pagina - 1;
-                }else{
-                    $scope.paises = data;
-                };
-            });
-            updateActivedPage(this);
-         }
-
-        //botão anterior
-        $scope.anterior = function(val){
-        $scope.pagina = val - 1;
-            Pais.getPagina({pagina: $scope.pagina}, $scope.pais, function(data){
-                $scope.paises = data;
-            });
-            updateActivedPage(this);
-         }
-
-        //deletar opcional
-        $scope.delete = function(id){
-           Pais.delete({id:id}, function(){
-               toastr.info('País Removido com Sucesso');
-               $scope.init();
-           }, function(data){
-               toastr.error(data.data,'Não foi possível Remover o País');
-           });
-        };
-
-  }).controller('PaisDetailController', function ($scope, $modal, $routeParams, $location, Pais, toastr){
-
-        $scope.init = function(){
-            $scope.pais = Pais.get({id:$routeParams.id});
-        };
-
-        $scope.update = function(){
-            Pais.update({id:$routeParams.id},$scope.pais, function(data){
-                toastr.info(data.data,'País Atualizado com Sucesso');
-                $location.path('/paises');
-            },function(data){
-               console.log(data);
-               toastr.error(data.data,'Não foi possível Atualizar o País');
-            });
-
-        };
-
-         $scope.cancel = function(){
+    $scope.save = function() {
+        console.log($scope.pais);
+        Pais.save($scope.pais, function(data) {
+            toastr.success('País Salvo com Sucesso');
             $location.path('/paises');
-         };
-
-        $scope.delete = function(){
-            Pais.delete({id:$routeParams.id}, function(data){
-                toastr.warning(data.data,'País Removido com Sucesso');
-                $location.path('/paises');
-            }, function(data){
+        }, function(data) {
             console.log(data);
-                toastr.error(data.data,'Não foi possível Remover o País');
+            toastr.error(data.data,'Não foi possível Salvar');
+        });
+    };
+
+    $scope.cancel = function() {
+        $location.path('/paises');
+    };
+
+  }).controller('PaisListController', function ($scope, Pais, toastr, $routeParams) {
+
+    $scope.paises = [];
+
+    $scope.init = function() {
+        $scope.nomeFiltro = '';
+
+        Pais.getAll(function(data) {
+           $scope.paises = data;
+           $scope.quantidade = $scope.paises.length;
+        });
+    };
+
+    //* filtra por nome do país *//
+    $scope.busca = function() {
+
+       if ($scope.nomeFiltro) {
+            Pais.getFiltroPais({filtro:$scope.nomeFiltro}, $scope.pais, function(data) {
+                $scope.paises = data;
             });
-        };
+       } else {
+            Pais.getAll(function(data) {
+                $scope.paises = data;
+            });
+       };
+    };
 
-        $scope.confirmacaoModal = {
-             "title": "Confirmação",
-             "content": "Deseja excluir o País?"
-        };
+  }).controller('PaisDetailController', function ($scope, $modal, $routeParams, $location, Pais, toastr) {
 
-        $scope.popoverConfirmacao = {
-             "title": "Confirmação",
-             "content": "Excluir?"
-        };
+    $scope.init = function() {
+        $scope.pais = Pais.get({id:$routeParams.id});
+    };
+
+    $scope.update = function() {
+        Pais.update({id:$routeParams.id}, $scope.pais, function(data) {
+            toastr.info('País Atualizado com Sucesso');
+            $location.path('/paises');
+        },function(data) {
+           console.log(data);
+           toastr.error(data.data,'Não foi possível Atualizar');
+        });
+    };
+
+    $scope.delete = function() {
+        Pais.delete({id:$routeParams.id}, function() {
+            toastr.warning('País Removido com Sucesso');
+            $modalInstance.close();
+            $location.path('/paises');
+        }, function(data) {
+            console.log(data);
+            $modalInstance.close();
+            toastr.error(data.data,'Não foi possível Remover');
+        });
+    };
+
+    $scope.cancel = function() {
+       $location.path('/paises');
+    };
+
+    $scope.open = function (size) {
+
+        $modalInstance = $modal.open({
+              templateUrl: 'modalConfirmacao.html',
+              controller: 'PaisDetailController',
+              size: size,
+        });
+    };
+
+    $scope.cancelModal = function () {
+        $modalInstance.dismiss('cancelModal');
+    };
+
   });

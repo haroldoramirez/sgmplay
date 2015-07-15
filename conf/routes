@@ -23,11 +23,11 @@ GET		/versaoplay					  controllers.Application.versaoplay()
 
 # CRUD País
 POST    /paises                       controllers.PaisController.inserir()
-PUT     /paises/:id                   controllers.PaisController.atualizar(id:Integer)
+PUT     /paises/:id                   controllers.PaisController.atualizar(id:Long)
 GET     /paises                       controllers.PaisController.buscaTodos()
-GET     /paisesPagina/:pagina         controllers.PaisController.buscaPorPaginas(pagina:Integer)
-GET     /paises/:id                   controllers.PaisController.buscaPorId(id:Integer)
-DELETE  /paises/:id                   controllers.PaisController.remover(id:Integer)
+GET     /paises/:id                   controllers.PaisController.buscaPorId(id:Long)
+DELETE  /paises/:id                   controllers.PaisController.remover(id:Long)
+GET     /paises/nome/:filtro          controllers.PaisController.filtraPorNome(filtro:String)
 
 # CRUD Estado
 POST    /estados                      controllers.EstadoController.inserir()

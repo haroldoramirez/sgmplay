@@ -13,7 +13,7 @@ var StringMask = (function() {
 		'9': {pattern: /\d/, optional: true},
 		'#': {pattern: /\d/, optional: true, recursive: true},
 		'S': {pattern: /[a-zA-Z]/},
-		'$': {escape: true} 
+		'$': {escape: true}
 	};
 	var isEscaped = function(pattern, pos) {
 		var count = 0;
@@ -24,7 +24,7 @@ var StringMask = (function() {
 			count += token && token.escape ? 1 : 0;
 			i--;
 		}
-		return count > 0 && count%2 === 1;	
+		return count > 0 && count%2 === 1;
 	};
 	var calcOptionalNumbersToUse = function(pattern, value) {
 		var numbersInP = pattern.replace(/[^0]/g,'').length;
@@ -189,7 +189,7 @@ var objectTypes = {
 };
 
 if (objectTypes[typeof module]) {
-	module.exports = StringMask;	
+	module.exports = StringMask;
 }
 
 /**
@@ -827,7 +827,7 @@ var objectTypes = {
 	'object': true
 };
 if (objectTypes[typeof module]) {
-	module.exports = BrV;	
+	module.exports = BrV;
 } else {
 	root.BrV = BrV;
 }

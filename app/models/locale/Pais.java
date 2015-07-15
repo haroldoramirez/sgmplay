@@ -5,36 +5,28 @@ import play.libs.Json;
 
 import javax.persistence.*;
 
-//import com.wordnik.swagger.annotations.ApiModel;
-//import com.wordnik.swagger.annotations.ApiModelProperty;
-
 @Entity
-@Table(name = "pais")
-//@ApiModel(value = "Aluno", description = "Representação do País")
 public class Pais extends Model {
 
 	private static final long serialVersionUID = 1L;
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
-//    @ApiModelProperty( value = "Nome do País", required = true )
     @Column(nullable = false, unique = true)
     private String nome;
 
-//    @ApiModelProperty( value = "Discagem Internacional")
     private String ddi;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-//    @ApiModelProperty(position = 1, required = true)
     public String getNome() {
         return nome;
     }
@@ -43,7 +35,6 @@ public class Pais extends Model {
         this.nome = nome;
     }
 
-//    @ApiModelProperty(position = 2, required = true)
     public String getDdi() {
         return ddi;
     }

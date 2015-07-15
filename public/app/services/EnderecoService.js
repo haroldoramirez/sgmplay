@@ -4,7 +4,8 @@ angular.module('mercado')
       return $resource(BaseUrl + '/paises/:id', {}, {
          getAll: {method: 'GET', url: BaseUrl + '/paises', isArray: true},
          getPagina: {method: 'GET', url: BaseUrl + '/paisesPagina/:pagina', isArray: true},
-         update: {method: 'PUT', url: BaseUrl + '/paises/:id', isArray: false}
+         update: {method: 'PUT', url: BaseUrl + '/paises/:id', isArray: false},
+         getFiltroPais: {method: 'GET', url: BaseUrl + '/paises/nome/:filtro', isArray: true}
       });
   }]).service('Estado',['$resource', 'BaseUrl',
     function($resource, BaseUrl){

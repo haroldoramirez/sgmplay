@@ -1,8 +1,31 @@
-<div align="center" class="jumbotron">
-    <h1>Início</h1>
-    <p>SGM - Sistema de Gestão de Mercados</p>
-    <button data-animation="am-flip-x" type="button" data-trigger="focus" class="btn btn-lg btn-primary" data-template="assets/popover/popoverHome.html" bs-popover="popoverInformacoes">
-        Mais Informações
-    </button>
+<div class="row">
+    <div class="jumbotron">
+        <div ng-controller="HomeController">
+            <script type="text/ng-template" id="modalHome.html">
+                <div class="modal-header">
+                    <h3 class="modal-title">Informações:</h3>
+                </div>
+                <div class="modal-body">
+                    <div class="text-center">
+                        <h4>Sistema de Gestão de Mercados Luana</h4>
+                        <p><b>Centro Universitário Dinâmica das Cataratas</b>
+                        <p>Curso: <b>Sistemas de Informação</b>
+                        <p>Disciplina: <b>Prática Profissional 2</b>
+                        <p>Professor: <b></b>
+                        <p>&copy; 2015</p>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-primary" ng-click="fechar()">Fechar</button>
+                </div>
+            </script>
+            <div class="jumbotron text-center">
+                <h1>Início</h1>
+                <p>SGM - Sistema de Gestão de Mercados Luana</p>
+                <button type="button" class="btn btn-lg btn-primary" ng-click="open();">
+                    Mais Informações
+                </button>
+            </div>
+        </div>
     </div>
-<hr>
+</div>

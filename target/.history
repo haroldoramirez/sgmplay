@@ -15,3 +15,6 @@ clean
 reload
 update
 idea
+clean
+reload
+~run

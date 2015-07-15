@@ -68,7 +68,7 @@ create table estado (
   id                        integer auto_increment not null,
   nome                      varchar(255) not null,
   sigla                     varchar(255),
-  pais_id                   integer not null,
+  pais_id                   bigint not null,
   constraint uq_estado_1 unique (nome,pais_id),
   constraint pk_estado primary key (id))
 ;
@@ -110,7 +110,7 @@ create table fornecedor (
 ;
 
 create table pais (
-  id                        integer auto_increment not null,
+  id                        bigint auto_increment not null,
   nome                      varchar(255) not null,
   ddi                       varchar(255),
   constraint uq_pais_nome unique (nome),

@@ -84,7 +84,7 @@ Seq[Any](format.raw/*1.43*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Wed Jul 15 15:51:01 BRT 2015
+                  DATE: Wed Jul 15 17:06:17 BRT 2015
                   SOURCE: /home/haroldo/projetos/academico/sgmplay/app/views/versaoplay.scala.html
                   HASH: b4dae8c2578f0e058e01bdc5876663c3382ec642
                   MATRIX: 735->1|864->42|891->43|970->96|997->103|1552->631|1580->638|1747->778|1780->790

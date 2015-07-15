@@ -4,10 +4,10 @@ angular
             ['ngRoute',
              'ngResource',
              'toastr',
-             'mgcrea.ngStrap',
              'ngAnimate',
              'angular-loading-bar',
-             'ui.utils.masks'
+             'ui.utils.masks',
+             'ui.bootstrap'
             ]
         )
     .config(function ($routeProvider) {
@@ -179,11 +179,4 @@ angular
           titleClass: 'toast-title',
           toastClass: 'toast'
         })
-  //Configuração do datepicker
-   }).config(function($datepickerProvider) {
-        angular.extend($datepickerProvider.defaults, {
-          iconLeft: 'glyphicon glyphicon-triangle-left',
-          iconRight: 'glyphicon glyphicon-triangle-right',
-          placement: 'bottom'
-        });
-  });
+   });
