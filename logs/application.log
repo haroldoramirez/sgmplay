@@ -1,3 +1,48 @@
-2015-07-06 14:36:00,040 - [INFO] - from play in pool-21-thread-1 
+2015-07-15 15:44:10,307 - [INFO] - from play in pool-11-thread-1 
 Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+
+2015-07-15 15:44:52,925 - [INFO] - from play in play-internal-execution-context-1 
+database [default] connected at jdbc:mysql://localhost/sgmplaydb
+
+2015-07-15 15:44:53,912 - [INFO] - from application in play-internal-execution-context-1 
+Application has started
+
+2015-07-15 15:44:53,917 - [INFO] - from play in play-internal-execution-context-1 
+Application started (Dev)
+
+2015-07-15 15:45:06,113 - [INFO] - from application in play-akka.actor.default-dispatcher-2 
+busca Todos os Clientes ordenados
+
+2015-07-15 15:45:07,976 - [INFO] - from application in play-akka.actor.default-dispatcher-2 
+busca Todos os Fornecedores ordenados
+
+2015-07-15 15:45:09,699 - [INFO] - from application in play-akka.actor.default-dispatcher-5 
+busca Todos os Usuários ordenados
+
+2015-07-15 15:45:13,790 - [INFO] - from application in play-akka.actor.default-dispatcher-9 
+busca Todos os Clientes ordenados
+
+2015-07-15 15:45:29,975 - [INFO] - from application in play-akka.actor.default-dispatcher-6 
+busca Todos os Produtos ordenados
+
+2015-07-15 15:45:32,047 - [INFO] - from application in play-akka.actor.default-dispatcher-10 
+busca Todos os Fabricantes ordenados
+
+2015-07-15 15:45:33,527 - [INFO] - from application in play-akka.actor.default-dispatcher-10 
+busca por página
+
+2015-07-15 15:45:34,285 - [INFO] - from application in play-akka.actor.default-dispatcher-10 
+busca por página
+
+2015-07-15 15:45:34,846 - [INFO] - from application in play-akka.actor.default-dispatcher-10 
+busca por página
+
+2015-07-15 15:45:35,927 - [INFO] - from application in play-akka.actor.default-dispatcher-10 
+busca por página
+
+2015-07-15 15:45:38,226 - [INFO] - from application in play-akka.actor.default-dispatcher-10 
+busca Todos os Clientes ordenados
+
+2015-07-15 15:46:49,932 - [INFO] - from application in pool-11-thread-1 
+Application shutdown...
 

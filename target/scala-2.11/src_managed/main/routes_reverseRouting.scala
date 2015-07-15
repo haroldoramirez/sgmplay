@@ -1,6 +1,6 @@
 // @SOURCE:/home/haroldo/projetos/academico/sgmplay/conf/routes
 // @HASH:f0eb39d740aa95e8d1715febf62d73666d5f9606
-// @DATE:Mon Jul 06 14:45:40 BRT 2015
+// @DATE:Wed Jul 15 15:51:00 BRT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._

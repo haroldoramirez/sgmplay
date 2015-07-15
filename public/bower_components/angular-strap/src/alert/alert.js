@@ -13,7 +13,7 @@ angular.module('mgcrea.ngStrap.alert', ['mgcrea.ngStrap.modal'])
       prefixClass: 'alert',
       prefixEvent: 'alert',
       placement: null,
-      template: 'alert/alert.tpl.html',
+      templateUrl: 'alert/alert.tpl.html',
       container: false,
       element: null,
       backdrop: false,
@@ -74,9 +74,22 @@ angular.module('mgcrea.ngStrap.alert', ['mgcrea.ngStrap.modal'])
 
         // Directive options
         var options = {scope: scope, element: element, show: false};
-        angular.forEach(['template', 'placement', 'keyboard', 'html', 'container', 'animation', 'duration', 'dismissable'], function(key) {
+        angular.forEach(['template', 'templateUrl', 'controller', 'controllerAs', 'placement', 'keyboard', 'html', 'container', 'animation', 'duration', 'dismissable'], function(key) {
           if(angular.isDefined(attr[key])) options[key] = attr[key];
         });
+
+        // use string regex match boolean attr falsy values, leave truthy values be
+        var falseValueRegExp = /^(false|0|)$/i;
+        angular.forEach(['keyboard', 'html', 'container', 'dismissable'], function(key) {
+          if(angular.isDefined(attr[key]) && falseValueRegExp.test(attr[key]))
+            options[key] = false;
+        });
+
+        // overwrite inherited title value when no value specified
+        // fix for angular 1.3.1 531a8de72c439d8ddd064874bf364c00cedabb11
+        if (!scope.hasOwnProperty('title')){
+          scope.title = '';
+        }
 
         // Support scope as data-attrs
         angular.forEach(['title', 'content', 'type'], function(key) {

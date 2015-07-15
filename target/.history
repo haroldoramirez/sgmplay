@@ -7,3 +7,11 @@ clean
 reload
 update
 idea
+clean
+reload
+update
+~run
+clean
+reload
+update
+idea
