@@ -1,8 +1,7 @@
 package controllers;
 
 import com.avaje.ebean.Ebean;
-import com.avaje.ebean.Page;
-import com.avaje.ebean.PagingList;
+import com.avaje.ebean.Query;
 import models.locale.Estado;
 import models.locale.Pais;
 import play.Logger;
@@ -11,49 +10,60 @@ import play.mvc.Controller;
 import play.mvc.Result;
 
 import javax.persistence.PersistenceException;
-import java.util.Calendar;
 import java.util.List;
 
 public class EstadoController extends Controller {
-
 
     public static Result inserir() {
         Logger.info("Salvando Estado");
 
         Estado estado = Json.fromJson(request().body().asJson(), Estado.class);
 
+        Estado estadoBusca = Ebean.find(Estado.class).where().eq("nome", estado.getNome()).findUnique();
+
+        if (estadoBusca != null) {
+            return badRequest("Estado já cadastrado");
+        }
+
         Pais pais = Ebean.find(Pais.class, estado.getPais().getId());
 
         estado.setPais(pais);
 
-        try{
+        try {
             Ebean.save(estado);
-        } catch (PersistenceException e) {
-            return badRequest("Estado já Cadastrado");
         } catch (Exception e) {
             return badRequest("Erro interno de sistema");
         }
 
-
         return created(Json.toJson(estado));
     }
 
-    public static Result atualizar(Integer id) {
+    public static Result atualizar(Long id) {
         Logger.info("Atualizando Estado");
 
         Estado estado = Json.fromJson(request().body().asJson(), Estado.class);
+
+        Estado estadoBusca = Ebean.find(Estado.class, id);
+
+        if (estadoBusca == null) {
+            return notFound("Estado não encontrado");
+        }
 
         Pais pais = Ebean.find(Pais.class, estado.getPais().getId());
 
         estado.setPais(pais);
 
-        Ebean.update(estado);
+        try {
+            Ebean.update(estado);
+        } catch (Exception e) {
+            return badRequest("Erro interno de sistema");
+        }
 
         return ok(Json.toJson(estado));
     }
 
-    public static Result buscaPorId(Integer id) {
-        Logger.info("buscaPorId Estado");
+    public static Result buscaPorId(Long id) {
+        Logger.info("Buscando Estado por ID");
 
         Estado estado = Ebean.find(Estado.class, id);
 
@@ -65,38 +75,16 @@ public class EstadoController extends Controller {
     }
 
     public static Result buscaTodos() {
-        Logger.info("busca Todos os Estados ordenados");
+        Logger.info("Busca todos os Estados");
+
         return ok(Json.toJson(Ebean.find(Estado.class)
                 .order()
                 .asc("nome")
-                .where()
-                .gt("nome", "2")
-                .setMaxRows(14)
                 .findList()));
     }
 
-    //Mostrar acima de 14 linhas
-    public static Result buscaPorPaginas(Integer pagina) {
-        Logger.info("busca por página");
-
-        PagingList<Estado> pagingList =
-                Ebean.find(Estado.class)
-                        .order()
-                        .asc("nome")
-                        .where().gt("nome", "2")
-                        .findPagingList(14).setFetchAhead(true);
-
-        pagingList.getFutureRowCount();
-
-        Page<Estado> page = pagingList.getPage(pagina);
-
-        List<Estado> list = page.getList();
-
-        return ok(Json.toJson(list));
-    }
-
-    public static Result remover(Integer id) {
-        Logger.info("remover estado");
+    public static Result remover(Long id) {
+        Logger.info("Remover Estado");
 
         Estado estado = Ebean.find(Estado.class, id);
 
@@ -107,11 +95,20 @@ public class EstadoController extends Controller {
         try {
             Ebean.delete(estado);
         } catch (PersistenceException e) {
-            return badRequest("Existem cidades que pertencem a este estado, remova-os primeiro.");
+            return badRequest("Existem Cidades que dependem deste Estado, remova-os primeiro");
         } catch (Exception e) {
             return badRequest("Erro interno de sistema");
         }
 
         return ok(Json.toJson(estado));
+    }
+
+    public static Result filtraPorNome(String filtro) {
+        Logger.info("Filtrando Estado por nome");
+        Query<Estado> query = Ebean.createQuery(Estado.class, "find estado where (nome like :nome or pais.nome like :paisNome)");
+        query.setParameter("nome", "%" + filtro + "%");
+        query.setParameter("paisNome", "%" + filtro + "%");
+        List<Estado> filtroDeEstados = query.findList();
+        return ok(Json.toJson(filtroDeEstados));
     }
 }

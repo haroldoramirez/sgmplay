@@ -4,9 +4,9 @@
 # --- !Ups
 
 create table bairro (
-  id                        integer auto_increment not null,
+  id                        bigint auto_increment not null,
   nome                      varchar(255) not null,
-  cidade_id                 integer not null,
+  cidade_id                 bigint not null,
   constraint uq_bairro_1 unique (nome,cidade_id),
   constraint pk_bairro primary key (id))
 ;
@@ -22,10 +22,10 @@ create table categoria (
 ;
 
 create table cidade (
-  id                        integer auto_increment not null,
+  id                        bigint auto_increment not null,
   nome                      varchar(255) not null,
   ddd                       varchar(255),
-  estado_id                 integer not null,
+  estado_id                 bigint not null,
   constraint uq_cidade_1 unique (nome,estado_id),
   constraint pk_cidade primary key (id))
 ;
@@ -37,8 +37,12 @@ create table cliente (
   padrao_do_sistema         tinyint(1) default 0,
   nome                      varchar(255) not null,
   telefone                  varchar(255) not null,
-  rg                        varchar(255),
   cpf                       varchar(255),
+  datanascimento            datetime,
+  genero                    varchar(9),
+  situacao                  varchar(7),
+  bairro_id                 bigint,
+  rg                        varchar(255),
   email                     varchar(255),
   celular                   varchar(255),
   rua                       varchar(255),
@@ -46,15 +50,9 @@ create table cliente (
   cep                       varchar(255),
   complemento               varchar(255),
   observacoes               varchar(255),
-  datanascimento            datetime,
-  genero                    varchar(9),
-  situacao                  varchar(7),
-  bairro_id                 integer,
   constraint ck_cliente_genero check (genero in ('MASCULINO','FEMININO')),
   constraint ck_cliente_situacao check (situacao in ('ATIVO','INATIVO')),
-  constraint uq_cliente_rg unique (rg),
   constraint uq_cliente_cpf unique (cpf),
-  constraint uq_cliente_email unique (email),
   constraint pk_cliente primary key (id))
 ;
 
@@ -65,7 +63,7 @@ create table entidade_pai (
 ;
 
 create table estado (
-  id                        integer auto_increment not null,
+  id                        bigint auto_increment not null,
   nome                      varchar(255) not null,
   sigla                     varchar(255),
   pais_id                   bigint not null,
@@ -103,7 +101,7 @@ create table fornecedor (
   cep                       varchar(255),
   complemento               varchar(255),
   observacoes               varchar(255),
-  bairro_id                 integer,
+  bairro_id                 bigint,
   constraint uq_fornecedor_cnpj unique (cnpj),
   constraint uq_fornecedor_inscricao_estadual unique (inscricao_estadual),
   constraint pk_fornecedor primary key (id))

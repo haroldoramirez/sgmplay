@@ -7,7 +7,8 @@ angular
              'ngAnimate',
              'angular-loading-bar',
              'ui.utils.masks',
-             'ui.bootstrap'
+             'ui.bootstrap',
+             'mgcrea.ngStrap.datepicker'
             ]
         )
     .config(function ($routeProvider) {
@@ -179,4 +180,10 @@ angular
           titleClass: 'toast-title',
           toastClass: 'toast'
         })
+   }).config(function($datepickerProvider) {
+       angular.extend($datepickerProvider.defaults, {
+           iconLeft: 'fa fa-chevron-left',
+           iconRight: 'fa fa-chevron-right',
+           placement: 'bottom'
+        });
    });

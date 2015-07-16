@@ -1,192 +1,217 @@
-<div class="container">
-    <div class="row">
-        <fieldset>
-            <div id="legend">
-                <legend>
-                    <h2>
-                        Atualizar Cliente <a class="btn btn-link pull-right" data-template="assets/modal/ajuda/clienteModal.html" bs-modal="modalAjuda">
-                        <span class="glyphicon glyphicon-info-sign"></span><b> Ajuda</b></a>
-                    </h2>
-                </legend>
-            </div>
-            <form ng-init="init()" class="form-horizontal" ng-submit="update()">
-                <div class="form-group">
-                    <!--Input do Data de Cadastro-->
-                    <div class="col-lg-3">
-                        <label class="control-label" for="datadecadastro">Data de Cadastro</label>
-                        <div class="input-group date">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-ok"></i></span>
-                            <input disabled data-date-format="dd/MM/yyyy - HH:mm:ss" data-date-type="number" bs-datepicker type="text" class="form-control" ng-model="cliente.dataDeCadastro" id="datadecadastro"/>
-                        </div>
-                    </div>
-                    <!--Input do Data de Alteração-->
-                    <div class="col-lg-3">
-                        <label class="control-label" for="datadealteracao">Data de Alteração</label>
-                        <div class="input-group date">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-refresh"></i></span>
-                            <input disabled data-date-format="dd/MM/yyyy - HH:mm:ss" data-date-type="number" bs-datepicker type="text" class="form-control" ng-model="cliente.dataDeAlteracao" id="datadealteracao"/>
-                        </div>
-                    </div>
-                    <!--Input Situação-->
-                    <div class="col-lg-3 pull-right">
-                        <label class="control-label">Situação</label>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-exclamation-sign"></i></span>
-                            <select ng-model="cliente.situacao" class="form-control" id="cliente.situacao">
-                                <option value="ATIVO">Ativo</option>
-                                <option value="INATIVO">Inativo</option>
-                            </select>
-                        </div>
-                    </div>
-                    <!--Input do Nome-->
-                    <div class="col-lg-7">
-                        <label class="control-label" for="nome">Nome</label>
-                        <div ng-class="{'has-error': !cliente.nome}">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input autofocus placeholder="Insira o nome" maxlength="100" class="form-control" type="text" ng-model="cliente.nome" id="nome" required/>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Input do Email-->
-                    <div class="col-lg-5">
-                        <label class="control-label" for="email">Email</label>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                            <input placeholder="email@exemplo.com" ng-minlength="3" maxlength="100" class="form-control" type="email" ng-model="cliente.email" id="email"/>
-                        </div>
-                    </div>
-                    <!--Input de Data de Nascimento-->
-                    <div class="col-lg-5">
-                        <label class="control-label"><i class="fa fa-calendar"></i> Data de Nascimento</label>
-                        <div ng-class="{'has-error': cliente.dataNascimento.$invalid}">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
-                                <input placeholder="dd/mm/aaaa" type="text" class="form-control" ng-model="cliente.dataNascimento" data-date-format="dd/MM/yyyy" data-date-type="number" data-max-date="02/10/96" data-autoclose="1" name="dataNascimento" bs-datepicker>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Input Genero-->
-                    <div class="col-lg-3">
-                        <label class="control-label">Gênero</label>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-venus-mars"></i></span>
-                                <select ng-model="cliente.genero" class="form-control" id="cliente.genero">
-                                    <option value="MASCULINO">Masculino</option>
-                                    <option value="FEMININO">Feminino</option>
-                                </select>
-                        </div>
-                    </div>
-                    <!--Input do Telefone-->
-                    <div class="col-lg-2">
-                        <label class="control-label" for="telefone">Telefone</label>
-                        <div ng-class="{'has-error': !cliente.telefone}">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-phone-alt"></i></span>
-                                <input ui-br-phone-number placeholder="(__) ____-____" maxlength="15" class="form-control telefone" type="text" ng-model="cliente.telefone" id="telefone" required/>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Input do Celular-->
-                    <div class="col-lg-2">
-                        <label class="control-label" for="celular">Celular</label>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
-                            <input ui-br-phone-number placeholder="(__) ____-____" placeholder="(__) ____-____" maxlength="15" class="form-control" type="text" ng-model="cliente.celular" id="celular"/>
-                        </div>
-                    </div>
-                    <!--Input do Rg-->
-                    <div class="col-lg-3">
-                        <label class="control-label" for="rg">Registro Geral</label>
-                        <div class="input-group">
-                            <span class="input-group-addon"><b>RG</b></span>
-                            <input  placeholder="000" maxlength="16" class="form-control" type="text" ng-model="cliente.rg" id="rg"/>
-                        </div>
-                    </div>
-                    <!--Input do Cpf-->
-                    <div class="col-lg-3">
-                        <label class="control-label" for="cpf">Pessoa Física</label>
-                        <div ng-class="{'has-error': !cliente.cpf}">
-                            <div class="input-group">
-                                <span class="input-group-addon"><b>CPF</b></span>
-                                <input ui-br-cpf-mask placeholder="___.___.___-__" maxlength="16" class="form-control" type="text" ng-model="cliente.cpf" id="cpf"/>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Input do Rua-->
-                    <div class="col-lg-6">
-                        <label class="control-label" for="rua">Rua</label>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-map-marker"></i></span>
-                            <input placeholder="Insira o logradouro" maxlength="100" class="form-control" type="text" ng-model="cliente.rua" id="rua"/>
-                        </div>
-                    </div>
-                    <!--Input do Numero-->
-                    <div class="col-lg-2">
-                        <label class="control-label" for="numero">Número</label>
-                        <div class="input-group">
-                            <span class="input-group-addon"><b>Nº</b></span>
-                            <input ui-number-mask="3" placeholder="0.000" type="text" name="numero" maxlength="6" class="form-control" ng-model="cliente.numero" id="numero"/>
-                        </div>
-                    </div>
-                    <!--Input do CEP-->
-                    <div class="col-lg-3">
-                        <label class="control-label" for="cep">Código de Endereçamento Postal</label>
-                        <div class="input-group">
-                            <span class="input-group-addon"><b>CEP</b></span>
-                            <input ui-br-cep-mask placeholder="_____-___" maxlength="16" class="form-control" type="text" ng-model="cliente.cep" id="cep"/>
-                        </div>
-                    </div>
-                    <!--Input do Complemento-->
-                    <div class="col-lg-4">
-                        <label class="control-label" for="complemento">Complemento</label>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                            <input placeholder="Casa/Apartamento/Conjunto" maxlength="100" class="form-control" type="text" ng-model="cliente.complemento" id="complemento"/>
-                        </div>
-                    </div>
-                    <!--Input do Bairro-->
-                    <div class="col-lg-3">
-                        <label class="control-label" for="cliente.bairro">Bairro</label>
-                        <div ng-class="{'has-error': !cliente.bairro}">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-pawn"></i></span>
-                                <select ng-model="cliente.bairro" class="form-control" ng-options="bairro.nome for bairro in bairros" id="cliente.bairro">
-                                    <option disabled ng-show="!cliente.bairro.id" value="">{{cliente.bairro.nome}}</option>
-                                </select>
-                            </div>
-                        </div>
-                    </div>
-                    <!--Input de Observações-->
-                    <div class="col-lg-12">
-                        <label class="control-label" for="observacoes">Observações</label>
-                        <div class="input-group">
-                            <span class="input-group-addon"><i class="glyphicon glyphicon-book"></i></span>
-                            <textarea maxlength="200" placeholder="Informações Adicionais" style="overflow:auto;resize:none" class="form-control" ng-model="cliente.observacoes" id="observacoes">
+<div class="row">
 
-                            </textarea>
-                        </div>
-                        <br>
-                    </div>
-                    <!--Input dos Botões-->
-                    <div class="col-lg-8">
-                        <div class="control-group">
-                            <br>
-                            <button type="submit" id="save" class="btn btn-primary" ng-disabled="!cliente.nome || !cliente.telefone || !cliente.bairro.id || !cliente.cpf">
-                                <span class="glyphicon glyphicon-refresh"></span> <b>Atualizar</b>
-                            </button>
-                            <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">
-                                <span class="glyphicon glyphicon-arrow-left"></span> <b>Voltar</b>
-                            </button>
-                            <button  data-animation="am-flip-x"  data-trigger="focus"  type="button" class="btn btn-warning" data-template="assets/popover/confirmacaoPopover.html" bs-popover="popoverConfirmacao">
-                                <span class="glyphicon glyphicon-trash"></span> <b>Remover</b>
-                            </button>
-                        </div>
+    <!-- Titulo da Página-->
+    <legend>
+        <h1 class="font-style">
+            <i class="fa fa-male"></i> Detalhe do Cliente
+            <button type="button" class="btn btn-danger pull-right" ng-click="open('sm')">
+                <span class="fa fa-trash"></span> Remover
+            </button>
+        </h1>
+    </legend>
+
+    <!-- Modal de confirmação-->
+    <script type="text/ng-template" id="modalConfirmacao.html">
+        <div class="modal-header">
+            <h3 align="center" class="modal-title">Confirmação:</h3>
+        </div>
+        <div align="center" class="modal-body">
+            Deseja remover o cliente?
+        </div>
+        <div class="modal-footer">
+            <button id="delete" class="btn btn-warning" ng-click="delete()"><span class="fa fa-check"></span> Sim</button>
+            <button class="btn btn-default" ng-click="cancelModal()"><span class="fa fa-times"></span> Cancelar</button>
+        </div>
+    </script>
+
+    <form ng-init="init()" class="form-horizontal" ng-submit="update()">
+        <div class="form-group">
+
+            <!--Input do Data de Cadastro-->
+            <div class="col-md-3">
+                <label class="control-label" for="datadecadastro">Data de Cadastro</label>
+                <div class="input-group date">
+                    <span class="input-group-addon"><i class="fa fa-check"></i></span>
+                    <input disabled data-date-format="dd/MM/yyyy - HH:mm:ss" data-date-type="number" bs-datepicker type="text" class="form-control" ng-model="cliente.dataDeCadastro" id="datadecadastro"/>
+                </div>
+            </div>
+
+            <!--Input do Data de Alteração-->
+            <div class="col-md-3">
+                <label class="control-label" for="datadealteracao">Data de Alteração</label>
+                <div class="input-group date">
+                    <span class="input-group-addon"><i class="fa fa-refresh"></i></span>
+                    <input disabled data-date-format="dd/MM/yyyy - HH:mm:ss" data-date-type="number" bs-datepicker type="text" class="form-control" ng-model="cliente.dataDeAlteracao" id="datadealteracao"/>
+                </div>
+            </div>
+
+            <!--Input Situação-->
+            <div class="col-md-2 pull-right">
+                <label class="control-label">Situação</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-exclamation"></i></span>
+                    <select ng-model="cliente.situacao" class="form-control" id="cliente.situacao">
+                        <option value="ATIVO">Ativo</option>
+                        <option value="INATIVO">Inativo</option>
+                    </select>
+                </div>
+            </div>
+
+            <!--Input do Nome-->
+            <div class="col-md-7">
+                <label class="control-label" for="nome">Nome</label>
+                <div ng-class="{'has-error': !cliente.nome}">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-male"></i></span>
+                        <input autofocus placeholder="Insira o nome" maxlength="75" class="form-control" type="text" ng-model="cliente.nome" id="nome" required/>
                     </div>
                 </div>
-                <hr>
-            </form>
-        </fieldset>
-    </div>
-    <br>
+            </div>
+
+            <!--Input do Email-->
+            <div class="col-md-5">
+                <label class="control-label" for="email">Email</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-envelope-o"></i></span>
+                    <input placeholder="email@exemplo.com" ng-minlength="3" maxlength="58" class="form-control" type="email" ng-model="cliente.email" id="email"/>
+                </div>
+            </div>
+
+            <!--Input de Data de Nascimento-->
+            <div class="col-md-5">
+                <label class="control-label">Data de Nascimento</label>
+                <div ng-class="{'has-error': cliente.dataNascimento.$invalid}">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                        <input placeholder="dd/mm/aaaa" type="text" class="form-control" ng-model="cliente.dataNascimento" data-date-format="dd/MM/yyyy" data-date-type="number" data-max-date="02/10/96" data-autoclose="1" name="dataNascimento" bs-datepicker>
+                    </div>
+                </div>
+            </div>
+
+            <!--Input Genero-->
+            <div class="col-md-3">
+                <label class="control-label">Gênero</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-venus-mars"></i></span>
+                        <select ng-model="cliente.genero" class="form-control" id="cliente.genero">
+                            <option value="MASCULINO">Masculino</option>
+                            <option value="FEMININO">Feminino</option>
+                        </select>
+                </div>
+            </div>
+
+            <!--Input do Telefone-->
+            <div class="col-md-2">
+                <label class="control-label" for="telefone">Telefone</label>
+                <div ng-class="{'has-error': !cliente.telefone}">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                        <input ui-br-phone-number placeholder="(__) ____-____" maxlength="15" class="form-control telefone" type="text" ng-model="cliente.telefone" id="telefone" required/>
+                    </div>
+                </div>
+            </div>
+
+            <!--Input do Celular-->
+            <div class="col-md-2">
+                <label class="control-label" for="celular">Celular</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-mobile"></i></span>
+                    <input ui-br-phone-number placeholder="(__) ____-____" maxlength="15" class="form-control" type="text" ng-model="cliente.celular" id="celular"/>
+                </div>
+            </div>
+
+            <!--Input do Rg-->
+            <div class="col-md-3">
+                <label class="control-label" for="rg">Registro Geral</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><b>RG</b></span>
+                    <input placeholder="000" maxlength="25" class="form-control" type="text" ng-model="cliente.rg" id="rg"/>
+                </div>
+            </div>
+
+            <!--Input do Cpf-->
+            <div class="col-md-3">
+                <label class="control-label" for="cpf">Pessoa Física</label>
+                <div ng-class="{'has-error': !cliente.cpf}">
+                    <div class="input-group">
+                        <span class="input-group-addon"><b>CPF</b></span>
+                        <input ui-br-cpf-mask placeholder="___.___.___-__" maxlength="16" class="form-control" type="text" ng-model="cliente.cpf" id="cpf"/>
+                    </div>
+                </div>
+            </div>
+
+            <!--Input do Rua-->
+            <div class="col-md-6">
+                <label class="control-label" for="rua">Rua</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-road"></i></span>
+                    <input placeholder="Insira o logradouro" maxlength="70" class="form-control" type="text" ng-model="cliente.rua" id="rua"/>
+                </div>
+            </div>
+
+            <!--Input do Numero-->
+            <div class="col-md-2">
+                <label class="control-label">Número</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><b>Nº</b></span>
+                    <input ui-number-mask="3" placeholder="0.000" type="text" name="numero" maxlength="6" class="form-control" ng-model="cliente.numero" id="numero"/>
+                </div>
+            </div>
+
+            <!--Input do CEP-->
+            <div class="col-md-3">
+                <label class="control-label" for="cep">Código de Endereçamento Postal</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><b>CEP</b></span>
+                    <input ui-br-cep-mask placeholder="_____-___" maxlength="16" class="form-control" type="text" ng-model="cliente.cep" id="cep"/>
+                </div>
+            </div>
+
+            <!--Input do Complemento-->
+            <div class="col-md-4">
+                <label class="control-label" for="complemento">Complemento</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-home"></i></span>
+                    <input placeholder="Casa/Apartamento/Conjunto" maxlength="40" class="form-control" type="text" ng-model="cliente.complemento" id="complemento"/>
+                </div>
+            </div>
+
+            <!--Input do Bairro-->
+            <div class="col-md-3">
+                <label class="control-label" for="cliente.bairro">Bairro</label>
+                <div ng-class="{'has-error': !cliente.bairro}">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                        <select ng-model="cliente.bairro" class="form-control" ng-options="bairro.nome for bairro in bairros" id="cliente.bairro">
+                            <option disabled ng-show="!cliente.bairro.id" value="">{{cliente.bairro.nome}}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!--Input de Observações-->
+            <div class="col-md-12">
+                <label class="control-label" for="observacoes">Observações</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-book"></i></span>
+                    <textarea maxlength="254" placeholder="Informações Adicionais" style="overflow:auto;resize:none" class="form-control" ng-model="cliente.observacoes" id="observacoes">
+
+                    </textarea>
+                </div>
+            </div>
+
+            <!--Input dos Botões-->
+            <div class="col-md-12">
+                <div class="control-group">
+                    <br>
+                    <button type="submit" id="update" class="btn btn-primary" ng-disabled="!cliente.nome || !cliente.telefone || !cliente.bairro.id || !cliente.cpf">
+                        <span class="fa fa-refresh"></span> Atualizar
+                    </button>
+                    <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">
+                        <span class="fa fa-arrow-left"></span> Voltar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>

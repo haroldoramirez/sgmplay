@@ -1,60 +1,64 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <fieldset>
-                <div id="legend">
-                    <legend>
-                        <h2>
-                            Atualizar Bairro <a class="btn btn-link pull-right" data-template="assets/modal/ajuda/bairroModal.html" bs-modal="modalAjuda">
-                            <span class="glyphicon glyphicon-info-sign"></span><b> Ajuda</b></a>
-                        </h2>
-                    </legend>
-                </div>
-                <form ng-init="init()" class="form-horizontal" ng-submit="update()">
-                    <div class="form-group">
-                        <!--Input do Nome-->
-                        <div class="col-lg-8">
-                            <label class="control-label" for="nome">Nome</label>
-                            <div ng-class="{'has-error': !bairro.nome}">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-pawn"></i></span>
-                                    <input autofocus placeholder="Insira o nome do Bairro" maxlength="100" class="form-control" type="text" ng-model="bairro.nome" id="nome" required/>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Input da Cidade-->
-                        <div class="col-lg-4">
-                            <label class="control-label" for="bairro.cidade">Cidade</label>
-                            <div ng-class="{'has-error': !bairro.cidade}">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-bishop"></i></span>
-                                        <select ng-model="bairro.cidade" class="form-control" ng-options="cidade.nome for cidade in cidades" id="bairro.cidade">
-                                            <option disabled ng-show="!bairro.cidade.id" value="">{{bairro.cidade.nome}}</option>
-                                        </select>
-                                </div>
-                            </div>
-                            <br>
-                        </div>
-                        <!--Input dos Botões-->
-                        <div class="col-lg-8">
-                            <div class="control-group">
-                                <br>
-                                <button type="submit" id="save" class="btn btn-primary" ng-disabled="!bairro.nome || !bairro.cidade.id">
-                                    <span class="glyphicon glyphicon-refresh"></span> <b>Atualizar</b>
-                                </button>
-                                <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">
-                                    <span class="glyphicon glyphicon-arrow-left"></span> <b>Voltar</b>
-                                </button>
-                                <button  data-animation="am-flip-x"  data-trigger="focus"  type="button" class="btn btn-warning" data-template="assets/popover/confirmacaoPopover.html" bs-popover="popoverConfirmacao">
-                                    <span class="glyphicon glyphicon-trash"></span> <b>Remover</b>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                </form>
-            </fieldset>
+<div class="row">
+    <legend>
+        <h1 class="font-style">
+            <i class="fa fa-flag-checkered"></i> Detalhe do Bairro
+            <button type="button" class="btn btn-danger pull-right" ng-click="open('sm')">
+                <span class="fa fa-trash"></span> Remover
+            </button>
+        </h1>
+    </legend>
+    <script type="text/ng-template" id="modalConfirmacao.html">
+        <div class="modal-header">
+            <h3 align="center" class="modal-title">Confirmação:</h3>
         </div>
-    </div>
-    <br>
-</div>
+        <div align="center" class="modal-body">
+            Deseja remover o bairro?
+        </div>
+        <div class="modal-footer">
+            <button id="delete" class="btn btn-warning" ng-click="delete()"><span class="fa fa-check"></span> Sim</button>
+            <button class="btn btn-default" ng-click="cancelModal()"><span class="fa fa-times"></span> Cancelar</button>
+        </div>
+    </script>
+    <form ng-init="init()" class="form-horizontal" ng-submit="update()">
+        <div class="form-group">
+
+
+            <!--Input do Nome-->
+            <div class="col-md-5">
+                <label class="control-label" for="nome">Nome</label>
+                <div ng-class="{'has-error': !bairro.nome}">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                        <input autofocus placeholder="Insira o nome do bairro" maxlength="100" class="form-control" type="text" ng-model="bairro.nome" id="nome" required/>
+                    </div>
+                </div>
+            </div>
+
+            <!--Input da Cidade-->
+            <div class="col-md-4">
+                <label class="control-label" for="cidade">Cidade</label>
+                <div ng-class="{'has-error': !bairro.cidade}">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-flag-checkered"></i></span>
+                        <select ng-model="bairro.cidade" class="form-control" ng-options="cidade.nome for cidade in cidades" id="cidade">
+                            <option disabled ng-show="!bairro.cidade.id" value="">{{bairro.cidade.nome}}</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!--Botões-->
+            <div class="col-md-12">
+                <div class="control-group">
+                    <br>
+                    <button id="save" class="btn btn-success" type="submit" ng-disabled="!bairro.nome || !bairro.cidade.id">
+                        <span class="fa fa-floppy-o"></span> Salvar
+                    </button>
+                    <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">
+                        <span class="fa fa-arrow-left"></span> Voltar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div

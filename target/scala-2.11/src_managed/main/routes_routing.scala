@@ -1,6 +1,6 @@
 // @SOURCE:/home/haroldo/projetos/academico/sgmplay/conf/routes
-// @HASH:b761bef19c7af9a01a8bedb74774e1ce3504ba0c
-// @DATE:Wed Jul 15 17:07:49 BRT 2015
+// @HASH:84a1cb34b1b65ecdb9a1de46483e7d6014d7808c
+// @DATE:Thu Jul 16 16:11:24 BRT 2015
 
 
 import scala.language.reflectiveCalls
@@ -134,8 +134,8 @@ HandlerDef(this.getClass.getClassLoader, "", "controllers.EstadoController", "in
 // @LINE:34
 private[this] lazy val controllers_EstadoController_atualizar14_route = Route("PUT", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("estados/"),DynamicPart("id", """[^/]+""",true))))
 private[this] lazy val controllers_EstadoController_atualizar14_invoker = createInvoker(
-controllers.EstadoController.atualizar(fakeValue[Integer]),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.EstadoController", "atualizar", Seq(classOf[Integer]),"PUT", """""", Routes.prefix + """estados/$id<[^/]+>"""))
+controllers.EstadoController.atualizar(fakeValue[Long]),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.EstadoController", "atualizar", Seq(classOf[Long]),"PUT", """""", Routes.prefix + """estados/$id<[^/]+>"""))
         
 
 // @LINE:35
@@ -146,24 +146,24 @@ HandlerDef(this.getClass.getClassLoader, "", "controllers.EstadoController", "bu
         
 
 // @LINE:36
-private[this] lazy val controllers_EstadoController_buscaPorPaginas16_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("estadosPagina/"),DynamicPart("pagina", """[^/]+""",true))))
-private[this] lazy val controllers_EstadoController_buscaPorPaginas16_invoker = createInvoker(
-controllers.EstadoController.buscaPorPaginas(fakeValue[Integer]),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.EstadoController", "buscaPorPaginas", Seq(classOf[Integer]),"GET", """""", Routes.prefix + """estadosPagina/$pagina<[^/]+>"""))
+private[this] lazy val controllers_EstadoController_buscaPorId16_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("estados/"),DynamicPart("id", """[^/]+""",true))))
+private[this] lazy val controllers_EstadoController_buscaPorId16_invoker = createInvoker(
+controllers.EstadoController.buscaPorId(fakeValue[Long]),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.EstadoController", "buscaPorId", Seq(classOf[Long]),"GET", """""", Routes.prefix + """estados/$id<[^/]+>"""))
         
 
 // @LINE:37
-private[this] lazy val controllers_EstadoController_buscaPorId17_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("estados/"),DynamicPart("id", """[^/]+""",true))))
-private[this] lazy val controllers_EstadoController_buscaPorId17_invoker = createInvoker(
-controllers.EstadoController.buscaPorId(fakeValue[Integer]),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.EstadoController", "buscaPorId", Seq(classOf[Integer]),"GET", """""", Routes.prefix + """estados/$id<[^/]+>"""))
+private[this] lazy val controllers_EstadoController_remover17_route = Route("DELETE", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("estados/"),DynamicPart("id", """[^/]+""",true))))
+private[this] lazy val controllers_EstadoController_remover17_invoker = createInvoker(
+controllers.EstadoController.remover(fakeValue[Long]),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.EstadoController", "remover", Seq(classOf[Long]),"DELETE", """""", Routes.prefix + """estados/$id<[^/]+>"""))
         
 
 // @LINE:38
-private[this] lazy val controllers_EstadoController_remover18_route = Route("DELETE", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("estados/"),DynamicPart("id", """[^/]+""",true))))
-private[this] lazy val controllers_EstadoController_remover18_invoker = createInvoker(
-controllers.EstadoController.remover(fakeValue[Integer]),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.EstadoController", "remover", Seq(classOf[Integer]),"DELETE", """""", Routes.prefix + """estados/$id<[^/]+>"""))
+private[this] lazy val controllers_EstadoController_filtraPorNome18_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("estados/nome/"),DynamicPart("filtro", """[^/]+""",true))))
+private[this] lazy val controllers_EstadoController_filtraPorNome18_invoker = createInvoker(
+controllers.EstadoController.filtraPorNome(fakeValue[String]),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.EstadoController", "filtraPorNome", Seq(classOf[String]),"GET", """""", Routes.prefix + """estados/nome/$filtro<[^/]+>"""))
         
 
 // @LINE:41
@@ -176,8 +176,8 @@ HandlerDef(this.getClass.getClassLoader, "", "controllers.CidadeController", "in
 // @LINE:42
 private[this] lazy val controllers_CidadeController_atualizar20_route = Route("PUT", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("cidades/"),DynamicPart("id", """[^/]+""",true))))
 private[this] lazy val controllers_CidadeController_atualizar20_invoker = createInvoker(
-controllers.CidadeController.atualizar(fakeValue[Integer]),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.CidadeController", "atualizar", Seq(classOf[Integer]),"PUT", """""", Routes.prefix + """cidades/$id<[^/]+>"""))
+controllers.CidadeController.atualizar(fakeValue[Long]),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.CidadeController", "atualizar", Seq(classOf[Long]),"PUT", """""", Routes.prefix + """cidades/$id<[^/]+>"""))
         
 
 // @LINE:43
@@ -188,24 +188,24 @@ HandlerDef(this.getClass.getClassLoader, "", "controllers.CidadeController", "bu
         
 
 // @LINE:44
-private[this] lazy val controllers_CidadeController_buscaPorPaginas22_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("cidadesPagina/"),DynamicPart("pagina", """[^/]+""",true))))
-private[this] lazy val controllers_CidadeController_buscaPorPaginas22_invoker = createInvoker(
-controllers.CidadeController.buscaPorPaginas(fakeValue[Integer]),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.CidadeController", "buscaPorPaginas", Seq(classOf[Integer]),"GET", """""", Routes.prefix + """cidadesPagina/$pagina<[^/]+>"""))
+private[this] lazy val controllers_CidadeController_buscaPorId22_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("cidades/"),DynamicPart("id", """[^/]+""",true))))
+private[this] lazy val controllers_CidadeController_buscaPorId22_invoker = createInvoker(
+controllers.CidadeController.buscaPorId(fakeValue[Long]),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.CidadeController", "buscaPorId", Seq(classOf[Long]),"GET", """""", Routes.prefix + """cidades/$id<[^/]+>"""))
         
 
 // @LINE:45
-private[this] lazy val controllers_CidadeController_buscaPorId23_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("cidades/"),DynamicPart("id", """[^/]+""",true))))
-private[this] lazy val controllers_CidadeController_buscaPorId23_invoker = createInvoker(
-controllers.CidadeController.buscaPorId(fakeValue[Integer]),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.CidadeController", "buscaPorId", Seq(classOf[Integer]),"GET", """""", Routes.prefix + """cidades/$id<[^/]+>"""))
+private[this] lazy val controllers_CidadeController_remover23_route = Route("DELETE", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("cidades/"),DynamicPart("id", """[^/]+""",true))))
+private[this] lazy val controllers_CidadeController_remover23_invoker = createInvoker(
+controllers.CidadeController.remover(fakeValue[Long]),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.CidadeController", "remover", Seq(classOf[Long]),"DELETE", """""", Routes.prefix + """cidades/$id<[^/]+>"""))
         
 
 // @LINE:46
-private[this] lazy val controllers_CidadeController_remover24_route = Route("DELETE", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("cidades/"),DynamicPart("id", """[^/]+""",true))))
-private[this] lazy val controllers_CidadeController_remover24_invoker = createInvoker(
-controllers.CidadeController.remover(fakeValue[Integer]),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.CidadeController", "remover", Seq(classOf[Integer]),"DELETE", """""", Routes.prefix + """cidades/$id<[^/]+>"""))
+private[this] lazy val controllers_CidadeController_filtraPorNome24_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("cidades/nome/"),DynamicPart("filtro", """[^/]+""",true))))
+private[this] lazy val controllers_CidadeController_filtraPorNome24_invoker = createInvoker(
+controllers.CidadeController.filtraPorNome(fakeValue[String]),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.CidadeController", "filtraPorNome", Seq(classOf[String]),"GET", """""", Routes.prefix + """cidades/nome/$filtro<[^/]+>"""))
         
 
 // @LINE:49
@@ -218,8 +218,8 @@ HandlerDef(this.getClass.getClassLoader, "", "controllers.BairroController", "in
 // @LINE:50
 private[this] lazy val controllers_BairroController_atualizar26_route = Route("PUT", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("bairros/"),DynamicPart("id", """[^/]+""",true))))
 private[this] lazy val controllers_BairroController_atualizar26_invoker = createInvoker(
-controllers.BairroController.atualizar(fakeValue[Integer]),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.BairroController", "atualizar", Seq(classOf[Integer]),"PUT", """""", Routes.prefix + """bairros/$id<[^/]+>"""))
+controllers.BairroController.atualizar(fakeValue[Long]),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.BairroController", "atualizar", Seq(classOf[Long]),"PUT", """""", Routes.prefix + """bairros/$id<[^/]+>"""))
         
 
 // @LINE:51
@@ -230,24 +230,24 @@ HandlerDef(this.getClass.getClassLoader, "", "controllers.BairroController", "bu
         
 
 // @LINE:52
-private[this] lazy val controllers_BairroController_buscaPorPaginas28_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("bairrosPagina/"),DynamicPart("pagina", """[^/]+""",true))))
-private[this] lazy val controllers_BairroController_buscaPorPaginas28_invoker = createInvoker(
-controllers.BairroController.buscaPorPaginas(fakeValue[Integer]),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.BairroController", "buscaPorPaginas", Seq(classOf[Integer]),"GET", """""", Routes.prefix + """bairrosPagina/$pagina<[^/]+>"""))
+private[this] lazy val controllers_BairroController_buscaPorId28_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("bairros/"),DynamicPart("id", """[^/]+""",true))))
+private[this] lazy val controllers_BairroController_buscaPorId28_invoker = createInvoker(
+controllers.BairroController.buscaPorId(fakeValue[Long]),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.BairroController", "buscaPorId", Seq(classOf[Long]),"GET", """""", Routes.prefix + """bairros/$id<[^/]+>"""))
         
 
 // @LINE:53
-private[this] lazy val controllers_BairroController_buscaPorId29_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("bairros/"),DynamicPart("id", """[^/]+""",true))))
-private[this] lazy val controllers_BairroController_buscaPorId29_invoker = createInvoker(
-controllers.BairroController.buscaPorId(fakeValue[Integer]),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.BairroController", "buscaPorId", Seq(classOf[Integer]),"GET", """""", Routes.prefix + """bairros/$id<[^/]+>"""))
+private[this] lazy val controllers_BairroController_remover29_route = Route("DELETE", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("bairros/"),DynamicPart("id", """[^/]+""",true))))
+private[this] lazy val controllers_BairroController_remover29_invoker = createInvoker(
+controllers.BairroController.remover(fakeValue[Long]),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.BairroController", "remover", Seq(classOf[Long]),"DELETE", """""", Routes.prefix + """bairros/$id<[^/]+>"""))
         
 
 // @LINE:54
-private[this] lazy val controllers_BairroController_remover30_route = Route("DELETE", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("bairros/"),DynamicPart("id", """[^/]+""",true))))
-private[this] lazy val controllers_BairroController_remover30_invoker = createInvoker(
-controllers.BairroController.remover(fakeValue[Integer]),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.BairroController", "remover", Seq(classOf[Integer]),"DELETE", """""", Routes.prefix + """bairros/$id<[^/]+>"""))
+private[this] lazy val controllers_BairroController_filtraPorNome30_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("bairros/nome/"),DynamicPart("filtro", """[^/]+""",true))))
+private[this] lazy val controllers_BairroController_filtraPorNome30_invoker = createInvoker(
+controllers.BairroController.filtraPorNome(fakeValue[String]),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.BairroController", "filtraPorNome", Seq(classOf[String]),"GET", """""", Routes.prefix + """bairros/nome/$filtro<[^/]+>"""))
         
 
 // @LINE:57
@@ -272,24 +272,24 @@ HandlerDef(this.getClass.getClassLoader, "", "controllers.ClienteController", "b
         
 
 // @LINE:60
-private[this] lazy val controllers_ClienteController_buscaPorPaginas34_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("clientesPagina/"),DynamicPart("pagina", """[^/]+""",true))))
-private[this] lazy val controllers_ClienteController_buscaPorPaginas34_invoker = createInvoker(
-controllers.ClienteController.buscaPorPaginas(fakeValue[Integer]),
-HandlerDef(this.getClass.getClassLoader, "", "controllers.ClienteController", "buscaPorPaginas", Seq(classOf[Integer]),"GET", """""", Routes.prefix + """clientesPagina/$pagina<[^/]+>"""))
-        
-
-// @LINE:61
-private[this] lazy val controllers_ClienteController_buscaPorId35_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("clientes/"),DynamicPart("id", """[^/]+""",true))))
-private[this] lazy val controllers_ClienteController_buscaPorId35_invoker = createInvoker(
+private[this] lazy val controllers_ClienteController_buscaPorId34_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("clientes/"),DynamicPart("id", """[^/]+""",true))))
+private[this] lazy val controllers_ClienteController_buscaPorId34_invoker = createInvoker(
 controllers.ClienteController.buscaPorId(fakeValue[Integer]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.ClienteController", "buscaPorId", Seq(classOf[Integer]),"GET", """""", Routes.prefix + """clientes/$id<[^/]+>"""))
         
 
-// @LINE:62
-private[this] lazy val controllers_ClienteController_remover36_route = Route("DELETE", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("clientes/"),DynamicPart("id", """[^/]+""",true))))
-private[this] lazy val controllers_ClienteController_remover36_invoker = createInvoker(
+// @LINE:61
+private[this] lazy val controllers_ClienteController_remover35_route = Route("DELETE", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("clientes/"),DynamicPart("id", """[^/]+""",true))))
+private[this] lazy val controllers_ClienteController_remover35_invoker = createInvoker(
 controllers.ClienteController.remover(fakeValue[Integer]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.ClienteController", "remover", Seq(classOf[Integer]),"DELETE", """""", Routes.prefix + """clientes/$id<[^/]+>"""))
+        
+
+// @LINE:62
+private[this] lazy val controllers_ClienteController_filtraPorNome36_route = Route("GET", PathPattern(List(StaticPart(Routes.prefix),StaticPart(Routes.defaultPrefix),StaticPart("clientes/nome/"),DynamicPart("filtro", """[^/]+""",true))))
+private[this] lazy val controllers_ClienteController_filtraPorNome36_invoker = createInvoker(
+controllers.ClienteController.filtraPorNome(fakeValue[String]),
+HandlerDef(this.getClass.getClassLoader, "", "controllers.ClienteController", "filtraPorNome", Seq(classOf[String]),"GET", """""", Routes.prefix + """clientes/nome/$filtro<[^/]+>"""))
         
 
 // @LINE:65
@@ -550,7 +550,7 @@ private[this] lazy val controllers_Assets_at73_invoker = createInvoker(
 controllers.Assets.at(fakeValue[String], fakeValue[String]),
 HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]),"GET", """ Map static resources from the /public folder to the /assets URL path""", Routes.prefix + """assets/$file<.+>"""))
         
-def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.LoginController.loginTela()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """autenticado""","""controllers.LoginController.telaAutenticado()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """saiu""","""controllers.LoginController.telaLogout()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """autenticar""","""controllers.LoginController.autenticar()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logout""","""controllers.LoginController.logout()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """versaoplay""","""controllers.Application.versaoplay()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """paises""","""controllers.PaisController.inserir()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """paises/$id<[^/]+>""","""controllers.PaisController.atualizar(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """paises""","""controllers.PaisController.buscaTodos()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """paises/$id<[^/]+>""","""controllers.PaisController.buscaPorId(id:Long)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """paises/$id<[^/]+>""","""controllers.PaisController.remover(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """paises/nome/$filtro<[^/]+>""","""controllers.PaisController.filtraPorNome(filtro:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """estados""","""controllers.EstadoController.inserir()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """estados/$id<[^/]+>""","""controllers.EstadoController.atualizar(id:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """estados""","""controllers.EstadoController.buscaTodos()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """estadosPagina/$pagina<[^/]+>""","""controllers.EstadoController.buscaPorPaginas(pagina:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """estados/$id<[^/]+>""","""controllers.EstadoController.buscaPorId(id:Integer)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """estados/$id<[^/]+>""","""controllers.EstadoController.remover(id:Integer)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cidades""","""controllers.CidadeController.inserir()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cidades/$id<[^/]+>""","""controllers.CidadeController.atualizar(id:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cidades""","""controllers.CidadeController.buscaTodos()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cidadesPagina/$pagina<[^/]+>""","""controllers.CidadeController.buscaPorPaginas(pagina:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cidades/$id<[^/]+>""","""controllers.CidadeController.buscaPorId(id:Integer)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cidades/$id<[^/]+>""","""controllers.CidadeController.remover(id:Integer)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """bairros""","""controllers.BairroController.inserir()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """bairros/$id<[^/]+>""","""controllers.BairroController.atualizar(id:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """bairros""","""controllers.BairroController.buscaTodos()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """bairrosPagina/$pagina<[^/]+>""","""controllers.BairroController.buscaPorPaginas(pagina:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """bairros/$id<[^/]+>""","""controllers.BairroController.buscaPorId(id:Integer)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """bairros/$id<[^/]+>""","""controllers.BairroController.remover(id:Integer)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """clientes""","""controllers.ClienteController.inserir()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """clientes/$id<[^/]+>""","""controllers.ClienteController.atualizar(id:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """clientes""","""controllers.ClienteController.buscaTodos()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """clientesPagina/$pagina<[^/]+>""","""controllers.ClienteController.buscaPorPaginas(pagina:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """clientes/$id<[^/]+>""","""controllers.ClienteController.buscaPorId(id:Integer)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """clientes/$id<[^/]+>""","""controllers.ClienteController.remover(id:Integer)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """fornecedores""","""controllers.FornecedorController.inserir()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """fornecedores/$id<[^/]+>""","""controllers.FornecedorController.atualizar(id:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """fornecedores""","""controllers.FornecedorController.buscaTodos()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """fornecedoresPagina/$pagina<[^/]+>""","""controllers.FornecedorController.buscaPorPaginas(pagina:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """fornecedores/$id<[^/]+>""","""controllers.FornecedorController.buscaPorId(id:Integer)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """fornecedores/$id<[^/]+>""","""controllers.FornecedorController.remover(id:Integer)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """categorias""","""controllers.CategoriaController.inserir()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """categorias/$id<[^/]+>""","""controllers.CategoriaController.atualizar(id:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """categorias""","""controllers.CategoriaController.buscaTodos()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """categoriasPagina/$pagina<[^/]+>""","""controllers.CategoriaController.buscaPorPaginas(pagina:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """categorias/$id<[^/]+>""","""controllers.CategoriaController.buscaPorId(id:Integer)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """categorias/$id<[^/]+>""","""controllers.CategoriaController.remover(id:Integer)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """fabricantes""","""controllers.FabricanteController.inserir()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """fabricantes/$id<[^/]+>""","""controllers.FabricanteController.atualizar(id:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """fabricantes""","""controllers.FabricanteController.buscaTodos()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """fabricantesPagina/$pagina<[^/]+>""","""controllers.FabricanteController.buscaPorPaginas(pagina:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """fabricantes/$id<[^/]+>""","""controllers.FabricanteController.buscaPorId(id:Integer)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """fabricantes/$id<[^/]+>""","""controllers.FabricanteController.remover(id:Integer)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """unidadesdemedidas""","""controllers.UnidadeDeMedidaController.inserir()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """unidadesdemedidas/$id<[^/]+>""","""controllers.UnidadeDeMedidaController.atualizar(id:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """unidadesdemedidas""","""controllers.UnidadeDeMedidaController.buscaTodos()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """unidadesdemedidasPagina/$pagina<[^/]+>""","""controllers.UnidadeDeMedidaController.buscaPorPaginas(pagina:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """unidadesdemedidas/$id<[^/]+>""","""controllers.UnidadeDeMedidaController.buscaPorId(id:Integer)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """unidadesdemedidas/$id<[^/]+>""","""controllers.UnidadeDeMedidaController.remover(id:Integer)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """produtos""","""controllers.ProdutoController.inserir()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """produtos/$id<[^/]+>""","""controllers.ProdutoController.atualizar(id:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """produtos""","""controllers.ProdutoController.buscaTodos()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """produtosPagina/$pagina<[^/]+>""","""controllers.ProdutoController.buscaPorPaginas(pagina:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """produtos/$id<[^/]+>""","""controllers.ProdutoController.buscaPorId(id:Integer)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """produtos/$id<[^/]+>""","""controllers.ProdutoController.remover(id:Integer)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuarios""","""controllers.UsuarioController.inserir()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuarios/$id<[^/]+>""","""controllers.UsuarioController.atualizar(id:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuarios""","""controllers.UsuarioController.buscaTodos()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuariosPagina/$pagina<[^/]+>""","""controllers.UsuarioController.buscaPorPaginas(pagina:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuarios/$id<[^/]+>""","""controllers.UsuarioController.buscaPorId(id:Integer)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuarios/$id<[^/]+>""","""controllers.UsuarioController.remover(id:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
+def documentation = List(("""GET""", prefix,"""controllers.Application.index()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """login""","""controllers.LoginController.loginTela()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """autenticado""","""controllers.LoginController.telaAutenticado()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """saiu""","""controllers.LoginController.telaLogout()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """autenticar""","""controllers.LoginController.autenticar()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """logout""","""controllers.LoginController.logout()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """versaoplay""","""controllers.Application.versaoplay()"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """paises""","""controllers.PaisController.inserir()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """paises/$id<[^/]+>""","""controllers.PaisController.atualizar(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """paises""","""controllers.PaisController.buscaTodos()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """paises/$id<[^/]+>""","""controllers.PaisController.buscaPorId(id:Long)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """paises/$id<[^/]+>""","""controllers.PaisController.remover(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """paises/nome/$filtro<[^/]+>""","""controllers.PaisController.filtraPorNome(filtro:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """estados""","""controllers.EstadoController.inserir()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """estados/$id<[^/]+>""","""controllers.EstadoController.atualizar(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """estados""","""controllers.EstadoController.buscaTodos()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """estados/$id<[^/]+>""","""controllers.EstadoController.buscaPorId(id:Long)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """estados/$id<[^/]+>""","""controllers.EstadoController.remover(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """estados/nome/$filtro<[^/]+>""","""controllers.EstadoController.filtraPorNome(filtro:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cidades""","""controllers.CidadeController.inserir()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cidades/$id<[^/]+>""","""controllers.CidadeController.atualizar(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cidades""","""controllers.CidadeController.buscaTodos()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cidades/$id<[^/]+>""","""controllers.CidadeController.buscaPorId(id:Long)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cidades/$id<[^/]+>""","""controllers.CidadeController.remover(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """cidades/nome/$filtro<[^/]+>""","""controllers.CidadeController.filtraPorNome(filtro:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """bairros""","""controllers.BairroController.inserir()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """bairros/$id<[^/]+>""","""controllers.BairroController.atualizar(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """bairros""","""controllers.BairroController.buscaTodos()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """bairros/$id<[^/]+>""","""controllers.BairroController.buscaPorId(id:Long)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """bairros/$id<[^/]+>""","""controllers.BairroController.remover(id:Long)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """bairros/nome/$filtro<[^/]+>""","""controllers.BairroController.filtraPorNome(filtro:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """clientes""","""controllers.ClienteController.inserir()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """clientes/$id<[^/]+>""","""controllers.ClienteController.atualizar(id:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """clientes""","""controllers.ClienteController.buscaTodos()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """clientes/$id<[^/]+>""","""controllers.ClienteController.buscaPorId(id:Integer)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """clientes/$id<[^/]+>""","""controllers.ClienteController.remover(id:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """clientes/nome/$filtro<[^/]+>""","""controllers.ClienteController.filtraPorNome(filtro:String)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """fornecedores""","""controllers.FornecedorController.inserir()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """fornecedores/$id<[^/]+>""","""controllers.FornecedorController.atualizar(id:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """fornecedores""","""controllers.FornecedorController.buscaTodos()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """fornecedoresPagina/$pagina<[^/]+>""","""controllers.FornecedorController.buscaPorPaginas(pagina:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """fornecedores/$id<[^/]+>""","""controllers.FornecedorController.buscaPorId(id:Integer)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """fornecedores/$id<[^/]+>""","""controllers.FornecedorController.remover(id:Integer)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """categorias""","""controllers.CategoriaController.inserir()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """categorias/$id<[^/]+>""","""controllers.CategoriaController.atualizar(id:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """categorias""","""controllers.CategoriaController.buscaTodos()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """categoriasPagina/$pagina<[^/]+>""","""controllers.CategoriaController.buscaPorPaginas(pagina:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """categorias/$id<[^/]+>""","""controllers.CategoriaController.buscaPorId(id:Integer)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """categorias/$id<[^/]+>""","""controllers.CategoriaController.remover(id:Integer)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """fabricantes""","""controllers.FabricanteController.inserir()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """fabricantes/$id<[^/]+>""","""controllers.FabricanteController.atualizar(id:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """fabricantes""","""controllers.FabricanteController.buscaTodos()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """fabricantesPagina/$pagina<[^/]+>""","""controllers.FabricanteController.buscaPorPaginas(pagina:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """fabricantes/$id<[^/]+>""","""controllers.FabricanteController.buscaPorId(id:Integer)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """fabricantes/$id<[^/]+>""","""controllers.FabricanteController.remover(id:Integer)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """unidadesdemedidas""","""controllers.UnidadeDeMedidaController.inserir()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """unidadesdemedidas/$id<[^/]+>""","""controllers.UnidadeDeMedidaController.atualizar(id:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """unidadesdemedidas""","""controllers.UnidadeDeMedidaController.buscaTodos()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """unidadesdemedidasPagina/$pagina<[^/]+>""","""controllers.UnidadeDeMedidaController.buscaPorPaginas(pagina:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """unidadesdemedidas/$id<[^/]+>""","""controllers.UnidadeDeMedidaController.buscaPorId(id:Integer)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """unidadesdemedidas/$id<[^/]+>""","""controllers.UnidadeDeMedidaController.remover(id:Integer)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """produtos""","""controllers.ProdutoController.inserir()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """produtos/$id<[^/]+>""","""controllers.ProdutoController.atualizar(id:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """produtos""","""controllers.ProdutoController.buscaTodos()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """produtosPagina/$pagina<[^/]+>""","""controllers.ProdutoController.buscaPorPaginas(pagina:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """produtos/$id<[^/]+>""","""controllers.ProdutoController.buscaPorId(id:Integer)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """produtos/$id<[^/]+>""","""controllers.ProdutoController.remover(id:Integer)"""),("""POST""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuarios""","""controllers.UsuarioController.inserir()"""),("""PUT""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuarios/$id<[^/]+>""","""controllers.UsuarioController.atualizar(id:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuarios""","""controllers.UsuarioController.buscaTodos()"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuariosPagina/$pagina<[^/]+>""","""controllers.UsuarioController.buscaPorPaginas(pagina:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuarios/$id<[^/]+>""","""controllers.UsuarioController.buscaPorId(id:Integer)"""),("""DELETE""", prefix + (if(prefix.endsWith("/")) "" else "/") + """usuarios/$id<[^/]+>""","""controllers.UsuarioController.remover(id:Integer)"""),("""GET""", prefix + (if(prefix.endsWith("/")) "" else "/") + """assets/$file<.+>""","""controllers.Assets.at(path:String = "/public", file:String)""")).foldLeft(List.empty[(String,String,String)]) { (s,e) => e.asInstanceOf[Any] match {
   case r @ (_,_,_) => s :+ r.asInstanceOf[(String,String,String)]
   case l => s ++ l.asInstanceOf[List[(String,String,String)]]
 }}
@@ -672,7 +672,7 @@ case controllers_EstadoController_inserir13_route(params) => {
 
 // @LINE:34
 case controllers_EstadoController_atualizar14_route(params) => {
-   call(params.fromPath[Integer]("id", None)) { (id) =>
+   call(params.fromPath[Long]("id", None)) { (id) =>
         controllers_EstadoController_atualizar14_invoker.call(controllers.EstadoController.atualizar(id))
    }
 }
@@ -687,25 +687,25 @@ case controllers_EstadoController_buscaTodos15_route(params) => {
         
 
 // @LINE:36
-case controllers_EstadoController_buscaPorPaginas16_route(params) => {
-   call(params.fromPath[Integer]("pagina", None)) { (pagina) =>
-        controllers_EstadoController_buscaPorPaginas16_invoker.call(controllers.EstadoController.buscaPorPaginas(pagina))
+case controllers_EstadoController_buscaPorId16_route(params) => {
+   call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_EstadoController_buscaPorId16_invoker.call(controllers.EstadoController.buscaPorId(id))
    }
 }
         
 
 // @LINE:37
-case controllers_EstadoController_buscaPorId17_route(params) => {
-   call(params.fromPath[Integer]("id", None)) { (id) =>
-        controllers_EstadoController_buscaPorId17_invoker.call(controllers.EstadoController.buscaPorId(id))
+case controllers_EstadoController_remover17_route(params) => {
+   call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_EstadoController_remover17_invoker.call(controllers.EstadoController.remover(id))
    }
 }
         
 
 // @LINE:38
-case controllers_EstadoController_remover18_route(params) => {
-   call(params.fromPath[Integer]("id", None)) { (id) =>
-        controllers_EstadoController_remover18_invoker.call(controllers.EstadoController.remover(id))
+case controllers_EstadoController_filtraPorNome18_route(params) => {
+   call(params.fromPath[String]("filtro", None)) { (filtro) =>
+        controllers_EstadoController_filtraPorNome18_invoker.call(controllers.EstadoController.filtraPorNome(filtro))
    }
 }
         
@@ -720,7 +720,7 @@ case controllers_CidadeController_inserir19_route(params) => {
 
 // @LINE:42
 case controllers_CidadeController_atualizar20_route(params) => {
-   call(params.fromPath[Integer]("id", None)) { (id) =>
+   call(params.fromPath[Long]("id", None)) { (id) =>
         controllers_CidadeController_atualizar20_invoker.call(controllers.CidadeController.atualizar(id))
    }
 }
@@ -735,25 +735,25 @@ case controllers_CidadeController_buscaTodos21_route(params) => {
         
 
 // @LINE:44
-case controllers_CidadeController_buscaPorPaginas22_route(params) => {
-   call(params.fromPath[Integer]("pagina", None)) { (pagina) =>
-        controllers_CidadeController_buscaPorPaginas22_invoker.call(controllers.CidadeController.buscaPorPaginas(pagina))
+case controllers_CidadeController_buscaPorId22_route(params) => {
+   call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_CidadeController_buscaPorId22_invoker.call(controllers.CidadeController.buscaPorId(id))
    }
 }
         
 
 // @LINE:45
-case controllers_CidadeController_buscaPorId23_route(params) => {
-   call(params.fromPath[Integer]("id", None)) { (id) =>
-        controllers_CidadeController_buscaPorId23_invoker.call(controllers.CidadeController.buscaPorId(id))
+case controllers_CidadeController_remover23_route(params) => {
+   call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_CidadeController_remover23_invoker.call(controllers.CidadeController.remover(id))
    }
 }
         
 
 // @LINE:46
-case controllers_CidadeController_remover24_route(params) => {
-   call(params.fromPath[Integer]("id", None)) { (id) =>
-        controllers_CidadeController_remover24_invoker.call(controllers.CidadeController.remover(id))
+case controllers_CidadeController_filtraPorNome24_route(params) => {
+   call(params.fromPath[String]("filtro", None)) { (filtro) =>
+        controllers_CidadeController_filtraPorNome24_invoker.call(controllers.CidadeController.filtraPorNome(filtro))
    }
 }
         
@@ -768,7 +768,7 @@ case controllers_BairroController_inserir25_route(params) => {
 
 // @LINE:50
 case controllers_BairroController_atualizar26_route(params) => {
-   call(params.fromPath[Integer]("id", None)) { (id) =>
+   call(params.fromPath[Long]("id", None)) { (id) =>
         controllers_BairroController_atualizar26_invoker.call(controllers.BairroController.atualizar(id))
    }
 }
@@ -783,25 +783,25 @@ case controllers_BairroController_buscaTodos27_route(params) => {
         
 
 // @LINE:52
-case controllers_BairroController_buscaPorPaginas28_route(params) => {
-   call(params.fromPath[Integer]("pagina", None)) { (pagina) =>
-        controllers_BairroController_buscaPorPaginas28_invoker.call(controllers.BairroController.buscaPorPaginas(pagina))
+case controllers_BairroController_buscaPorId28_route(params) => {
+   call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_BairroController_buscaPorId28_invoker.call(controllers.BairroController.buscaPorId(id))
    }
 }
         
 
 // @LINE:53
-case controllers_BairroController_buscaPorId29_route(params) => {
-   call(params.fromPath[Integer]("id", None)) { (id) =>
-        controllers_BairroController_buscaPorId29_invoker.call(controllers.BairroController.buscaPorId(id))
+case controllers_BairroController_remover29_route(params) => {
+   call(params.fromPath[Long]("id", None)) { (id) =>
+        controllers_BairroController_remover29_invoker.call(controllers.BairroController.remover(id))
    }
 }
         
 
 // @LINE:54
-case controllers_BairroController_remover30_route(params) => {
-   call(params.fromPath[Integer]("id", None)) { (id) =>
-        controllers_BairroController_remover30_invoker.call(controllers.BairroController.remover(id))
+case controllers_BairroController_filtraPorNome30_route(params) => {
+   call(params.fromPath[String]("filtro", None)) { (filtro) =>
+        controllers_BairroController_filtraPorNome30_invoker.call(controllers.BairroController.filtraPorNome(filtro))
    }
 }
         
@@ -831,25 +831,25 @@ case controllers_ClienteController_buscaTodos33_route(params) => {
         
 
 // @LINE:60
-case controllers_ClienteController_buscaPorPaginas34_route(params) => {
-   call(params.fromPath[Integer]("pagina", None)) { (pagina) =>
-        controllers_ClienteController_buscaPorPaginas34_invoker.call(controllers.ClienteController.buscaPorPaginas(pagina))
+case controllers_ClienteController_buscaPorId34_route(params) => {
+   call(params.fromPath[Integer]("id", None)) { (id) =>
+        controllers_ClienteController_buscaPorId34_invoker.call(controllers.ClienteController.buscaPorId(id))
    }
 }
         
 
 // @LINE:61
-case controllers_ClienteController_buscaPorId35_route(params) => {
+case controllers_ClienteController_remover35_route(params) => {
    call(params.fromPath[Integer]("id", None)) { (id) =>
-        controllers_ClienteController_buscaPorId35_invoker.call(controllers.ClienteController.buscaPorId(id))
+        controllers_ClienteController_remover35_invoker.call(controllers.ClienteController.remover(id))
    }
 }
         
 
 // @LINE:62
-case controllers_ClienteController_remover36_route(params) => {
-   call(params.fromPath[Integer]("id", None)) { (id) =>
-        controllers_ClienteController_remover36_invoker.call(controllers.ClienteController.remover(id))
+case controllers_ClienteController_filtraPorNome36_route(params) => {
+   call(params.fromPath[String]("filtro", None)) { (filtro) =>
+        controllers_ClienteController_filtraPorNome36_invoker.call(controllers.ClienteController.filtraPorNome(filtro))
    }
 }
         

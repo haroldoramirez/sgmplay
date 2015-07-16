@@ -24,12 +24,26 @@ public class Cliente extends EntidadePai {
     private String telefone;
 
     @Column(unique = true)
-    private String rg;
-
-    @Column(unique = true)
     private String cpf;
 
-    @Column(unique = true)
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(name = "datanascimento")
+    private Calendar dataNascimento;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name="genero")
+    private Genero genero;
+
+    @Enumerated(EnumType.STRING)
+    @Column(name="situacao")
+    private Situacao situacao;
+
+    //muitos clientes tem um bairro
+    @ManyToOne(optional = true)
+    private Bairro bairro;
+
+    private String rg;
+
     private String email;
 
     private String celular;
@@ -44,18 +58,6 @@ public class Cliente extends EntidadePai {
 
     private String observacoes;
 
-    @Temporal(TemporalType.TIMESTAMP)
-    @Column(name = "datanascimento")
-    private Calendar dataNascimento;
-
-    @Enumerated(EnumType.STRING)
-    @Column(name="genero")
-    private Genero genero;
-
-    @Enumerated(EnumType.STRING)
-    @Column(name="situacao")
-    private Situacao situacao;
-
     public Situacao getSituacao() {
         return situacao;
     }
@@ -63,9 +65,6 @@ public class Cliente extends EntidadePai {
     public void setSituacao(Situacao situacao) {
         this.situacao = situacao;
     }
-
-    @ManyToOne(optional = true)
-    private Bairro bairro;
 
     public Integer getId() {
         return id;

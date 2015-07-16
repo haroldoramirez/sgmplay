@@ -1,57 +1,48 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-8 col-md-offset-2">
-            <fieldset>
-                <div id="legend">
-                    <legend>
-                        <h2>
-                            Cadastrar Bairro <a class="btn btn-link pull-right" data-template="assets/modal/ajuda/bairroModal.html" bs-modal="modalAjuda">
-                            <span class="glyphicon glyphicon-info-sign"></span><b> Ajuda</b></a>
-                        </h2>
-                    </legend>
-                </div>
-                <form ng-init="init()" class="form-horizontal" ng-submit="save()">
-                    <div class="form-group">
-                        <!--Input do Nome-->
-                        <div class="col-lg-8">
-                            <label class="control-label" for="nome">Nome</label>
-                            <div ng-class="{'has-error': !bairro.nome}">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-pawn"></i></span>
-                                    <input autofocus placeholder="Insira o nome do Bairro" maxlength="100" class="form-control" type="text" ng-model="bairro.nome" id="nome" required/>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Input da Cidade-->
-                        <div class="col-lg-4">
-                            <label class="control-label" for="bairro.cidade">Cidade *</label>
-                            <div ng-class="{'has-error': !bairro.cidade}">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-bishop"></i></span>
-                                        <select ng-model="bairro.cidade" class="form-control" ng-options="cidade.nome for cidade in cidades" id="bairro.cidade">
-                                            <option value="">Selecione</option>
-                                        </select>
-                                </div>
-                            </div>
-                            <br>
-                        </div>
-                        <!--Input dos Botões-->
-                        <div class="col-lg-8">
-                            <div class="control-group">
-                                <br>
-                                <button id="save" class="btn btn-success" type="submit" ng-disabled="!bairro.nome || !bairro.cidade.id">
-                                    <span class="glyphicon glyphicon-ok"></span> <b>Salvar</b>
-                                </button>
-                                <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">
-                                    <span class="glyphicon glyphicon-arrow-left"></span> <b>Voltar</b>
-                                </button>
-                            </div>
-                        </div>
+<div class="row">
+    <legend>
+        <h1 class="font-style">
+            <i class="fa fa-flag-checkered"></i> Novo Bairro
+        </h1>
+    </legend>
+    <form ng-init="init()" class="form-horizontal" ng-submit="save()">
+        <div class="form-group">
+
+            <!--Input do Nome-->
+            <div class="col-md-5">
+                <label class="control-label" for="nome">Nome</label>
+                <div ng-class="{'has-error': !bairro.nome}">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-map-marker"></i></span>
+                        <input autofocus placeholder="Insira o nome do bairro" maxlength="100" class="form-control" type="text" ng-model="bairro.nome" id="nome" required/>
                     </div>
-                    <hr>
-                </form>
-            </fieldset>
+                </div>
+            </div>
+
+            <!--Input da Cidade-->
+            <div class="col-md-4">
+                <label class="control-label" for="cidade">Cidade</label>
+                <div ng-class="{'has-error': !bairro.cidade}">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-flag-checkered"></i></span>
+                        <select ng-model="bairro.cidade" class="form-control" ng-options="cidade.nome for cidade in cidades" id="cidade">
+                            <option value="">Selecione</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <!--Botões-->
+            <div class="col-md-12">
+                <div class="control-group">
+                    <br>
+                    <button id="save" class="btn btn-success" type="submit" ng-disabled="!bairro.nome || !bairro.cidade.id">
+                        <span class="fa fa-floppy-o"></span> Salvar
+                    </button>
+                    <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">
+                        <span class="fa fa-arrow-left"></span> Voltar
+                    </button>
+                </div>
+            </div>
         </div>
-    </div>
-    <br>
+    </form>
 </div>

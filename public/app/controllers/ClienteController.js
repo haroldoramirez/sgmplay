@@ -1,121 +1,100 @@
-function updateActivedPage(scope) {
-    window.scopePage = scope.pagina;
-}
-
 angular.module('mercado')
-.controller('ClienteCreateController', function ($scope, $location, Cliente, Bairro, toastr){
-          $scope.cliente = {};
-          $scope.save = function(){
-              console.log($scope.cliente);
-              Cliente.save($scope.cliente, function(data){
-                  toastr.success(data.data,'Cliente Salvo com Sucesso');
-                  $location.path('/clientes');
-              }, function(data){
-                  console.log(data);
-                  toastr.error(data.data,'Não foi possível Salvar o Cliente');
-              });
-          };
+  .controller('ClienteCreateController', function ($scope, $modal, $location, Cliente, Bairro, toastr) {
 
-          $scope.cancel = function(){
-              $location.path('/clientes');
-          };
+    $scope.cliente = {};
 
-          $scope.init = function(){
-              Bairro.getAll(function(data){
-                  $scope.bairros = data;
-              });
-          };
+    $scope.init = function() {
+        Bairro.getAll(function(data) {
+            $scope.bairros = data;
+        });
+    };
 
-}).controller('ClienteListController', function ($scope, Cliente, toastr){
-          $scope.clientes = [];
-          $scope.init = function(){
-            Cliente.getAll(function(data){
-              $scope.clientes = data;
+    $scope.save = function() {
+        console.log($scope.cliente);
+        Cliente.save($scope.cliente, function(data) {
+            toastr.success('Cliente Salvo com Sucesso');
+            $location.path('/clientes');
+        }, function(data) {
+            console.log(data);
+            toastr.error(data.data,'Não foi possível Salvar');
+        });
+    };
+
+    $scope.cancel = function() {
+        $location.path('/clientes');
+    };
+
+  }).controller('ClienteListController', function ($scope, Cliente, toastr, $routeParams) {
+
+    $scope.clientes = [];
+
+    $scope.init = function() {
+        $scope.nomeFiltro = '';
+
+        Cliente.getAll(function(data) {
+           $scope.clientes = data;
+           $scope.quantidade = $scope.clientes.length;
+        });
+    };
+
+    //* filtra por nome do estado *//
+    $scope.busca = function() {
+
+       if ($scope.nomeFiltro) {
+            Cliente.getFiltroCliente({filtro:$scope.nomeFiltro}, $scope.cliente, function(data) {
+                $scope.clientes = data;
             });
-            $scope.pagina = 0;
-            updateActivedPage(this);
-          };
-          
-          //botão de páginas
-          $scope._pagina = function(val){
-          $scope.pagina = val;
-              Cliente.getPagina({pagina: $scope.pagina}, $scope.cliente, function(data){
-                  $scope.clientes = data;
-              });
-              updateActivedPage(this);
-          };
+       } else {
+            Cliente.getAll(function(data) {
+                $scope.clientes = data;
+            });
+       };
+    };
 
-          //botão próximo
-          $scope.proximo = function(val){
-          $scope.pagina = val + 1;
-              Cliente.getPagina({pagina: $scope.pagina}, $scope.cliente, function(data){
-                  if (data.length===0) {
-                      $scope.pagina = $scope.pagina - 1;
-                  }else{
-                      $scope.clientes = data;
-                  };
-              });
-              updateActivedPage(this);
-          }
+  }).controller('ClienteDetailController', function ($scope, $modal, $routeParams, $location, Cliente, Bairro, toastr) {
 
-          //botão anterior
-          $scope.anterior = function(val){
-          $scope.pagina = val - 1;
-              Cliente.getPagina({pagina: $scope.pagina}, $scope.cliente, function(data){
-                  $scope.clientes = data;
-              });
-              updateActivedPage(this);
-          }
+    $scope.init = function() {
+        $scope.cliente = Cliente.get({id:$routeParams.id});
+        $scope.bairros = Bairro.getAll();
+    };
 
-          //deletar opcional
-          $scope.delete = function(id){
-             Cliente.delete({id:id}, function(data){
-                 toastr.success(data.data, 'Cliente Removido com Sucesso');
-                 $scope.init();
-             }, function(data){
-                 toastr.error(data.data, 'Não foi possível Remover o Cliente');
-             });
-          };
+    $scope.update = function() {
+        Cliente.update({id:$routeParams.id}, $scope.cliente, function(data) {
+            toastr.info('Cliente Atualizado com Sucesso');
+            $location.path('/clientes');
+        },function(data) {
+           console.log(data);
+           toastr.error(data.data,'Não foi possível Atualizar');
+        });
+    };
 
-}).controller('ClienteDetailController', function ($scope, $routeParams, $location, Cliente, Bairro, toastr){
+    $scope.delete = function() {
+        Cliente.delete({id:$routeParams.id}, function() {
+            toastr.warning('Cliente Removido com Sucesso');
+            $modalInstance.close();
+            $location.path('/clientes');
+        }, function(data) {
+            console.log(data);
+            $modalInstance.close();
+            toastr.error(data.data,'Não foi possível Remover');
+        });
+    };
 
-          $scope.init = function(){
-             $scope.cliente = Cliente.get({id:$routeParams.id});
-             $scope.bairros = Bairro.getAll();
-          };
+    $scope.cancel = function() {
+       $location.path('/clientes');
+    };
 
-          $scope.update = function(){
-              Cliente.update({id:$routeParams.id},$scope.cliente, function(data){
-                  toastr.info(data.data, 'Cliente Atualizado com Sucesso');
-                  $location.path('/clientes');
-              },function(data){
-                  console.log(data);
-                  toastr.error(data.data,'Não foi possível Atualizar o Cliente');
-              });
-          };
+    $scope.open = function (size) {
 
-          $scope.cancel = function(){
-              $location.path('/clientes');
-          };
+        $modalInstance = $modal.open({
+              templateUrl: 'modalConfirmacao.html',
+              controller: 'ClienteDetailController',
+              size: size,
+        });
+    };
 
-          $scope.delete = function(){
-              Cliente.delete({id:$routeParams.id}, function(data){
-                  toastr.warning(data.data,'Cliente Removido com Sucesso');
-                  $location.path('/clientes');
-              }, function(data){
-                  toastr.error(data.data,'Não foi possível Remover o Cliente');
-              });
+    $scope.cancelModal = function () {
+        $modalInstance.dismiss('cancelModal');
+    };
 
-          };
-
-          $scope.confirmacaoModal = {
-                "title": "Confirmação",
-                "content": "Deseja excluir o Cliente?"
-          };
-
-          $scope.popoverConfirmacao = {
-                "title": "Confirmação",
-                "content": "Excluir?"
-          };
-
-});
+  });

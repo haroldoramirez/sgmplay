@@ -1,6 +1,5 @@
 package models.locale;
 
-import models.base.EntidadePai;
 import play.db.ebean.Model;
 import play.libs.Json;
 
@@ -16,7 +15,7 @@ public class Cidade extends Model {
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     @Column(nullable = false)
     private String nome;
@@ -26,11 +25,11 @@ public class Cidade extends Model {
     @ManyToOne(cascade = CascadeType.MERGE, optional = false)
     private Estado estado;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

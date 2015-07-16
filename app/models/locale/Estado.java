@@ -1,6 +1,5 @@
 package models.locale;
 
-import models.base.EntidadePai;
 import play.db.ebean.Model;
 import play.libs.Json;
 
@@ -12,34 +11,27 @@ import javax.persistence.*;
 })
 public class Estado extends Model {
 
-	private static final long serialVersionUID = 1L;
+    private static final long serialVersionUID = 1L;
 
-	@Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     @Column(nullable = false)
     private String nome;
 
     private String sigla;
 
+    //muitos estados tem um país
     @ManyToOne(cascade = CascadeType.MERGE, optional = false)
     private Pais pais;
 
-    public Pais getPais() {
-        return pais;
+    public Long getId() {
+        return id;
     }
 
-    public void setPais(Pais pais) {
-        this.pais = pais;
-    }
-
-    public String getSigla() {
-        return sigla;
-    }
-
-    public void setSigla(String sigla) {
-        this.sigla = sigla;
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getNome() {
@@ -50,12 +42,20 @@ public class Estado extends Model {
         this.nome = nome;
     }
 
-    public Integer getId() {
-        return id;
+    public String getSigla() {
+        return sigla;
     }
 
-    public void setId(Integer id) {
-        this.id = id;
+    public void setSigla(String sigla) {
+        this.sigla = sigla;
+    }
+
+    public Pais getPais() {
+        return pais;
+    }
+
+    public void setPais(Pais pais) {
+        this.pais = pais;
     }
 
     @Override

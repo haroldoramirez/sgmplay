@@ -12,28 +12,32 @@ angular.module('mercado')
       return $resource(BaseUrl + '/estados/:id', {}, {
          getAll: {method: 'GET', url: BaseUrl + '/estados', isArray: true},
          getPagina: {method: 'GET', url: BaseUrl + '/estadosPagina/:pagina', isArray: true},
-         update: {method: 'PUT', url: BaseUrl + '/estados/:id', isArray: false}
+         update: {method: 'PUT', url: BaseUrl + '/estados/:id', isArray: false},
+         getFiltroEstado: {method: 'GET', url: BaseUrl + '/estados/nome/:filtro', isArray: true}
       });
   }]).service('Cidade',['$resource', 'BaseUrl',
     function($resource, BaseUrl){
       return $resource(BaseUrl + '/cidades/:id', {}, {
         getAll: {method: 'GET', url: BaseUrl + '/cidades', isArray: true},
         getPagina: {method: 'GET', url: BaseUrl + '/cidadesPagina/:pagina', isArray: true},
-        update: {method: 'PUT', url: BaseUrl + '/cidades/:id', isArray: false}
+        update: {method: 'PUT', url: BaseUrl + '/cidades/:id', isArray: false},
+        getFiltroCidade: {method: 'GET', url: BaseUrl + '/cidades/nome/:filtro', isArray: true}
       });
   }]).service('Bairro',['$resource', 'BaseUrl',
     function($resource, BaseUrl){
       return $resource(BaseUrl + '/bairros/:id', {}, {
          getAll: {method: 'GET', url: BaseUrl + '/bairros', isArray: true},
          getPagina: {method: 'GET', url: BaseUrl + '/bairrosPagina/:pagina', isArray: true},
-         update: {method: 'PUT', url: BaseUrl + '/bairros/:id', isArray: false}
+         update: {method: 'PUT', url: BaseUrl + '/bairros/:id', isArray: false},
+         getFiltroBairro: {method: 'GET', url: BaseUrl + '/bairros/nome/:filtro', isArray: true}
       });
   }]).service('Cliente',['$resource', 'BaseUrl',
     function($resource, BaseUrl){
       return $resource(BaseUrl + '/clientes/:id', {}, {
         getAll: {method: 'GET', url: BaseUrl + '/clientes', isArray: true},
         getPagina: {method: 'GET', url: BaseUrl + '/clientesPagina/:pagina', isArray: true},
-        update: {method: 'PUT', url: BaseUrl + '/clientes/:id', isArray: false}
+        update: {method: 'PUT', url: BaseUrl + '/clientes/:id', isArray: false},
+        getFiltroCliente: {method: 'GET', url: BaseUrl + '/clientes/nome/:filtro', isArray: true}
       });
   }]).service('Fornecedor',['$resource', 'BaseUrl',
     function($resource, BaseUrl){

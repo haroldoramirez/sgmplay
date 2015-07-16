@@ -1,59 +1,39 @@
-<div class="container">
-    <div class="row">
-        <fieldset>
-            <div id="legend">
-                <legend>
-                    <h2>
-                        Lista de Estados <a class="btn btn-success pull-right" href="#/estados/novo">
-                        <span class="glyphicon glyphicon-plus"></span> <b>Novo Estado</b></a>
-                    </h2>
-                </legend>
-            </div>
+<div class="row">
 
-            <!--Input de Busca-->
-            <div class="col-lg-5">
-                <div class="input-group">
-                    <input autofocus type="text" class="form-control" placeholder="digite o nome do estado">
-                         <span class="input-group-btn">
-                              <button class="btn btn-primary">
-                                  <span class="glyphicon glyphicon-search"></span> <b>Buscar</b>
-                              </button>
-                        </span>
-                </div>
-                <br>
-            </div>
+    <!-- Header-->
+    <legend>
+        <h1 class="font-style">
+            <i class="fa fa-flag-o"></i> Lista de Estados<a class="btn btn-success pull-right" href="#/estados/novo">
+            <span class="fa fa-plus"></span> Novo Estado</a>
+        </h1>
+    </legend>
 
-        <!--Tabela-->
-        <table  ng-init="init()" class="table table-striped table-hover table-bordered">
-            <tr>
-                <th class="col-sm-10">Estado</th>
-                <th class="col-sm-1">Sigla</th>
-                <th class="col-sm-1">País</th>
-            </tr>
-            <tr ng-repeat="estado in estados">
-                <td><b><a href="#/estados/detalhe/{{estado.id}}">{{estado.nome}}</a></b></td>
-                <td><b>{{estado.sigla}}</b></td>
-                <td><b>{{estado.pais.nome}}</b></td>
-                <!--<td>-->
-                <!--<a href="" class="glyphicon glyphicon-trash" ng-click="delete(estado.id)"></a>-->
-                <!--</td>-->
-            </tr>
-        </table>
-        </fieldset>
+    <!--Input de Busca-->
+    <div class="col-md-5 input-group">
+        <input ng-model="nomeFiltro" autofocus type="search" class="form-control" placeholder="digite o nome do estado ou o nome do país">
+            <span class="input-group-btn">
+                <button ng-disabled="!nomeFiltro" class="btn btn-primary" ng-click="busca();"><span class="fa fa-search"></span> Filtrar</button>
+                <button class="btn btn-default" ng-click="init();">Limpar</button>
+            </span>
     </div>
 
-    <!--Paginação-->
-    <nav>
-        <div class="clearfix"></div>
-        <ul class="pagination pull-right">
-            <li><a ng-click="anterior(1)" href=""><span class="glyphicon glyphicon-menu-left"></span></a></li>
-            <li class="active"><a ng-click="_pagina(0)" href=""><b>1</b></a></li>
-            <li><a ng-click="_pagina(1)" href=""><b>2</b></a></li>
-            <li><a ng-click="_pagina(2)" href=""><b>3</b></a></li>
-            <li><a ng-click="_pagina(3)" href=""><b>4</b></a></li>
-            <li><a ng-click="_pagina(4)" href=""><b>5</b></a></li>
-            <li><a ng-click="proximo(0)" href=""><span class="glyphicon glyphicon-menu-right"></span></a></li>
-        </ul>
-    </nav>
+    <div class="pull-right">
+        <h4 class="font-style">Total de <b>{{quantidade}}</b> Registros</h4>
+    </div>
+
+    <h4 class="font-style" ng-show="estados.length == 0">Nenhum registro encontrado</h4>
+
+    <!--Tabela-->
+    <table ng-show="estados.length" ng-init="init()" class="table-striped table table-hover table-bordered">
+        <tr>
+            <th>Nome</th>
+            <th>Sigla</th>
+            <th>País</th>
+        </tr>
+        <tr ng-repeat="estado in estados">
+            <td><b><a href="#/estados/detalhe/{{estado.id}}">{{estado.nome}}</a></b></td>
+            <td>{{estado.sigla}}</td>
+            <td>{{estado.pais.nome}}</td>
+        </tr>
+    </table>
 </div>
-<hr>

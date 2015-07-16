@@ -11,5 +11,3 @@ project/target
 tmp
 dist
 .cache
-bower_components/
-conf/evolutions/
