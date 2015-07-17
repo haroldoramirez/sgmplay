@@ -44,28 +44,32 @@ angular.module('mercado')
       return $resource(BaseUrl + '/fornecedores/:id', {}, {
         getAll: {method: 'GET', url: BaseUrl + '/fornecedores', isArray: true},
         getPagina: {method: 'GET', url: BaseUrl + '/fornecedoresPagina/:pagina', isArray: true},
-        update: {method: 'PUT', url: BaseUrl + '/fornecedores/:id', isArray: false}
+        update: {method: 'PUT', url: BaseUrl + '/fornecedores/:id', isArray: false},
+        getFiltroFornecedor: {method: 'GET', url: BaseUrl + '/fornecedores/nome/:filtro', isArray: true}
       });
   }]).service('Categoria',['$resource', 'BaseUrl',
     function($resource, BaseUrl){
       return $resource(BaseUrl + '/categorias/:id', {}, {
          getAll: {method: 'GET', url: BaseUrl + '/categorias', isArray: true},
          getPagina: {method: 'GET', url: BaseUrl + '/categoriasPagina/:pagina', isArray: true},
-         update: {method: 'PUT', url: BaseUrl + '/categorias/:id', isArray: false}
+         update: {method: 'PUT', url: BaseUrl + '/categorias/:id', isArray: false},
+         getFiltroCategoria: {method: 'GET', url: BaseUrl + '/categorias/nome/:filtro', isArray: true}
       });
    }]).service('Fabricante',['$resource', 'BaseUrl',
     function($resource, BaseUrl){
       return $resource(BaseUrl + '/fabricantes/:id', {}, {
          getAll: {method: 'GET', url: BaseUrl + '/fabricantes', isArray: true},
          getPagina: {method: 'GET', url: BaseUrl + '/fabricantesPagina/:pagina', isArray: true},
-         update: {method: 'PUT', url: BaseUrl + '/fabricantes/:id', isArray: false}
+         update: {method: 'PUT', url: BaseUrl + '/fabricantes/:id', isArray: false},
+         getFiltroFabricante: {method: 'GET', url: BaseUrl + '/fabricantes/nome/:filtro', isArray: true}
       });
     }]).service('UnidadeDeMedida',['$resource', 'BaseUrl',
     function($resource, BaseUrl){
       return $resource(BaseUrl + '/unidadesdemedidas/:id', {}, {
          getAll: {method: 'GET', url: BaseUrl + '/unidadesdemedidas', isArray: true},
          getPagina: {method: 'GET', url: BaseUrl + '/unidadesdemedidasPagina/:pagina', isArray: true},
-         update: {method: 'PUT', url: BaseUrl + '/unidadesdemedidas/:id', isArray: false}
+         update: {method: 'PUT', url: BaseUrl + '/unidadesdemedidas/:id', isArray: false},
+         getFiltroUnidadeDeMedida: {method: 'GET', url: BaseUrl + '/unidadesdemedidas/nome/:filtro', isArray: true}
       });
     }]).service('Produto',['$resource', 'BaseUrl',
     function($resource, BaseUrl){

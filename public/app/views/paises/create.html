@@ -1,9 +1,12 @@
 <div class="row">
+
+    <!--Título de Página-->
     <legend>
         <h1 class="font-style">
             <i class="fa fa-flag"></i> Novo País
         </h1>
     </legend>
+
     <form class="form-horizontal" ng-submit="save()">
         <div class="form-group">
 
@@ -13,7 +16,7 @@
                 <div ng-class="{'has-error': !pais.nome}">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-flag"></i></span>
-                        <input autofocus placeholder="Insira o nome do país" maxlength="100" class="form-control" type="text" ng-model="pais.nome" id="nome" required/>
+                        <input placeholder="Insira o nome do país" maxlength="100" class="form-control" type="text" ng-model="pais.nome" id="nome" required/>
                     </div>
                 </div>
             </div>

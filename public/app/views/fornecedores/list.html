@@ -1,54 +1,49 @@
-<div class="container">
-    <div class="row">
-        <fieldset>
-            <div id="legend">
-                <legend>
-                    <h2>
-                        Lista de Fornecedores <a class="btn btn-success pull-right" href="#/fornecedores/novo">
-                        <span class="glyphicon glyphicon-plus"></span><b> Novo Fornecedor</b></a>
-                    </h2>
-                </legend>
-            </div>
+<div class="row">
 
-            <!--Input de Busca-->
-            <div class="col-lg-5">
-                <div class="input-group">
-                    <input autofocus type="text" class="form-control" placeholder="digite o nome do fornecedor">
-                         <span class="input-group-btn">
-                              <button class="btn btn-primary">
-                                  <span class="glyphicon glyphicon-search"></span> <b>Buscar</b>
-                              </button>
-                        </span>
-                </div>
-                <br>
-            </div>
+    <!-- Título da Página-->
+    <legend>
+        <h1 class="font-style">
+            <i class="fa fa-truck"></i> Lista de Fornecedores <a class="btn btn-success pull-right" href="#/fornecedores/novo">
+            <span class="fa fa-plus"></span> Novo Fornecedor</a>
+        </h1>
+    </legend>
 
-            <!--Tabela-->
-                <table  ng-init="init()" class="table table-striped table-hover table-bordered">
-                    <tr>
-                        <th>Nome Fantasia</th>
-                        <th>Razão Social</th>
-                        <th>Telefone</th>
-                        <th>Fax</th>
-                        <th>CNPJ</th>
-                        <th>Inscrição Estadual</th>
-                        <th>CEP</th>
-                        <th>Bairro</th>
-                    </tr>
-                    <tr ng-repeat="fornecedor in fornecedores">
-                        <td><b><a href="#/fornecedores/detalhe/{{fornecedor.id}}">{{fornecedor.nomeFantasia}}</a></b></td>
-                        <td><b>{{fornecedor.razaoSocial}}</b></td>
-                        <td><b>{{fornecedor.telefone}}</b></td>
-                        <td><b>{{fornecedor.fax}}</b></td>
-                        <td><b>{{fornecedor.cnpj}}</b></td>
-                        <td><b>{{fornecedor.inscricaoEstadual}}</b></td>
-                        <td><b>{{fornecedor.cep}}</b></td>
-                        <td><b>{{fornecedor.bairro.nome}}</b></td>
-                        <!--<td>-->
-                        <!--<a href="" class="glyphicon glyphicon-trash" ng-click="delete(estado.id)"></a>-->
-                        <!--</td>-->
-                    </tr>
-                </table>
-        </fieldset>
+    <!--Input de Busca-->
+    <div class="col-md-5 input-group">
+        <input ng-model="nomeFiltro" type="search" class="form-control" placeholder="digite o nome fantasia do fornecedor ou o CNPJ">
+            <span class="input-group-btn">
+                <button ng-disabled="!nomeFiltro" class="btn btn-primary" ng-click="busca();"><span class="fa fa-search"></span> Filtrar</button>
+                <button class="btn btn-default" ng-click="init();">Limpar</button>
+            </span>
     </div>
+
+    <div class="pull-right">
+        <h4 class="font-style">Total de <b>{{quantidade}}</b> Registros</h4>
+    </div>
+
+    <h4 class="font-style" ng-show="fornecedores.length == 0">Nenhum registro encontrado</h4>
+
+    <!--Tabela-->
+    <table  ng-show="fornecedores.length" ng-init="init()" class="table table-striped table-hover table-bordered">
+        <tr>
+            <th>Nome Fantasia</th>
+            <th>Razão Social</th>
+            <th>Telefone</th>
+            <th>Fax</th>
+            <th>CNPJ</th>
+            <th>Inscrição Estadual</th>
+            <th>CEP</th>
+            <th>Bairro</th>
+        </tr>
+        <tr ng-repeat="fornecedor in fornecedores">
+            <td><b><a href="#/fornecedores/detalhe/{{fornecedor.id}}">{{fornecedor.nomeFantasia}}</a></b></td>
+            <td>{{fornecedor.razaoSocial}}</td>
+            <td>{{fornecedor.telefone}}</td>
+            <td>{{fornecedor.fax}}</td>
+            <td>{{fornecedor.cnpj}}</td>
+            <td>{{fornecedor.inscricaoEstadual}}</td>
+            <td>{{fornecedor.cep}}</td>
+            <td>{{fornecedor.bairro.nome}}</td>
+        </tr>
+    </table>
 </div>

@@ -53,7 +53,7 @@ public class ClienteController extends Controller {
         return created(Json.toJson(cliente));
     }
 
-    public static Result atualizar(Integer id) {
+    public static Result atualizar(Long id) {
         Logger.info("Atualizando Cliente");
 
         Cliente cliente = Json.fromJson(request().body().asJson(), Cliente.class);
@@ -85,8 +85,8 @@ public class ClienteController extends Controller {
         return ok(Json.toJson(cliente));
     }
 
-    public static Result buscaPorId(Integer id) {
-        Logger.info("Buscando Bairro por ID");
+    public static Result buscaPorId(Long id) {
+        Logger.info("Buscando Cliente por ID");
 
         Cliente cliente = Ebean.find(Cliente.class, id);
 
@@ -106,8 +106,7 @@ public class ClienteController extends Controller {
                 .findList()));
     }
 
-
-    public static Result remover(Integer id) {
+    public static Result remover(Long id) {
         Logger.info("Remover Cliente");
 
         Cliente cliente = Ebean.find(Cliente.class, id);

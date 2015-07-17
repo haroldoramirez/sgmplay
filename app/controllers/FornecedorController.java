@@ -3,6 +3,7 @@ package controllers;
 import com.avaje.ebean.Ebean;
 import com.avaje.ebean.Page;
 import com.avaje.ebean.PagingList;
+import com.avaje.ebean.Query;
 import models.Fornecedor;
 import models.locale.Bairro;
 import play.Logger;
@@ -21,118 +22,116 @@ public class FornecedorController extends Controller {
     public static Result inserir() {
         Logger.info("Salvando Fornecedor");
 
-        ValidaCNPJ validaCNPJ = new ValidaCNPJ();
+        Fornecedor Fornecedor = Json.fromJson(request().body().asJson(), Fornecedor.class);
 
-        Fornecedor fornecedor = Json.fromJson(request().body().asJson(), Fornecedor.class);
+        Fornecedor FornecedorBuscaCpf = Ebean.find(Fornecedor.class).where().eq("cnpj", Fornecedor.getCnpj()).findUnique();
 
-        Bairro bairro = Ebean.find(Bairro.class, fornecedor.getBairro().getId());
-
-        fornecedor.setBairro(bairro);
-
-        if (!validaCNPJ.isCNPJ(fornecedor.getCnpj())) {
-            return badRequest("CNPJ Inválido");
+        if (FornecedorBuscaCpf != null) {
+            return badRequest("O Fornecedor já esta cadastrado");
         }
 
+        Bairro bairro = Ebean.find(Bairro.class, Fornecedor.getBairro().getId());
+
+        Fornecedor.setBairro(bairro);
+
+        ValidaCNPJ validaCNPJ = new ValidaCNPJ();
+
+        if (!validaCNPJ.isCNPJ(Fornecedor.getCnpj())) {
+            return badRequest("O CNPJ é Inválido");
+        }
+
+        Fornecedor.setDataDeCadastro(Calendar.getInstance());
+
         try {
-            Ebean.save(fornecedor);
-        } catch (PersistenceException e) {
-            return badRequest("Fornecedor já Cadastrado");
+            Ebean.save(Fornecedor);
         } catch (Exception e) {
             return badRequest("Erro interno de sistema");
         }
 
-        fornecedor.setDataDeCadastro(Calendar.getInstance());
-        return created(Json.toJson(fornecedor));
+        return created(Json.toJson(Fornecedor));
     }
 
-    public static Result atualizar(Integer id) {
+    public static Result atualizar(Long id) {
         Logger.info("Atualizando Fornecedor");
 
-        ValidaCNPJ validaCNPJ = new ValidaCNPJ();
+        Fornecedor Fornecedor = Json.fromJson(request().body().asJson(), Fornecedor.class);
 
-        Fornecedor fornecedor = Json.fromJson(request().body().asJson(), Fornecedor.class);
+        Fornecedor FornecedorBusca = Ebean.find(Fornecedor.class, id);
 
-        Bairro bairro = Ebean.find(Bairro.class, fornecedor.getBairro().getId());
-
-        fornecedor.setBairro(bairro);
-
-        if (!validaCNPJ.isCNPJ(fornecedor.getCnpj())) {
-            return badRequest("CNPJ Inválido");
+        if (FornecedorBusca == null) {
+            return notFound("O Fornecedor não foi encontrado");
         }
 
+        ValidaCNPJ validaCNPJ = new ValidaCNPJ();
+
+        if (!validaCNPJ.isCNPJ(Fornecedor.getCnpj())) {
+            return badRequest("O CNPJ é Inválido");
+        }
+
+        Bairro bairro = Ebean.find(Bairro.class, Fornecedor.getBairro().getId());
+
+        Fornecedor.setBairro(bairro);
+
+        Fornecedor.setDataDeAlteracao(Calendar.getInstance());
+
         try {
-            Ebean.update(fornecedor);
-        } catch (PersistenceException e) {
-            return badRequest("Fornecedor já Cadastrado");
+            Ebean.update(Fornecedor);
         } catch (Exception e) {
             return badRequest("Erro interno de sistema");
         }
 
-        return ok(Json.toJson(fornecedor));
+        return ok(Json.toJson(Fornecedor));
     }
 
-    public static Result buscaPorId(Integer id) {
-        Logger.info("buscaPorId Fornecedor");
+    public static Result buscaPorId(Long id) {
+        Logger.info("Buscando Fornecedor por ID");
 
-        Fornecedor fornecedor = Ebean.find(Fornecedor.class, id);
+        Fornecedor Fornecedor = Ebean.find(Fornecedor.class, id);
 
-        if (fornecedor == null) {
+        if (Fornecedor == null) {
             return notFound("Fornecedor não Encontrado");
         }
 
-        return ok(Json.toJson(fornecedor));
+        return ok(Json.toJson(Fornecedor));
     }
 
     public static Result buscaTodos() {
-        Logger.info("busca Todos os Fornecedores ordenados");
+        Logger.info("Busca todos os Fornecedores");
+
         return ok(Json.toJson(Ebean.find(Fornecedor.class)
                 .order()
                 .asc("nomeFantasia")
-                .where()
-                .gt("nomeFantasia", "2")
-                .setMaxRows(14)
                 .findList()));
     }
 
-    //Mostrar acima de 14 linhas
-    public static Result buscaPorPaginas(Integer pagina) {
-        Logger.info("busca por página");
+    public static Result remover(Long id) {
+        Logger.info("Remover Fornecedor");
 
-        PagingList<Fornecedor> pagingList =
-                Ebean.find(Fornecedor.class)
-                        .order()
-                        .asc("nomeFantasia")
-                        .where().gt("nomeFantasia", "2")
-                        .findPagingList(14).setFetchAhead(true);
+        Fornecedor Fornecedor = Ebean.find(Fornecedor.class, id);
 
-        pagingList.getFutureRowCount();
-
-        Page<Fornecedor> page = pagingList.getPage(pagina);
-
-        List<Fornecedor> list = page.getList();
-
-        return ok(Json.toJson(list));
-    }
-
-    public static Result remover(Integer id) {
-        Logger.info("remover Fornecedor");
-
-        Fornecedor fornecedor = Ebean.find(Fornecedor.class, id);
-
-        if (fornecedor == null) {
+        if (Fornecedor == null) {
             return notFound("Fornecedor não encontrado");
         }
 
         try {
-            Ebean.delete(fornecedor);
+            Ebean.delete(Fornecedor);
         } catch (PersistenceException e) {
-            return badRequest("Existem Produtos que dependem deste Fornecedor");
+            return badRequest("Existem Vendas que dependem deste Fornecedor");
         } catch (Exception e) {
             return badRequest("Erro interno de sistema");
         }
 
-        return ok(Json.toJson(fornecedor));
+        return ok(Json.toJson(Fornecedor));
     }
 
+    public static Result filtraPorNome(String filtro) {
+        Logger.info("Filtrando Fornecedor");
+
+        Query<Fornecedor> query = Ebean.createQuery(Fornecedor.class, "find fornecedor where (nomeFantasia like :nomeFantasia or cnpj like :cnpj)");
+        query.setParameter("nomeFantasia", "%" + filtro + "%");
+        query.setParameter("cnpj", "%" + filtro + "%");
+        List<Fornecedor> filtroDeFornecedores = query.findList();
+        return ok(Json.toJson(filtroDeFornecedores));
+    }
 
 }

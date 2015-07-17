@@ -37,7 +37,6 @@ angular.module('mercado')
         });
     };
 
-    //* filtra por nome do estado *//
     $scope.busca = function() {
 
        if ($scope.nomeFiltro) {

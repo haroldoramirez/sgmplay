@@ -12,12 +12,9 @@ create table bairro (
 ;
 
 create table categoria (
-  id                        integer auto_increment not null,
-  data_de_cadastro          datetime not null,
-  data_de_alteracao         datetime not null,
-  padrao_do_sistema         tinyint(1) default 0,
-  descricao                 varchar(255) not null,
-  constraint uq_categoria_descricao unique (descricao),
+  id                        bigint auto_increment not null,
+  nome                      varchar(255) not null,
+  constraint uq_categoria_nome unique (nome),
   constraint pk_categoria primary key (id))
 ;
 
@@ -72,10 +69,7 @@ create table estado (
 ;
 
 create table fabricante (
-  id                        integer auto_increment not null,
-  data_de_cadastro          datetime not null,
-  data_de_alteracao         datetime not null,
-  padrao_do_sistema         tinyint(1) default 0,
+  id                        bigint auto_increment not null,
   nome                      varchar(255) not null,
   observacoes               varchar(255),
   constraint uq_fabricante_nome unique (nome),
@@ -83,7 +77,7 @@ create table fabricante (
 ;
 
 create table fornecedor (
-  id                        integer auto_increment not null,
+  id                        bigint auto_increment not null,
   data_de_cadastro          datetime not null,
   data_de_alteracao         datetime not null,
   padrao_do_sistema         tinyint(1) default 0,
@@ -127,20 +121,17 @@ create table produto (
   preco_de_venda            float not null,
   codigo_de_barras          varchar(255),
   observacoes               varchar(255),
-  fornecedor_id             integer,
-  categoria_id              integer,
-  fabricante_id             integer,
-  unidadedemedida_id        integer,
+  fornecedor_id             bigint,
+  categoria_id              bigint,
+  fabricante_id             bigint,
+  unidadedemedida_id        bigint,
   last_update               timestamp default '2014-10-06 21:17:06' not null,
   constraint uq_produto_descricao unique (descricao),
   constraint pk_produto primary key (id))
 ;
 
 create table unidadedemedida (
-  id                        integer auto_increment not null,
-  data_de_cadastro          datetime not null,
-  data_de_alteracao         datetime not null,
-  padrao_do_sistema         tinyint(1) default 0,
+  id                        bigint auto_increment not null,
   nome                      varchar(255) not null,
   observacoes               varchar(255),
   constraint uq_unidadedemedida_nome unique (nome),

@@ -1,19 +1,15 @@
 package controllers;
 
-import java.util.Calendar;
-import java.util.List;
-
-import javax.persistence.PersistenceException;
-
+import com.avaje.ebean.Ebean;
+import com.avaje.ebean.Query;
 import models.stock.Categoria;
 import play.Logger;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 
-import com.avaje.ebean.Ebean;
-import com.avaje.ebean.Page;
-import com.avaje.ebean.PagingList;
+import javax.persistence.PersistenceException;
+import java.util.List;
 
 public class CategoriaController extends Controller {
 
@@ -22,90 +18,90 @@ public class CategoriaController extends Controller {
 
         Categoria categoria = Json.fromJson(request().body().asJson(), Categoria.class);
 
-        categoria.setDataDeCadastro(Calendar.getInstance());
+        Categoria categoriaBusca = Ebean.find(Categoria.class).where().eq("nome", categoria.getNome()).findUnique();
+
+        if (categoriaBusca != null) {
+            return badRequest("Categoria já esta cadastrada");
+        }
 
         try {
-           Ebean.save(categoria);
-        } catch (PersistenceException e) {
-            return badRequest("Categoria já Cadastrada");
+            Ebean.save(categoria);
         } catch (Exception e) {
             return badRequest("Erro interno de sistema");
         }
 
-        categoria.setDataDeCadastro(Calendar.getInstance());
-        return ok(Json.toJson(categoria));
+        return created(Json.toJson(categoria));
     }
 
-    public static Result atualizar(Integer id) {
+    public static Result atualizar(Long id) {
         Logger.info("Atualizando Categoria");
 
         Categoria categoria = Json.fromJson(request().body().asJson(), Categoria.class);
 
-        categoria.setDataDeAlteracao(Calendar.getInstance());
-        Ebean.update(categoria);
+        Categoria categoriaBusca = Ebean.find(Categoria.class, id);
 
-        return ok(Json.toJson(categoria));
-    }
-
-    public static Result buscaPorId(Integer id) {
-        Logger.info("buscaPorId Categoria");
-
-        Categoria categoria = Ebean.find(Categoria.class, id);
-
-        if (categoria == null) {
-            return notFound("Categoria Não Encontrada");
-        }
-
-        return ok(Json.toJson(categoria));
-    }
-
-    //Mostrar acima de 14 linhas
-    public static Result buscaPorPaginas(Integer pagina) {
-        Logger.info("busca por página");
-
-        PagingList<Categoria> pagingList =
-                Ebean.find(Categoria.class)
-                        .order()
-                        .asc("descricao")
-                        .where().gt("descricao", "2")
-                        .findPagingList(14).setFetchAhead(true);
-
-        pagingList.getFutureRowCount();
-
-        Page<Categoria> page = pagingList.getPage(pagina);
-
-        List<Categoria> list = page.getList();
-
-        return ok(Json.toJson(list));
-    }
-    
-    public static Result buscaTodos() {
-        Logger.info("busca Todas Categorias");
-        return ok(Json.toJson(Ebean.find(Categoria.class)
-                .order()
-                .asc("descricao")
-                .where()
-                .gt("descricao", "2")
-                .setMaxRows(14)
-                .findList()));
-    }
-
-    public static Result remover(Integer id) {
-        Logger.info("remover categoria");
-
-        Categoria categoria = Ebean.find(Categoria.class, id);
-
-        if (categoria == null) {
-            return notFound("Categoria Não Encontrada");
+        if (categoriaBusca == null) {
+            return notFound(" Categoria não encontrada");
         }
 
         try {
-            Ebean.delete(categoria);
-        } catch (PersistenceException e) {
-            return badRequest("Existem produtos que pertencem a esta categoria, remova-os primeiro.");
+            Ebean.update(categoria);
         } catch (Exception e) {
             return badRequest("Erro interno de sistema");
         }
+
         return ok(Json.toJson(categoria));
     }
+
+    public static Result buscaPorId(Long id) {
+        Logger.info("Buscando Categoria por ID");
+
+        Categoria categoriaBusca = Ebean.find(Categoria.class, id);
+
+        if (categoriaBusca == null) {
+            return notFound(" Categoria não encontrada");
+        }
+
+        return ok(Json.toJson(categoriaBusca));
+    }
+
+    public static Result buscaTodos() {
+        Logger.info("Busca todas os Categorias");
+
+        return ok(Json.toJson(Ebean.find(Categoria.class)
+                .order()
+                .asc("nome")
+                .findList()));
+    }
+
+    public static Result remover(Long id) {
+        Logger.info("Remover Categoria");
+
+        Categoria categoriaBusca = Ebean.find(Categoria.class, id);
+
+        if (categoriaBusca == null) {
+            return notFound(" Categoria não encontrada");
+        }
+
+        try {
+            Ebean.delete(categoriaBusca);
+        } catch (PersistenceException e) {
+            return badRequest("Existem Produtos que dependem deste Fabricante, remova-os primeiro");
+        } catch (Exception e) {
+            return badRequest("Erro interno de sistema");
+        }
+
+        return ok(Json.toJson(categoriaBusca));
+    }
+
+    public static Result filtraPorNome(String filtro) {
+        Logger.info("Filtrando Categoria por nome");
+
+        Query<Categoria> query = Ebean.createQuery(Categoria.class, "find categoria where (nome like :nome)");
+        query.setParameter("nome", "%" + filtro + "%");
+        List<Categoria> filtroDeCategorias = query.findList();
+
+        return ok(Json.toJson(filtroDeCategorias));
+    }
+
 }

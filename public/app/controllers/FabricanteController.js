@@ -1,119 +1,98 @@
-function updateActivedPage(scope) {
-    window.scopePage = scope.pagina;
-}
-
 angular.module('mercado')
   .controller('FabricanteCreateController', function ($scope, $modal, $location, Fabricante, toastr) {
-        $scope.fabricante = {};
-        $scope.save = function(){
-            console.log($scope.fabricante);
-            Fabricante.save($scope.fabricante, function(data){
-                toastr.success(data.data,'Fabricante Salvo com Sucesso');
-                $location.path('/fabricantes');
-            }, function(data){
-                console.log(data);
-                toastr.error(data.data,'Não foi possível Salvar o Fabricante');
-            });
-        };
 
-        $scope.cancel = function(){
-            $location.path('/fabricantes');
-        };
+    $scope.fabricante = {};
 
-        $scope.init = function(){
-            Fabricante.getAll(function(data){
-                $scope.fabricantes = data;
-            });
-        };
-
-  }).controller('FabricanteListController', function ($scope, Fabricante, toastr){
-        $scope.fabricantes = [];
-        $scope.init = function(){
-          Fabricante.getAll(function(data){
+    $scope.init = function() {
+        Fabricante.getAll(function(data) {
             $scope.fabricantes = data;
-          });
-          $scope.pagina = 0;
-          updateActivedPage(this);
-        };
-        
-        //botão de páginas
-        $scope._pagina = function(val){
-        $scope.pagina = val;
-            Fabricante.getPagina({pagina: $scope.pagina}, $scope.fabricante, function(data){
-                $scope.fabricantes = data;
-            });
-            updateActivedPage(this);
-        };
-        
-        //botão próximo
-        $scope.proximo = function(val){
-        $scope.pagina = val + 1;
-            Fabricante.getPagina({pagina: $scope.pagina}, $scope.fabricante, function(data){
-                if (data.length===0) {
-                    $scope.pagina = $scope.pagina - 1;
-                }else{
-                    $scope.fabricantes = data;
-                };
-            });
-            updateActivedPage(this);
-         }
+        });
+    };
 
-        //botão anterior
-        $scope.anterior = function(val){
-        $scope.pagina = val - 1;
-            Fabricante.getPagina({pagina: $scope.pagina}, $scope.fabricante, function(data){
-                $scope.fabricantes = data;
-            });
-            updateActivedPage(this);
-         }
-
-        //deletar opcional
-        $scope.delete = function(id){
-           Fabricante.delete({id:id}, function(){
-               toastr.success('Fabricante Removido com Sucesso');
-               $scope.init();
-           }, function(data){
-               toastr.error(data.data,'Não foi possível Remover o Fabricante');
-           });
-        };
-
-  }).controller('FabricanteDetailController', function ($scope, $routeParams, $location, Fabricante, toastr){
-
-        $scope.init = function(){
-            $scope.fabricante = Fabricante.get({id:$routeParams.id});
-        };
-
-        $scope.update = function(){
-            Fabricante.update({id:$routeParams.id},$scope.fabricante, function(data){
-                toastr.info(data.data,'Fabricante Atualizado com Sucesso');
-                $location.path('/fabricantes');
-            },function(data){
-               toastr.error(data.data,'Não foi possível Atualizar o Fabricante');
-            });
-
-        };
-
-         $scope.cancel = function(){
+    $scope.save = function() {
+        console.log($scope.fabricante);
+        Fabricante.save($scope.fabricante, function(data) {
+            toastr.success('Fabricante Salvo com Sucesso');
             $location.path('/fabricantes');
-         };
-
-        $scope.delete = function(){
-            Fabricante.delete({id:$routeParams.id}, function(data){
-                toastr.warning(data.data,'Fabricante Removido com Sucesso');
-                $location.path('/fabricantes');
-            }, function(data){
+        }, function(data) {
             console.log(data);
-                toastr.error(data.data,'Não foi possível remover o Fabricante');
+            toastr.error(data.data,'Não foi possível Salvar');
+        });
+    };
+
+    $scope.cancel = function() {
+        $location.path('/fabricantes');
+    };
+
+  }).controller('FabricanteListController', function ($scope, Fabricante, toastr, $routeParams) {
+
+    $scope.fabricantes = [];
+
+    $scope.init = function() {
+        $scope.nomeFiltro = '';
+
+        Fabricante.getAll(function(data) {
+           $scope.fabricantes = data;
+           $scope.quantidade = $scope.fabricantes.length;
+        });
+    };
+
+    $scope.busca = function() {
+
+       if ($scope.nomeFiltro) {
+            Fabricante.getFiltroFabricante({filtro:$scope.nomeFiltro}, $scope.fabricante, function(data) {
+                $scope.fabricantes = data;
             });
-        };
+       } else {
+            Fabricante.getAll(function(data) {
+                $scope.fabricantes = data;
+            });
+       };
+    };
 
-        $scope.confirmacaoModal = {
-             "title": "Confirmação",
-             "content": "Deseja excluir o Fabricante?"
-        };
+  }).controller('FabricanteDetailController', function ($scope, $modal, $routeParams, $location, Fabricante, toastr) {
 
-        $scope.popoverConfirmacao = {
-             "title": "Confirmação",
-             "content": "Excluir?"
-        };
+    $scope.init = function() {
+        $scope.fabricante = Fabricante.get({id:$routeParams.id});
+    };
+
+    $scope.update = function() {
+        Fabricante.update({id:$routeParams.id}, $scope.fabricante, function(data) {
+            toastr.info('Fabricante Atualizado com Sucesso');
+            $location.path('/fabricantes');
+        },function(data) {
+           console.log(data);
+           toastr.error(data.data,'Não foi possível Atualizar');
+        });
+    };
+
+    $scope.delete = function() {
+        Fabricante.delete({id:$routeParams.id}, function() {
+            toastr.warning('Fabricante Removido com Sucesso');
+            $modalInstance.close();
+            $location.path('/fabricantes');
+        }, function(data) {
+            console.log(data);
+            $modalInstance.close();
+            toastr.error(data.data,'Não foi possível Remover');
+        });
+    };
+
+    $scope.cancel = function() {
+       $location.path('/fabricantes');
+    };
+
+    $scope.open = function (size) {
+
+        $modalInstance = $modal.open({
+              templateUrl: 'modalConfirmacao.html',
+              controller: 'FabricanteDetailController',
+              size: size,
+        });
+    };
+
+    $scope.cancelModal = function () {
+        $modalInstance.dismiss('cancelModal');
+    };
+
   });

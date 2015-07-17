@@ -1,4 +1,6 @@
 <div class="row">
+
+    <!-- Título da Página-->
     <legend>
         <h1 class="font-style">
             <i class="fa fa-flag"></i> Detalhe do País
@@ -7,6 +9,8 @@
             </button>
         </h1>
     </legend>
+
+    <!-- Modal de confirmação-->
     <script type="text/ng-template" id="modalConfirmacao.html">
         <div class="modal-header">
             <h3 align="center" class="modal-title">Confirmação:</h3>
@@ -19,6 +23,7 @@
             <button class="btn btn-default" ng-click="cancelModal()"><span class="fa fa-times"></span> Cancelar</button>
         </div>
     </script>
+
     <form ng-init="init()" class="form-horizontal" ng-submit="update()">
         <div class="form-group">
 
@@ -28,7 +33,7 @@
                 <div ng-class="{'has-error': !pais.nome}">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-flag"></i></span>
-                        <input autofocus placeholder="Insira o nome do país" maxlength="100" class="form-control" type="text" ng-model="pais.nome" id="nome" required/>
+                        <input placeholder="Insira o nome do país" maxlength="100" class="form-control" type="text" ng-model="pais.nome" id="nome" required/>
                     </div>
                 </div>
             </div>

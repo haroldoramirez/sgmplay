@@ -12,12 +12,6 @@ GET     /saiu                             controllers.LoginController.telaLogout
 POST    /autenticar                       controllers.LoginController.autenticar()
 GET     /logout                           controllers.LoginController.logout()
 
-# Swagger
-#GET     /swagger                      controllers.Application.swagger()
-#GET     /api-docs.json/paises         controllers.ApiHelpController.getResource(path = "/paises")
-#GET     /api-docs.json                controllers.ApiHelpController.getResources
-#GET    /aplicacao/swagger/:status    controllers.Application.swagger(status: String)
-
 # Applications
 GET		/versaoplay					  controllers.Application.versaoplay()
 
@@ -55,43 +49,43 @@ GET     /bairros/nome/:filtro          controllers.BairroController.filtraPorNom
 
 # CRUD Cliente
 POST    /clientes                     controllers.ClienteController.inserir()
-PUT     /clientes/:id                 controllers.ClienteController.atualizar(id:Integer)
+PUT     /clientes/:id                 controllers.ClienteController.atualizar(id:Long)
 GET     /clientes                     controllers.ClienteController.buscaTodos()
-GET     /clientes/:id                 controllers.ClienteController.buscaPorId(id:Integer)
-DELETE  /clientes/:id                 controllers.ClienteController.remover(id:Integer)
+GET     /clientes/:id                 controllers.ClienteController.buscaPorId(id:Long)
+DELETE  /clientes/:id                 controllers.ClienteController.remover(id:Long)
 GET     /clientes/nome/:filtro        controllers.ClienteController.filtraPorNome(filtro:String)
 
 # CRUD Fornecedor
 POST    /fornecedores                 controllers.FornecedorController.inserir()
-PUT     /fornecedores/:id             controllers.FornecedorController.atualizar(id:Integer)
+PUT     /fornecedores/:id             controllers.FornecedorController.atualizar(id:Long)
 GET     /fornecedores                 controllers.FornecedorController.buscaTodos()
-GET     /fornecedoresPagina/:pagina   controllers.FornecedorController.buscaPorPaginas(pagina:Integer)
-GET     /fornecedores/:id             controllers.FornecedorController.buscaPorId(id:Integer)
-DELETE  /fornecedores/:id             controllers.FornecedorController.remover(id:Integer)
+GET     /fornecedores/:id             controllers.FornecedorController.buscaPorId(id:Long)
+DELETE  /fornecedores/:id             controllers.FornecedorController.remover(id:Long)
+GET     /fornecedores/nome/:filtro    controllers.FornecedorController.filtraPorNome(filtro:String)
 
 # CRUD Categoria
 POST    /categorias                   controllers.CategoriaController.inserir()
-PUT     /categorias/:id               controllers.CategoriaController.atualizar(id:Integer)
+PUT     /categorias/:id               controllers.CategoriaController.atualizar(id:Long)
 GET     /categorias                   controllers.CategoriaController.buscaTodos()
-GET     /categoriasPagina/:pagina     controllers.CategoriaController.buscaPorPaginas(pagina:Integer)
-GET     /categorias/:id               controllers.CategoriaController.buscaPorId(id:Integer)
-DELETE  /categorias/:id               controllers.CategoriaController.remover(id:Integer)
+GET     /categorias/:id               controllers.CategoriaController.buscaPorId(id:Long)
+DELETE  /categorias/:id               controllers.CategoriaController.remover(id:Long)
+GET     /categorias/nome/:filtro      controllers.CategoriaController.filtraPorNome(filtro:String)
 
 # CRUD Fabricante
 POST    /fabricantes                  controllers.FabricanteController.inserir()
-PUT     /fabricantes/:id              controllers.FabricanteController.atualizar(id:Integer)
+PUT     /fabricantes/:id              controllers.FabricanteController.atualizar(id:Long)
 GET     /fabricantes                  controllers.FabricanteController.buscaTodos()
-GET     /fabricantesPagina/:pagina    controllers.FabricanteController.buscaPorPaginas(pagina:Integer)
-GET     /fabricantes/:id              controllers.FabricanteController.buscaPorId(id:Integer)
-DELETE  /fabricantes/:id              controllers.FabricanteController.remover(id:Integer)
+GET     /fabricantes/:id              controllers.FabricanteController.buscaPorId(id:Long)
+DELETE  /fabricantes/:id              controllers.FabricanteController.remover(id:Long)
+GET     /fabricantes/nome/:filtro     controllers.FabricanteController.filtraPorNome(filtro:String)
 
 # CRUD Unidade de Medida
 POST    /unidadesdemedidas                  controllers.UnidadeDeMedidaController.inserir()
-PUT     /unidadesdemedidas/:id              controllers.UnidadeDeMedidaController.atualizar(id:Integer)
+PUT     /unidadesdemedidas/:id              controllers.UnidadeDeMedidaController.atualizar(id:Long)
 GET     /unidadesdemedidas                  controllers.UnidadeDeMedidaController.buscaTodos()
-GET     /unidadesdemedidasPagina/:pagina    controllers.UnidadeDeMedidaController.buscaPorPaginas(pagina:Integer)
-GET     /unidadesdemedidas/:id              controllers.UnidadeDeMedidaController.buscaPorId(id:Integer)
-DELETE  /unidadesdemedidas/:id              controllers.UnidadeDeMedidaController.remover(id:Integer)
+GET     /unidadesdemedidas/:id              controllers.UnidadeDeMedidaController.buscaPorId(id:Long)
+DELETE  /unidadesdemedidas/:id              controllers.UnidadeDeMedidaController.remover(id:Long)
+GET     /unidadesdemedidas/nome/:filtro     controllers.UnidadeDeMedidaController.filtraPorNome(filtro:String)
 
 # CRUD Produto
 POST    /produtos                     controllers.ProdutoController.inserir()

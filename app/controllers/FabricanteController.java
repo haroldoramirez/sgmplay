@@ -3,6 +3,7 @@ package controllers;
 import com.avaje.ebean.Ebean;
 import com.avaje.ebean.Page;
 import com.avaje.ebean.PagingList;
+import com.avaje.ebean.Query;
 import models.stock.Fabricante;
 import play.Logger;
 import play.libs.Json;
@@ -20,93 +21,90 @@ public class FabricanteController extends Controller {
 
         Fabricante fabricante = Json.fromJson(request().body().asJson(), Fabricante.class);
 
-        fabricante.setDataDeCadastro(Calendar.getInstance());
+        Fabricante fabricanteBusca = Ebean.find(Fabricante.class).where().eq("nome", fabricante.getNome()).findUnique();
+
+        if (fabricanteBusca != null) {
+            return badRequest("Fabricante já esta cadastrado");
+        }
+
         try {
             Ebean.save(fabricante);
-        } catch (PersistenceException e) {
-            return badRequest("Fabricante já Cadastrado");
         } catch (Exception e) {
             return badRequest("Erro interno de sistema");
         }
 
-        fabricante.setDataDeCadastro(Calendar.getInstance());
         return created(Json.toJson(fabricante));
     }
 
-    public static Result atualizar(Integer id) {
+    public static Result atualizar(Long id) {
         Logger.info("Atualizando Fabricante");
 
         Fabricante fabricante = Json.fromJson(request().body().asJson(), Fabricante.class);
 
-        fabricante.setDataDeAlteracao(Calendar.getInstance());
+        Fabricante fabricanteBusca = Ebean.find(Fabricante.class, id);
 
-        Ebean.update(fabricante);
-
-        return ok(Json.toJson(fabricante));
-    }
-
-    public static Result buscaPorId(Integer id) {
-        Logger.info("buscaPorId Fabricante");
-
-        Fabricante fabricante = Ebean.find(Fabricante.class, id);
-
-        if (fabricante == null) {
-            return notFound("Fabricante não encontrado");
-        }
-
-        return ok(Json.toJson(fabricante));
-    }
-
-    public static Result buscaTodos() {
-        Logger.info("busca Todos os Fabricantes ordenados");
-        return ok(Json.toJson(Ebean.find(Fabricante.class)
-                .order()
-                .asc("nome")
-                .where()
-                .gt("nome", "2")
-                .setMaxRows(14)
-                .findList()));
-    }
-
-    //Mostrar acima de 14 linhas
-    public static Result buscaPorPaginas(Integer pagina) {
-        Logger.info("busca por página");
-
-        PagingList<Fabricante> pagingList =
-                Ebean.find(Fabricante.class)
-                        .order()
-                        .asc("nome")
-                        .where().gt("nome", "2")
-                        .findPagingList(14).setFetchAhead(true);
-
-        pagingList.getFutureRowCount();
-
-        Page<Fabricante> page = pagingList.getPage(pagina);
-
-        List<Fabricante> list = page.getList();
-
-        return ok(Json.toJson(list));
-    }
-
-    public static Result remover(Integer id) {
-        Logger.info("remover pais");
-
-        Fabricante fabricante = Ebean.find(Fabricante.class, id);
-
-        if (fabricante == null) {
-            return notFound("Fabricante não encontrado");
+        if (fabricanteBusca == null) {
+            return notFound(" Fabricante não encontrado");
         }
 
         try {
-            Ebean.delete(fabricante);
-        } catch (PersistenceException e) {
-            return badRequest("Existem produtos que pertencem a este fabricante, remova-os primeiro.");
-
+            Ebean.update(fabricante);
         } catch (Exception e) {
             return badRequest("Erro interno de sistema");
         }
 
         return ok(Json.toJson(fabricante));
+    }
+
+    public static Result buscaPorId(Long id) {
+        Logger.info("Buscando Fabricante por ID");
+
+        Fabricante fabricanteBusca = Ebean.find(Fabricante.class, id);
+
+        if (fabricanteBusca == null) {
+            return notFound(" Fabricante não encontrado");
+        }
+
+        return ok(Json.toJson(fabricanteBusca));
+    }
+
+    public static Result buscaTodos() {
+        Logger.info("Busca todos os Fabricantes");
+
+        return ok(Json.toJson(Ebean.find(Fabricante.class)
+                .order()
+                .asc("nome")
+                .findList()));
+    }
+    
+    public static Result remover(Long id) {
+        Logger.info("Remover Fabricante");
+
+        Fabricante fabricanteBusca = Ebean.find(Fabricante.class, id);
+
+        if (fabricanteBusca == null) {
+            return notFound(" Fabricante não encontrado");
+        }
+
+        try {
+            Ebean.delete(fabricanteBusca);
+        } catch (PersistenceException e) {
+            return badRequest("Existem Produtos que dependem deste Fabricante, remova-os primeiro");
+        } catch (Exception e) {
+            return badRequest("Erro interno de sistema");
+        }
+
+        return ok(Json.toJson(fabricanteBusca));
+    }
+    
+    public static Result filtraPorNome(String filtro) {
+        Logger.info("Filtrando Fabricante por nome");
+        
+        Query<Fabricante> query = Ebean.createQuery(Fabricante.class, "find fabricante where (nome like :nome)");
+        query.setParameter("nome", "%" + filtro + "%");
+        List<Fabricante> filtroDeFabricantes = query.findList();
+
+        return ok(Json.toJson(filtroDeFabricantes));
     }
 
 }

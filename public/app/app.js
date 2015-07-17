@@ -159,27 +159,38 @@ angular
             });
    //Configuração das notificações
    }).config(function(toastrConfig) {
-        angular.extend(toastrConfig, {
-          allowHtml: true,
-          closeButton: true,
-          closeHtml: '<button>&times;</button>',
-          containerId: 'toast-container',
-          extendedTimeOut: 6000,
-          iconClasses: {
-            error: 'toast-error',
-            info: 'toast-info',
-            success: 'toast-success',
-            warning: 'toast-warning'
-          },
-          messageClass: 'toast-message',
-          //positionClass: 'toast-bottom-full-width',
-          //positionClass: 'toast-top-full-width',
-          positionClass: 'toast-bottom-right',
-          tapToDismiss: true,
-          timeOut: 6000,
-          titleClass: 'toast-title',
-          toastClass: 'toast'
-        })
+         angular.extend(toastrConfig, {
+            allowHtml: false,
+            autoDismiss: false,
+            closeButton: false,
+            closeHtml: '<button>&times;</button>',
+            containerId: 'toast-container',
+            extendedTimeOut: 6000,
+            iconClasses: {
+              error: 'toast-error',
+              info: 'toast-info',
+              success: 'toast-success',
+              warning: 'toast-warning'
+            },
+            maxOpened: 0,
+            messageClass: 'toast-message',
+            newestOnTop: true,
+            onHidden: null,
+            onShown: null,
+            positionClass: 'toast-bottom-right',
+            preventDuplicates: false,
+            preventOpenDuplicates: false,
+            progressBar: false,
+            tapToDismiss: true,
+            target: 'body',
+            templates: {
+              toast: 'directives/toast/toast.html',
+              progressbar: 'directives/progressbar/progressbar.html'
+            },
+            timeOut: 6000,
+            titleClass: 'toast-title',
+            toastClass: 'toast'
+          });
    }).config(function($datepickerProvider) {
        angular.extend($datepickerProvider.defaults, {
            iconLeft: 'fa fa-chevron-left',

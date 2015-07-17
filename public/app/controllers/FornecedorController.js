@@ -1,123 +1,99 @@
-function updateActivedPage(scope) {
-    window.scopePage = scope.pagina;
-}
-
 angular.module('mercado')
-.controller('FornecedorCreateController', function ($scope, $location, Fornecedor, Bairro, toastr){
-          $scope.fornecedor = {};
-          $scope.save = function(){
-              console.log($scope.fornecedor);
-              Fornecedor.save($scope.fornecedor, function(data){
-                  toastr.success(data.data,'Fornecedor Salvo com Sucesso');
-                  $location.path('/fornecedores');
-              }, function(data){
-                  console.log(data);
-                  toastr.error(data.data,'Não foi possível Salvar o Fornecedor');
-              });
-          };
+  .controller('FornecedorCreateController', function ($scope, $modal, $location, Fornecedor, Bairro, toastr) {
 
-          $scope.cancel = function(){
-              $location.path('/fornecedores');
-          };
+    $scope.fornecedor = {};
 
-          $scope.init = function(){
-              Bairro.getAll(function(data){
-                  $scope.bairros = data;
-              });
-          };
+    $scope.init = function() {
+        Bairro.getAll(function(data) {
+            $scope.bairros = data;
+        });
+    };
 
-}).controller('FornecedorListController', function ($scope, Fornecedor, toastr){
-          $scope.fornecedores = [];
-          $scope.init = function(){
-            Fornecedor.getAll(function(data){
-              $scope.fornecedores = data;
+    $scope.save = function() {
+        console.log($scope.fornecedor);
+        Fornecedor.save($scope.fornecedor, function(data) {
+            toastr.success('Fornecedor Salvo com Sucesso');
+            $location.path('/fornecedores');
+        }, function(data) {
+            console.log(data);
+            toastr.error(data.data,'Não foi possível Salvar');
+        });
+    };
+
+    $scope.cancel = function() {
+        $location.path('/fornecedores');
+    };
+
+  }).controller('FornecedorListController', function ($scope, Fornecedor, toastr, $routeParams) {
+
+    $scope.fornecedores = [];
+
+    $scope.init = function() {
+        $scope.nomeFiltro = '';
+
+        Fornecedor.getAll(function(data) {
+           $scope.fornecedores = data;
+           $scope.quantidade = $scope.fornecedores.length;
+        });
+    };
+
+    $scope.busca = function() {
+
+       if ($scope.nomeFiltro) {
+            Fornecedor.getFiltroFornecedor({filtro:$scope.nomeFiltro}, $scope.fornecedor, function(data) {
+                $scope.fornecedores = data;
             });
-            $scope.pagina = 0;
-            updateActivedPage(this);
-          };
-          
-          //botão de páginas
-          $scope._pagina = function(val){
-          $scope.pagina = val;
-              Fornecedor.getPagina({pagina: $scope.pagina}, $scope.fornecedor, function(data){
-                  $scope.fornecedores = data;
-              });
-              updateActivedPage(this);
-          };
+       } else {
+            Fornecedor.getAll(function(data) {
+                $scope.fornecedores = data;
+            });
+       };
+    };
 
-          //botão próximo
-          $scope.proximo = function(val){
-          $scope.pagina = val + 1;
-              Fornecedor.getPagina({pagina: $scope.pagina}, $scope.fornecedor, function(data){
-                  if (data.length===0) {
-                      $scope.pagina = $scope.pagina - 1;
-                  }else{
-                      $scope.fornecedores = data;
-                  };
-              });
-              updateActivedPage(this);
-          }
+  }).controller('FornecedorDetailController', function ($scope, $modal, $routeParams, $location, Fornecedor, Bairro, toastr) {
 
-          //botão anterior
-          $scope.anterior = function(val){
-          $scope.pagina = val - 1;
-              Fornecedor.getPagina({pagina: $scope.pagina}, $scope.fornecedor, function(data){
-                  $scope.fornecedores = data;
-              });
-              updateActivedPage(this);
-          }
+    $scope.init = function() {
+        $scope.fornecedor = Fornecedor.get({id:$routeParams.id});
+        $scope.bairros = Bairro.getAll();
+    };
 
-        //deletar opcional
-          $scope.delete = function(id){
-             Fornecedor.delete({id:id}, function(){
-                 toastr.success('Fornecedor Removido com Sucesso');
-                 $scope.init();
-             }, function(data){
-                 console.log(data);
-                 toastr.error(data.data,'Não foi possível Remover o Fornecedor');
-             });
-          };
+    $scope.update = function() {
+        Fornecedor.update({id:$routeParams.id}, $scope.fornecedor, function(data) {
+            toastr.info('Fornecedor Atualizado com Sucesso');
+            $location.path('/fornecedores');
+        },function(data) {
+           console.log(data);
+           toastr.error(data.data,'Não foi possível Atualizar');
+        });
+    };
 
-}).controller('FornecedorDetailController', function ($scope, $routeParams, $location, Fornecedor, Bairro, toastr){
+    $scope.delete = function() {
+        Fornecedor.delete({id:$routeParams.id}, function() {
+            toastr.warning('Fornecedor Removido com Sucesso');
+            $modalInstance.close();
+            $location.path('/fornecedores');
+        }, function(data) {
+            console.log(data);
+            $modalInstance.close();
+            toastr.error(data.data,'Não foi possível Remover');
+        });
+    };
 
-          $scope.init = function(){
-             $scope.fornecedor = Fornecedor.get({id:$routeParams.id});
-             $scope.bairros = Bairro.getAll();
-          };
+    $scope.cancel = function() {
+       $location.path('/fornecedores');
+    };
 
-          $scope.update = function(){
-              Fornecedor.update({id:$routeParams.id},$scope.fornecedor, function(data){
-                  toastr.info(data.data,'Fornecedor Atualizado com Sucesso');
-                  $location.path('/fornecedores');
-              },function(data){
-                 console.log(data);
-                 toastr.error(data.data,'Não foi possível Atualizar o Fornecedor');
-              });
-          };
+    $scope.open = function (size) {
 
-          $scope.cancel = function(){
-              $location.path('/fornecedores');
-          };
+        $modalInstance = $modal.open({
+              templateUrl: 'modalConfirmacao.html',
+              controller: 'FornecedorDetailController',
+              size: size,
+        });
+    };
 
-          $scope.delete = function(){
-              Fornecedor.delete({id:$routeParams.id}, function(data){
-                  toastr.warning(data.data,'Fornecedor Removido com Sucesso');
-                  $location.path('/fornecedores');
-              }, function(data){
-                  console.log(data);
-                  toastr.error(data.data,'Não foi possível Remover o Fornecedor');
-              });
+    $scope.cancelModal = function () {
+        $modalInstance.dismiss('cancelModal');
+    };
 
-          };
-
-          $scope.confirmacaoModal = {
-                "title": "Confirmação",
-                "content": "Deseja excluir o Fornecedor?"
-          };
-
-          $scope.popoverConfirmacao = {
-                "title": "Confirmação",
-                "content": "Excluir?"
-          };
-
-});
+  });

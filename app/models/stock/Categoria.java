@@ -1,37 +1,38 @@
 package models.stock;
 
 import models.base.EntidadePai;
+import play.db.ebean.Model;
 import play.libs.Json;
 
 import javax.persistence.*;
 
 @Entity
 @Table(name = "categoria")
-public class Categoria extends EntidadePai {
+public class Categoria extends Model {
 
 	private static final long serialVersionUID = 1L;
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     @Column(nullable = false, unique = true)
-    private String descricao;
+    private String nome;
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
-    public String getDescricao() {
-        return descricao;
+    public String getNome() {
+        return nome;
     }
 
-    public void setDescricao(String descricao) {
-        this.descricao = descricao;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
 
     @Override

@@ -1,58 +1,64 @@
-<div class="container">
-    <div class="row">
-        <div class="col-md-6 col-md-offset-3">
-            <fieldset>
-                <div id="legend">
-                    <legend>
-                        <h2>
-                            Atualizar Unidade de Medida <a class="btn btn-link pull-right" data-template="assets/modal/ajuda/unidadedemedidaModal.html" bs-modal="modalAjuda">
-                            <span class="glyphicon glyphicon-info-sign"></span><b> Ajuda</b></a>
-                        </h2>
-                    </legend>
-                </div>
-                <form ng-init="init()" class="form-horizontal" ng-submit="update()">
-                    <div class="form-group">
-                        <!--Input do Nome-->
-                        <div class="col-lg-12">
-                            <label class="control-label" for="nome">Nome</label>
-                            <div ng-class="{'has-error': !unidadedemedida.nome}">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-scale"></i></span>
-                                    <input autofocus placeholder="Insira o nome da Unidade de Medida" maxlength="100" class="form-control" type="text" ng-model="unidadedemedida.nome" id="nome" required/>
-                                </div>
-                            </div>
-                        </div>
-                        <!--Input de Observações-->
-                        <div class="col-lg-12">
-                            <label class="control-label" for="observacoes">Observações</label>
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-book"></i></span>
-                                <textarea maxlength="200" placeholder="Informações Adicionais" style="overflow:auto;resize:none" class="form-control" ng-model="unidadedemedida.observacoes" id="observacoes">
+<div class="row">
 
-                                </textarea>
-                            </div>
-                            <br>
-                        </div>
-                        <!--Botões-->
-                        <div class="col-lg-8">
-                            <div class="control-group">
-                                <br>
-                                <button type="submit" id="save" class="btn btn-primary" ng-disabled="!unidadedemedida.nome">
-                                    <span class="glyphicon glyphicon-refresh"></span> <b>Atualizar</b>
-                                </button>
-                                <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">
-                                    <span class="glyphicon glyphicon-arrow-left"></span> <b>Voltar</b>
-                                </button>
-                                <button  data-animation="am-flip-x"  data-trigger="focus"  type="button" class="btn btn-warning" data-template="assets/popover/confirmacaoPopover.html" bs-popover="popoverConfirmacao">
-                                    <span class="glyphicon glyphicon-trash"></span> <b>Remover</b>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <hr>
-                </form>
-            </fieldset>
+    <!-- Título da Página-->
+    <legend>
+        <h1 class="font-style">
+            <i class="glyphicon glyphicon-scale"></i> Detalhe da Unidade de Medida
+            <button type="button" class="btn btn-danger pull-right" ng-click="open('sm')">
+                <span class="fa fa-trash"></span> Remover
+            </button>
+        </h1>
+    </legend>
+
+    <!-- Modal de confirmação-->
+    <script type="text/ng-template" id="modalConfirmacao.html">
+        <div class="modal-header">
+            <h3 align="center" class="modal-title">Confirmação:</h3>
         </div>
-    </div>
-    <br>
+        <div align="center" class="modal-body">
+            Deseja remover a unidade de medida?
+        </div>
+        <div class="modal-footer">
+            <button id="delete" class="btn btn-warning" ng-click="delete()"><span class="fa fa-check"></span> Sim</button>
+            <button class="btn btn-default" ng-click="cancelModal()"><span class="fa fa-times"></span> Cancelar</button>
+        </div>
+    </script>
+
+    <form ng-init="init()" class="form-horizontal" ng-submit="update()">
+        <div class="form-group">
+
+            <!--Input do Nome-->
+            <div class="col-md-6">
+                <label class="control-label" for="nome">Nome</label>
+                <div ng-class="{'has-error': !unidadedemedida.nome}">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="glyphicon glyphicon-scale"></i></span>
+                        <input placeholder="Insira o nome da unidade de medida" maxlength="100" class="form-control" type="text" ng-model="unidadedemedida.nome" id="nome" required/>
+                    </div>
+                </div>
+            </div>
+
+            <!--Input de Observações-->
+            <div class="col-md-6">
+                <label class="control-label" for="observacoes">Observações</label>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="fa fa-book"></i></span>
+                    <input placeholder="Informações Adicionais" maxlength="100" class="form-control" type="text" ng-model="unidadedemedida.observacoes" id="observacoes"/>
+                </div>
+            </div>
+
+            <!--Botões-->
+            <div class="col-md-12">
+                <div class="control-group">
+                    <br>
+                    <button type="submit" id="update" class="btn btn-primary" ng-disabled="!unidadedemedida.nome">
+                        <span class="fa fa-refresh"></span> Atualizar
+                    </button>
+                    <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">
+                        <span class="fa fa-arrow-left"></span> Voltar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </form>
 </div>

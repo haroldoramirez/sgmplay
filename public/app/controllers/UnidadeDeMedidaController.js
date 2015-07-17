@@ -1,120 +1,98 @@
-function updateActivedPage(scope) {
-    window.scopePage = scope.pagina;
-}
-
 angular.module('mercado')
   .controller('UnidadeDeMedidaCreateController', function ($scope, $modal, $location, UnidadeDeMedida, toastr) {
-        $scope.unidadedemedida = {};
-        $scope.save = function(){
-            console.log($scope.unidadedemedida);
-            UnidadeDeMedida.save($scope.unidadedemedida, function(data){
-                toastr.success(data.data,'Unidade de Medida Salva com Sucesso');
-                $location.path('/unidadesdemedidas');
-            }, function(data){
-                console.log(data);
-                toastr.error(data.data,'Não foi possível Salvar a Unidade de Medida');
-            });
-        };
 
-        $scope.cancel = function(){
-            $location.path('/unidadesdemedidas');
-        };
+    $scope.unidadedemedida = {};
 
-        $scope.init = function(){
-            UnidadeDeMedida.getAll(function(data){
-                $scope.unidadesdemedidas = data;
-            });
-        };
-
-  }).controller('UnidadeDeMedidaListController', function ($scope, UnidadeDeMedida, toastr){
-        $scope.unidadesdemedidas = [];
-        $scope.init = function(){
-          UnidadeDeMedida.getAll(function(data){
+    $scope.init = function() {
+        UnidadeDeMedida.getAll(function(data) {
             $scope.unidadesdemedidas = data;
-          });
-          $scope.pagina = 0;
-          updateActivedPage(this);
-        };
-        
-        //botão de páginas
-        $scope._pagina = function(val){
-        $scope.pagina = val;
-            UnidadeDeMedida.getPagina({pagina: $scope.pagina}, $scope.unidadedemedida, function(data){
-                $scope.unidadesdemedidas = data;
-            });
-            updateActivedPage(this);
-        };
+        });
+    };
 
-        //botão próximo
-        $scope.proximo = function(val){
-        $scope.pagina = val + 1;
-            UnidadeDeMedida.getPagina({pagina: $scope.pagina}, $scope.unidadedemedida, function(data){
-                if (data.length===0) {
-                    $scope.pagina = $scope.pagina - 1;
-                }else{
-                    $scope.unidadesdemedidas = data;
-                };
-            });
-            updateActivedPage(this);
-         }
-
-        //botão anterior
-        $scope.anterior = function(val){
-        $scope.pagina = val - 1;
-            UnidadeDeMedida.getPagina({pagina: $scope.pagina}, $scope.unidadedemedida, function(data){
-                $scope.unidadesdemedidas = data;
-            });
-            updateActivedPage(this);
-         }
-
-        //deletar opcional
-        $scope.delete = function(id){
-           UnidadeDeMedida.delete({id:id}, function(){
-               toastr.success('Unidade de Medida Removida com Sucesso');
-               $scope.init();
-           }, function(data){
-               toastr.error(data.data,'Não foi possível Remover a Unidade de Medida');
-           });
-        };
-
-  }).controller('UnidadeDeMedidaDetailController', function ($scope, $routeParams, $location, UnidadeDeMedida, toastr){
-
-        $scope.init = function(){
-            $scope.unidadedemedida = UnidadeDeMedida.get({id:$routeParams.id});
-        };
-
-        $scope.update = function(){
-            UnidadeDeMedida.update({id:$routeParams.id},$scope.unidadedemedida, function(data){
-               toastr.info(data.data,'Unidade de Medida Atualizada com sucesso');
-               $location.path('/unidadesdemedidas');
-            },function(data){
-               console.log(data);
-               toastr.error(data.data,'Não foi possível Atualizar a Unidade de Medida');
-            });
-
-        };
-
-         $scope.cancel = function(){
+    $scope.save = function() {
+        console.log($scope.unidadedemedida);
+        UnidadeDeMedida.save($scope.unidadedemedida, function(data) {
+            toastr.success('Unidade de Medida Salva com Sucesso');
             $location.path('/unidadesdemedidas');
-         };
-
-        $scope.delete = function(){
-            UnidadeDeMedida.delete({id:$routeParams.id}, function(data){
-                toastr.warning(data.data,'Unidade de Medida removida com sucesso');
-                $location.path('/unidadesdemedidas');
-            }, function(data){
+        }, function(data) {
             console.log(data);
-                toastr.error(data.data,'Não foi possível Remover a Unidade de Medida');
+            toastr.error(data.data,'Não foi possível Salvar');
+        });
+    };
+
+    $scope.cancel = function() {
+        $location.path('/unidadesdemedidas');
+    };
+
+  }).controller('UnidadeDeMedidaListController', function ($scope, UnidadeDeMedida, toastr, $routeParams) {
+
+    $scope.unidadesdemedidas = [];
+
+    $scope.init = function() {
+        $scope.nomeFiltro = '';
+
+        UnidadeDeMedida.getAll(function(data) {
+           $scope.unidadesdemedidas = data;
+           $scope.quantidade = $scope.unidadesdemedidas.length;
+        });
+    };
+
+    $scope.busca = function() {
+
+       if ($scope.nomeFiltro) {
+            UnidadeDeMedida.getFiltroUnidadeDeMedida({filtro:$scope.nomeFiltro}, $scope.unidadedemedida, function(data) {
+                $scope.unidadesdemedidas = data;
             });
-        };
+       } else {
+            UnidadeDeMedida.getAll(function(data) {
+                $scope.unidadesdemedidas = data;
+            });
+       };
+    };
 
-        $scope.confirmacaoModal = {
-             "title": "Confirmação",
-             "content": "Deseja excluir a Unidade de Medida?"
-        };
+  }).controller('UnidadeDeMedidaDetailController', function ($scope, $modal, $routeParams, $location, UnidadeDeMedida, toastr) {
 
-        $scope.popoverConfirmacao = {
-             "title": "Confirmação",
-             "content": "Excluir?"
-        };
+    $scope.init = function() {
+        $scope.unidadedemedida = UnidadeDeMedida.get({id:$routeParams.id});
+    };
+
+    $scope.update = function() {
+        UnidadeDeMedida.update({id:$routeParams.id}, $scope.unidadedemedida, function(data) {
+            toastr.info('Unidade de Medida Atualizada com Sucesso');
+            $location.path('/unidadesdemedidas');
+        },function(data) {
+           console.log(data);
+           toastr.error(data.data,'Não foi possível Atualizar');
+        });
+    };
+
+    $scope.delete = function() {
+        UnidadeDeMedida.delete({id:$routeParams.id}, function() {
+            toastr.warning('Unidade de Medida Removida com Sucesso');
+            $modalInstance.close();
+            $location.path('/unidadesdemedidas');
+        }, function(data) {
+            console.log(data);
+            $modalInstance.close();
+            toastr.error(data.data,'Não foi possível Remover');
+        });
+    };
+
+    $scope.cancel = function() {
+       $location.path('/unidadesdemedidas');
+    };
+
+    $scope.open = function (size) {
+
+        $modalInstance = $modal.open({
+              templateUrl: 'modalConfirmacao.html',
+              controller: 'UnidadeDeMedidaDetailController',
+              size: size,
+        });
+    };
+
+    $scope.cancelModal = function () {
+        $modalInstance.dismiss('cancelModal');
+    };
+
   });

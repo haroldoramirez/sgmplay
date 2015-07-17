@@ -1,112 +1,116 @@
 package controllers;
 
-import java.util.Calendar;
-import java.util.List;
-
-import javax.persistence.PersistenceException;
-
+import com.avaje.ebean.Ebean;
+import com.avaje.ebean.Page;
+import com.avaje.ebean.PagingList;
+import com.avaje.ebean.Query;
 import models.stock.UnidadeDeMedida;
 import play.Logger;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 
-import com.avaje.ebean.Ebean;
-import com.avaje.ebean.Page;
-import com.avaje.ebean.PagingList;
+import javax.persistence.PersistenceException;
+import java.util.List;
 
 public class UnidadeDeMedidaController extends Controller {
 
+
+    //Salva pais no banco de dados
     public static Result inserir() {
         Logger.info("Salvando Unidade de Medida");
 
         UnidadeDeMedida unidadeDeMedida = Json.fromJson(request().body().asJson(), UnidadeDeMedida.class);
 
-        unidadeDeMedida.setDataDeCadastro(Calendar.getInstance());
-        try{
+        UnidadeDeMedida unidadeBusca = Ebean.find(UnidadeDeMedida.class).where().eq("nome", unidadeDeMedida.getNome()).findUnique();
+
+        if (unidadeBusca != null) {
+            return badRequest("Unidade de Medida já esta cadastrado");
+        }
+
+        try {
             Ebean.save(unidadeDeMedida);
-        }catch (PersistenceException e) {
-            return badRequest("Unidade de Medida já Cadastrada");
         } catch (Exception e) {
             return badRequest("Erro interno de sistema");
         }
 
-        unidadeDeMedida.setDataDeCadastro(Calendar.getInstance());
         return created(Json.toJson(unidadeDeMedida));
     }
 
-    public static Result atualizar(Integer id) {
+    //Atualiza pais do banco de dados
+    public static Result atualizar(Long id) {
         Logger.info("Atualizando Unidade de Medida");
 
         UnidadeDeMedida unidadeDeMedida = Json.fromJson(request().body().asJson(), UnidadeDeMedida.class);
 
-        unidadeDeMedida.setDataDeAlteracao(Calendar.getInstance());
-        Ebean.update(unidadeDeMedida);
+        UnidadeDeMedida unidadeBusca = Ebean.find(UnidadeDeMedida.class, id);
 
-        return ok(Json.toJson(unidadeDeMedida));
-    }
-
-    public static Result buscaPorId(Integer id) {
-        Logger.info("buscaPorId Unidade de Medida");
-
-        UnidadeDeMedida unidadeDeMedida = Ebean.find(UnidadeDeMedida.class, id);
-
-        if (unidadeDeMedida == null) {
-            return notFound("Unidade de Medida não encontrada");
-        }
-
-        return ok(Json.toJson(unidadeDeMedida));
-    }
-
-    public static Result buscaTodos() {
-        Logger.info("busca Todos as Unidades de Medidas ordenadas");
-        return ok(Json.toJson(Ebean.find(UnidadeDeMedida.class)
-                .order()
-                .asc("nome")
-                .where()
-                .gt("nome", "2")
-                .setMaxRows(14)
-                .findList()));
-    }
-
-    //Mostrar acima de 14 linhas
-    public static Result buscaPorPaginas(Integer pagina) {
-        Logger.info("busca por página");
-
-        PagingList<UnidadeDeMedida> pagingList =
-                Ebean.find(UnidadeDeMedida.class)
-                        .order()
-                        .asc("nome")
-                        .where().gt("nome", "2")
-                        .findPagingList(14).setFetchAhead(true);
-
-        pagingList.getFutureRowCount();
-
-        Page<UnidadeDeMedida> page = pagingList.getPage(pagina);
-
-        List<UnidadeDeMedida> list = page.getList();
-
-        return ok(Json.toJson(list));
-    }
-
-    public static Result remover(Integer id) {
-        Logger.info("remover Unidade de Medida");
-
-        UnidadeDeMedida unidadeDeMedida = Ebean.find(UnidadeDeMedida.class, id);
-
-        if (unidadeDeMedida == null) {
-            return notFound("Unidade de Medida não encontrada");
+        if (unidadeBusca == null) {
+            return notFound(" Unidade de Medida não encontrado");
         }
 
         try {
-            Ebean.delete(unidadeDeMedida);
-        } catch (PersistenceException e) {
-            return badRequest("Existem produtos que pertencem a esta Unidade de Medida, remova-os primeiro.");
-
+            Ebean.update(unidadeDeMedida);
         } catch (Exception e) {
             return badRequest("Erro interno de sistema");
         }
 
         return ok(Json.toJson(unidadeDeMedida));
+    }
+
+    //Busca pais por ID
+    public static Result buscaPorId(Long id) {
+        Logger.info("Buscando Unidade de Medida por ID");
+
+        UnidadeDeMedida unidadeBusca = Ebean.find(UnidadeDeMedida.class, id);
+
+        if (unidadeBusca == null) {
+            return notFound(" Unidade de Medida não encontrado");
+        }
+
+        return ok(Json.toJson(unidadeBusca));
+    }
+
+    //busca os paises em ordem
+    public static Result buscaTodos() {
+        Logger.info("Busca todas as Unidades de Medidas");
+
+        return ok(Json.toJson(Ebean.find(UnidadeDeMedida.class)
+                .order()
+                .asc("nome")
+                .findList()));
+    }
+
+    //Remove pais do banco de dados
+    public static Result remover(Long id) {
+        Logger.info("Remover Unidade de Medida");
+
+        UnidadeDeMedida unidadeBusca = Ebean.find(UnidadeDeMedida.class, id);
+
+        if (unidadeBusca == null) {
+            return notFound(" Unidade de Medida não encontrado");
+        }
+
+        try {
+            Ebean.delete(unidadeBusca);
+        } catch (PersistenceException e) {
+            return badRequest("Existem Produtos que dependem desta Unidade de Medida, remova-os primeiro");
+        } catch (Exception e) {
+            return badRequest("Erro interno de sistema");
+        }
+
+        return ok(Json.toJson(unidadeBusca));
+    }
+
+    //filtra pais por nome
+    public static Result filtraPorNome(String filtro) {
+        Logger.info("Filtrando Unidade de Medida por nome");
+
+        //busca contato atraves do nome que recebe por parametro e onde o dono é o usuario logado no sistema
+        Query<UnidadeDeMedida> query = Ebean.createQuery(UnidadeDeMedida.class, "find pais where (nome like :nome)");
+        query.setParameter("nome", "%" + filtro + "%");
+        List<UnidadeDeMedida> filtroDeUnidadesDeMedidas = query.findList();
+
+        return ok(Json.toJson(filtroDeUnidadesDeMedidas));
     }
 }

@@ -1,6 +1,6 @@
 // @SOURCE:/home/haroldo/projetos/academico/sgmplay/conf/routes
-// @HASH:84a1cb34b1b65ecdb9a1de46483e7d6014d7808c
-// @DATE:Thu Jul 16 16:11:24 BRT 2015
+// @HASH:dd6de9c0c2118681a07c9f20d27e2b75e5973a60
+// @DATE:Fri Jul 17 16:27:21 BRT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,74 +15,74 @@ import _root_.play.libs.F
 import Router.queryString
 
 
-// @LINE:113
-// @LINE:110
-// @LINE:109
-// @LINE:108
 // @LINE:107
-// @LINE:106
-// @LINE:105
+// @LINE:104
+// @LINE:103
 // @LINE:102
 // @LINE:101
 // @LINE:100
 // @LINE:99
-// @LINE:98
-// @LINE:97
+// @LINE:96
+// @LINE:95
 // @LINE:94
 // @LINE:93
 // @LINE:92
 // @LINE:91
-// @LINE:90
-// @LINE:89
+// @LINE:88
+// @LINE:87
 // @LINE:86
 // @LINE:85
 // @LINE:84
 // @LINE:83
-// @LINE:82
-// @LINE:81
+// @LINE:80
+// @LINE:79
 // @LINE:78
 // @LINE:77
 // @LINE:76
 // @LINE:75
-// @LINE:74
-// @LINE:73
+// @LINE:72
+// @LINE:71
 // @LINE:70
 // @LINE:69
 // @LINE:68
 // @LINE:67
-// @LINE:66
-// @LINE:65
+// @LINE:64
+// @LINE:63
 // @LINE:62
 // @LINE:61
 // @LINE:60
 // @LINE:59
-// @LINE:58
-// @LINE:57
+// @LINE:56
+// @LINE:55
 // @LINE:54
 // @LINE:53
 // @LINE:52
 // @LINE:51
-// @LINE:50
-// @LINE:49
+// @LINE:48
+// @LINE:47
 // @LINE:46
 // @LINE:45
 // @LINE:44
 // @LINE:43
-// @LINE:42
-// @LINE:41
+// @LINE:40
+// @LINE:39
 // @LINE:38
 // @LINE:37
 // @LINE:36
 // @LINE:35
-// @LINE:34
-// @LINE:33
+// @LINE:32
+// @LINE:31
 // @LINE:30
 // @LINE:29
 // @LINE:28
 // @LINE:27
-// @LINE:26
-// @LINE:25
+// @LINE:24
+// @LINE:23
 // @LINE:22
+// @LINE:21
+// @LINE:20
+// @LINE:19
+// @LINE:16
 // @LINE:13
 // @LINE:12
 // @LINE:11
@@ -91,11 +91,11 @@ import Router.queryString
 // @LINE:6
 package controllers {
 
-// @LINE:113
+// @LINE:107
 class ReverseAssets {
 
 
-// @LINE:113
+// @LINE:107
 def at(file:String): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
    Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
@@ -105,51 +105,51 @@ def at(file:String): Call = {
 }
                           
 
-// @LINE:102
-// @LINE:101
-// @LINE:100
-// @LINE:99
-// @LINE:98
-// @LINE:97
+// @LINE:96
+// @LINE:95
+// @LINE:94
+// @LINE:93
+// @LINE:92
+// @LINE:91
 class ReverseProdutoController {
 
 
-// @LINE:99
+// @LINE:93
 def buscaTodos(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "produtos")
 }
                         
 
-// @LINE:102
+// @LINE:96
 def remover(id:Integer): Call = {
    import ReverseRouteContext.empty
    Call("DELETE", _prefix + { _defaultPrefix } + "produtos/" + implicitly[PathBindable[Integer]].unbind("id", id))
 }
                         
 
-// @LINE:97
+// @LINE:91
 def inserir(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "produtos")
 }
                         
 
-// @LINE:100
+// @LINE:94
 def buscaPorPaginas(pagina:Integer): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "produtosPagina/" + implicitly[PathBindable[Integer]].unbind("pagina", pagina))
 }
                         
 
-// @LINE:101
+// @LINE:95
 def buscaPorId(id:Integer): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "produtos/" + implicitly[PathBindable[Integer]].unbind("id", id))
 }
                         
 
-// @LINE:98
+// @LINE:92
 def atualizar(id:Integer): Call = {
    import ReverseRouteContext.empty
    Call("PUT", _prefix + { _defaultPrefix } + "produtos/" + implicitly[PathBindable[Integer]].unbind("id", id))
@@ -159,213 +159,213 @@ def atualizar(id:Integer): Call = {
 }
                           
 
-// @LINE:78
-// @LINE:77
-// @LINE:76
-// @LINE:75
-// @LINE:74
-// @LINE:73
+// @LINE:72
+// @LINE:71
+// @LINE:70
+// @LINE:69
+// @LINE:68
+// @LINE:67
 class ReverseCategoriaController {
 
 
-// @LINE:75
+// @LINE:72
+def filtraPorNome(filtro:String): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "categorias/nome/" + implicitly[PathBindable[String]].unbind("filtro", dynamicString(filtro)))
+}
+                        
+
+// @LINE:68
+def atualizar(id:Long): Call = {
+   import ReverseRouteContext.empty
+   Call("PUT", _prefix + { _defaultPrefix } + "categorias/" + implicitly[PathBindable[Long]].unbind("id", id))
+}
+                        
+
+// @LINE:69
 def buscaTodos(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "categorias")
 }
                         
 
-// @LINE:78
-def remover(id:Integer): Call = {
+// @LINE:71
+def remover(id:Long): Call = {
    import ReverseRouteContext.empty
-   Call("DELETE", _prefix + { _defaultPrefix } + "categorias/" + implicitly[PathBindable[Integer]].unbind("id", id))
+   Call("DELETE", _prefix + { _defaultPrefix } + "categorias/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
-// @LINE:73
+// @LINE:67
 def inserir(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "categorias")
 }
                         
 
-// @LINE:76
-def buscaPorPaginas(pagina:Integer): Call = {
+// @LINE:70
+def buscaPorId(id:Long): Call = {
    import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "categoriasPagina/" + implicitly[PathBindable[Integer]].unbind("pagina", pagina))
-}
-                        
-
-// @LINE:77
-def buscaPorId(id:Integer): Call = {
-   import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "categorias/" + implicitly[PathBindable[Integer]].unbind("id", id))
-}
-                        
-
-// @LINE:74
-def atualizar(id:Integer): Call = {
-   import ReverseRouteContext.empty
-   Call("PUT", _prefix + { _defaultPrefix } + "categorias/" + implicitly[PathBindable[Integer]].unbind("id", id))
+   Call("GET", _prefix + { _defaultPrefix } + "categorias/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
 }
                           
 
-// @LINE:86
-// @LINE:85
-// @LINE:84
-// @LINE:83
-// @LINE:82
-// @LINE:81
+// @LINE:80
+// @LINE:79
+// @LINE:78
+// @LINE:77
+// @LINE:76
+// @LINE:75
 class ReverseFabricanteController {
 
 
-// @LINE:83
+// @LINE:80
+def filtraPorNome(filtro:String): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "fabricantes/nome/" + implicitly[PathBindable[String]].unbind("filtro", dynamicString(filtro)))
+}
+                        
+
+// @LINE:76
+def atualizar(id:Long): Call = {
+   import ReverseRouteContext.empty
+   Call("PUT", _prefix + { _defaultPrefix } + "fabricantes/" + implicitly[PathBindable[Long]].unbind("id", id))
+}
+                        
+
+// @LINE:77
 def buscaTodos(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "fabricantes")
 }
                         
 
-// @LINE:86
-def remover(id:Integer): Call = {
+// @LINE:79
+def remover(id:Long): Call = {
    import ReverseRouteContext.empty
-   Call("DELETE", _prefix + { _defaultPrefix } + "fabricantes/" + implicitly[PathBindable[Integer]].unbind("id", id))
+   Call("DELETE", _prefix + { _defaultPrefix } + "fabricantes/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
-// @LINE:81
+// @LINE:75
 def inserir(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "fabricantes")
 }
                         
 
-// @LINE:84
-def buscaPorPaginas(pagina:Integer): Call = {
+// @LINE:78
+def buscaPorId(id:Long): Call = {
    import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "fabricantesPagina/" + implicitly[PathBindable[Integer]].unbind("pagina", pagina))
-}
-                        
-
-// @LINE:85
-def buscaPorId(id:Integer): Call = {
-   import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "fabricantes/" + implicitly[PathBindable[Integer]].unbind("id", id))
-}
-                        
-
-// @LINE:82
-def atualizar(id:Integer): Call = {
-   import ReverseRouteContext.empty
-   Call("PUT", _prefix + { _defaultPrefix } + "fabricantes/" + implicitly[PathBindable[Integer]].unbind("id", id))
+   Call("GET", _prefix + { _defaultPrefix } + "fabricantes/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
 }
                           
 
-// @LINE:70
-// @LINE:69
-// @LINE:68
-// @LINE:67
-// @LINE:66
-// @LINE:65
+// @LINE:64
+// @LINE:63
+// @LINE:62
+// @LINE:61
+// @LINE:60
+// @LINE:59
 class ReverseFornecedorController {
 
 
-// @LINE:67
+// @LINE:64
+def filtraPorNome(filtro:String): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "fornecedores/nome/" + implicitly[PathBindable[String]].unbind("filtro", dynamicString(filtro)))
+}
+                        
+
+// @LINE:60
+def atualizar(id:Long): Call = {
+   import ReverseRouteContext.empty
+   Call("PUT", _prefix + { _defaultPrefix } + "fornecedores/" + implicitly[PathBindable[Long]].unbind("id", id))
+}
+                        
+
+// @LINE:61
 def buscaTodos(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "fornecedores")
 }
                         
 
-// @LINE:70
-def remover(id:Integer): Call = {
+// @LINE:63
+def remover(id:Long): Call = {
    import ReverseRouteContext.empty
-   Call("DELETE", _prefix + { _defaultPrefix } + "fornecedores/" + implicitly[PathBindable[Integer]].unbind("id", id))
+   Call("DELETE", _prefix + { _defaultPrefix } + "fornecedores/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
-// @LINE:65
+// @LINE:59
 def inserir(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "fornecedores")
 }
                         
 
-// @LINE:68
-def buscaPorPaginas(pagina:Integer): Call = {
+// @LINE:62
+def buscaPorId(id:Long): Call = {
    import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "fornecedoresPagina/" + implicitly[PathBindable[Integer]].unbind("pagina", pagina))
-}
-                        
-
-// @LINE:69
-def buscaPorId(id:Integer): Call = {
-   import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "fornecedores/" + implicitly[PathBindable[Integer]].unbind("id", id))
-}
-                        
-
-// @LINE:66
-def atualizar(id:Integer): Call = {
-   import ReverseRouteContext.empty
-   Call("PUT", _prefix + { _defaultPrefix } + "fornecedores/" + implicitly[PathBindable[Integer]].unbind("id", id))
+   Call("GET", _prefix + { _defaultPrefix } + "fornecedores/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
 }
                           
 
-// @LINE:54
-// @LINE:53
-// @LINE:52
-// @LINE:51
-// @LINE:50
-// @LINE:49
+// @LINE:48
+// @LINE:47
+// @LINE:46
+// @LINE:45
+// @LINE:44
+// @LINE:43
 class ReverseBairroController {
 
 
-// @LINE:54
+// @LINE:48
 def filtraPorNome(filtro:String): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "bairros/nome/" + implicitly[PathBindable[String]].unbind("filtro", dynamicString(filtro)))
 }
                         
 
-// @LINE:50
+// @LINE:44
 def atualizar(id:Long): Call = {
    import ReverseRouteContext.empty
    Call("PUT", _prefix + { _defaultPrefix } + "bairros/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
-// @LINE:51
+// @LINE:45
 def buscaTodos(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "bairros")
 }
                         
 
-// @LINE:53
+// @LINE:47
 def remover(id:Long): Call = {
    import ReverseRouteContext.empty
    Call("DELETE", _prefix + { _defaultPrefix } + "bairros/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
-// @LINE:49
+// @LINE:43
 def inserir(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "bairros")
 }
                         
 
-// @LINE:52
+// @LINE:46
 def buscaPorId(id:Long): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "bairros/" + implicitly[PathBindable[Long]].unbind("id", id))
@@ -375,51 +375,51 @@ def buscaPorId(id:Long): Call = {
 }
                           
 
-// @LINE:30
-// @LINE:29
-// @LINE:28
-// @LINE:27
-// @LINE:26
-// @LINE:25
+// @LINE:24
+// @LINE:23
+// @LINE:22
+// @LINE:21
+// @LINE:20
+// @LINE:19
 class ReversePaisController {
 
 
-// @LINE:30
+// @LINE:24
 def filtraPorNome(filtro:String): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "paises/nome/" + implicitly[PathBindable[String]].unbind("filtro", dynamicString(filtro)))
 }
                         
 
-// @LINE:26
+// @LINE:20
 def atualizar(id:Long): Call = {
    import ReverseRouteContext.empty
    Call("PUT", _prefix + { _defaultPrefix } + "paises/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
-// @LINE:27
+// @LINE:21
 def buscaTodos(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "paises")
 }
                         
 
-// @LINE:29
+// @LINE:23
 def remover(id:Long): Call = {
    import ReverseRouteContext.empty
    Call("DELETE", _prefix + { _defaultPrefix } + "paises/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
-// @LINE:25
+// @LINE:19
 def inserir(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "paises")
 }
                         
 
-// @LINE:28
+// @LINE:22
 def buscaPorId(id:Long): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "paises/" + implicitly[PathBindable[Long]].unbind("id", id))
@@ -475,12 +475,12 @@ def autenticar(): Call = {
 }
                           
 
-// @LINE:22
+// @LINE:16
 // @LINE:6
 class ReverseApplication {
 
 
-// @LINE:22
+// @LINE:16
 def versaoplay(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "versaoplay")
@@ -497,51 +497,51 @@ def index(): Call = {
 }
                           
 
-// @LINE:38
-// @LINE:37
-// @LINE:36
-// @LINE:35
-// @LINE:34
-// @LINE:33
+// @LINE:32
+// @LINE:31
+// @LINE:30
+// @LINE:29
+// @LINE:28
+// @LINE:27
 class ReverseEstadoController {
 
 
-// @LINE:38
+// @LINE:32
 def filtraPorNome(filtro:String): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "estados/nome/" + implicitly[PathBindable[String]].unbind("filtro", dynamicString(filtro)))
 }
                         
 
-// @LINE:34
+// @LINE:28
 def atualizar(id:Long): Call = {
    import ReverseRouteContext.empty
    Call("PUT", _prefix + { _defaultPrefix } + "estados/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
-// @LINE:35
+// @LINE:29
 def buscaTodos(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "estados")
 }
                         
 
-// @LINE:37
+// @LINE:31
 def remover(id:Long): Call = {
    import ReverseRouteContext.empty
    Call("DELETE", _prefix + { _defaultPrefix } + "estados/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
-// @LINE:33
+// @LINE:27
 def inserir(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "estados")
 }
                         
 
-// @LINE:36
+// @LINE:30
 def buscaPorId(id:Long): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "estados/" + implicitly[PathBindable[Long]].unbind("id", id))
@@ -551,159 +551,159 @@ def buscaPorId(id:Long): Call = {
 }
                           
 
-// @LINE:62
-// @LINE:61
-// @LINE:60
-// @LINE:59
-// @LINE:58
-// @LINE:57
+// @LINE:56
+// @LINE:55
+// @LINE:54
+// @LINE:53
+// @LINE:52
+// @LINE:51
 class ReverseClienteController {
 
 
-// @LINE:62
+// @LINE:56
 def filtraPorNome(filtro:String): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "clientes/nome/" + implicitly[PathBindable[String]].unbind("filtro", dynamicString(filtro)))
 }
                         
 
-// @LINE:59
+// @LINE:52
+def atualizar(id:Long): Call = {
+   import ReverseRouteContext.empty
+   Call("PUT", _prefix + { _defaultPrefix } + "clientes/" + implicitly[PathBindable[Long]].unbind("id", id))
+}
+                        
+
+// @LINE:53
 def buscaTodos(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "clientes")
 }
                         
 
-// @LINE:61
-def remover(id:Integer): Call = {
+// @LINE:55
+def remover(id:Long): Call = {
    import ReverseRouteContext.empty
-   Call("DELETE", _prefix + { _defaultPrefix } + "clientes/" + implicitly[PathBindable[Integer]].unbind("id", id))
+   Call("DELETE", _prefix + { _defaultPrefix } + "clientes/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
-// @LINE:57
+// @LINE:51
 def inserir(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "clientes")
 }
                         
 
-// @LINE:60
-def buscaPorId(id:Integer): Call = {
+// @LINE:54
+def buscaPorId(id:Long): Call = {
    import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "clientes/" + implicitly[PathBindable[Integer]].unbind("id", id))
-}
-                        
-
-// @LINE:58
-def atualizar(id:Integer): Call = {
-   import ReverseRouteContext.empty
-   Call("PUT", _prefix + { _defaultPrefix } + "clientes/" + implicitly[PathBindable[Integer]].unbind("id", id))
+   Call("GET", _prefix + { _defaultPrefix } + "clientes/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
 }
                           
 
-// @LINE:94
-// @LINE:93
-// @LINE:92
-// @LINE:91
-// @LINE:90
-// @LINE:89
+// @LINE:88
+// @LINE:87
+// @LINE:86
+// @LINE:85
+// @LINE:84
+// @LINE:83
 class ReverseUnidadeDeMedidaController {
 
 
-// @LINE:91
+// @LINE:88
+def filtraPorNome(filtro:String): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "unidadesdemedidas/nome/" + implicitly[PathBindable[String]].unbind("filtro", dynamicString(filtro)))
+}
+                        
+
+// @LINE:84
+def atualizar(id:Long): Call = {
+   import ReverseRouteContext.empty
+   Call("PUT", _prefix + { _defaultPrefix } + "unidadesdemedidas/" + implicitly[PathBindable[Long]].unbind("id", id))
+}
+                        
+
+// @LINE:85
 def buscaTodos(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "unidadesdemedidas")
 }
                         
 
-// @LINE:94
-def remover(id:Integer): Call = {
+// @LINE:87
+def remover(id:Long): Call = {
    import ReverseRouteContext.empty
-   Call("DELETE", _prefix + { _defaultPrefix } + "unidadesdemedidas/" + implicitly[PathBindable[Integer]].unbind("id", id))
+   Call("DELETE", _prefix + { _defaultPrefix } + "unidadesdemedidas/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
-// @LINE:89
+// @LINE:83
 def inserir(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "unidadesdemedidas")
 }
                         
 
-// @LINE:92
-def buscaPorPaginas(pagina:Integer): Call = {
+// @LINE:86
+def buscaPorId(id:Long): Call = {
    import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "unidadesdemedidasPagina/" + implicitly[PathBindable[Integer]].unbind("pagina", pagina))
-}
-                        
-
-// @LINE:93
-def buscaPorId(id:Integer): Call = {
-   import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "unidadesdemedidas/" + implicitly[PathBindable[Integer]].unbind("id", id))
-}
-                        
-
-// @LINE:90
-def atualizar(id:Integer): Call = {
-   import ReverseRouteContext.empty
-   Call("PUT", _prefix + { _defaultPrefix } + "unidadesdemedidas/" + implicitly[PathBindable[Integer]].unbind("id", id))
+   Call("GET", _prefix + { _defaultPrefix } + "unidadesdemedidas/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
 }
                           
 
-// @LINE:110
-// @LINE:109
-// @LINE:108
-// @LINE:107
-// @LINE:106
-// @LINE:105
+// @LINE:104
+// @LINE:103
+// @LINE:102
+// @LINE:101
+// @LINE:100
+// @LINE:99
 class ReverseUsuarioController {
 
 
-// @LINE:107
+// @LINE:101
 def buscaTodos(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "usuarios")
 }
                         
 
-// @LINE:110
+// @LINE:104
 def remover(id:Integer): Call = {
    import ReverseRouteContext.empty
    Call("DELETE", _prefix + { _defaultPrefix } + "usuarios/" + implicitly[PathBindable[Integer]].unbind("id", id))
 }
                         
 
-// @LINE:105
+// @LINE:99
 def inserir(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "usuarios")
 }
                         
 
-// @LINE:108
+// @LINE:102
 def buscaPorPaginas(pagina:Integer): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "usuariosPagina/" + implicitly[PathBindable[Integer]].unbind("pagina", pagina))
 }
                         
 
-// @LINE:109
+// @LINE:103
 def buscaPorId(id:Integer): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "usuarios/" + implicitly[PathBindable[Integer]].unbind("id", id))
 }
                         
 
-// @LINE:106
+// @LINE:100
 def atualizar(id:Integer): Call = {
    import ReverseRouteContext.empty
    Call("PUT", _prefix + { _defaultPrefix } + "usuarios/" + implicitly[PathBindable[Integer]].unbind("id", id))
@@ -713,51 +713,51 @@ def atualizar(id:Integer): Call = {
 }
                           
 
-// @LINE:46
-// @LINE:45
-// @LINE:44
-// @LINE:43
-// @LINE:42
-// @LINE:41
+// @LINE:40
+// @LINE:39
+// @LINE:38
+// @LINE:37
+// @LINE:36
+// @LINE:35
 class ReverseCidadeController {
 
 
-// @LINE:46
+// @LINE:40
 def filtraPorNome(filtro:String): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "cidades/nome/" + implicitly[PathBindable[String]].unbind("filtro", dynamicString(filtro)))
 }
                         
 
-// @LINE:42
+// @LINE:36
 def atualizar(id:Long): Call = {
    import ReverseRouteContext.empty
    Call("PUT", _prefix + { _defaultPrefix } + "cidades/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
-// @LINE:43
+// @LINE:37
 def buscaTodos(): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "cidades")
 }
                         
 
-// @LINE:45
+// @LINE:39
 def remover(id:Long): Call = {
    import ReverseRouteContext.empty
    Call("DELETE", _prefix + { _defaultPrefix } + "cidades/" + implicitly[PathBindable[Long]].unbind("id", id))
 }
                         
 
-// @LINE:41
+// @LINE:35
 def inserir(): Call = {
    import ReverseRouteContext.empty
    Call("POST", _prefix + { _defaultPrefix } + "cidades")
 }
                         
 
-// @LINE:44
+// @LINE:38
 def buscaPorId(id:Long): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "cidades/" + implicitly[PathBindable[Long]].unbind("id", id))
@@ -770,74 +770,74 @@ def buscaPorId(id:Long): Call = {
                   
 
 
-// @LINE:113
-// @LINE:110
-// @LINE:109
-// @LINE:108
 // @LINE:107
-// @LINE:106
-// @LINE:105
+// @LINE:104
+// @LINE:103
 // @LINE:102
 // @LINE:101
 // @LINE:100
 // @LINE:99
-// @LINE:98
-// @LINE:97
+// @LINE:96
+// @LINE:95
 // @LINE:94
 // @LINE:93
 // @LINE:92
 // @LINE:91
-// @LINE:90
-// @LINE:89
+// @LINE:88
+// @LINE:87
 // @LINE:86
 // @LINE:85
 // @LINE:84
 // @LINE:83
-// @LINE:82
-// @LINE:81
+// @LINE:80
+// @LINE:79
 // @LINE:78
 // @LINE:77
 // @LINE:76
 // @LINE:75
-// @LINE:74
-// @LINE:73
+// @LINE:72
+// @LINE:71
 // @LINE:70
 // @LINE:69
 // @LINE:68
 // @LINE:67
-// @LINE:66
-// @LINE:65
+// @LINE:64
+// @LINE:63
 // @LINE:62
 // @LINE:61
 // @LINE:60
 // @LINE:59
-// @LINE:58
-// @LINE:57
+// @LINE:56
+// @LINE:55
 // @LINE:54
 // @LINE:53
 // @LINE:52
 // @LINE:51
-// @LINE:50
-// @LINE:49
+// @LINE:48
+// @LINE:47
 // @LINE:46
 // @LINE:45
 // @LINE:44
 // @LINE:43
-// @LINE:42
-// @LINE:41
+// @LINE:40
+// @LINE:39
 // @LINE:38
 // @LINE:37
 // @LINE:36
 // @LINE:35
-// @LINE:34
-// @LINE:33
+// @LINE:32
+// @LINE:31
 // @LINE:30
 // @LINE:29
 // @LINE:28
 // @LINE:27
-// @LINE:26
-// @LINE:25
+// @LINE:24
+// @LINE:23
 // @LINE:22
+// @LINE:21
+// @LINE:20
+// @LINE:19
+// @LINE:16
 // @LINE:13
 // @LINE:12
 // @LINE:11
@@ -847,11 +847,11 @@ def buscaPorId(id:Long): Call = {
 package controllers.javascript {
 import ReverseRouteContext.empty
 
-// @LINE:113
+// @LINE:107
 class ReverseAssets {
 
 
-// @LINE:113
+// @LINE:107
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
    """
@@ -865,16 +865,16 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:102
-// @LINE:101
-// @LINE:100
-// @LINE:99
-// @LINE:98
-// @LINE:97
+// @LINE:96
+// @LINE:95
+// @LINE:94
+// @LINE:93
+// @LINE:92
+// @LINE:91
 class ReverseProdutoController {
 
 
-// @LINE:99
+// @LINE:93
 def buscaTodos : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ProdutoController.buscaTodos",
    """
@@ -885,7 +885,7 @@ def buscaTodos : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:102
+// @LINE:96
 def remover : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ProdutoController.remover",
    """
@@ -896,7 +896,7 @@ def remover : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:97
+// @LINE:91
 def inserir : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ProdutoController.inserir",
    """
@@ -907,7 +907,7 @@ def inserir : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:100
+// @LINE:94
 def buscaPorPaginas : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ProdutoController.buscaPorPaginas",
    """
@@ -918,7 +918,7 @@ def buscaPorPaginas : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:101
+// @LINE:95
 def buscaPorId : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ProdutoController.buscaPorId",
    """
@@ -929,7 +929,7 @@ def buscaPorId : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:98
+// @LINE:92
 def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ProdutoController.atualizar",
    """
@@ -943,16 +943,38 @@ def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:78
-// @LINE:77
-// @LINE:76
-// @LINE:75
-// @LINE:74
-// @LINE:73
+// @LINE:72
+// @LINE:71
+// @LINE:70
+// @LINE:69
+// @LINE:68
+// @LINE:67
 class ReverseCategoriaController {
 
 
-// @LINE:75
+// @LINE:72
+def filtraPorNome : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.CategoriaController.filtraPorNome",
+   """
+      function(filtro) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "categorias/nome/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("filtro", encodeURIComponent(filtro))})
+      }
+   """
+)
+                        
+
+// @LINE:68
+def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.CategoriaController.atualizar",
+   """
+      function(id) {
+      return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "categorias/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
+      }
+   """
+)
+                        
+
+// @LINE:69
 def buscaTodos : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.CategoriaController.buscaTodos",
    """
@@ -963,18 +985,18 @@ def buscaTodos : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:78
+// @LINE:71
 def remover : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.CategoriaController.remover",
    """
       function(id) {
-      return _wA({method:"DELETE", url:"""" + _prefix + { _defaultPrefix } + """" + "categorias/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id)})
+      return _wA({method:"DELETE", url:"""" + _prefix + { _defaultPrefix } + """" + "categorias/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
       }
    """
 )
                         
 
-// @LINE:73
+// @LINE:67
 def inserir : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.CategoriaController.inserir",
    """
@@ -985,34 +1007,12 @@ def inserir : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:76
-def buscaPorPaginas : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.CategoriaController.buscaPorPaginas",
-   """
-      function(pagina) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "categoriasPagina/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("pagina", pagina)})
-      }
-   """
-)
-                        
-
-// @LINE:77
+// @LINE:70
 def buscaPorId : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.CategoriaController.buscaPorId",
    """
       function(id) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "categorias/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id)})
-      }
-   """
-)
-                        
-
-// @LINE:74
-def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.CategoriaController.atualizar",
-   """
-      function(id) {
-      return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "categorias/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id)})
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "categorias/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
       }
    """
 )
@@ -1021,16 +1021,38 @@ def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:86
-// @LINE:85
-// @LINE:84
-// @LINE:83
-// @LINE:82
-// @LINE:81
+// @LINE:80
+// @LINE:79
+// @LINE:78
+// @LINE:77
+// @LINE:76
+// @LINE:75
 class ReverseFabricanteController {
 
 
-// @LINE:83
+// @LINE:80
+def filtraPorNome : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.FabricanteController.filtraPorNome",
+   """
+      function(filtro) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "fabricantes/nome/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("filtro", encodeURIComponent(filtro))})
+      }
+   """
+)
+                        
+
+// @LINE:76
+def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.FabricanteController.atualizar",
+   """
+      function(id) {
+      return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "fabricantes/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
+      }
+   """
+)
+                        
+
+// @LINE:77
 def buscaTodos : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.FabricanteController.buscaTodos",
    """
@@ -1041,18 +1063,18 @@ def buscaTodos : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:86
+// @LINE:79
 def remover : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.FabricanteController.remover",
    """
       function(id) {
-      return _wA({method:"DELETE", url:"""" + _prefix + { _defaultPrefix } + """" + "fabricantes/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id)})
+      return _wA({method:"DELETE", url:"""" + _prefix + { _defaultPrefix } + """" + "fabricantes/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
       }
    """
 )
                         
 
-// @LINE:81
+// @LINE:75
 def inserir : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.FabricanteController.inserir",
    """
@@ -1063,34 +1085,12 @@ def inserir : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:84
-def buscaPorPaginas : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.FabricanteController.buscaPorPaginas",
-   """
-      function(pagina) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "fabricantesPagina/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("pagina", pagina)})
-      }
-   """
-)
-                        
-
-// @LINE:85
+// @LINE:78
 def buscaPorId : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.FabricanteController.buscaPorId",
    """
       function(id) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "fabricantes/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id)})
-      }
-   """
-)
-                        
-
-// @LINE:82
-def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.FabricanteController.atualizar",
-   """
-      function(id) {
-      return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "fabricantes/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id)})
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "fabricantes/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
       }
    """
 )
@@ -1099,16 +1099,38 @@ def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:70
-// @LINE:69
-// @LINE:68
-// @LINE:67
-// @LINE:66
-// @LINE:65
+// @LINE:64
+// @LINE:63
+// @LINE:62
+// @LINE:61
+// @LINE:60
+// @LINE:59
 class ReverseFornecedorController {
 
 
-// @LINE:67
+// @LINE:64
+def filtraPorNome : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.FornecedorController.filtraPorNome",
+   """
+      function(filtro) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "fornecedores/nome/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("filtro", encodeURIComponent(filtro))})
+      }
+   """
+)
+                        
+
+// @LINE:60
+def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.FornecedorController.atualizar",
+   """
+      function(id) {
+      return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "fornecedores/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
+      }
+   """
+)
+                        
+
+// @LINE:61
 def buscaTodos : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.FornecedorController.buscaTodos",
    """
@@ -1119,18 +1141,18 @@ def buscaTodos : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:70
+// @LINE:63
 def remover : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.FornecedorController.remover",
    """
       function(id) {
-      return _wA({method:"DELETE", url:"""" + _prefix + { _defaultPrefix } + """" + "fornecedores/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id)})
+      return _wA({method:"DELETE", url:"""" + _prefix + { _defaultPrefix } + """" + "fornecedores/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
       }
    """
 )
                         
 
-// @LINE:65
+// @LINE:59
 def inserir : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.FornecedorController.inserir",
    """
@@ -1141,34 +1163,12 @@ def inserir : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:68
-def buscaPorPaginas : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.FornecedorController.buscaPorPaginas",
-   """
-      function(pagina) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "fornecedoresPagina/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("pagina", pagina)})
-      }
-   """
-)
-                        
-
-// @LINE:69
+// @LINE:62
 def buscaPorId : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.FornecedorController.buscaPorId",
    """
       function(id) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "fornecedores/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id)})
-      }
-   """
-)
-                        
-
-// @LINE:66
-def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.FornecedorController.atualizar",
-   """
-      function(id) {
-      return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "fornecedores/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id)})
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "fornecedores/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
       }
    """
 )
@@ -1177,16 +1177,16 @@ def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:54
-// @LINE:53
-// @LINE:52
-// @LINE:51
-// @LINE:50
-// @LINE:49
+// @LINE:48
+// @LINE:47
+// @LINE:46
+// @LINE:45
+// @LINE:44
+// @LINE:43
 class ReverseBairroController {
 
 
-// @LINE:54
+// @LINE:48
 def filtraPorNome : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.BairroController.filtraPorNome",
    """
@@ -1197,7 +1197,7 @@ def filtraPorNome : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:50
+// @LINE:44
 def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.BairroController.atualizar",
    """
@@ -1208,7 +1208,7 @@ def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:51
+// @LINE:45
 def buscaTodos : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.BairroController.buscaTodos",
    """
@@ -1219,7 +1219,7 @@ def buscaTodos : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:53
+// @LINE:47
 def remover : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.BairroController.remover",
    """
@@ -1230,7 +1230,7 @@ def remover : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:49
+// @LINE:43
 def inserir : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.BairroController.inserir",
    """
@@ -1241,7 +1241,7 @@ def inserir : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:52
+// @LINE:46
 def buscaPorId : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.BairroController.buscaPorId",
    """
@@ -1255,16 +1255,16 @@ def buscaPorId : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:30
-// @LINE:29
-// @LINE:28
-// @LINE:27
-// @LINE:26
-// @LINE:25
+// @LINE:24
+// @LINE:23
+// @LINE:22
+// @LINE:21
+// @LINE:20
+// @LINE:19
 class ReversePaisController {
 
 
-// @LINE:30
+// @LINE:24
 def filtraPorNome : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.PaisController.filtraPorNome",
    """
@@ -1275,7 +1275,7 @@ def filtraPorNome : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:26
+// @LINE:20
 def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.PaisController.atualizar",
    """
@@ -1286,7 +1286,7 @@ def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:27
+// @LINE:21
 def buscaTodos : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.PaisController.buscaTodos",
    """
@@ -1297,7 +1297,7 @@ def buscaTodos : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:29
+// @LINE:23
 def remover : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.PaisController.remover",
    """
@@ -1308,7 +1308,7 @@ def remover : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:25
+// @LINE:19
 def inserir : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.PaisController.inserir",
    """
@@ -1319,7 +1319,7 @@ def inserir : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:28
+// @LINE:22
 def buscaPorId : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.PaisController.buscaPorId",
    """
@@ -1399,12 +1399,12 @@ def autenticar : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:22
+// @LINE:16
 // @LINE:6
 class ReverseApplication {
 
 
-// @LINE:22
+// @LINE:16
 def versaoplay : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Application.versaoplay",
    """
@@ -1429,16 +1429,16 @@ def index : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:38
-// @LINE:37
-// @LINE:36
-// @LINE:35
-// @LINE:34
-// @LINE:33
+// @LINE:32
+// @LINE:31
+// @LINE:30
+// @LINE:29
+// @LINE:28
+// @LINE:27
 class ReverseEstadoController {
 
 
-// @LINE:38
+// @LINE:32
 def filtraPorNome : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.EstadoController.filtraPorNome",
    """
@@ -1449,7 +1449,7 @@ def filtraPorNome : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:34
+// @LINE:28
 def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.EstadoController.atualizar",
    """
@@ -1460,7 +1460,7 @@ def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:35
+// @LINE:29
 def buscaTodos : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.EstadoController.buscaTodos",
    """
@@ -1471,7 +1471,7 @@ def buscaTodos : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:37
+// @LINE:31
 def remover : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.EstadoController.remover",
    """
@@ -1482,7 +1482,7 @@ def remover : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:33
+// @LINE:27
 def inserir : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.EstadoController.inserir",
    """
@@ -1493,7 +1493,7 @@ def inserir : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:36
+// @LINE:30
 def buscaPorId : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.EstadoController.buscaPorId",
    """
@@ -1507,16 +1507,16 @@ def buscaPorId : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:62
-// @LINE:61
-// @LINE:60
-// @LINE:59
-// @LINE:58
-// @LINE:57
+// @LINE:56
+// @LINE:55
+// @LINE:54
+// @LINE:53
+// @LINE:52
+// @LINE:51
 class ReverseClienteController {
 
 
-// @LINE:62
+// @LINE:56
 def filtraPorNome : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClienteController.filtraPorNome",
    """
@@ -1527,7 +1527,18 @@ def filtraPorNome : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:59
+// @LINE:52
+def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.ClienteController.atualizar",
+   """
+      function(id) {
+      return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "clientes/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
+      }
+   """
+)
+                        
+
+// @LINE:53
 def buscaTodos : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClienteController.buscaTodos",
    """
@@ -1538,18 +1549,18 @@ def buscaTodos : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:61
+// @LINE:55
 def remover : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClienteController.remover",
    """
       function(id) {
-      return _wA({method:"DELETE", url:"""" + _prefix + { _defaultPrefix } + """" + "clientes/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id)})
+      return _wA({method:"DELETE", url:"""" + _prefix + { _defaultPrefix } + """" + "clientes/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
       }
    """
 )
                         
 
-// @LINE:57
+// @LINE:51
 def inserir : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClienteController.inserir",
    """
@@ -1560,23 +1571,12 @@ def inserir : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:60
+// @LINE:54
 def buscaPorId : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ClienteController.buscaPorId",
    """
       function(id) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "clientes/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id)})
-      }
-   """
-)
-                        
-
-// @LINE:58
-def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.ClienteController.atualizar",
-   """
-      function(id) {
-      return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "clientes/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id)})
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "clientes/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
       }
    """
 )
@@ -1585,16 +1585,38 @@ def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:94
-// @LINE:93
-// @LINE:92
-// @LINE:91
-// @LINE:90
-// @LINE:89
+// @LINE:88
+// @LINE:87
+// @LINE:86
+// @LINE:85
+// @LINE:84
+// @LINE:83
 class ReverseUnidadeDeMedidaController {
 
 
-// @LINE:91
+// @LINE:88
+def filtraPorNome : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.UnidadeDeMedidaController.filtraPorNome",
+   """
+      function(filtro) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "unidadesdemedidas/nome/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("filtro", encodeURIComponent(filtro))})
+      }
+   """
+)
+                        
+
+// @LINE:84
+def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.UnidadeDeMedidaController.atualizar",
+   """
+      function(id) {
+      return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "unidadesdemedidas/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
+      }
+   """
+)
+                        
+
+// @LINE:85
 def buscaTodos : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UnidadeDeMedidaController.buscaTodos",
    """
@@ -1605,18 +1627,18 @@ def buscaTodos : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:94
+// @LINE:87
 def remover : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UnidadeDeMedidaController.remover",
    """
       function(id) {
-      return _wA({method:"DELETE", url:"""" + _prefix + { _defaultPrefix } + """" + "unidadesdemedidas/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id)})
+      return _wA({method:"DELETE", url:"""" + _prefix + { _defaultPrefix } + """" + "unidadesdemedidas/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
       }
    """
 )
                         
 
-// @LINE:89
+// @LINE:83
 def inserir : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UnidadeDeMedidaController.inserir",
    """
@@ -1627,34 +1649,12 @@ def inserir : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:92
-def buscaPorPaginas : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.UnidadeDeMedidaController.buscaPorPaginas",
-   """
-      function(pagina) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "unidadesdemedidasPagina/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("pagina", pagina)})
-      }
-   """
-)
-                        
-
-// @LINE:93
+// @LINE:86
 def buscaPorId : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UnidadeDeMedidaController.buscaPorId",
    """
       function(id) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "unidadesdemedidas/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id)})
-      }
-   """
-)
-                        
-
-// @LINE:90
-def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.UnidadeDeMedidaController.atualizar",
-   """
-      function(id) {
-      return _wA({method:"PUT", url:"""" + _prefix + { _defaultPrefix } + """" + "unidadesdemedidas/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("id", id)})
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "unidadesdemedidas/" + (""" + implicitly[PathBindable[Long]].javascriptUnbind + """)("id", id)})
       }
    """
 )
@@ -1663,16 +1663,16 @@ def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:110
-// @LINE:109
-// @LINE:108
-// @LINE:107
-// @LINE:106
-// @LINE:105
+// @LINE:104
+// @LINE:103
+// @LINE:102
+// @LINE:101
+// @LINE:100
+// @LINE:99
 class ReverseUsuarioController {
 
 
-// @LINE:107
+// @LINE:101
 def buscaTodos : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UsuarioController.buscaTodos",
    """
@@ -1683,7 +1683,7 @@ def buscaTodos : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:110
+// @LINE:104
 def remover : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UsuarioController.remover",
    """
@@ -1694,7 +1694,7 @@ def remover : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:105
+// @LINE:99
 def inserir : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UsuarioController.inserir",
    """
@@ -1705,7 +1705,7 @@ def inserir : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:108
+// @LINE:102
 def buscaPorPaginas : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UsuarioController.buscaPorPaginas",
    """
@@ -1716,7 +1716,7 @@ def buscaPorPaginas : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:109
+// @LINE:103
 def buscaPorId : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UsuarioController.buscaPorId",
    """
@@ -1727,7 +1727,7 @@ def buscaPorId : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:106
+// @LINE:100
 def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UsuarioController.atualizar",
    """
@@ -1741,16 +1741,16 @@ def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:46
-// @LINE:45
-// @LINE:44
-// @LINE:43
-// @LINE:42
-// @LINE:41
+// @LINE:40
+// @LINE:39
+// @LINE:38
+// @LINE:37
+// @LINE:36
+// @LINE:35
 class ReverseCidadeController {
 
 
-// @LINE:46
+// @LINE:40
 def filtraPorNome : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.CidadeController.filtraPorNome",
    """
@@ -1761,7 +1761,7 @@ def filtraPorNome : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:42
+// @LINE:36
 def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.CidadeController.atualizar",
    """
@@ -1772,7 +1772,7 @@ def atualizar : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:43
+// @LINE:37
 def buscaTodos : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.CidadeController.buscaTodos",
    """
@@ -1783,7 +1783,7 @@ def buscaTodos : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:45
+// @LINE:39
 def remover : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.CidadeController.remover",
    """
@@ -1794,7 +1794,7 @@ def remover : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:41
+// @LINE:35
 def inserir : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.CidadeController.inserir",
    """
@@ -1805,7 +1805,7 @@ def inserir : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:44
+// @LINE:38
 def buscaPorId : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.CidadeController.buscaPorId",
    """
@@ -1822,74 +1822,74 @@ def buscaPorId : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
-// @LINE:113
-// @LINE:110
-// @LINE:109
-// @LINE:108
 // @LINE:107
-// @LINE:106
-// @LINE:105
+// @LINE:104
+// @LINE:103
 // @LINE:102
 // @LINE:101
 // @LINE:100
 // @LINE:99
-// @LINE:98
-// @LINE:97
+// @LINE:96
+// @LINE:95
 // @LINE:94
 // @LINE:93
 // @LINE:92
 // @LINE:91
-// @LINE:90
-// @LINE:89
+// @LINE:88
+// @LINE:87
 // @LINE:86
 // @LINE:85
 // @LINE:84
 // @LINE:83
-// @LINE:82
-// @LINE:81
+// @LINE:80
+// @LINE:79
 // @LINE:78
 // @LINE:77
 // @LINE:76
 // @LINE:75
-// @LINE:74
-// @LINE:73
+// @LINE:72
+// @LINE:71
 // @LINE:70
 // @LINE:69
 // @LINE:68
 // @LINE:67
-// @LINE:66
-// @LINE:65
+// @LINE:64
+// @LINE:63
 // @LINE:62
 // @LINE:61
 // @LINE:60
 // @LINE:59
-// @LINE:58
-// @LINE:57
+// @LINE:56
+// @LINE:55
 // @LINE:54
 // @LINE:53
 // @LINE:52
 // @LINE:51
-// @LINE:50
-// @LINE:49
+// @LINE:48
+// @LINE:47
 // @LINE:46
 // @LINE:45
 // @LINE:44
 // @LINE:43
-// @LINE:42
-// @LINE:41
+// @LINE:40
+// @LINE:39
 // @LINE:38
 // @LINE:37
 // @LINE:36
 // @LINE:35
-// @LINE:34
-// @LINE:33
+// @LINE:32
+// @LINE:31
 // @LINE:30
 // @LINE:29
 // @LINE:28
 // @LINE:27
-// @LINE:26
-// @LINE:25
+// @LINE:24
+// @LINE:23
 // @LINE:22
+// @LINE:21
+// @LINE:20
+// @LINE:19
+// @LINE:16
 // @LINE:13
 // @LINE:12
 // @LINE:11
@@ -1899,11 +1899,11 @@ def buscaPorId : JavascriptReverseRoute = JavascriptReverseRoute(
 package controllers.ref {
 
 
-// @LINE:113
+// @LINE:107
 class ReverseAssets {
 
 
-// @LINE:113
+// @LINE:107
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
 )
@@ -1912,46 +1912,46 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 }
                           
 
-// @LINE:102
-// @LINE:101
-// @LINE:100
-// @LINE:99
-// @LINE:98
-// @LINE:97
+// @LINE:96
+// @LINE:95
+// @LINE:94
+// @LINE:93
+// @LINE:92
+// @LINE:91
 class ReverseProdutoController {
 
 
-// @LINE:99
+// @LINE:93
 def buscaTodos(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ProdutoController.buscaTodos(), HandlerDef(this.getClass.getClassLoader, "", "controllers.ProdutoController", "buscaTodos", Seq(), "GET", """""", _prefix + """produtos""")
 )
                       
 
-// @LINE:102
+// @LINE:96
 def remover(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ProdutoController.remover(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.ProdutoController", "remover", Seq(classOf[Integer]), "DELETE", """""", _prefix + """produtos/$id<[^/]+>""")
 )
                       
 
-// @LINE:97
+// @LINE:91
 def inserir(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ProdutoController.inserir(), HandlerDef(this.getClass.getClassLoader, "", "controllers.ProdutoController", "inserir", Seq(), "POST", """ CRUD Produto""", _prefix + """produtos""")
 )
                       
 
-// @LINE:100
+// @LINE:94
 def buscaPorPaginas(pagina:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ProdutoController.buscaPorPaginas(pagina), HandlerDef(this.getClass.getClassLoader, "", "controllers.ProdutoController", "buscaPorPaginas", Seq(classOf[Integer]), "GET", """""", _prefix + """produtosPagina/$pagina<[^/]+>""")
 )
                       
 
-// @LINE:101
+// @LINE:95
 def buscaPorId(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ProdutoController.buscaPorId(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.ProdutoController", "buscaPorId", Seq(classOf[Integer]), "GET", """""", _prefix + """produtos/$id<[^/]+>""")
 )
                       
 
-// @LINE:98
+// @LINE:92
 def atualizar(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ProdutoController.atualizar(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.ProdutoController", "atualizar", Seq(classOf[Integer]), "PUT", """""", _prefix + """produtos/$id<[^/]+>""")
 )
@@ -1960,190 +1960,190 @@ def atualizar(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.Handler
 }
                           
 
-// @LINE:78
-// @LINE:77
-// @LINE:76
-// @LINE:75
-// @LINE:74
-// @LINE:73
+// @LINE:72
+// @LINE:71
+// @LINE:70
+// @LINE:69
+// @LINE:68
+// @LINE:67
 class ReverseCategoriaController {
 
 
-// @LINE:75
+// @LINE:72
+def filtraPorNome(filtro:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.CategoriaController.filtraPorNome(filtro), HandlerDef(this.getClass.getClassLoader, "", "controllers.CategoriaController", "filtraPorNome", Seq(classOf[String]), "GET", """""", _prefix + """categorias/nome/$filtro<[^/]+>""")
+)
+                      
+
+// @LINE:68
+def atualizar(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.CategoriaController.atualizar(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.CategoriaController", "atualizar", Seq(classOf[Long]), "PUT", """""", _prefix + """categorias/$id<[^/]+>""")
+)
+                      
+
+// @LINE:69
 def buscaTodos(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.CategoriaController.buscaTodos(), HandlerDef(this.getClass.getClassLoader, "", "controllers.CategoriaController", "buscaTodos", Seq(), "GET", """""", _prefix + """categorias""")
 )
                       
 
-// @LINE:78
-def remover(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.CategoriaController.remover(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.CategoriaController", "remover", Seq(classOf[Integer]), "DELETE", """""", _prefix + """categorias/$id<[^/]+>""")
+// @LINE:71
+def remover(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.CategoriaController.remover(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.CategoriaController", "remover", Seq(classOf[Long]), "DELETE", """""", _prefix + """categorias/$id<[^/]+>""")
 )
                       
 
-// @LINE:73
+// @LINE:67
 def inserir(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.CategoriaController.inserir(), HandlerDef(this.getClass.getClassLoader, "", "controllers.CategoriaController", "inserir", Seq(), "POST", """ CRUD Categoria""", _prefix + """categorias""")
 )
                       
 
-// @LINE:76
-def buscaPorPaginas(pagina:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.CategoriaController.buscaPorPaginas(pagina), HandlerDef(this.getClass.getClassLoader, "", "controllers.CategoriaController", "buscaPorPaginas", Seq(classOf[Integer]), "GET", """""", _prefix + """categoriasPagina/$pagina<[^/]+>""")
-)
-                      
-
-// @LINE:77
-def buscaPorId(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.CategoriaController.buscaPorId(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.CategoriaController", "buscaPorId", Seq(classOf[Integer]), "GET", """""", _prefix + """categorias/$id<[^/]+>""")
-)
-                      
-
-// @LINE:74
-def atualizar(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.CategoriaController.atualizar(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.CategoriaController", "atualizar", Seq(classOf[Integer]), "PUT", """""", _prefix + """categorias/$id<[^/]+>""")
+// @LINE:70
+def buscaPorId(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.CategoriaController.buscaPorId(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.CategoriaController", "buscaPorId", Seq(classOf[Long]), "GET", """""", _prefix + """categorias/$id<[^/]+>""")
 )
                       
 
 }
                           
 
-// @LINE:86
-// @LINE:85
-// @LINE:84
-// @LINE:83
-// @LINE:82
-// @LINE:81
+// @LINE:80
+// @LINE:79
+// @LINE:78
+// @LINE:77
+// @LINE:76
+// @LINE:75
 class ReverseFabricanteController {
 
 
-// @LINE:83
+// @LINE:80
+def filtraPorNome(filtro:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.FabricanteController.filtraPorNome(filtro), HandlerDef(this.getClass.getClassLoader, "", "controllers.FabricanteController", "filtraPorNome", Seq(classOf[String]), "GET", """""", _prefix + """fabricantes/nome/$filtro<[^/]+>""")
+)
+                      
+
+// @LINE:76
+def atualizar(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.FabricanteController.atualizar(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.FabricanteController", "atualizar", Seq(classOf[Long]), "PUT", """""", _prefix + """fabricantes/$id<[^/]+>""")
+)
+                      
+
+// @LINE:77
 def buscaTodos(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.FabricanteController.buscaTodos(), HandlerDef(this.getClass.getClassLoader, "", "controllers.FabricanteController", "buscaTodos", Seq(), "GET", """""", _prefix + """fabricantes""")
 )
                       
 
-// @LINE:86
-def remover(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.FabricanteController.remover(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.FabricanteController", "remover", Seq(classOf[Integer]), "DELETE", """""", _prefix + """fabricantes/$id<[^/]+>""")
+// @LINE:79
+def remover(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.FabricanteController.remover(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.FabricanteController", "remover", Seq(classOf[Long]), "DELETE", """""", _prefix + """fabricantes/$id<[^/]+>""")
 )
                       
 
-// @LINE:81
+// @LINE:75
 def inserir(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.FabricanteController.inserir(), HandlerDef(this.getClass.getClassLoader, "", "controllers.FabricanteController", "inserir", Seq(), "POST", """ CRUD Fabricante""", _prefix + """fabricantes""")
 )
                       
 
-// @LINE:84
-def buscaPorPaginas(pagina:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.FabricanteController.buscaPorPaginas(pagina), HandlerDef(this.getClass.getClassLoader, "", "controllers.FabricanteController", "buscaPorPaginas", Seq(classOf[Integer]), "GET", """""", _prefix + """fabricantesPagina/$pagina<[^/]+>""")
-)
-                      
-
-// @LINE:85
-def buscaPorId(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.FabricanteController.buscaPorId(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.FabricanteController", "buscaPorId", Seq(classOf[Integer]), "GET", """""", _prefix + """fabricantes/$id<[^/]+>""")
-)
-                      
-
-// @LINE:82
-def atualizar(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.FabricanteController.atualizar(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.FabricanteController", "atualizar", Seq(classOf[Integer]), "PUT", """""", _prefix + """fabricantes/$id<[^/]+>""")
+// @LINE:78
+def buscaPorId(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.FabricanteController.buscaPorId(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.FabricanteController", "buscaPorId", Seq(classOf[Long]), "GET", """""", _prefix + """fabricantes/$id<[^/]+>""")
 )
                       
 
 }
                           
 
-// @LINE:70
-// @LINE:69
-// @LINE:68
-// @LINE:67
-// @LINE:66
-// @LINE:65
+// @LINE:64
+// @LINE:63
+// @LINE:62
+// @LINE:61
+// @LINE:60
+// @LINE:59
 class ReverseFornecedorController {
 
 
-// @LINE:67
+// @LINE:64
+def filtraPorNome(filtro:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.FornecedorController.filtraPorNome(filtro), HandlerDef(this.getClass.getClassLoader, "", "controllers.FornecedorController", "filtraPorNome", Seq(classOf[String]), "GET", """""", _prefix + """fornecedores/nome/$filtro<[^/]+>""")
+)
+                      
+
+// @LINE:60
+def atualizar(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.FornecedorController.atualizar(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.FornecedorController", "atualizar", Seq(classOf[Long]), "PUT", """""", _prefix + """fornecedores/$id<[^/]+>""")
+)
+                      
+
+// @LINE:61
 def buscaTodos(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.FornecedorController.buscaTodos(), HandlerDef(this.getClass.getClassLoader, "", "controllers.FornecedorController", "buscaTodos", Seq(), "GET", """""", _prefix + """fornecedores""")
 )
                       
 
-// @LINE:70
-def remover(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.FornecedorController.remover(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.FornecedorController", "remover", Seq(classOf[Integer]), "DELETE", """""", _prefix + """fornecedores/$id<[^/]+>""")
+// @LINE:63
+def remover(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.FornecedorController.remover(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.FornecedorController", "remover", Seq(classOf[Long]), "DELETE", """""", _prefix + """fornecedores/$id<[^/]+>""")
 )
                       
 
-// @LINE:65
+// @LINE:59
 def inserir(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.FornecedorController.inserir(), HandlerDef(this.getClass.getClassLoader, "", "controllers.FornecedorController", "inserir", Seq(), "POST", """ CRUD Fornecedor""", _prefix + """fornecedores""")
 )
                       
 
-// @LINE:68
-def buscaPorPaginas(pagina:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.FornecedorController.buscaPorPaginas(pagina), HandlerDef(this.getClass.getClassLoader, "", "controllers.FornecedorController", "buscaPorPaginas", Seq(classOf[Integer]), "GET", """""", _prefix + """fornecedoresPagina/$pagina<[^/]+>""")
-)
-                      
-
-// @LINE:69
-def buscaPorId(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.FornecedorController.buscaPorId(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.FornecedorController", "buscaPorId", Seq(classOf[Integer]), "GET", """""", _prefix + """fornecedores/$id<[^/]+>""")
-)
-                      
-
-// @LINE:66
-def atualizar(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.FornecedorController.atualizar(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.FornecedorController", "atualizar", Seq(classOf[Integer]), "PUT", """""", _prefix + """fornecedores/$id<[^/]+>""")
+// @LINE:62
+def buscaPorId(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.FornecedorController.buscaPorId(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.FornecedorController", "buscaPorId", Seq(classOf[Long]), "GET", """""", _prefix + """fornecedores/$id<[^/]+>""")
 )
                       
 
 }
                           
 
-// @LINE:54
-// @LINE:53
-// @LINE:52
-// @LINE:51
-// @LINE:50
-// @LINE:49
+// @LINE:48
+// @LINE:47
+// @LINE:46
+// @LINE:45
+// @LINE:44
+// @LINE:43
 class ReverseBairroController {
 
 
-// @LINE:54
+// @LINE:48
 def filtraPorNome(filtro:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.BairroController.filtraPorNome(filtro), HandlerDef(this.getClass.getClassLoader, "", "controllers.BairroController", "filtraPorNome", Seq(classOf[String]), "GET", """""", _prefix + """bairros/nome/$filtro<[^/]+>""")
 )
                       
 
-// @LINE:50
+// @LINE:44
 def atualizar(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.BairroController.atualizar(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.BairroController", "atualizar", Seq(classOf[Long]), "PUT", """""", _prefix + """bairros/$id<[^/]+>""")
 )
                       
 
-// @LINE:51
+// @LINE:45
 def buscaTodos(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.BairroController.buscaTodos(), HandlerDef(this.getClass.getClassLoader, "", "controllers.BairroController", "buscaTodos", Seq(), "GET", """""", _prefix + """bairros""")
 )
                       
 
-// @LINE:53
+// @LINE:47
 def remover(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.BairroController.remover(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.BairroController", "remover", Seq(classOf[Long]), "DELETE", """""", _prefix + """bairros/$id<[^/]+>""")
 )
                       
 
-// @LINE:49
+// @LINE:43
 def inserir(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.BairroController.inserir(), HandlerDef(this.getClass.getClassLoader, "", "controllers.BairroController", "inserir", Seq(), "POST", """ CRUD Bairro""", _prefix + """bairros""")
 )
                       
 
-// @LINE:52
+// @LINE:46
 def buscaPorId(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.BairroController.buscaPorId(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.BairroController", "buscaPorId", Seq(classOf[Long]), "GET", """""", _prefix + """bairros/$id<[^/]+>""")
 )
@@ -2152,46 +2152,46 @@ def buscaPorId(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRe
 }
                           
 
-// @LINE:30
-// @LINE:29
-// @LINE:28
-// @LINE:27
-// @LINE:26
-// @LINE:25
+// @LINE:24
+// @LINE:23
+// @LINE:22
+// @LINE:21
+// @LINE:20
+// @LINE:19
 class ReversePaisController {
 
 
-// @LINE:30
+// @LINE:24
 def filtraPorNome(filtro:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.PaisController.filtraPorNome(filtro), HandlerDef(this.getClass.getClassLoader, "", "controllers.PaisController", "filtraPorNome", Seq(classOf[String]), "GET", """""", _prefix + """paises/nome/$filtro<[^/]+>""")
 )
                       
 
-// @LINE:26
+// @LINE:20
 def atualizar(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.PaisController.atualizar(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.PaisController", "atualizar", Seq(classOf[Long]), "PUT", """""", _prefix + """paises/$id<[^/]+>""")
 )
                       
 
-// @LINE:27
+// @LINE:21
 def buscaTodos(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.PaisController.buscaTodos(), HandlerDef(this.getClass.getClassLoader, "", "controllers.PaisController", "buscaTodos", Seq(), "GET", """""", _prefix + """paises""")
 )
                       
 
-// @LINE:29
+// @LINE:23
 def remover(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.PaisController.remover(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.PaisController", "remover", Seq(classOf[Long]), "DELETE", """""", _prefix + """paises/$id<[^/]+>""")
 )
                       
 
-// @LINE:25
+// @LINE:19
 def inserir(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.PaisController.inserir(), HandlerDef(this.getClass.getClassLoader, "", "controllers.PaisController", "inserir", Seq(), "POST", """ CRUD País""", _prefix + """paises""")
 )
                       
 
-// @LINE:28
+// @LINE:22
 def buscaPorId(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.PaisController.buscaPorId(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.PaisController", "buscaPorId", Seq(classOf[Long]), "GET", """""", _prefix + """paises/$id<[^/]+>""")
 )
@@ -2241,12 +2241,12 @@ def autenticar(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
-// @LINE:22
+// @LINE:16
 // @LINE:6
 class ReverseApplication {
 
 
-// @LINE:22
+// @LINE:16
 def versaoplay(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Application.versaoplay(), HandlerDef(this.getClass.getClassLoader, "", "controllers.Application", "versaoplay", Seq(), "GET", """ Applications""", _prefix + """versaoplay""")
 )
@@ -2261,46 +2261,46 @@ def index(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 }
                           
 
-// @LINE:38
-// @LINE:37
-// @LINE:36
-// @LINE:35
-// @LINE:34
-// @LINE:33
+// @LINE:32
+// @LINE:31
+// @LINE:30
+// @LINE:29
+// @LINE:28
+// @LINE:27
 class ReverseEstadoController {
 
 
-// @LINE:38
+// @LINE:32
 def filtraPorNome(filtro:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.EstadoController.filtraPorNome(filtro), HandlerDef(this.getClass.getClassLoader, "", "controllers.EstadoController", "filtraPorNome", Seq(classOf[String]), "GET", """""", _prefix + """estados/nome/$filtro<[^/]+>""")
 )
                       
 
-// @LINE:34
+// @LINE:28
 def atualizar(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.EstadoController.atualizar(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.EstadoController", "atualizar", Seq(classOf[Long]), "PUT", """""", _prefix + """estados/$id<[^/]+>""")
 )
                       
 
-// @LINE:35
+// @LINE:29
 def buscaTodos(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.EstadoController.buscaTodos(), HandlerDef(this.getClass.getClassLoader, "", "controllers.EstadoController", "buscaTodos", Seq(), "GET", """""", _prefix + """estados""")
 )
                       
 
-// @LINE:37
+// @LINE:31
 def remover(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.EstadoController.remover(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.EstadoController", "remover", Seq(classOf[Long]), "DELETE", """""", _prefix + """estados/$id<[^/]+>""")
 )
                       
 
-// @LINE:33
+// @LINE:27
 def inserir(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.EstadoController.inserir(), HandlerDef(this.getClass.getClassLoader, "", "controllers.EstadoController", "inserir", Seq(), "POST", """ CRUD Estado""", _prefix + """estados""")
 )
                       
 
-// @LINE:36
+// @LINE:30
 def buscaPorId(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.EstadoController.buscaPorId(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.EstadoController", "buscaPorId", Seq(classOf[Long]), "GET", """""", _prefix + """estados/$id<[^/]+>""")
 )
@@ -2309,142 +2309,142 @@ def buscaPorId(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRe
 }
                           
 
-// @LINE:62
-// @LINE:61
-// @LINE:60
-// @LINE:59
-// @LINE:58
-// @LINE:57
+// @LINE:56
+// @LINE:55
+// @LINE:54
+// @LINE:53
+// @LINE:52
+// @LINE:51
 class ReverseClienteController {
 
 
-// @LINE:62
+// @LINE:56
 def filtraPorNome(filtro:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ClienteController.filtraPorNome(filtro), HandlerDef(this.getClass.getClassLoader, "", "controllers.ClienteController", "filtraPorNome", Seq(classOf[String]), "GET", """""", _prefix + """clientes/nome/$filtro<[^/]+>""")
 )
                       
 
-// @LINE:59
+// @LINE:52
+def atualizar(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.ClienteController.atualizar(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.ClienteController", "atualizar", Seq(classOf[Long]), "PUT", """""", _prefix + """clientes/$id<[^/]+>""")
+)
+                      
+
+// @LINE:53
 def buscaTodos(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ClienteController.buscaTodos(), HandlerDef(this.getClass.getClassLoader, "", "controllers.ClienteController", "buscaTodos", Seq(), "GET", """""", _prefix + """clientes""")
 )
                       
 
-// @LINE:61
-def remover(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.ClienteController.remover(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.ClienteController", "remover", Seq(classOf[Integer]), "DELETE", """""", _prefix + """clientes/$id<[^/]+>""")
+// @LINE:55
+def remover(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.ClienteController.remover(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.ClienteController", "remover", Seq(classOf[Long]), "DELETE", """""", _prefix + """clientes/$id<[^/]+>""")
 )
                       
 
-// @LINE:57
+// @LINE:51
 def inserir(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ClienteController.inserir(), HandlerDef(this.getClass.getClassLoader, "", "controllers.ClienteController", "inserir", Seq(), "POST", """ CRUD Cliente""", _prefix + """clientes""")
 )
                       
 
-// @LINE:60
-def buscaPorId(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.ClienteController.buscaPorId(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.ClienteController", "buscaPorId", Seq(classOf[Integer]), "GET", """""", _prefix + """clientes/$id<[^/]+>""")
-)
-                      
-
-// @LINE:58
-def atualizar(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.ClienteController.atualizar(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.ClienteController", "atualizar", Seq(classOf[Integer]), "PUT", """""", _prefix + """clientes/$id<[^/]+>""")
+// @LINE:54
+def buscaPorId(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.ClienteController.buscaPorId(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.ClienteController", "buscaPorId", Seq(classOf[Long]), "GET", """""", _prefix + """clientes/$id<[^/]+>""")
 )
                       
 
 }
                           
 
-// @LINE:94
-// @LINE:93
-// @LINE:92
-// @LINE:91
-// @LINE:90
-// @LINE:89
+// @LINE:88
+// @LINE:87
+// @LINE:86
+// @LINE:85
+// @LINE:84
+// @LINE:83
 class ReverseUnidadeDeMedidaController {
 
 
-// @LINE:91
+// @LINE:88
+def filtraPorNome(filtro:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.UnidadeDeMedidaController.filtraPorNome(filtro), HandlerDef(this.getClass.getClassLoader, "", "controllers.UnidadeDeMedidaController", "filtraPorNome", Seq(classOf[String]), "GET", """""", _prefix + """unidadesdemedidas/nome/$filtro<[^/]+>""")
+)
+                      
+
+// @LINE:84
+def atualizar(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.UnidadeDeMedidaController.atualizar(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.UnidadeDeMedidaController", "atualizar", Seq(classOf[Long]), "PUT", """""", _prefix + """unidadesdemedidas/$id<[^/]+>""")
+)
+                      
+
+// @LINE:85
 def buscaTodos(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.UnidadeDeMedidaController.buscaTodos(), HandlerDef(this.getClass.getClassLoader, "", "controllers.UnidadeDeMedidaController", "buscaTodos", Seq(), "GET", """""", _prefix + """unidadesdemedidas""")
 )
                       
 
-// @LINE:94
-def remover(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.UnidadeDeMedidaController.remover(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.UnidadeDeMedidaController", "remover", Seq(classOf[Integer]), "DELETE", """""", _prefix + """unidadesdemedidas/$id<[^/]+>""")
+// @LINE:87
+def remover(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.UnidadeDeMedidaController.remover(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.UnidadeDeMedidaController", "remover", Seq(classOf[Long]), "DELETE", """""", _prefix + """unidadesdemedidas/$id<[^/]+>""")
 )
                       
 
-// @LINE:89
+// @LINE:83
 def inserir(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.UnidadeDeMedidaController.inserir(), HandlerDef(this.getClass.getClassLoader, "", "controllers.UnidadeDeMedidaController", "inserir", Seq(), "POST", """ CRUD Unidade de Medida""", _prefix + """unidadesdemedidas""")
 )
                       
 
-// @LINE:92
-def buscaPorPaginas(pagina:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.UnidadeDeMedidaController.buscaPorPaginas(pagina), HandlerDef(this.getClass.getClassLoader, "", "controllers.UnidadeDeMedidaController", "buscaPorPaginas", Seq(classOf[Integer]), "GET", """""", _prefix + """unidadesdemedidasPagina/$pagina<[^/]+>""")
-)
-                      
-
-// @LINE:93
-def buscaPorId(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.UnidadeDeMedidaController.buscaPorId(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.UnidadeDeMedidaController", "buscaPorId", Seq(classOf[Integer]), "GET", """""", _prefix + """unidadesdemedidas/$id<[^/]+>""")
-)
-                      
-
-// @LINE:90
-def atualizar(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.UnidadeDeMedidaController.atualizar(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.UnidadeDeMedidaController", "atualizar", Seq(classOf[Integer]), "PUT", """""", _prefix + """unidadesdemedidas/$id<[^/]+>""")
+// @LINE:86
+def buscaPorId(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.UnidadeDeMedidaController.buscaPorId(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.UnidadeDeMedidaController", "buscaPorId", Seq(classOf[Long]), "GET", """""", _prefix + """unidadesdemedidas/$id<[^/]+>""")
 )
                       
 
 }
                           
 
-// @LINE:110
-// @LINE:109
-// @LINE:108
-// @LINE:107
-// @LINE:106
-// @LINE:105
+// @LINE:104
+// @LINE:103
+// @LINE:102
+// @LINE:101
+// @LINE:100
+// @LINE:99
 class ReverseUsuarioController {
 
 
-// @LINE:107
+// @LINE:101
 def buscaTodos(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.UsuarioController.buscaTodos(), HandlerDef(this.getClass.getClassLoader, "", "controllers.UsuarioController", "buscaTodos", Seq(), "GET", """""", _prefix + """usuarios""")
 )
                       
 
-// @LINE:110
+// @LINE:104
 def remover(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.UsuarioController.remover(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.UsuarioController", "remover", Seq(classOf[Integer]), "DELETE", """""", _prefix + """usuarios/$id<[^/]+>""")
 )
                       
 
-// @LINE:105
+// @LINE:99
 def inserir(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.UsuarioController.inserir(), HandlerDef(this.getClass.getClassLoader, "", "controllers.UsuarioController", "inserir", Seq(), "POST", """ CRUD Usuário""", _prefix + """usuarios""")
 )
                       
 
-// @LINE:108
+// @LINE:102
 def buscaPorPaginas(pagina:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.UsuarioController.buscaPorPaginas(pagina), HandlerDef(this.getClass.getClassLoader, "", "controllers.UsuarioController", "buscaPorPaginas", Seq(classOf[Integer]), "GET", """""", _prefix + """usuariosPagina/$pagina<[^/]+>""")
 )
                       
 
-// @LINE:109
+// @LINE:103
 def buscaPorId(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.UsuarioController.buscaPorId(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.UsuarioController", "buscaPorId", Seq(classOf[Integer]), "GET", """""", _prefix + """usuarios/$id<[^/]+>""")
 )
                       
 
-// @LINE:106
+// @LINE:100
 def atualizar(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.UsuarioController.atualizar(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.UsuarioController", "atualizar", Seq(classOf[Integer]), "PUT", """""", _prefix + """usuarios/$id<[^/]+>""")
 )
@@ -2453,46 +2453,46 @@ def atualizar(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.Handler
 }
                           
 
-// @LINE:46
-// @LINE:45
-// @LINE:44
-// @LINE:43
-// @LINE:42
-// @LINE:41
+// @LINE:40
+// @LINE:39
+// @LINE:38
+// @LINE:37
+// @LINE:36
+// @LINE:35
 class ReverseCidadeController {
 
 
-// @LINE:46
+// @LINE:40
 def filtraPorNome(filtro:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.CidadeController.filtraPorNome(filtro), HandlerDef(this.getClass.getClassLoader, "", "controllers.CidadeController", "filtraPorNome", Seq(classOf[String]), "GET", """""", _prefix + """cidades/nome/$filtro<[^/]+>""")
 )
                       
 
-// @LINE:42
+// @LINE:36
 def atualizar(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.CidadeController.atualizar(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.CidadeController", "atualizar", Seq(classOf[Long]), "PUT", """""", _prefix + """cidades/$id<[^/]+>""")
 )
                       
 
-// @LINE:43
+// @LINE:37
 def buscaTodos(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.CidadeController.buscaTodos(), HandlerDef(this.getClass.getClassLoader, "", "controllers.CidadeController", "buscaTodos", Seq(), "GET", """""", _prefix + """cidades""")
 )
                       
 
-// @LINE:45
+// @LINE:39
 def remover(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.CidadeController.remover(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.CidadeController", "remover", Seq(classOf[Long]), "DELETE", """""", _prefix + """cidades/$id<[^/]+>""")
 )
                       
 
-// @LINE:41
+// @LINE:35
 def inserir(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.CidadeController.inserir(), HandlerDef(this.getClass.getClassLoader, "", "controllers.CidadeController", "inserir", Seq(), "POST", """ CRUD Cidade""", _prefix + """cidades""")
 )
                       
 
-// @LINE:44
+// @LINE:38
 def buscaPorId(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.CidadeController.buscaPorId(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.CidadeController", "buscaPorId", Seq(classOf[Long]), "GET", """""", _prefix + """cidades/$id<[^/]+>""")
 )
