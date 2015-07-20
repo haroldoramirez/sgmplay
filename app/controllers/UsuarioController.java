@@ -124,7 +124,7 @@ public class UsuarioController extends Controller {
             return notFound("Usuário não encontrado");
         }
 
-        if (usuario.isPadraoDoSistema()) {
+        if (usuario.getPadraoDoSistema() == true) {
             return badRequest("Usuário padrão do sistema");
         }
 

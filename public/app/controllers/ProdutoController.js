@@ -1,24 +1,7 @@
-function updateActivedPage(scope) {
-    window.scopePage = scope.pagina;
-}
-
 angular.module('mercado')
-  .controller('ProdutoCreateController', function ($scope, $location, Produto, Fornecedor, Fabricante, Categoria, UnidadeDeMedida, toastr){
-        $scope.produto = {};
-        $scope.save = function(){
-            console.log($scope.produto);
-            Produto.save($scope.produto, function(data){
-                toastr.success(data.data,'Produto Salvo com Sucesso');
-                $location.path('/produtos');
-            }, function(data){
-                console.log(data);
-                toastr.error(data.data,'Não foi possível Salvar o Produto');
-            });
-        };
+  .controller('ProdutoCreateController', function ($scope, $location, Produto, Fornecedor, Fabricante, Categoria, UnidadeDeMedida, toastr) {
 
-        $scope.cancel = function(){
-            $location.path('/produtos');
-        };
+        $scope.produto = {};
 
         $scope.init = function(){
             Fornecedor.getAll(function(data){
@@ -38,58 +21,48 @@ angular.module('mercado')
             });
         };
 
+        $scope.save = function() {
+            console.log($scope.produto);
+            Produto.save($scope.produto, function(data){
+                toastr.success('Produto Salvo com Sucesso');
+                $location.path('/produtos');
+            }, function(data){
+                console.log(data);
+                toastr.error(data.data,'Não foi possível Salvar');
+            });
+        };
+
+        $scope.cancel = function(){
+            $location.path('/produtos');
+        };
+
   }).controller('ProdutoListController', function ($scope, Produto, toastr){
+
         $scope.produtos = [];
+
         $scope.init = function(){
+        $scope.nomeFiltro = '';
+
           Produto.getAll(function(data){
             $scope.produtos = data;
+            $scope.quantidade = $scope.produtos.length;
           });
-          $scope.pagina = 0;
-          updateActivedPage(this);
         };
 
-        //botão de páginas
-        $scope._pagina = function(val){
-        $scope.pagina = val;
-            Produto.getPagina({pagina: $scope.pagina}, $scope.produto, function(data){
-                $scope.produtos = data;
-            });
-            updateActivedPage(this);
-        };
+        $scope.busca = function() {
 
-        //botão próximo
-        $scope.proximo = function(val){
-        $scope.pagina = val + 1;
-            Produto.getPagina({pagina: $scope.pagina}, $scope.produto, function(data){
-                if (data.length===0) {
-                    $scope.pagina = $scope.pagina - 1;
-                }else{
+           if ($scope.nomeFiltro) {
+                Produto.getFiltroProduto({filtro:$scope.nomeFiltro}, $scope.produto, function(data) {
                     $scope.produtos = data;
-                };
-            });
-            updateActivedPage(this);
-         }
-
-        //botão anterior
-        $scope.anterior = function(val){
-        $scope.pagina = val - 1;
-            Produto.getPagina({pagina: $scope.pagina}, $scope.produto, function(data){
-                $scope.produtos = data;
-            });
-            updateActivedPage(this);
-         }
-
-        //deletar opcional
-        $scope.delete = function(id){
-           Produto.delete({id:id}, function(){
-               toastr.success('Produto Removido com Sucesso');
-               $scope.init();
-           }, function(data){
-               toastr.error(data.data,'Não foi possível Remover o Produto');
-           });
+                });
+           } else {
+                Produto.getAll(function(data) {
+                    $scope.produtos = data;
+                });
+           };
         };
 
-  }).controller('ProdutoDetailController', function ($scope, $routeParams, $location, Produto, Fornecedor, Fabricante, Categoria, UnidadeDeMedida, toastr){
+  }).controller('ProdutoDetailController', function ($scope, $modal, $routeParams, $location, Produto, Fornecedor, Fabricante, Categoria, UnidadeDeMedida, toastr){
 
         $scope.init = function(){
               $scope.produto = Produto.get({id:$routeParams.id});
@@ -101,11 +74,11 @@ angular.module('mercado')
 
         $scope.update = function(){
             Produto.update({id:$routeParams.id},$scope.produto, function(data){
-                toastr.info(data.data,'Produto Atualizado com Sucesso');
+                toastr.info('Produto Atualizado com Sucesso');
                 $location.path('/produtos');
             },function(data){
                console.log(data);
-               toastr.error(data.data,'Não foi possível Atualizar o Produto');
+               toastr.error(data.data,'Não foi possível Atualizar');
             });
 
           };
@@ -116,24 +89,27 @@ angular.module('mercado')
 
         $scope.delete = function(){
             Produto.delete({id:$routeParams.id}, function(data){
-                toastr.warning(data.data,'Produto Removido com Sucesso');
+                toastr.warning('Produto Removido com Sucesso');
                 $location.path('/produtos');
             }, function(data){
             console.log(data);
                 console.log(data);
-                toastr.error(data.data,'Não foi possível Remover o Produto');
+                toastr.error(data.data,'Não foi possível Remover');
             });
 
         };
 
-        $scope.confirmacaoModal = {
-            "title": "Confirmação",
-            "content": "Deseja excluir o Produto?"
+        $scope.open = function (size) {
+
+            $modalInstance = $modal.open({
+                  templateUrl: 'modalConfirmacao.html',
+                  controller: 'ProdutoDetailController',
+                  size: size,
+            });
         };
 
-        $scope.popoverConfirmacao = {
-            "title": "Confirmação",
-            "content": "Excluir?"
+        $scope.cancelModal = function () {
+            $modalInstance.dismiss('cancelModal');
         };
 
   });

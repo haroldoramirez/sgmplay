@@ -10,7 +10,7 @@
 
     <!--Input de Busca-->
     <div class="col-md-5 input-group">
-        <input ng-model="nomeFiltro" type="search" class="form-control" placeholder="digite o nome fantasia do fornecedor ou o CNPJ">
+        <input ng-model="nomeFiltro" type="search" class="form-control" placeholder="digite o nome fantasia ou o CNPJ">
             <span class="input-group-btn">
                 <button ng-disabled="!nomeFiltro" class="btn btn-primary" ng-click="busca();"><span class="fa fa-search"></span> Filtrar</button>
                 <button class="btn btn-default" ng-click="init();">Limpar</button>
@@ -29,7 +29,6 @@
             <th>Nome Fantasia</th>
             <th>Razão Social</th>
             <th>Telefone</th>
-            <th>Fax</th>
             <th>CNPJ</th>
             <th>Inscrição Estadual</th>
             <th>CEP</th>
@@ -39,7 +38,6 @@
             <td><b><a href="#/fornecedores/detalhe/{{fornecedor.id}}">{{fornecedor.nomeFantasia}}</a></b></td>
             <td>{{fornecedor.razaoSocial}}</td>
             <td>{{fornecedor.telefone}}</td>
-            <td>{{fornecedor.fax}}</td>
             <td>{{fornecedor.cnpj}}</td>
             <td>{{fornecedor.inscricaoEstadual}}</td>
             <td>{{fornecedor.cep}}</td>

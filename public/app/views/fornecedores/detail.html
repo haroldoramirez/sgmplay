@@ -26,6 +26,7 @@
 
     <form ng-init="init()" class="form-horizontal" ng-submit="update()">
         <div class="form-group">
+
             <!--Input do NomeFantasia-->
             <div class="col-md-5">
                 <label class="control-label" for="nomefantasia">Nome Fantasia</label>
@@ -63,7 +64,7 @@
             <div class="col-md-2">
                 <label class="control-label" for="fax">Fax</label>
                 <div class="input-group">
-                    <span class="input-group-addon"><i class="fa fa-phone-square"></i></span>
+                    <span class="input-group-addon"><i class="fa fa-fax"></i></span>
                     <input ui-br-phone-number placeholder="(__) ____-____" maxlength="15" class="form-control" type="text" ng-model="fornecedor.fax" id="fax"/>
                 </div>
             </div>
@@ -176,18 +177,19 @@
                     </textarea>
                 </div>
             </div>
-                    <!--Botões-->
-                    <div class="col-md-12">
-                        <div class="control-group">
-                            <br>
-                            <button id="update" class="btn btn-primary" type="submit" ng-disabled="!fornecedor.razaoSocial || !fornecedor.nomeFantasia || !fornecedor.telefone || !fornecedor.cnpj || !fornecedor.inscricaoEstadual || !fornecedor.bairro.id">
-                                <span class="fa fa-refresh"></span> Atualizar
-                            </button>
-                            <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">
-                                <span class="fa fa-arrow-left"></span> Voltar
-                            </button>
-                        </div>
-                    </div>
+
+            <!--Botões-->
+            <div class="col-md-12">
+                <div class="control-group">
+                    <br>
+                    <button id="update" class="btn btn-primary" type="submit" ng-disabled="!fornecedor.razaoSocial || !fornecedor.nomeFantasia || !fornecedor.telefone || !fornecedor.cnpj || !fornecedor.inscricaoEstadual || !fornecedor.bairro.id">
+                        <span class="fa fa-refresh"></span> Atualizar
+                    </button>
+                    <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">
+                        <span class="fa fa-arrow-left"></span> Voltar
+                    </button>
+                </div>
+            </div>
         </div>
     </form>
 </div>

@@ -1,7 +1,7 @@
 package models;
 
-import models.base.EntidadePai;
 import models.locale.Bairro;
+import play.db.ebean.Model;
 import play.libs.Json;
 
 import javax.persistence.*;
@@ -9,13 +9,13 @@ import java.util.Calendar;
 
 @Entity
 @Table(name = "cliente")
-public class Cliente extends EntidadePai {
+public class Cliente extends Model {
 
 	private static final long serialVersionUID = 1L;
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     @Column(nullable = false)
     private String nome;
@@ -58,6 +58,30 @@ public class Cliente extends EntidadePai {
 
     private String observacoes;
 
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(nullable = false)
+    private Calendar dataDeCadastro = Calendar.getInstance();
+
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(nullable = false)
+    private Calendar dataDeAlteracao = Calendar.getInstance();
+
+    public Calendar getDataDeCadastro() {
+        return dataDeCadastro;
+    }
+
+    public void setDataDeCadastro(Calendar dataDeCadastro) {
+        this.dataDeCadastro = dataDeCadastro;
+    }
+
+    public Calendar getDataDeAlteracao() {
+        return dataDeAlteracao;
+    }
+
+    public void setDataDeAlteracao(Calendar dataDeAlteracao) {
+        this.dataDeAlteracao = dataDeAlteracao;
+    }
+
     public Situacao getSituacao() {
         return situacao;
     }
@@ -66,11 +90,11 @@ public class Cliente extends EntidadePai {
         this.situacao = situacao;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

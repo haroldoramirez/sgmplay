@@ -1,21 +1,21 @@
 package models.stock;
 
 import models.Fornecedor;
-import models.base.EntidadePai;
+import play.db.ebean.Model;
 import play.libs.Json;
 
 import javax.persistence.*;
-import java.sql.Timestamp;
+import java.util.Calendar;
 
 @Entity
 @Table(name = "produto")
-public class Produto extends EntidadePai {
+public class Produto extends Model {
 
 	private static final long serialVersionUID = 1L;
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     @Column(nullable = false, unique = true)
     private String descricao;
@@ -48,15 +48,39 @@ public class Produto extends EntidadePai {
     @ManyToOne(optional = true)
     private UnidadeDeMedida unidadedemedida;
 
-    @Version
-    @Column(columnDefinition = "timestamp default '2014-10-06 21:17:06'")
-    public Timestamp lastUpdate; // here
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(nullable = false)
+    private Calendar dataDeCadastro = Calendar.getInstance();
 
-    public Integer getId() {
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(nullable = false)
+    private Calendar dataDeAlteracao = Calendar.getInstance();
+
+    public Calendar getDataDeCadastro() {
+        return dataDeCadastro;
+    }
+
+    public void setDataDeCadastro(Calendar dataDeCadastro) {
+        this.dataDeCadastro = dataDeCadastro;
+    }
+
+    public Calendar getDataDeAlteracao() {
+        return dataDeAlteracao;
+    }
+
+    public void setDataDeAlteracao(Calendar dataDeAlteracao) {
+        this.dataDeAlteracao = dataDeAlteracao;
+    }
+
+//    @Version
+//    @Column(columnDefinition = "timestamp default '2014-10-06 21:17:06'")
+//    public Timestamp lastUpdate; // here
+
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

@@ -1,19 +1,20 @@
 package models;
 
-import models.base.EntidadePai;
+import play.db.ebean.Model;
 import play.libs.Json;
 
 import javax.persistence.*;
+import java.util.Calendar;
 
 @Entity
 @Table(name = "usuario")
-public class Usuario extends EntidadePai {
+public class Usuario extends Model {
 
 	private static final long serialVersionUID = 1L;
 
 	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Long id;
 
     @Column(nullable = false, unique = true)
     private String email;
@@ -24,6 +25,32 @@ public class Usuario extends EntidadePai {
     @Column(nullable = false)
     private Integer privilegio;
 
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(nullable = false)
+    private Calendar dataDeCadastro = Calendar.getInstance();
+
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(nullable = false)
+    private Calendar dataDeAlteracao = Calendar.getInstance();
+
+    private Boolean padraoDoSistema;
+
+    public Calendar getDataDeCadastro() {
+        return dataDeCadastro;
+    }
+
+    public void setDataDeCadastro(Calendar dataDeCadastro) {
+        this.dataDeCadastro = dataDeCadastro;
+    }
+
+    public Calendar getDataDeAlteracao() {
+        return dataDeAlteracao;
+    }
+
+    public void setDataDeAlteracao(Calendar dataDeAlteracao) {
+        this.dataDeAlteracao = dataDeAlteracao;
+    }
+
     public String getEmail() {
         return email;
     }
@@ -32,11 +59,11 @@ public class Usuario extends EntidadePai {
         this.email = email;
     }
 
-    public Integer getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -54,6 +81,14 @@ public class Usuario extends EntidadePai {
 
     public void setPrivilegio(Integer privilegio) {
         this.privilegio = privilegio;
+    }
+
+    public Boolean getPadraoDoSistema() {
+        return padraoDoSistema;
+    }
+
+    public void setPadraoDoSistema(Boolean padraoDoSistema) {
+        this.padraoDoSistema = padraoDoSistema;
     }
 
     @Override

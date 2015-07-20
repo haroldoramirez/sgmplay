@@ -1,6 +1,6 @@
 // @SOURCE:/home/haroldo/projetos/academico/sgmplay/conf/routes
-// @HASH:dd6de9c0c2118681a07c9f20d27e2b75e5973a60
-// @DATE:Fri Jul 17 16:27:21 BRT 2015
+// @HASH:c21310392da6213473edfe372ef8c1290b072d14
+// @DATE:Mon Jul 20 15:56:50 BRT 2015
 
 import Routes.{prefix => _prefix, defaultPrefix => _defaultPrefix}
 import play.core._
@@ -15,8 +15,7 @@ import _root_.play.libs.F
 import Router.queryString
 
 
-// @LINE:107
-// @LINE:104
+// @LINE:106
 // @LINE:103
 // @LINE:102
 // @LINE:101
@@ -91,11 +90,11 @@ import Router.queryString
 // @LINE:6
 package controllers {
 
-// @LINE:107
+// @LINE:106
 class ReverseAssets {
 
 
-// @LINE:107
+// @LINE:106
 def at(file:String): Call = {
    implicit val _rrc = new ReverseRouteContext(Map(("path", "/public")))
    Call("GET", _prefix + { _defaultPrefix } + "assets/" + implicitly[PathBindable[String]].unbind("file", file))
@@ -114,6 +113,13 @@ def at(file:String): Call = {
 class ReverseProdutoController {
 
 
+// @LINE:96
+def filtraPorNome(filtro:String): Call = {
+   import ReverseRouteContext.empty
+   Call("GET", _prefix + { _defaultPrefix } + "produtos/nome/" + implicitly[PathBindable[String]].unbind("filtro", dynamicString(filtro)))
+}
+                        
+
 // @LINE:93
 def buscaTodos(): Call = {
    import ReverseRouteContext.empty
@@ -121,7 +127,7 @@ def buscaTodos(): Call = {
 }
                         
 
-// @LINE:96
+// @LINE:95
 def remover(id:Integer): Call = {
    import ReverseRouteContext.empty
    Call("DELETE", _prefix + { _defaultPrefix } + "produtos/" + implicitly[PathBindable[Integer]].unbind("id", id))
@@ -136,13 +142,6 @@ def inserir(): Call = {
                         
 
 // @LINE:94
-def buscaPorPaginas(pagina:Integer): Call = {
-   import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "produtosPagina/" + implicitly[PathBindable[Integer]].unbind("pagina", pagina))
-}
-                        
-
-// @LINE:95
 def buscaPorId(id:Integer): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "produtos/" + implicitly[PathBindable[Integer]].unbind("id", id))
@@ -659,7 +658,6 @@ def buscaPorId(id:Long): Call = {
 }
                           
 
-// @LINE:104
 // @LINE:103
 // @LINE:102
 // @LINE:101
@@ -675,7 +673,7 @@ def buscaTodos(): Call = {
 }
                         
 
-// @LINE:104
+// @LINE:103
 def remover(id:Integer): Call = {
    import ReverseRouteContext.empty
    Call("DELETE", _prefix + { _defaultPrefix } + "usuarios/" + implicitly[PathBindable[Integer]].unbind("id", id))
@@ -690,13 +688,6 @@ def inserir(): Call = {
                         
 
 // @LINE:102
-def buscaPorPaginas(pagina:Integer): Call = {
-   import ReverseRouteContext.empty
-   Call("GET", _prefix + { _defaultPrefix } + "usuariosPagina/" + implicitly[PathBindable[Integer]].unbind("pagina", pagina))
-}
-                        
-
-// @LINE:103
 def buscaPorId(id:Integer): Call = {
    import ReverseRouteContext.empty
    Call("GET", _prefix + { _defaultPrefix } + "usuarios/" + implicitly[PathBindable[Integer]].unbind("id", id))
@@ -770,8 +761,7 @@ def buscaPorId(id:Long): Call = {
                   
 
 
-// @LINE:107
-// @LINE:104
+// @LINE:106
 // @LINE:103
 // @LINE:102
 // @LINE:101
@@ -847,11 +837,11 @@ def buscaPorId(id:Long): Call = {
 package controllers.javascript {
 import ReverseRouteContext.empty
 
-// @LINE:107
+// @LINE:106
 class ReverseAssets {
 
 
-// @LINE:107
+// @LINE:106
 def at : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.Assets.at",
    """
@@ -874,6 +864,17 @@ def at : JavascriptReverseRoute = JavascriptReverseRoute(
 class ReverseProdutoController {
 
 
+// @LINE:96
+def filtraPorNome : JavascriptReverseRoute = JavascriptReverseRoute(
+   "controllers.ProdutoController.filtraPorNome",
+   """
+      function(filtro) {
+      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "produtos/nome/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("filtro", encodeURIComponent(filtro))})
+      }
+   """
+)
+                        
+
 // @LINE:93
 def buscaTodos : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ProdutoController.buscaTodos",
@@ -885,7 +886,7 @@ def buscaTodos : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:96
+// @LINE:95
 def remover : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ProdutoController.remover",
    """
@@ -908,17 +909,6 @@ def inserir : JavascriptReverseRoute = JavascriptReverseRoute(
                         
 
 // @LINE:94
-def buscaPorPaginas : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.ProdutoController.buscaPorPaginas",
-   """
-      function(pagina) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "produtosPagina/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("pagina", pagina)})
-      }
-   """
-)
-                        
-
-// @LINE:95
 def buscaPorId : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.ProdutoController.buscaPorId",
    """
@@ -1663,7 +1653,6 @@ def buscaPorId : JavascriptReverseRoute = JavascriptReverseRoute(
 }
               
 
-// @LINE:104
 // @LINE:103
 // @LINE:102
 // @LINE:101
@@ -1683,7 +1672,7 @@ def buscaTodos : JavascriptReverseRoute = JavascriptReverseRoute(
 )
                         
 
-// @LINE:104
+// @LINE:103
 def remover : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UsuarioController.remover",
    """
@@ -1706,17 +1695,6 @@ def inserir : JavascriptReverseRoute = JavascriptReverseRoute(
                         
 
 // @LINE:102
-def buscaPorPaginas : JavascriptReverseRoute = JavascriptReverseRoute(
-   "controllers.UsuarioController.buscaPorPaginas",
-   """
-      function(pagina) {
-      return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "usuariosPagina/" + (""" + implicitly[PathBindable[Integer]].javascriptUnbind + """)("pagina", pagina)})
-      }
-   """
-)
-                        
-
-// @LINE:103
 def buscaPorId : JavascriptReverseRoute = JavascriptReverseRoute(
    "controllers.UsuarioController.buscaPorId",
    """
@@ -1822,8 +1800,7 @@ def buscaPorId : JavascriptReverseRoute = JavascriptReverseRoute(
         
 
 
-// @LINE:107
-// @LINE:104
+// @LINE:106
 // @LINE:103
 // @LINE:102
 // @LINE:101
@@ -1899,11 +1876,11 @@ def buscaPorId : JavascriptReverseRoute = JavascriptReverseRoute(
 package controllers.ref {
 
 
-// @LINE:107
+// @LINE:106
 class ReverseAssets {
 
 
-// @LINE:107
+// @LINE:106
 def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.Assets.at(path, file), HandlerDef(this.getClass.getClassLoader, "", "controllers.Assets", "at", Seq(classOf[String], classOf[String]), "GET", """ Map static resources from the /public folder to the /assets URL path""", _prefix + """assets/$file<.+>""")
 )
@@ -1921,13 +1898,19 @@ def at(path:String, file:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.
 class ReverseProdutoController {
 
 
+// @LINE:96
+def filtraPorNome(filtro:String): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
+   controllers.ProdutoController.filtraPorNome(filtro), HandlerDef(this.getClass.getClassLoader, "", "controllers.ProdutoController", "filtraPorNome", Seq(classOf[String]), "GET", """""", _prefix + """produtos/nome/$filtro<[^/]+>""")
+)
+                      
+
 // @LINE:93
 def buscaTodos(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ProdutoController.buscaTodos(), HandlerDef(this.getClass.getClassLoader, "", "controllers.ProdutoController", "buscaTodos", Seq(), "GET", """""", _prefix + """produtos""")
 )
                       
 
-// @LINE:96
+// @LINE:95
 def remover(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ProdutoController.remover(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.ProdutoController", "remover", Seq(classOf[Integer]), "DELETE", """""", _prefix + """produtos/$id<[^/]+>""")
 )
@@ -1940,12 +1923,6 @@ def inserir(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
                       
 
 // @LINE:94
-def buscaPorPaginas(pagina:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.ProdutoController.buscaPorPaginas(pagina), HandlerDef(this.getClass.getClassLoader, "", "controllers.ProdutoController", "buscaPorPaginas", Seq(classOf[Integer]), "GET", """""", _prefix + """produtosPagina/$pagina<[^/]+>""")
-)
-                      
-
-// @LINE:95
 def buscaPorId(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.ProdutoController.buscaPorId(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.ProdutoController", "buscaPorId", Seq(classOf[Integer]), "GET", """""", _prefix + """produtos/$id<[^/]+>""")
 )
@@ -2405,7 +2382,6 @@ def buscaPorId(id:Long): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRe
 }
                           
 
-// @LINE:104
 // @LINE:103
 // @LINE:102
 // @LINE:101
@@ -2420,7 +2396,7 @@ def buscaTodos(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
 )
                       
 
-// @LINE:104
+// @LINE:103
 def remover(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.UsuarioController.remover(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.UsuarioController", "remover", Seq(classOf[Integer]), "DELETE", """""", _prefix + """usuarios/$id<[^/]+>""")
 )
@@ -2433,12 +2409,6 @@ def inserir(): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
                       
 
 // @LINE:102
-def buscaPorPaginas(pagina:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
-   controllers.UsuarioController.buscaPorPaginas(pagina), HandlerDef(this.getClass.getClassLoader, "", "controllers.UsuarioController", "buscaPorPaginas", Seq(classOf[Integer]), "GET", """""", _prefix + """usuariosPagina/$pagina<[^/]+>""")
-)
-                      
-
-// @LINE:103
 def buscaPorId(id:Integer): play.api.mvc.HandlerRef[_] = new play.api.mvc.HandlerRef(
    controllers.UsuarioController.buscaPorId(id), HandlerDef(this.getClass.getClassLoader, "", "controllers.UsuarioController", "buscaPorId", Seq(classOf[Integer]), "GET", """""", _prefix + """usuarios/$id<[^/]+>""")
 )

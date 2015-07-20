@@ -28,10 +28,7 @@ create table cidade (
 ;
 
 create table cliente (
-  id                        integer auto_increment not null,
-  data_de_cadastro          datetime not null,
-  data_de_alteracao         datetime not null,
-  padrao_do_sistema         tinyint(1) default 0,
+  id                        bigint auto_increment not null,
   nome                      varchar(255) not null,
   telefone                  varchar(255) not null,
   cpf                       varchar(255),
@@ -47,16 +44,12 @@ create table cliente (
   cep                       varchar(255),
   complemento               varchar(255),
   observacoes               varchar(255),
+  data_de_cadastro          datetime not null,
+  data_de_alteracao         datetime not null,
   constraint ck_cliente_genero check (genero in ('MASCULINO','FEMININO')),
   constraint ck_cliente_situacao check (situacao in ('ATIVO','INATIVO')),
   constraint uq_cliente_cpf unique (cpf),
   constraint pk_cliente primary key (id))
-;
-
-create table entidade_pai (
-  data_de_cadastro          datetime not null,
-  data_de_alteracao         datetime not null,
-  padrao_do_sistema         tinyint(1) default 0)
 ;
 
 create table estado (
@@ -78,9 +71,6 @@ create table fabricante (
 
 create table fornecedor (
   id                        bigint auto_increment not null,
-  data_de_cadastro          datetime not null,
-  data_de_alteracao         datetime not null,
-  padrao_do_sistema         tinyint(1) default 0,
   nome_fantasia             varchar(255) not null,
   razao_social              varchar(255) not null,
   telefone                  varchar(255) not null,
@@ -96,6 +86,8 @@ create table fornecedor (
   complemento               varchar(255),
   observacoes               varchar(255),
   bairro_id                 bigint,
+  data_de_cadastro          datetime not null,
+  data_de_alteracao         datetime not null,
   constraint uq_fornecedor_cnpj unique (cnpj),
   constraint uq_fornecedor_inscricao_estadual unique (inscricao_estadual),
   constraint pk_fornecedor primary key (id))
@@ -110,10 +102,7 @@ create table pais (
 ;
 
 create table produto (
-  id                        integer auto_increment not null,
-  data_de_cadastro          datetime not null,
-  data_de_alteracao         datetime not null,
-  padrao_do_sistema         tinyint(1) default 0,
+  id                        bigint auto_increment not null,
   descricao                 varchar(255) not null,
   quantidade_minima         integer not null,
   quantidade_em_estoque     integer not null,
@@ -125,7 +114,8 @@ create table produto (
   categoria_id              bigint,
   fabricante_id             bigint,
   unidadedemedida_id        bigint,
-  last_update               timestamp default '2014-10-06 21:17:06' not null,
+  data_de_cadastro          datetime not null,
+  data_de_alteracao         datetime not null,
   constraint uq_produto_descricao unique (descricao),
   constraint pk_produto primary key (id))
 ;
@@ -139,13 +129,13 @@ create table unidadedemedida (
 ;
 
 create table usuario (
-  id                        integer auto_increment not null,
-  data_de_cadastro          datetime not null,
-  data_de_alteracao         datetime not null,
-  padrao_do_sistema         tinyint(1) default 0,
+  id                        bigint auto_increment not null,
   email                     varchar(255) not null,
   senha                     varchar(255) not null,
   privilegio                integer not null,
+  data_de_cadastro          datetime not null,
+  data_de_alteracao         datetime not null,
+  padrao_do_sistema         tinyint(1) default 0,
   constraint uq_usuario_email unique (email),
   constraint pk_usuario primary key (id))
 ;
@@ -182,8 +172,6 @@ drop table categoria;
 drop table cidade;
 
 drop table cliente;
-
-drop table entidade_pai;
 
 drop table estado;
 

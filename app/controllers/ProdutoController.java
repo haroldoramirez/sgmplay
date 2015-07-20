@@ -3,6 +3,7 @@ package controllers;
 import com.avaje.ebean.Ebean;
 import com.avaje.ebean.Page;
 import com.avaje.ebean.PagingList;
+import com.avaje.ebean.Query;
 import models.Fornecedor;
 import models.stock.Categoria;
 import models.stock.Fabricante;
@@ -23,13 +24,11 @@ public class ProdutoController extends Controller {
 
         Produto produto = Json.fromJson(request().body().asJson(), Produto.class);
 
-        Categoria categoria = Ebean.find(Categoria.class, produto.getCategoria().getId());
-        Fabricante fabricante = Ebean.find(Fabricante.class, produto.getFabricante().getId());
-        Fornecedor fornecedor = Ebean.find(Fornecedor.class, produto.getFornecedor().getId());
+        Produto produtoBusca = Ebean.find(Produto.class).where().eq("descricao", produto.getDescricao()).findUnique();
 
-        produto.setCategoria(categoria);
-        produto.setFabricante(fabricante);
-        produto.setFornecedor(fornecedor);
+        if (produtoBusca != null) {
+            return badRequest("Produto já cadastrado");
+        }
 
         if ((produto.getQuantidadeMinima() <= 0 || produto.getQuantidadeEmEstoque() <=0)){
             return badRequest("Quantidades Não Podem Ser Negativas");
@@ -43,19 +42,23 @@ public class ProdutoController extends Controller {
             return badRequest("Preço de Custo deve ser menor que o Preço de Venda");
         }
 
+        Categoria categoria = Ebean.find(Categoria.class, produto.getCategoria().getId());
+        Fabricante fabricante = Ebean.find(Fabricante.class, produto.getFabricante().getId());
+        Fornecedor fornecedor = Ebean.find(Fornecedor.class, produto.getFornecedor().getId());
+
+        produto.setCategoria(categoria);
+        produto.setFabricante(fabricante);
+        produto.setFornecedor(fornecedor);
+
         produto.setDataDeCadastro(Calendar.getInstance());
 
         try {
             Ebean.save(produto);
-        } catch (PersistenceException e) {
-            System.out.print(e.toString());
-            return badRequest("Produto já Cadastrado");
         } catch (Exception e) {
-            System.out.print(e.toString());
+            //System.out.print(e.toString());
             return badRequest("Erro interno de sistema");
         }
 
-        produto.setDataDeCadastro(Calendar.getInstance());
         return created(Json.toJson(produto));
     }
 
@@ -64,13 +67,11 @@ public class ProdutoController extends Controller {
 
         Produto produto = Json.fromJson(request().body().asJson(), Produto.class);
 
-        Categoria categoria = Ebean.find(Categoria.class, produto.getCategoria().getId());
-        Fabricante fabricante = Ebean.find(Fabricante.class, produto.getFabricante().getId());
-        Fornecedor fornecedor = Ebean.find(Fornecedor.class, produto.getFornecedor().getId());
+        Produto produtoBusca = Ebean.find(Produto.class, id);
 
-        produto.setCategoria(categoria);
-        produto.setFabricante(fabricante);
-        produto.setFornecedor(fornecedor);
+        if (produtoBusca == null) {
+            return notFound("Produto não encontrado");
+        }
 
         if ((produto.getQuantidadeMinima() <= 0 || produto.getQuantidadeEmEstoque() <=0)){
             return badRequest("Quantidades Não Podem Ser Negativas");
@@ -84,11 +85,20 @@ public class ProdutoController extends Controller {
             return badRequest("Preço de Custo deve ser menor que o Preço de Venda");
         }
 
+        Categoria categoria = Ebean.find(Categoria.class, produto.getCategoria().getId());
+        Fabricante fabricante = Ebean.find(Fabricante.class, produto.getFabricante().getId());
+        Fornecedor fornecedor = Ebean.find(Fornecedor.class, produto.getFornecedor().getId());
+
+        produto.setCategoria(categoria);
+        produto.setFabricante(fabricante);
+        produto.setFornecedor(fornecedor);
+
         produto.setDataDeAlteracao(Calendar.getInstance());
+
         try {
             Ebean.update(produto);
         } catch (Exception e) {
-            System.out.print(e.toString());
+            //System.out.print(e.toString());
             return badRequest("Erro interno de sistema");
         }
         
@@ -108,38 +118,16 @@ public class ProdutoController extends Controller {
     }
 
     public static Result buscaTodos() {
-        Logger.info("busca Todos os Produtos ordenados");
+        Logger.info("busca Todos os Produtos");
+
         return ok(Json.toJson(Ebean.find(Produto.class)
                 .order()
                 .asc("descricao")
-                .where()
-                .gt("descricao", "2")
-                .setMaxRows(14)
                 .findList()));
     }
 
-    //Mostrar acima de 14 linhas
-    public static Result buscaPorPaginas(Integer pagina) {
-        Logger.info("busca por página");
-
-        PagingList<Produto> pagingList =
-                Ebean.find(Produto.class)
-                        .order()
-                        .asc("descricao")
-                        .where().gt("descricao", "2")
-                        .findPagingList(14).setFetchAhead(true);
-
-        pagingList.getFutureRowCount();
-
-        Page<Produto> page = pagingList.getPage(pagina);
-
-        List<Produto> list = page.getList();
-
-        return ok(Json.toJson(list));
-    }
-
     public static Result remover(Integer id) {
-        Logger.info("remover Produto");
+        Logger.info("Remover Produto");
 
         Produto produto = Ebean.find(Produto.class, id);
 
@@ -147,16 +135,28 @@ public class ProdutoController extends Controller {
             return notFound("Produto não encontrado");
         }
 
+        produto.setDataDeAlteracao(null);
+
         try {
             Ebean.delete(produto);
         } catch (PersistenceException e) {
             System.out.print(e.toString());
             return badRequest("Existem vendas que dependem deste produto");
         } catch (Exception e) {
-            System.out.print(e.toString());
+            //System.out.print(e.toString());
             return badRequest("Erro interno de sistema");
         }
 
         return ok(Json.toJson(produto));
+    }
+
+    public static Result filtraPorNome(String filtro) {
+        Logger.info("Filtrando Produto por nome");
+
+        Query<Produto> query = Ebean.createQuery(Produto.class, "find produto where (descricao like :descricao or codigoDeBarras like :codigoDeBarras)");
+        query.setParameter("descricao", "%" + filtro + "%");
+        query.setParameter("codigoDeBarras", "%" + filtro + "%");
+        List<Produto> filtroDeProdutos = query.findList();
+        return ok(Json.toJson(filtroDeProdutos));
     }
 }

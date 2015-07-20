@@ -1,15 +1,15 @@
 package models;
 
-import models.base.EntidadePai;
 import models.locale.Bairro;
 import play.db.ebean.Model;
 import play.libs.Json;
 
 import javax.persistence.*;
+import java.util.Calendar;
 
 @Entity
 @Table(name = "fornecedor")
-public class Fornecedor extends EntidadePai {
+public class Fornecedor extends Model {
 
 	private static final long serialVersionUID = 1L;
 
@@ -52,6 +52,30 @@ public class Fornecedor extends EntidadePai {
 
     @ManyToOne(optional = true)
     private Bairro bairro;
+
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(nullable = false)
+    private Calendar dataDeCadastro = Calendar.getInstance();
+
+    @Temporal(TemporalType.TIMESTAMP)
+    @Column(nullable = false)
+    private Calendar dataDeAlteracao = Calendar.getInstance();
+
+    public Calendar getDataDeCadastro() {
+        return dataDeCadastro;
+    }
+
+    public void setDataDeCadastro(Calendar dataDeCadastro) {
+        this.dataDeCadastro = dataDeCadastro;
+    }
+
+    public Calendar getDataDeAlteracao() {
+        return dataDeAlteracao;
+    }
+
+    public void setDataDeAlteracao(Calendar dataDeAlteracao) {
+        this.dataDeAlteracao = dataDeAlteracao;
+    }
 
     public Long getId() {
         return id;

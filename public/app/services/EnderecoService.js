@@ -3,7 +3,6 @@ angular.module('mercado')
     function($resource, BaseUrl){
       return $resource(BaseUrl + '/paises/:id', {}, {
          getAll: {method: 'GET', url: BaseUrl + '/paises', isArray: true},
-         getPagina: {method: 'GET', url: BaseUrl + '/paisesPagina/:pagina', isArray: true},
          update: {method: 'PUT', url: BaseUrl + '/paises/:id', isArray: false},
          getFiltroPais: {method: 'GET', url: BaseUrl + '/paises/nome/:filtro', isArray: true}
       });
@@ -11,7 +10,6 @@ angular.module('mercado')
     function($resource, BaseUrl){
       return $resource(BaseUrl + '/estados/:id', {}, {
          getAll: {method: 'GET', url: BaseUrl + '/estados', isArray: true},
-         getPagina: {method: 'GET', url: BaseUrl + '/estadosPagina/:pagina', isArray: true},
          update: {method: 'PUT', url: BaseUrl + '/estados/:id', isArray: false},
          getFiltroEstado: {method: 'GET', url: BaseUrl + '/estados/nome/:filtro', isArray: true}
       });
@@ -19,7 +17,6 @@ angular.module('mercado')
     function($resource, BaseUrl){
       return $resource(BaseUrl + '/cidades/:id', {}, {
         getAll: {method: 'GET', url: BaseUrl + '/cidades', isArray: true},
-        getPagina: {method: 'GET', url: BaseUrl + '/cidadesPagina/:pagina', isArray: true},
         update: {method: 'PUT', url: BaseUrl + '/cidades/:id', isArray: false},
         getFiltroCidade: {method: 'GET', url: BaseUrl + '/cidades/nome/:filtro', isArray: true}
       });
@@ -27,7 +24,6 @@ angular.module('mercado')
     function($resource, BaseUrl){
       return $resource(BaseUrl + '/bairros/:id', {}, {
          getAll: {method: 'GET', url: BaseUrl + '/bairros', isArray: true},
-         getPagina: {method: 'GET', url: BaseUrl + '/bairrosPagina/:pagina', isArray: true},
          update: {method: 'PUT', url: BaseUrl + '/bairros/:id', isArray: false},
          getFiltroBairro: {method: 'GET', url: BaseUrl + '/bairros/nome/:filtro', isArray: true}
       });
@@ -35,7 +31,6 @@ angular.module('mercado')
     function($resource, BaseUrl){
       return $resource(BaseUrl + '/clientes/:id', {}, {
         getAll: {method: 'GET', url: BaseUrl + '/clientes', isArray: true},
-        getPagina: {method: 'GET', url: BaseUrl + '/clientesPagina/:pagina', isArray: true},
         update: {method: 'PUT', url: BaseUrl + '/clientes/:id', isArray: false},
         getFiltroCliente: {method: 'GET', url: BaseUrl + '/clientes/nome/:filtro', isArray: true}
       });
@@ -43,7 +38,6 @@ angular.module('mercado')
     function($resource, BaseUrl){
       return $resource(BaseUrl + '/fornecedores/:id', {}, {
         getAll: {method: 'GET', url: BaseUrl + '/fornecedores', isArray: true},
-        getPagina: {method: 'GET', url: BaseUrl + '/fornecedoresPagina/:pagina', isArray: true},
         update: {method: 'PUT', url: BaseUrl + '/fornecedores/:id', isArray: false},
         getFiltroFornecedor: {method: 'GET', url: BaseUrl + '/fornecedores/nome/:filtro', isArray: true}
       });
@@ -51,7 +45,6 @@ angular.module('mercado')
     function($resource, BaseUrl){
       return $resource(BaseUrl + '/categorias/:id', {}, {
          getAll: {method: 'GET', url: BaseUrl + '/categorias', isArray: true},
-         getPagina: {method: 'GET', url: BaseUrl + '/categoriasPagina/:pagina', isArray: true},
          update: {method: 'PUT', url: BaseUrl + '/categorias/:id', isArray: false},
          getFiltroCategoria: {method: 'GET', url: BaseUrl + '/categorias/nome/:filtro', isArray: true}
       });
@@ -59,7 +52,6 @@ angular.module('mercado')
     function($resource, BaseUrl){
       return $resource(BaseUrl + '/fabricantes/:id', {}, {
          getAll: {method: 'GET', url: BaseUrl + '/fabricantes', isArray: true},
-         getPagina: {method: 'GET', url: BaseUrl + '/fabricantesPagina/:pagina', isArray: true},
          update: {method: 'PUT', url: BaseUrl + '/fabricantes/:id', isArray: false},
          getFiltroFabricante: {method: 'GET', url: BaseUrl + '/fabricantes/nome/:filtro', isArray: true}
       });
@@ -67,7 +59,6 @@ angular.module('mercado')
     function($resource, BaseUrl){
       return $resource(BaseUrl + '/unidadesdemedidas/:id', {}, {
          getAll: {method: 'GET', url: BaseUrl + '/unidadesdemedidas', isArray: true},
-         getPagina: {method: 'GET', url: BaseUrl + '/unidadesdemedidasPagina/:pagina', isArray: true},
          update: {method: 'PUT', url: BaseUrl + '/unidadesdemedidas/:id', isArray: false},
          getFiltroUnidadeDeMedida: {method: 'GET', url: BaseUrl + '/unidadesdemedidas/nome/:filtro', isArray: true}
       });
@@ -75,14 +66,14 @@ angular.module('mercado')
     function($resource, BaseUrl){
       return $resource(BaseUrl + '/produtos/:id', {}, {
          getAll: {method: 'GET', url: BaseUrl + '/produtos', isArray: true},
-         getPagina: {method: 'GET', url: BaseUrl + '/produtosPagina/:pagina', isArray: true},
-         update: {method: 'PUT', url: BaseUrl + '/produtos/:id', isArray: false}
+         update: {method: 'PUT', url: BaseUrl + '/produtos/:id', isArray: false},
+         getFiltroProduto: {method: 'GET', url: BaseUrl + '/produtos/nome/:filtro', isArray: true}
       });
     }]).service('Usuario',['$resource', 'BaseUrl',
     function($resource, BaseUrl){
       return $resource(BaseUrl + '/usuarios/:id', {}, {
          getAll: {method: 'GET', url: BaseUrl + '/usuarios', isArray: true},
-         getPagina: {method: 'GET', url: BaseUrl + '/usuariosPagina/:pagina', isArray: true},
-         update: {method: 'PUT', url: BaseUrl + '/usuarios/:id', isArray: false}
+         update: {method: 'PUT', url: BaseUrl + '/usuarios/:id', isArray: false},
+         getFiltroUsuario: {method: 'GET', url: BaseUrl + '/usuarios/nome/:filtro', isArray: true}
       });
     }]);
