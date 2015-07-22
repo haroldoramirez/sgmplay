@@ -1,9 +1,11 @@
-@(username: String)
+<!DOCTYPE html>
 <html>
 <head lang="en">
     <meta charset="UTF-8">
 
     <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.css"/>
+
+    <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
 
     <!--Awesome Icons-->
     <link rel="stylesheet" href="assets/stylesheets/awesome/css/font-awesome.css"/>
@@ -25,14 +27,11 @@
             <hr>
             <div>
                 <h2>
-                    Seja bem vindo!
-                </h2>
-                <br>
-                <h4>Você esta logado como: <b>"@username"</b></h4>
+                    Usuário não autorizado!</h2>
                 <br>
                 <div class="error-actions">
-                    <a href="/#/" class="btn btn-primary"><span class="fa fa-home"></span>
-                        Início </a>
+                    <a href="/login" class="btn btn-success"><span class="fa fa-sign-in"></span>
+                        Login </a>
                 </div>
             </div>
             <hr>
@@ -43,7 +42,7 @@
 <div align="center">
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2015 - Sistema de Gestão de Mercados
+            <p class="text-center">&copy; 2015 Sistema de Gestão de Mercados
             </p>
         </div>
     </footer>

@@ -1,5 +1,4 @@
-@(username: String)
-<!DOCTYPE html>
+@(username : String)(privilegio : Integer)
 <html ng-app="mercado">
 <head>
     <!--Bootstrap-->
@@ -50,63 +49,71 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                        <span class="fa fa-globe"> Endereços</span> <span class="fa fa-caret-down"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="/#/paises"><span class="fa fa-flag"></span> Países</a></li>
-                        <li><a href="/#/estados"><span class="fa fa-flag-o"></span> Estados</a></li>
-                        <li><a href="/#/cidades"><span class="fa fa-flag-checkered"></span> Cidades</a></li>
-                        <li><a href="/#/bairros"><span class="fa fa-map-marker"></span> Bairros</a></li>
-                    </ul>
-                </li>
-                <li class="dropdown">
-                    <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                        <span class="fa fa-th-large"> Estoque</span> <span class="fa fa-caret-down"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="/#/unidadesdemedidas"><span class="glyphicon glyphicon-scale"></span> Unidade de Medida</a></li>
-                        <li><a href="/#/fabricantes"><span class="glyphicon glyphicon-ice-lolly"></span> Fabricante</a></li>
-                        <li><a href="/#/categorias"><span class="glyphicon glyphicon-grain"></span> Categoria</a></li>
-                        <li><a href="/#/produtos"><span class="glyphicon glyphicon-apple"></span> Produtos</a></li>
-                    </ul>
-                </li>
-                <li><a href="/#/clientes"><span class="fa fa-male"></span> Clientes</a></li>
-                <li><a href="/#/fornecedores"><span class="fa fa-truck"></span> Fornecedores</a></li>
+                @if(username){
+                    @if(privilegio != 1){
+                        <li class="dropdown">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                <span class="fa fa-globe"> Endereços</span> <span class="fa fa-caret-down"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/#/paises"><span class="fa fa-flag"></span> Países</a></li>
+                                <li><a href="/#/estados"><span class="fa fa-flag-o"></span> Estados</a></li>
+                                <li><a href="/#/cidades"><span class="fa fa-flag-checkered"></span> Cidades</a></li>
+                                <li><a href="/#/bairros"><span class="fa fa-map-marker"></span> Bairros</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                                <span class="fa fa-th-large"> Estoque</span> <span class="fa fa-caret-down"></span></a>
+                            <ul class="dropdown-menu" role="menu">
+                                <li><a href="/#/unidadesdemedidas"><span class="glyphicon glyphicon-scale"></span> Unidade de Medida</a></li>
+                                <li><a href="/#/fabricantes"><span class="glyphicon glyphicon-ice-lolly"></span> Fabricante</a></li>
+                                <li><a href="/#/categorias"><span class="glyphicon glyphicon-grain"></span> Categoria</a></li>
+                                <li><a href="/#/produtos"><span class="glyphicon glyphicon-apple"></span> Produtos</a></li>
+                            </ul>
+                        </li>
+                            <li><a href="/#/clientes"><span class="fa fa-male"></span> Clientes</a></li>
+                            <li><a href="/#/fornecedores"><span class="fa fa-truck"></span> Fornecedores</a></li>
+                    }
+                }
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="/convite"> <span class="fa fa-user-plus"></span> Convite</a></li>
+                @if(username){
+                    @if(privilegio != 1){
+                        <li><a href="/#/compra"> <span class="fa fa-cubes"></span> Compra</a></li>
+                    }
+                    <li><a href="/#/venda"> <span class="fa fa-money"></span> Venda</a></li>
+                }
                 <li class="dropdown">
                     <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                        <span class="label label-success">Usuário</span>   <span class="fa fa-cog"></span> <span class="fa fa-caret-down"></span></a>
+                        <span class="label label-success">@username</span>   <span class="fa fa-cog"></span> <span class="fa fa-caret-down"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <li><a href="/#/compromissos">
-                            <span class="fa fa-clock-o"></span> Meus Compromissos</a>
-                        </li>
-                        <li class="divider"></li>
-                        <li class="dropdown-header">Sistema</li>
-                        <li><a href="/#/logs">
-                            <span class="fa fa-file"></span> Logs</a>
-                        </li>
-                        <li><a href="/#/ajuda">
-                            <span class="fa fa-question"></span> Ajuda</a>
-                        </li>
-                        <li><a href="/manual">
-                            <span class="fa fa-book"></span> Manual</a>
-                        </li>
-                        <li><a href="/#/usuarios">
-                            <span class="fa fa-users"></span> Lista de Usuários</a>
-                        </li>
-                        <li><a href="/sobre">
-                            <span class="fa fa-chevron-right"></span> Sobre</a>
-                        </li>
-                        <li class="divider"></li>
+                        @if(username){
+                            @if(privilegio != 1){
+                                <li class="dropdown-header">Relatórios</li>
+                                <li><a href="/#/compras">
+                                    <span class="fa fa-bar-chart"></span> Compras</a>
+                                </li>
+                                <li><a href="/#/vendas">
+                                    <span class="fa fa-bar-chart"></span> Vendas</a>
+                                </li>
+                                <li class="divider"></li>
+                                <li><a href="/#/usuarios">
+                                    <span class="fa fa-users"></span> Usuários</a>
+                                </li>
+                                <li class="divider"></li>
+                            }
+                        }
                         <li class="dropdown-header">Autenticação</li>
-                        <li><a href="/login">
-                            <span class="fa fa-sign-in"></span> Entrar</a>
-                        </li>
-                        <li><a href="/logout">
-                            <span class="fa fa-sign-out"></span> Sair</a>
-                        </li>
+                        @if(!username){
+                            <li><a href="/login">
+                                <span class="fa fa-sign-in"></span> Entrar</a>
+                            </li>
+                        }
+                        @if(username){
+                            <li><a href="/logout">
+                                <span class="fa fa-sign-out"></span> Sair</a>
+                            </li>
+                        }
                     </ul>
                 </li>
             </ul>

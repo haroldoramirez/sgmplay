@@ -52,9 +52,6 @@ Seq[Any](format.raw/*1.15*/("""
                     Erro 404</h1>
                 <h2>
                     Esta página não existe -> <b>"""),_display_(/*26.51*/url),format.raw/*26.54*/("""</b></h2>
-                <div class="error-details">
-                    SGM - Sistema de Mercados
-                </div>
                 <div class="error-actions">
                     <a href="/#/" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span>
                         Início </a>
@@ -67,10 +64,7 @@ Seq[Any](format.raw/*1.15*/("""
 <div align="center">
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2015 SGM - Sistema de Gestão de Mercados -
-                <b>Powered by Play Framework e AngularJS
-                </b>.Todos os direitos reservados.
-            </p>
+            <p>&copy; 2015 SGM - Sistema de Gestão de Mercados
         </div>
     </footer>
 </div>
@@ -87,9 +81,9 @@ Seq[Any](format.raw/*1.15*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Wed Jul 15 17:06:17 BRT 2015
+                  DATE: Wed Jul 22 16:38:50 BRT 2015
                   SOURCE: /home/haroldo/projetos/academico/sgmplay/app/views/paginaNaoEncontrada.scala.html
-                  HASH: 8b8a38ad53cbdd081446cb33405345cccd902ed9
+                  HASH: b2396c35bb2fc255fdc6e1033453a308227735d8
                   MATRIX: 737->1|838->14|865->15|1613->736|1637->739
                   LINES: 26->1|29->1|30->2|54->26|54->26
                   -- GENERATED --

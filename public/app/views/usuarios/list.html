@@ -1,59 +1,37 @@
-<div class="container">
-    <div class="row">
-        <fieldset>
-            <div id="legend">
-                <legend>
-                    <h2>
-                        Lista de Usuários <a class="btn btn-success pull-right" href="#/usuarios/novo">
-                        <span class="glyphicon glyphicon-plus"></span><b> Novo Usuário</b></a>
-                    </h2>
-                </legend>
-            </div>
+<div class="row">
 
-            <!--Input de Busca-->
-            <div class="col-lg-5">
-                <div class="input-group">
-                    <input type="text" class="form-control" placeholder="digite o nome do usuário">
-                         <span class="input-group-btn">
-                              <button class="btn btn-primary">
-                                  <span class="glyphicon glyphicon-search"></span> <b>Buscar</b>
-                              </button>
-                        </span>
-                </div>
-                <br>
-            </div>
+    <!-- Título da Página-->
+    <legend>
+        <h1 class="font-style">
+            <i class="fa fa-users"></i> Lista de Usuários<a class="btn btn-success pull-right" href="#/usuarios/novo">
+            <span class="fa fa-plus"></span> Novo Usuário</a>
+        </h1>
+    </legend>
 
-            <!--Tabela-->
-                <table ng-init="init()" class="table-striped table table-hover table-bordered">
-                    <br>
-                    <tr>
-                        <th class="col-sm-10">Email</th>
-                        <th class="col-sm-1">Privilégio</th>
-                        <!--<th width="50px"></th>-->
-                    </tr>
-                    <tr ng-repeat="usuario in usuarios">
-                        <td><b><a href="#/usuarios/detalhe/{{usuario.id}}">{{usuario.email}}</a></b></td>
-                        <td><b>{{usuario.privilegio}}</b></td>
-                        <!--<td>-->
-                        <!--<a href="" confirmation-needed="Confirmar a exclusão do País?" class="glyphicon glyphicon-trash" ng-click="delete(pais.id)"></a>-->
-                        <!--</td>-->
-                    </tr>
-                </table>
-        </fieldset>
+    <!--Input de Busca-->
+    <div class="col-md-5 input-group">
+        <input ng-model="nomeFiltro" type="search" class="form-control" placeholder="digite o nome do usuário">
+        <span class="input-group-btn">
+            <button ng-disabled="!nomeFiltro" class="btn btn-primary" ng-click="busca();"><span class="fa fa-search"></span> Filtrar</button>
+            <button class="btn btn-default" ng-click="init();">Limpar</button>
+        </span>
     </div>
 
-    <!--Paginação-->
-    <nav>
-        <div class="clearfix"></div>
-        <ul class="pagination pull-right">
-            <li><a ng-click="anterior(1)" href=""><span class="glyphicon glyphicon-menu-left"></span></a></li>
-            <li class="active"><a ng-click="_pagina(0)" href=""><b>1</b></a></li>
-            <li><a ng-click="_pagina(1)" href=""><b>2</b></a></li>
-            <li><a ng-click="_pagina(2)" href=""><b>3</b></a></li>
-            <li><a ng-click="_pagina(3)" href=""><b>4</b></a></li>
-            <li><a ng-click="_pagina(4)" href=""><b>5</b></a></li>
-            <li><a ng-click="proximo(0)" href=""><span class="glyphicon glyphicon-menu-right"></span></a></li>
-        </ul>
-    </nav>
+    <div class="pull-right">
+        <h4 class="font-style">Total de <b>{{quantidade}}</b> Registros</h4>
+    </div>
+
+    <h4 class="font-style" ng-show="usuarios.length == 0">Nenhum registro encontrado</h4>
+
+    <!--Tabela-->
+    <table ng-show="usuarios.length" ng-init="init()" class="table-striped table table-hover table-bordered">
+        <tr>
+            <th class="col-sm-10">Email</th>
+            <th class="col-sm-1">Privilégio</th>
+        </tr>
+        <tr ng-repeat="usuario in usuarios">
+            <td><b><a href="#/usuarios/detalhe/{{usuario.id}}">{{usuario.email}}</a></b></td>
+            <td><b>{{usuario.privilegio}}</b></td>
+        </tr>
+    </table>
 </div>
-<hr>
