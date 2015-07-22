@@ -27,8 +27,26 @@
     <form ng-init="init()" class="form-horizontal" ng-submit="update()">
         <div class="form-group">
 
+            <!--Input do Data de Cadastro-->
+            <div class="col-md-3">
+                <label class="control-label" for="datadecadastro">Data de Cadastro</label>
+                <div class="input-group date">
+                    <span class="input-group-addon"><i class="fa fa-check"></i></span>
+                    <input disabled data-date-format="dd/MM/yyyy - HH:mm:ss" data-date-type="number" bs-datepicker type="text" class="form-control" ng-model="usuario.dataDeCadastro" id="datadecadastro"/>
+                </div>
+            </div>
+
+            <!--Input do Data de Alteração-->
+            <div class="col-md-3">
+                <label class="control-label" for="datadealteracao">Data de Alteração</label>
+                <div class="input-group date">
+                    <span class="input-group-addon"><i class="fa fa-refresh"></i></span>
+                    <input disabled data-date-format="dd/MM/yyyy - HH:mm:ss" data-date-type="number" bs-datepicker type="text" class="form-control" ng-model="usuario.dataDeAlteracao" id="datadealteracao"/>
+                </div>
+            </div>
+
             <!--Input do Email-->
-            <div class="col-md-5">
+            <div class="col-md-7">
                 <label class="control-label" for="usuario.email">Email</label>
                 <div ng-class="{'has-error': !usuario.email}">
                     <div class="input-group">
@@ -39,7 +57,7 @@
             </div>
 
             <!--Input do Senha-->
-            <div class="col-md-3">
+            <div class="col-md-2">
                 <label class="control-label" for="senha">Senha</label>
                 <div ng-class="{'has-error': !usuario.senha}">
                     <div class="input-group">
@@ -50,7 +68,7 @@
             </div>
 
             <!--Input do Privilégio-->
-            <div class="col-md-4">
+            <div class="col-md-3">
                 <label class="control-label">Privilégio</label>
                 <div ng-class="{'has-error': !usuario.privilegio}">
                     <div class="input-group">
