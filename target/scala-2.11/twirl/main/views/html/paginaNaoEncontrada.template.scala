@@ -31,42 +31,31 @@ Seq[Any](format.raw/*1.15*/("""
 <body>
 <head>
     <meta charset="UTF-8">
-    <title>Página Não Encontrada</title>
-
-    <!--Jquery-->
-    <script src="assets/bower_components/jquery/dist/jquery.js"></script>
+    <link rel="shortcut icon" type="image/png" href=""""),_display_(/*6.55*/routes/*6.61*/.Assets.at("images/favicon.png")),format.raw/*6.93*/("""">
 
     <link rel="stylesheet" href="assets/bower_components/bootstrap/dist/css/bootstrap.css"/>
-    <script src="assets/bower_components/bootstrap/dist/js/bootstrap.js"></script>
 
-    <!--CSS Personalisados-->
-    <link rel="stylesheet" href="assets/stylesheets/background.css"/>
-
+    <!--Awesome Icons-->
+    <link rel="stylesheet" href="assets/stylesheets/awesome/css/font-awesome.css"/>
+    <title>Página não Encontrada</title>
 </head>
-
-<div class="container-fluid">
+<div align="center" class="container">
     <div class="row">
-        <div class="col-md-12">
-            <div class="error-template">
-                <h1>
-                    Erro 404</h1>
-                <h2>
-                    Esta página não existe -> <b>"""),_display_(/*26.51*/url),format.raw/*26.54*/("""</b></h2>
+        <div class="col-md-4 col-md-offset-4">
+            <div class="well">
+                <h2 class="text-muted">
+                    Erro 404
+                </h2>
+                <p class="alert alert-danger">Esta página não existe: <b>"""),_display_(/*21.75*/url),format.raw/*21.78*/("""</b></p>
                 <div class="error-actions">
-                    <a href="/#/" class="btn btn-primary btn-lg"><span class="glyphicon glyphicon-shopping-cart"></span>
+                    <a href="/#/" class="btn btn-primary"><span class="fa fa-home"></span>
                         Início </a>
                 </div>
+                <hr>
+                <p align="center">&copy; 2015 SGM - Sistema de Gestão de Mercados <span class="fa fa-shopping-cart"></span></p>
             </div>
         </div>
     </div>
-</div>
-<!--Rodapé-->
-<div align="center">
-    <footer class="footer">
-        <div class="container">
-            <p>&copy; 2015 SGM - Sistema de Gestão de Mercados
-        </div>
-    </footer>
 </div>
 </body>
 </html>"""))}
@@ -81,11 +70,11 @@ Seq[Any](format.raw/*1.15*/("""
 }
               /*
                   -- GENERATED --
-                  DATE: Wed Jul 22 16:38:50 BRT 2015
+                  DATE: Thu Jul 23 15:01:17 BRT 2015
                   SOURCE: /home/haroldo/projetos/academico/sgmplay/app/views/paginaNaoEncontrada.scala.html
-                  HASH: b2396c35bb2fc255fdc6e1033453a308227735d8
-                  MATRIX: 737->1|838->14|865->15|1613->736|1637->739
-                  LINES: 26->1|29->1|30->2|54->26|54->26
+                  HASH: 925b6dba60d383cd11d3921b9300679e26140000
+                  MATRIX: 737->1|838->14|865->15|993->117|1007->123|1059->155|1646->715|1670->718
+                  LINES: 26->1|29->1|30->2|34->6|34->6|34->6|49->21|49->21
                   -- GENERATED --
               */
           

@@ -21,6 +21,10 @@ public class Application extends Controller {
                 .setParameter("email", username)
                 .findUnique();
 
+        if (usuarioAtual == null) {
+            return ok(views.html.index.render(username, privilegio));
+        }
+
         privilegio = usuarioAtual.getPrivilegio();
 
         return ok(views.html.index.render(username, privilegio));

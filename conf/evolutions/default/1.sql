@@ -116,6 +116,7 @@ create table produto (
   unidadedemedida_id        bigint,
   data_de_cadastro          datetime not null,
   data_de_alteracao         datetime not null,
+  last_update               timestamp default '2015-07-23 15:47:50' not null,
   constraint uq_produto_descricao unique (descricao),
   constraint pk_produto primary key (id))
 ;

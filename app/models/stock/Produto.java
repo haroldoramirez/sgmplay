@@ -5,6 +5,7 @@ import play.db.ebean.Model;
 import play.libs.Json;
 
 import javax.persistence.*;
+import java.sql.Timestamp;
 import java.util.Calendar;
 
 @Entity
@@ -56,25 +57,10 @@ public class Produto extends Model {
     @Column(nullable = false)
     private Calendar dataDeAlteracao = Calendar.getInstance();
 
-    public Calendar getDataDeCadastro() {
-        return dataDeCadastro;
-    }
-
-    public void setDataDeCadastro(Calendar dataDeCadastro) {
-        this.dataDeCadastro = dataDeCadastro;
-    }
-
-    public Calendar getDataDeAlteracao() {
-        return dataDeAlteracao;
-    }
-
-    public void setDataDeAlteracao(Calendar dataDeAlteracao) {
-        this.dataDeAlteracao = dataDeAlteracao;
-    }
-
-//    @Version
-//    @Column(columnDefinition = "timestamp default '2014-10-06 21:17:06'")
-//    public Timestamp lastUpdate; // here
+    //deixar este atributo para nao dar problema de javax.persistence.OptimisticLockException
+    @Version
+    @Column(columnDefinition = "timestamp default '2015-07-23 15:47:50'")
+    public Timestamp lastUpdate;
 
     public Long getId() {
         return id;
@@ -170,6 +156,22 @@ public class Produto extends Model {
 
     public void setUnidadedemedida(UnidadeDeMedida unidadedemedida) {
         this.unidadedemedida = unidadedemedida;
+    }
+
+    public Calendar getDataDeCadastro() {
+        return dataDeCadastro;
+    }
+
+    public void setDataDeCadastro(Calendar dataDeCadastro) {
+        this.dataDeCadastro = dataDeCadastro;
+    }
+
+    public Calendar getDataDeAlteracao() {
+        return dataDeAlteracao;
+    }
+
+    public void setDataDeAlteracao(Calendar dataDeAlteracao) {
+        this.dataDeAlteracao = dataDeAlteracao;
     }
 
     @Override

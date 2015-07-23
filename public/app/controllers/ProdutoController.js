@@ -90,10 +90,12 @@ angular.module('mercado')
         $scope.delete = function(){
             Produto.delete({id:$routeParams.id}, function(data){
                 toastr.warning('Produto Removido com Sucesso');
+                $modalInstance.close();
                 $location.path('/produtos');
             }, function(data){
             console.log(data);
                 console.log(data);
+                $modalInstance.close();
                 toastr.error(data.data,'Não foi possível Remover');
             });
 
