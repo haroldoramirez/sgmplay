@@ -76,4 +76,11 @@ angular.module('mercado')
          update: {method: 'PUT', url: BaseUrl + '/usuarios/:id', isArray: false},
          getFiltroUsuario: {method: 'GET', url: BaseUrl + '/usuarios/nome/:filtro', isArray: true}
       });
+    }]).service('Compra',['$resource', 'BaseUrl',
+    function($resource, BaseUrl){
+      return $resource(BaseUrl + '/compras/:id', {}, {
+         getAll: {method: 'GET', url: BaseUrl + '/compras', isArray: true},
+         update: {method: 'PUT', url: BaseUrl + '/compras/:id', isArray: false},
+         getFiltroCompra: {method: 'GET', url: BaseUrl + '/compras/data/:filtro', isArray: true}
+      });
     }]);

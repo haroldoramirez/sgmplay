@@ -156,6 +156,10 @@ angular
                .when('/usuarios/detalhe/:id', {
                  templateUrl: '/assets/app/views/usuarios/detail.html',
                  controller: 'UsuarioDetailController'
+            })
+               .when('/compras', {
+                 templateUrl: '/assets/app/views/compras/list.html',
+                 controller: 'CompraListController'
             });
    //Configuração das notificações
    }).config(function(toastrConfig) {
