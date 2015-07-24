@@ -80,6 +80,14 @@ create table fabricante (
   constraint pk_fabricante primary key (id))
 ;
 
+create table forma_pagamento (
+  id                        bigint auto_increment not null,
+  titulo                    varchar(255) not null,
+  ativo                     tinyint(1) default 0 not null,
+  constraint uq_forma_pagamento_titulo unique (titulo),
+  constraint pk_forma_pagamento primary key (id))
+;
+
 create table fornecedor (
   id                        bigint auto_increment not null,
   nome_fantasia             varchar(255) not null,
@@ -199,6 +207,8 @@ drop table compra;
 drop table estado;
 
 drop table fabricante;
+
+drop table forma_pagamento;
 
 drop table fornecedor;
 
