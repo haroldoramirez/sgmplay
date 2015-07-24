@@ -52,6 +52,17 @@ create table cliente (
   constraint pk_cliente primary key (id))
 ;
 
+create table compra (
+  id                        bigint auto_increment not null,
+  data_compra               datetime not null,
+  total                     decimal(14,2) not null,
+  status                    integer not null,
+  fornecedor_id             bigint,
+  funcionario_id            bigint,
+  constraint ck_compra_status check (status in (0,1,2)),
+  constraint pk_compra primary key (id))
+;
+
 create table estado (
   id                        bigint auto_increment not null,
   nome                      varchar(255) not null,
@@ -91,6 +102,11 @@ create table fornecedor (
   constraint uq_fornecedor_cnpj unique (cnpj),
   constraint uq_fornecedor_inscricao_estadual unique (inscricao_estadual),
   constraint pk_fornecedor primary key (id))
+;
+
+create table itemcompra (
+  id                        bigint auto_increment not null,
+  constraint pk_itemcompra primary key (id))
 ;
 
 create table pais (
@@ -147,18 +163,22 @@ alter table cidade add constraint fk_cidade_estado_2 foreign key (estado_id) ref
 create index ix_cidade_estado_2 on cidade (estado_id);
 alter table cliente add constraint fk_cliente_bairro_3 foreign key (bairro_id) references bairro (id) on delete restrict on update restrict;
 create index ix_cliente_bairro_3 on cliente (bairro_id);
-alter table estado add constraint fk_estado_pais_4 foreign key (pais_id) references pais (id) on delete restrict on update restrict;
-create index ix_estado_pais_4 on estado (pais_id);
-alter table fornecedor add constraint fk_fornecedor_bairro_5 foreign key (bairro_id) references bairro (id) on delete restrict on update restrict;
-create index ix_fornecedor_bairro_5 on fornecedor (bairro_id);
-alter table produto add constraint fk_produto_fornecedor_6 foreign key (fornecedor_id) references fornecedor (id) on delete restrict on update restrict;
-create index ix_produto_fornecedor_6 on produto (fornecedor_id);
-alter table produto add constraint fk_produto_categoria_7 foreign key (categoria_id) references categoria (id) on delete restrict on update restrict;
-create index ix_produto_categoria_7 on produto (categoria_id);
-alter table produto add constraint fk_produto_fabricante_8 foreign key (fabricante_id) references fabricante (id) on delete restrict on update restrict;
-create index ix_produto_fabricante_8 on produto (fabricante_id);
-alter table produto add constraint fk_produto_unidadedemedida_9 foreign key (unidadedemedida_id) references unidadedemedida (id) on delete restrict on update restrict;
-create index ix_produto_unidadedemedida_9 on produto (unidadedemedida_id);
+alter table compra add constraint fk_compra_fornecedor_4 foreign key (fornecedor_id) references fornecedor (id) on delete restrict on update restrict;
+create index ix_compra_fornecedor_4 on compra (fornecedor_id);
+alter table compra add constraint fk_compra_funcionario_5 foreign key (funcionario_id) references usuario (id) on delete restrict on update restrict;
+create index ix_compra_funcionario_5 on compra (funcionario_id);
+alter table estado add constraint fk_estado_pais_6 foreign key (pais_id) references pais (id) on delete restrict on update restrict;
+create index ix_estado_pais_6 on estado (pais_id);
+alter table fornecedor add constraint fk_fornecedor_bairro_7 foreign key (bairro_id) references bairro (id) on delete restrict on update restrict;
+create index ix_fornecedor_bairro_7 on fornecedor (bairro_id);
+alter table produto add constraint fk_produto_fornecedor_8 foreign key (fornecedor_id) references fornecedor (id) on delete restrict on update restrict;
+create index ix_produto_fornecedor_8 on produto (fornecedor_id);
+alter table produto add constraint fk_produto_categoria_9 foreign key (categoria_id) references categoria (id) on delete restrict on update restrict;
+create index ix_produto_categoria_9 on produto (categoria_id);
+alter table produto add constraint fk_produto_fabricante_10 foreign key (fabricante_id) references fabricante (id) on delete restrict on update restrict;
+create index ix_produto_fabricante_10 on produto (fabricante_id);
+alter table produto add constraint fk_produto_unidadedemedida_11 foreign key (unidadedemedida_id) references unidadedemedida (id) on delete restrict on update restrict;
+create index ix_produto_unidadedemedida_11 on produto (unidadedemedida_id);
 
 
 
@@ -174,11 +194,15 @@ drop table cidade;
 
 drop table cliente;
 
+drop table compra;
+
 drop table estado;
 
 drop table fabricante;
 
 drop table fornecedor;
+
+drop table itemcompra;
 
 drop table pais;
 

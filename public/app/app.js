@@ -160,6 +160,14 @@ angular
                .when('/compras', {
                  templateUrl: '/assets/app/views/compras/list.html',
                  controller: 'CompraListController'
+            })
+               .when('/compras/novo', {
+                 templateUrl: '/assets/app/views/compras/create.html',
+                 controller: 'CompraCreateController'
+            })
+               .when('/compras/detalhe/:id', {
+                 templateUrl: '/assets/app/views/compras/detail.html',
+                 controller: 'CompraDetailController'
             });
    //Configuração das notificações
    }).config(function(toastrConfig) {
