@@ -83,7 +83,6 @@ create table fabricante (
 create table forma_pagamento (
   id                        bigint auto_increment not null,
   titulo                    varchar(255) not null,
-  ativo                     tinyint(1) default 0 not null,
   constraint uq_forma_pagamento_titulo unique (titulo),
   constraint pk_forma_pagamento primary key (id))
 ;
@@ -157,6 +156,7 @@ create table usuario (
   id                        bigint auto_increment not null,
   email                     varchar(255) not null,
   senha                     varchar(255) not null,
+  senha2                    varchar(255),
   privilegio                integer not null,
   data_de_cadastro          datetime not null,
   data_de_alteracao         datetime not null,

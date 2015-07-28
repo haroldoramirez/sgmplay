@@ -60,11 +60,11 @@ public class Cliente extends Model {
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false)
-    private Calendar dataDeCadastro = Calendar.getInstance();
+    private Calendar dataDeCadastro;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false)
-    private Calendar dataDeAlteracao = Calendar.getInstance();
+    private Calendar dataDeAlteracao;
 
     public Calendar getDataDeCadastro() {
         return dataDeCadastro;

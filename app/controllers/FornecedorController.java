@@ -41,10 +41,12 @@ public class FornecedorController extends Controller {
         }
 
         Fornecedor.setDataDeCadastro(Calendar.getInstance());
+        Fornecedor.setDataDeAlteracao(Calendar.getInstance());
 
         try {
             Ebean.save(Fornecedor);
         } catch (Exception e) {
+            //System.out.print(e.toString());
             return badRequest("Erro interno de sistema");
         }
 

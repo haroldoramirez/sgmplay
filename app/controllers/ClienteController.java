@@ -43,6 +43,7 @@ public class ClienteController extends Controller {
 
         cliente.setSituacao(Situacao.INATIVO);
         cliente.setDataDeCadastro(Calendar.getInstance());
+        cliente.setDataDeAlteracao(Calendar.getInstance());
 
         try {
             Ebean.save(cliente);

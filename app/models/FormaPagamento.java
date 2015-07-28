@@ -16,9 +16,6 @@ public class FormaPagamento extends Model {
     @Column(nullable = false, unique = true)
     private String titulo;
 
-    @Column(nullable = false)
-    protected Boolean ativo;
-
     public Long getId() {
         return id;
     }
@@ -35,11 +32,4 @@ public class FormaPagamento extends Model {
         this.titulo = titulo;
     }
 
-    public Boolean getAtivo() {
-        return ativo;
-    }
-
-    public void setAtivo(Boolean ativo) {
-        this.ativo = ativo;
-    }
 }

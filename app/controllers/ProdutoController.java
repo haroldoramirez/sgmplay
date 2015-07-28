@@ -51,6 +51,7 @@ public class ProdutoController extends Controller {
         produto.setFornecedor(fornecedor);
 
         produto.setDataDeCadastro(Calendar.getInstance());
+        produto.setDataDeAlteracao(Calendar.getInstance());
 
         try {
             Ebean.save(produto);

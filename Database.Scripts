@@ -2,7 +2,7 @@
 
 # --- !Ups
 
-#Scripts do Banco de Dados, para ajudar na hora de testar o sistema.
+insert into usuario(data_de_cadastro, data_de_alteracao, padrao_do_sistema, email, senha, privilegio) values ('2015-04-24 17:30:20', '2015-04-24 17:30:20', true, 'admin@sgmplay.com', '40bd001563085fc35165329ea1ff5c5ecbdbbeef', 2);
 
 insert into pais (nome,ddi) values ('Brasil','+55');
 insert into pais (nome,ddi) values ('Paraguai', '+21');
@@ -13,15 +13,19 @@ insert into estado (nome,sigla,pais_id) values ('São Paulo', 'SP', 1);
 insert into estado (nome,sigla,pais_id) values ('Santa Catarina', 'SC', 1);
 insert into estado (nome,sigla,pais_id) values ('Rio Grande do Sul', 'RS', 1);
 
-
 insert into cidade (nome,ddd,estado_id) values ('Foz do Iguaçu', '45', 1);
 insert into cidade (nome,ddd,estado_id) values ('Curitiba', '41', 1);
+insert into cidade (nome,ddd,estado_id) values ('Campo Mourão', '41', 1);
+insert into cidade (nome,ddd,estado_id) values ('São Paulo Capital', '11', 2);
 
 insert into bairro (nome,cidade_id) values ('Jardim América', 1);
 insert into bairro (nome,cidade_id) values ('Jardim Karla', 1);
 insert into bairro (nome,cidade_id) values ('Vila C', 1);
 insert into bairro (nome,cidade_id) values ('Vila B', 1);
 insert into bairro (nome,cidade_id) values ('Vila A', 1);
+insert into bairro (nome,cidade_id) values ('Morumbi I', 1);
+insert into bairro (nome,cidade_id) values ('Morumbi II', 1);
+insert into bairro (nome,cidade_id) values ('Morumbi III', 1);
 
 insert into categoria (descricao) values ('Cereais');
 insert into categoria (descricao) values ('Sucos');
@@ -44,5 +48,6 @@ insert into fabricante (nome,observacoes) values ('Nestle','Multinacional de Ali
 insert into fabricante (nome,observacoes) values ('Pepsico','Multinacional de Bebidas e Alimentos');
 insert into fabricante (nome,observacoes) values ('Coca Cola','Multinacional de Bebidas e Sucos');
 
-insert into unidadedemedida (nome,observacoes) values ('Lata 350ml','');
+insert into unidadedemedida (nome,observacoes) values ('Peça','');
 insert into unidadedemedida (nome,observacoes) values ('Pacote','');
+insert into unidadedemedida (nome,observacoes) values ('Kilo','');

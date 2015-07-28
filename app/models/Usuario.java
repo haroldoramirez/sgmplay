@@ -22,16 +22,18 @@ public class Usuario extends Model {
     @Column(nullable = false)
     private String senha;
 
+    private String senha2;
+
     @Column(nullable = false)
     private Integer privilegio;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false)
-    private Calendar dataDeCadastro = Calendar.getInstance();
+    private Calendar dataDeCadastro;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false)
-    private Calendar dataDeAlteracao = Calendar.getInstance();
+    private Calendar dataDeAlteracao;
 
     private Boolean padraoDoSistema;
 
