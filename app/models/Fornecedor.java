@@ -55,26 +55,26 @@ public class Fornecedor extends Model {
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false)
-    private Calendar dataDeCadastro;
+    private Calendar dataCadastro;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false)
-    private Calendar dataDeAlteracao;
+    private Calendar dataAlteracao;
 
-    public Calendar getDataDeCadastro() {
-        return dataDeCadastro;
+    public Calendar getDataCadastro() {
+        return dataCadastro;
     }
 
-    public void setDataDeCadastro(Calendar dataDeCadastro) {
-        this.dataDeCadastro = dataDeCadastro;
+    public void setDataCadastro(Calendar dataCadastro) {
+        this.dataCadastro = dataCadastro;
     }
 
-    public Calendar getDataDeAlteracao() {
-        return dataDeAlteracao;
+    public Calendar getDataAlteracao() {
+        return dataAlteracao;
     }
 
-    public void setDataDeAlteracao(Calendar dataDeAlteracao) {
-        this.dataDeAlteracao = dataDeAlteracao;
+    public void setDataAlteracao(Calendar dataAlteracao) {
+        this.dataAlteracao = dataAlteracao;
     }
 
     public Long getId() {

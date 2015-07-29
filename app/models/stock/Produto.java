@@ -59,6 +59,12 @@ public class Produto extends Model {
     @Column(columnDefinition = "timestamp default '2015-07-23 15:47:50'")
     public Timestamp lastUpdate;
 
+    // IPI - Imposto sobre produtos industrializados
+    //private Float ipi;
+
+    // ICMS - Imposto sobre circulação de mercadorias e prestação de serviços
+    //private Float icms;
+
     public Long getId() {
         return id;
     }

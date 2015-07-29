@@ -47,7 +47,8 @@ public class UsuarioController extends Controller {
 
         usuario.setPadraoDoSistema(false);
 
-        usuario.setDataDeCadastro(Calendar.getInstance());
+        usuario.setDataCadastro(Calendar.getInstance());
+        usuario.setDataAlteracao(Calendar.getInstance());
 
         try {
             Ebean.save(usuario);
@@ -59,7 +60,7 @@ public class UsuarioController extends Controller {
     }
 
     @Security.Authenticated(PlayAuthenticatedSecured.class)
-    public static Result atualizar(Integer id) {
+    public static Result atualizar(Long id) {
         Logger.info("Atualizando Usuário");
 
         String username = session().get("email");
@@ -90,7 +91,7 @@ public class UsuarioController extends Controller {
 
         usuario.setSenha(senha);
 
-        usuario.setDataDeAlteracao(Calendar.getInstance());
+        usuario.setDataAlteracao(Calendar.getInstance());
 
         try {
             Ebean.update(usuario);
@@ -102,7 +103,7 @@ public class UsuarioController extends Controller {
     }
 
     @Security.Authenticated(PlayAuthenticatedSecured.class)
-    public static Result buscaPorId(Integer id) {
+    public static Result buscaPorId(Long id) {
         Logger.info("Buscando Usuário por ID");
 
         String username = session().get("email");
@@ -149,7 +150,7 @@ public class UsuarioController extends Controller {
     }
 
     @Security.Authenticated(PlayAuthenticatedSecured.class)
-    public static Result remover(Integer id) {
+    public static Result remover(Long id) {
         Logger.info("remover usuário");
 
         String username = session().get("email");

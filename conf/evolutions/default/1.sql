@@ -44,8 +44,8 @@ create table cliente (
   cep                       varchar(255),
   complemento               varchar(255),
   observacoes               varchar(255),
-  data_de_cadastro          datetime not null,
-  data_de_alteracao         datetime not null,
+  data_cadastro             datetime not null,
+  data_alteracao            datetime not null,
   constraint ck_cliente_genero check (genero in ('MASCULINO','FEMININO')),
   constraint ck_cliente_situacao check (situacao in ('ATIVO','INATIVO')),
   constraint uq_cliente_cpf unique (cpf),
@@ -55,10 +55,11 @@ create table cliente (
 create table compra (
   id                        bigint auto_increment not null,
   data_compra               datetime not null,
-  total                     decimal(14,2) not null,
+  total                     float not null,
   status                    integer not null,
   fornecedor_id             bigint,
   funcionario_id            bigint,
+  data_alteracao            datetime not null,
   constraint ck_compra_status check (status in (0,1,2)),
   constraint pk_compra primary key (id))
 ;
@@ -104,8 +105,8 @@ create table fornecedor (
   complemento               varchar(255),
   observacoes               varchar(255),
   bairro_id                 bigint,
-  data_de_cadastro          datetime not null,
-  data_de_alteracao         datetime not null,
+  data_cadastro             datetime not null,
+  data_alteracao            datetime not null,
   constraint uq_fornecedor_cnpj unique (cnpj),
   constraint uq_fornecedor_inscricao_estadual unique (inscricao_estadual),
   constraint pk_fornecedor primary key (id))
@@ -113,6 +114,10 @@ create table fornecedor (
 
 create table itemcompra (
   id                        bigint auto_increment not null,
+  quantidade                integer not null,
+  valor_unitario            float not null,
+  compra_id                 bigint,
+  produto_id                bigint,
   constraint pk_itemcompra primary key (id))
 ;
 
@@ -156,8 +161,8 @@ create table usuario (
   email                     varchar(255) not null,
   senha                     varchar(255) not null,
   privilegio                integer not null,
-  data_de_cadastro          datetime not null,
-  data_de_alteracao         datetime not null,
+  data_cadastro             datetime not null,
+  data_alteracao            datetime not null,
   padrao_do_sistema         tinyint(1) default 0,
   constraint uq_usuario_email unique (email),
   constraint pk_usuario primary key (id))
@@ -177,14 +182,18 @@ alter table estado add constraint fk_estado_pais_6 foreign key (pais_id) referen
 create index ix_estado_pais_6 on estado (pais_id);
 alter table fornecedor add constraint fk_fornecedor_bairro_7 foreign key (bairro_id) references bairro (id) on delete restrict on update restrict;
 create index ix_fornecedor_bairro_7 on fornecedor (bairro_id);
-alter table produto add constraint fk_produto_fornecedor_8 foreign key (fornecedor_id) references fornecedor (id) on delete restrict on update restrict;
-create index ix_produto_fornecedor_8 on produto (fornecedor_id);
-alter table produto add constraint fk_produto_categoria_9 foreign key (categoria_id) references categoria (id) on delete restrict on update restrict;
-create index ix_produto_categoria_9 on produto (categoria_id);
-alter table produto add constraint fk_produto_fabricante_10 foreign key (fabricante_id) references fabricante (id) on delete restrict on update restrict;
-create index ix_produto_fabricante_10 on produto (fabricante_id);
-alter table produto add constraint fk_produto_unidadedemedida_11 foreign key (unidadedemedida_id) references unidadedemedida (id) on delete restrict on update restrict;
-create index ix_produto_unidadedemedida_11 on produto (unidadedemedida_id);
+alter table itemcompra add constraint fk_itemcompra_compra_8 foreign key (compra_id) references compra (id) on delete restrict on update restrict;
+create index ix_itemcompra_compra_8 on itemcompra (compra_id);
+alter table itemcompra add constraint fk_itemcompra_produto_9 foreign key (produto_id) references produto (id) on delete restrict on update restrict;
+create index ix_itemcompra_produto_9 on itemcompra (produto_id);
+alter table produto add constraint fk_produto_fornecedor_10 foreign key (fornecedor_id) references fornecedor (id) on delete restrict on update restrict;
+create index ix_produto_fornecedor_10 on produto (fornecedor_id);
+alter table produto add constraint fk_produto_categoria_11 foreign key (categoria_id) references categoria (id) on delete restrict on update restrict;
+create index ix_produto_categoria_11 on produto (categoria_id);
+alter table produto add constraint fk_produto_fabricante_12 foreign key (fabricante_id) references fabricante (id) on delete restrict on update restrict;
+create index ix_produto_fabricante_12 on produto (fabricante_id);
+alter table produto add constraint fk_produto_unidadedemedida_13 foreign key (unidadedemedida_id) references unidadedemedida (id) on delete restrict on update restrict;
+create index ix_produto_unidadedemedida_13 on produto (unidadedemedida_id);
 
 
 

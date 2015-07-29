@@ -1,5 +1,6 @@
 package controllers;
 
+import actions.PlayAuthenticatedSecured;
 import com.avaje.ebean.Ebean;
 import com.avaje.ebean.Page;
 import com.avaje.ebean.PagingList;
@@ -12,6 +13,7 @@ import play.Logger;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
+import play.mvc.Security;
 
 import javax.persistence.PersistenceException;
 import java.util.Calendar;
@@ -19,6 +21,7 @@ import java.util.List;
 
 public class ProdutoController extends Controller {
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result inserir() {
         Logger.info("Salvando Produto");
 
@@ -59,7 +62,8 @@ public class ProdutoController extends Controller {
         return created(Json.toJson(produto));
     }
 
-    public static Result atualizar(Integer id) {
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
+    public static Result atualizar(Long id) {
         Logger.info("Atualizando Produto");
 
         Produto produto = Json.fromJson(request().body().asJson(), Produto.class);
@@ -98,7 +102,8 @@ public class ProdutoController extends Controller {
         return created(Json.toJson(produto));
     }
 
-    public static Result buscaPorId(Integer id) {
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
+    public static Result buscaPorId(Long id) {
         Logger.info("buscaPorId Produto");
 
         Produto produto = Ebean.find(Produto.class, id);
@@ -110,6 +115,7 @@ public class ProdutoController extends Controller {
         return ok(Json.toJson(produto));
     }
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result buscaTodos() {
         Logger.info("busca Todos os Produtos");
 
@@ -119,7 +125,8 @@ public class ProdutoController extends Controller {
                 .findList()));
     }
 
-    public static Result remover(Integer id) {
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
+    public static Result remover(Long id) {
         Logger.info("Remover Produto");
 
         Produto produto = Ebean.find(Produto.class, id);
@@ -143,6 +150,7 @@ public class ProdutoController extends Controller {
         return ok(Json.toJson(produto));
     }
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result filtraPorNome(String filtro) {
         Logger.info("Filtrando Produto por nome");
 

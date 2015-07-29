@@ -86,19 +86,27 @@ GET     /unidadesdemedidas/nome/:filtro     controllers.UnidadeDeMedidaControlle
 
 # CRUD Produto
 POST    /produtos                     controllers.ProdutoController.inserir()
-PUT     /produtos/:id                 controllers.ProdutoController.atualizar(id:Integer)
+PUT     /produtos/:id                 controllers.ProdutoController.atualizar(id:Long)
 GET     /produtos                     controllers.ProdutoController.buscaTodos()
-GET     /produtos/:id                 controllers.ProdutoController.buscaPorId(id:Integer)
-DELETE  /produtos/:id                 controllers.ProdutoController.remover(id:Integer)
+GET     /produtos/:id                 controllers.ProdutoController.buscaPorId(id:Long)
+DELETE  /produtos/:id                 controllers.ProdutoController.remover(id:Long)
 GET     /produtos/nome/:filtro        controllers.ProdutoController.filtraPorNome(filtro:String)
 
 # CRUD Usuário
 POST    /usuarios                     controllers.UsuarioController.inserir()
-PUT     /usuarios/:id                 controllers.UsuarioController.atualizar(id:Integer)
+PUT     /usuarios/:id                 controllers.UsuarioController.atualizar(id:Long)
 GET     /usuarios                     controllers.UsuarioController.buscaTodos()
-GET     /usuarios/:id                 controllers.UsuarioController.buscaPorId(id:Integer)
-DELETE  /usuarios/:id                 controllers.UsuarioController.remover(id:Integer)
+GET     /usuarios/:id                 controllers.UsuarioController.buscaPorId(id:Long)
+DELETE  /usuarios/:id                 controllers.UsuarioController.remover(id:Long)
 GET     /usuarios/nome/:filtro        controllers.UsuarioController.filtraPorNome(filtro:String)
+
+# CRUD Compra
+POST    /compras                     controllers.CompraController.inserir()
+PUT     /compras/:id                 controllers.CompraController.atualizar(id:Long)
+GET     /compras                     controllers.CompraController.buscaTodos()
+GET     /compras/:id                 controllers.CompraController.buscaPorId(id:Long)
+DELETE  /compras/:id                 controllers.CompraController.remover(id:Long)
+GET     /compras/nome/:filtro        controllers.CompraController.filtraPorNome(filtro:String)
 
 # Map static resources from the /public folder to the /assets URL path
 GET     /assets/*file               controllers.Assets.at(path="/public", file)

@@ -1,6 +1,7 @@
 package controllers;
 
 
+import actions.PlayAuthenticatedSecured;
 import com.avaje.ebean.Ebean;
 import com.avaje.ebean.Query;
 import models.locale.Pais;
@@ -8,6 +9,7 @@ import play.Logger;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
+import play.mvc.Security;
 
 import javax.persistence.PersistenceException;
 import java.util.List;
@@ -15,6 +17,7 @@ import java.util.List;
 public class PaisController extends Controller {
 
     //Salva pais no banco de dados
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result inserir() {
         Logger.info("Salvando País");
 
@@ -36,6 +39,7 @@ public class PaisController extends Controller {
     }
 
     //Atualiza pais do banco de dados
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result atualizar(Long id) {
         Logger.info("Atualizando País");
 
@@ -57,6 +61,7 @@ public class PaisController extends Controller {
     }
 
     //Busca pais por ID
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result buscaPorId(Long id) {
         Logger.info("Buscando País por ID");
 
@@ -70,6 +75,7 @@ public class PaisController extends Controller {
     }
 
     //busca os paises em ordem
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result buscaTodos() {
         Logger.info("Busca todos os Países");
 
@@ -80,6 +86,7 @@ public class PaisController extends Controller {
     }
 
     //Remove pais do banco de dados
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result remover(Long id) {
         Logger.info("Remover País");
 
@@ -101,6 +108,7 @@ public class PaisController extends Controller {
     }
 
     //filtra pais por nome
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result filtraPorNome(String filtro) {
         Logger.info("Filtrando País por nome");
 

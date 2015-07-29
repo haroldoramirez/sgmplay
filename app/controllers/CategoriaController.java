@@ -1,5 +1,6 @@
 package controllers;
 
+import actions.PlayAuthenticatedSecured;
 import com.avaje.ebean.Ebean;
 import com.avaje.ebean.Query;
 import models.stock.Categoria;
@@ -7,12 +8,14 @@ import play.Logger;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
+import play.mvc.Security;
 
 import javax.persistence.PersistenceException;
 import java.util.List;
 
 public class CategoriaController extends Controller {
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result inserir() {
         Logger.info("Salvando Categoria");
 
@@ -33,6 +36,7 @@ public class CategoriaController extends Controller {
         return created(Json.toJson(categoria));
     }
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result atualizar(Long id) {
         Logger.info("Atualizando Categoria");
 
@@ -53,6 +57,7 @@ public class CategoriaController extends Controller {
         return ok(Json.toJson(categoria));
     }
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result buscaPorId(Long id) {
         Logger.info("Buscando Categoria por ID");
 
@@ -65,6 +70,7 @@ public class CategoriaController extends Controller {
         return ok(Json.toJson(categoriaBusca));
     }
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result buscaTodos() {
         Logger.info("Busca todas os Categorias");
 
@@ -74,6 +80,7 @@ public class CategoriaController extends Controller {
                 .findList()));
     }
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result remover(Long id) {
         Logger.info("Remover Categoria");
 
@@ -94,6 +101,7 @@ public class CategoriaController extends Controller {
         return ok(Json.toJson(categoriaBusca));
     }
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result filtraPorNome(String filtro) {
         Logger.info("Filtrando Categoria por nome");
 

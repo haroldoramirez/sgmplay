@@ -1,5 +1,6 @@
 package controllers;
 
+import actions.PlayAuthenticatedSecured;
 import com.avaje.ebean.Ebean;
 import com.avaje.ebean.Query;
 import models.locale.Cidade;
@@ -8,12 +9,14 @@ import play.Logger;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
+import play.mvc.Security;
 
 import javax.persistence.PersistenceException;
 import java.util.List;
 
 public class CidadeController extends Controller {
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result inserir() {
         Logger.info("Salvando Cidade");
 
@@ -38,6 +41,7 @@ public class CidadeController extends Controller {
         return created(Json.toJson(cidade));
     }
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result atualizar(Long id) {
         Logger.info("Atualizando Estado");
 
@@ -62,6 +66,7 @@ public class CidadeController extends Controller {
         return ok(Json.toJson(cidade));
     }
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result buscaPorId(Long id) {
         Logger.info("Buscando Cidade por ID");
 
@@ -74,6 +79,7 @@ public class CidadeController extends Controller {
         return ok(Json.toJson(cidade));
     }
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result buscaTodos() {
         Logger.info("Busca todos os Estados");
 
@@ -83,6 +89,7 @@ public class CidadeController extends Controller {
                 .findList()));
     }
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result remover(Long id) {
         Logger.info("Remover Estado");
 
@@ -103,6 +110,7 @@ public class CidadeController extends Controller {
         return ok(Json.toJson(cidade));
     }
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result filtraPorNome(String filtro) {
         Logger.info("Filtrando Cidade por nome");
 

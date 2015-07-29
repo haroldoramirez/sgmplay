@@ -1,17 +1,16 @@
 package controllers;
 
+import actions.PlayAuthenticatedSecured;
 import com.avaje.ebean.Ebean;
-import com.avaje.ebean.Page;
-import com.avaje.ebean.PagingList;
 import com.avaje.ebean.Query;
 import models.Cliente;
 import models.Situacao;
 import models.locale.Bairro;
-import models.locale.Cidade;
 import play.Logger;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
+import play.mvc.Security;
 import validators.ValidaCPF;
 
 import javax.persistence.PersistenceException;
@@ -20,6 +19,7 @@ import java.util.List;
 
 public class ClienteController extends Controller {
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result inserir() {
         Logger.info("Salvando Cliente");
 
@@ -42,8 +42,8 @@ public class ClienteController extends Controller {
         }
 
         cliente.setSituacao(Situacao.INATIVO);
-        cliente.setDataDeCadastro(Calendar.getInstance());
-        cliente.setDataDeAlteracao(Calendar.getInstance());
+        cliente.setDataCadastro(Calendar.getInstance());
+        cliente.setDataAlteracao(Calendar.getInstance());
 
         try {
             Ebean.save(cliente);
@@ -54,6 +54,7 @@ public class ClienteController extends Controller {
         return created(Json.toJson(cliente));
     }
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result atualizar(Long id) {
         Logger.info("Atualizando Cliente");
 
@@ -75,7 +76,7 @@ public class ClienteController extends Controller {
 
         cliente.setBairro(bairro);
 
-        cliente.setDataDeAlteracao(Calendar.getInstance());
+        cliente.setDataAlteracao(Calendar.getInstance());
 
         try {
             Ebean.update(cliente);
@@ -86,6 +87,7 @@ public class ClienteController extends Controller {
         return ok(Json.toJson(cliente));
     }
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result buscaPorId(Long id) {
         Logger.info("Buscando Cliente por ID");
 
@@ -98,6 +100,7 @@ public class ClienteController extends Controller {
         return ok(Json.toJson(cliente));
     }
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result buscaTodos() {
         Logger.info("Busca todos os Clientes");
 
@@ -107,6 +110,7 @@ public class ClienteController extends Controller {
                 .findList()));
     }
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result remover(Long id) {
         Logger.info("Remover Cliente");
 
@@ -127,6 +131,7 @@ public class ClienteController extends Controller {
         return ok(Json.toJson(cliente));
     }
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result filtraPorNome(String filtro) {
         Logger.info("Filtrando Cliente");
 

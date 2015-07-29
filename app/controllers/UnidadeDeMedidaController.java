@@ -1,5 +1,6 @@
 package controllers;
 
+import actions.PlayAuthenticatedSecured;
 import com.avaje.ebean.Ebean;
 import com.avaje.ebean.Page;
 import com.avaje.ebean.PagingList;
@@ -9,6 +10,7 @@ import play.Logger;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
+import play.mvc.Security;
 
 import javax.persistence.PersistenceException;
 import java.util.List;
@@ -17,6 +19,7 @@ public class UnidadeDeMedidaController extends Controller {
 
 
     //Salva pais no banco de dados
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result inserir() {
         Logger.info("Salvando Unidade de Medida");
 
@@ -38,6 +41,7 @@ public class UnidadeDeMedidaController extends Controller {
     }
 
     //Atualiza pais do banco de dados
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result atualizar(Long id) {
         Logger.info("Atualizando Unidade de Medida");
 
@@ -59,6 +63,7 @@ public class UnidadeDeMedidaController extends Controller {
     }
 
     //Busca pais por ID
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result buscaPorId(Long id) {
         Logger.info("Buscando Unidade de Medida por ID");
 
@@ -72,6 +77,7 @@ public class UnidadeDeMedidaController extends Controller {
     }
 
     //busca os paises em ordem
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result buscaTodos() {
         Logger.info("Busca todas as Unidades de Medidas");
 
@@ -82,6 +88,7 @@ public class UnidadeDeMedidaController extends Controller {
     }
 
     //Remove pais do banco de dados
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result remover(Long id) {
         Logger.info("Remover Unidade de Medida");
 
@@ -103,6 +110,7 @@ public class UnidadeDeMedidaController extends Controller {
     }
 
     //filtra pais por nome
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result filtraPorNome(String filtro) {
         Logger.info("Filtrando Unidade de Medida por nome");
 

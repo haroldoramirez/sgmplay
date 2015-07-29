@@ -1,16 +1,15 @@
 package controllers;
 
+import actions.PlayAuthenticatedSecured;
 import com.avaje.ebean.Ebean;
-import com.avaje.ebean.Page;
-import com.avaje.ebean.PagingList;
 import com.avaje.ebean.Query;
 import models.Fornecedor;
 import models.locale.Bairro;
 import play.Logger;
-import play.api.libs.concurrent.Execution;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
+import play.mvc.Security;
 import validators.ValidaCNPJ;
 
 import javax.persistence.PersistenceException;
@@ -19,6 +18,7 @@ import java.util.List;
 
 public class FornecedorController extends Controller {
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result inserir() {
         Logger.info("Salvando Fornecedor");
 
@@ -40,8 +40,8 @@ public class FornecedorController extends Controller {
             return badRequest("O CNPJ é Inválido");
         }
 
-        Fornecedor.setDataDeCadastro(Calendar.getInstance());
-        Fornecedor.setDataDeAlteracao(Calendar.getInstance());
+        Fornecedor.setDataCadastro(Calendar.getInstance());
+        Fornecedor.setDataAlteracao(Calendar.getInstance());
 
         try {
             Ebean.save(Fornecedor);
@@ -53,6 +53,7 @@ public class FornecedorController extends Controller {
         return created(Json.toJson(Fornecedor));
     }
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result atualizar(Long id) {
         Logger.info("Atualizando Fornecedor");
 
@@ -74,7 +75,7 @@ public class FornecedorController extends Controller {
 
         Fornecedor.setBairro(bairro);
 
-        Fornecedor.setDataDeAlteracao(Calendar.getInstance());
+        Fornecedor.setDataAlteracao(Calendar.getInstance());
 
         try {
             Ebean.update(Fornecedor);
@@ -85,6 +86,7 @@ public class FornecedorController extends Controller {
         return ok(Json.toJson(Fornecedor));
     }
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result buscaPorId(Long id) {
         Logger.info("Buscando Fornecedor por ID");
 
@@ -97,6 +99,7 @@ public class FornecedorController extends Controller {
         return ok(Json.toJson(Fornecedor));
     }
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result buscaTodos() {
         Logger.info("Busca todos os Fornecedores");
 
@@ -106,6 +109,7 @@ public class FornecedorController extends Controller {
                 .findList()));
     }
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result remover(Long id) {
         Logger.info("Remover Fornecedor");
 
@@ -126,6 +130,7 @@ public class FornecedorController extends Controller {
         return ok(Json.toJson(Fornecedor));
     }
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result filtraPorNome(String filtro) {
         Logger.info("Filtrando Fornecedor");
 

@@ -1,5 +1,6 @@
 package controllers;
 
+import actions.PlayAuthenticatedSecured;
 import com.avaje.ebean.Ebean;
 import com.avaje.ebean.Page;
 import com.avaje.ebean.PagingList;
@@ -9,6 +10,7 @@ import play.Logger;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
+import play.mvc.Security;
 
 import javax.persistence.PersistenceException;
 import java.util.Calendar;
@@ -16,6 +18,7 @@ import java.util.List;
 
 public class FabricanteController extends Controller {
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result inserir() {
         Logger.info("Salvando Fabricante");
 
@@ -36,6 +39,7 @@ public class FabricanteController extends Controller {
         return created(Json.toJson(fabricante));
     }
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result atualizar(Long id) {
         Logger.info("Atualizando Fabricante");
 
@@ -56,6 +60,7 @@ public class FabricanteController extends Controller {
         return ok(Json.toJson(fabricante));
     }
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result buscaPorId(Long id) {
         Logger.info("Buscando Fabricante por ID");
 
@@ -68,6 +73,7 @@ public class FabricanteController extends Controller {
         return ok(Json.toJson(fabricanteBusca));
     }
 
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result buscaTodos() {
         Logger.info("Busca todos os Fabricantes");
 
@@ -76,7 +82,8 @@ public class FabricanteController extends Controller {
                 .asc("nome")
                 .findList()));
     }
-    
+
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result remover(Long id) {
         Logger.info("Remover Fabricante");
 
@@ -96,7 +103,8 @@ public class FabricanteController extends Controller {
 
         return ok(Json.toJson(fabricanteBusca));
     }
-    
+
+    @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result filtraPorNome(String filtro) {
         Logger.info("Filtrando Fabricante por nome");
         
