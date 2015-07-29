@@ -53,8 +53,12 @@ angular.module('mercado')
   }).controller('ClienteDetailController', function ($scope, $modal, $routeParams, $location, Cliente, Bairro, toastr) {
 
     $scope.init = function() {
-        $scope.cliente = Cliente.get({id:$routeParams.id});
-        $scope.bairros = Bairro.getAll();
+        $scope.cliente = Cliente.get({id:$routeParams.id}, function(data) {
+            $scope.bairros = Bairro.getAll();
+        },function(data) {
+            console.log(data);
+            toastr.error(data.data);
+        });
     };
 
     $scope.update = function() {

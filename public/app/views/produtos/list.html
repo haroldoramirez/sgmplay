@@ -28,7 +28,7 @@
         <tr>
             <th>Descrição</th>
             <th>Quantidade</th>
-            <th>Preço de Custo $</th>
+            <th>Preço de Compra $</th>
             <th>Preço de Venda $</th>
             <th>Fabricante</th>
             <th>Fornecedor</th>
@@ -37,9 +37,9 @@
         </tr>
         <tr ng-repeat="produto in produtos">
             <td><b><a href="#/produtos/detalhe/{{produto.id}}">{{produto.descricao}}</a></b></td>
-            <td><b>{{produto.quantidadeEmEstoque}}</b></td>
-            <td><b>{{produto.precoDeCusto}}</b></td>
-            <td><b>{{produto.precoDeVenda}}</b></td>
+            <td><b>{{produto.quantidade}}</b></td>
+            <td><b>{{produto.precoCompra}}</b></td>
+            <td><b>{{produto.precoVenda}}</b></td>
             <td><b>{{produto.fabricante.nome}}</b></td>
             <td><b>{{produto.fornecedor.nomeFantasia}}</b></td>
             <td><b>{{produto.categoria.nome}}</b></td>

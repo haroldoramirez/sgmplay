@@ -53,7 +53,11 @@ angular.module('mercado')
   }).controller('UnidadeDeMedidaDetailController', function ($scope, $modal, $routeParams, $location, UnidadeDeMedida, toastr) {
 
     $scope.init = function() {
-        $scope.unidadedemedida = UnidadeDeMedida.get({id:$routeParams.id});
+        $scope.unidadedemedida = UnidadeDeMedida.get({id:$routeParams.id}, function(data) {
+        },function(data) {
+            console.log(data);
+            toastr.error(data.data);
+        });
     };
 
     $scope.update = function() {

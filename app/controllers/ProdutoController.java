@@ -30,16 +30,12 @@ public class ProdutoController extends Controller {
             return badRequest("Produto já cadastrado");
         }
 
-        if ((produto.getQuantidadeMinima() <= 0 || produto.getQuantidadeEmEstoque() <=0)){
-            return badRequest("Quantidades Não Podem Ser Negativas");
-        }
-
-        if (produto.getQuantidadeMinima() > produto.getQuantidadeEmEstoque()) {
-            return badRequest("Quantidade Mínima deve ser menor que Quantidade em Estoque");
+        if ((produto.getQuantidade() <= 0)){
+            return badRequest("Quantidade Não Pode Ser Negativa");
         }
         
-        if (produto.getPrecoDeCusto() > produto.getPrecoDeVenda()) {
-            return badRequest("Preço de Custo deve ser menor que o Preço de Venda");
+        if (produto.getPrecoCompra() > produto.getPrecoVenda()) {
+            return badRequest("Preço de Compra deve ser menor que o Preço de Venda");
         }
 
         Categoria categoria = Ebean.find(Categoria.class, produto.getCategoria().getId());
@@ -50,8 +46,8 @@ public class ProdutoController extends Controller {
         produto.setFabricante(fabricante);
         produto.setFornecedor(fornecedor);
 
-        produto.setDataDeCadastro(Calendar.getInstance());
-        produto.setDataDeAlteracao(Calendar.getInstance());
+        produto.setDataCadastro(Calendar.getInstance());
+        produto.setDataAlteracao(Calendar.getInstance());
 
         try {
             Ebean.save(produto);
@@ -74,16 +70,12 @@ public class ProdutoController extends Controller {
             return notFound("Produto não encontrado");
         }
 
-        if ((produto.getQuantidadeMinima() <= 0 || produto.getQuantidadeEmEstoque() <=0)){
-            return badRequest("Quantidades Não Podem Ser Negativas");
+        if ((produto.getQuantidade() <= 0)){
+            return badRequest("Quantidade Não Pode Ser Negativa");
         }
 
-        if (produto.getQuantidadeMinima() > produto.getQuantidadeEmEstoque()) {
-            return badRequest("Quantidade Mínima deve ser menor que Quantidade em Estoque");
-        }
-
-        if (produto.getPrecoDeCusto() > produto.getPrecoDeVenda()) {
-            return badRequest("Preço de Custo deve ser menor que o Preço de Venda");
+        if (produto.getPrecoCompra() > produto.getPrecoVenda()) {
+            return badRequest("Preço de Compra deve ser menor que o Preço de Venda");
         }
 
         Categoria categoria = Ebean.find(Categoria.class, produto.getCategoria().getId());
@@ -94,7 +86,7 @@ public class ProdutoController extends Controller {
         produto.setFabricante(fabricante);
         produto.setFornecedor(fornecedor);
 
-        produto.setDataDeAlteracao(Calendar.getInstance());
+        produto.setDataAlteracao(Calendar.getInstance());
 
         try {
             Ebean.update(produto);
@@ -136,7 +128,7 @@ public class ProdutoController extends Controller {
             return notFound("Produto não encontrado");
         }
 
-        produto.setDataDeAlteracao(null);
+        produto.setDataAlteracao(null);
 
         try {
             Ebean.delete(produto);
@@ -154,9 +146,9 @@ public class ProdutoController extends Controller {
     public static Result filtraPorNome(String filtro) {
         Logger.info("Filtrando Produto por nome");
 
-        Query<Produto> query = Ebean.createQuery(Produto.class, "find produto where (descricao like :descricao or codigoDeBarras like :codigoDeBarras)");
+        Query<Produto> query = Ebean.createQuery(Produto.class, "find produto where (descricao like :descricao or codigoBarras like :codigoBarras)");
         query.setParameter("descricao", "%" + filtro + "%");
-        query.setParameter("codigoDeBarras", "%" + filtro + "%");
+        query.setParameter("codigoBarras", "%" + filtro + "%");
         List<Produto> filtroDeProdutos = query.findList();
         return ok(Json.toJson(filtroDeProdutos));
     }

@@ -54,8 +54,12 @@ angular.module('mercado')
   }).controller('CidadeDetailController', function ($scope, $modal, $routeParams, $location, Cidade, Estado, toastr) {
 
     $scope.init = function() {
-        $scope.cidade = Cidade.get({id:$routeParams.id});
-        $scope.estados = Estado.getAll();
+        $scope.cidade = Cidade.get({id:$routeParams.id}, function(data) {
+             $scope.estados = Estado.getAll();
+        },function(data) {
+            console.log(data);
+            toastr.error(data.data);
+        });
     };
 
     $scope.update = function() {

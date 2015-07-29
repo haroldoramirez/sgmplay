@@ -54,7 +54,11 @@ angular.module('mercado')
   }).controller('PaisDetailController', function ($scope, $modal, $routeParams, $location, Pais, toastr) {
 
     $scope.init = function() {
-        $scope.pais = Pais.get({id:$routeParams.id});
+        $scope.pais = Pais.get({id:$routeParams.id}, function(data) {
+        },function(data) {
+            console.log(data);
+            toastr.error(data.data);
+        });
     };
 
     $scope.update = function() {

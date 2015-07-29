@@ -22,18 +22,15 @@ public class Produto extends Model {
     private String descricao;
 
     @Column(nullable = false)
-    private Integer quantidadeMinima;
+    private Integer quantidade;
 
     @Column(nullable = false)
-    private Integer quantidadeEmEstoque;
+    private Float precoCompra;
 
     @Column(nullable = false)
-    private Float precoDeCusto;
+    private Float precoVenda;
 
-    @Column(nullable = false)
-    private Float precoDeVenda;
-
-    private String codigoDeBarras;
+    private String codigoBarras;
 
     private String observacoes;
 
@@ -51,11 +48,11 @@ public class Produto extends Model {
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false)
-    private Calendar dataDeCadastro;
+    private Calendar dataCadastro;
 
     @Temporal(TemporalType.TIMESTAMP)
     @Column(nullable = false)
-    private Calendar dataDeAlteracao;
+    private Calendar dataAlteracao;
 
     //deixar este atributo para nao dar problema de javax.persistence.OptimisticLockException
     @Version
@@ -78,44 +75,36 @@ public class Produto extends Model {
         this.descricao = descricao;
     }
 
-    public Integer getQuantidadeMinima() {
-        return quantidadeMinima;
+    public Integer getQuantidade() {
+        return quantidade;
     }
 
-    public void setQuantidadeMinima(Integer quantidadeMinima) {
-        this.quantidadeMinima = quantidadeMinima;
+    public void setQuantidade(Integer quantidade) {
+        this.quantidade = quantidade;
     }
 
-    public Integer getQuantidadeEmEstoque() {
-        return quantidadeEmEstoque;
+    public Float getPrecoCompra() {
+        return precoCompra;
     }
 
-    public void setQuantidadeEmEstoque(Integer quantidadeEmEstoque) {
-        this.quantidadeEmEstoque = quantidadeEmEstoque;
+    public void setPrecoCompra(Float precoCompra) {
+        this.precoCompra = precoCompra;
     }
 
-    public Float getPrecoDeCusto() {
-        return precoDeCusto;
+    public Float getPrecoVenda() {
+        return precoVenda;
     }
 
-    public void setPrecoDeCusto(Float precoDeCusto) {
-        this.precoDeCusto = precoDeCusto;
+    public void setPrecoVenda(Float precoVenda) {
+        this.precoVenda = precoVenda;
     }
 
-    public Float getPrecoDeVenda() {
-        return precoDeVenda;
+    public String getCodigoBarras() {
+        return codigoBarras;
     }
 
-    public void setPrecoDeVenda(Float precoDeVenda) {
-        this.precoDeVenda = precoDeVenda;
-    }
-
-    public String getCodigoDeBarras() {
-        return codigoDeBarras;
-    }
-
-    public void setCodigoDeBarras(String codigoDeBarras) {
-        this.codigoDeBarras = codigoDeBarras;
+    public void setCodigoBarras(String codigoBarras) {
+        this.codigoBarras = codigoBarras;
     }
 
     public String getObservacoes() {
@@ -158,20 +147,20 @@ public class Produto extends Model {
         this.unidadedemedida = unidadedemedida;
     }
 
-    public Calendar getDataDeCadastro() {
-        return dataDeCadastro;
+    public Calendar getDataCadastro() {
+        return dataCadastro;
     }
 
-    public void setDataDeCadastro(Calendar dataDeCadastro) {
-        this.dataDeCadastro = dataDeCadastro;
+    public void setDataCadastro(Calendar dataCadastro) {
+        this.dataCadastro = dataCadastro;
     }
 
-    public Calendar getDataDeAlteracao() {
-        return dataDeAlteracao;
+    public Calendar getDataAlteracao() {
+        return dataAlteracao;
     }
 
-    public void setDataDeAlteracao(Calendar dataDeAlteracao) {
-        this.dataDeAlteracao = dataDeAlteracao;
+    public void setDataAlteracao(Calendar dataAlteracao) {
+        this.dataAlteracao = dataAlteracao;
     }
 
     @Override

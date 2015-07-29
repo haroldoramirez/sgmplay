@@ -62,6 +62,14 @@ angular.module('mercado')
         $scope.usuario = Usuario.get({id:$routeParams.id});
     };
 
+    $scope.init = function() {
+        $scope.usuario = Usuario.get({id:$routeParams.id}, function(data) {
+        },function(data) {
+            console.log(data);
+            toastr.error(data.data);
+        });
+    };
+
     $scope.update = function() {
         Usuario.update({id:$routeParams.id}, $scope.usuario, function(data) {
             toastr.info('Usuário Atualizado com Sucesso');

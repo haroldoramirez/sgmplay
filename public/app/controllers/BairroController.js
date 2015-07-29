@@ -54,8 +54,12 @@ angular.module('mercado')
   }).controller('BairroDetailController', function ($scope, $modal, $routeParams, $location, Cidade, Bairro, toastr) {
 
     $scope.init = function() {
-        $scope.bairro = Bairro.get({id:$routeParams.id});
-        $scope.cidades = Cidade.getAll();
+        $scope.bairro = Bairro.get({id:$routeParams.id}, function(data) {
+            $scope.cidades = Cidade.getAll();
+        },function(data) {
+            console.log(data);
+            toastr.error(data.data);
+        });
     };
 
     $scope.update = function() {

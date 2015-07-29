@@ -11,7 +11,7 @@
         <div class="form-group">
 
             <!--Input da Descrição-->
-            <div class="col-md-8">
+            <div class="col-md-10">
                 <label class="control-label" for="descricao">Descrição</label>
                 <div ng-class="{'has-error': !produto.descricao}">
                     <div class="input-group">
@@ -21,56 +21,45 @@
                 </div>
             </div>
 
-            <!--Input de Quantidade Mínima-->
+            <!--Input de Quantidade-->
             <div class="col-md-2">
-                <label class="control-label" for="quantidadeMinima">Quantidade Mínima</label>
-                <div ng-class="{'has-error': !produto.quantidadeMinima}">
-                    <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-minus-sign"></i></span>
-                        <input maxlength="5" placeholder="000" type="number" class="form-control" ng-model="produto.quantidadeMinima" id="quantidadeMinima" name="quantidadeMinima" required/>
-                    </div>
-                </div>
-            </div>
-
-            <!--Input de Quantidade Em Estoque-->
-            <div class="col-md-2">
-                <label class="control-label" for="quantidadeEmEstoque">Quantidade em Estoque</label>
-                <div ng-class="{'has-error': !produto.quantidadeEmEstoque}">
+                <label class="control-label" for="quantidade">Quantidade</label>
+                <div ng-class="{'has-error': !produto.quantidade}">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-plus-sign"></i></span>
-                        <input maxlength="5" placeholder="000" type="number" class="form-control" ng-model="produto.quantidadeEmEstoque" id="quantidadeEmEstoque" name="quantidadeEmEstoque" required/>
+                        <input maxlength="5" placeholder="000" type="number" class="form-control" ng-model="produto.quantidade" id="quantidade" name="quantidade" required/>
                     </div>
                 </div>
             </div>
 
-            <!--Input Preço de custo-->
+            <!--Input Preço de compra-->
             <div class="col-md-2">
-                <label class="control-label" for="precoDeCusto">Preço de Custo</label>
-                <div ng-class="{'has-error': !produto.precoDeCusto}">
+                <label class="control-label" for="precoCompra">Preço de Compra</label>
+                <div ng-class="{'has-error': !produto.precoCompra}">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span>
-                        <input ui-number-mask placeholder="0,00" maxlength="10" class="form-control" type="text" ng-model="produto.precoDeCusto" id="precoDeCusto" required/>
+                        <input ui-number-mask placeholder="0,00" maxlength="10" class="form-control" type="text" ng-model="produto.precoCompra" id="precoCompra" required/>
                     </div>
                 </div>
             </div>
 
             <!--Input Preço de venda-->
             <div class="col-md-2">
-                <label class="control-label" for="precoDeVenda">Preço de Venda</label>
-                <div ng-class="{'has-error': !produto.precoDeVenda}">
+                <label class="control-label" for="precoVenda">Preço de Venda</label>
+                <div ng-class="{'has-error': !produto.precoVenda}">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="glyphicon glyphicon-usd"></i></span>
-                        <input ui-number-mask placeholder="0,00" maxlength="10" class="form-control" type="text" ng-model="produto.precoDeVenda" id="precoDeVenda" required/>
+                        <input ui-number-mask placeholder="0,00" maxlength="10" class="form-control" type="text" ng-model="produto.precoVenda" id="precoVenda" required/>
                     </div>
                 </div>
             </div>
 
             <!--Input do Código de Barras-->
             <div class="col-md-8">
-                <label class="control-label" for="codigoDeBarras">Código de Barras</label>
+                <label class="control-label" for="codigoBarras">Código de Barras</label>
                 <div class="input-group">
                     <span class="input-group-addon"><i class="glyphicon glyphicon-barcode"></i></span>
-                    <input placeholder="Insira o Código de Barras" maxlength="80" class="form-control" type="text" ng-model="produto.codigoDeBarras" id="codigoDeBarras"/>
+                    <input placeholder="Insira o Código de Barras" maxlength="80" class="form-control" type="text" ng-model="produto.codigoBarras" id="codigoBarras"/>
                 </div>
             </div>
 
@@ -141,7 +130,7 @@
             <div class="col-md-12">
                 <br>
                 <div class="control-group">
-                    <button id="save" class="btn btn-success" type="submit" ng-disabled="!produto.descricao || !produto.quantidadeMinima || !produto.quantidadeEmEstoque || !produto.precoDeCusto || !produto.precoDeVenda || !produto.fornecedor || !produto.fabricante || !produto.categoria || !produto.unidadedemedida">
+                    <button id="save" class="btn btn-success" type="submit" ng-disabled="!produto.descricao || !produto.quantidade || !produto.precoCompra || !produto.precoVenda || !produto.fornecedor || !produto.fabricante || !produto.categoria || !produto.unidadedemedida">
                         <span class="fa fa-floppy-o"></span> Salvar
                     </button>
                     <button type="reset" id="cancel" class="btn btn-default" ng-click="cancel()">

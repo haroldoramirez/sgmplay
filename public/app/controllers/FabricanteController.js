@@ -53,7 +53,11 @@ angular.module('mercado')
   }).controller('FabricanteDetailController', function ($scope, $modal, $routeParams, $location, Fabricante, toastr) {
 
     $scope.init = function() {
-        $scope.fabricante = Fabricante.get({id:$routeParams.id});
+        $scope.fabricante = Fabricante.get({id:$routeParams.id}, function(data) {
+        },function(data) {
+            console.log(data);
+            toastr.error(data.data);
+        });
     };
 
     $scope.update = function() {
