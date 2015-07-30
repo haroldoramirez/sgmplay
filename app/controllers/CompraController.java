@@ -1,6 +1,10 @@
 package controllers;
 
 import actions.PlayAuthenticatedSecured;
+import com.avaje.ebean.Ebean;
+import models.purchase.Compra;
+import play.Logger;
+import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
 import play.mvc.Security;
@@ -28,7 +32,12 @@ public class CompraController extends Controller {
 
     @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result buscaTodos() {
-        return TODO;
+        Logger.info("Busca todas as compras");
+
+        return ok(Json.toJson(Ebean.find(Compra.class)
+                .order()
+                .asc("dataCompra")
+                .findList()));
     }
 
     @Security.Authenticated(PlayAuthenticatedSecured.class)

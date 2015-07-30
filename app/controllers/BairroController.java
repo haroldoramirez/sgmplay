@@ -2,8 +2,6 @@ package controllers;
 
 import actions.PlayAuthenticatedSecured;
 import com.avaje.ebean.Ebean;
-import com.avaje.ebean.Page;
-import com.avaje.ebean.PagingList;
 import com.avaje.ebean.Query;
 import models.locale.Bairro;
 import models.locale.Cidade;
@@ -14,7 +12,6 @@ import play.mvc.Result;
 import play.mvc.Security;
 
 import javax.persistence.PersistenceException;
-import java.util.Calendar;
 import java.util.List;
 
 public class BairroController extends Controller {
