@@ -1,6 +1,5 @@
-angular.module('mercado').controller('HomeController', function ($scope, $modal, $log) {
-
-  $scope.animationsEnabled = true;
+angular.module('mercado')
+  .controller('HomeController', function ($scope, $modal, $log) {
 
   $scope.open = function (size) {
 
@@ -12,12 +11,7 @@ angular.module('mercado').controller('HomeController', function ($scope, $modal,
     });
   };
 
-});
-
-// Please note that $modalInstance represents a modal window (instance) dependency.
-// It is not the same as the $modal service used above.
-
-angular.module('mercado').controller('ModalController', function ($scope, $modalInstance) {
+}).controller('ModalController', function ($scope, $modalInstance) {
 
   $scope.fechar = function () {
     $modalInstance.close();

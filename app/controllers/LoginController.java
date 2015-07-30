@@ -1,6 +1,7 @@
 package controllers;
 
 import akka.util.Crypt;
+import com.avaje.ebean.Ebean;
 import models.Usuario;
 import models.Usuarios;
 import play.data.DynamicForm;
@@ -14,11 +15,23 @@ public class LoginController extends Controller {
     private static DynamicForm form = Form.form();
 
     public static Result loginTela() {
+        String username = session().get("email");
+
+        //busca o usuário atual que esteja logado no sistema
+        Usuario usuarioAtual = Ebean.createQuery(Usuario.class, "find usuario where email = :email")
+                .setParameter("email", username)
+                .findUnique();
+
+        if (usuarioAtual != null) {
+            return ok(views.html.autenticado.render(username));
+        }
+
         return ok(views.html.login.render(form));
     }
 
     public static Result telaAutenticado() {
         String username = session().get("email");
+
         return ok(views.html.autenticado.render(username));
     }
 

@@ -4,6 +4,7 @@
 
 # Home page
 GET     /                                 controllers.Application.index()
+GET     /teste                            controllers.Application.teste()
 
 # Login
 GET     /login                            controllers.LoginController.loginTela()

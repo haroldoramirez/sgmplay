@@ -8,7 +8,8 @@ angular
              'angular-loading-bar',
              'ui.utils.masks',
              'ui.bootstrap',
-             'mgcrea.ngStrap.datepicker'
+             'mgcrea.ngStrap.datepicker',
+             'ngDialog'
             ]
         )
     .config(function ($routeProvider) {
