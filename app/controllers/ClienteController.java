@@ -6,6 +6,7 @@ import com.avaje.ebean.Query;
 import models.Cliente;
 import models.Situacao;
 import models.locale.Bairro;
+import org.slf4j.LoggerFactory;
 import play.Logger;
 import play.libs.Json;
 import play.mvc.Controller;
@@ -15,13 +16,22 @@ import validators.ValidaCPF;
 
 import javax.persistence.PersistenceException;
 import java.util.Calendar;
+import java.util.Formatter;
 import java.util.List;
 
 public class ClienteController extends Controller {
 
+    static org.slf4j.Logger logger = LoggerFactory.getLogger(ClienteController.class);
+
+    static LogController logController = new LogController();
+
     @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result inserir() {
-        Logger.info("Salvando Cliente");
+
+        StringBuilder sb = new StringBuilder();
+        Formatter formatter = new Formatter(sb);
+
+        String username = session().get("email");
 
         Cliente cliente = Json.fromJson(request().body().asJson(), Cliente.class);
 
@@ -47,6 +57,9 @@ public class ClienteController extends Controller {
 
         try {
             Ebean.save(cliente);
+            logger.info("Cadastrado novo cliente: {}", cliente.getNome());
+            formatter.format("Conta: '%1s' cadastrou um novo cliente: '%2s'", username, cliente.getNome());
+            logController.inserir(sb.toString());
         } catch (Exception e) {
             return badRequest("Erro interno de sistema");
         }
@@ -56,7 +69,11 @@ public class ClienteController extends Controller {
 
     @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result atualizar(Long id) {
-        Logger.info("Atualizando Cliente");
+
+        String username = session().get("email");
+
+        StringBuilder sb = new StringBuilder();
+        Formatter formatter = new Formatter(sb);
 
         Cliente cliente = Json.fromJson(request().body().asJson(), Cliente.class);
 
@@ -80,6 +97,9 @@ public class ClienteController extends Controller {
 
         try {
             Ebean.update(cliente);
+            logger.info("Cliente: '{}' atualizado", cliente.getNome());
+            formatter.format("Conta: '%1s' atualizou o cliente: '%2s'", username, cliente.getNome());
+            logController.inserir(sb.toString());
         } catch (Exception e) {
             return badRequest("Erro interno de sistema");
         }
@@ -112,7 +132,11 @@ public class ClienteController extends Controller {
 
     @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result remover(Long id) {
-        Logger.info("Remover Cliente");
+
+        StringBuilder sb = new StringBuilder();
+        Formatter formatter = new Formatter(sb);
+
+        String username = session().get("email");
 
         Cliente cliente = Ebean.find(Cliente.class, id);
 
@@ -122,6 +146,9 @@ public class ClienteController extends Controller {
 
         try {
             Ebean.delete(cliente);
+            logger.info("Cliente deletado");
+            formatter.format("Conta: '%1s' deletou um cliente", username);
+            logController.inserir(sb.toString());
         } catch (PersistenceException e) {
             return badRequest("Existem Vendas que dependem deste Cliente");
         } catch (Exception e) {

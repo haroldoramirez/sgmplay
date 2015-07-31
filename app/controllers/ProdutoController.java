@@ -2,14 +2,13 @@ package controllers;
 
 import actions.PlayAuthenticatedSecured;
 import com.avaje.ebean.Ebean;
-import com.avaje.ebean.Page;
-import com.avaje.ebean.PagingList;
 import com.avaje.ebean.Query;
 import models.Fornecedor;
 import models.stock.Categoria;
 import models.stock.Fabricante;
 import models.stock.Produto;
-import play.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -17,13 +16,23 @@ import play.mvc.Security;
 
 import javax.persistence.PersistenceException;
 import java.util.Calendar;
+import java.util.Formatter;
 import java.util.List;
 
 public class ProdutoController extends Controller {
 
+    static Logger logger = LoggerFactory.getLogger(ProdutoController.class);
+
+    static LogController logController = new LogController();
+
+
     @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result inserir() {
-        Logger.info("Salvando Produto");
+
+        StringBuilder sb = new StringBuilder();
+        Formatter formatter = new Formatter(sb);
+
+        String username = session().get("email");
 
         Produto produto = Json.fromJson(request().body().asJson(), Produto.class);
 
@@ -54,6 +63,9 @@ public class ProdutoController extends Controller {
 
         try {
             Ebean.save(produto);
+            logger.info("Criado um novo produto: {}", produto.getDescricao());
+            formatter.format("Conta: '%1s' cadastrou um produto: '%2s'", username, produto.getDescricao());
+            logController.inserir(sb.toString());
         } catch (Exception e) {
             //System.out.print(e.toString());
             return badRequest("Erro interno de sistema");
@@ -64,7 +76,11 @@ public class ProdutoController extends Controller {
 
     @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result atualizar(Long id) {
-        Logger.info("Atualizando Produto");
+
+        StringBuilder sb = new StringBuilder();
+        Formatter formatter = new Formatter(sb);
+
+        String username = session().get("email");
 
         Produto produto = Json.fromJson(request().body().asJson(), Produto.class);
 
@@ -94,6 +110,9 @@ public class ProdutoController extends Controller {
 
         try {
             Ebean.update(produto);
+            logger.info("Produto: '{}' atualizado", produto.getDescricao());
+            formatter.format("Conta: '%1s' atualizou o produto: '%2s'", username, produto.getDescricao());
+            logController.inserir(sb.toString());
         } catch (Exception e) {
             //System.out.print(e.toString());
             return badRequest("Erro interno de sistema");
@@ -104,7 +123,6 @@ public class ProdutoController extends Controller {
 
     @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result buscaPorId(Long id) {
-        Logger.info("buscaPorId Produto");
 
         Produto produto = Ebean.find(Produto.class, id);
 
@@ -117,7 +135,6 @@ public class ProdutoController extends Controller {
 
     @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result buscaTodos() {
-        Logger.info("busca Todos os Produtos");
 
         return ok(Json.toJson(Ebean.find(Produto.class)
                 .order()
@@ -127,7 +144,11 @@ public class ProdutoController extends Controller {
 
     @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result remover(Long id) {
-        Logger.info("Remover Produto");
+
+        StringBuilder sb = new StringBuilder();
+        Formatter formatter = new Formatter(sb);
+
+        String username = session().get("email");
 
         Produto produto = Ebean.find(Produto.class, id);
 
@@ -139,6 +160,9 @@ public class ProdutoController extends Controller {
 
         try {
             Ebean.delete(produto);
+            logger.info("Produto deletado");
+            formatter.format("Conta: '%1s' deletou um produto", username);
+            logController.inserir(sb.toString());
         } catch (PersistenceException e) {
             //System.out.print(e.toString());
             return badRequest("Existem vendas que dependem deste produto");
@@ -152,7 +176,6 @@ public class ProdutoController extends Controller {
 
     @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result filtraPorNome(String filtro) {
-        Logger.info("Filtrando Produto por nome");
 
         Query<Produto> query = Ebean.createQuery(Produto.class, "find produto where (descricao like :descricao or codigoBarras like :codigoBarras)");
         query.setParameter("descricao", "%" + filtro + "%");

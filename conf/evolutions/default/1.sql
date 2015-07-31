@@ -121,6 +121,13 @@ create table itemcompra (
   constraint pk_itemcompra primary key (id))
 ;
 
+create table log (
+  id                        bigint auto_increment not null,
+  data                      datetime,
+  mensagem                  varchar(255),
+  constraint pk_log primary key (id))
+;
+
 create table pais (
   id                        bigint auto_increment not null,
   nome                      varchar(255) not null,
@@ -220,6 +227,8 @@ drop table forma_pagamento;
 drop table fornecedor;
 
 drop table itemcompra;
+
+drop table log;
 
 drop table pais;
 

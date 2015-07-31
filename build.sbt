@@ -10,7 +10,8 @@ libraryDependencies ++= Seq(
   cache,
   javaWs,
   "mysql" % "mysql-connector-java" % "5.1.34",
-  "org.mockito" % "mockito-core" % "1.9.5" % "test"
+  "org.mockito" % "mockito-core" % "1.9.5" % "test",
+  "ch.qos.logback" % "logback-classic" % "1.1.3"
 )
 
 lazy val root = (project in file(".")).enablePlugins(PlayJava)

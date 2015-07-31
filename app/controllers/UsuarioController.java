@@ -5,7 +5,8 @@ import akka.util.Crypt;
 import com.avaje.ebean.Ebean;
 import com.avaje.ebean.Query;
 import models.Usuario;
-import play.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import play.libs.Json;
 import play.mvc.Controller;
 import play.mvc.Result;
@@ -13,13 +14,20 @@ import play.mvc.Security;
 
 import javax.persistence.PersistenceException;
 import java.util.Calendar;
+import java.util.Formatter;
 import java.util.List;
 
 public class UsuarioController extends Controller {
 
+    static Logger logger = LoggerFactory.getLogger(UsuarioController.class);
+
+    static LogController logController = new LogController();
+
     @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result inserir() {
-        Logger.info("Salvando Usuário");
+
+        StringBuilder sb = new StringBuilder();
+        Formatter formatter = new Formatter(sb);
 
         String username = session().get("email");
 
@@ -52,6 +60,9 @@ public class UsuarioController extends Controller {
 
         try {
             Ebean.save(usuario);
+            logger.info("Criado um novo usuário: {}", usuario.getEmail());
+            formatter.format("Conta: '%1s' cadastrou um novo usuário: '%2s'", username, usuario.getEmail());
+            logController.inserir(sb.toString());
         } catch (Exception e) {
             return badRequest("Erro interno de sistema");
         }
@@ -61,7 +72,9 @@ public class UsuarioController extends Controller {
 
     @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result atualizar(Long id) {
-        Logger.info("Atualizando Usuário");
+
+        StringBuilder sb = new StringBuilder();
+        Formatter formatter = new Formatter(sb);
 
         String username = session().get("email");
 
@@ -95,6 +108,9 @@ public class UsuarioController extends Controller {
 
         try {
             Ebean.update(usuario);
+            logger.info("Usuário: '{}' atualizado", usuario.getEmail());
+            formatter.format("Conta: '%1s' atualizou o usuário: '%2s'", username, usuario.getEmail());
+            logController.inserir(sb.toString());
         } catch (Exception e) {
             return badRequest("Erro interno de sistema");
         }
@@ -104,7 +120,6 @@ public class UsuarioController extends Controller {
 
     @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result buscaPorId(Long id) {
-        Logger.info("Buscando Usuário por ID");
 
         String username = session().get("email");
 
@@ -129,7 +144,6 @@ public class UsuarioController extends Controller {
 
     @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result buscaTodos() {
-        Logger.info("busca Todos os Usuários");
 
         String username = session().get("email");
 
@@ -151,7 +165,9 @@ public class UsuarioController extends Controller {
 
     @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result remover(Long id) {
-        Logger.info("remover usuário");
+
+        StringBuilder sb = new StringBuilder();
+        Formatter formatter = new Formatter(sb);
 
         String username = session().get("email");
 
@@ -181,6 +197,9 @@ public class UsuarioController extends Controller {
 
         try {
             Ebean.delete(usuario);
+            logger.info("Usuário deletado");
+            formatter.format("Conta: '%1s' deletou um usuário", username);
+            logController.inserir(sb.toString());
         }  catch (PersistenceException e) {
             return badRequest("Existem transações no sistema que depende deste usuário");
         } catch (Exception e) {
@@ -192,7 +211,6 @@ public class UsuarioController extends Controller {
 
     @Security.Authenticated(PlayAuthenticatedSecured.class)
     public static Result filtraPorNome(String filtro) {
-        Logger.info("Filtrando Usuário por email");
 
         String username = session().get("email");
 

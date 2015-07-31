@@ -1,5 +1,5 @@
 angular.module('mercado')
-  .controller('HomeController', function ($scope, $modal, $log) {
+  .controller('HomeController', function ($scope, $modal) {
 
   $scope.open = function (size) {
 

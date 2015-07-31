@@ -18,6 +18,14 @@ angular
                 templateUrl: '/assets/app/views/home.html',
                 controller: 'HomeController'
             })
+            .when('/logs', {
+                templateUrl: '/assets/app/views/logs/list.html',
+                controller: 'LogsListController'
+            })
+            .when('/logs/detalhe/:id', {
+                templateUrl: '/assets/app/views/logs/detail.html',
+                controller: 'LogsDetailController'
+            })
             .when('/ajuda', {
                 templateUrl: '/assets/app/views/help.html',
                 controller: 'AjudaController'
