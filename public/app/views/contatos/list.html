@@ -1,0 +1,85 @@
+<div class="row">
+    <script type="text/ng-template" id="modalCreate.html">
+        <div class="modal-header">
+            <h3 class="font-style">
+                <i class="fa fa-flag"></i> Novo Contato
+            </h3>
+        </div>
+        <form class="form-horizontal" ng-submit="save()">
+        <div class="modal-body">
+            <div class="modal-body">
+                    <div class="form-group">
+
+                        <!--Input do Nome-->
+                        <div class="col-md-6">
+                            <label class="control-label" for="nome">Nome</label>
+                            <div ng-class="{'has-error': !contato.nome}">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-flag"></i></span>
+                                    <input placeholder="Insira o nome do contato" maxlength="100" class="form-control" type="text" ng-model="contato.nome" id="nome" required/>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!--Input do ddi-->
+                        <div class="col-md-6">
+                            <label class="control-label" for="ddi">Telefone</label>
+                            <div ng-class="{'has-error': !contato.telefone}">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="fa fa-phone"></i></span>
+                                    <input placeholder="+000" ng-minlength="6" maxlength="9" class="form-control" type="text" ng-model="contato.telefone" id="ddi"/>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <!--Botões-->
+                        <div class="control-group">
+                            <br>
+                            <button id="save" class="btn btn-success" type="submit" ng-disabled="!contato.nome || !contato.telefone">
+                                <span class="fa fa-floppy-o"></span> Salvar
+                            </button>
+                            <button type="reset" id="cancel" class="btn btn-default" ng-click="cancelModal()">
+                                <span class="fa fa-arrow-left"></span> Voltar
+                            </button>
+                        </div>
+                    </div>
+            </div>
+        </div>
+        </form>
+    </script>
+    <!-- Header-->
+    <legend>
+        <h1 class="font-style">
+            <i class="fa fa-cubes"></i> Lista das Contatos<a ng-click="open();" class="btn btn-success pull-right">
+            <span class="fa fa-plus"></span> Novo Contato</a>
+        </h1>
+    </legend>
+
+    <!--Input de Busca-->
+    <div class="col-md-5 input-group">
+        <input ng-model="filtro" type="search" class="form-control" placeholder="digite o nome do contato">
+            <span class="input-group-btn">
+                <button ng-disabled="!filtro" class="btn btn-primary" ng-click="busca();"><span class="fa fa-search"></span> Filtrar</button>
+                <button class="btn btn-default" ng-click="init();">Limpar</button>
+            </span>
+    </div>
+
+    <div class="pull-right">
+        <h4 class="font-style">Total de <b>{{quantidade}}</b> Registros</h4>
+    </div>
+
+    <h4 class="font-style" ng-show="contatos.length == 0">Nenhum registro encontrado</h4>
+
+    <!--Tabela-->
+    <table ng-show="contatos.length" ng-init="init()" class="table-striped table table-hover table-bordered">
+        <tr>
+            <th>Nome</th>
+            <th>Telefone</th>
+        </tr>
+        <tr ng-repeat="contato in contatos">
+            <td><b><a href="#/contatos/detalhe/{{contato.id}}">{{contato.nome}}</a></b></td>
+            <td>{{contato.telefone}}</td>
+        </tr>
+    </table>
+</div>

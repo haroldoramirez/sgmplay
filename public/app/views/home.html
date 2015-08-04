@@ -1,31 +1,32 @@
 <div class="row">
     <div class="jumbotron">
-        <div ng-controller="HomeController">
-            <script type="text/ng-template" id="modalHome.html">
-                <div class="modal-header">
-                    <h3 class="modal-title">Informações:</h3>
+        <script type="text/ng-template" id="templateId">
+            <div class="ngdialog-message">
+                <legend>
+                    <h2 class="font-style">
+                        <i class="fa fa-university"></i> Informações:
+                    </h2>
+                </legend>
+                <div class="text-center">
+                    <h4>Centro Universitário Dinâmica das Cataratas</h4>
+                    <p>Curso: <b>Sistemas de Informação</b></p>
+                    <p>Disciplina: <b>Prática Profissional 2</b></p>
+                    <p><b>Sistema de Gestão de Mercados Luana</b></p>
+                    <p>Professor: <b>Carlos Kaneko</b></p>
+                    <p>&copy; 2015</p>
                 </div>
-                <div class="modal-body">
-                    <div class="text-center">
-                        <h4>Sistema de Gestão de Mercados Luana</h4>
-                        <p><b>Centro Universitário Dinâmica das Cataratas</b>
-                        <p>Curso: <b>Sistemas de Informação</b>
-                        <p>Disciplina: <b>Prática Profissional 2</b>
-                        <p>Professor: <b></b>
-                        <p>&copy; 2015</p>
-                    </div>
-                </div>
-                <div class="modal-footer">
-                    <button class="btn btn-primary" ng-click="fechar()">Fechar</button>
-                </div>
-            </script>
-            <div class="jumbotron text-center">
-                <h1>Início</h1>
-                <p>SGM - Sistema de Gestão de Mercados Luana</p>
-                <button type="button" class="btn btn-lg btn-primary" ng-click="open();">
-                    Mais Informações
-                </button>
             </div>
+            <div class="ngdialog-buttons mt">
+                <legend></legend>
+                <button type="button" class="ngdialog-button btn btn-primary" ng-click="closeThisDialog('Fechar')">Fechar</button>
+            </div>
+        </script>
+        <div class="jumbotron text-center">
+            <h1>Início</h1>
+            <p>SGM - Sistema de Gestão de Mercados Luana</p>
+            <button type="button" class="btn btn-lg btn-primary" ng-click="openModal();">
+                Mais Informações
+            </button>
         </div>
     </div>
 </div>

@@ -64,6 +64,13 @@ create table compra (
   constraint pk_compra primary key (id))
 ;
 
+create table contato (
+  id                        bigint auto_increment not null,
+  nome                      varchar(255) not null,
+  telefone                  varchar(255) not null,
+  constraint pk_contato primary key (id))
+;
+
 create table estado (
   id                        bigint auto_increment not null,
   nome                      varchar(255) not null,
@@ -217,6 +224,8 @@ drop table cidade;
 drop table cliente;
 
 drop table compra;
+
+drop table contato;
 
 drop table estado;
 

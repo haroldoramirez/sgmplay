@@ -1,0 +1,36 @@
+<div class="row">
+
+    <!-- Título da Página-->
+    <legend>
+        <h1 class="font-style">
+            <i class="fa fa-file-text"></i> Lista de Logs
+        </h1>
+    </legend>
+
+    <!--Input de Busca-->
+    <div class="col-md-5 input-group">
+        <input ng-model="nomeFiltro" type="search" class="form-control" placeholder="digite a data ou a mensagem de log">
+            <span class="input-group-btn">
+                <button ng-disabled="!nomeFiltro" class="btn btn-primary" ng-click="busca();"><span class="fa fa-search"></span> Filtrar</button>
+                <button class="btn btn-default" ng-click="init();">Limpar</button>
+            </span>
+    </div>
+
+    <div class="pull-right">
+        <h4 class="font-style">Total de <b>{{quantidade}}</b> Registros</h4>
+    </div>
+
+    <h4 class="font-style" ng-show="logs.length == 0">Nenhum registro encontrado</h4>
+
+    <!--Tabela-->
+    <table ng-show="logs.length" ng-init="init()" class="table-striped table table-hover table-bordered">
+        <tr>
+            <th>Data</th>
+            <th>Mensagem</th>
+        </tr>
+        <tr ng-repeat="log in logs">
+            <td><b><a href="#/logs/detalhe/{{log.id}}">{{log.data | date:'dd-MM-yyyy - HH:mm:ss'}}</a></b></td>
+            <td>{{log.mensagem}}</td>
+        </tr>
+    </table>
+</div>

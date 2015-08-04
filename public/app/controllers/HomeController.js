@@ -1,20 +1,13 @@
 angular.module('mercado')
-  .controller('HomeController', function ($scope, $modal) {
+  .controller('HomeController', function ($scope, ngDialog) {
 
-  $scope.open = function (size) {
-
-    var modalInstance = $modal.open({
-      animation: $scope.animationsEnabled,
-      templateUrl: 'modalHome.html',
-      controller: 'ModalController',
-      size: size
-    });
+  $scope.openModal = function () {
+      ngDialog.open({
+          template: 'templateId',
+          controller: 'ModalController'
+      });
   };
 
-}).controller('ModalController', function ($scope, $modalInstance) {
-
-  $scope.fechar = function () {
-    $modalInstance.close();
-  };
+}).controller('ModalController', function ($scope) {
 
 });

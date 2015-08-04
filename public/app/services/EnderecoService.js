@@ -90,4 +90,11 @@ angular.module('mercado')
          update: {method: 'PUT', url: BaseUrl + '/logs/:id', isArray: false},
          getFiltroLog: {method: 'GET', url: BaseUrl + '/logs/data/:filtro', isArray: true}
       });
+    }]).service('Contato',['$resource', 'BaseUrl',
+    function($resource, BaseUrl){
+      return $resource(BaseUrl + '/contatos/:id', {}, {
+         getAll: {method: 'GET', url: BaseUrl + '/contatos', isArray: true},
+         update: {method: 'PUT', url: BaseUrl + '/contatos/:id', isArray: false},
+         getFiltro: {method: 'GET', url: BaseUrl + '/contatos/nome/:filtro', isArray: true}
+      });
     }]);

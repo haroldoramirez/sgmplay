@@ -4,7 +4,9 @@
 
 # Home page
 GET     /                                 controllers.Application.index()
-GET     /teste                            controllers.Application.teste()
+
+# Application
+GET     /versao                           controllers.Application.versao()
 
 # Logs do Sistema
 POST    /logs                             controllers.LogController.inserir(mensagem:String)
@@ -106,6 +108,14 @@ GET     /usuarios                     controllers.UsuarioController.buscaTodos()
 GET     /usuarios/:id                 controllers.UsuarioController.buscaPorId(id:Long)
 DELETE  /usuarios/:id                 controllers.UsuarioController.remover(id:Long)
 GET     /usuarios/nome/:filtro        controllers.UsuarioController.filtraPorNome(filtro:String)
+
+# CRUD Contato
+POST    /contatos                     controllers.ContatoController.inserir()
+PUT     /contatos/:id                 controllers.ContatoController.atualizar(id:Long)
+GET     /contatos                     controllers.ContatoController.buscaTodos()
+GET     /contatos/:id                 controllers.ContatoController.buscaPorId(id:Long)
+DELETE  /contatos/:id                 controllers.ContatoController.remover(id:Long)
+GET     /contatos/nome/:filtro        controllers.ContatoController.filtro(filtro:String)
 
 # CRUD Compra
 POST    /compras                     controllers.CompraController.inserir()

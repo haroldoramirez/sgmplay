@@ -4,12 +4,12 @@ angular
             ['ngRoute',
              'ngResource',
              'toastr',
+             'ngDialog',
              'ngAnimate',
              'angular-loading-bar',
              'ui.utils.masks',
              'ui.bootstrap',
-             'mgcrea.ngStrap.datepicker',
-             'ngDialog'
+             'mgcrea.ngStrap.datepicker'
             ]
         )
     .config(function ($routeProvider) {
@@ -154,6 +154,18 @@ angular
                  templateUrl: '/assets/app/views/produtos/detail.html',
                  controller: 'ProdutoDetailController'
             })
+               .when('/contatos', {
+                 templateUrl: '/assets/app/views/contatos/list.html',
+                 controller: 'ContatoListController'
+            })
+               .when('/contatos/novo', {
+                 templateUrl: '/assets/app/views/contatos/create.html',
+                 controller: 'ContatoCreateController'
+            })
+               .when('/contatos/detalhe/:id', {
+                 templateUrl: '/assets/app/views/contatos/detail.html',
+                 controller: 'ContatoDetailController'
+            })
                .when('/usuarios', {
                  templateUrl: '/assets/app/views/usuarios/list.html',
                  controller: 'UsuarioListController'
@@ -180,42 +192,48 @@ angular
             });
    //Configuração das notificações
    }).config(function(toastrConfig) {
-         angular.extend(toastrConfig, {
-            allowHtml: false,
-            autoDismiss: false,
-            closeButton: false,
-            closeHtml: '<button>&times;</button>',
-            containerId: 'toast-container',
-            extendedTimeOut: 6000,
-            iconClasses: {
-              error: 'toast-error',
-              info: 'toast-info',
-              success: 'toast-success',
-              warning: 'toast-warning'
-            },
-            maxOpened: 0,
-            messageClass: 'toast-message',
-            newestOnTop: true,
-            onHidden: null,
-            onShown: null,
-            positionClass: 'toast-bottom-right',
-            preventDuplicates: false,
-            preventOpenDuplicates: false,
-            progressBar: false,
-            tapToDismiss: true,
-            target: 'body',
-            templates: {
-              toast: 'directives/toast/toast.html',
-              progressbar: 'directives/progressbar/progressbar.html'
-            },
-            timeOut: 6000,
-            titleClass: 'toast-title',
-            toastClass: 'toast'
-          });
+        angular.extend(toastrConfig, {
+           allowHtml: false,
+           autoDismiss: false,
+           closeButton: true,
+           closeHtml: '<button>&times;</button>',
+           containerId: 'toast-container',
+           extendedTimeOut: 6000,
+           iconClasses: {
+             error: 'toast-error',
+             info: 'toast-info',
+             success: 'toast-success',
+             warning: 'toast-warning'
+           },
+           maxOpened: 0,
+           messageClass: 'toast-message',
+           newestOnTop: true,
+           onHidden: null,
+           onShown: null,
+           positionClass: 'toast-bottom-right',
+           preventDuplicates: false,
+           preventOpenDuplicates: false,
+           progressBar: false,
+           tapToDismiss: true,
+           target: 'body',
+           templates: {
+             toast: 'directives/toast/toast.html',
+             progressbar: 'directives/progressbar/progressbar.html'
+           },
+           timeOut: 6000,
+           titleClass: 'toast-title',
+           toastClass: 'toast'
+        });
    }).config(function($datepickerProvider) {
-       angular.extend($datepickerProvider.defaults, {
+        angular.extend($datepickerProvider.defaults, {
            iconLeft: 'fa fa-chevron-left',
            iconRight: 'fa fa-chevron-right',
            placement: 'bottom'
         });
-   });
+   }).config(['ngDialogProvider', function (ngDialogProvider) {
+        ngDialogProvider.setDefaults({
+           showClose: false,
+           closeByDocument: true,
+           closeByEscape: true
+        });
+   }]);

@@ -12,6 +12,9 @@
 
     <!-- ngDialog-->
     <link rel="stylesheet" href="assets/bower_components/ngDialog/css/ngDialog.css"/>
+    <link rel="stylesheet" href="assets/bower_components/ngDialog/css/ngDialog-theme-default.css"/>
+    <link rel="stylesheet" href="assets/bower_components/ngDialog/css/ngDialog-custom-width.css"/>
+    <link rel="stylesheet" href="assets/bower_components/ngDialog/css/ngDialog-theme-plain.css"/>
 
     <!-- Font Style-->
     <link rel="stylesheet" href="assets/stylesheets/main.css"/>
@@ -30,6 +33,9 @@
 
     <!--Bootstrap Table-->
     <link rel="stylesheet" href="assets/bower_components/bootstrap-table/src/bootstrap-table.css"/>
+
+    <!--ngDialog-->
+    <link rel="stylesheet" href="assets/bower_components/ngDialog/css/ngDialog.css"/>
 
     <!-- angular loading-bar-->
     <link rel='stylesheet' href='assets/bower_components/angular-loading-bar/build/loading-bar.css' type='text/css' media='all' />
@@ -86,9 +92,9 @@
             <ul class="nav navbar-nav navbar-right">
                 @if(username){
                     @if(privilegio != 1){
-                        <li><a href="/#/compras"> <span class="fa fa-cubes"></span> Compra</a></li>
+                        <li class="disabled"><a href="/#/compras"> <span class="fa fa-cubes"></span> Compra</a></li>
                     }
-                    <li><a href="/#/venda"> <span class="fa fa-money"></span> Venda</a></li>
+                    <li class="disabled"><a href="/#/venda"> <span class="fa fa-money"></span> Venda</a></li>
                 }
                 <li class="dropdown">
                     <a href="" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
@@ -97,10 +103,10 @@
                         @if(username){
                             @if(privilegio != 1){
                                 <li class="dropdown-header">Relatórios</li>
-                                <li><a href="/#/relatorioscompras">
+                                <li class="disabled"><a href="/#/relatorioscompras">
                                     <span class="fa fa-bar-chart"></span> Compras</a>
                                 </li>
-                                <li><a href="/#/relatoriosvendas">
+                                <li class="disabled"><a href="/#/relatoriosvendas">
                                     <span class="fa fa-bar-chart"></span> Vendas</a>
                                 </li>
                                 <li><a href="/#/logs">
@@ -165,6 +171,9 @@
 <script src="assets/bower_components/angular-animate/angular-animate.js"></script>
 <script src="assets/bower_components/angular-toastr/dist/angular-toastr.js"></script>
 
+<!--ngDialog-->
+<script src="assets/bower_components/ngDialog/js/ngDialog.js"></script>
+
 <!--Angular UI-->
 <script src="assets/bower_components/angular-ui-utils/ui-utils.js"></script>
 
@@ -197,15 +206,15 @@
 <!--Validações-->
 <script src="assets/bower_components/br-validations/releases/br-validations.js"></script>
 
+<!--Locale-->
+<script src="assets/bower_components/angular-i18n/angular-locale_pt-br.js"></script>
+
 <!--app-->
 <script src="assets/app/app.js"></script>
 
 <!--Servicos-->
 <script src="assets/app/services/EnderecoService.js"></script>
 <script src="assets/app/services/baseUrl.js"></script>
-
-<!--Locale-->
-<script src="assets/bower_components/angular-i18n/angular-locale_pt-br.js"></script>
 
 <!--Controllers AngularJS-->
 <script src="assets/app/controllers/HomeController.js"></script>
@@ -224,5 +233,6 @@
 <script src="assets/app/controllers/ProdutoController.js"></script>
 <script src="assets/app/controllers/UsuarioController.js"></script>
 <script src="assets/app/controllers/CompraController.js"></script>
+<script src="assets/app/controllers/ContatoController.js"></script>
 </body>
 </html>

@@ -31,8 +31,8 @@ public class Application extends Controller {
 
     }
 
-    public static Result teste() {
-        return ok(views.html.teste.render());
+    public static Result versao() {
+        return ok(play.core.PlayVersion.current());
     }
 
 }
