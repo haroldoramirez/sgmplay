@@ -1,7 +1,5 @@
 # Play Framework with AngularJS
 
-[![Build Status](https://travis-ci.org/haroldoramirez/sgmplay.svg)](https://travis-ci.org/haroldoramirez/sgmplay)
-
 #### Version information
 PlayFramework 2.3.8
 
@@ -47,6 +45,9 @@ Faça o clone do projeto com o github e prepare seu ambiente de trabalho com o M
   
 * **Validações**
   * CNPJ e CPF - **OK**
+  
+* **Outros**
+  * Logs do Sistema - **OK**
   
 ## Links
 
