@@ -4,7 +4,7 @@
 # --- !Ups
 
 create table bairro (
-  id                        bigint auto_increment not null,
+  id                        bigint not null,
   nome                      varchar(255) not null,
   cidade_id                 bigint not null,
   constraint uq_bairro_1 unique (nome,cidade_id),
@@ -12,14 +12,14 @@ create table bairro (
 ;
 
 create table categoria (
-  id                        bigint auto_increment not null,
+  id                        bigint not null,
   nome                      varchar(255) not null,
   constraint uq_categoria_nome unique (nome),
   constraint pk_categoria primary key (id))
 ;
 
 create table cidade (
-  id                        bigint auto_increment not null,
+  id                        bigint not null,
   nome                      varchar(255) not null,
   ddd                       varchar(255),
   estado_id                 bigint not null,
@@ -28,11 +28,11 @@ create table cidade (
 ;
 
 create table cliente (
-  id                        bigint auto_increment not null,
+  id                        bigint not null,
   nome                      varchar(255) not null,
   telefone                  varchar(255) not null,
   cpf                       varchar(255),
-  datanascimento            datetime,
+  datanascimento            timestamp,
   genero                    varchar(9),
   situacao                  varchar(7),
   bairro_id                 bigint,
@@ -44,8 +44,8 @@ create table cliente (
   cep                       varchar(255),
   complemento               varchar(255),
   observacoes               varchar(255),
-  data_cadastro             datetime not null,
-  data_alteracao            datetime not null,
+  data_cadastro             timestamp not null,
+  data_alteracao            timestamp not null,
   constraint ck_cliente_genero check (genero in ('MASCULINO','FEMININO')),
   constraint ck_cliente_situacao check (situacao in ('ATIVO','INATIVO')),
   constraint uq_cliente_cpf unique (cpf),
@@ -53,26 +53,26 @@ create table cliente (
 ;
 
 create table compra (
-  id                        bigint auto_increment not null,
-  data_compra               datetime not null,
+  id                        bigint not null,
+  data_compra               timestamp not null,
   total                     float not null,
   status                    integer not null,
   fornecedor_id             bigint,
   funcionario_id            bigint,
-  data_alteracao            datetime not null,
+  data_alteracao            timestamp not null,
   constraint ck_compra_status check (status in (0,1,2)),
   constraint pk_compra primary key (id))
 ;
 
 create table contato (
-  id                        bigint auto_increment not null,
+  id                        bigint not null,
   nome                      varchar(255) not null,
   telefone                  varchar(255) not null,
   constraint pk_contato primary key (id))
 ;
 
 create table estado (
-  id                        bigint auto_increment not null,
+  id                        bigint not null,
   nome                      varchar(255) not null,
   sigla                     varchar(255),
   pais_id                   bigint not null,
@@ -81,7 +81,7 @@ create table estado (
 ;
 
 create table fabricante (
-  id                        bigint auto_increment not null,
+  id                        bigint not null,
   nome                      varchar(255) not null,
   observacoes               varchar(255),
   constraint uq_fabricante_nome unique (nome),
@@ -89,14 +89,14 @@ create table fabricante (
 ;
 
 create table forma_pagamento (
-  id                        bigint auto_increment not null,
+  id                        bigint not null,
   titulo                    varchar(255) not null,
   constraint uq_forma_pagamento_titulo unique (titulo),
   constraint pk_forma_pagamento primary key (id))
 ;
 
 create table fornecedor (
-  id                        bigint auto_increment not null,
+  id                        bigint not null,
   nome_fantasia             varchar(255) not null,
   razao_social              varchar(255) not null,
   telefone                  varchar(255) not null,
@@ -112,15 +112,15 @@ create table fornecedor (
   complemento               varchar(255),
   observacoes               varchar(255),
   bairro_id                 bigint,
-  data_cadastro             datetime not null,
-  data_alteracao            datetime not null,
+  data_cadastro             timestamp not null,
+  data_alteracao            timestamp not null,
   constraint uq_fornecedor_cnpj unique (cnpj),
   constraint uq_fornecedor_inscricao_estadual unique (inscricao_estadual),
   constraint pk_fornecedor primary key (id))
 ;
 
 create table itemcompra (
-  id                        bigint auto_increment not null,
+  id                        bigint not null,
   quantidade                integer not null,
   valor_unitario            float not null,
   compra_id                 bigint,
@@ -129,14 +129,14 @@ create table itemcompra (
 ;
 
 create table log (
-  id                        bigint auto_increment not null,
-  data                      datetime,
+  id                        bigint not null,
+  data                      timestamp,
   mensagem                  varchar(255),
   constraint pk_log primary key (id))
 ;
 
 create table pais (
-  id                        bigint auto_increment not null,
+  id                        bigint not null,
   nome                      varchar(255) not null,
   ddi                       varchar(255),
   constraint uq_pais_nome unique (nome),
@@ -144,7 +144,7 @@ create table pais (
 ;
 
 create table produto (
-  id                        bigint auto_increment not null,
+  id                        bigint not null,
   descricao                 varchar(255) not null,
   quantidade                integer not null,
   preco_compra              float not null,
@@ -155,15 +155,15 @@ create table produto (
   categoria_id              bigint,
   fabricante_id             bigint,
   unidadedemedida_id        bigint,
-  data_cadastro             datetime not null,
-  data_alteracao            datetime not null,
+  data_cadastro             timestamp not null,
+  data_alteracao            timestamp not null,
   last_update               timestamp default '2015-07-23 15:47:50' not null,
   constraint uq_produto_descricao unique (descricao),
   constraint pk_produto primary key (id))
 ;
 
 create table unidadedemedida (
-  id                        bigint auto_increment not null,
+  id                        bigint not null,
   nome                      varchar(255) not null,
   observacoes               varchar(255),
   constraint uq_unidadedemedida_nome unique (nome),
@@ -171,81 +171,141 @@ create table unidadedemedida (
 ;
 
 create table usuario (
-  id                        bigint auto_increment not null,
+  id                        bigint not null,
   email                     varchar(255) not null,
   senha                     varchar(255) not null,
   privilegio                integer not null,
-  data_cadastro             datetime not null,
-  data_alteracao            datetime not null,
-  padrao_do_sistema         tinyint(1) default 0,
+  data_cadastro             timestamp not null,
+  data_alteracao            timestamp not null,
+  padrao_do_sistema         boolean,
   constraint uq_usuario_email unique (email),
   constraint pk_usuario primary key (id))
 ;
 
-alter table bairro add constraint fk_bairro_cidade_1 foreign key (cidade_id) references cidade (id) on delete restrict on update restrict;
+create sequence bairro_seq;
+
+create sequence categoria_seq;
+
+create sequence cidade_seq;
+
+create sequence cliente_seq;
+
+create sequence compra_seq;
+
+create sequence contato_seq;
+
+create sequence estado_seq;
+
+create sequence fabricante_seq;
+
+create sequence forma_pagamento_seq;
+
+create sequence fornecedor_seq;
+
+create sequence itemcompra_seq;
+
+create sequence log_seq;
+
+create sequence pais_seq;
+
+create sequence produto_seq;
+
+create sequence unidadedemedida_seq;
+
+create sequence usuario_seq;
+
+alter table bairro add constraint fk_bairro_cidade_1 foreign key (cidade_id) references cidade (id);
 create index ix_bairro_cidade_1 on bairro (cidade_id);
-alter table cidade add constraint fk_cidade_estado_2 foreign key (estado_id) references estado (id) on delete restrict on update restrict;
+alter table cidade add constraint fk_cidade_estado_2 foreign key (estado_id) references estado (id);
 create index ix_cidade_estado_2 on cidade (estado_id);
-alter table cliente add constraint fk_cliente_bairro_3 foreign key (bairro_id) references bairro (id) on delete restrict on update restrict;
+alter table cliente add constraint fk_cliente_bairro_3 foreign key (bairro_id) references bairro (id);
 create index ix_cliente_bairro_3 on cliente (bairro_id);
-alter table compra add constraint fk_compra_fornecedor_4 foreign key (fornecedor_id) references fornecedor (id) on delete restrict on update restrict;
+alter table compra add constraint fk_compra_fornecedor_4 foreign key (fornecedor_id) references fornecedor (id);
 create index ix_compra_fornecedor_4 on compra (fornecedor_id);
-alter table compra add constraint fk_compra_funcionario_5 foreign key (funcionario_id) references usuario (id) on delete restrict on update restrict;
+alter table compra add constraint fk_compra_funcionario_5 foreign key (funcionario_id) references usuario (id);
 create index ix_compra_funcionario_5 on compra (funcionario_id);
-alter table estado add constraint fk_estado_pais_6 foreign key (pais_id) references pais (id) on delete restrict on update restrict;
+alter table estado add constraint fk_estado_pais_6 foreign key (pais_id) references pais (id);
 create index ix_estado_pais_6 on estado (pais_id);
-alter table fornecedor add constraint fk_fornecedor_bairro_7 foreign key (bairro_id) references bairro (id) on delete restrict on update restrict;
+alter table fornecedor add constraint fk_fornecedor_bairro_7 foreign key (bairro_id) references bairro (id);
 create index ix_fornecedor_bairro_7 on fornecedor (bairro_id);
-alter table itemcompra add constraint fk_itemcompra_compra_8 foreign key (compra_id) references compra (id) on delete restrict on update restrict;
+alter table itemcompra add constraint fk_itemcompra_compra_8 foreign key (compra_id) references compra (id);
 create index ix_itemcompra_compra_8 on itemcompra (compra_id);
-alter table itemcompra add constraint fk_itemcompra_produto_9 foreign key (produto_id) references produto (id) on delete restrict on update restrict;
+alter table itemcompra add constraint fk_itemcompra_produto_9 foreign key (produto_id) references produto (id);
 create index ix_itemcompra_produto_9 on itemcompra (produto_id);
-alter table produto add constraint fk_produto_fornecedor_10 foreign key (fornecedor_id) references fornecedor (id) on delete restrict on update restrict;
+alter table produto add constraint fk_produto_fornecedor_10 foreign key (fornecedor_id) references fornecedor (id);
 create index ix_produto_fornecedor_10 on produto (fornecedor_id);
-alter table produto add constraint fk_produto_categoria_11 foreign key (categoria_id) references categoria (id) on delete restrict on update restrict;
+alter table produto add constraint fk_produto_categoria_11 foreign key (categoria_id) references categoria (id);
 create index ix_produto_categoria_11 on produto (categoria_id);
-alter table produto add constraint fk_produto_fabricante_12 foreign key (fabricante_id) references fabricante (id) on delete restrict on update restrict;
+alter table produto add constraint fk_produto_fabricante_12 foreign key (fabricante_id) references fabricante (id);
 create index ix_produto_fabricante_12 on produto (fabricante_id);
-alter table produto add constraint fk_produto_unidadedemedida_13 foreign key (unidadedemedida_id) references unidadedemedida (id) on delete restrict on update restrict;
+alter table produto add constraint fk_produto_unidadedemedida_13 foreign key (unidadedemedida_id) references unidadedemedida (id);
 create index ix_produto_unidadedemedida_13 on produto (unidadedemedida_id);
 
 
 
 # --- !Downs
 
-SET FOREIGN_KEY_CHECKS=0;
+drop table if exists bairro cascade;
 
-drop table bairro;
+drop table if exists categoria cascade;
 
-drop table categoria;
+drop table if exists cidade cascade;
 
-drop table cidade;
+drop table if exists cliente cascade;
 
-drop table cliente;
+drop table if exists compra cascade;
 
-drop table compra;
+drop table if exists contato cascade;
 
-drop table contato;
+drop table if exists estado cascade;
 
-drop table estado;
+drop table if exists fabricante cascade;
 
-drop table fabricante;
+drop table if exists forma_pagamento cascade;
 
-drop table forma_pagamento;
+drop table if exists fornecedor cascade;
 
-drop table fornecedor;
+drop table if exists itemcompra cascade;
 
-drop table itemcompra;
+drop table if exists log cascade;
 
-drop table log;
+drop table if exists pais cascade;
 
-drop table pais;
+drop table if exists produto cascade;
 
-drop table produto;
+drop table if exists unidadedemedida cascade;
 
-drop table unidadedemedida;
+drop table if exists usuario cascade;
 
-drop table usuario;
+drop sequence if exists bairro_seq;
 
-SET FOREIGN_KEY_CHECKS=1;
+drop sequence if exists categoria_seq;
+
+drop sequence if exists cidade_seq;
+
+drop sequence if exists cliente_seq;
+
+drop sequence if exists compra_seq;
+
+drop sequence if exists contato_seq;
+
+drop sequence if exists estado_seq;
+
+drop sequence if exists fabricante_seq;
+
+drop sequence if exists forma_pagamento_seq;
+
+drop sequence if exists fornecedor_seq;
+
+drop sequence if exists itemcompra_seq;
+
+drop sequence if exists log_seq;
+
+drop sequence if exists pais_seq;
+
+drop sequence if exists produto_seq;
+
+drop sequence if exists unidadedemedida_seq;
+
+drop sequence if exists usuario_seq;
 
